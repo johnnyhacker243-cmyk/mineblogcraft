@@ -6,6 +6,7 @@ export type ScreenId =
   | "options"
   | "exit"
   | "language"
+  | "profile"
   | "accessibility";
 export const ui = {
   brand: "Mineblogcraft — Personal Blog Edition",

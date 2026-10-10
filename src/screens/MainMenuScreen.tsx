@@ -35,7 +35,7 @@ export function MainMenuScreen({
               {item.label}
             </MinecraftButton>
           ))}
-          <AccessibilityButton onClick={() => navigate("accessibility")} />
+          <AccessibilityButton onClick={() => navigate("profile")} />
         </div>
       </main>
       <FooterInfo />

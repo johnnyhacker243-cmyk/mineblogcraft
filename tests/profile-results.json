@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-10T14:01:31.181Z",
+  "dimensions": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "scale": "3",
+      "box": {
+        "x": 375,
+        "y": 30,
+        "width": 1170,
+        "height": 1020
+      }
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "scale": "2",
+      "box": {
+        "x": 293,
+        "y": 44,
+        "width": 780,
+        "height": 680
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "scale": "2",
+      "box": {
+        "x": 250,
+        "y": 20,
+        "width": 780,
+        "height": 680
+      }
+    },
+    {
+      "width": 1600,
+      "height": 900,
+      "scale": "2",
+      "box": {
+        "x": 410,
+        "y": 110,
+        "width": 780,
+        "height": 680
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "scale": "3",
+      "box": {
+        "x": 695,
+        "y": 210,
+        "width": 1170,
+        "height": 1020
+      }
+    }
+  ],
+  "mouse": {
+    "left": -0.9211550879397827,
+    "right": 1.0307159121429401,
+    "up": -0.4383832789249098,
+    "down": 0.47952128361221386
+  },
+  "geometries": 83,
+  "errors": [],
+  "badResponses": [],
+  "reentry": 3,
+  "disposal": [
+    {
+      "textures": 0,
+      "buffers": 0,
+      "programs": 0,
+      "contextLost": true,
+      "internalTextureHandles": 4
+    },
+    {
+      "textures": 0,
+      "buffers": 0,
+      "programs": 0,
+      "contextLost": true,
+      "internalTextureHandles": 4
+    },
+    {
+      "textures": 0,
+      "buffers": 0,
+      "programs": 0,
+      "contextLost": true,
+      "internalTextureHandles": 4
+    },
+    {
+      "textures": 0,
+      "buffers": 0,
+      "programs": 0,
+      "contextLost": true,
+      "internalTextureHandles": 4
+    }
+  ],
+  "webGLUnavailableMessage": true,
+  "missingSkinMessage": true
+}

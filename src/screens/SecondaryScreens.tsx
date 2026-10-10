@@ -22,7 +22,7 @@ export function SecondaryScreen({
   update,
   back,
 }: {
-  screen: Exclude<ScreenId, "main">;
+  screen: Exclude<ScreenId, "main" | "profile">;
   settings: Settings;
   update: (s: Partial<Settings>) => void;
   back: () => void;

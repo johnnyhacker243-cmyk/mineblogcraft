@@ -55,6 +55,17 @@ tests/           浏览器测试、测量结果、实际截图
 
 ## 资源重新导入
 
+作者介绍：点击主菜单原辅助功能人物图标，打开创造模式物品栏风格档案；Escape 关闭。包含原版 Steve 三维模型、钻石套装、钻石镐及鼠标跟随。该页面没有导航或文章入口，文字为用户提供的占位内容。配置入口：`src/config/profile-config.ts`；差异与研究记录见 [PROFILE_FIDELITY.md](PROFILE_FIDELITY.md)。
+
+除主菜单资源外，新机器还需导入作者页素材（Python 和 Pillow）：
+
+```powershell
+python scripts/import-inventory.py --jar '你的原版1.21.1客户端.jar'
+npm run test:profile
+```
+
+脚本验证客户端 SHA-1，只读取指定 JAR 及关联目录下一个精确哈希的 Unifont 对象；独立资源目录通过 `--assets` 指定。修改作者页中文后重新导入以更新字形子集。测试需要 Vite 运行。
+
 本机资源已经导入，无须再次执行。移动源代码时，游戏资源和截图被 `.gitignore` 排除；不要把它们视为开源素材。对明确获得授权的原版客户端可执行：
 
 ```powershell

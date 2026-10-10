@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-10T12:52:49.298Z",
+  "date": "2026-10-10T13:58:32.024Z",
   "dimensions": [
     {
       "width": 1920,
@@ -262,7 +262,7 @@
       }
     }
   ],
-  "rotationDeltaRadians": 0.03955963282570352,
+  "rotationDeltaRadians": 0.04130496207769796,
   "errors": [],
   "badResponses": [],
   "interactionCases": [
@@ -272,7 +272,7 @@
     "Options...",
     "Quit Game",
     "Language",
-    "Accessibility Settings"
+    "作者介绍"
   ],
   "keyboard": [
     "Tab",

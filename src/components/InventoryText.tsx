@@ -1,0 +1,82 @@
+import { useEffect, useRef, useState } from "react";
+import { inventoryAssets } from "../config/profile-config";
+type Font = {
+  image: HTMLImageElement;
+  glyphs: Record<string, [number, number, number]>;
+};
+let font: Promise<Font> | undefined;
+function loadFont() {
+  return (font ??= Promise.all([
+    fetch(inventoryAssets + "font.json").then((r) => {
+      if (!r.ok) throw Error("Missing inventory font");
+      return r.json();
+    }),
+    new Promise<HTMLImageElement>((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+      img.src = inventoryAssets + "unifont.png";
+    }),
+  ]).then(([glyphs, image]) => ({ glyphs, image })));
+}
+export function InventoryText({
+  text,
+  color = "#fff",
+  shadow = true,
+}: {
+  text: string;
+  color?: string;
+  shadow?: boolean;
+}) {
+  const canvas = useRef<HTMLCanvasElement>(null);
+  const [failed, setFailed] = useState(false);
+  const width = [...text].reduce(
+    (n, c) => n + (c.charCodeAt(0) < 128 ? 4 : 8),
+    0,
+  );
+  useEffect(() => {
+    let active = true;
+    loadFont()
+      .then(({ image, glyphs }) => {
+        if (!active || !canvas.current) return;
+        const ctx = canvas.current.getContext("2d")!;
+        const layer = document.createElement("canvas");
+        layer.width = width * 2;
+        layer.height = 16;
+        const l = layer.getContext("2d")!;
+        let x = 0;
+        for (const c of text) {
+          const g = glyphs[c];
+          if (g) l.drawImage(image, g[0], g[1], g[2], 16, x, 0, g[2], 16);
+          x += c.charCodeAt(0) < 128 ? 8 : 16;
+        }
+        l.globalCompositeOperation = "source-in";
+        l.fillStyle = "#3f3f3f";
+        l.fillRect(0, 0, layer.width, 16);
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        if (shadow) ctx.drawImage(layer, 2, 2);
+        l.fillStyle = color;
+        l.fillRect(0, 0, layer.width, 16);
+        ctx.drawImage(layer, 0, 0);
+      })
+      .catch(() => {
+        if (active) setFailed(true);
+      });
+    return () => {
+      active = false;
+    };
+  }, [text, color, shadow, width]);
+  return failed ? (
+    <span className="inventory-font-error">字体资源未导入</span>
+  ) : (
+    <canvas
+      ref={canvas}
+      className="inventory-text"
+      aria-label={text}
+      role="img"
+      width={width * 2 + 2}
+      height={18}
+      style={{ width: width + 1, height: 9 }}
+    />
+  );
+}

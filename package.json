@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "test": "node tests/interactions/menu.mjs",
     "test:panorama": "node tests/interactions/panorama.mjs",
+    "test:profile": "node tests/interactions/profile.mjs",
     "format": "prettier --write src tests/interactions vite.config.ts"
   },
   "dependencies": {

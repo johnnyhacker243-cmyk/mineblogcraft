@@ -101,7 +101,7 @@ const menus = [
   ["Options...", "options"],
   ["Quit Game", "exit"],
   ["Language", "language"],
-  ["Accessibility Settings", "accessibility"],
+  ["作者介绍", "profile"],
 ];
 for (const [name, id] of menus) {
   await page.getByRole("button", { name, exact: true }).click();

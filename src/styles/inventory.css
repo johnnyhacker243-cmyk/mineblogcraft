@@ -1,0 +1,247 @@
+.inventory-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: auto;
+  background: url("/assets/inventory/dirt.png") repeat;
+  background-size: 64px 64px;
+  image-rendering: pixelated;
+  display: grid;
+  place-items: center;
+  text-shadow: none;
+}
+.inventory-screen::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: #0009;
+  pointer-events: none;
+}
+.inventory-scene {
+  position: relative;
+  width: calc(390px * var(--inventory-scale));
+  height: calc(340px * var(--inventory-scale));
+  flex-shrink: 0;
+}
+.inventory-brand {
+  position: absolute;
+  left: 0;
+  top: calc(-11px * var(--inventory-scale));
+  width: calc(190px * var(--inventory-scale));
+  height: calc(48px * var(--inventory-scale));
+  overflow: hidden;
+}
+.inventory-brand img {
+  width: 100%;
+  image-rendering: pixelated;
+}
+.inventory-tabs {
+  position: absolute;
+  left: 0;
+  top: calc(38px * var(--inventory-scale));
+  display: flex;
+  gap: calc(1px * var(--inventory-scale));
+}
+.inventory-tab {
+  position: relative;
+  width: calc(26px * var(--inventory-scale));
+  height: calc(32px * var(--inventory-scale));
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+  display: flex;
+  justify-content: center;
+  padding-top: calc(7px * var(--inventory-scale));
+}
+.inventory-frame {
+  position: absolute;
+  top: calc(66px * var(--inventory-scale));
+  width: 100%;
+  height: calc(186px * var(--inventory-scale));
+  border: calc(7px * var(--inventory-scale)) solid transparent;
+  border-image: url("/assets/inventory/frame.png") 7 fill /
+    calc(7px * var(--inventory-scale)) / 0 stretch;
+  image-rendering: pixelated;
+}
+.player-panel {
+  position: absolute;
+  left: calc(4px * var(--inventory-scale));
+  top: calc(4px * var(--inventory-scale));
+  width: calc(100px * var(--inventory-scale));
+  height: calc(118px * var(--inventory-scale));
+}
+.player-viewport {
+  height: calc(100px * var(--inventory-scale));
+  width: 100%;
+  background: #080808 url("/assets/inventory/grass.png") repeat;
+  background-size: calc(16px * var(--inventory-scale));
+  background-blend-mode: multiply;
+  border: calc(1px * var(--inventory-scale)) solid;
+  border-color: #373737 #fff #fff #373737;
+}
+.player-viewport canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.steve-model {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.model-error {
+  position: absolute;
+  inset: 8px;
+  font-size: 12px;
+  color: #ff5555;
+}
+.player-caption {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: calc(2px * var(--inventory-scale));
+  padding-top: calc(2px * var(--inventory-scale));
+}
+.profile-panel {
+  position: absolute;
+  left: calc(111px * var(--inventory-scale));
+  top: calc(4px * var(--inventory-scale));
+  width: calc(260px * var(--inventory-scale));
+  height: calc(118px * var(--inventory-scale));
+  padding: calc(5px * var(--inventory-scale));
+  background: #100b19;
+  border: calc(1px * var(--inventory-scale)) solid #290b50;
+  box-shadow: inset 0 0 0 calc(1px * var(--inventory-scale)) #1b1230;
+}
+.profile-panel h1 {
+  margin: 0;
+  height: calc(12px * var(--inventory-scale));
+  line-height: 1;
+}
+.profile-subtitle {
+  height: calc(14px * var(--inventory-scale));
+}
+.profile-panel dl,
+.profile-panel dd {
+  margin: 0;
+}
+.profile-panel dl > div {
+  display: flex;
+  min-height: calc(13px * var(--inventory-scale));
+}
+.profile-panel dt {
+  width: calc(42px * var(--inventory-scale));
+  flex-shrink: 0;
+}
+.profile-panel dd {
+  display: flex;
+  flex-direction: column;
+  gap: calc(3px * var(--inventory-scale));
+}
+.inventory-text {
+  display: inline-block;
+  vertical-align: top;
+  max-width: none;
+  zoom: var(--inventory-scale);
+  image-rendering: pixelated;
+}
+.inventory-font-error {
+  font-size: 14px;
+  color: #ff5555;
+}
+.item-slots,
+.text-slots {
+  position: absolute;
+  display: flex;
+}
+.item-slots {
+  left: calc(4px * var(--inventory-scale));
+  top: calc(128px * var(--inventory-scale));
+}
+.text-slots {
+  left: calc(4px * var(--inventory-scale));
+  top: calc(151px * var(--inventory-scale));
+}
+.inventory-slot {
+  width: calc(18px * var(--inventory-scale));
+  height: calc(18px * var(--inventory-scale));
+  background: url("/assets/inventory/slot.png") center/100% 100%;
+  display: grid;
+  place-items: center;
+  image-rendering: pixelated;
+}
+.text-slot {
+  width: calc(40px * var(--inventory-scale));
+  height: calc(20px * var(--inventory-scale));
+  border: calc(1px * var(--inventory-scale)) solid;
+  border-color: #373737 #fff #fff #373737;
+  background-size: 100% 100%;
+}
+.item-icon {
+  width: calc(16px * var(--inventory-scale));
+  height: calc(16px * var(--inventory-scale));
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.block-icon {
+  width: calc(16px * var(--inventory-scale));
+  height: calc(16px * var(--inventory-scale));
+  position: relative;
+  display: block;
+}
+.block-icon i {
+  position: absolute;
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+  width: 50%;
+  height: 50%;
+}
+.block-icon i:nth-child(1) {
+  left: 25%;
+  top: 5%;
+  transform: rotate(30deg) skewX(-30deg) scaleY(0.86);
+}
+.block-icon i:nth-child(2) {
+  left: 7%;
+  top: 39%;
+  transform: skewY(30deg);
+  filter: brightness(0.7);
+}
+.block-icon i:nth-child(3) {
+  left: 57%;
+  top: 39%;
+  transform: skewY(-30deg);
+  filter: brightness(0.85);
+}
+.block-icon .grass-tint {
+  background-color: #7cae45;
+  background-blend-mode: multiply;
+}
+.sign-board {
+  position: absolute;
+  left: calc(120px * var(--inventory-scale));
+  top: calc(263px * var(--inventory-scale));
+  width: calc(144px * var(--inventory-scale));
+  height: calc(72px * var(--inventory-scale));
+  background: url("/assets/inventory/sign-face.png") center/100% 100%;
+  image-rendering: pixelated;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: calc(3px * var(--inventory-scale));
+}
+.sign-board::after {
+  content: "";
+  position: absolute;
+  right: calc(-4px * var(--inventory-scale));
+  top: calc(2px * var(--inventory-scale));
+  width: calc(4px * var(--inventory-scale));
+  height: 100%;
+  background: url("/assets/inventory/sign-edge.png") center/100% 100%;
+  filter: brightness(0.65);
+}
+@media (max-width: 410px) {
+  .inventory-screen {
+    place-items: start center;
+  }
+}

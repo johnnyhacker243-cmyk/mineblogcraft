@@ -6,6 +6,7 @@ import { guiMetrics } from "../utils/gui-scale";
 import { guiStyle } from "../utils/gui-style";
 import { type ScreenId } from "../config/ui-config";
 import { audioManager } from "../managers/AudioManager";
+import { MinecraftInventory } from "./MinecraftInventory";
 export function MinecraftTitleScreen() {
   const [screen, setScreen] = useState<ScreenId>("main");
   const [settings, setSettings] = useState<Settings>({
@@ -41,10 +42,12 @@ export function MinecraftTitleScreen() {
       data-gui-scale={m.scale}
       data-screen={screen}
     >
-      <PanoramaRenderer dynamic={settings.dynamic && !settings.reducedMotion} />
+      <PanoramaRenderer dynamic={screen !== "profile" && settings.dynamic && !settings.reducedMotion} />
       <div className="gui">
         {screen === "main" ? (
           <MainMenuScreen navigate={setScreen} />
+        ) : screen === "profile" ? (
+          <MinecraftInventory />
         ) : (
           <SecondaryScreen
             screen={screen}

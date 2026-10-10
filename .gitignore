@@ -10,6 +10,7 @@ public/assets/gui/splashes.txt
 public/assets/sounds/*.ogg
 tests/screenshots/
 gptphotos/
+public/assets/inventory/
 *.tsbuildinfo
 .env
 .env.*
