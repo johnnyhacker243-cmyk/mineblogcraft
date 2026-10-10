@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-10T12:52:49.298Z",
+  "dimensions": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "scale": 4,
+      "logicalWidth": 480,
+      "logicalHeight": 270,
+      "singleplayer": {
+        "x": 560,
+        "y": 460,
+        "width": 800,
+        "height": 80
+      },
+      "expected": {
+        "x": 560,
+        "y": 460,
+        "width": 800,
+        "height": 80
+      },
+      "delta": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "gui": {
+        ".logo": {
+          "x": 448,
+          "y": 52,
+          "width": 1024,
+          "height": 341.328125
+        },
+        ".edition": null,
+        ".lower-buttons": {
+          "x": 464,
+          "y": 796,
+          "width": 992,
+          "height": 80
+        },
+        ".splash-anchor": {
+          "x": 1452,
+          "y": 276,
+          "width": 0,
+          "height": 0
+        },
+        "footer": {
+          "x": 8,
+          "y": 1040,
+          "width": 1904,
+          "height": 36
+        }
+      }
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "scale": 3,
+      "logicalWidth": 456,
+      "logicalHeight": 256,
+      "singleplayer": {
+        "x": 383.4453125,
+        "y": 336,
+        "width": 599.109375,
+        "height": 60
+      },
+      "expected": {
+        "x": 383.43859649122805,
+        "y": 336,
+        "width": 599.1228070175439,
+        "height": 60
+      },
+      "delta": {
+        "x": 0.006716008771945781,
+        "y": 0,
+        "width": -0.013432017543891561,
+        "height": 0
+      },
+      "gui": {
+        ".logo": {
+          "x": 299.5625,
+          "y": 39,
+          "width": 766.875,
+          "height": 256
+        },
+        ".edition": null,
+        ".lower-buttons": {
+          "x": 311.5546875,
+          "y": 588,
+          "width": 742.90625,
+          "height": 60
+        },
+        ".splash-anchor": {
+          "x": 1051.453125,
+          "y": 207,
+          "width": 0,
+          "height": 0
+        },
+        "footer": {
+          "x": 5.984375,
+          "y": 738,
+          "width": 1354.03125,
+          "height": 27
+        }
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "scale": 3,
+      "logicalWidth": 427,
+      "logicalHeight": 240,
+      "singleplayer": {
+        "x": 338.734375,
+        "y": 324,
+        "width": 599.53125,
+        "height": 60
+      },
+      "expected": {
+        "x": 338.7353629976581,
+        "y": 324,
+        "width": 599.5316159250586,
+        "height": 60
+      },
+      "delta": {
+        "x": -0.0009879976581146366,
+        "y": 0,
+        "width": -0.000365925058645189,
+        "height": 0
+      },
+      "gui": {
+        ".logo": {
+          "x": 254.8046875,
+          "y": 39,
+          "width": 767.390625,
+          "height": 256
+        },
+        ".edition": null,
+        ".lower-buttons": {
+          "x": 266.796875,
+          "y": 576,
+          "width": 743.40625,
+          "height": 60
+        },
+        ".splash-anchor": {
+          "x": 1008.703125,
+          "y": 207,
+          "width": 0,
+          "height": 0
+        },
+        "footer": {
+          "x": 5.984375,
+          "y": 690,
+          "width": 1268.03125,
+          "height": 27
+        }
+      }
+    },
+    {
+      "width": 1600,
+      "height": 900,
+      "scale": 3,
+      "logicalWidth": 534,
+      "logicalHeight": 300,
+      "singleplayer": {
+        "x": 500.375,
+        "y": 369,
+        "width": 599.25,
+        "height": 60
+      },
+      "expected": {
+        "x": 500.374531835206,
+        "y": 369,
+        "width": 599.2509363295881,
+        "height": 60
+      },
+      "delta": {
+        "x": 0.0004681647939719369,
+        "y": 0,
+        "width": -0.0009363295880575606,
+        "height": 0
+      },
+      "gui": {
+        ".logo": {
+          "x": 416.484375,
+          "y": 39,
+          "width": 767.03125,
+          "height": 256
+        },
+        ".edition": null,
+        ".lower-buttons": {
+          "x": 428.46875,
+          "y": 621,
+          "width": 743.0625,
+          "height": 60
+        },
+        ".splash-anchor": {
+          "x": 1168.53125,
+          "y": 207,
+          "width": 0,
+          "height": 0
+        },
+        "footer": {
+          "x": 5.984375,
+          "y": 870,
+          "width": 1588.03125,
+          "height": 27
+        }
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "scale": 6,
+      "logicalWidth": 427,
+      "logicalHeight": 240,
+      "singleplayer": {
+        "x": 677.46875,
+        "y": 648,
+        "width": 1199.0625,
+        "height": 120
+      },
+      "expected": {
+        "x": 677.4707259953162,
+        "y": 648,
+        "width": 1199.0632318501173,
+        "height": 120
+      },
+      "delta": {
+        "x": -0.001975995316229273,
+        "y": 0,
+        "width": -0.000731850117290378,
+        "height": 0
+      },
+      "gui": {
+        ".logo": {
+          "x": 509.6015625,
+          "y": 78,
+          "width": 1534.796875,
+          "height": 512
+        },
+        ".edition": null,
+        ".lower-buttons": {
+          "x": 533.59375,
+          "y": 1152,
+          "width": 1486.828125,
+          "height": 120
+        },
+        ".splash-anchor": {
+          "x": 2017.421875,
+          "y": 414,
+          "width": 0,
+          "height": 0
+        },
+        "footer": {
+          "x": 11.984375,
+          "y": 1380,
+          "width": 2536.03125,
+          "height": 54
+        }
+      }
+    }
+  ],
+  "rotationDeltaRadians": 0.03955963282570352,
+  "errors": [],
+  "badResponses": [],
+  "interactionCases": [
+    "Singleplayer",
+    "Multiplayer",
+    "Minecraft Realms",
+    "Options...",
+    "Quit Game",
+    "Language",
+    "Accessibility Settings"
+  ],
+  "keyboard": [
+    "Tab",
+    "Enter",
+    "Space",
+    "Escape"
+  ],
+  "textureFailureFallback": true,
+  "webGLFallback": true
+}

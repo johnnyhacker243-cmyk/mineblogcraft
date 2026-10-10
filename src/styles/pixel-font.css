@@ -1,0 +1,11 @@
+@font-face {
+  font-family: Monocraft;
+  src: url("/assets/fonts/Monocraft.ttf") format("truetype");
+  font-display: block;
+}
+button,
+input,
+body {
+  font-family: Monocraft, monospace;
+  font-synthesis: none;
+}

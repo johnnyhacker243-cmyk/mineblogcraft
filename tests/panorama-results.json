@@ -1,0 +1,13 @@
+{
+  "before": {
+    "textures": 6,
+    "geometries": 6
+  },
+  "after": {
+    "textures": 0,
+    "geometries": 0
+  },
+  "glyphs": 2413,
+  "splashCount": 446,
+  "supportedSplashCount": 443
+}

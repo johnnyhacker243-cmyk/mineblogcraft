@@ -1,0 +1,242 @@
+[
+  {
+    "faces": [
+      0,
+      3
+    ],
+    "edge": [
+      [
+        -1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        1,
+        1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 0.5247395833333334,
+    "p95RgbDifference": 1.0
+  },
+  {
+    "faces": [
+      0,
+      5
+    ],
+    "edge": [
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 0.3645833333333333,
+    "p95RgbDifference": 2.0
+  },
+  {
+    "faces": [
+      0,
+      1
+    ],
+    "edge": [
+      [
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 0.15494791666666666,
+    "p95RgbDifference": 1.0
+  },
+  {
+    "faces": [
+      0,
+      4
+    ],
+    "edge": [
+      [
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 2.3828125,
+    "p95RgbDifference": 14.0
+  },
+  {
+    "faces": [
+      1,
+      5
+    ],
+    "edge": [
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 0.5559895833333334,
+    "p95RgbDifference": 4.0
+  },
+  {
+    "faces": [
+      1,
+      2
+    ],
+    "edge": [
+      [
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 0.3736979166666667,
+    "p95RgbDifference": 1.0
+  },
+  {
+    "faces": [
+      1,
+      4
+    ],
+    "edge": [
+      [
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 2.015625,
+    "p95RgbDifference": 12.0
+  },
+  {
+    "faces": [
+      2,
+      5
+    ],
+    "edge": [
+      [
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 0.9127604166666666,
+    "p95RgbDifference": 6.0
+  },
+  {
+    "faces": [
+      2,
+      3
+    ],
+    "edge": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        -1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 0.3255208333333333,
+    "p95RgbDifference": 1.0
+  },
+  {
+    "faces": [
+      2,
+      4
+    ],
+    "edge": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        -1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 1.4544270833333333,
+    "p95RgbDifference": 8.0
+  },
+  {
+    "faces": [
+      3,
+      5
+    ],
+    "edge": [
+      [
+        -1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 0.4635416666666667,
+    "p95RgbDifference": 3.0
+  },
+  {
+    "faces": [
+      3,
+      4
+    ],
+    "edge": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        1
+      ]
+    ],
+    "meanRgbAbsoluteDifference": 2.9036458333333335,
+    "p95RgbDifference": 20.0
+  }
+]

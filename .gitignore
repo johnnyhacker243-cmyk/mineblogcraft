@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.log
+test-results/
+.local-reference/
+public/assets/**/*.png
+public/assets/fonts/default.json
+public/assets/CLIENT_PROVENANCE.json
+public/assets/gui/splashes.txt
+public/assets/sounds/*.ogg
+tests/screenshots/
+gptphotos/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example

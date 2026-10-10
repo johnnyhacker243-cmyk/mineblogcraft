@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background: #171717;
+  color: white;
+}
+button {
+  border-radius: 0;
+  cursor: default;
+}
+.game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: var(--font-size);
+  text-shadow: var(--shadow) var(--shadow) #3f3f3f;
+}
+.gui {
+  position: absolute;
+  inset: 0;
+  animation: fade-in var(--fade-duration) linear var(--fade-duration) both;
+}
+.mc-button {
+  display: block;
+  width: var(--button-width);
+  height: var(--button-height);
+  padding: 0;
+  border: calc(3px * var(--gui-scale-y)) solid transparent;
+  border-image: var(--button-normal) 3 fill / calc(3px * var(--gui-scale-y))
+    calc(3px * var(--gui-scale-x)) / 0 repeat;
+  background: none;
+  color: #fff;
+  font-size: var(--font-size);
+  text-shadow: var(--shadow) var(--shadow) #3f3f3f;
+  outline: none;
+  image-rendering: pixelated;
+  line-height: 1;
+}
+.mc-button:hover,
+.mc-button:focus-visible {
+  border-image-source: var(--button-highlight);
+}
+.mc-button:active {
+  filter: brightness(0.85);
+}
+.mc-button:disabled {
+  border-image-source: var(--button-disabled);
+  color: #a0a0a0;
+  filter: none;
+}
+.mc-button > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  white-space: nowrap;
+}
+.pixel-text-box {
+  display: block;
+  position: relative;
+  height: calc(9px * var(--gui-scale-y));
+  flex-shrink: 0;
+}
+.pixel-text {
+  display: block;
+  position: absolute;
+  top: calc(-3px * var(--gui-scale-y));
+  left: 0;
+  image-rendering: pixelated;
+}
+.mc-button .pixel-text-box {
+  transform: translate(
+    calc(var(--center-shift) * var(--gui-scale-x)),
+    calc(-0.5px * var(--gui-scale-y))
+  );
+}
+.icon-button {
+  width: calc(20px * var(--gui-scale-x));
+  flex-shrink: 0;
+}
+.icon-button img {
+  width: calc(15px * var(--gui-scale-x));
+  height: calc(15px * var(--gui-scale-y));
+  image-rendering: pixelated;
+  transform: translate(
+    calc(-0.5px * var(--gui-scale-x)),
+    calc(-0.5px * var(--gui-scale-y))
+  );
+}
+.secondary {
+  position: absolute;
+  inset: 0;
+  background: #0009;
+  text-align: center;
+  padding-top: calc(20px * var(--gui-scale-y));
+}
+.secondary h1 {
+  font-size: var(--font-size);
+  font-weight: normal;
+  margin: 0;
+}
+.secondary-content {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--gap-y);
+  width: min(90%, calc(320px * var(--gui-scale-x)));
+}
+.secondary-content p {
+  line-height: 1.8;
+}
+.back-button {
+  position: absolute;
+  bottom: calc(28px * var(--gui-scale-y));
+  left: 50%;
+  translate: -50% 0;
+}
+.volume {
+  width: var(--button-width);
+  line-height: 2;
+}
+.volume input {
+  display: block;
+  width: 100%;
+  accent-color: #888;
+}
+.reduced-motion * {
+  animation: none !important;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

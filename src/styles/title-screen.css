@@ -1,0 +1,128 @@
+.panorama-layer,
+.panorama {
+  position: absolute;
+  inset: 0;
+}
+.panorama-layer {
+  animation: fade-in var(--fade-duration) linear;
+}
+.panorama {
+  background-position: center;
+  background-size: cover;
+}
+.panorama canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+.panorama[data-status="fallback"] canvas {
+  display: none;
+}
+.panorama-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+.fallback-note {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: 12px;
+  background: #0009;
+}
+.logo,
+.edition {
+  position: absolute;
+  left: var(--gui-center-x);
+  translate: -50% 0;
+  overflow: hidden;
+}
+.logo {
+  top: var(--logo-y);
+  width: var(--logo-width);
+  height: var(--logo-height);
+}
+.edition {
+  top: var(--subtitle-y);
+  width: var(--subtitle-width);
+  height: var(--subtitle-height);
+}
+.logo img {
+  display: block;
+  width: 100%;
+  height: var(--logo-texture-height);
+}
+.edition img {
+  display: block;
+  width: 100%;
+  height: var(--subtitle-texture-height);
+}
+.main-menu {
+  position: absolute;
+  top: var(--menu-y);
+  left: var(--gui-center-x);
+  translate: -50% 0;
+  width: var(--button-width);
+}
+.primary-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-y);
+}
+.lower-buttons {
+  position: relative;
+  left: calc(-24px * var(--gui-scale-x));
+  width: calc(248px * var(--gui-scale-x));
+  display: flex;
+  gap: var(--gap-x);
+  margin-top: calc(16px * var(--gui-scale-y));
+}
+.lower-buttons > .mc-button:not(.icon-button) {
+  width: calc(98px * var(--gui-scale-x));
+  flex-shrink: 0;
+}
+.splash-anchor {
+  position: absolute;
+  left: calc(50% + var(--splash-x));
+  top: var(--splash-y);
+  pointer-events: none;
+}
+.splash-tilt {
+  transform: rotate(var(--splash-angle));
+}
+.splash-size {
+  transform-origin: 0 0;
+}
+.splash-text {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: calc(-8px * var(--gui-scale-y));
+  translate: -50% 0;
+  white-space: nowrap;
+}
+footer {
+  position: absolute;
+  bottom: calc(1px * var(--gui-scale-y));
+  left: calc(2px * var(--gui-scale-x));
+  right: calc(2px * var(--gui-scale-x));
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  white-space: nowrap;
+}
+.reduced-motion .splash-size {
+  transform: scale(1.5) !important;
+}
+@media (max-width: 400px) {
+  footer {
+    transform-origin: left bottom;
+    scale: 0.65;
+  }
+  .splash-anchor {
+    left: calc(50% + 70px * var(--gui-scale-x));
+  }
+}
