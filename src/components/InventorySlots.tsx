@@ -1,5 +1,5 @@
-import { inventoryAssets, profile } from "../config/profile-config";
-import { InventoryText } from "./InventoryText";
+import { inventoryAssets } from "../config/profile-config";
+import { PixelText } from "./PixelText";
 export function BlockIcon({
   top,
   side,
@@ -23,22 +23,30 @@ export function BlockIcon({
 export function ItemIcon({ index }: { index: number }) {
   if (index === 0)
     return <BlockIcon top="grass.png" side="grass-side.png" grass />;
-  if (index === 1) return <BlockIcon top="blue-ice.png" side="blue-ice.png" />;
-  if (index === 2)
+  if (index === 3) return <BlockIcon top="tnt-top.png" side="tnt-side.png" />;
+  if (index === 6)
     return <BlockIcon top="crafting-top.png" side="crafting-side.png" />;
+  if (index === 7)
+    return (
+      <img
+        className="item-icon"
+        src={inventoryAssets + "nether-star.png"}
+        alt=""
+      />
+    );
   return (
     <img
       className="item-icon"
       src={
         inventoryAssets +
         [
-          "book.png",
-          "redstone.png",
-          "compass.png",
+          "",
           "pickaxe.png",
-          "book.png",
-          "redstone.png",
-        ][index - 3]
+          "sword.png",
+          "",
+          "golden-apple.png",
+          "ender-pearl.png",
+        ][index]
       }
       alt=""
     />
@@ -46,21 +54,27 @@ export function ItemIcon({ index }: { index: number }) {
 }
 export function InventorySlots() {
   return (
-    <>
-      <div className="item-slots" aria-label="物品栏">
-        {profile.modules.map((label, index) => (
-          <div className="inventory-slot" key={label}>
-            <ItemIcon index={index} />
-          </div>
-        ))}
-      </div>
-      <div className="text-slots" aria-label="技术与内容方向">
-        {profile.modules.map((label) => (
-          <div className="inventory-slot text-slot" key={label}>
-            <InventoryText text={label} color="#303030" shadow={false} />
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="item-slots" aria-label="快捷物品栏">
+      {Array.from({ length: 9 }, (_, index) => (
+        <div
+          className="inventory-slot"
+          key={index}
+          aria-label={index === 0 ? "钻石镐" : "钻石 × 64"}
+        >
+          <img
+            className="item-icon"
+            src={
+              inventoryAssets + (index === 0 ? "pickaxe.png" : "diamond.png")
+            }
+            alt=""
+          />
+          {index > 0 && (
+            <span className="item-count">
+              <PixelText text="64" />
+            </span>
+          )}
+        </div>
+      ))}
+    </div>
   );
 }

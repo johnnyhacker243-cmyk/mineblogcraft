@@ -27,7 +27,15 @@ mapping = {
     'book.png': 'item/book.png', 'redstone.png': 'item/redstone.png', 'compass.png': 'item/compass_16.png',
     'steve.png': 'entity/player/wide/steve.png', 'diamond-1.png': 'models/armor/diamond_layer_1.png',
     'diamond-2.png': 'models/armor/diamond_layer_2.png', 'pickaxe.png': 'item/diamond_pickaxe.png',
-    'sign.png': 'entity/signs/oak.png',
+    'diamond.png': 'item/diamond.png', 'sword.png': 'item/diamond_sword.png',
+    'nether-star.png': 'item/nether_star.png',
+    'golden-apple.png': 'item/golden_apple.png', 'ender-pearl.png': 'item/ender_pearl.png',
+    'tnt-top.png': 'block/tnt_top.png', 'tnt-side.png': 'block/tnt_side.png',
+    'grass-overlay.png': 'block/grass_block_side_overlay.png',
+    'heart-container.png': 'gui/sprites/hud/heart/container.png',
+    'heart-full.png': 'gui/sprites/hud/heart/full.png',
+    'food-empty.png': 'gui/sprites/hud/food_empty.png',
+    'food-full.png': 'gui/sprites/hud/food_full.png',
 }
 for n in range(1, 7):
     state = 'selected' if n == 1 else 'unselected'
@@ -46,9 +54,14 @@ with zipfile.ZipFile(a.jar) as z:
             frame.paste(original.crop((sx,sy,sx+w,sy+h)), (x,y))
     frame.save(out/'frame.png')
     original.crop((8,17,26,35)).save(out/'slot.png')
-    sign = Image.open(io.BytesIO(z.read('assets/minecraft/textures/entity/signs/oak.png')))
-    sign.crop((2,2,26,14)).save(out/'sign-face.png')
-    sign.crop((0,2,2,14)).save(out/'sign-edge.png')
+    # Vanilla grass side texture plus its biome-tinted overlay; source pixels
+    # stay intact and only the normal game color multiplier is applied.
+    from PIL import ImageChops
+    grass = Image.open(io.BytesIO(z.read('assets/minecraft/textures/block/grass_block_side.png'))).convert('RGBA')
+    overlay = Image.open(io.BytesIO(z.read('assets/minecraft/textures/block/grass_block_side_overlay.png'))).convert('RGBA')
+    tinted = ImageChops.multiply(overlay,Image.new('RGBA',overlay.size,(145,189,89,255)))
+    grass.alpha_composite(tinted)
+    grass.save(out/'grass-border.png')
 
 assets = a.assets or a.jar.parents[2] / 'assets'
 unifont_hash = '666999116c467f10622db1527a06ddc0a6efad2a'
@@ -62,7 +75,7 @@ with zipfile.ZipFile(io.BytesIO(data)) as z:
 # Re-run after adding profile text; the source .hex never leaves the client assets.
 project = Path(__file__).resolve().parents[1]
 characters = set(chr(n) for n in range(32,256))
-for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx','src/components/SignBoard.tsx','src/components/MinecraftInventory.tsx']:
+for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx','src/components/MinecraftInventory.tsx']:
     characters.update((project/source).read_text(encoding='utf-8'))
 selected = sorted(code for code in glyphs if chr(code) in characters)
 atlas = Image.new('RGBA', (256,((len(selected)+15)//16)*16))

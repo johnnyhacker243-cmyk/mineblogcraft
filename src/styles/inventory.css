@@ -3,8 +3,12 @@
   inset: 0;
   z-index: 4;
   overflow: auto;
-  background: url("/assets/inventory/dirt.png") repeat;
-  background-size: 64px 64px;
+  background-image:
+    url("/assets/inventory/grass-border.png"), url("/assets/inventory/dirt.png");
+  background-size:
+    64px 64px,
+    64px 64px;
+  background-repeat: repeat-x, repeat;
   image-rendering: pixelated;
   display: grid;
   place-items: center;
@@ -14,21 +18,22 @@
   content: "";
   position: fixed;
   inset: 0;
-  background: #0009;
+  background: #0008;
   pointer-events: none;
 }
 .inventory-scene {
   position: relative;
-  width: calc(390px * var(--inventory-scale));
-  height: calc(340px * var(--inventory-scale));
+  z-index: 1;
+  width: var(--scene-width);
+  height: var(--scene-height);
   flex-shrink: 0;
 }
 .inventory-brand {
   position: absolute;
   left: 0;
-  top: calc(-11px * var(--inventory-scale));
-  width: calc(190px * var(--inventory-scale));
-  height: calc(48px * var(--inventory-scale));
+  top: calc(-13px * var(--inventory-scale));
+  width: calc(200px * var(--inventory-scale));
+  height: calc(55px * var(--inventory-scale));
   overflow: hidden;
 }
 .inventory-brand img {
@@ -37,8 +42,8 @@
 }
 .inventory-tabs {
   position: absolute;
-  left: 0;
-  top: calc(38px * var(--inventory-scale));
+  right: 0;
+  top: calc(14px * var(--inventory-scale));
   display: flex;
   gap: calc(1px * var(--inventory-scale));
 }
@@ -54,9 +59,9 @@
 }
 .inventory-frame {
   position: absolute;
-  top: calc(66px * var(--inventory-scale));
+  top: calc(42px * var(--inventory-scale));
   width: 100%;
-  height: calc(186px * var(--inventory-scale));
+  height: calc(100% - 42px * var(--inventory-scale) - 48px);
   border: calc(7px * var(--inventory-scale)) solid transparent;
   border-image: url("/assets/inventory/frame.png") 7 fill /
     calc(7px * var(--inventory-scale)) / 0 stretch;
@@ -66,8 +71,8 @@
   position: absolute;
   left: calc(4px * var(--inventory-scale));
   top: calc(4px * var(--inventory-scale));
-  width: calc(100px * var(--inventory-scale));
-  height: calc(118px * var(--inventory-scale));
+  width: calc(108px * var(--inventory-scale));
+  height: calc(120px * var(--inventory-scale));
 }
 .player-viewport {
   height: calc(100px * var(--inventory-scale));
@@ -97,17 +102,18 @@
 .player-caption {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   gap: calc(2px * var(--inventory-scale));
   padding-top: calc(2px * var(--inventory-scale));
 }
 .profile-panel {
   position: absolute;
-  left: calc(111px * var(--inventory-scale));
+  left: calc(119px * var(--inventory-scale));
   top: calc(4px * var(--inventory-scale));
-  width: calc(260px * var(--inventory-scale));
-  height: calc(118px * var(--inventory-scale));
-  padding: calc(5px * var(--inventory-scale));
+  right: calc(4px * var(--inventory-scale));
+  height: calc(114px * var(--inventory-scale));
+  padding: calc(6px * var(--inventory-scale));
   background: #100b19;
   border: calc(1px * var(--inventory-scale)) solid #290b50;
   box-shadow: inset 0 0 0 calc(1px * var(--inventory-scale)) #1b1230;
@@ -148,20 +154,71 @@
   font-size: 14px;
   color: #ff5555;
 }
-.item-slots,
-.text-slots {
+.website-introduction {
   position: absolute;
+  left: calc(4px * var(--inventory-scale));
+  right: calc(4px * var(--inventory-scale));
+  top: calc(120px * var(--inventory-scale));
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.website-copy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(8px * var(--inventory-scale));
+}
+.player-status {
+  --inventory-scale: var(--hud-scale);
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  bottom: calc(23px * var(--inventory-scale));
+  width: calc(182px * var(--inventory-scale));
+  display: flex;
+  justify-content: space-between;
+}
+.status-hearts,
+.status-food {
   display: flex;
 }
-.item-slots {
-  left: calc(4px * var(--inventory-scale));
-  top: calc(128px * var(--inventory-scale));
+.status-icon {
+  position: relative;
+  display: block;
+  width: calc(9px * var(--inventory-scale));
+  height: calc(9px * var(--inventory-scale));
 }
-.text-slots {
-  left: calc(4px * var(--inventory-scale));
-  top: calc(151px * var(--inventory-scale));
+.status-icon + .status-icon {
+  margin-left: calc(-1px * var(--inventory-scale));
+}
+.status-icon img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+.item-slots {
+  --inventory-scale: var(--hud-scale);
+  position: absolute;
+  display: flex;
+  left: 50%;
+  bottom: calc(2px * var(--inventory-scale));
+  translate: -50% 0;
+}
+.inventory-scene .inventory-back {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  bottom: 0;
+  width: 400px;
+  height: 40px;
+  --gui-scale-x: 2;
+  --gui-scale-y: 2;
+  --inventory-scale: 2;
 }
 .inventory-slot {
+  position: relative;
   width: calc(18px * var(--inventory-scale));
   height: calc(18px * var(--inventory-scale));
   background: url("/assets/inventory/slot.png") center/100% 100%;
@@ -169,18 +226,20 @@
   place-items: center;
   image-rendering: pixelated;
 }
-.text-slot {
-  width: calc(40px * var(--inventory-scale));
-  height: calc(20px * var(--inventory-scale));
-  border: calc(1px * var(--inventory-scale)) solid;
-  border-color: #373737 #fff #fff #373737;
-  background-size: 100% 100%;
-}
 .item-icon {
   width: calc(16px * var(--inventory-scale));
   height: calc(16px * var(--inventory-scale));
   object-fit: contain;
   image-rendering: pixelated;
+}
+.item-count {
+  position: absolute;
+  right: calc(1px * var(--inventory-scale));
+  top: calc(9px * var(--inventory-scale));
+  height: calc(9px * var(--inventory-scale));
+  line-height: 1;
+  --gui-scale-x: var(--inventory-scale);
+  --gui-scale-y: var(--inventory-scale);
 }
 .block-icon {
   width: calc(16px * var(--inventory-scale));
@@ -215,30 +274,6 @@
 .block-icon .grass-tint {
   background-color: #7cae45;
   background-blend-mode: multiply;
-}
-.sign-board {
-  position: absolute;
-  left: calc(120px * var(--inventory-scale));
-  top: calc(263px * var(--inventory-scale));
-  width: calc(144px * var(--inventory-scale));
-  height: calc(72px * var(--inventory-scale));
-  background: url("/assets/inventory/sign-face.png") center/100% 100%;
-  image-rendering: pixelated;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: calc(3px * var(--inventory-scale));
-}
-.sign-board::after {
-  content: "";
-  position: absolute;
-  right: calc(-4px * var(--inventory-scale));
-  top: calc(2px * var(--inventory-scale));
-  width: calc(4px * var(--inventory-scale));
-  height: 100%;
-  background: url("/assets/inventory/sign-edge.png") center/100% 100%;
-  filter: brightness(0.65);
 }
 @media (max-width: 410px) {
   .inventory-screen {

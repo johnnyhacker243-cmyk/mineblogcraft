@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-10T13:58:32.024Z",
+  "date": "2026-10-10T14:23:41.789Z",
   "dimensions": [
     {
       "width": 1920,
@@ -262,7 +262,7 @@
       }
     }
   ],
-  "rotationDeltaRadians": 0.04130496207769796,
+  "rotationDeltaRadians": 0.04013908213736561,
   "errors": [],
   "badResponses": [],
   "interactionCases": [

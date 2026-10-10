@@ -5,6 +5,12 @@ await mkdir("tests/screenshots", { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
 await page.addInitScript(() => {
+  window.__profileAudioPlays = 0;
+  const originalPlay = HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play = function () {
+    window.__profileAudioPlays++;
+    return originalPlay.call(this);
+  };
   window.__profileGL = [];
   const original = HTMLCanvasElement.prototype.getContext;
   HTMLCanvasElement.prototype.getContext = function (type, ...args) {
@@ -63,11 +69,31 @@ await page.waitForFunction(() =>
 );
 assert.equal(
   await page.locator(".inventory-screen button").count(),
-  0,
-  "No navigation or fake category controls",
+  1,
+  "Only the requested return button is interactive",
 );
+assert.equal(await page.locator(".inventory-tab").count(), 8);
 assert.equal(await page.locator(".item-slots>.inventory-slot").count(), 9);
-assert.equal(await page.locator(".text-slots>.inventory-slot").count(), 9);
+assert.equal(await page.locator(".text-slots,.sign-board").count(), 0);
+assert.equal(await page.locator(".item-count").count(), 8);
+assert.equal(await page.locator(".status-hearts>.status-icon").count(), 10);
+assert.equal(await page.locator(".status-food>.status-icon").count(), 10);
+assert.equal(
+  await page.locator('.item-slots img[src$="pickaxe.png"]').count(),
+  1,
+);
+assert.equal(
+  await page.locator('.item-slots img[src$="diamond.png"]').count(),
+  8,
+);
+const frameBox = await page.locator(".inventory-frame").boundingBox();
+const tabsBox = await page.locator(".inventory-tabs").boundingBox();
+const brandBox = await page.locator(".inventory-brand").boundingBox();
+assert.ok(
+  Math.abs(tabsBox.x + tabsBox.width - frameBox.x - frameBox.width) < 0.1,
+  "Tabs align to right edge",
+);
+assert.ok(Math.abs(brandBox.x - frameBox.x) < 0.1, "Logo aligns to left edge");
 assert.match(
   await page.locator(".steve-model").getAttribute("data-equipment"),
   /diamond_boots,diamond_pickaxe/,
@@ -88,6 +114,53 @@ for (const [width, height] of [
       box.y >= 0 &&
       box.x + box.width <= width + 0.1 &&
       box.y + box.height <= height + 0.1,
+  );
+  for (const margin of [
+    box.x,
+    box.y,
+    width - box.x - box.width,
+    height - box.y - box.height,
+  ])
+    assert.ok(Math.abs(margin - 64) < 0.1, "Exactly one 64px block border");
+  const statusBox = await page.locator(".player-status").boundingBox();
+  const hotbarBox = await page.locator(".item-slots").boundingBox();
+  const copyBox = await page.locator(".website-introduction").boundingBox();
+  const captionBox = await page.locator(".player-caption").boundingBox();
+  assert.ok(
+    captionBox.y + captionBox.height <= copyBox.y,
+    "Player caption does not overlap introduction",
+  );
+  const backBox = await page
+    .getByRole("button", { name: "返回目录" })
+    .boundingBox();
+  assert.ok(
+    hotbarBox.y + hotbarBox.height < backBox.y,
+    `Return button sits below hotbar: ${JSON.stringify({ width, hotbarBox, backBox })}`,
+  );
+  const currentFrame = await page.locator(".inventory-frame").boundingBox();
+  assert.ok(
+    currentFrame.y + currentFrame.height < backBox.y,
+    "Return is outside and below the frame",
+  );
+  assert.ok(
+    Math.abs(backBox.x + backBox.width / 2 - width / 2) < 0.1,
+    "Return is horizontally centered",
+  );
+  const logicalScale = Number(
+    await page.locator(".inventory-scene").getAttribute("data-inventory-scale"),
+  );
+  assert.equal(
+    hotbarBox.height,
+    18 * (logicalScale + 1),
+    "Hotbar uses larger integer pixel scale",
+  );
+  assert.ok(
+    copyBox.y + copyBox.height <= statusBox.y,
+    "Website introduction does not overlap HUD",
+  );
+  assert.ok(
+    statusBox.y + statusBox.height < hotbarBox.y,
+    "Status icons sit above hotbar",
   );
   const viewport = await page.locator(".steve-model").boundingBox();
   await page.mouse.move(
@@ -126,9 +199,28 @@ await page.mouse.move(modelBox.x + modelBox.width / 2, 1000);
 await page.waitForTimeout(50);
 const down = Number(await host.getAttribute("data-head-pitch"));
 assert.ok(up < 0 && down > 0, "Head pitch responds to vertical mouse offset");
+assert.equal(
+  Number(await host.getAttribute("data-body-pitch")),
+  0,
+  "Torso stays upright while looking down",
+);
+assert.ok(Math.abs(down) <= (25 * Math.PI) / 180 + 0.001);
+assert.equal(await host.getAttribute("data-grip"), "wooden_handle_at_palm");
+const shaftNormalDot = Number(await host.getAttribute("data-shaft-normal-dot"));
+assert.ok(
+  Math.abs(shaftNormalDot - 1) < 1e-10,
+  "Shaft is perpendicular to the user-facing hand surface (+Z)",
+);
+await page.screenshot({ path: "tests/screenshots/profile-look-down.png" });
 const geometries = Number(await host.getAttribute("data-geometries"));
 assert.ok(geometries > 20);
-await page.keyboard.press("Escape");
+const playsBeforeReturn = await page.evaluate(() => window.__profileAudioPlays);
+await page.getByRole("button", { name: "返回目录" }).click();
+await page.locator('.game[data-screen="main"]').waitFor();
+assert.ok(
+  (await page.evaluate(() => window.__profileAudioPlays)) > playsBeforeReturn,
+  "Return invokes click audio playback",
+);
 assert.equal(await page.locator(".game").getAttribute("data-screen"), "main");
 // Repeated entry exercises creation/disposal and checks canvases do not pile up.
 for (let i = 0; i < 3; i++) {
@@ -197,6 +289,12 @@ const result = {
   disposal,
   webGLUnavailableMessage: true,
   missingSkinMessage: true,
+  hotbar: { slots: 9, diamondStacks: 8, countPerStack: 64 },
+  torsoUpright: true,
+  shaftNormalDot,
+  status: { health: 20, food: 20, hearts: 10, foodIcons: 10 },
+  blockBorder: 64,
+  removedSignAndTextSlots: true,
 };
 await writeFile("tests/profile-results.json", JSON.stringify(result, null, 2));
 console.log(JSON.stringify(result, null, 2));

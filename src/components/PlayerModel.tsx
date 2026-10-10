@@ -93,23 +93,37 @@ export function PlayerModel() {
     const move = (event: PointerEvent) => {
       if (!model) return;
       const rect = element.getBoundingClientRect(),
-        scale = rect.height / 100;
+        scale =
+          Number(
+            element
+              .closest(".inventory-scene")
+              ?.getAttribute("data-inventory-scale"),
+          ) || 1;
       const horizontal = Math.atan(
         (rect.left + rect.width / 2 - event.clientX) / scale / 40,
       );
       const vertical = Math.atan(
-        (rect.top + rect.height / 2 - event.clientY) / scale / 40,
+        (rect.top + rect.height * 0.23 - event.clientY) / scale / 40,
       );
       const degree = Math.PI / 180;
       model.player.rotation.y = -horizontal * 20 * degree;
-      model.player.rotation.x = vertical * 20 * degree;
+      // Keep the torso upright: rotating the root around the feet made the
+      // entire player dive forward when the mouse moved below the portrait.
+      model.player.rotation.x = 0;
       model.head.rotation.y = -horizontal * 20 * degree;
-      model.head.rotation.x = -vertical * 20 * degree;
+      model.head.rotation.x = THREE.MathUtils.clamp(
+        -vertical * 20 * degree,
+        -25 * degree,
+        25 * degree,
+      );
       element.dataset.bodyYaw = String(model.player.rotation.y);
       element.dataset.headYaw = String(
         model.head.rotation.y + model.player.rotation.y,
       );
       element.dataset.headPitch = String(model.head.rotation.x);
+      element.dataset.bodyPitch = String(model.player.rotation.x);
+      element.dataset.grip = "wooden_handle_at_palm";
+      element.dataset.shaftNormalDot = String(model.shaftNormalDot);
       dirty = true;
       schedule();
     };

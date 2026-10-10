@@ -1,15 +1,15 @@
 {
-  "date": "2026-10-10T14:01:31.181Z",
+  "date": "2026-10-10T14:58:26.121Z",
   "dimensions": [
     {
       "width": 1920,
       "height": 1080,
-      "scale": "3",
+      "scale": "4",
       "box": {
-        "x": 375,
-        "y": 30,
-        "width": 1170,
-        "height": 1020
+        "x": 64,
+        "y": 64,
+        "width": 1792,
+        "height": 952
       }
     },
     {
@@ -17,10 +17,10 @@
       "height": 768,
       "scale": "2",
       "box": {
-        "x": 293,
-        "y": 44,
-        "width": 780,
-        "height": 680
+        "x": 64,
+        "y": 64,
+        "width": 1238,
+        "height": 640
       }
     },
     {
@@ -28,40 +28,40 @@
       "height": 720,
       "scale": "2",
       "box": {
-        "x": 250,
-        "y": 20,
-        "width": 780,
-        "height": 680
+        "x": 64,
+        "y": 64,
+        "width": 1152,
+        "height": 592
       }
     },
     {
       "width": 1600,
       "height": 900,
-      "scale": "2",
+      "scale": "3",
       "box": {
-        "x": 410,
-        "y": 110,
-        "width": 780,
-        "height": 680
+        "x": 64,
+        "y": 64,
+        "width": 1472,
+        "height": 772
       }
     },
     {
       "width": 2560,
       "height": 1440,
-      "scale": "3",
+      "scale": "5",
       "box": {
-        "x": 695,
-        "y": 210,
-        "width": 1170,
-        "height": 1020
+        "x": 64,
+        "y": 64,
+        "width": 2432,
+        "height": 1312
       }
     }
   ],
   "mouse": {
-    "left": -0.9211550879397827,
-    "right": 1.0307159121429401,
-    "up": -0.4383832789249098,
-    "down": 0.47952128361221386
+    "left": -0.589330658060373,
+    "right": 1.02123883198664,
+    "up": -0.38653759394985593,
+    "down": 0.4363323129985824
   },
   "geometries": 83,
   "errors": [],
@@ -98,5 +98,20 @@
     }
   ],
   "webGLUnavailableMessage": true,
-  "missingSkinMessage": true
+  "missingSkinMessage": true,
+  "hotbar": {
+    "slots": 9,
+    "diamondStacks": 8,
+    "countPerStack": 64
+  },
+  "torsoUpright": true,
+  "shaftNormalDot": 0.9999999999999997,
+  "status": {
+    "health": 20,
+    "food": 20,
+    "hearts": 10,
+    "foodIcons": 10
+  },
+  "blockBorder": 64,
+  "removedSignAndTextSlots": true
 }

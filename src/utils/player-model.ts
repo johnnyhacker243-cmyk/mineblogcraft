@@ -130,14 +130,38 @@ export function createPlayer(
         new THREE.BoxGeometry(0.85, 0.85, 0.85),
         material,
       );
-      pixel.position.set((x - 7.5) * 0.85, (7.5 - y) * 0.85, 0);
+      // Anchor an actual wooden-handle texel at the palm, rather than the
+      // texture's center (which previously pasted the blade across the arm).
+      pixel.position.set((x - 5) * 0.85, (11 - y) * 0.85, 0);
       tool.add(pixel);
     }
-  tool.position.set(-1, -8, 3.5);
-  tool.rotation.z = -0.2;
+  tool.position.set(-1, -9, 2.1);
+  // The visible front of the right hand has local +Z as its normal.
+  // First align the diagonal wooden shaft with +Y, then rotate it onto +Z:
+  // the handle projects out of the front of the hand, not along the arm.
+  tool.quaternion
+    .setFromAxisAngle(new THREE.Vector3(1, 0, 0), Math.PI / 2)
+    .multiply(
+      new THREE.Quaternion().setFromAxisAngle(
+        new THREE.Vector3(0, 0, 1),
+        Math.PI / 4,
+      ),
+    )
+    // Roll around the original shaft axis without changing its direction
+    // or the wooden-handle texel anchored at the palm.
+    .multiply(
+      new THREE.Quaternion().setFromAxisAngle(
+        new THREE.Vector3(1, 1, 0).normalize(),
+        Math.PI / 2,
+      ),
+    );
+  const shaftNormalDot = new THREE.Vector3(1, 1, 0)
+    .normalize()
+    .applyQuaternion(tool.quaternion)
+    .dot(new THREE.Vector3(0, 0, 1));
   rightArm.add(tool);
-  rightArm.rotation.x = -0.25;
+  rightArm.rotation.x = -Math.PI / 10;
   rightArm.rotation.z = -0.08;
   leftArm.rotation.z = 0.04;
-  return { player, head, rightArm, tool };
+  return { player, head, rightArm, tool, shaftNormalDot };
 }

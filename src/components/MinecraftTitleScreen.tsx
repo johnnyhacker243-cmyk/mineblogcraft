@@ -42,12 +42,16 @@ export function MinecraftTitleScreen() {
       data-gui-scale={m.scale}
       data-screen={screen}
     >
-      <PanoramaRenderer dynamic={screen !== "profile" && settings.dynamic && !settings.reducedMotion} />
+      <PanoramaRenderer
+        dynamic={
+          screen !== "profile" && settings.dynamic && !settings.reducedMotion
+        }
+      />
       <div className="gui">
         {screen === "main" ? (
           <MainMenuScreen navigate={setScreen} />
         ) : screen === "profile" ? (
-          <MinecraftInventory />
+          <MinecraftInventory back={() => setScreen("main")} />
         ) : (
           <SecondaryScreen
             screen={screen}

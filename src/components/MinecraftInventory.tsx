@@ -4,10 +4,11 @@ import { assets } from "../config/assets-config";
 import { ItemIcon, InventorySlots } from "./InventorySlots";
 import { InventoryText } from "./InventoryText";
 import { ProfilePanel } from "./ProfilePanel";
-import { SignBoard } from "./SignBoard";
 import { PlayerModel } from "./PlayerModel";
+import { PlayerStatus } from "./PlayerStatus";
+import { MinecraftButton } from "./MinecraftButton";
 import "../styles/inventory.css";
-export function MinecraftInventory() {
+export function MinecraftInventory({ back }: { back: () => void }) {
   const [size, setSize] = useState({ width: innerWidth, height: innerHeight });
   useEffect(() => {
     const resize = () => setSize({ width: innerWidth, height: innerHeight });
@@ -20,8 +21,8 @@ export function MinecraftInventory() {
       profile.layout.maxScale,
       Math.floor(
         Math.min(
-          size.width / (profile.layout.width + 20),
-          size.height / (profile.layout.height + 16),
+          (size.width - 2 * profile.layout.borderTile) / profile.layout.width,
+          (size.height - 2 * profile.layout.borderTile) / profile.layout.height,
         ),
       ),
     ),
@@ -30,27 +31,32 @@ export function MinecraftInventory() {
     <main
       className="inventory-screen"
       aria-label="Mineblogcraft 作者介绍"
-      style={{ "--inventory-scale": scale } as CSSProperties}
+      style={
+        {
+          "--inventory-scale": scale,
+          "--hud-scale": scale + 1,
+          "--scene-width": `${Math.max(390, size.width - 2 * profile.layout.borderTile)}px`,
+          "--scene-height": `${Math.max(238, size.height - 2 * profile.layout.borderTile)}px`,
+        } as CSSProperties
+      }
     >
       <div className="inventory-scene" data-inventory-scale={scale}>
         <header className="inventory-brand">
           <img src={assets.logo} alt="Mineblogcraft" />
         </header>
         <div className="inventory-tabs" aria-label="创造模式分类装饰">
-          {["自然方块", "建筑方块", "功能方块", "书与知识", "红石", "工具"].map(
-            (name, index) => (
-              <div
-                key={name}
-                className="inventory-tab"
-                title={name}
-                style={{
-                  backgroundImage: `url(${inventoryAssets}tab-${index + 1}.png)`,
-                }}
-              >
-                <ItemIcon index={index} />
-              </div>
-            ),
-          )}
+          {profile.tabs.map((name, index) => (
+            <div
+              key={name}
+              className="inventory-tab"
+              title={name}
+              style={{
+                backgroundImage: `url(${inventoryAssets}tab-${index === 0 ? 1 : 2}.png)`,
+              }}
+            >
+              <ItemIcon index={index} />
+            </div>
+          ))}
         </div>
         <section className="inventory-frame">
           <div className="player-panel">
@@ -63,9 +69,28 @@ export function MinecraftInventory() {
             </div>
           </div>
           <ProfilePanel />
+          <section className="website-introduction" aria-label="网站介绍">
+            <div className="website-copy">
+              {profile.introduction.map((line) => (
+                <InventoryText
+                  key={line}
+                  text={line}
+                  color="#404040"
+                  shadow={false}
+                />
+              ))}
+            </div>
+          </section>
+          <PlayerStatus />
           <InventorySlots />
         </section>
-        <SignBoard />
+        <MinecraftButton
+          className="inventory-back"
+          aria-label="返回目录"
+          onClick={back}
+        >
+          <InventoryText text="返回" />
+        </MinecraftButton>
       </div>
     </main>
   );
