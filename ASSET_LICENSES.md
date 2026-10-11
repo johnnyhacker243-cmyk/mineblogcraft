@@ -27,6 +27,10 @@ React、Vite、Three.js、TypeScript、Playwright 和 Prettier 通过 npm 安装
 
 此文件是本次素材记录，不能代替未来发布时的授权审查。
 
+## MineRSS（2026-10-11）
+
+新增本地原版纹理：item/empty_armor_slot_shield.png、item/enchanted_book.png、gui/sprites/server_list/ping_5.png 和 ping_1.png，来源为同一用户授权的 1.21.1 客户端。用户指定的「暮色湖畔的村庄与紫色传送门.png」仅完整复制供本地背景显示，没有重绘或修改；其授权范围不能据此推定为公开再分发。纹理、字体和背景副本全部忽略。RSS 静态源描述与标签来自用户给定内容，未采集第三方文章。
+
 ## 博客世界列表（2026-10-11）
 
 同一用户授权的 1.21.1 客户端新增固定提取 `textures/gui/menu_list_background.png`、`header_separator.png` 和 `footer_separator.png`。草方块封面复用本地原版顶面和侧面纹理。中文图集增加本地博客正文及菜单字形；资源与来源哈希仍保留在忽略的 inventory 目录。博客正文依据用户给定题纲及本项目实际开发记录撰写，可供用户修改；没有额外第三方文章素材。

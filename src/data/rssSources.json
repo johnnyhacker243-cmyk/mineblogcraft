@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ai-research",
+    "name": "AI Research Server",
+    "icon": "grass",
+    "description": "最新人工智能研究动态与技术进展",
+    "category": "AI",
+    "tags": ["AI", "LLM", "Agent", "Research"],
+    "sourceUrl": "",
+    "lastUpdate": "2026-10-11",
+    "status": "online"
+  },
+  {
+    "id": "openai-lab",
+    "name": "OpenAI Laboratory",
+    "icon": "ender-pearl",
+    "description": "人工智能模型与智能体技术探索",
+    "category": "AI",
+    "tags": ["AI", "Model", "AGI"],
+    "sourceUrl": "",
+    "lastUpdate": "2026-10-11",
+    "status": "online"
+  },
+  {
+    "id": "cyber-security",
+    "name": "Cyber Security Server",
+    "icon": "shield",
+    "description": "网络安全漏洞情报与技术资讯",
+    "category": "Security",
+    "tags": ["Security", "CVE", "Threat", "Tools"],
+    "sourceUrl": "",
+    "lastUpdate": "2026-10-11",
+    "status": "online"
+  },
+  {
+    "id": "security-research",
+    "name": "Security Research World",
+    "icon": "redstone",
+    "description": "安全研究、攻击防御与行业动态",
+    "category": "Security",
+    "tags": ["Pentest", "Defense", "Research"],
+    "sourceUrl": "",
+    "lastUpdate": "2026-10-11",
+    "status": "online"
+  },
+  {
+    "id": "open-source",
+    "name": "Open Source World",
+    "icon": "crafting-table",
+    "description": "GitHub 开源项目与工程实践分享",
+    "category": "Engineering",
+    "tags": ["GitHub", "OpenSource", "Dev"],
+    "sourceUrl": "",
+    "lastUpdate": "2026-10-11",
+    "status": "online"
+  },
+  {
+    "id": "software-engineering",
+    "name": "Software Engineering Hub",
+    "icon": "enchanted-book",
+    "description": "软件架构、开发工具与工程思想",
+    "category": "Engineering",
+    "tags": ["Code", "Architecture", "Engineering"],
+    "sourceUrl": "",
+    "lastUpdate": "2026-10-11",
+    "status": "online"
+  }
+]

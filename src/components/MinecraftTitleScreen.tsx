@@ -8,6 +8,7 @@ import { type ScreenId } from "../config/ui-config";
 import { audioManager } from "../managers/AudioManager";
 import { MinecraftInventory } from "./MinecraftInventory";
 import { BlogWorldSelect } from "../screens/BlogWorldSelect";
+import { MineRSSScreen } from "../screens/MineRSSScreen";
 export function MinecraftTitleScreen() {
   const [screen, setScreen] = useState<ScreenId>(
     location.hash.startsWith("#blog/") ? "worlds" : "main",
@@ -47,7 +48,10 @@ export function MinecraftTitleScreen() {
     >
       <PanoramaRenderer
         dynamic={
-          screen !== "profile" && settings.dynamic && !settings.reducedMotion
+          screen !== "profile" &&
+          screen !== "multiplayer" &&
+          settings.dynamic &&
+          !settings.reducedMotion
         }
       />
       <div className="gui">
@@ -57,6 +61,8 @@ export function MinecraftTitleScreen() {
           <MinecraftInventory back={() => setScreen("main")} />
         ) : screen === "worlds" ? (
           <BlogWorldSelect back={() => setScreen("main")} />
+        ) : screen === "multiplayer" ? (
+          <MineRSSScreen back={() => setScreen("main")} />
         ) : (
           <SecondaryScreen
             screen={screen}

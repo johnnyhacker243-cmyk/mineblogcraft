@@ -6,6 +6,8 @@
 
 ## 启动
 
+MineRSS 已作为第二个主菜单入口实现，展示六个静态信息服务器；状态、日期和信号均为示例。资源清单、组件结构及未来 API 接入见 [RSS_MODULE.md](RSS_MODULE.md)，运行 `npm run test:rss` 可执行相关浏览器验证。
+
 在本目录用 PowerShell 执行：
 
 ```powershell

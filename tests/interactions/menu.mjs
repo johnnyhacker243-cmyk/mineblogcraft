@@ -96,7 +96,7 @@ const after = Number(await page.locator(".panorama").getAttribute("data-yaw"));
 assert.ok(after > before, "panorama rotates");
 const menus = [
   ["MineBlog", "worlds"],
-  ["Multiplayer", "multiplayer"],
+  ["MineRSS", "multiplayer"],
   ["Minecraft Realms", "realms"],
   ["Options...", "options"],
   ["Quit Game", "exit"],
