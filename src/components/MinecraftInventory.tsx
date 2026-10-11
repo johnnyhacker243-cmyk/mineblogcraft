@@ -83,8 +83,8 @@ export function MinecraftInventory({ back }: { back: () => void }) {
                 <PlayerModel />
               </div>
               <div className="player-caption">
-                <InventoryText text="STEVE" />
-                <InventoryText text="DIAMOND ARMOR" color="#55ffff" />
+                <InventoryText text="YTC" />
+                <InventoryText text="BingWang" color="#55ffff" />
               </div>
             </div>
             <ProfilePanel />
