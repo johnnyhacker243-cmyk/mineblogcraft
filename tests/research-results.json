@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-11T03:32:12.745Z",
+  "pages": 14,
+  "images": 3,
+  "dimensions": [
+    {
+      "width": 1366,
+      "height": 768,
+      "scale": "3",
+      "spread": {
+        "x": 245,
+        "y": 40.5,
+        "width": 876,
+        "height": 540
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "scale": "4",
+      "spread": {
+        "x": 376,
+        "y": 82,
+        "width": 1168,
+        "height": 720
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "scale": "5",
+      "spread": {
+        "x": 550,
+        "y": 147.5,
+        "width": 1460,
+        "height": 900
+      }
+    }
+  ],
+  "openingAnimation": true,
+  "keyboard": true,
+  "pageBoundaries": true,
+  "reducedMotion": true,
+  "contentFailureFallback": true,
+  "errors": [],
+  "failed": []
+}

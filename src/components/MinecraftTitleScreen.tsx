@@ -9,6 +9,7 @@ import { audioManager } from "../managers/AudioManager";
 import { MinecraftInventory } from "./MinecraftInventory";
 import { BlogWorldSelect } from "../screens/BlogWorldSelect";
 import { MineRSSScreen } from "../screens/MineRSSScreen";
+import { MineResearchPage } from "../screens/MineResearchPage";
 export function MinecraftTitleScreen() {
   const [screen, setScreen] = useState<ScreenId>(
     location.hash.startsWith("#blog/") ? "worlds" : "main",
@@ -63,6 +64,8 @@ export function MinecraftTitleScreen() {
           <BlogWorldSelect back={() => setScreen("main")} />
         ) : screen === "multiplayer" ? (
           <MineRSSScreen back={() => setScreen("main")} />
+        ) : screen === "realms" ? (
+          <MineResearchPage back={() => setScreen("main")} />
         ) : (
           <SecondaryScreen
             screen={screen}

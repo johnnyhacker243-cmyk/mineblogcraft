@@ -97,7 +97,7 @@ assert.ok(after > before, "panorama rotates");
 const menus = [
   ["MineBlog", "worlds"],
   ["MineRSS", "multiplayer"],
-  ["Minecraft Realms", "realms"],
+  ["MineResearch", "realms"],
   ["Options...", "options"],
   ["Quit Game", "exit"],
   ["Language", "language"],

@@ -42,7 +42,7 @@ export const ui = {
 export const menu: { label: string; target: ScreenId }[] = [
   { label: "MineBlog", target: "worlds" },
   { label: "MineRSS", target: "multiplayer" },
-  { label: "Minecraft Realms", target: "realms" },
+  { label: "MineResearch", target: "realms" },
   { label: "Options...", target: "options" },
   { label: "Quit Game", target: "exit" },
 ];

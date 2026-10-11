@@ -1,0 +1,15 @@
+[
+  {
+    "id": "001",
+    "title": "基于扩散方程的时间比值法研究",
+    "author": "YTC",
+    "year": "2024",
+    "description": "基于扩散方程解析解，研究时间比值法在模型估算中的应用。",
+    "category": "Mathematical Modeling",
+    "keywords": ["扩散方程", "时间比值法", "理论估算"],
+    "cover": "/assets/inventory/written-book.png",
+    "content": "/papers/paper001.md",
+    "abstract": "本文围绕扩散方程解析解中的时间比值法展开研究，结合理论推导与数学建模，对相关参数进行估算。",
+    "draft": true
+  }
+]

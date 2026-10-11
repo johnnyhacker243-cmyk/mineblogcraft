@@ -27,6 +27,12 @@ React、Vite、Three.js、TypeScript、Playwright 和 Prettier 通过 npm 安装
 
 此文件是本次素材记录，不能代替未来发布时的授权审查。
 
+## MineResearch（2026-10-11）
+
+从同一获授权的本地 1.21.1 客户端提取 written_book、writable_book、gui/book、enchanting_table_book 图集，以及 page_backward/page_forward 普通与高亮 GUI Sprite。复用客户端字库、菜单按钮和点击音效。所有原版图像、字形与来源记录位于忽略目录，不纳入 Git，也未获得公开再分发授权。
+
+用户明确授权先编写示例论文；`public/papers/paper001.md` 与三个公式/示意 SVG 为本项目原创内容，可纳入代码检查点。论文明确标注为原创示例、非发表论文；不冒充真实成果或实验数据。经典数学公式的参考来源见 RESEARCH_MODULE.md，没有复制第三方论文图片。
+
 ## MineRSS（2026-10-11）
 
 新增本地原版纹理：item/empty_armor_slot_shield.png、item/enchanted_book.png、gui/sprites/server_list/ping_5.png 和 ping_1.png，来源为同一用户授权的 1.21.1 客户端。用户指定的「暮色湖畔的村庄与紫色传送门.png」仅完整复制供本地背景显示，没有重绘或修改；其授权范围不能据此推定为公开再分发。纹理、字体和背景副本全部忽略。RSS 静态源描述与标签来自用户给定内容，未采集第三方文章。
