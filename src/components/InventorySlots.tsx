@@ -1,5 +1,5 @@
-import { inventoryAssets } from "../config/profile-config";
-import { PixelText } from "./PixelText";
+import { inventoryAssets, profile } from "../config/profile-config";
+import { InventoryText } from "./InventoryText";
 import { DragonEggIcon } from "./DragonEggIcon";
 export function BlockIcon({
   top,
@@ -56,25 +56,16 @@ export function ItemIcon({ index }: { index: number }) {
 }
 export function InventorySlots() {
   return (
-    <div className="item-slots" aria-label="快捷物品栏">
-      {Array.from({ length: 9 }, (_, index) => (
+    <div className="item-slots" role="list" aria-label="玩家技能栏">
+      {profile.skills.map((skill) => (
         <div
           className="inventory-slot"
-          key={index}
-          aria-label={index === 0 ? "钻石镐" : "钻石 × 64"}
+          key={skill}
+          role="listitem"
+          tabIndex={0}
+          aria-label={skill}
         >
-          <img
-            className="item-icon"
-            src={
-              inventoryAssets + (index === 0 ? "pickaxe.png" : "diamond.png")
-            }
-            alt=""
-          />
-          {index > 0 && (
-            <span className="item-count">
-              <PixelText text="64" />
-            </span>
-          )}
+          <InventoryText text={skill} />
         </div>
       ))}
     </div>

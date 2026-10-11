@@ -103,16 +103,32 @@ assert.deepEqual(
 );
 assert.equal(await page.locator(".item-slots>.inventory-slot").count(), 9);
 assert.equal(await page.locator(".text-slots,.sign-board").count(), 0);
-assert.equal(await page.locator(".item-count").count(), 8);
+assert.equal(await page.locator(".item-count").count(), 0);
+assert.deepEqual(
+  await page
+    .locator(".item-slots>.inventory-slot")
+    .evaluateAll((nodes) => nodes.map((n) => n.getAttribute("aria-label"))),
+  [
+    "Python",
+    "AI",
+    "Security",
+    "Linux",
+    "Docker",
+    "Data",
+    "Blog",
+    "Wiki",
+    "Research",
+  ],
+);
 assert.equal(await page.locator(".status-hearts>.status-icon").count(), 10);
 assert.equal(await page.locator(".status-food>.status-icon").count(), 10);
 assert.equal(
   await page.locator('.item-slots img[src$="pickaxe.png"]').count(),
-  1,
+  0,
 );
 assert.equal(
   await page.locator('.item-slots img[src$="diamond.png"]').count(),
-  8,
+  0,
 );
 const frameBox = await page.locator(".inventory-frame").boundingBox();
 const tabsBox = await page.locator(".inventory-tabs").boundingBox();
@@ -133,6 +149,9 @@ for (const [width, height] of [
   [1280, 720],
   [1600, 900],
   [2560, 1440],
+  [2559, 1258],
+  [2559, 1438],
+  [1440, 900],
   [1440, 760],
   [1100, 700],
   [900, 600],
@@ -147,16 +166,14 @@ for (const [width, height] of [
       box.x + box.width <= width + 0.1 &&
       box.y + box.height <= height + 0.1,
   );
-  for (const margin of [
-    box.x,
-    box.y,
-    width - box.x - box.width,
-    height - box.y - box.height,
-  ])
-    assert.ok(
-      Math.abs(margin - (height < 800 || width < 1200 ? 24 : 64)) < 0.1,
-      "Window-aware outer margins",
-    );
+  assert.ok(
+    Math.abs(box.x + box.width / 2 - width / 2) < 0.1,
+    "Logical GUI is centered horizontally",
+  );
+  assert.ok(
+    Math.abs(box.y + box.height / 2 - height / 2) < 0.1,
+    "Logical GUI is centered vertically",
+  );
   const statusBox = await page.locator(".player-status").boundingBox();
   const windowBrand = await page.locator(".inventory-brand").boundingBox();
   const windowTabs = await page.locator(".inventory-tabs").boundingBox();
@@ -198,8 +215,8 @@ for (const [width, height] of [
   );
   assert.equal(
     hotbarBox.height,
-    18 * logicalScale,
-    "Hotbar uses balanced integer pixel scale",
+    22 * logicalScale,
+    "Skill slots use balanced integer pixel scale",
   );
   assert.ok(
     copyBox.y + copyBox.height <= statusBox.y,
@@ -222,12 +239,34 @@ for (const [width, height] of [
       .locator(".inventory-scene")
       .getAttribute("data-inventory-scale"),
     box,
+    profileBox: panelBox,
+    playerBox: viewport,
+    introductionBox: copyBox,
   });
   await page.screenshot({
     path: `tests/screenshots/profile-${width}x${height}.png`,
   });
 }
 await page.setViewportSize({ width: 1920, height: 1080 });
+await page.mouse.move(0, 0);
+const firstSkill = page.getByRole("listitem", { name: "Python", exact: true });
+const normalSkill = await firstSkill.evaluate(
+  (n) => getComputedStyle(n).filter,
+);
+await firstSkill.hover();
+const hoverSkill = await firstSkill.evaluate((n) => getComputedStyle(n).filter);
+await page.screenshot({
+  path: "tests/screenshots/profile-skill-hover-1920x1080.png",
+});
+await page.mouse.move(0, 0);
+await firstSkill.focus();
+await page.keyboard.press("Tab");
+await page.keyboard.press("Shift+Tab");
+const focusedSkill = await firstSkill.evaluate(
+  (n) => getComputedStyle(n).filter,
+);
+assert.notEqual(normalSkill, hoverSkill);
+assert.equal(focusedSkill, hoverSkill);
 const host = page.locator(".steve-model");
 await page.mouse.move(100, 400);
 await page.waitForTimeout(100);
@@ -332,17 +371,35 @@ const result = {
   dimensions,
   mouse: { left, right, up, down },
   geometries,
+  skillsHighlight: {
+    normal: normalSkill,
+    hover: hoverSkill,
+    keyboardFocus: focusedSkill,
+  },
   errors,
   badResponses,
   reentry: 3,
   disposal,
   webGLUnavailableMessage: true,
   missingSkinMessage: true,
-  hotbar: { slots: 9, diamondStacks: 8, countPerStack: 64 },
+  hotbar: {
+    slots: 9,
+    skills: [
+      "Python",
+      "AI",
+      "Security",
+      "Linux",
+      "Docker",
+      "Data",
+      "Blog",
+      "Wiki",
+      "Research",
+    ],
+  },
   torsoUpright: true,
   shaftNormalDot,
   status: { health: 20, food: 20, hearts: 10, foodIcons: 10 },
-  blockBorder: { desktop: 64, windowed: 24 },
+  layout: "centered logical GUI with content-sized author tooltip",
   removedSignAndTextSlots: true,
 };
 await writeFile("tests/profile-results.json", JSON.stringify(result, null, 2));

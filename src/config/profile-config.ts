@@ -25,7 +25,27 @@ export const profile = {
     "有新的知识，就挖下来；有新的想法，就建起来。",
     "欢迎来到我的方块世界。",
   ],
+  skills: [
+    "Python",
+    "AI",
+    "Security",
+    "Linux",
+    "Docker",
+    "Data",
+    "Blog",
+    "Wiki",
+    "Research",
+  ],
   // Author information supplied by the user.
   placeholder: false,
-  layout: { width: 510, height: 280, maxScale: 4, borderTile: 64 },
+  layout: {
+    width: 510,
+    height: 294,
+    maxScale: 4,
+    borderTile: 64,
+    playerWidth: 130,
+    playerHeight: 120,
+    profileHeight: 104,
+    introductionZoom: 1.2,
+  },
 } as const;

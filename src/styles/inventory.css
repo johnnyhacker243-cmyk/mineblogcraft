@@ -367,3 +367,62 @@
     min-height: calc(10px * var(--inventory-scale));
   }
 }
+/* Balanced player dossier: fixed logical proportions, content-sized tooltip. */
+.inventory-frame {
+  grid-template-rows: minmax(0, 1fr) auto calc(36px * var(--hud-scale));
+}
+.player-status {
+  bottom: calc(25px * var(--inventory-scale));
+}
+.profile-panel h1 {
+  height: calc(10px * var(--inventory-scale));
+}
+.inventory-details {
+  grid-template-columns:
+    calc(var(--player-width) * 1px * var(--inventory-scale))
+    minmax(0, 1fr);
+  gap: calc(14px * var(--inventory-scale));
+  width: min(100%, calc(380px * var(--inventory-scale)));
+  margin: 0 auto;
+  align-items: center;
+}
+.player-viewport {
+  height: calc(var(--player-height) * 1px * var(--inventory-scale));
+}
+.profile-panel {
+  height: calc(var(--profile-height) * 1px * var(--inventory-scale));
+  justify-content: flex-start;
+}
+.profile-panel dl > div {
+  min-height: calc(10px * var(--inventory-scale));
+}
+.website-copy {
+  gap: calc(3px * var(--intro-scale));
+}
+.website-copy .inventory-text {
+  zoom: var(--intro-scale);
+}
+.inventory-slot {
+  width: calc(36px * var(--inventory-scale));
+  height: calc(22px * var(--inventory-scale));
+  border: calc(1px * var(--inventory-scale)) solid transparent;
+  border-image: url("/assets/inventory/slot.png") 1 fill /
+    calc(1px * var(--inventory-scale)) / 0 stretch;
+  background: none;
+  outline: none;
+  line-height: 0;
+}
+.inventory-slot:hover,
+.inventory-slot:focus-visible {
+  filter: brightness(1.14);
+}
+.inventory-compact .player-viewport {
+  height: calc(93px * var(--inventory-scale));
+}
+.inventory-compact .inventory-frame {
+  gap: calc(3px * var(--inventory-scale));
+  padding: calc(3px * var(--inventory-scale));
+}
+.inventory-compact .website-copy {
+  gap: calc(2px * var(--intro-scale));
+}

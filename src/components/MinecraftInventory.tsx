@@ -15,31 +15,39 @@ export function MinecraftInventory({ back }: { back: () => void }) {
     window.addEventListener("resize", resize);
     return () => window.removeEventListener("resize", resize);
   }, []);
-  const margin =
-    size.height < 800 || size.width < 1200 ? 24 : profile.layout.borderTile;
-  const sceneWidth = Math.max(360, size.width - 2 * margin);
-  const sceneHeight = Math.max(520, size.height - 2 * margin);
+  const availableWidth = Math.max(360, size.width - 48);
+  const availableHeight = Math.max(548, size.height - 48);
   const scale = Math.max(
     size.width >= 720 ? 2 : 1,
     Math.min(
       profile.layout.maxScale,
       Math.floor(
         Math.min(
-          sceneWidth / profile.layout.width,
-          sceneHeight / profile.layout.height,
+          availableWidth / profile.layout.width,
+          (availableHeight - 48) / profile.layout.height,
         ),
       ),
     ),
   );
+  const sceneWidth = Math.min(profile.layout.width * scale, availableWidth);
+  const naturalHeight = profile.layout.height * scale + 48;
+  const sceneHeight = Math.min(naturalHeight, availableHeight);
+  const compact = sceneHeight < naturalHeight;
   return (
     <main
-      className="inventory-screen"
+      className={`inventory-screen${compact ? " inventory-compact" : ""}`}
       aria-label="Mineblogcraft 作者介绍"
       style={
         {
           "--inventory-scale": scale,
           "--header-scale": scale,
           "--hud-scale": scale,
+          "--intro-scale": compact
+            ? scale
+            : scale * profile.layout.introductionZoom,
+          "--player-width": profile.layout.playerWidth,
+          "--player-height": profile.layout.playerHeight,
+          "--profile-height": profile.layout.profileHeight,
           "--tab-scale": Math.max(
             1,
             Math.min(scale, Math.floor((sceneWidth - 200 * scale - 16) / 270)),
@@ -86,7 +94,9 @@ export function MinecraftInventory({ back }: { back: () => void }) {
                 <InventoryText
                   key={line}
                   text={line}
-                  color="#404040"
+                  color={
+                    line === profile.introduction[0] ? "#202020" : "#404040"
+                  }
                   shadow={false}
                 />
               ))}
