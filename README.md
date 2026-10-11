@@ -118,3 +118,5 @@ MineWiki 已实现 Advancements 风格四分支知识树、拖拽缩放、元数
 MineStatus 已接入首页原 Quit Game 入口：附魔书、材料槽和三条可查看详情的状态词条。当前为明确标记的静态示例，尚未连接真实监控。实现、资源、数据接口及测试说明见 [STATUS_MODULE.md](STATUS_MODULE.md)。可运行 `npm run test:status` 验证该模块。
 
 首次打开或刷新显示原版 Mojang 红色加载覆盖层，首页资源完成后淡出；站内切换不重复播放。实现与参数见 [STARTUP_LOADING.md](STARTUP_LOADING.md)，验证命令：`npm run test:startup`。
+
+首页地球图标进入 **MineWorld** 第一人称数字博物馆。点击开始探索，WASD移动、鼠标观察、靠近交互台按E，Esc暂停；各模块返回可回到参观位置。项目工作室目前仅开放建筑参观。说明与资源要求见 [MINEWORLD_MODULE.md](MINEWORLD_MODULE.md)，测试：`npm run test:world`。

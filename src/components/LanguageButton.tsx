@@ -4,7 +4,8 @@ export function LanguageButton({ onClick }: { onClick: () => void }) {
   return (
     <MinecraftButton
       className="icon-button"
-      aria-label="Language"
+      aria-label="MineWorld"
+      title="MineWorld"
       onClick={onClick}
     >
       <img src={assets.icons.language} alt="" />

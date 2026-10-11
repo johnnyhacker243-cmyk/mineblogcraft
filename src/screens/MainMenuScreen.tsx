@@ -26,7 +26,7 @@ export function MainMenuScreen({
           ))}
         </div>
         <div className="lower-buttons">
-          <LanguageButton onClick={() => navigate("language")} />
+          <LanguageButton onClick={() => navigate("mineworld")} />
           {menu.slice(3).map((item) => (
             <MinecraftButton
               key={item.target}

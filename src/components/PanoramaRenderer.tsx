@@ -5,14 +5,18 @@ import { loadPanoramaCube, disposePanorama } from "../utils/panorama-cube";
 export function PanoramaRenderer({
   dynamic,
   onSettled,
+  suspended = false,
 }: {
   dynamic: boolean;
   onSettled?: () => void;
+  suspended?: boolean;
 }) {
   const mount = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState("loading");
   const settledRef = useRef(onSettled);
   settledRef.current = onSettled;
+  const suspendedRef = useRef(suspended);
+  suspendedRef.current = suspended;
   const dynamicRef = useRef(dynamic);
   dynamicRef.current = dynamic;
   useEffect(() => {
@@ -49,6 +53,11 @@ export function PanoramaRenderer({
     window.addEventListener("resize", resize);
     const draw = (now: number) => {
       if (disposed || !cube) return;
+      if (suspendedRef.current) {
+        last = now;
+        frame = requestAnimationFrame(draw);
+        return;
+      }
       const dt = last ? Math.max((now - last) / 1000, 0) : 0;
       last = now;
       if (dynamicRef.current) elapsed += dt;

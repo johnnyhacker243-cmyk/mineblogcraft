@@ -100,7 +100,7 @@ const menus = [
   ["MineResearch", "realms"],
   ["MineWiki", "wiki"],
   ["MineStatus", "status"],
-  ["Language", "language"],
+  ["MineWorld", "mineworld"],
   ["作者介绍", "profile"],
 ];
 for (const [name, id] of menus) {

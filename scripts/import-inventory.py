@@ -19,6 +19,18 @@ assert hashlib.sha1(a.jar.read_bytes()).hexdigest() == '30c73b1c5da787909b2f7334
 out = Path(__file__).resolve().parents[1] / 'public/assets/inventory'
 out.mkdir(parents=True, exist_ok=True)
 mapping = {
+    'world-stone.png': 'block/stone_bricks.png',
+    'world-chiseled.png': 'block/chiseled_stone_bricks.png',
+    'world-wood.png': 'block/dark_oak_planks.png',
+    'world-copper.png': 'block/copper_block.png',
+    'world-lantern.png': 'block/sea_lantern.png',
+    'world-glass.png': 'block/glass.png',
+    'world-obsidian.png': 'block/obsidian.png',
+    'world-portal.png': 'block/nether_portal.png',
+    'world-anvil.png': 'block/anvil.png',
+    'world-redstone.png': 'block/redstone_block.png',
+    'world-quartz.png': 'block/quartz_block_side.png',
+    'world-leaves.png': 'block/oak_leaves.png',
     'mojang-studios-atlas.png': 'gui/title/mojangstudios.png',
     'status-gui.png': 'gui/container/enchanting_table.png',
     'lapis.png': 'item/lapis_lazuli.png',
@@ -149,6 +161,8 @@ for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx',
 for source in [project/'src/data/wiki.json', *list((project/'src/components/wiki').glob('*.tsx')), project/'src/screens/MineWikiPage.tsx']:
     if source.exists(): characters.update(source.read_text(encoding='utf-8'))
 for source in [project/'src/data/status.json', project/'src/screens/MineStatusPage.tsx', *list((project/'src/components/status').glob('*.tsx'))]:
+    if source.exists(): characters.update(source.read_text(encoding='utf-8'))
+for source in [project/'src/screens/MineWorldPage.tsx', *list((project/'src/components/world').glob('*.tsx')), project/'src/config/world-config.ts']:
     if source.exists(): characters.update(source.read_text(encoding='utf-8'))
 for source in (project/'public/papers').rglob('*.json'):
     characters.update(source.read_text(encoding='utf-8'))

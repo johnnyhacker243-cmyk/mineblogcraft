@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-11T08:27:51.319Z",
+  "date": "2026-10-11T08:51:17.176Z",
   "dimensions": [
     {
       "width": 1920,
@@ -262,7 +262,7 @@
       }
     }
   ],
-  "rotationDeltaRadians": 0.03898018351404159,
+  "rotationDeltaRadians": 0.04072202210753212,
   "errors": [],
   "badResponses": [],
   "interactionCases": [
@@ -271,7 +271,7 @@
     "MineResearch",
     "MineWiki",
     "MineStatus",
-    "Language",
+    "MineWorld",
     "作者介绍"
   ],
   "keyboard": [

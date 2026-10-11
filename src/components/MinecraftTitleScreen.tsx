@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { PanoramaRenderer } from "./PanoramaRenderer";
 import { MainMenuScreen } from "../screens/MainMenuScreen";
 import { SecondaryScreen, type Settings } from "../screens/SecondaryScreens";
@@ -12,6 +12,8 @@ import { MineRSSScreen } from "../screens/MineRSSScreen";
 import { MineWikiPage } from "../screens/MineWikiPage";
 import { MineResearchPage } from "../screens/MineResearchPage";
 import { MineStatusPage } from "../screens/MineStatusPage";
+import { MineWorldPage } from "../screens/MineWorldPage";
+import { worldConfig, type WorldPose } from "../config/world-config";
 export function MinecraftTitleScreen({
   onBackgroundReady,
 }: {
@@ -20,6 +22,9 @@ export function MinecraftTitleScreen({
   const [screen, setScreen] = useState<ScreenId>(
     location.hash.startsWith("#blog/") ? "worlds" : "main",
   );
+  const worldPose = useRef<WorldPose>({ ...worldConfig.spawn });
+  const [fromWorld, setFromWorld] = useState(false);
+  const moduleBack = () => setScreen(fromWorld ? "mineworld" : "main");
   const [settings, setSettings] = useState<Settings>({
     volume: 0.5,
     dynamic: true,
@@ -35,11 +40,11 @@ export function MinecraftTitleScreen({
   }, []);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setScreen("main");
+      if (e.key === "Escape") setScreen(fromWorld ? "mineworld" : "main");
     };
     window.addEventListener("keydown", key);
     return () => window.removeEventListener("keydown", key);
-  }, []);
+  }, [fromWorld]);
   useEffect(() => {
     audioManager.setVolume(settings.volume);
     audioManager.muted = settings.muted;
@@ -55,31 +60,55 @@ export function MinecraftTitleScreen({
     >
       <PanoramaRenderer
         onSettled={onBackgroundReady}
+        suspended={screen === "mineworld"}
         dynamic={
-          screen !== "profile" && settings.dynamic && !settings.reducedMotion
+          screen !== "profile" &&
+          screen !== "mineworld" &&
+          settings.dynamic &&
+          !settings.reducedMotion
         }
       />
       <div className="gui">
         {screen === "main" ? (
-          <MainMenuScreen navigate={setScreen} />
+          <MainMenuScreen
+            navigate={(id) => {
+              setFromWorld(false);
+              setScreen(id);
+            }}
+          />
+        ) : screen === "mineworld" ? (
+          <MineWorldPage
+            back={() => {
+              setFromWorld(false);
+              setScreen("main");
+            }}
+            navigate={(id) => {
+              setFromWorld(true);
+              setScreen(id);
+            }}
+            pose={worldPose.current}
+            savePose={(pose) => {
+              worldPose.current = pose;
+            }}
+          />
         ) : screen === "profile" ? (
-          <MinecraftInventory back={() => setScreen("main")} />
+          <MinecraftInventory back={moduleBack} />
         ) : screen === "worlds" ? (
-          <BlogWorldSelect back={() => setScreen("main")} />
+          <BlogWorldSelect back={moduleBack} />
         ) : screen === "multiplayer" ? (
-          <MineRSSScreen back={() => setScreen("main")} />
+          <MineRSSScreen back={moduleBack} />
         ) : screen === "wiki" ? (
-          <MineWikiPage back={() => setScreen("main")} />
+          <MineWikiPage back={moduleBack} />
         ) : screen === "status" ? (
-          <MineStatusPage back={() => setScreen("main")} />
+          <MineStatusPage back={moduleBack} />
         ) : screen === "realms" ? (
-          <MineResearchPage back={() => setScreen("main")} />
+          <MineResearchPage back={moduleBack} />
         ) : (
           <SecondaryScreen
             screen={screen}
             settings={settings}
             update={(s) => setSettings((prev) => ({ ...prev, ...s }))}
-            back={() => setScreen("main")}
+            back={moduleBack}
           />
         )}
       </div>

@@ -1,5 +1,6 @@
 export type ScreenId =
   | "main"
+  | "mineworld"
   | "worlds"
   | "multiplayer"
   | "realms"
