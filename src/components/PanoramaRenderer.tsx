@@ -2,9 +2,17 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { panorama } from "../config/panorama-config";
 import { loadPanoramaCube, disposePanorama } from "../utils/panorama-cube";
-export function PanoramaRenderer({ dynamic }: { dynamic: boolean }) {
+export function PanoramaRenderer({
+  dynamic,
+  onSettled,
+}: {
+  dynamic: boolean;
+  onSettled?: () => void;
+}) {
   const mount = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState("loading");
+  const settledRef = useRef(onSettled);
+  settledRef.current = onSettled;
   const dynamicRef = useRef(dynamic);
   dynamicRef.current = dynamic;
   useEffect(() => {
@@ -29,6 +37,7 @@ export function PanoramaRenderer({ dynamic }: { dynamic: boolean }) {
       host.append(renderer.domElement);
     } catch {
       setStatus("fallback");
+      settledRef.current?.();
       return;
     }
     const resize = () => {
@@ -83,9 +92,15 @@ export function PanoramaRenderer({ dynamic }: { dynamic: boolean }) {
         cube = g;
         model.add(g);
         setStatus("ready");
+        settledRef.current?.();
         if (!document.hidden) frame = requestAnimationFrame(draw);
       })
-      .catch(() => setStatus("fallback"));
+      .catch(() => {
+        if (!disposed) {
+          setStatus("fallback");
+          settledRef.current?.();
+        }
+      });
     return () => {
       disposed = true;
       cancelAnimationFrame(frame);

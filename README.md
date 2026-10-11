@@ -116,3 +116,5 @@ Vite 运行时执行 `npm run test:research` 可验证三种桌面尺寸及阅�
 MineWiki 已实现 Advancements 风格四分支知识树、拖拽缩放、元数据检索、Tooltip 与详情面板。首页原 Options... 入口改为 MineWiki；示例内容与学习状态不代表作者真实学习记录。数据、资源及验证说明见 [WIKI_MODULE.md](WIKI_MODULE.md)。
 
 MineStatus 已接入首页原 Quit Game 入口：附魔书、材料槽和三条可查看详情的状态词条。当前为明确标记的静态示例，尚未连接真实监控。实现、资源、数据接口及测试说明见 [STATUS_MODULE.md](STATUS_MODULE.md)。可运行 `npm run test:status` 验证该模块。
+
+首次打开或刷新显示原版 Mojang 红色加载覆盖层，首页资源完成后淡出；站内切换不重复播放。实现与参数见 [STARTUP_LOADING.md](STARTUP_LOADING.md)，验证命令：`npm run test:startup`。

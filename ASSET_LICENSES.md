@@ -64,3 +64,7 @@ MineWiki 使用本地 Minecraft Java 1.21.1 原版 `gui/advancements/` 窗口/�
 ## MineStatus 本地状态附魔台
 
 使用 1.21.1 原版附魔窗口、词条及等级图标、钻石剑、青金石和附魔书图集；通过 scripts/import-inventory.py 从已授权客户端导入。窗口边框仅裁切原像素，书本由代码几何渲染。派生 PNG、原始纹理与位图字体仍保留本地、排除 Git，不作为可自由再分发素材。无需新增第三方美术资源。
+
+## Mojang 入场加载素材
+
+入场加载使用本地授权1.21.1客户端的 gui/title/mojangstudios.png，拼接左右图集为显示图片，源像素未重绘。原图及派生图保留本地且不提交；这是原权利人的商标与游戏素材，读取授权不代表公开再分发授权。说明见 STARTUP_LOADING.md。

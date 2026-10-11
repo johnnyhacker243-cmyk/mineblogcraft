@@ -19,6 +19,7 @@ assert hashlib.sha1(a.jar.read_bytes()).hexdigest() == '30c73b1c5da787909b2f7334
 out = Path(__file__).resolve().parents[1] / 'public/assets/inventory'
 out.mkdir(parents=True, exist_ok=True)
 mapping = {
+    'mojang-studios-atlas.png': 'gui/title/mojangstudios.png',
     'status-gui.png': 'gui/container/enchanting_table.png',
     'lapis.png': 'item/lapis_lazuli.png',
     'enchant-slot.png': 'gui/sprites/container/enchanting_table/enchantment_slot.png',
@@ -99,6 +100,11 @@ with zipfile.ZipFile(a.jar) as z:
         for y, sy, h in [(0,0,7), (7,108,2), (9,129,7)]:
             frame.paste(original.crop((sx,sy,sx+w,sy+h)), (x,y))
     frame.save(out/'frame.png')
+    logo_atlas = Image.open(io.BytesIO(z.read('assets/minecraft/textures/gui/title/mojangstudios.png'))).convert('RGBA')
+    logo = Image.new('RGBA',(1024,256))
+    logo.paste(logo_atlas.crop((0,0,512,256)),(0,0))
+    logo.paste(logo_atlas.crop((0,256,512,512)),(512,0))
+    logo.save(out/'mojang-studios-logo.png')
     gui = Image.open(io.BytesIO(z.read('assets/minecraft/textures/gui/container/enchanting_table.png'))).convert('RGBA')
     sf = Image.new('RGBA',(16,16))
     for x,sx,w in [(0,0,7),(7,25,2),(9,169,7)]:

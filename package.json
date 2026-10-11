@@ -19,7 +19,8 @@
     "test:research-paper": "node tests/interactions/research-paper.mjs",
     "test:research-shelf": "node tests/interactions/research-shelf.mjs",
     "test:wiki": "node tests/interactions/wiki.mjs",
-    "test:status": "node tests/interactions/status.mjs"
+    "test:status": "node tests/interactions/status.mjs",
+    "test:startup": "node tests/interactions/startup.mjs"
   },
   "dependencies": {
     "react": "^19.1.1",

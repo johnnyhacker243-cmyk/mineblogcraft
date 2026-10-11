@@ -12,7 +12,11 @@ import { MineRSSScreen } from "../screens/MineRSSScreen";
 import { MineWikiPage } from "../screens/MineWikiPage";
 import { MineResearchPage } from "../screens/MineResearchPage";
 import { MineStatusPage } from "../screens/MineStatusPage";
-export function MinecraftTitleScreen() {
+export function MinecraftTitleScreen({
+  onBackgroundReady,
+}: {
+  onBackgroundReady?: () => void;
+}) {
   const [screen, setScreen] = useState<ScreenId>(
     location.hash.startsWith("#blog/") ? "worlds" : "main",
   );
@@ -50,6 +54,7 @@ export function MinecraftTitleScreen() {
       data-screen={screen}
     >
       <PanoramaRenderer
+        onSettled={onBackgroundReady}
         dynamic={
           screen !== "profile" && settings.dynamic && !settings.reducedMotion
         }

@@ -1,0 +1,34 @@
+{
+  "sizes": [
+    {
+      "width": 1366,
+      "height": 768,
+      "logo": {
+        "x": 299,
+        "y": 288,
+        "width": 768,
+        "height": 192
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "logo": {
+        "x": 560,
+        "y": 540,
+        "width": 1440,
+        "height": 360
+      }
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "original logo and red color",
+    "waits for actual resources",
+    "refresh replays",
+    "no replay on navigation",
+    "inert during loading",
+    "reduced motion",
+    "texture failure permits fallback"
+  ]
+}
