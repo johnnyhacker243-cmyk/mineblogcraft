@@ -44,173 +44,265 @@ assert.equal(
 );
 await mkdir("tests/screenshots", { recursive: true });
 const browser = await chromium.launch({ headless: true });
-const p = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
-const errors = [],
-  failed = [];
-p.on("pageerror", (e) => errors.push(String(e)));
-p.on("console", (m) => {
-  if (m.type() === "error") errors.push(m.text());
-});
-p.on("response", (r) => {
-  if (r.status() >= 400) failed.push(r.url());
-});
-await p.goto("http://127.0.0.1:5173/");
-await p.getByRole("button", { name: "MineResearch", exact: true }).click();
-const book = p.getByRole("button", { name: `打开书籍：${paper.title}` });
-await book.waitFor();
-await p.waitForFunction(() =>
-  [...document.querySelectorAll(".paper-item canvas")].every((c) =>
-    c
-      .getContext("2d")
-      .getImageData(0, 0, c.width, c.height)
-      .data.some((v, i) => i % 4 === 3 && v > 0),
-  ),
-);
-await p.screenshot({
-  path: "tests/screenshots/research-catalog-1920x1080.png",
-});
-await book.click();
-assert.equal(
-  await p.locator(".paper-book-viewer").getAttribute("data-book-state"),
-  "opening",
-);
-await p.screenshot({ path: "tests/screenshots/research-book-opening.png" });
-await p.locator('.paper-book-viewer[data-book-state="open"]').waitFor();
-await p.waitForFunction(() =>
-  document
-    .querySelector(".book-navigation canvas")
-    ?.getAttribute("aria-label")
-    ?.includes("共"),
-);
-assert.ok(
-  await p
-    .getByRole("button", { name: "上一页", exact: true, includeHidden: true })
-    .isDisabled(),
-);
-const dimensions = [];
-for (const [width, height] of [
-  [1366, 768],
-  [1920, 1080],
-  [2560, 1440],
-]) {
-  await p.setViewportSize({ width, height });
-  await p.waitForTimeout(150);
-  const spread = await p.locator(".book-spread").boundingBox();
-  const back = await p
-    .getByRole("button", { name: "返回论文目录" })
-    .boundingBox();
-  assert.ok(
-    spread.x >= 0 &&
-      spread.y >= 0 &&
-      spread.x + spread.width <= width &&
-      back.y + back.height <= height,
+try {
+  const p = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
+  const errors = [],
+    failed = [];
+  p.on("pageerror", (e) => errors.push(String(e)));
+  p.on("console", (m) => {
+    if (m.type() === "error") errors.push(m.text());
+  });
+  p.on("response", (r) => {
+    if (r.status() >= 400) failed.push(r.url());
+  });
+  await p.goto("http://127.0.0.1:5173/");
+  await p.locator(".gui").evaluate(async (n) => {
+    await Promise.all(n.getAnimations().map((a) => a.finished));
+  });
+  await p.getByRole("button", { name: "MineResearch", exact: true }).click();
+  const book = p.getByRole("button", { name: `打开书籍：${paper.title}` });
+  await book.waitFor();
+  await p.waitForFunction(() =>
+    [...document.querySelectorAll(".paper-item canvas")].every((c) =>
+      c
+        .getContext("2d")
+        .getImageData(0, 0, c.width, c.height)
+        .data.some((v, i) => i % 4 === 3 && v > 0),
+    ),
   );
-  assert.ok(Math.abs(spread.x + spread.width / 2 - width / 2) < 1);
-  for (const copy of await p.locator(".book-page-copy").all()) {
-    const box = await copy.boundingBox();
-    assert.ok(box.y + box.height <= spread.y + spread.height);
-  }
-  const text = await p
-    .locator(".book-page canvas")
-    .evaluateAll((ns) => ns.map((n) => n.getAttribute("aria-label")).join(""));
-  const glyphs = await p.evaluate(async () =>
-    (await fetch("/assets/inventory/font.json")).json(),
-  );
-  for (const c of text)
-    if (c !== " ") assert.ok(glyphs[c], `Missing glyph ${c}`);
   await p.screenshot({
-    path: `tests/screenshots/research-book-${width}x${height}.png`,
+    path: "tests/screenshots/research-catalog-1920x1080.png",
   });
-  dimensions.push({
-    width,
-    height,
-    scale: await p
-      .locator(".research-screen")
-      .getAttribute("data-research-scale"),
-    spread,
-  });
-}
-await p.setViewportSize({ width: 1920, height: 1080 });
-let foundImage = false;
-for (let spread = 1; spread < pages.length / 2; spread++) {
+  await p.clock.install();
+  await p.clock.pauseAt(new Date(Date.now() + 1000));
+  await book.click();
+  assert.equal(
+    await p.locator(".paper-book-viewer").getAttribute("data-book-state"),
+    "opening",
+  );
+  assert.ok(await p.locator(".research-catalog").isVisible());
+  assert.equal(await p.locator(".research-catalog").getAttribute("inert"), "");
+  await p.clock.runFor(550);
+  assert.equal(
+    await p.locator(".paper-book-viewer").getAttribute("data-book-phase"),
+    "holding",
+  );
+  await p.screenshot({ path: "tests/screenshots/research-book-closed.png" });
+  assert.ok(
+    await p
+      .getByRole("button", { name: "返回论文目录", includeHidden: true })
+      .isDisabled(),
+  );
   await p.keyboard.press("ArrowRight");
   assert.equal(
     await p.locator(".book-page").first().getAttribute("aria-label"),
-    `第 ${spread * 2 + 1} 页`,
+    "第 1 页",
   );
-  const figures = p.locator(".book-page figure img");
-  if (await figures.count()) {
-    await p.waitForFunction(() =>
-      [...document.querySelectorAll(".book-page figure img")].every(
-        (n) => n.complete && n.naturalWidth > 0,
-      ),
+  await p.clock.runFor(200);
+  await p.waitForTimeout(360);
+  await p.screenshot({ path: "tests/screenshots/research-book-opening.png" });
+  const beforeHandoff = await p
+    .locator(".book-spread")
+    .evaluate((n) => ({ width: n.clientWidth, height: n.clientHeight }));
+  await p.clock.runFor(1100);
+  await p.clock.resume();
+  await p.locator('.paper-book-viewer[data-book-state="open"]').waitFor();
+  await p.waitForFunction(() =>
+    document
+      .querySelector(".book-navigation canvas")
+      ?.getAttribute("aria-label")
+      ?.includes("共"),
+  );
+  assert.ok(
+    await p
+      .getByRole("button", { name: "上一页", exact: true, includeHidden: true })
+      .isDisabled(),
+  );
+  assert.equal(await p.locator(".research-catalog").isVisible(), false);
+  const afterHandoff = await p
+    .locator(".book-spread")
+    .evaluate((n) => ({ width: n.clientWidth, height: n.clientHeight }));
+  assert.deepEqual(beforeHandoff, afterHandoff);
+  const leftPage = await p.locator(".book-page").first().boundingBox();
+  const rightPage = await p.locator(".book-page").last().boundingBox();
+  assert.ok(
+    Math.abs(leftPage.x + leftPage.width - rightPage.x) < 1,
+    "Pages must meet at the spine",
+  );
+  const dimensions = [];
+  for (const [width, height] of [
+    [1366, 768],
+    [1920, 1080],
+    [2560, 1440],
+  ]) {
+    await p.setViewportSize({ width, height });
+    await p.waitForTimeout(150);
+    const spread = await p.locator(".book-spread").boundingBox();
+    const back = await p
+      .getByRole("button", { name: "返回论文目录" })
+      .boundingBox();
+    assert.ok(
+      spread.x >= 0 &&
+        spread.y >= 0 &&
+        spread.x + spread.width <= width &&
+        back.y + back.height <= height,
     );
-    if (!foundImage) {
-      await p.screenshot({
-        path: "tests/screenshots/research-formula-pages.png",
-      });
-      foundImage = true;
+    assert.ok(Math.abs(spread.x + spread.width / 2 - width / 2) < 1);
+    for (const copy of await p.locator(".book-page-copy").all()) {
+      const box = await copy.boundingBox();
+      assert.ok(box.y + box.height <= spread.y + spread.height);
+    }
+    const text = await p
+      .locator(".book-page canvas")
+      .evaluateAll((ns) =>
+        ns.map((n) => n.getAttribute("aria-label")).join(""),
+      );
+    const glyphs = await p.evaluate(async () =>
+      (await fetch("/assets/inventory/font.json")).json(),
+    );
+    for (const c of text)
+      if (c !== " ") assert.ok(glyphs[c], `Missing glyph ${c}`);
+    await p.screenshot({
+      path: `tests/screenshots/research-book-${width}x${height}.png`,
+    });
+    dimensions.push({
+      width,
+      height,
+      scale: await p
+        .locator(".research-screen")
+        .getAttribute("data-research-scale"),
+      spread,
+    });
+  }
+  await p.setViewportSize({ width: 1920, height: 1080 });
+  let foundImage = false;
+  for (let spread = 1; spread < pages.length / 2; spread++) {
+    await p.keyboard.press("ArrowRight");
+    assert.equal(
+      await p.locator(".book-page").first().getAttribute("aria-label"),
+      `第 ${spread * 2 + 1} 页`,
+    );
+    const figures = p.locator(".book-page figure img");
+    if (await figures.count()) {
+      await p.waitForFunction(() =>
+        [...document.querySelectorAll(".book-page figure img")].every(
+          (n) => n.complete && n.naturalWidth > 0,
+        ),
+      );
+      if (!foundImage) {
+        await p.screenshot({
+          path: "tests/screenshots/research-formula-pages.png",
+        });
+        foundImage = true;
+      }
     }
   }
+  assert.ok(foundImage);
+  assert.ok(
+    await p
+      .getByRole("button", { name: "下一页", exact: true, includeHidden: true })
+      .isDisabled(),
+  );
+  await p.keyboard.press("ArrowLeft");
+  assert.ok(
+    await p
+      .getByRole("button", { name: "下一页", exact: true, includeHidden: true })
+      .isEnabled(),
+  );
+  await p
+    .getByRole("button", { name: "上一页", exact: true, includeHidden: true })
+    .focus();
+  await p.keyboard.press("Enter");
+  await p.keyboard.press("Escape");
+  await book.waitFor();
+  assert.equal(await p.locator(".paper-book-viewer").count(), 0);
+  await book.click();
+  await p.locator('.paper-book-viewer[data-book-state="open"]').waitFor();
+  await p.getByRole("button", { name: "返回论文目录" }).click();
+  await book.waitFor();
+  await p.getByRole("button", { name: "返回主菜单" }).click();
+  assert.equal(await p.locator(".game").getAttribute("data-screen"), "main");
+  assert.deepEqual(errors, []);
+  assert.deepEqual(failed, []);
+  const reduced = await browser.newPage({ reducedMotion: "reduce" });
+  await reduced.goto("http://127.0.0.1:5173/");
+  await reduced
+    .getByRole("button", { name: "MineResearch", exact: true })
+    .click();
+  await reduced
+    .getByRole("button", { name: `打开书籍：${paper.title}` })
+    .click();
+  await reduced.locator('.paper-book-viewer[data-book-state="open"]').waitFor();
+  await reduced.close();
+  const interrupted = await browser.newPage({
+    viewport: { width: 1920, height: 1080 },
+  });
+  await interrupted.goto("http://127.0.0.1:5173/");
+  await interrupted
+    .getByRole("button", { name: "MineResearch", exact: true })
+    .click();
+  await interrupted
+    .getByRole("button", { name: `打开书籍：${paper.title}` })
+    .click();
+  await interrupted
+    .locator('.paper-book-viewer[data-book-state="opening"]')
+    .waitFor();
+  await interrupted.keyboard.press("Escape");
+  await interrupted.waitForTimeout(1800);
+  assert.equal(await interrupted.locator(".paper-book-viewer").count(), 0);
+  assert.ok(
+    await interrupted
+      .getByRole("button", { name: `打开书籍：${paper.title}` })
+      .isVisible(),
+  );
+  await interrupted
+    .getByRole("button", { name: `打开书籍：${paper.title}` })
+    .click();
+  await interrupted
+    .locator('.paper-book-viewer[data-book-state="opening"]')
+    .waitFor();
+  await interrupted.setViewportSize({ width: 1366, height: 768 });
+  await interrupted
+    .locator('.paper-book-viewer[data-book-state="open"]')
+    .waitFor();
+  const resized = await interrupted.locator(".book-spread").boundingBox();
+  assert.ok(Math.abs(resized.x + resized.width / 2 - 683) < 1);
+  await interrupted.close();
+  const missing = await browser.newPage();
+  await missing.route("**/papers/paper001.md", (r) => r.abort());
+  await missing.goto("http://127.0.0.1:5173/");
+  await missing
+    .getByRole("button", { name: "MineResearch", exact: true })
+    .click();
+  await missing
+    .getByRole("button", { name: `打开书籍：${paper.title}` })
+    .click();
+  await missing.getByRole("alert").waitFor();
+  await missing.getByRole("button", { name: "返回论文目录" }).click();
+  await missing.close();
+  const result = {
+    date: new Date().toISOString(),
+    pages: pages.length,
+    images: 3,
+    dimensions,
+    openingAnimation: true,
+    closedHold: true,
+    interruptedReset: true,
+    resizeDuringTransition: true,
+    catalogPreserved: true,
+    handoffDimensionsStable: true,
+    keyboard: true,
+    pageBoundaries: true,
+    reducedMotion: true,
+    contentFailureFallback: true,
+    errors,
+    failed,
+  };
+  await writeFile(
+    "tests/research-results.json",
+    JSON.stringify(result, null, 2),
+  );
+  console.log(JSON.stringify(result, null, 2));
+} finally {
+  await browser.close();
 }
-assert.ok(foundImage);
-assert.ok(
-  await p
-    .getByRole("button", { name: "下一页", exact: true, includeHidden: true })
-    .isDisabled(),
-);
-await p.keyboard.press("ArrowLeft");
-assert.ok(
-  await p
-    .getByRole("button", { name: "下一页", exact: true, includeHidden: true })
-    .isEnabled(),
-);
-await p
-  .getByRole("button", { name: "上一页", exact: true, includeHidden: true })
-  .focus();
-await p.keyboard.press("Enter");
-await p.keyboard.press("Escape");
-await book.waitFor();
-assert.equal(await p.locator(".paper-book-viewer").count(), 0);
-await book.click();
-await p.locator('.paper-book-viewer[data-book-state="open"]').waitFor();
-await p.getByRole("button", { name: "返回论文目录" }).click();
-await book.waitFor();
-await p.getByRole("button", { name: "返回主菜单" }).click();
-assert.equal(await p.locator(".game").getAttribute("data-screen"), "main");
-assert.deepEqual(errors, []);
-assert.deepEqual(failed, []);
-const reduced = await browser.newPage({ reducedMotion: "reduce" });
-await reduced.goto("http://127.0.0.1:5173/");
-await reduced
-  .getByRole("button", { name: "MineResearch", exact: true })
-  .click();
-await reduced.getByRole("button", { name: `打开书籍：${paper.title}` }).click();
-await reduced.locator('.paper-book-viewer[data-book-state="open"]').waitFor();
-await reduced.close();
-const missing = await browser.newPage();
-await missing.route("**/papers/paper001.md", (r) => r.abort());
-await missing.goto("http://127.0.0.1:5173/");
-await missing
-  .getByRole("button", { name: "MineResearch", exact: true })
-  .click();
-await missing.getByRole("button", { name: `打开书籍：${paper.title}` }).click();
-await missing.getByRole("alert").waitFor();
-await missing.getByRole("button", { name: "返回论文目录" }).click();
-await missing.close();
-const result = {
-  date: new Date().toISOString(),
-  pages: pages.length,
-  images: 3,
-  dimensions,
-  openingAnimation: true,
-  keyboard: true,
-  pageBoundaries: true,
-  reducedMotion: true,
-  contentFailureFallback: true,
-  errors,
-  failed,
-};
-await writeFile("tests/research-results.json", JSON.stringify(result, null, 2));
-console.log(JSON.stringify(result, null, 2));
-await browser.close();

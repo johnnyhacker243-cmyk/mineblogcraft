@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import type { ResearchPaper } from "../models/ResearchPaper";
 import { paperRepository } from "../services/PaperRepository";
 import { PaperList } from "../components/research/PaperList";
@@ -9,6 +9,12 @@ import "../styles/research.css";
 export function MineResearchPage({ back }: { back: () => void }) {
   const [papers, setPapers] = useState<ResearchPaper[]>([]);
   const [paper, setPaper] = useState<ResearchPaper | null>(null);
+  const [reading, setReading] = useState(false);
+  const onReading = useCallback(() => setReading(true), []);
+  const closeBook = () => {
+    setPaper(null);
+    setReading(false);
+  };
   const [message, setMessage] = useState("加载论文目录...");
   const [size, setSize] = useState({ width: innerWidth, height: innerHeight });
   useEffect(() => {
@@ -35,7 +41,7 @@ export function MineResearchPage({ back }: { back: () => void }) {
     const key = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         e.stopImmediatePropagation();
-        if (paper) setPaper(null);
+        if (paper) closeBook();
         else back();
       }
     };
@@ -62,33 +68,41 @@ export function MineResearchPage({ back }: { back: () => void }) {
         } as CSSProperties
       }
     >
-      {paper ? (
-        <PaperBookViewer
-          key={paper.id}
-          paper={paper}
-          back={() => setPaper(null)}
-        />
-      ) : (
-        <section className="research-catalog">
-          <header>
-            <h1>
-              <InventoryText text="MineResearch" />
-            </h1>
-            <InventoryText text="论文收藏 · 知识之书" />
-          </header>
-          <PaperList papers={papers} open={setPaper} />
-          {message && (
-            <div role="status">
-              <InventoryText text={message} />
-            </div>
-          )}
-          <footer>
-            <MinecraftButton aria-label="返回主菜单" onClick={back}>
-              <InventoryText text="返回" />
-            </MinecraftButton>
-          </footer>
-        </section>
+      {paper && (
+        <div
+          className={`research-book-overlay ${reading ? "reader-ready" : ""}`}
+        >
+          <PaperBookViewer
+            key={paper.id}
+            paper={paper}
+            back={closeBook}
+            onReading={onReading}
+          />
+        </div>
       )}
+      <section
+        className={`research-catalog ${reading ? "catalog-hidden" : ""}`}
+        inert={!!paper}
+        aria-hidden={paper ? true : undefined}
+      >
+        <header>
+          <h1>
+            <InventoryText text="MineResearch" />
+          </h1>
+          <InventoryText text="论文收藏 · 知识之书" />
+        </header>
+        <PaperList papers={papers} open={setPaper} />
+        {message && (
+          <div role="status">
+            <InventoryText text={message} />
+          </div>
+        )}
+        <footer>
+          <MinecraftButton aria-label="返回主菜单" onClick={back}>
+            <InventoryText text="返回" />
+          </MinecraftButton>
+        </footer>
+      </section>
     </main>
   );
 }

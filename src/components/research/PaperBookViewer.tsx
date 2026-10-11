@@ -6,17 +6,62 @@ import { PageRenderer } from "./PageRenderer";
 import { BookAnimation } from "./BookAnimation";
 import { InventoryText } from "../InventoryText";
 import { MinecraftButton } from "../MinecraftButton";
+import {
+  bookAnimationConfig as timing,
+  type BookPhase,
+} from "../../config/book-animation-config";
 import { audioManager } from "../../managers/AudioManager";
 export function PaperBookViewer({
   paper,
   back,
+  onReading,
 }: {
   paper: ResearchPaper;
   back: () => void;
+  onReading: () => void;
 }) {
   const [pages, setPages] = useState<BookPage[]>([]);
   const [spread, setSpread] = useState(0);
-  const [opened, setOpened] = useState(false);
+  const [phase, setPhase] = useState<BookPhase>("idle");
+  const opened = phase === "reading";
+  useEffect(() => {
+    const media = matchMedia("(prefers-reduced-motion: reduce)");
+    let cancelled = false;
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    const finish = () => {
+      if (!cancelled) {
+        setPhase("reading");
+        onReading();
+      }
+    };
+    if (media.matches || document.querySelector(".reduced-motion")) finish();
+    else {
+      let elapsed = timing.dim;
+      const stages: [BookPhase, number][] = [
+        ["spawning", timing.spawn],
+        ["holding", timing.hold],
+        ["opening", timing.opening],
+        ["opened", timing.settle],
+      ];
+      for (const [stage, duration] of stages) {
+        timers.push(setTimeout(() => setPhase(stage), elapsed));
+        elapsed += duration;
+      }
+      timers.push(setTimeout(finish, elapsed));
+    }
+    const reduce = () => {
+      if (media.matches) {
+        timers.forEach(clearTimeout);
+        finish();
+      }
+    };
+    media.addEventListener("change", reduce);
+    return () => {
+      cancelled = true;
+      timers.forEach(clearTimeout);
+      media.removeEventListener("change", reduce);
+    };
+  }, [onReading]);
   const [error, setError] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
@@ -55,21 +100,34 @@ export function PaperBookViewer({
     <div
       className="paper-book-viewer"
       data-book-state={opened ? "open" : "opening"}
+      data-book-phase={phase}
+      style={
+        {
+          "--book-spawn": `${timing.spawn}ms`,
+          "--book-opening": `${timing.opening}ms`,
+          "--book-settle": `${timing.settle}ms`,
+          "--book-perspective": `${timing.perspective}px`,
+        } as React.CSSProperties
+      }
       aria-label={paper.title}
     >
       <div className="book-stage">
         <div className="book-spread" aria-busy={!opened || !pages.length}>
           <div className={`book-leaves ${opened ? "leaves-open" : ""}`}>
-            <PageRenderer
-              page={pages[spread * 2] ?? []}
-              number={spread * 2 + 1}
-            />
-            <PageRenderer
-              page={pages[spread * 2 + 1] ?? []}
-              number={spread * 2 + 2}
-            />
+            <div className="book-page-wing">
+              <PageRenderer
+                page={pages[spread * 2] ?? []}
+                number={spread * 2 + 1}
+              />
+            </div>
+            <div className="book-page-wing">
+              <PageRenderer
+                page={pages[spread * 2 + 1] ?? []}
+                number={spread * 2 + 2}
+              />
+            </div>
           </div>
-          <BookAnimation opened={opened} onOpened={() => setOpened(true)} />
+          <BookAnimation />
         </div>
       </div>
       <div className="book-navigation">
@@ -98,7 +156,11 @@ export function PaperBookViewer({
           <InventoryText text="正文加载失败，请返回后重试" />
         </div>
       )}
-      <MinecraftButton aria-label="返回论文目录" onClick={back}>
+      <MinecraftButton
+        aria-label="返回论文目录"
+        onClick={back}
+        disabled={!opened}
+      >
         <InventoryText text="返回" />
       </MinecraftButton>
     </div>

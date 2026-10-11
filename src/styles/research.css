@@ -7,9 +7,7 @@
   place-items: center;
   overflow: auto;
 }
-.research-screen.reading-book {
-  animation: book-darken 1.1s ease both;
-}
+
 .research-catalog {
   height: 100%;
   width: calc(370px * var(--book-scale));
@@ -83,7 +81,7 @@
 }
 .book-stage {
   perspective: calc(700px * var(--book-scale));
-  animation: book-arrive 1.1s ease both;
+  perspective: calc(var(--book-perspective) * var(--book-scale));
 }
 .book-spread {
   position: relative;
@@ -93,9 +91,7 @@
 }
 .book-leaves {
   display: flex;
-  opacity: 0;
-  transition: opacity 180ms linear;
-  animation: book-pages 1.1s ease forwards;
+  transform-style: preserve-3d;
 }
 .book-leaves.leaves-open {
   opacity: 1;
@@ -137,31 +133,6 @@
   max-height: calc(54px * var(--book-scale));
   object-fit: contain;
 }
-.book-cover {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  transform-origin: left center;
-  backface-visibility: hidden;
-  animation: book-open 1.1s ease forwards;
-  background: #663b23 url("/assets/inventory/book-cover-atlas.png") top left;
-  background-size: 1066.667% 320%;
-  border: calc(2px * var(--book-scale)) solid #24140c;
-  image-rendering: pixelated;
-}
-.book-cover > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: calc(9px * var(--book-scale));
-  height: 100%;
-}
-.book-cover.cover-opened {
-  visibility: hidden;
-}
 .book-navigation {
   display: flex;
   align-items: center;
@@ -196,62 +167,266 @@
 .book-arrow:disabled {
   visibility: hidden;
 }
-@keyframes book-darken {
-  from {
-    background: #0009;
-  }
+
+.research-book-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background: #0000;
+  animation: book-focus 180ms ease-out forwards;
+}
+@keyframes book-focus {
   to {
-    background: #000c;
+    background: #0005;
   }
 }
-@keyframes book-arrive {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.55);
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+.catalog-hidden {
+  visibility: hidden;
 }
-@keyframes book-open {
-  0%,
-  35% {
-    left: 25%;
-    transform: rotateY(0);
-  }
-  100% {
-    left: 50%;
-    transform: rotateY(-170deg);
-  }
+.research-catalog {
+  transition: opacity 900ms ease-in-out;
 }
-@keyframes book-pages {
-  0%,
-  35% {
-    opacity: 0;
-  }
-  75%,
-  100% {
-    opacity: 1;
-  }
+.research-screen:has(
+    .paper-book-viewer:is(
+      [data-book-phase="opening"],
+      [data-book-phase="opened"],
+      [data-book-phase="reading"]
+    )
+  )
+  .research-catalog {
+  opacity: 0;
+}
+.paper-book-viewer {
+  --book-open-progress: 0;
+}
+.book-spread {
+  transform: scale(0.8) rotateX(5deg) rotateY(-7deg);
+  opacity: 0;
+  transition:
+    transform var(--book-spawn) cubic-bezier(0.16, 1, 0.3, 1),
+    opacity var(--book-spawn) ease;
+}
+.paper-book-viewer:not([data-book-phase="idle"]) .book-spread {
+  opacity: 1;
+  transform: scale(1) rotateX(5deg) rotateY(-7deg);
+}
+.paper-book-viewer:is(
+    [data-book-phase="opening"],
+    [data-book-phase="opened"],
+    [data-book-phase="reading"]
+  )
+  .book-spread {
+  transform: scale(1);
+  transition-duration: var(--book-opening);
+}
+.book-leaves {
+  opacity: 0;
+  transition: opacity 180ms;
+}
+.book-page-wing {
+  width: 50%;
+  transform-origin: left center;
+  transform: rotateY(-82deg);
+  transition: transform var(--book-opening) cubic-bezier(0.45, 0, 0.18, 1);
+  transform-style: preserve-3d;
+}
+.book-page-wing:first-child {
+  transform-origin: right center;
+  transform: rotateY(82deg);
+}
+.book-page-wing .book-page {
+  transform-origin: center;
+  backface-visibility: visible;
+}
+.book-page-wing:last-child .book-page,
+.book-page-wing:last-child .book-page-copy {
+  transform: none;
+}
+.paper-book-viewer:is(
+    [data-book-phase="opening"],
+    [data-book-phase="opened"],
+    [data-book-phase="reading"]
+  )
+  .book-leaves {
+  opacity: 1;
+}
+.paper-book-viewer:is(
+    [data-book-phase="opening"],
+    [data-book-phase="opened"],
+    [data-book-phase="reading"]
+  )
+  .book-page-wing {
+  transform: rotateY(0);
+}
+.book-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: #261509;
+  opacity: 0.45;
+  transition: opacity var(--book-opening) ease-in-out;
+}
+.paper-book-viewer:is(
+    [data-book-phase="opening"],
+    [data-book-phase="opened"],
+    [data-book-phase="reading"]
+  )
+  .book-page::after {
+  opacity: 0;
+}
+.book-transition-shell {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+.book-closed-volume {
+  position: absolute;
+  left: 25%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  transform: translateZ(calc(5px * var(--book-scale)));
+  opacity: 1;
+  transition: opacity 220ms ease;
+}
+.book-closed-cover,
+.book-cover-wing {
+  background: #663b23 url("/papers/transition/plain-cover.svg") center / 100%
+    100%;
+  image-rendering: pixelated;
+  border: calc(2px * var(--book-scale)) solid #24140c;
+  backface-visibility: hidden;
+}
+.book-closed-cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: calc(12px * var(--book-scale));
+  box-shadow:
+    calc(-3px * var(--book-scale)) 0 #352015,
+    calc(3px * var(--book-scale)) calc(3px * var(--book-scale)) #211309;
+}
+.book-paper-edge {
+  position: absolute;
+  inset: calc(3px * var(--book-scale));
+  background: repeating-linear-gradient(
+    #e8ddbb 0 calc(1px * var(--book-scale)),
+    #ad9a75 calc(1px * var(--book-scale)) calc(2px * var(--book-scale))
+  );
+  transform: translateX(calc(5px * var(--book-scale)))
+    translateY(calc(3px * var(--book-scale)));
+}
+.book-cover-wing {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  transition:
+    transform var(--book-opening) cubic-bezier(0.45, 0, 0.18, 1),
+    opacity 220ms;
+}
+.cover-left {
+  left: 0;
+  transform-origin: right center;
+  transform: rotateY(82deg);
+}
+.cover-right {
+  left: 50%;
+  transform-origin: left center;
+  transform: rotateY(-82deg);
+}
+.paper-book-viewer[data-book-phase="opening"] .book-cover-wing {
+  opacity: 1;
+}
+.paper-book-viewer:is(
+    [data-book-phase="opening"],
+    [data-book-phase="opened"],
+    [data-book-phase="reading"]
+  )
+  .cover-left {
+  transform: rotateY(-180deg);
+}
+.paper-book-viewer:is(
+    [data-book-phase="opening"],
+    [data-book-phase="opened"],
+    [data-book-phase="reading"]
+  )
+  .cover-right {
+  transform: rotateY(180deg);
+}
+.paper-book-viewer:is(
+    [data-book-phase="opening"],
+    [data-book-phase="opened"],
+    [data-book-phase="reading"]
+  )
+  .book-closed-volume {
+  opacity: 0;
+}
+.book-spine {
+  position: absolute;
+  left: calc(50% - 3px * var(--book-scale));
+  width: calc(6px * var(--book-scale));
+  height: 100%;
+  background: #352015;
+  transform: translateZ(calc(-2px * var(--book-scale)));
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.paper-book-viewer[data-book-phase="opening"] .book-spine {
+  opacity: 1;
+}
+.book-ground-shadow {
+  position: absolute;
+  left: 25%;
+  bottom: calc(-7px * var(--book-scale));
+  width: 50%;
+  height: calc(12px * var(--book-scale));
+  background: #0005;
+  filter: blur(calc(4px * var(--book-scale)));
+  transition:
+    left var(--book-opening),
+    width var(--book-opening),
+    opacity var(--book-settle);
+}
+.paper-book-viewer[data-book-phase="opening"] .book-ground-shadow {
+  left: 5%;
+  width: 90%;
+}
+.paper-book-viewer:is([data-book-phase="opened"], [data-book-phase="reading"])
+  .book-transition-shell {
+  opacity: 0;
+  transition: opacity var(--book-settle);
+}
+.paper-book-viewer .book-navigation,
+.paper-book-viewer > .mc-button {
+  opacity: 0;
+  visibility: hidden;
+}
+.paper-book-viewer[data-book-phase="reading"] .book-navigation,
+.paper-book-viewer[data-book-phase="reading"] > .mc-button {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--book-settle);
 }
 @media (prefers-reduced-motion: reduce) {
-  .book-stage,
-  .book-cover,
-  .book-leaves,
-  .research-screen.reading-book {
+  .research-book-overlay {
     animation-duration: 1ms;
   }
-  .book-leaves {
-    transition: none;
+  .paper-book-viewer * {
+    transition-duration: 1ms !important;
   }
 }
-.reduced-motion .book-stage,
-.reduced-motion .book-cover,
-.reduced-motion .book-leaves,
-.reduced-motion .research-screen.reading-book {
+.reduced-motion .research-book-overlay {
   animation-duration: 1ms;
+}
+.reduced-motion .paper-book-viewer * {
+  transition-duration: 1ms !important;
 }

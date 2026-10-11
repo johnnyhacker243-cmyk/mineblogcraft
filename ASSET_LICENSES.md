@@ -33,6 +33,8 @@ React、Vite、Three.js、TypeScript、Playwright 和 Prettier 通过 npm 安装
 
 用户明确授权先编写示例论文；`public/papers/paper001.md` 与三个公式/示意 SVG 为本项目原创内容，可纳入代码检查点。论文明确标注为原创示例、非发表论文；不冒充真实成果或实验数据。经典数学公式的参考来源见 RESEARCH_MODULE.md，没有复制第三方论文图片。
 
+书本动画精修时，依据用户允许补充过渡资产的要求，增加原创 `public/papers/transition/plain-cover.svg`，使用棕色像素书皮语言；它不是 Mojang 原版纹理，也不是 AI 生成图片。纸边与阴影由 CSS 构建。最终阅读页仍复用本地原版纹理。
+
 ## MineRSS（2026-10-11）
 
 新增本地原版纹理：item/empty_armor_slot_shield.png、item/enchanted_book.png、gui/sprites/server_list/ping_5.png 和 ping_1.png，来源为同一用户授权的 1.21.1 客户端。用户指定的「暮色湖畔的村庄与紫色传送门.png」仅完整复制供本地背景显示，没有重绘或修改；其授权范围不能据此推定为公开再分发。纹理、字体和背景副本全部忽略。RSS 静态源描述与标签来自用户给定内容，未采集第三方文章。
