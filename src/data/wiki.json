@@ -1,0 +1,730 @@
+[
+  {
+    "id": "ai-basics",
+    "title": "Artificial Intelligence",
+    "description": "人工智能基础：理解任务、数据、模型与评价之间的关系。",
+    "category": "AI",
+    "tags": [
+      "人工智能",
+      "AI"
+    ],
+    "icon": "/assets/inventory/enchanted-book.png",
+    "x": 40,
+    "y": 110,
+    "parentIds": [],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "人工智能基础：理解任务、数据、模型与评价之间的关系。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "machine-learning",
+    "title": "Machine Learning",
+    "description": "机器学习：从样本学习规律，关注特征、泛化与模型评价。",
+    "category": "AI",
+    "tags": [
+      "机器学习",
+      "ML"
+    ],
+    "icon": "/assets/inventory/book.png",
+    "x": 150,
+    "y": 110,
+    "parentIds": [
+      "ai-basics"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "机器学习：从样本学习规律，关注特征、泛化与模型评价。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": [
+      {
+        "id": "nids-fgpa",
+        "title": "NIDS-FGPA"
+      }
+    ]
+  },
+  {
+    "id": "deep-learning",
+    "title": "Deep Learning",
+    "description": "深度学习：通过多层神经网络学习数据表示。",
+    "category": "AI",
+    "tags": [
+      "深度学习",
+      "神经网络"
+    ],
+    "icon": "/assets/inventory/redstone.png",
+    "x": 260,
+    "y": 60,
+    "parentIds": [
+      "machine-learning"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "深度学习：通过多层神经网络学习数据表示。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "llm",
+    "title": "LLM",
+    "description": "大语言模型：理解语言建模、上下文与生成任务。",
+    "category": "AI",
+    "tags": [
+      "大模型",
+      "语言模型"
+    ],
+    "icon": "/assets/inventory/enchanted-book.png",
+    "x": 370,
+    "y": 60,
+    "parentIds": [
+      "deep-learning"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "大语言模型：理解语言建模、上下文与生成任务。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "rag",
+    "title": "RAG",
+    "description": "检索增强生成：把检索到的资料纳入生成过程。",
+    "category": "AI",
+    "tags": [
+      "检索",
+      "知识库"
+    ],
+    "icon": "/assets/inventory/paper.png",
+    "x": 480,
+    "y": 25,
+    "parentIds": [
+      "llm"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "检索增强生成：把检索到的资料纳入生成过程。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "agent",
+    "title": "Agent",
+    "description": "智能体：围绕目标组织模型、工具调用与反馈。",
+    "category": "AI",
+    "tags": [
+      "智能体",
+      "Agent"
+    ],
+    "icon": "/assets/inventory/ender-pearl.png",
+    "x": 480,
+    "y": 145,
+    "parentIds": [
+      "llm"
+    ],
+    "status": "untracked",
+    "frame": "challenge",
+    "details": "智能体：围绕目标组织模型、工具调用与反馈。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "ai-security",
+    "title": "AI Security",
+    "description": "AI 安全：研究模型输入、数据和工具使用中的安全边界。",
+    "category": "AI",
+    "tags": [
+      "人工智能",
+      "安全"
+    ],
+    "icon": "/assets/inventory/shield-slot.png",
+    "x": 590,
+    "y": 145,
+    "parentIds": [
+      "agent"
+    ],
+    "status": "untracked",
+    "frame": "challenge",
+    "details": "AI 安全：研究模型输入、数据和工具使用中的安全边界。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": [
+      {
+        "id": "nids-fgpa",
+        "title": "NIDS-FGPA"
+      }
+    ]
+  },
+  {
+    "id": "network",
+    "title": "Computer Network",
+    "description": "计算机网络：理解分层、寻址与数据传输。",
+    "category": "Security",
+    "tags": [
+      "网络安全",
+      "网络基础"
+    ],
+    "icon": "/assets/inventory/compass.png",
+    "x": 40,
+    "y": 110,
+    "parentIds": [],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "计算机网络：理解分层、寻址与数据传输。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "tcp-ip",
+    "title": "TCP/IP",
+    "description": "TCP/IP：梳理网络协议分层及通信过程。",
+    "category": "Security",
+    "tags": [
+      "网络安全",
+      "协议"
+    ],
+    "icon": "/assets/inventory/repeater.png",
+    "x": 150,
+    "y": 110,
+    "parentIds": [
+      "network"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "TCP/IP：梳理网络协议分层及通信过程。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "http",
+    "title": "HTTP",
+    "description": "HTTP：理解请求、响应、方法与状态码。",
+    "category": "Security",
+    "tags": [
+      "网络安全",
+      "Web"
+    ],
+    "icon": "/assets/inventory/book.png",
+    "x": 260,
+    "y": 30,
+    "parentIds": [
+      "tcp-ip"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "HTTP：理解请求、响应、方法与状态码。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "asset-discovery",
+    "title": "Asset Discovery",
+    "description": "资产发现：在授权范围内整理主机、服务与资产清单。",
+    "category": "Security",
+    "tags": [
+      "网络安全",
+      "扫描",
+      "资产发现"
+    ],
+    "icon": "/assets/inventory/compass.png",
+    "x": 260,
+    "y": 170,
+    "parentIds": [
+      "tcp-ip"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "资产发现：在授权范围内整理主机、服务与资产清单。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "nmap",
+    "title": "Nmap",
+    "description": "网络资产发现与端口扫描工具；实践必须限定在授权目标。",
+    "category": "Security",
+    "tags": [
+      "网络安全",
+      "扫描",
+      "端口",
+      "Nmap"
+    ],
+    "icon": "/assets/inventory/compass.png",
+    "x": 370,
+    "y": 170,
+    "parentIds": [
+      "asset-discovery"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "网络资产发现与端口扫描工具；实践必须限定在授权目标。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "fofa",
+    "title": "FOFA",
+    "description": "网络空间资产检索：学习查询、结果核验与资产归属。",
+    "category": "Security",
+    "tags": [
+      "网络安全",
+      "资产检索"
+    ],
+    "icon": "/assets/inventory/ender-pearl.png",
+    "x": 370,
+    "y": 65,
+    "parentIds": [
+      "asset-discovery"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "网络空间资产检索：学习查询、结果核验与资产归属。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "vulnerability-scanning",
+    "title": "Vulnerability Scanning",
+    "description": "漏洞扫描：理解检测结果、误报核验与修复优先级。",
+    "category": "Security",
+    "tags": [
+      "网络安全",
+      "漏洞",
+      "扫描"
+    ],
+    "icon": "/assets/inventory/iron-sword.png",
+    "x": 480,
+    "y": 170,
+    "parentIds": [
+      "nmap",
+      "http"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "漏洞扫描：理解检测结果、误报核验与修复优先级。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "incident-response",
+    "title": "Incident Response",
+    "description": "事件响应：梳理发现、分析、处置与复盘的流程。",
+    "category": "Security",
+    "tags": [
+      "网络安全",
+      "应急响应"
+    ],
+    "icon": "/assets/inventory/shield-slot.png",
+    "x": 590,
+    "y": 170,
+    "parentIds": [
+      "vulnerability-scanning"
+    ],
+    "status": "untracked",
+    "frame": "challenge",
+    "details": "事件响应：梳理发现、分析、处置与复盘的流程。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "frontend",
+    "title": "Frontend",
+    "description": "前端：组织界面、状态与用户交互。",
+    "category": "Software",
+    "tags": [
+      "软件工程",
+      "前端",
+      "React"
+    ],
+    "icon": "/assets/inventory/crafting-top.png",
+    "x": 40,
+    "y": 110,
+    "parentIds": [],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "前端：组织界面、状态与用户交互。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [
+      {
+        "id": "mineblogcraft-birth",
+        "title": "Mineblogcraft 的诞生"
+      }
+    ],
+    "relatedPapers": []
+  },
+  {
+    "id": "backend",
+    "title": "Backend",
+    "description": "后端：理解业务服务、边界与接口协作。",
+    "category": "Software",
+    "tags": [
+      "软件工程",
+      "后端"
+    ],
+    "icon": "/assets/inventory/repeater.png",
+    "x": 150,
+    "y": 110,
+    "parentIds": [
+      "frontend"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "后端：理解业务服务、边界与接口协作。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "database",
+    "title": "Database",
+    "description": "数据库：理解数据模型、查询与一致性。",
+    "category": "Software",
+    "tags": [
+      "软件工程",
+      "数据库"
+    ],
+    "icon": "/assets/inventory/book.png",
+    "x": 260,
+    "y": 35,
+    "parentIds": [
+      "backend"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "数据库：理解数据模型、查询与一致性。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "api",
+    "title": "API Design",
+    "description": "API 设计：描述接口契约、错误语义与版本演进。",
+    "category": "Software",
+    "tags": [
+      "软件工程",
+      "接口"
+    ],
+    "icon": "/assets/inventory/paper.png",
+    "x": 260,
+    "y": 175,
+    "parentIds": [
+      "backend"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "API 设计：描述接口契约、错误语义与版本演进。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "architecture",
+    "title": "System Architecture",
+    "description": "系统架构：理解模块边界、依赖与技术取舍。",
+    "category": "Software",
+    "tags": [
+      "软件工程",
+      "架构"
+    ],
+    "icon": "/assets/inventory/crafting-top.png",
+    "x": 370,
+    "y": 110,
+    "parentIds": [
+      "database",
+      "api"
+    ],
+    "status": "untracked",
+    "frame": "challenge",
+    "details": "系统架构：理解模块边界、依赖与技术取舍。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "testing",
+    "title": "Testing",
+    "description": "测试：从需求与风险出发验证系统行为。",
+    "category": "Software",
+    "tags": [
+      "软件工程",
+      "测试"
+    ],
+    "icon": "/assets/inventory/redstone.png",
+    "x": 480,
+    "y": 110,
+    "parentIds": [
+      "architecture"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "测试：从需求与风险出发验证系统行为。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "modeling",
+    "title": "Mathematical Modeling",
+    "description": "数学建模：把现实问题转化为可分析的变量、关系和约束。",
+    "category": "Modeling",
+    "tags": [
+      "数学建模",
+      "数据建模"
+    ],
+    "icon": "/assets/inventory/book.png",
+    "x": 40,
+    "y": 110,
+    "parentIds": [],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "数学建模：把现实问题转化为可分析的变量、关系和约束。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "diffusion",
+    "title": "Diffusion Equation",
+    "description": "扩散方程：认识变化率、空间扩散与边界条件。",
+    "category": "Modeling",
+    "tags": [
+      "数学建模",
+      "扩散方程"
+    ],
+    "icon": "/assets/inventory/paper.png",
+    "x": 150,
+    "y": 40,
+    "parentIds": [
+      "modeling"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "扩散方程：认识变化率、空间扩散与边界条件。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": [
+      {
+        "id": "001",
+        "title": "基于扩散方程的时间比值法研究（原创示例）"
+      }
+    ]
+  },
+  {
+    "id": "time-ratio",
+    "title": "Time Ratio Method",
+    "description": "时间比值法：结合模型假设比较特定状态对应的时间尺度。",
+    "category": "Modeling",
+    "tags": [
+      "数学建模",
+      "时间比值法"
+    ],
+    "icon": "/assets/inventory/clock.png",
+    "x": 260,
+    "y": 40,
+    "parentIds": [
+      "diffusion"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "时间比值法：结合模型假设比较特定状态对应的时间尺度。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": [
+      {
+        "id": "001",
+        "title": "基于扩散方程的时间比值法研究（原创示例）"
+      }
+    ]
+  },
+  {
+    "id": "data-mining",
+    "title": "Data Mining",
+    "description": "数据挖掘：从数据准备到模式发现和结果评价。",
+    "category": "Modeling",
+    "tags": [
+      "数据分析",
+      "数据挖掘",
+      "建模"
+    ],
+    "icon": "/assets/inventory/compass.png",
+    "x": 150,
+    "y": 175,
+    "parentIds": [
+      "modeling"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "数据挖掘：从数据准备到模式发现和结果评价。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "fp-growth",
+    "title": "FP-Growth",
+    "description": "频繁模式挖掘：理解频繁项集与支持度。",
+    "category": "Modeling",
+    "tags": [
+      "数据分析",
+      "关联规则"
+    ],
+    "icon": "/assets/inventory/repeater.png",
+    "x": 260,
+    "y": 175,
+    "parentIds": [
+      "data-mining"
+    ],
+    "status": "untracked",
+    "frame": "task",
+    "details": "频繁模式挖掘：理解频繁项集与支持度。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  },
+  {
+    "id": "topsis",
+    "title": "TOPSIS",
+    "description": "多指标决策：理解指标方向、权重与理想解距离。",
+    "category": "Modeling",
+    "tags": [
+      "数据分析",
+      "评价",
+      "数学建模"
+    ],
+    "icon": "/assets/inventory/paper.png",
+    "x": 370,
+    "y": 175,
+    "parentIds": [
+      "data-mining"
+    ],
+    "status": "untracked",
+    "frame": "challenge",
+    "details": "多指标决策：理解指标方向、权重与理想解距离。 本节点是知识目录示例，学习笔记待作者补充。",
+    "learningPoints": [
+      "理解核心概念与适用范围",
+      "梳理与前置知识的联系",
+      "通过例子验证理解并记录局限"
+    ],
+    "relatedBlogs": [],
+    "relatedPapers": []
+  }
+]

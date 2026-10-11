@@ -98,7 +98,7 @@ const menus = [
   ["MineBlog", "worlds"],
   ["MineRSS", "multiplayer"],
   ["MineResearch", "realms"],
-  ["Options...", "options"],
+  ["MineWiki", "wiki"],
   ["Quit Game", "exit"],
   ["Language", "language"],
   ["作者介绍", "profile"],
@@ -121,13 +121,6 @@ assert.equal(
   await page.evaluate(() => document.activeElement?.tagName),
   "BUTTON",
 );
-await page.getByRole("button", { name: "Options...", exact: true }).click();
-await page.getByRole("button", { name: "Panorama: ON", exact: true }).click();
-const paused = await page.locator(".panorama").getAttribute("data-yaw");
-await page.waitForTimeout(400);
-assert.equal(await page.locator(".panorama").getAttribute("data-yaw"), paused);
-await page.getByRole("slider", { name: "Sound volume" }).fill("0.2");
-await page.keyboard.press("Escape");
 await page.screenshot({ path: "tests/screenshots/main-final-1920x1080.png" });
 const fail = await browser.newPage();
 await fail.route("**/panorama_3.png", (r) => r.abort());

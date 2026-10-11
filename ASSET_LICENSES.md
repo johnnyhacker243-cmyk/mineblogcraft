@@ -58,3 +58,5 @@ JiaMing Wang、Kai Yang、MinJing Li (2024)，PLOS ONE 19(10): e0308639。原文
 `public/papers/nids-fgpa/` 中的结构化正文、160 个图像、署名说明与来源/哈希记录可以随本地代码检查点提交。改变的是 JATS/HTML 布局到像素双页的排版，未翻译原文；原图字节未修改。原始 XML 忽略。附加数据集、补充材料没有采集。本许可只适用于上述论文，不适用于游戏素材；附魔书图标依旧为用户授权读取的本地原版游戏纹理，被 Git 忽略。
 
 MineResearch 藏书架新增本地原版素材：`block/bookshelf.png`、`block/oak_planks.png`、`block/spruce_planks.png`、`block/enchanting_table_top.png`、`block/enchanting_table_side.png`、`block/enchanting_table_bottom.png`，复用 `entity/enchanting_table_book.png` 与 `item/enchanted_book.png`。书页反馈声来自同版本资产索引中的 `minecraft/sounds/item/book/open_flip1.ogg`。均由用户授权的 1.21.1 本地客户端读取，输出位于被忽略的 `public/assets/inventory/`，不会加入 Git 提交；并非自由再分发素材。附魔台几何与动作是前端参考实现。
+
+MineWiki 使用本地 Minecraft Java 1.21.1 原版 `gui/advancements/` 窗口/背景、`gui/sprites/advancements/` 页签与三类节点框；新增纸、时钟、铁剑与中继器图标。窗口裁取和边缘切片只为本地前端阅读适配，导出在被忽略的 `public/assets/inventory/`。字体和音效沿用已授权本地客户端，未再分发至 GitHub。具体清单及视觉限制见 WIKI_MODULE.md。

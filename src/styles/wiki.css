@@ -1,0 +1,258 @@
+.wiki-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(8px * var(--wiki-scale));
+  background: #000a;
+  overflow: auto;
+}
+.wiki-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(4px * var(--wiki-scale));
+  margin-bottom: calc(29px * var(--wiki-scale));
+}
+.wiki-heading h1 {
+  margin: 0;
+  font-size: inherit;
+  --inventory-scale: calc(1.3 * var(--wiki-scale));
+}
+.wiki-search {
+  display: flex;
+  align-items: center;
+  gap: calc(7px * var(--wiki-scale));
+  padding-top: calc(3px * var(--wiki-scale));
+}
+.wiki-search input {
+  width: calc(170px * var(--wiki-scale));
+  border: calc(1px * var(--wiki-scale)) solid #888;
+  background: #000b;
+  color: #fff;
+  font-family: Monocraft;
+  font-size: calc(6px * var(--wiki-scale));
+  padding: calc(4px * var(--wiki-scale));
+  outline: none;
+}
+.wiki-search input:focus {
+  border-color: #fff;
+}
+.wiki-window {
+  position: relative;
+  width: calc(460px * var(--wiki-scale));
+  height: calc(230px * var(--wiki-scale));
+  max-width: 96%;
+  flex-shrink: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-width: calc(18px * var(--wiki-scale)) calc(9px * var(--wiki-scale))
+    calc(9px * var(--wiki-scale));
+  border-image: url("/assets/inventory/wiki-window-crop.png") 18 9 9 9 fill /
+    calc(18px * var(--wiki-scale)) calc(9px * var(--wiki-scale))
+    calc(9px * var(--wiki-scale)) stretch;
+  background: #c6c6c6;
+  image-rendering: pixelated;
+}
+.wiki-window-title {
+  position: absolute;
+  top: calc(-14px * var(--wiki-scale));
+  left: 0;
+  --inventory-scale: calc(0.7 * var(--wiki-scale));
+}
+.wiki-tabs {
+  position: absolute;
+  top: calc(-49px * var(--wiki-scale));
+  left: 0;
+  display: flex;
+  gap: calc(6px * var(--wiki-scale));
+}
+.wiki-tabs button {
+  width: calc(61px * var(--wiki-scale));
+  height: calc(32px * var(--wiki-scale));
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: calc(3px * var(--wiki-scale));
+  outline: 0;
+  --inventory-scale: calc(0.6 * var(--wiki-scale));
+}
+.wiki-tabs button img {
+  width: calc(28px * var(--wiki-scale));
+  height: calc(32px * var(--wiki-scale));
+  object-fit: contain;
+  padding: calc(7px * var(--wiki-scale)) calc(6px * var(--wiki-scale));
+  background: url("/assets/inventory/wiki-tab.png") center/100% 100%;
+  image-rendering: pixelated;
+}
+.wiki-tabs button[aria-selected="true"] img {
+  background-image: url("/assets/inventory/wiki-tab-selected.png");
+}
+.wiki-tabs button:focus-visible {
+  color: #ffff55;
+  outline: calc(1px * var(--wiki-scale)) solid #aaa;
+  outline-offset: calc(1px * var(--wiki-scale));
+}
+.wiki-tree {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: clip;
+  background-size: calc(16px * var(--wiki-scale));
+  image-rendering: pixelated;
+  cursor: grab;
+  touch-action: none;
+  outline: none;
+  box-shadow: inset 0 0 calc(3px * var(--wiki-scale)) #000;
+}
+.wiki-tree:active {
+  cursor: grabbing;
+}
+.wiki-tree:focus-visible {
+  outline: calc(1px * var(--wiki-scale)) solid #fff;
+}
+.wiki-map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 700px;
+  height: 330px;
+  transform-origin: 0 0;
+  --inventory-scale: 0.8;
+}
+.wiki-connections {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+  shape-rendering: crispEdges;
+}
+.wiki-connections path {
+  fill: none;
+}
+.wiki-line-outline {
+  stroke: #000;
+  stroke-width: 5;
+}
+.wiki-line-inner {
+  stroke: #fff;
+  stroke-width: 1;
+}
+.wiki-node {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  padding: 5px;
+  background-color: transparent;
+  background-size: 100% 100%;
+  border: 0;
+  outline: none;
+  image-rendering: pixelated;
+}
+.wiki-node > img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.wiki-node-label {
+  position: absolute;
+  top: 30px;
+  left: -29px;
+  display: block;
+  width: 84px;
+  pointer-events: none;
+  text-align: center;
+}
+.wiki-node-label .blog-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+.wiki-node:hover,
+.wiki-node:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+.wiki-matched {
+  outline: 2px solid #ffff55;
+  outline-offset: 2px;
+}
+.wiki-dimmed {
+  opacity: 0.23;
+}
+.wiki-tooltip {
+  position: absolute;
+  z-index: 3;
+  width: calc(160px * var(--wiki-scale));
+  max-height: calc(116px * var(--wiki-scale));
+  overflow: hidden;
+  padding: calc(5px * var(--wiki-scale));
+  border: calc(1px * var(--wiki-scale)) solid #502880;
+  background: #100719f5;
+  pointer-events: none;
+  --inventory-scale: calc(0.7 * var(--wiki-scale));
+  display: flex;
+  flex-direction: column;
+  gap: calc(4px * var(--wiki-scale));
+}
+.wiki-tooltip .blog-text,
+.wiki-detail .blog-text {
+  display: flex;
+  flex-direction: column;
+  gap: calc(2px * var(--wiki-scale));
+}
+.wiki-controls {
+  display: flex;
+  gap: calc(6px * var(--wiki-scale));
+}
+.wiki-hint {
+  --inventory-scale: calc(0.55 * var(--wiki-scale));
+}
+.wiki-detail {
+  position: absolute;
+  z-index: 4;
+  right: calc(3px * var(--wiki-scale));
+  top: calc(3px * var(--wiki-scale));
+  bottom: calc(3px * var(--wiki-scale));
+  width: calc(165px * var(--wiki-scale));
+  padding: calc(6px * var(--wiki-scale));
+  border: calc(1px * var(--wiki-scale)) solid #6a3b99;
+  background: #100818f7;
+  --inventory-scale: calc(0.75 * var(--wiki-scale));
+  display: flex;
+  flex-direction: column;
+  gap: calc(6px * var(--wiki-scale));
+  box-shadow: calc(-2px * var(--wiki-scale)) 0 #0007;
+}
+.wiki-detail header {
+  display: flex;
+  gap: calc(5px * var(--wiki-scale));
+  align-items: center;
+}
+.wiki-detail header img {
+  width: calc(20px * var(--wiki-scale));
+  height: calc(20px * var(--wiki-scale));
+  object-fit: contain;
+}
+.wiki-detail-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(6px * var(--wiki-scale));
+}
+.wiki-detail > .mc-button {
+  width: 100%;
+  flex-shrink: 0;
+}

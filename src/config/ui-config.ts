@@ -3,6 +3,7 @@ export type ScreenId =
   | "worlds"
   | "multiplayer"
   | "realms"
+  | "wiki"
   | "options"
   | "exit"
   | "language"
@@ -43,7 +44,7 @@ export const menu: { label: string; target: ScreenId }[] = [
   { label: "MineBlog", target: "worlds" },
   { label: "MineRSS", target: "multiplayer" },
   { label: "MineResearch", target: "realms" },
-  { label: "Options...", target: "options" },
+  { label: "MineWiki", target: "wiki" },
   { label: "Quit Game", target: "exit" },
 ];
 // Original replacement text, selected once per application session.

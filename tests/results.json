@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-11T03:27:27.957Z",
+  "date": "2026-10-11T07:38:43.242Z",
   "dimensions": [
     {
       "width": 1920,
@@ -262,14 +262,14 @@
       }
     }
   ],
-  "rotationDeltaRadians": 0.04013908213736578,
+  "rotationDeltaRadians": 0.03955614216719977,
   "errors": [],
   "badResponses": [],
   "interactionCases": [
     "MineBlog",
     "MineRSS",
     "MineResearch",
-    "Options...",
+    "MineWiki",
     "Quit Game",
     "Language",
     "作者介绍"

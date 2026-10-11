@@ -19,6 +19,18 @@ assert hashlib.sha1(a.jar.read_bytes()).hexdigest() == '30c73b1c5da787909b2f7334
 out = Path(__file__).resolve().parents[1] / 'public/assets/inventory'
 out.mkdir(parents=True, exist_ok=True)
 mapping = {
+    'wiki-window.png': 'gui/advancements/window.png',
+    'wiki-stone.png': 'gui/advancements/backgrounds/stone.png',
+    'wiki-nether.png': 'gui/advancements/backgrounds/nether.png',
+    'wiki-end.png': 'gui/advancements/backgrounds/end.png',
+    'wiki-husbandry.png': 'gui/advancements/backgrounds/husbandry.png',
+    'wiki-tab.png': 'gui/sprites/advancements/tab_above_middle.png',
+    'wiki-tab-selected.png': 'gui/sprites/advancements/tab_above_middle_selected.png',
+    'wiki-title.png': 'gui/sprites/advancements/title_box.png',
+    'paper.png': 'item/paper.png',
+    'clock.png': 'item/clock_00.png',
+    'iron-sword.png': 'item/iron_sword.png',
+    'repeater.png': 'item/repeater.png',
     'bookshelf.png': 'block/bookshelf.png',
     'oak-planks.png': 'block/oak_planks.png',
     'spruce-planks.png': 'block/spruce_planks.png',
@@ -62,6 +74,9 @@ mapping = {
 for n in range(1, 7):
     state = 'selected' if n == 1 else 'unselected'
     mapping[f'tab-{n}.png'] = f'gui/sprites/container/creative_inventory/tab_top_{state}_{n}.png'
+for shape in ['task','goal','challenge']:
+    for state in ['obtained','unobtained']:
+        mapping[f'wiki-{shape}-{state}.png'] = f'gui/sprites/advancements/{shape}_frame_{state}.png'
 records = []
 with zipfile.ZipFile(a.jar) as z:
     egg_model = z.read('assets/minecraft/models/block/dragon_egg.json')
@@ -78,6 +93,8 @@ with zipfile.ZipFile(a.jar) as z:
         for y, sy, h in [(0,0,7), (7,108,2), (9,129,7)]:
             frame.paste(original.crop((sx,sy,sx+w,sy+h)), (x,y))
     frame.save(out/'frame.png')
+    window = Image.open(io.BytesIO(z.read('assets/minecraft/textures/gui/advancements/window.png'))).convert('RGBA')
+    window.crop((0,0,252,140)).save(out/'wiki-window-crop.png')
     original.crop((8,17,26,35)).save(out/'slot.png')
     # Vanilla grass side texture plus its biome-tinted overlay; source pixels
     # stay intact and only the normal game color multiplier is applied.
@@ -111,6 +128,8 @@ for source in ['src/data/rssSources.json', 'src/screens/MineRSSScreen.tsx', 'src
     characters.update((project/source).read_text(encoding='utf-8'))
 for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx','src/components/MinecraftInventory.tsx','src/data/blogs.json', 'src/screens/BlogWorldSelect.tsx', 'src/components/blog/WorldSearch.tsx', 'src/components/blog/WorldCard.tsx', 'src/components/blog/BlogReader.tsx']:
     characters.update((project/source).read_text(encoding='utf-8'))
+for source in [project/'src/data/wiki.json', *list((project/'src/components/wiki').glob('*.tsx')), project/'src/screens/MineWikiPage.tsx']:
+    if source.exists(): characters.update(source.read_text(encoding='utf-8'))
 for source in (project/'public/papers').rglob('*.json'):
     characters.update(source.read_text(encoding='utf-8'))
 for source in ['src/utils/document-pagination.ts', 'src/components/research/PageRenderer.tsx', 'src/components/research/EnchantmentSearch.tsx']:

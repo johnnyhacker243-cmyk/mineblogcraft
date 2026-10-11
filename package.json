@@ -17,7 +17,8 @@
     "test:profile": "node tests/interactions/profile.mjs",
     "format": "prettier --write src tests/interactions vite.config.ts",
     "test:research-paper": "node tests/interactions/research-paper.mjs",
-    "test:research-shelf": "node tests/interactions/research-shelf.mjs"
+    "test:research-shelf": "node tests/interactions/research-shelf.mjs",
+    "test:wiki": "node tests/interactions/wiki.mjs"
   },
   "dependencies": {
     "react": "^19.1.1",
