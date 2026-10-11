@@ -1,3 +1,5 @@
+> 当前背景已按用户要求恢复为全站共用的原版旋转全景。MineRSS 不再加载独立背景图片，保留既有暗色遮罩、列表、Logo 和按钮。旧图片仅保留本地，不删除原文件。下文独立背景图片的记录属于此前版本。
+
 # MineRSS 信息世界
 
 ## 第二轮视觉升级（2026-10-11）
@@ -69,3 +71,7 @@ tests/interactions/rss.mjs          浏览器验证
 运行 `npm run build`、`npm run test:rss`、`npm test`。RSS 浏览器测试验证六个源、两枚按钮、字形与图标加载、选择状态、键盘、提示关闭、返回、背景字节一致性，以及 1366×768 / 1920×1080 / 2560×1440 的居中与无重叠。GUI Scale 分别为 2 / 3 / 4，列表宽度 780 / 1170 / 1560；小窗口与提示出现时使用游戏式列表滚动，不遮住底部按钮。
 
 实际结果见 `tests/rss-results.json`、`tests/results.json`。截图：`tests/screenshots/rss-1366x768.png`、`rss-1920x1080.png`、`rss-2560x1440.png`、`rss-management-notice.png`。截图保留本地。
+
+## 默认旋转背景修正
+
+rss.css 的页面背景改为透明；MinecraftTitleScreen 取消 MineRSS 的旋转暂停条件。背景遵循全站动态背景与减少动态效果设置，GUI 布局和交互未调整。构建及 RSS 浏览器检查通过，覆盖1366×768、1920×1080、2560×1440，验证页面不再指定背景图并测得全景旋转角变化。截图位于 tests/screenshots/rss-*.png。

@@ -51,10 +51,7 @@ export function MinecraftTitleScreen() {
     >
       <PanoramaRenderer
         dynamic={
-          screen !== "profile" &&
-          screen !== "multiplayer" &&
-          settings.dynamic &&
-          !settings.reducedMotion
+          screen !== "profile" && settings.dynamic && !settings.reducedMotion
         }
       />
       <div className="gui">

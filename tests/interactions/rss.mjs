@@ -1,7 +1,6 @@
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
-import { mkdir, writeFile, readFile } from "node:fs/promises";
-import { createHash } from "node:crypto";
+import { mkdir, writeFile } from "node:fs/promises";
 await mkdir("tests/screenshots", { recursive: true });
 const names = [
   "AI Research Server",
@@ -11,12 +10,6 @@ const names = [
   "Open Source World",
   "Software Engineering Hub",
 ];
-const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
-assert.equal(
-  hash(await readFile("public/assets/rss/background.png")),
-  hash(await readFile("gptphotos/暮色湖畔的村庄与紫色传送门.png")),
-  "Background copy preserves original bytes",
-);
 const b = await chromium.launch({ headless: true });
 const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
 const errors = [],
@@ -31,6 +24,28 @@ p.on("response", (r) => {
 await p.goto("http://127.0.0.1:5173/");
 await p.getByRole("button", { name: "MineRSS", exact: true }).click();
 await p.getByRole("option", { name: names[5] }).waitFor();
+assert.equal(
+  await p
+    .locator(".rss-screen")
+    .evaluate((n) => getComputedStyle(n).backgroundImage),
+  "none",
+);
+assert.equal(
+  await p
+    .locator(".rss-screen")
+    .evaluate((n) => getComputedStyle(n).backgroundColor),
+  "rgba(0, 0, 0, 0)",
+);
+await p.locator(".panorama[data-status='ready']").waitFor();
+const yawStart = Number(await p.locator(".panorama").getAttribute("data-yaw"));
+await p.waitForTimeout(1200);
+const rotationDelta =
+  Number(await p.locator(".panorama").getAttribute("data-yaw")) - yawStart;
+assert.ok(
+  rotationDelta > 0.005,
+  "Default panorama continues rotating on MineRSS",
+);
+
 assert.deepEqual(
   await p
     .getByRole("option")
@@ -171,7 +186,8 @@ const result = {
   date: new Date().toISOString(),
   dimensions,
   sources: names,
-  backgroundUnchanged: true,
+  background: "shared rotating panorama",
+  rotationDelta,
   staticStatus: true,
   keyboard: true,
   managementNotice: true,
