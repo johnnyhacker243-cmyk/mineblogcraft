@@ -1,3 +1,4 @@
+import { useId } from "react";
 import { inventoryAssets, profile } from "../config/profile-config";
 import { InventoryText } from "./InventoryText";
 import { DragonEggIcon } from "./DragonEggIcon";
@@ -10,15 +11,41 @@ export function BlockIcon({
   side: string;
   grass?: boolean;
 }) {
+  const tintId = useId();
   return (
-    <span className="block-icon" aria-hidden="true">
-      <i
-        className={grass ? "grass-tint" : ""}
-        style={{ backgroundImage: `url(${inventoryAssets + top})` }}
+    <svg className="block-icon" viewBox="0 0 16 18" aria-hidden="true">
+      <defs>
+        <filter id={tintId} colorInterpolationFilters="sRGB">
+          <feColorMatrix
+            type="matrix"
+            values="0.486 0 0 0 0  0 0.682 0 0 0  0 0 0.271 0 0  0 0 0 1 0"
+          />
+        </filter>
+      </defs>
+      {/* Each face shares exact vertices; independent CSS skew offsets left gaps. */}
+      <path d="M8 1 16 5 16 13 8 17 0 13 0 5Z" fill="#54432b" />
+      <image
+        href={inventoryAssets + top}
+        width="16"
+        height="16"
+        transform="matrix(.5 .25 -.5 .25 8 1)"
+        filter={grass ? `url(#${tintId})` : undefined}
       />
-      <i style={{ backgroundImage: `url(${inventoryAssets + side})` }} />
-      <i style={{ backgroundImage: `url(${inventoryAssets + side})` }} />
-    </span>
+      <image
+        href={inventoryAssets + side}
+        width="16"
+        height="16"
+        transform="matrix(.5 .25 0 .5 0 5)"
+        style={{ filter: "brightness(0.7)" }}
+      />
+      <image
+        href={inventoryAssets + side}
+        width="16"
+        height="16"
+        transform="matrix(.5 -.25 0 .5 8 9)"
+        style={{ filter: "brightness(0.85)" }}
+      />
+    </svg>
   );
 }
 export function ItemIcon({ index }: { index: number }) {

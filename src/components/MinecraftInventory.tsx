@@ -42,6 +42,7 @@ export function MinecraftInventory({ back }: { back: () => void }) {
           "--inventory-scale": scale,
           "--header-scale": scale,
           "--hud-scale": scale,
+          "--skill-count": profile.skills.length,
           "--intro-scale": compact
             ? scale
             : scale * profile.layout.introductionZoom,

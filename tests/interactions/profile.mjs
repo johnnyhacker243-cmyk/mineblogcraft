@@ -73,6 +73,8 @@ assert.equal(
   "Only the requested return button is interactive",
 );
 assert.equal(await page.locator(".inventory-tab").count(), 10);
+assert.equal(await page.locator("svg.block-icon").count(), 3);
+assert.equal(await page.locator("svg.block-icon image").count(), 9);
 assert.equal(await page.locator('.inventory-tab[title="下界之星"]').count(), 0);
 assert.deepEqual(
   await page
@@ -182,6 +184,16 @@ for (const [width, height] of [
     "Logo and ten category icons never overlap",
   );
   const hotbarBox = await page.locator(".item-slots").boundingBox();
+  const heartsBox = await page.locator(".status-hearts").boundingBox();
+  const foodBox = await page.locator(".status-food").boundingBox();
+  assert.ok(
+    Math.abs(heartsBox.x - hotbarBox.x) < 0.1,
+    "Hearts align with the left edge of skill slots",
+  );
+  assert.ok(
+    Math.abs(foodBox.x + foodBox.width - hotbarBox.x - hotbarBox.width) < 0.1,
+    "Hunger aligns with the right edge of skill slots",
+  );
   const copyBox = await page.locator(".website-introduction").boundingBox();
   const panelBox = await page.locator(".profile-panel").boundingBox();
   const mottoBox = await page.locator(".profile-panel dd").last().boundingBox();
@@ -242,12 +254,20 @@ for (const [width, height] of [
     profileBox: panelBox,
     playerBox: viewport,
     introductionBox: copyBox,
+    statusAlignment: {
+      leftDifference: heartsBox.x - hotbarBox.x,
+      rightDifference:
+        foodBox.x + foodBox.width - hotbarBox.x - hotbarBox.width,
+    },
   });
   await page.screenshot({
     path: `tests/screenshots/profile-${width}x${height}.png`,
   });
 }
 await page.setViewportSize({ width: 1920, height: 1080 });
+await page
+  .locator(".inventory-tabs")
+  .screenshot({ path: "tests/screenshots/profile-block-icons.png" });
 await page.mouse.move(0, 0);
 const firstSkill = page.getByRole("listitem", { name: "Python", exact: true });
 const normalSkill = await firstSkill.evaluate(
