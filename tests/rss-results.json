@@ -1,16 +1,35 @@
 {
-  "date": "2026-10-11T02:46:25.460Z",
+  "date": "2026-10-11T02:58:21.351Z",
   "dimensions": [
     {
       "width": 1366,
       "height": 768,
       "scale": "2",
       "list": {
-        "x": 293,
-        "y": 112,
-        "width": 780,
+        "x": 207,
+        "y": 160,
+        "width": 952,
+        "height": 756
+      },
+      "container": {
+        "x": 203,
+        "y": 156,
+        "width": 960,
         "height": 540
       },
+      "logo": {
+        "x": 24,
+        "y": 20,
+        "width": 360,
+        "height": 120
+      },
+      "title": {
+        "x": 625,
+        "y": 30,
+        "width": 116,
+        "height": 36
+      },
+      "rowHeight": 124,
       "footer": {
         "x": 363,
         "y": 696,
@@ -23,11 +42,30 @@
       "height": 1080,
       "scale": "3",
       "list": {
-        "x": 375,
-        "y": 168,
-        "width": 1170,
-        "height": 810
+        "x": 246,
+        "y": 240,
+        "width": 1428,
+        "height": 1134
       },
+      "container": {
+        "x": 240,
+        "y": 234,
+        "width": 1440,
+        "height": 738
+      },
+      "logo": {
+        "x": 36,
+        "y": 30,
+        "width": 540,
+        "height": 180
+      },
+      "title": {
+        "x": 873,
+        "y": 45,
+        "width": 174,
+        "height": 54
+      },
+      "rowHeight": 186,
       "footer": {
         "x": 480,
         "y": 972,
@@ -40,11 +78,30 @@
       "height": 1440,
       "scale": "4",
       "list": {
-        "x": 500,
-        "y": 224,
-        "width": 1560,
-        "height": 1080
+        "x": 328,
+        "y": 320,
+        "width": 1904,
+        "height": 1512
       },
+      "container": {
+        "x": 320,
+        "y": 312,
+        "width": 1920,
+        "height": 984
+      },
+      "logo": {
+        "x": 48,
+        "y": 40,
+        "width": 720,
+        "height": 240
+      },
+      "title": {
+        "x": 1164,
+        "y": 60,
+        "width": 232,
+        "height": 72
+      },
+      "rowHeight": 248,
       "footer": {
         "x": 640,
         "y": 1296,

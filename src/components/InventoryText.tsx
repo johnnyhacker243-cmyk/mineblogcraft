@@ -23,10 +23,12 @@ export function InventoryText({
   text,
   color = "#fff",
   shadow = true,
+  shadowColor = "#3f3f3f",
 }: {
   text: string;
   color?: string;
   shadow?: boolean;
+  shadowColor?: string;
 }) {
   const canvas = useRef<HTMLCanvasElement>(null);
   const [failed, setFailed] = useState(false);
@@ -51,7 +53,7 @@ export function InventoryText({
           x += c.charCodeAt(0) < 128 ? 8 : 16;
         }
         l.globalCompositeOperation = "source-in";
-        l.fillStyle = "#3f3f3f";
+        l.fillStyle = shadowColor;
         l.fillRect(0, 0, layer.width, 16);
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         if (shadow) ctx.drawImage(layer, 2, 2);
@@ -65,7 +67,7 @@ export function InventoryText({
     return () => {
       active = false;
     };
-  }, [text, color, shadow, width]);
+  }, [text, color, shadow, shadowColor, width]);
   return failed ? (
     <span className="inventory-font-error">字体资源未导入</span>
   ) : (

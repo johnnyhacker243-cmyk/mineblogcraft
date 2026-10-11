@@ -4,6 +4,7 @@ import { rssService } from "../services/RSSRepository";
 import { RSSServerRow } from "../components/rss/RSSServerRow";
 import { InventoryText } from "../components/InventoryText";
 import { MinecraftButton } from "../components/MinecraftButton";
+import { assets } from "../config/assets-config";
 import "../styles/rss.css";
 export function MineRSSScreen({ back }: { back: () => void }) {
   const [sources, setSources] = useState<RSSServer[]>([]);
@@ -64,9 +65,12 @@ export function MineRSSScreen({ back }: { back: () => void }) {
       }
       aria-label="MineRSS 信息服务器"
     >
+      <div className="rss-brand">
+        <img src={assets.logo} alt="Mineblogcraft" />
+      </div>
       <header>
         <h1>
-          <InventoryText text="MineRSS" />
+          <InventoryText text="MineRSS" shadowColor="#000" />
         </h1>
         <InventoryText text="连接更广阔的知识世界" />
         <small>

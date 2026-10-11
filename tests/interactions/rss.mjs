@@ -69,6 +69,19 @@ for (const [width, height] of [
   await p.waitForTimeout(150);
   const list = await p.locator(".rss-server-list").boundingBox();
   const footer = await p.locator(".rss-screen footer").boundingBox();
+  const container = await p.locator(".rss-list-band").boundingBox();
+  const logo = await p.locator(".rss-brand").boundingBox();
+  const title = await p.locator(".rss-screen h1").boundingBox();
+  const firstRow = await p.getByRole("option").first().boundingBox();
+  const scale = Number(
+    await p.locator(".rss-screen").getAttribute("data-rss-scale"),
+  );
+  assert.ok(container.width / width >= 0.7 && container.width / width <= 0.8);
+  assert.ok(logo.x + logo.width < title.x, "Logo never overlaps central title");
+  assert.ok(logo.y + logo.height <= container.y, "Logo stays above list frame");
+  assert.equal(firstRow.height, 62 * scale);
+  assert.equal(title.height, 18 * scale);
+  assert.ok(container.y + container.height <= footer.y);
   assert.ok(Math.abs(list.x + list.width / 2 - width / 2) < 0.1);
   assert.ok(footer.y + footer.height <= height + 0.1);
   for (const row of await p.getByRole("option").all()) {
@@ -100,11 +113,27 @@ for (const [width, height] of [
     "true",
   );
   await p.screenshot({ path: `tests/screenshots/rss-${width}x${height}.png` });
+  await p
+    .locator(".rss-list-band")
+    .evaluate((n) => (n.scrollTop = n.scrollHeight));
+  const lastRow = await p.getByRole("option").last().boundingBox();
+  assert.ok(
+    lastRow.y + lastRow.height <= container.y + container.height,
+    "Last server can be fully viewed by scrolling",
+  );
+  await p.screenshot({
+    path: `tests/screenshots/rss-scrolled-${width}x${height}.png`,
+  });
+  await p.locator(".rss-list-band").evaluate((n) => (n.scrollTop = 0));
   dimensions.push({
     width,
     height,
     scale: await p.locator(".rss-screen").getAttribute("data-rss-scale"),
     list,
+    container,
+    logo,
+    title,
+    rowHeight: firstRow.height,
     footer,
   });
 }
