@@ -3,7 +3,7 @@ import type {
   BookPage,
   ResearchPaper,
 } from "../models/ResearchPaper";
-export const bookMetrics = { lineWidth: 104, linesPerPage: 13, lineHeight: 10 };
+export const bookMetrics = { lineWidth: 240, linesPerPage: 19, lineHeight: 8 };
 export function wrapBookText(
   text: string,
   width = bookMetrics.lineWidth,
@@ -14,9 +14,19 @@ export function wrapBookText(
   for (const c of text) {
     const advance = c.charCodeAt(0) < 128 ? 4 : 8;
     if (length + advance > width && line) {
-      lines.push(line);
-      line = "";
-      length = 0;
+      const space = line.lastIndexOf(" ");
+      if (/^[A-Za-z0-9]$/.test(c) && space > line.length / 2) {
+        lines.push(line.slice(0, space));
+        line = line.slice(space + 1);
+        length = [...line].reduce(
+          (n, char) => n + (char.charCodeAt(0) < 128 ? 4 : 8),
+          0,
+        );
+      } else {
+        lines.push(line);
+        line = "";
+        length = 0;
+      }
     }
     line += c;
     length += advance;
@@ -62,28 +72,30 @@ export function paperBookPages(
   paper: ResearchPaper,
   markdown: string,
 ): BookPage[] {
-  const information = [
-    paper.title,
-    "",
-    `作者：${paper.author}`,
-    `年份：${paper.year}`,
-    "类型：数学建模论文",
-    "",
-    "关键词：",
-    ...paper.keywords,
-  ].flatMap((text) =>
-    wrapBookText(text).map((line) => ({ kind: "text" as const, text: line })),
+  const information = paginateBook(
+    [
+      paper.title,
+      "",
+      `作者：${paper.author}`,
+      `年份：${paper.year}`,
+      `类型：${paper.category}`,
+      "",
+      "关键词：",
+      ...paper.keywords,
+      "",
+      ...(paper.license ? [paper.license, "原文作者保留署名"] : []),
+    ].join("\n"),
   );
-  const abstract = [
-    "摘要",
-    "",
-    ...wrapBookText(paper.abstract),
-    "",
-    ...(paper.draft ? ["原创示例 · 非发表论文"] : []),
-  ].flatMap((text) =>
-    wrapBookText(text).map((line) => ({ kind: "text" as const, text: line })),
+  const abstract = paginateBook(
+    [
+      "摘要",
+      "",
+      paper.abstract,
+      "",
+      ...(paper.draft ? ["原创示例 · 非发表论文"] : []),
+    ].join("\n"),
   );
-  const pages = [information, abstract, ...paginateBook(markdown)];
+  const pages = [...information, ...abstract, ...paginateBook(markdown)];
   if (pages.length % 2) pages.push([]);
   return pages;
 }

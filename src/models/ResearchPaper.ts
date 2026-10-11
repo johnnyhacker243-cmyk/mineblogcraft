@@ -10,8 +10,39 @@ export interface ResearchPaper {
   content: string;
   abstract: string;
   draft: boolean;
+  format?: "document";
+  sourceUrl?: string;
+  doi?: string;
+  license?: string;
+  licenseUrl?: string;
+  language?: string;
 }
 export type BookBlock =
   | { kind: "text"; text: string; heading?: boolean }
-  | { kind: "image"; src: string; alt: string };
+  | {
+      kind: "image";
+      src: string;
+      alt: string;
+      height?: number;
+      caption?: string;
+    }
+  | { kind: "rich"; runs: PaperRun[]; heading?: boolean };
+export type PaperRun =
+  | { text: string }
+  | { src: string; width: number; height: number; alt: string };
+export interface PaperDocument {
+  version: 1;
+  blocks: (
+    | { kind: "paragraph"; runs: PaperRun[]; heading?: boolean }
+    | {
+        kind: "image";
+        src: string;
+        width: number;
+        height: number;
+        alt: string;
+        caption?: string;
+        label?: string;
+      }
+  )[];
+}
 export type BookPage = BookBlock[];

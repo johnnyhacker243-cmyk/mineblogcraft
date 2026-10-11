@@ -100,6 +100,10 @@ for source in ['src/data/rssSources.json', 'src/screens/MineRSSScreen.tsx', 'src
     characters.update((project/source).read_text(encoding='utf-8'))
 for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx','src/components/MinecraftInventory.tsx','src/data/blogs.json', 'src/screens/BlogWorldSelect.tsx', 'src/components/blog/WorldSearch.tsx', 'src/components/blog/WorldCard.tsx', 'src/components/blog/BlogReader.tsx']:
     characters.update((project/source).read_text(encoding='utf-8'))
+for source in (project/'public/papers').rglob('*.json'):
+    characters.update(source.read_text(encoding='utf-8'))
+for source in ['src/utils/document-pagination.ts', 'src/components/research/PageRenderer.tsx']:
+    characters.update((project/source).read_text(encoding='utf-8'))
 selected = sorted(code for code in glyphs if chr(code) in characters)
 atlas = Image.new('RGBA', (256,((len(selected)+15)//16)*16))
 metadata = {}

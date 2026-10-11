@@ -22,7 +22,7 @@ book-pagination → BookPage[]
 
 页面只依赖 `PaperRepository.getPapers()` 与 `getContent()`，不直接读取 JSON。未来实现相同接口的 API repository，分别调用论文目录与正文接口即可；不需要改书籍 UI。本阶段没有后台或数据库。
 
-分页使用 104 逻辑像素行宽、每页 13 行；图片占 6 行。支持标题、普通文本、空行与本地图片，双页不足时补空页。本示例共 14 页。没有引入 HTML 执行、PDF 阅读器或在线 LaTeX 渲染；公式通过本地 SVG 图片显示。
+Markdown 分页使用 240 字形逻辑单位行宽、每页 19 行；图片占 6 行。书页文字以 0.6 倍字形比例显示，行高 8 逻辑像素。支持标题、普通文本、空行与本地图片，双页不足时补空页。放大版阅读器中本示例共 8 页。没有引入 HTML 执行、PDF 阅读器或在线 LaTeX 渲染；公式通过本地 SVG 图片显示。
 
 ## 原版资源与还原范围
 
@@ -53,12 +53,39 @@ book-pagination → BookPage[]
 
 | 浏览器尺寸 | GUI Scale | 双页尺寸 |
 | --- | --- | --- |
-| 1366×768 | 3 | 876×540 |
-| 1920×1080 | 4 | 1168×720 |
-| 2560×1440 | 5 | 1460×900 |
+| 1366×768 | 3 | 1140×540 |
+| 1920×1080 | 4.25 | 1615×765 |
+| 2560×1440 | 5.75 | 2185×1035 |
 
 截图分析后调整了标题末尾孤字换行，并提高窗口模式书籍比例；复测确认文字和按钮没有超出视口。禁用翻页箭头按游戏习惯隐藏，测试使用包含隐藏元素的查询验证边界。
 
 本地截图（不提交）：`tests/screenshots/research-catalog-1920x1080.png`、`research-book-opening.png`、`research-book-1366x768.png`、`research-book-1920x1080.png`、`research-book-2560x1440.png`、`research-formula-pages.png`。
 
 启动：`npm run dev -- --host 127.0.0.1`，打开首页后点击 MineResearch。新机器仍需导入获授权客户端资源，才能获得本机完整画面。
+
+## 大幅放大与真实论文接入
+
+书籍与打开动画共享 380×180 的逻辑展开尺寸，每页 190×180。阅读 Scale 按窗口宽度 94% 与高度 94% 的约束计算，使用 0.25 档位；目录继续沿用旧的整数 GUI Scale。上述三种桌面尺寸下书宽约占 83%–85%，返回按钮与来源链接仍留在视口内。真实论文信息页与正文统一使用随项目提供的 OFL 像素字体 Monocraft，正文可选择复制；中文示例继续使用本地位图字形。
+
+新增真实论文为 JiaMing Wang、Kai Yang、MinJing Li 的 NIDS-FGPA（PLOS ONE，2024，DOI 10.1371/journal.pone.0308639），保留英文原文，没有翻译或改署名。来源和许可：[出版方原文](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308639)、[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。本地内容为 301 个结构块，含正文、摘要、43 项参考文献、10 幅图、8 张表与原始公式。当前自动分页为 154 页。
+
+出版方共提供 160 项不同图像，逐一检查实际图像尺寸及 SHA-256。159 项在书页作为独立图像或行内公式展示；e136 已在原始表格图片内完整显示，无须另外重复。图表按宽高比完整适配，保留题注，可以点击查看原图；Escape 关闭原图并继续当前双页。页码框用于直接定位，输入奇/偶数页均定位到该页所属的双页。窗口变化及输入焦点不会将书本滚出屏幕。
+
+`PaperDocument` version 1 将内容统一为段落/图片：段落包含纯文字与行内公式图像 runs；图片保留原始宽高、标签和题注。`document-pagination.ts` 用实际加载的像素字体测量单词宽度，自动换行和分页，避免标题落在页底、整张图被截断。图片长题注可以继续到下一页；它不是原 PDF 的逐页排版。外部文本使用 React 节点渲染，不接受 HTML；`parsePaperDocument` 校验格式、图片尺寸及本地路径。
+
+### 接入下一篇论文
+
+明确拥有 CC BY 4.0 的 PLOS ONE 论文，可执行：
+
+```powershell
+python scripts/import-plos-paper.py --doi 10.1371/journal.pone.0308639 --slug nids-fgpa
+python scripts/import-inventory.py --jar '你的原版1.21.1客户端.jar'
+npm run build
+npm run test:research-paper
+```
+
+导入器核验许可、DOI 与资源归属，只下载指定论文的出版方资源；缓存后重复运行不必再次下载。生成 `document.json`、`provenance.json`、原图，并更新 `src/data/papers.json`。原始 XML 本地保留且被忽略。目录图标统一改为原版附魔书。
+
+其他期刊、作者 Markdown 或未来 API 可以产生同样的 `PaperDocument`，设置论文 `format: "document"` 和内容 URL；仓库接口和页面无需修改。普通 Markdown 仍可用旧入口。当前自动导入器只支持 PLOS ONE 的 JATS 与明确 CC BY 4.0，尚不是任意 PDF 自动解析器；扫描 PDF 或特殊附件需要单独的提取适配。补充材料和原始研究数据不包含在此次导入内。
+
+最新验证：`npm run build`、`npm run test:research`、`npm run test:research-paper`。长文测试遍历所有双页，检查文字横向溢出、图片加载、图片哈希、页码焦点、原图关闭及三种窗口比例；结果记录在 `tests/research-paper-results.json`。截图新增 `research-real-paper-1366x768.png`、`research-real-paper-1920x1080.png`、`research-real-paper-2560x1440.png`、`research-real-paper-text.png`、`research-real-paper-figure.png`、`research-real-paper-original-image.png`。

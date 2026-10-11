@@ -1,0 +1,1151 @@
+{
+  "metadata": {
+    "id": "nids-fgpa",
+    "title": "NIDS-FGPA: A federated learning network intrusion detection algorithm based on secure aggregation of gradient similarity models",
+    "author": "JiaMing Wang, Kai Yang, MinJing Li",
+    "year": "2024",
+    "description": "联邦学习、同态加密与工业物联网入侵检测 · 英文原文",
+    "category": "AI / Cyber Security",
+    "keywords": [
+      "Federated Learning",
+      "Intrusion Detection",
+      "IIoT"
+    ],
+    "cover": "/assets/inventory/enchanted-book.png",
+    "content": "/papers/nids-fgpa/document.json",
+    "abstract": "With the rapid development of Industrial Internet of Things (IIoT), network security issues have become increasingly severe, making intrusion detection one of the key technologies for ensuring IIoT security. However, existing intrusion detection systems face challenges such as incomplete data features, missing labels, parameter leakage, and high communication overhead. To address these challenges, this paper proposes a federated learning-based intrusion detection algorithm (NIDS-FGPA) that utilizes gradient similarity model aggregation. This algorithm leverages a federated learning architecture and combines it with Paillier homomorphic encryption technology to ensure the security of the training process. Additionally, the paper introduces the Gradient Similarity Model Aggregation (GSA) algorithm, which dynamically selects and weights updates from different models to reduce communication overhead. Finally, the paper designs a deep learning model based on two-dimensional convolutional neural networks and bidirectional gated recurrent units (2DCNN-BIGRU) to handle incomplete data features and missing labels in network traffic data. Experimental validation on the Edge-IIoTset and CIC IoT 2023 datasets achieves accuracies of 94.5% and 99.2%, respectively. The results demonstrate that the NIDS-FGPA model possesses the ability to identify and capture complex network attacks, significantly enhancing the overall security of the network.",
+    "draft": false,
+    "format": "document",
+    "sourceUrl": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308639",
+    "doi": "10.1371/journal.pone.0308639",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "language": "English"
+  },
+  "sourceXmlSha256": "114a1f2fcef6ef14995205d6b6a285f75c41df9bf2cd957c9b7edd23ac917db8",
+  "changes": "JATS converted to paginated JSON; original English text and publisher images retained. No translation.",
+  "assets": [
+    {
+      "src": "/papers/nids-fgpa/e001.png",
+      "width": 18,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e001",
+      "sha256": "6b147e01325740639265c95e6de8f09ab68bb9264c7fec769ddc08fc3a2aa7cb"
+    },
+    {
+      "src": "/papers/nids-fgpa/e002.png",
+      "width": 18,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e002",
+      "sha256": "6d1c4930b15524f66d21279de538972230af3e8ab24dc455a62c354d28d87cdd"
+    },
+    {
+      "src": "/papers/nids-fgpa/e003.png",
+      "width": 18,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e003",
+      "sha256": "b66decbbeb2b88e0c7baa913b0c969b8a5c23caa87dce45af358daa1fbcdbded"
+    },
+    {
+      "src": "/papers/nids-fgpa/e004.png",
+      "width": 18,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e004",
+      "sha256": "64897fb891a4de51812943a774ac004e47d40e9ea56b2649322897ed5d97d9b3"
+    },
+    {
+      "src": "/papers/nids-fgpa/e005.png",
+      "width": 170,
+      "height": 45,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e005",
+      "sha256": "3c982ad8e7167bc9c442a1d3f34d4c068de99ca61b8e8c758e8f96ba0ace8709"
+    },
+    {
+      "src": "/papers/nids-fgpa/e006.png",
+      "width": 240,
+      "height": 50,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e006",
+      "sha256": "168d6b966d5086197357a0c63acfc225b6c36429cf2d94cb212cecb00091df2f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e007.png",
+      "width": 24,
+      "height": 23,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e007",
+      "sha256": "2eea1b534859d7985bbd4e524697e4a08f984d2e85225e8c0bb2d25fb3630705"
+    },
+    {
+      "src": "/papers/nids-fgpa/e008.png",
+      "width": 30,
+      "height": 23,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e008",
+      "sha256": "8ecb78f08678171bc708ec196eef1a3b57ee3133e5d2a4b111a204badd743a40"
+    },
+    {
+      "src": "/papers/nids-fgpa/e009.png",
+      "width": 52,
+      "height": 23,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e009",
+      "sha256": "49b7834ddcc9ae118c11c6a344bb63270598faa6d97c99249316c303d89851a1"
+    },
+    {
+      "src": "/papers/nids-fgpa/e010.png",
+      "width": 163,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e010",
+      "sha256": "95d903ff8f0232768e3d86da92723131cc1334c67c9e08962fb06ed5d820f8e5"
+    },
+    {
+      "src": "/papers/nids-fgpa/e011.png",
+      "width": 163,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e011",
+      "sha256": "69ca0cda6e6578beaa444c9c34d91698b9582c4712b68c5d84e110c2040cfbfc"
+    },
+    {
+      "src": "/papers/nids-fgpa/e012.png",
+      "width": 213,
+      "height": 22,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e012",
+      "sha256": "5181d0b712c5ab056abaaed468b87f0aad48b2862bb1bdca3538a5edced6d9e9"
+    },
+    {
+      "src": "/papers/nids-fgpa/e013.png",
+      "width": 184,
+      "height": 22,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e013",
+      "sha256": "4bce6a8436858399cc505825c3c1cb9a2915381b41294e118e1872b0f1ae5478"
+    },
+    {
+      "src": "/papers/nids-fgpa/e014.png",
+      "width": 15,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e014",
+      "sha256": "24f10892f61e513abab6bfc2f003d4c998ef825ecce3abab644e2f7a672521c7"
+    },
+    {
+      "src": "/papers/nids-fgpa/e015.png",
+      "width": 138,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e015",
+      "sha256": "cda680b0c6207b1a365a66df9395f4a926e192596b0f898614eb52fbdf63076a"
+    },
+    {
+      "src": "/papers/nids-fgpa/e016.png",
+      "width": 12,
+      "height": 15,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e016",
+      "sha256": "12a3f20b1f1e03c3cb920d849e09250c55068cfac045b40a978a4eec4352f0c4"
+    },
+    {
+      "src": "/papers/nids-fgpa/e017.png",
+      "width": 12,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e017",
+      "sha256": "2171d826849beb4f9dfcaa6ca8afec9f625d5f8e4fd7a3c62a222e5aaf5b4844"
+    },
+    {
+      "src": "/papers/nids-fgpa/e018.png",
+      "width": 169,
+      "height": 42,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e018",
+      "sha256": "c48fefe6b11952102647b8bb69fbb3b7a947dd0212601bd23b5bc2f8d05fc7b6"
+    },
+    {
+      "src": "/papers/nids-fgpa/e019.png",
+      "width": 238,
+      "height": 74,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e019",
+      "sha256": "7c59aaf6ed71eb4df9bb65522a568f402268a6cd7b66247d86f4f93726e8f4d3"
+    },
+    {
+      "src": "/papers/nids-fgpa/e020.png",
+      "width": 15,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e020",
+      "sha256": "3d462695f7094cce384f2acdd816d4078fffc2eb046839c5939907dda72153f4"
+    },
+    {
+      "src": "/papers/nids-fgpa/e021.png",
+      "width": 29,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e021",
+      "sha256": "451b70177cc47ac3fe937cdb1d77757d1de3ae0a238f967dc9f2315a4e6ab44e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e022.png",
+      "width": 41,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e022",
+      "sha256": "a017a8df3a25fe5b0563713ff56d2015fc83e503fa45d99d34c077debb784e67"
+    },
+    {
+      "src": "/papers/nids-fgpa/e023.png",
+      "width": 15,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e023",
+      "sha256": "011b7c153138276c3a476523014c6747143d3d28526fa95c17d4e720ac106f79"
+    },
+    {
+      "src": "/papers/nids-fgpa/e024.png",
+      "width": 59,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e024",
+      "sha256": "99d2f3f65a6482ceb66e8e0bff709b03b9c5dfbf969cdfebb5f30a9f6c81954a"
+    },
+    {
+      "src": "/papers/nids-fgpa/e025.png",
+      "width": 59,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e025",
+      "sha256": "07b76cfd57e1a8bce701a67814f34079f0179deb2f2c9af0ec0ad9d843935a29"
+    },
+    {
+      "src": "/papers/nids-fgpa/e026.png",
+      "width": 200,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e026",
+      "sha256": "59a1c97f571c58c8383d3b1ca0fe72363496c42396c15140cd370ed2c391d5e2"
+    },
+    {
+      "src": "/papers/nids-fgpa/e027.png",
+      "width": 200,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e027",
+      "sha256": "0a2a6c050413c8433bea1c2d3f9093e6f9d2cb8c0f1e4646381313c1e6cb256a"
+    },
+    {
+      "src": "/papers/nids-fgpa/e028.png",
+      "width": 85,
+      "height": 35,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e028",
+      "sha256": "e86b75a1669e8530b279ea8074040ec49eb2ded84dbf781a27670311ef4c05b4"
+    },
+    {
+      "src": "/papers/nids-fgpa/e029.png",
+      "width": 185,
+      "height": 22,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e029",
+      "sha256": "fd9cad5f4e706633b0d11ea50960036c4fa904710084201d7810b37631730e7e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e030.png",
+      "width": 31,
+      "height": 15,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e030",
+      "sha256": "b595e10b350195994c3d9295940c325b36caf93dff7e05bba63a0828a62de617"
+    },
+    {
+      "src": "/papers/nids-fgpa/e031.png",
+      "width": 43,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e031",
+      "sha256": "a57294ae2be556f339e550acaba9804761a3bac3b8d4d4324377b36bbc07cf02"
+    },
+    {
+      "src": "/papers/nids-fgpa/e032.png",
+      "width": 83,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e032",
+      "sha256": "79fd20e2f9715ad9c7ecb4b39e29b3f1f2846d75695fbfd89c95ab72c459f7b5"
+    },
+    {
+      "src": "/papers/nids-fgpa/e033.png",
+      "width": 42,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e033",
+      "sha256": "7cf9b8111e0ae8938e6c0dce9447e553f491646a40feac226ffa38d77c4fc229"
+    },
+    {
+      "src": "/papers/nids-fgpa/e034.png",
+      "width": 150,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e034",
+      "sha256": "00550691f1e7abc8f42ac5381222ef9ca992228593e5704dcdafba81c564ada8"
+    },
+    {
+      "src": "/papers/nids-fgpa/e035.png",
+      "width": 92,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e035",
+      "sha256": "91502e3ef9dcc66386d35d2c2ce4b60e1b63addee410fe8306f95bd481823b28"
+    },
+    {
+      "src": "/papers/nids-fgpa/e036.png",
+      "width": 183,
+      "height": 40,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e036",
+      "sha256": "1b3797243e4b97a7a2141c1c59474dcb5f9eb1f474d6ac986e8db79ba8c2e178"
+    },
+    {
+      "src": "/papers/nids-fgpa/e037.png",
+      "width": 120,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e037",
+      "sha256": "3c846fb30a5c12ca8548740a9326b900a2b0e106237d57024102f70a5543028c"
+    },
+    {
+      "src": "/papers/nids-fgpa/e038.png",
+      "width": 127,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e038",
+      "sha256": "164b1e9ebd671eedb73cd714ff5aae6c4c250a4ea90e8a85145c720afead65af"
+    },
+    {
+      "src": "/papers/nids-fgpa/e039.png",
+      "width": 145,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e039",
+      "sha256": "d13f195be0503b95bc79b613a0d96855fee40515fe45c1e1eacad6fd210e9c14"
+    },
+    {
+      "src": "/papers/nids-fgpa/e040.png",
+      "width": 130,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e040",
+      "sha256": "3e7c878f23ef741fca7c636c1869f3969ba4e714b3de1128795ac8aab19983f8"
+    },
+    {
+      "src": "/papers/nids-fgpa/e041.png",
+      "width": 127,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e041",
+      "sha256": "eed06bd21d23cba0d264ad3c922342f1bf9a57e9d62f4314adb16a83bd61156a"
+    },
+    {
+      "src": "/papers/nids-fgpa/e042.png",
+      "width": 145,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e042",
+      "sha256": "c43c7928943a13e0d5897d9112d17bf2fd66c7b1b528d65110c5b2a61b7072c1"
+    },
+    {
+      "src": "/papers/nids-fgpa/e043.png",
+      "width": 163,
+      "height": 50,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e043",
+      "sha256": "686b9e54612444c3f6301b1b12e2d31759d4771783adf074811405bc245eea2c"
+    },
+    {
+      "src": "/papers/nids-fgpa/e044.png",
+      "width": 111,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e044",
+      "sha256": "dfae5aef012b951db9c32625d55d24b02e4caf3ffd23d320f2145f4cb12b3915"
+    },
+    {
+      "src": "/papers/nids-fgpa/e045.png",
+      "width": 109,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e045",
+      "sha256": "8b5de12484f7e5ee6f4a9f6c7839c645ee1214e98b4aeffde23bbf32b1b68d64"
+    },
+    {
+      "src": "/papers/nids-fgpa/e046.png",
+      "width": 148,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e046",
+      "sha256": "766b696efa9c32763274fd04be5d099ebcd0d674a595b4eb250cc9fcc7329774"
+    },
+    {
+      "src": "/papers/nids-fgpa/e047.png",
+      "width": 99,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e047",
+      "sha256": "9adf3b60692e5583eb1ffb8f61b09a10c6f924a726a2902b0668bd9d1f661756"
+    },
+    {
+      "src": "/papers/nids-fgpa/e048.png",
+      "width": 12,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e048",
+      "sha256": "3457e4f4a537bf7d384f717f57210952149eba8b7277a6a847c0847e8eb0f5d8"
+    },
+    {
+      "src": "/papers/nids-fgpa/e049.png",
+      "width": 124,
+      "height": 45,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e049",
+      "sha256": "f71e71127ebfe5c571a7c16e877d01f2605be2bcc25d6da346fc8e4557ed93ee"
+    },
+    {
+      "src": "/papers/nids-fgpa/e050.png",
+      "width": 15,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e050",
+      "sha256": "386c31d1f5cc708c3121ba1adc6b7bc260f5bb6e21ab86104ba919900dcea7c4"
+    },
+    {
+      "src": "/papers/nids-fgpa/e051.png",
+      "width": 18,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e051",
+      "sha256": "1d0624d40ad861776e55b8602a14fc57c51a4694d647b32bc0b3160dc249e0f0"
+    },
+    {
+      "src": "/papers/nids-fgpa/e052.png",
+      "width": 41,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e052",
+      "sha256": "c603420968d44b786fe8972a528f74229ce8c7b9c739a4dcbe82d32be9ae87ec"
+    },
+    {
+      "src": "/papers/nids-fgpa/e053.png",
+      "width": 41,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e053",
+      "sha256": "153f66cc1048ba4e2b44935d5262e9efb9c94870298f1bf2d8d1e2ad8d347c5d"
+    },
+    {
+      "src": "/papers/nids-fgpa/e054.png",
+      "width": 33,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e054",
+      "sha256": "28b2b7385cc7fe5a2f53b16d292be2e7b5943bc08392079e6e40b99c3af7e731"
+    },
+    {
+      "src": "/papers/nids-fgpa/e055.png",
+      "width": 33,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e055",
+      "sha256": "9c7048f6887565a41bd9a73ba5e46d5fdf7e3d2109642e4caec5a8aabc6c20de"
+    },
+    {
+      "src": "/papers/nids-fgpa/e056.png",
+      "width": 33,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e056",
+      "sha256": "4c2611f346b5f909476b16488e65b9c267902aad675e39eec60de3e0e42baa95"
+    },
+    {
+      "src": "/papers/nids-fgpa/e057.png",
+      "width": 21,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e057",
+      "sha256": "eb1863cc81bd528e56bec45bb2c902c69bd47ba8accf7cd2f272e0eb2a4043a9"
+    },
+    {
+      "src": "/papers/nids-fgpa/e058.png",
+      "width": 29,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e058",
+      "sha256": "a353d6e51e47b93211880f8ec87a1e6343b9520ae574942dd2c8d145ece34b7e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e059.png",
+      "width": 15,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e059",
+      "sha256": "5444c7df357b40aedbba74456681f61734af2c883e2ff51081be900322043311"
+    },
+    {
+      "src": "/papers/nids-fgpa/e060.png",
+      "width": 15,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e060",
+      "sha256": "6d4810bcc82463447acd520d1b86e3823d45114a860002b91ec516ed117ea0e2"
+    },
+    {
+      "src": "/papers/nids-fgpa/e061.png",
+      "width": 29,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e061",
+      "sha256": "e434699d7738563328c880d43a18142b1a8e8c22e67bc34660370cb70f242a2d"
+    },
+    {
+      "src": "/papers/nids-fgpa/e062.png",
+      "width": 41,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e062",
+      "sha256": "f218c361d9d972db2d8ae6ead70bfe9b8f489d5f30a2aaf5ffc2a757fff873b9"
+    },
+    {
+      "src": "/papers/nids-fgpa/e063.png",
+      "width": 10,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e063",
+      "sha256": "9e3e5d2602d9fb2db7b04b70a7f7f37fe2ee2f9faea980d2531a6f776ff9322e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e064.png",
+      "width": 10,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e064",
+      "sha256": "d57b036747a919c098144b5db2e9ce704af129912e499fa12d77dfbefe13d8e5"
+    },
+    {
+      "src": "/papers/nids-fgpa/e065.png",
+      "width": 10,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e065",
+      "sha256": "b2199171bf45692560104a650f9b358ab1bf9962a665a787b6cddf976a411bfb"
+    },
+    {
+      "src": "/papers/nids-fgpa/e066.png",
+      "width": 116,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e066",
+      "sha256": "839b3551cbc4dbdb490af7aa948e5cc664b972248056d4fe738b54a0038fdc01"
+    },
+    {
+      "src": "/papers/nids-fgpa/e067.png",
+      "width": 130,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e067",
+      "sha256": "48aa780343b4cfcbe53c827bd151902f52bfca20c06441b6d608ea158bc7a2b7"
+    },
+    {
+      "src": "/papers/nids-fgpa/e068.png",
+      "width": 17,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e068",
+      "sha256": "79ff9934ed62cc4adddd13d4f22bd278772a036b735be7180b9c2837cdb67640"
+    },
+    {
+      "src": "/papers/nids-fgpa/e069.png",
+      "width": 95,
+      "height": 40,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e069",
+      "sha256": "c9e4703e31af1df4506798e8655fa5a742f53c3d5bf142e427d9b46a2ba96258"
+    },
+    {
+      "src": "/papers/nids-fgpa/e070.png",
+      "width": 15,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e070",
+      "sha256": "934ba1018a0d1f8a26ad06ae620b19878fbdeb132d3f11f5606ffcccbcbebd25"
+    },
+    {
+      "src": "/papers/nids-fgpa/e071.png",
+      "width": 16,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e071",
+      "sha256": "cd54d251350bb50e3df5751fce0ffdac06c170ab3081d3a54791662e814741a5"
+    },
+    {
+      "src": "/papers/nids-fgpa/e072.png",
+      "width": 188,
+      "height": 42,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e072",
+      "sha256": "6b5266f8861aea9e347841125407a99dcc8ac923d68a9aa54793f224c8bb762f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e073.png",
+      "width": 16,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e073",
+      "sha256": "6cfe1eda97b59cc4f78ff8f614fa81fe60da29e1588a497f13050d8c0dc9167c"
+    },
+    {
+      "src": "/papers/nids-fgpa/e074.png",
+      "width": 17,
+      "height": 22,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e074",
+      "sha256": "a80a0a6ec1075e2f7b6bc42ca5ce5008957eb7c9ae099ab7bbaa9b97fe68c304"
+    },
+    {
+      "src": "/papers/nids-fgpa/e075.png",
+      "width": 91,
+      "height": 42,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e075",
+      "sha256": "302bb112876c358e1842b7987743a2061d8cd740aad513bf07967f8b839690a1"
+    },
+    {
+      "src": "/papers/nids-fgpa/e076.png",
+      "width": 17,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e076",
+      "sha256": "0a02633835d89d620a33c4a84471629ee8341ad58c2d96e474171458ec949cf6"
+    },
+    {
+      "src": "/papers/nids-fgpa/e077.png",
+      "width": 17,
+      "height": 22,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e077",
+      "sha256": "b06a80c80189f9582e582187483f41d1ef05bd4d974687e04a2e734c2ff3fd4a"
+    },
+    {
+      "src": "/papers/nids-fgpa/e078.png",
+      "width": 49,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e078",
+      "sha256": "665f6872d0c110218e7715e847a8f40115a974b49d38331b55340e01e711ad9b"
+    },
+    {
+      "src": "/papers/nids-fgpa/e079.png",
+      "width": 29,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e079",
+      "sha256": "e0f6a88a8615cda75a07770961d54a1f16d3fc4fadc21947ece0007ada1ff2e5"
+    },
+    {
+      "src": "/papers/nids-fgpa/e080.png",
+      "width": 29,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e080",
+      "sha256": "6ea9808ec79c670d1b93d3af76090f104e667c8da30104ce675ff862dda1b26e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e081.png",
+      "width": 173,
+      "height": 44,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e081",
+      "sha256": "d01bfbe6b4607913d8102347a9e485db4c120bcca331198e0af1e9ba1f656459"
+    },
+    {
+      "src": "/papers/nids-fgpa/e082.png",
+      "width": 180,
+      "height": 35,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e082",
+      "sha256": "95c193a7e5280fbbbd94edddcea6bdc898f384dc1d5b265c962aa5b75d817d3f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e083.png",
+      "width": 222,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e083",
+      "sha256": "9532acc2e83b7c568947e85126dc3c56b26d0f97039f177d721d20579af48636"
+    },
+    {
+      "src": "/papers/nids-fgpa/e084.png",
+      "width": 17,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e084",
+      "sha256": "f89c8ab484953eb202844a22361210a0c215c20a62c9f215a25d32077a0567a8"
+    },
+    {
+      "src": "/papers/nids-fgpa/e085.png",
+      "width": 17,
+      "height": 15,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e085",
+      "sha256": "c5a1a2b393a0cff07a685ffdc9d329ec384e26bb3e662df48753004d8d61d5b8"
+    },
+    {
+      "src": "/papers/nids-fgpa/e086.png",
+      "width": 17,
+      "height": 22,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e086",
+      "sha256": "322d3509b4f25712c5143961137e943c0bd26d857213695d002af251c3d87ad9"
+    },
+    {
+      "src": "/papers/nids-fgpa/e087.png",
+      "width": 29,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e087",
+      "sha256": "8148663481d08644e78382c386c74fbcf24a101320da4e6f4b05dd181afd0dc7"
+    },
+    {
+      "src": "/papers/nids-fgpa/e088.png",
+      "width": 138,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e088",
+      "sha256": "d213dda0d25103bfed8303aecdd33410f1106a8b3a5df391f848c06123692488"
+    },
+    {
+      "src": "/papers/nids-fgpa/e089.png",
+      "width": 29,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e089",
+      "sha256": "6243cbe8449c0daac6d912a8ddce6a14cd2f08dab1616443d0afb3e28da004cb"
+    },
+    {
+      "src": "/papers/nids-fgpa/e090.png",
+      "width": 143,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e090",
+      "sha256": "e3e0310dc3dfe3d62d7846bf9792b859e3fa5fe68fd1c1a14c90e4c74e90768e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e091.png",
+      "width": 227,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e091",
+      "sha256": "cbaf2299b552c94dae98ce58a30dee7b29db2bc2375c5f353a987f0d1dab9745"
+    },
+    {
+      "src": "/papers/nids-fgpa/e092.png",
+      "width": 19,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e092",
+      "sha256": "739f95bbe4680a64d2b3d3dbbf29cd8968febf9bcdf934b958c888f969d5470d"
+    },
+    {
+      "src": "/papers/nids-fgpa/e093.png",
+      "width": 33,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e093",
+      "sha256": "fbf19ea6996f18f32530e1dd678816368b20f7236a33a5a9253c3f42b36d0c8c"
+    },
+    {
+      "src": "/papers/nids-fgpa/e094.png",
+      "width": 29,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e094",
+      "sha256": "5f3588b3f5bc020652e35f0b1ccee017e0ee89fef1a038de1cc8636f3f08f6c4"
+    },
+    {
+      "src": "/papers/nids-fgpa/e095.png",
+      "width": 15,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e095",
+      "sha256": "0351de428782420912e0c07dceaccb0d33dbb8d254e6b65c7774615cb9504a0f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e096.png",
+      "width": 97,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e096",
+      "sha256": "a1293ade8faeb7c85b8e7c3f3832efddfdc7d09c38107699c531d89dbef470f7"
+    },
+    {
+      "src": "/papers/nids-fgpa/e097.png",
+      "width": 59,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e097",
+      "sha256": "a5d496538d1f559025fe37b0587190d3be1840a9a1fc87ef4c47a870d6e7c674"
+    },
+    {
+      "src": "/papers/nids-fgpa/e098.png",
+      "width": 29,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e098",
+      "sha256": "1387c04ce67ebb1786a08b69ac6509d141d47169d94c364fa301c90522f0d2b7"
+    },
+    {
+      "src": "/papers/nids-fgpa/e099.png",
+      "width": 15,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e099",
+      "sha256": "70d70c63905409d3f63acd4d0dcf02a820573157d5fc4083800416eaad678e7f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e100.png",
+      "width": 41,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e100",
+      "sha256": "920e496fa91e87d141bfe98b5b7360d52906a0afe069095bf7713d4c3f91f61f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e101.png",
+      "width": 53,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e101",
+      "sha256": "e1c6021517e2ce10b73d6b3935eb1f9c4095b300d376db6e2200b9181fa9afdb"
+    },
+    {
+      "src": "/papers/nids-fgpa/e102.png",
+      "width": 301,
+      "height": 108,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e102",
+      "sha256": "897f97bcd9f633c1d805b12fc92f63b1dc9d29fd8adef5253e088dcfd8d82601"
+    },
+    {
+      "src": "/papers/nids-fgpa/e103.png",
+      "width": 15,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e103",
+      "sha256": "df50768069f1e86f8ee31fdaf0edf48e0bd277650a88dcf3335aeb4ae8bad34f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e104.png",
+      "width": 29,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e104",
+      "sha256": "d3af4df4e660bb2871887dd8c3923ffda0659b981735ec0a173c0562d6ccbeb1"
+    },
+    {
+      "src": "/papers/nids-fgpa/e105.png",
+      "width": 54,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e105",
+      "sha256": "286bbc7de966d2ac0e7b82b0bfd855605641cd49b2b58b5e55026c3d4fe5b77e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e106.png",
+      "width": 249,
+      "height": 53,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e106",
+      "sha256": "2a323d86b5c5ba1baa7e3201a2153b19351c858537917f6e6182bc7d947eb93b"
+    },
+    {
+      "src": "/papers/nids-fgpa/e107.png",
+      "width": 49,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e107",
+      "sha256": "9f2c11c881acd8f88d9a0ebaf54c6449730227f9ae594da58159e74c0087640e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e108.png",
+      "width": 157,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e108",
+      "sha256": "1eece18ae5ee2131abc091b0fd1684eb51e6472b3deec27913975b753f36cee6"
+    },
+    {
+      "src": "/papers/nids-fgpa/e109.png",
+      "width": 17,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e109",
+      "sha256": "68c1ce974f1661872a0101abd15a85b6ff05135601104b5d845e5568c5955524"
+    },
+    {
+      "src": "/papers/nids-fgpa/e110.png",
+      "width": 16,
+      "height": 22,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e110",
+      "sha256": "b884aaa152f5f0d9eb3c54d90b461fdf979d916369e9a49c55fb3ae35aa60198"
+    },
+    {
+      "src": "/papers/nids-fgpa/e111.png",
+      "width": 49,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e111",
+      "sha256": "90746d54029b91473dd51da588f551087e50fb84227a764b9f86d0607eea912f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e112.png",
+      "width": 49,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e112",
+      "sha256": "6e63e34739723909e0ade107543e1a2417a41242e2b0dd87c4cecaeef3c3351b"
+    },
+    {
+      "src": "/papers/nids-fgpa/e113.png",
+      "width": 54,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e113",
+      "sha256": "e270e9e296c708687f5c150df2571d81f915993eb42ca1d9e8704efb243c32e8"
+    },
+    {
+      "src": "/papers/nids-fgpa/e114.png",
+      "width": 252,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e114",
+      "sha256": "0b048012bfe7523448fc0d3dc9d4842569614a2b6dab63e6f259730630a9666f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e115.png",
+      "width": 63,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e115",
+      "sha256": "e41243de72ecf8bc415cdebbadfe5996a214b1f311b7281c75a7b8c74f0c4ecd"
+    },
+    {
+      "src": "/papers/nids-fgpa/e116.png",
+      "width": 304,
+      "height": 93,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e116",
+      "sha256": "11bde7ecca395fe6fe1bd5a28e143e785fe6367ad9cd0d5930536abae6877a48"
+    },
+    {
+      "src": "/papers/nids-fgpa/e117.png",
+      "width": 313,
+      "height": 125,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e117",
+      "sha256": "2f4f7e54bd98519bf97b6732fe83ba4dd93e6293267c1e2b9c4fbc4cf3437b8e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e118.png",
+      "width": 53,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e118",
+      "sha256": "c9011355cd9b933c21878450f68244c63bcc1c868e5b311d051d4bd3640ba894"
+    },
+    {
+      "src": "/papers/nids-fgpa/e119.png",
+      "width": 275,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e119",
+      "sha256": "9470fb1f9185057df19257a9315c755d6e09c447ee55c29bef554fd876542a8f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e120.png",
+      "width": 17,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e120",
+      "sha256": "e48924c9cfa3fea7b111b5e425a7f6cf7d8bc72d35c75afb29a3c4107e2d395e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e121.png",
+      "width": 16,
+      "height": 22,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e121",
+      "sha256": "2cee278c3fa1af5f03257b91e9194f2f0d31a3a3e9a4b8064aa95e60b410a33e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e122.png",
+      "width": 49,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e122",
+      "sha256": "3204e46618bcd32550deff12d7a183515ad2a3dfe523bc0ba7fb0f92b5fb16f7"
+    },
+    {
+      "src": "/papers/nids-fgpa/e123.png",
+      "width": 252,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e123",
+      "sha256": "d6617aebf39bf1eb382ac5ce4c9d46d4d51e64dd06de5bf8e4b4183781e04cc5"
+    },
+    {
+      "src": "/papers/nids-fgpa/e124.png",
+      "width": 53,
+      "height": 18,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e124",
+      "sha256": "a6ac1c8c792fc9c8a0859b9e3b7d07e801d3b9466127e84e8a9b1b9c5c1951d8"
+    },
+    {
+      "src": "/papers/nids-fgpa/e125.png",
+      "width": 158,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e125",
+      "sha256": "50ba4e2dc9b7e55457e40acfab635017f0398e6cb49ce211571e3fc109688c32"
+    },
+    {
+      "src": "/papers/nids-fgpa/e126.png",
+      "width": 265,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e126",
+      "sha256": "a65925d72fedd5f03dab865b5d6da9c3842e0bad0b957d51e69792f5e134615b"
+    },
+    {
+      "src": "/papers/nids-fgpa/e127.png",
+      "width": 203,
+      "height": 21,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e127",
+      "sha256": "e3ea947f551a8a5f6f0a60d776155a2aa9abd99e8be0b870b182ad046e266f4f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e128.png",
+      "width": 29,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e128",
+      "sha256": "288bf75f7f6454b9493c335d02d9c051d7660a376bb9d279fb78b8584c1c6a99"
+    },
+    {
+      "src": "/papers/nids-fgpa/e129.png",
+      "width": 15,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e129",
+      "sha256": "3cf5580b3c3e84e20154597ec5e7e35ce6bfa374929731cd322474daf5b6e14f"
+    },
+    {
+      "src": "/papers/nids-fgpa/e130.png",
+      "width": 20,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e130",
+      "sha256": "48f14aa41e4a46f3ede0e3f28e18e1f236e25c656d7f0a2992aeb0a530acf6fc"
+    },
+    {
+      "src": "/papers/nids-fgpa/e131.png",
+      "width": 20,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e131",
+      "sha256": "5fbd9bc64efe47156021312e7c12aff269df521addb9a7851c79ccae82d4a5fb"
+    },
+    {
+      "src": "/papers/nids-fgpa/e132.png",
+      "width": 264,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e132",
+      "sha256": "f54a08968d057b63551b004b45847910f53680caab88772a60bf446d13d9537e"
+    },
+    {
+      "src": "/papers/nids-fgpa/e133.png",
+      "width": 54,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e133",
+      "sha256": "21f29c6bd167cd9bb9b865dd1c978d91723815748782787f87363c20e7d0e486"
+    },
+    {
+      "src": "/papers/nids-fgpa/e134.png",
+      "width": 15,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e134",
+      "sha256": "861fb35340fbbc7132fdf112b43a009008b05e81f7322be2b1c433d81d6b0de1"
+    },
+    {
+      "src": "/papers/nids-fgpa/e135.png",
+      "width": 74,
+      "height": 22,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e135",
+      "sha256": "36828f3232afa35e540b1b6d6202ed6df5df276fa62a95b10ee6d27b58acf6d6"
+    },
+    {
+      "src": "/papers/nids-fgpa/e136.png",
+      "width": 10,
+      "height": 20,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e136",
+      "sha256": "6eae85280f5e8db3d7dc4e370122a51bbdef4f15b2bcb5a860bb054d2d7cbc59"
+    },
+    {
+      "src": "/papers/nids-fgpa/e137.png",
+      "width": 187,
+      "height": 36,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e137",
+      "sha256": "1e281b18d4ed2b537768b70a67a3b2de37a2c86ced43f3ef4cde016f78d25922"
+    },
+    {
+      "src": "/papers/nids-fgpa/e138.png",
+      "width": 101,
+      "height": 36,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e138",
+      "sha256": "882a500bb0febb41c973b03cd6d8fd2bc503697685ac093feb3df79700c51adb"
+    },
+    {
+      "src": "/papers/nids-fgpa/e139.png",
+      "width": 116,
+      "height": 36,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e139",
+      "sha256": "491e07da70faccb4ec8d037a7be72bc1e486fc00fcd40454a095fad807f85cf4"
+    },
+    {
+      "src": "/papers/nids-fgpa/e140.png",
+      "width": 104,
+      "height": 36,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e140",
+      "sha256": "5a8afc983be3375962011d1828054fb6ea7a0d2da0e91bc4528ade8fb5d3f24c"
+    },
+    {
+      "src": "/papers/nids-fgpa/e141.png",
+      "width": 37,
+      "height": 19,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e141",
+      "sha256": "499f67c67f25c787d40fccb638ffcf043de7df0e151b86d6168c7ec3ecaad2d7"
+    },
+    {
+      "src": "/papers/nids-fgpa/e142.png",
+      "width": 117,
+      "height": 45,
+      "url": "https://journals.plos.org/plosone/article/file?type=thumbnail&id=10.1371/journal.pone.0308639.e142",
+      "sha256": "67d8928e044ba760ae39215d25eb86473209cb6d28ebb3b142f8168437fb0f0f"
+    },
+    {
+      "src": "/papers/nids-fgpa/g001.png",
+      "width": 2013,
+      "height": 1411,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g001",
+      "sha256": "967d05fd0324f82f33f204ac4532a67fc6960945124954f86ab58c9f82fa64c7"
+    },
+    {
+      "src": "/papers/nids-fgpa/g002.png",
+      "width": 2018,
+      "height": 410,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g002",
+      "sha256": "c2c0d1bd0a26ddc9df3ade26a276843ff527cbc7e4b408e27af3dd516ad03d6c"
+    },
+    {
+      "src": "/papers/nids-fgpa/g003.png",
+      "width": 3318,
+      "height": 3233,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g003",
+      "sha256": "7a8df1509eb9bb899dfa1c182bb20800623f766e05cafe16f7451f12b510b729"
+    },
+    {
+      "src": "/papers/nids-fgpa/g004.png",
+      "width": 2013,
+      "height": 521,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g004",
+      "sha256": "62e91ee02939180a71e0edf6ad58a303e475fd2f35c0376faaeaef8f41ed5650"
+    },
+    {
+      "src": "/papers/nids-fgpa/g005.png",
+      "width": 4000,
+      "height": 1365,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g005",
+      "sha256": "84516d22fbaf3a78490b74261e33c75ff186ba9868d93e694f9823292a26c980"
+    },
+    {
+      "src": "/papers/nids-fgpa/g006.png",
+      "width": 2013,
+      "height": 1700,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g006",
+      "sha256": "6e455967fd623bfec071cb4ad7b950ec3923e442d5487e2d53aa1657dc3c6d5e"
+    },
+    {
+      "src": "/papers/nids-fgpa/g007.png",
+      "width": 2013,
+      "height": 949,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g007",
+      "sha256": "0b546f615469879377de09c82e89d1f00b7003fccff5b0b5d57e9731c822dc35"
+    },
+    {
+      "src": "/papers/nids-fgpa/g008.png",
+      "width": 1519,
+      "height": 1160,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g008",
+      "sha256": "76fd4277fbb40bdb85912d1cd5d22e1b9d4303e060cace24d1fdf023485a63a4"
+    },
+    {
+      "src": "/papers/nids-fgpa/g009.png",
+      "width": 1518,
+      "height": 749,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g009",
+      "sha256": "8debcbfdce04fb717e0589c3b584357b42636fc2aaf164669c7de98d68cc1b1c"
+    },
+    {
+      "src": "/papers/nids-fgpa/g010.png",
+      "width": 2013,
+      "height": 1099,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.g010",
+      "sha256": "957980417ae3a7b2027f417c150f1aa47adf45c3e16312da45f7cced860247aa"
+    },
+    {
+      "src": "/papers/nids-fgpa/t001.png",
+      "width": 4510,
+      "height": 649,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.t001",
+      "sha256": "573b733a2f971c1eef2984f2a19362d744b6b818f675d6c401c92f9a53fe1dd8"
+    },
+    {
+      "src": "/papers/nids-fgpa/t002.png",
+      "width": 3144,
+      "height": 1794,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.t002",
+      "sha256": "274278a9f05c5189f423783a5dca8a213084f46d2b3aaed47a9b6e795ffc3736"
+    },
+    {
+      "src": "/papers/nids-fgpa/t003.png",
+      "width": 3144,
+      "height": 857,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.t003",
+      "sha256": "9a364c05d4286a7a3bcfd5d6ef6af5927e05e6da9f8126fbc38f4c8d8c03de57"
+    },
+    {
+      "src": "/papers/nids-fgpa/t004.png",
+      "width": 3144,
+      "height": 1071,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.t004",
+      "sha256": "4b90d0a02b57f3e037b420cc2ad7e038b4c85b15a8c0744e56658f3bf84c8224"
+    },
+    {
+      "src": "/papers/nids-fgpa/t005.png",
+      "width": 3144,
+      "height": 440,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.t005",
+      "sha256": "5e300100d92a8dad2c9d7ff8b85d1e0e2c94151ba301a6b70bb901f25c4cab5a"
+    },
+    {
+      "src": "/papers/nids-fgpa/t006.png",
+      "width": 4510,
+      "height": 648,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.t006",
+      "sha256": "372d5e113c75bd8e9bf0a4cdf66f02568dbf4c2716ea37f099105ff49d2195ce"
+    },
+    {
+      "src": "/papers/nids-fgpa/t007.png",
+      "width": 4510,
+      "height": 649,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.t007",
+      "sha256": "cd38011d22490e4ced6c19c7e6842fadb9224a8ec46b1f0847bad88de882a90f"
+    },
+    {
+      "src": "/papers/nids-fgpa/t008.png",
+      "width": 4510,
+      "height": 1273,
+      "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=info:doi/10.1371/journal.pone.0308639.t008",
+      "sha256": "ce53ebecf65b30610446fadfd60c1e3df785edf2dbe14cf845c5c245a3cd3027"
+    }
+  ],
+  "blockCount": 301,
+  "references": 43
+}

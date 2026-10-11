@@ -14,7 +14,9 @@ const compiled = ts.transpileModule(
 const { paginateBook, paperBookPages, bookMetrics } = await import(
   `data:text/javascript;base64,${Buffer.from(compiled).toString("base64")}`
 );
-const paper = JSON.parse(await readFile("src/data/papers.json", "utf8"))[0];
+const paper = JSON.parse(await readFile("src/data/papers.json", "utf8")).find(
+  (p) => p.draft,
+);
 const body = await readFile("public/papers/paper001.md", "utf8");
 const pages = paperBookPages(paper, body);
 assert.equal(pages.length % 2, 0);
@@ -30,7 +32,7 @@ for (const page of pages) {
         [...block.text].reduce(
           (sum, c) => sum + (c.charCodeAt(0) < 128 ? 4 : 8),
           0,
-        ) <= 104,
+        ) <= bookMetrics.lineWidth,
       );
 }
 assert.equal(pages.flat().filter((b) => b.kind === "image").length, 3);

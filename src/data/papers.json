@@ -1,5 +1,24 @@
 [
   {
+    "id": "nids-fgpa",
+    "title": "NIDS-FGPA: A federated learning network intrusion detection algorithm based on secure aggregation of gradient similarity models",
+    "author": "JiaMing Wang, Kai Yang, MinJing Li",
+    "year": "2024",
+    "description": "联邦学习、同态加密与工业物联网入侵检测 · 英文原文",
+    "category": "AI / Cyber Security",
+    "keywords": ["Federated Learning", "Intrusion Detection", "IIoT"],
+    "cover": "/assets/inventory/enchanted-book.png",
+    "content": "/papers/nids-fgpa/document.json",
+    "abstract": "With the rapid development of Industrial Internet of Things (IIoT), network security issues have become increasingly severe, making intrusion detection one of the key technologies for ensuring IIoT security. However, existing intrusion detection systems face challenges such as incomplete data features, missing labels, parameter leakage, and high communication overhead. To address these challenges, this paper proposes a federated learning-based intrusion detection algorithm (NIDS-FGPA) that utilizes gradient similarity model aggregation. This algorithm leverages a federated learning architecture and combines it with Paillier homomorphic encryption technology to ensure the security of the training process. Additionally, the paper introduces the Gradient Similarity Model Aggregation (GSA) algorithm, which dynamically selects and weights updates from different models to reduce communication overhead. Finally, the paper designs a deep learning model based on two-dimensional convolutional neural networks and bidirectional gated recurrent units (2DCNN-BIGRU) to handle incomplete data features and missing labels in network traffic data. Experimental validation on the Edge-IIoTset and CIC IoT 2023 datasets achieves accuracies of 94.5% and 99.2%, respectively. The results demonstrate that the NIDS-FGPA model possesses the ability to identify and capture complex network attacks, significantly enhancing the overall security of the network.",
+    "draft": false,
+    "format": "document",
+    "sourceUrl": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308639",
+    "doi": "10.1371/journal.pone.0308639",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "language": "English"
+  },
+  {
     "id": "001",
     "title": "基于扩散方程的时间比值法研究",
     "author": "YTC",
@@ -7,7 +26,7 @@
     "description": "基于扩散方程解析解，研究时间比值法在模型估算中的应用。",
     "category": "Mathematical Modeling",
     "keywords": ["扩散方程", "时间比值法", "理论估算"],
-    "cover": "/assets/inventory/written-book.png",
+    "cover": "/assets/inventory/enchanted-book.png",
     "content": "/papers/paper001.md",
     "abstract": "本文围绕扩散方程解析解中的时间比值法展开研究，结合理论推导与数学建模，对相关参数进行估算。",
     "draft": true

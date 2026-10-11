@@ -39,6 +39,8 @@ export function MineResearchPage({ back }: { back: () => void }) {
   }, []);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
+      if (e.target instanceof Element && e.target.closest(".paper-image-zoom"))
+        return;
       if (e.key === "Escape") {
         e.stopImmediatePropagation();
         if (paper) closeBook();
@@ -48,10 +50,18 @@ export function MineResearchPage({ back }: { back: () => void }) {
     window.addEventListener("keydown", key, true);
     return () => window.removeEventListener("keydown", key, true);
   }, [paper, back]);
-  const scale = Math.max(
+  const catalogScale = Math.max(
     1,
     Math.min(5, Math.floor(Math.min(size.width / 410, size.height / 240))),
   );
+  const scale = paper
+    ? Math.max(
+        1,
+        Math.floor(
+          Math.min((size.width * 0.94) / 380, (size.height * 0.94) / 228) * 4,
+        ) / 4,
+      )
+    : catalogScale;
   return (
     <main
       className={`research-screen ${paper ? "reading-book" : ""}`}

@@ -50,3 +50,9 @@ React、Vite、Three.js、TypeScript、Playwright 和 Prettier 通过 npm 安装
 中文来自本地资源对象 `minecraft/font/unifont.zip`，SHA-1 `666999116c467f10622db1527a06ddc0a6efad2a`，只读取指定对象文件；提取当前页面的字形，图集与元数据仍保留本地。没有以读取客户端许可推定整个字体包或游戏纹理可以公开再分发。
 
 导入脚本与模型转换代码纳入 Git，原版资源、字形和研究类文件不纳入 Git。作者内容为用户指定占位信息，不是已经核实的个人经历。还原范围见 `PROFILE_FIDELITY.md`。
+
+## NIDS-FGPA 开放获取论文（2026-10-11）
+
+JiaMing Wang、Kai Yang、MinJing Li (2024)，PLOS ONE 19(10): e0308639。原文 https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308639 ，出版方 XML 明确链接 https://creativecommons.org/licenses/by/4.0/ 。正文、图表及公式依据 CC BY 4.0 导入；保留作者、出处、许可链接与改动说明，未暗示作者或出版方认可本站。
+
+`public/papers/nids-fgpa/` 中的结构化正文、160 个图像、署名说明与来源/哈希记录可以随本地代码检查点提交。改变的是 JATS/HTML 布局到像素双页的排版，未翻译原文；原图字节未修改。原始 XML 忽略。附加数据集、补充材料没有采集。本许可只适用于上述论文，不适用于游戏素材；附魔书图标依旧为用户授权读取的本地原版游戏纹理，被 Git 忽略。

@@ -21,7 +21,7 @@ export function PaperList({
               open(paper);
             }}
           >
-            <img src={paper.cover} alt="成书" />
+            <img src={paper.cover} alt="附魔书" />
             <div>
               <BlogText text={paper.title} width={280} />
               <InventoryText

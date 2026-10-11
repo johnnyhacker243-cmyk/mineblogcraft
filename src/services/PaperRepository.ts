@@ -6,7 +6,11 @@ export interface PaperRepository {
 }
 export class StaticPaperRepository implements PaperRepository {
   async getPapers() {
-    return data.map((paper) => ({ ...paper, keywords: [...paper.keywords] }));
+    return data.map((paper) => ({
+      ...paper,
+      keywords: [...paper.keywords],
+      format: paper.format === "document" ? ("document" as const) : undefined,
+    }));
   }
   async getContent(paper: ResearchPaper, signal?: AbortSignal) {
     const response = await fetch(paper.content, { signal });

@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-11T06:30:01.110Z",
-  "pages": 14,
+  "date": "2026-10-11T06:45:49.148Z",
+  "pages": 8,
   "images": 3,
   "dimensions": [
     {
@@ -8,32 +8,32 @@
       "height": 768,
       "scale": "3",
       "spread": {
-        "x": 245,
-        "y": 40.5,
-        "width": 876,
+        "x": 113,
+        "y": 52.5,
+        "width": 1140,
         "height": 540
       }
     },
     {
       "width": 1920,
       "height": 1080,
-      "scale": "4",
+      "scale": "4.25",
       "spread": {
-        "x": 376,
-        "y": 82,
-        "width": 1168,
-        "height": 720
+        "x": 152.5,
+        "y": 70.375,
+        "width": 1615,
+        "height": 765
       }
     },
     {
       "width": 2560,
       "height": 1440,
-      "scale": "5",
+      "scale": "5.75",
       "spread": {
-        "x": 550,
-        "y": 147.5,
-        "width": 1460,
-        "height": 900
+        "x": 187.5,
+        "y": 84.625,
+        "width": 2185,
+        "height": 1035
       }
     }
   ],

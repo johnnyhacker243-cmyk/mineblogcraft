@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import type { ResearchPaper, BookPage } from "../../models/ResearchPaper";
 import { paperRepository } from "../../services/PaperRepository";
+import { parsePaperDocument } from "../../utils/paper-document";
+import { documentBookPages } from "../../utils/document-pagination";
 import { paperBookPages } from "../../utils/book-pagination";
 import { PageRenderer } from "./PageRenderer";
 import { BookAnimation } from "./BookAnimation";
@@ -22,6 +24,7 @@ export function PaperBookViewer({
 }) {
   const [pages, setPages] = useState<BookPage[]>([]);
   const [spread, setSpread] = useState(0);
+  const [jump, setJump] = useState("");
   const [phase, setPhase] = useState<BookPhase>("idle");
   const opened = phase === "reading";
   useEffect(() => {
@@ -62,13 +65,23 @@ export function PaperBookViewer({
       media.removeEventListener("change", reduce);
     };
   }, [onReading]);
+  const [zoomImage, setZoomImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
   const [error, setError] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
     paperRepository
       .getContent(paper, controller.signal)
-      .then((text) => {
-        if (!controller.signal.aborted) setPages(paperBookPages(paper, text));
+      .then(async (text) => {
+        await document.fonts.load("20px Monocraft");
+        if (!controller.signal.aborted)
+          setPages(
+            paper.format === "document"
+              ? documentBookPages(paper, parsePaperDocument(text))
+              : paperBookPages(paper, text),
+          );
       })
       .catch(() => {
         if (!controller.signal.aborted) setError(true);
@@ -87,7 +100,11 @@ export function PaperBookViewer({
   };
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement) return;
+      if (
+        e.target instanceof HTMLInputElement ||
+        (e.target instanceof Element && e.target.closest(".paper-image-zoom"))
+      )
+        return;
       if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
         e.preventDefault();
         turn(e.key === "ArrowRight" ? 1 : -1);
@@ -118,12 +135,14 @@ export function PaperBookViewer({
               <PageRenderer
                 page={pages[spread * 2] ?? []}
                 number={spread * 2 + 1}
+                onZoom={setZoomImage}
               />
             </div>
             <div className="book-page-wing">
               <PageRenderer
                 page={pages[spread * 2 + 1] ?? []}
                 number={spread * 2 + 2}
+                onZoom={setZoomImage}
               />
             </div>
           </div>
@@ -154,6 +173,66 @@ export function PaperBookViewer({
       {error && (
         <div role="alert">
           <InventoryText text="正文加载失败，请返回后重试" />
+        </div>
+      )}
+      {opened && (
+        <form
+          className="book-page-jump"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const page = Number(jump);
+            if (Number.isInteger(page) && page >= 1 && page <= pages.length) {
+              setSpread(Math.floor((page - 1) / 2));
+              setJump("");
+              audioManager.click();
+            }
+          }}
+        >
+          <input
+            aria-label="跳转页码"
+            type="number"
+            min="1"
+            max={pages.length}
+            placeholder="Page"
+            value={jump}
+            onChange={(e) => setJump(e.target.value)}
+          />
+          <button type="submit">Go</button>
+        </form>
+      )}
+      {paper.sourceUrl && opened && (
+        <div className="paper-source">
+          <a href={paper.sourceUrl} target="_blank" rel="noreferrer">
+            Original / DOI
+          </a>
+          <span> · </span>
+          <a href={paper.licenseUrl} target="_blank" rel="noreferrer">
+            {paper.license}
+          </a>
+        </div>
+      )}
+      {zoomImage && (
+        <div
+          className="paper-image-zoom"
+          role="dialog"
+          aria-modal="true"
+          aria-label="原图查看"
+          onKeyDown={(e) => {
+            if (e.key === "Escape") {
+              e.stopPropagation();
+              setZoomImage(null);
+            }
+          }}
+          onClick={() => setZoomImage(null)}
+        >
+          <button
+            autoFocus
+            onClick={() => setZoomImage(null)}
+            aria-label="关闭原图"
+          >
+            Back to book
+          </button>
+          <img src={zoomImage.src} alt={zoomImage.alt} />
         </div>
       )}
       <MinecraftButton

@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-11T06:53:45.484Z",
+  "paper": "NIDS-FGPA: A federated learning network intrusion detection algorithm based on secure aggregation of gradient similarity models",
+  "doi": "10.1371/journal.pone.0308639",
+  "pages": 154,
+  "blocks": 301,
+  "assetsVerified": 160,
+  "assetsDisplayed": 159,
+  "dimensions": [
+    {
+      "width": 1366,
+      "height": 768,
+      "book": {
+        "x": 113,
+        "y": 40.5,
+        "width": 1140,
+        "height": 540
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "book": {
+        "x": 152.5,
+        "y": 53.375,
+        "width": 1615,
+        "height": 765
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "book": {
+        "x": 187.5,
+        "y": 61.625,
+        "width": 2185,
+        "height": 1035
+      }
+    }
+  ],
+  "allSpreadsChecked": true,
+  "wordWrapping": true,
+  "figureZoom": true,
+  "errors": [],
+  "failed": []
+}
