@@ -47,6 +47,30 @@ try {
       .getByRole("button", { name: "Website Online", exact: true })
       .click();
     const after = await page.locator(".status-window").boundingBox();
+    await page.waitForTimeout(100);
+    const singleColor = await page
+      .locator(".status-panel canvas.inventory-text")
+      .evaluateAll((nodes) =>
+        nodes.every((canvas) => {
+          const pixels = canvas
+            .getContext("2d")
+            .getImageData(0, 0, canvas.width, canvas.height).data;
+          const colors = new Set();
+          for (let i = 0; i < pixels.length; i += 4)
+            if (pixels[i + 3])
+              colors.add(`${pixels[i]},${pixels[i + 1]},${pixels[i + 2]}`);
+          return colors.size === 1;
+        }),
+      );
+    assert.ok(
+      singleColor,
+      "Each detail glyph is drawn in one color without an offset shadow layer",
+    );
+    if (width === 1920)
+      await page.screenshot({
+        path: "tests/screenshots/status-website-no-shadow.png",
+      });
+
     assert.deepEqual(after, before, "Details do not resize or move frame");
     assert.equal(
       await page.getByRole("img", { name: "未接入", exact: true }).count(),
@@ -125,6 +149,7 @@ try {
         failures,
         checks: [
           "static demo disclosure",
+          "detail text has no shadow layer",
           "frame stability",
           "tooltips",
           "keyboard activation",

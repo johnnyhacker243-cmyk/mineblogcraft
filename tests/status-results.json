@@ -35,6 +35,7 @@
   "failures": [],
   "checks": [
     "static demo disclosure",
+    "detail text has no shadow layer",
     "frame stability",
     "tooltips",
     "keyboard activation",

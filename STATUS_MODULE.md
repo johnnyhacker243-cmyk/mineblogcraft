@@ -50,3 +50,7 @@ MineStatus 实际 Chromium 测试：1366×768、1920×1080、2560×1440。检查
 新增 ApiStatusRepository 实现同一个 getStatus(signal)，读取未来 /api/status，页面组件不用读取 JSON 或更改布局。实时响应应返回采集时间、数据有效期及各模块独立状态；超时/过期显示 unknown，而不能继续显示 ONLINE。部署后由可信监控服务采集健康检查和版本，前端只消费公开的汇总信息。后端、凭证、数据库和部署均不在本阶段实现。
 
 可继续优化：依照原版 BookModel 精确校准书脊/封面UV；接入真实状态后的离线和过期视觉；保持克制地增加原版附魔粒子。
+
+## 文字重影修复
+
+MineStatus 的位图文字现在显式关闭偏移阴影，同时关闭该页面继承的 CSS text-shadow。保留字体、颜色和布局；其他模块的文字阴影不受影响。浏览器回归覆盖三种桌面分辨率，并检查详情字形仅包含一种绘制颜色，确保没有第二层阴影。修复截图：tests/screenshots/status-website-no-shadow.png。

@@ -28,11 +28,11 @@ export function StatusItem({
         <img src={`/assets/inventory/enchant-level-${index}.png`} alt="" />
       </span>
       <span className="status-item-copy">
-        <InventoryText text={title} color="#fff4cf" />
-        <InventoryText text={summary} color="#dcce9e" />
+        <InventoryText shadow={false} text={title} color="#fff4cf" />
+        <InventoryText shadow={false} text={summary} color="#dcce9e" />
       </span>
       <span className="status-rune">
-        <InventoryText text="III" color="#8bfa44" />
+        <InventoryText shadow={false} text="III" color="#8bfa44" />
       </span>
       <StatusTooltip title={title} description="点击查看状态详情 · 静态示例" />
     </button>

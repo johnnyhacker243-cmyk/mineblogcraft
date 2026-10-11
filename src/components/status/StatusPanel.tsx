@@ -37,6 +37,7 @@ export function StatusPanel({
     <section className="status-panel" aria-label="状态详情" aria-live="polite">
       <header>
         <InventoryText
+          shadow={false}
           text={
             section === "website"
               ? "Website Status"
@@ -50,7 +51,7 @@ export function StatusPanel({
         />
         {section && (
           <button ref={button} aria-label="关闭状态详情" onClick={close}>
-            <InventoryText text="×" color="#404040" />
+            <InventoryText shadow={false} text="×" color="#404040" />
           </button>
         )}
       </header>
@@ -58,8 +59,9 @@ export function StatusPanel({
         <div className="status-detail-rows">
           {rows.map(([key, value]) => (
             <div key={key}>
-              <InventoryText text={key} color="#666" />
+              <InventoryText shadow={false} text={key} color="#666" />
               <InventoryText
+                shadow={false}
                 text={value}
                 color={value === "ONLINE" ? "#26762b" : "#333"}
               />
@@ -69,10 +71,12 @@ export function StatusPanel({
       ) : (
         <div className="status-guide">
           <InventoryText
+            shadow={false}
             text="选择右侧词条，查看数字世界的状态。"
             color="#444"
           />
           <InventoryText
+            shadow={false}
             text="当前为静态示例，尚未连接真实监控。"
             color="#666"
           />

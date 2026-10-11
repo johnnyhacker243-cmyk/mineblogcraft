@@ -242,3 +242,8 @@
   height: calc(16px * var(--status-scale));
   image-rendering: pixelated;
 }
+
+/* Gray inventory text is drawn once; do not add browser text shadows. */
+.status-screen {
+  text-shadow: none;
+}

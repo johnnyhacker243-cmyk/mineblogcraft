@@ -87,14 +87,22 @@ export function MineStatusPage({ back }: { back: () => void }) {
     >
       <header className="status-heading">
         <h1>
-          <InventoryText text="MineStatus" />
+          <InventoryText shadow={false} text="MineStatus" />
         </h1>
-        <InventoryText text="网站状态 · 系统附魔台" color="#ddd" />
+        <InventoryText
+          shadow={false}
+          text="网站状态 · 系统附魔台"
+          color="#ddd"
+        />
       </header>
       <div className="status-window">
         <div className="status-window-label">
-          <InventoryText text="系统附魔" color="#404040" />
-          <InventoryText text="静态示例 · 未接监控" color="#666" />
+          <InventoryText shadow={false} text="系统附魔" color="#404040" />
+          <InventoryText
+            shadow={false}
+            text="静态示例 · 未接监控"
+            color="#666"
+          />
         </div>
         <div className="status-enchant-area">
           <div className="status-left">
@@ -118,11 +126,15 @@ export function MineStatusPage({ back }: { back: () => void }) {
                 />
               </button>
             </div>
-            <InventoryText text="Core + Resource" color="#666" />
+            <InventoryText shadow={false} text="Core + Resource" color="#666" />
           </div>
           <div className="status-options">
             {error ? (
-              <InventoryText text="状态数据加载失败" color="#aa0000" />
+              <InventoryText
+                shadow={false}
+                text="状态数据加载失败"
+                color="#aa0000"
+              />
             ) : (
               entries.map(([key, title, summary], i) => (
                 <StatusItem
@@ -140,7 +152,7 @@ export function MineStatusPage({ back }: { back: () => void }) {
         {data && <StatusPanel data={data} section={section} close={close} />}
       </div>
       <MinecraftButton aria-label="返回" onClick={back}>
-        <InventoryText text="返回" />
+        <InventoryText shadow={false} text="返回" />
       </MinecraftButton>
     </main>
   );

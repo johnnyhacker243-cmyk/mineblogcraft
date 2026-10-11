@@ -8,8 +8,8 @@ export function StatusTooltip({
 }) {
   return (
     <span className="status-tooltip" role="tooltip">
-      <InventoryText text={title} color="#55ffff" />
-      <InventoryText text={description} />
+      <InventoryText shadow={false} text={title} color="#55ffff" />
+      <InventoryText shadow={false} text={description} />
     </span>
   );
 }
