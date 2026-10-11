@@ -1,10 +1,12 @@
 export const inventoryAssets = "/assets/inventory/";
 export const profile = {
-  name: "Mineblogcraft",
-  identity: "个人开发者 / 技术探索者",
-  interests: "AI · 网络安全 · 软件工程 · 数据分析",
-  purpose: "一个 Minecraft 风格个人技术博客",
-  biography: ["记录学习、实践、", "项目开发与技术探索"],
+  name: "YTC",
+  school: "JSPI",
+  interests: "AI · 网络安全 · 软件工程",
+  websiteName: "Mineblogcraft",
+  purpose: "Minecraft 风格个人技术博客",
+  biography: "这个人很神秘，什么都没有写。",
+  motto: "只有风暴才能击倒大树",
   tabs: [
     "草方块",
     "钻石镐",
@@ -19,7 +21,7 @@ export const profile = {
     "这是一个 Minecraft 风格的个人技术博客。",
     "记录学习、研究、项目开发与技术探索。",
   ],
-  // These are the placeholders supplied by the user, not verified biographical facts.
-  placeholder: true,
+  // Author information supplied by the user.
+  placeholder: false,
   layout: { width: 390, height: 238, maxScale: 5, borderTile: 64 },
 } as const;

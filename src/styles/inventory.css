@@ -132,9 +132,10 @@
 }
 .profile-panel dl > div {
   display: flex;
-  min-height: calc(13px * var(--inventory-scale));
+  min-height: calc(10px * var(--inventory-scale));
 }
 .profile-panel dt {
+  line-height: 0;
   width: calc(42px * var(--inventory-scale));
   flex-shrink: 0;
 }

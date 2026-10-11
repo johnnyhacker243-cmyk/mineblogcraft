@@ -73,6 +73,22 @@ assert.equal(
   "Only the requested return button is interactive",
 );
 assert.equal(await page.locator(".inventory-tab").count(), 8);
+assert.deepEqual(
+  await page
+    .locator(".profile-panel dd canvas")
+    .evaluateAll((nodes) =>
+      nodes.map((node) => node.getAttribute("aria-label")),
+    ),
+  [
+    "YTC",
+    "JSPI",
+    "AI · 网络安全 · 软件工程",
+    "Mineblogcraft",
+    "Minecraft 风格个人技术博客",
+    "这个人很神秘，什么都没有写。",
+    "只有风暴才能击倒大树",
+  ],
+);
 assert.equal(await page.locator(".item-slots>.inventory-slot").count(), 9);
 assert.equal(await page.locator(".text-slots,.sign-board").count(), 0);
 assert.equal(await page.locator(".item-count").count(), 8);
@@ -125,6 +141,12 @@ for (const [width, height] of [
   const statusBox = await page.locator(".player-status").boundingBox();
   const hotbarBox = await page.locator(".item-slots").boundingBox();
   const copyBox = await page.locator(".website-introduction").boundingBox();
+  const panelBox = await page.locator(".profile-panel").boundingBox();
+  const mottoBox = await page.locator(".profile-panel dd").last().boundingBox();
+  assert.ok(
+    mottoBox.y + mottoBox.height <= panelBox.y + panelBox.height,
+    "All seven author fields fit the panel",
+  );
   const captionBox = await page.locator(".player-caption").boundingBox();
   assert.ok(
     captionBox.y + captionBox.height <= copyBox.y,
