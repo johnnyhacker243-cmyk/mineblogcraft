@@ -104,7 +104,7 @@
   translate: -50% 0;
   white-space: nowrap;
 }
-footer {
+.main-footer {
   position: absolute;
   bottom: calc(1px * var(--gui-scale-y));
   left: calc(2px * var(--gui-scale-x));
@@ -118,7 +118,7 @@ footer {
   transform: scale(1.5) !important;
 }
 @media (max-width: 400px) {
-  footer {
+  .main-footer {
     transform-origin: left bottom;
     scale: 0.65;
   }

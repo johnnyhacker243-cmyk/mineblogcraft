@@ -19,6 +19,9 @@ assert hashlib.sha1(a.jar.read_bytes()).hexdigest() == '30c73b1c5da787909b2f7334
 out = Path(__file__).resolve().parents[1] / 'public/assets/inventory'
 out.mkdir(parents=True, exist_ok=True)
 mapping = {
+    'menu-list.png': 'gui/menu_list_background.png',
+    'header-separator.png': 'gui/header_separator.png',
+    'footer-separator.png': 'gui/footer_separator.png',
     'creative.png': 'gui/container/creative_inventory/tab_items.png',
     'inventory.png': 'gui/container/creative_inventory/tab_inventory.png',
     'dirt.png': 'block/dirt.png', 'grass.png': 'block/grass_block_top.png',
@@ -79,7 +82,7 @@ with zipfile.ZipFile(io.BytesIO(data)) as z:
 # Re-run after adding profile text; the source .hex never leaves the client assets.
 project = Path(__file__).resolve().parents[1]
 characters = set(chr(n) for n in range(32,256))
-for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx','src/components/MinecraftInventory.tsx']:
+for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx','src/components/MinecraftInventory.tsx','src/data/blogs.json', 'src/screens/BlogWorldSelect.tsx', 'src/components/blog/WorldSearch.tsx', 'src/components/blog/WorldCard.tsx', 'src/components/blog/BlogReader.tsx']:
     characters.update((project/source).read_text(encoding='utf-8'))
 selected = sorted(code for code in glyphs if chr(code) in characters)
 atlas = Image.new('RGBA', (256,((len(selected)+15)//16)*16))

@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-11T02:19:02.463Z",
+  "dimensions": [
+    {
+      "width": 1366,
+      "height": 768,
+      "scale": 3,
+      "list": {
+        "x": 158,
+        "y": 189,
+        "width": 1050,
+        "height": 216
+      },
+      "article": {
+        "x": 176,
+        "y": 222,
+        "width": 1014,
+        "height": 438
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "scale": 4,
+      "list": {
+        "x": 260,
+        "y": 252,
+        "width": 1400,
+        "height": 288
+      },
+      "article": {
+        "x": 284,
+        "y": 296,
+        "width": 1352,
+        "height": 640
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "scale": 4,
+      "list": {
+        "x": 580,
+        "y": 252,
+        "width": 1400,
+        "height": 288
+      },
+      "article": {
+        "x": 604,
+        "y": 296,
+        "width": 1352,
+        "height": 1000
+      }
+    }
+  ],
+  "searchFields": [
+    "title",
+    "description",
+    "tags",
+    "category"
+  ],
+  "emptySelectionDisabled": true,
+  "keyboard": true,
+  "doubleClick": true,
+  "readerScrollable": true,
+  "rss": {
+    "items": [
+      {
+        "title": "Mineblogcraft 的诞生",
+        "link": "http://127.0.0.1:5173/#blog/mineblogcraft-birth",
+        "date": "Sat, 10 Oct 2026 16:00:00 GMT"
+      }
+    ]
+  },
+  "errors": [],
+  "failed": []
+}

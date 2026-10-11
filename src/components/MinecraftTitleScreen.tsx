@@ -7,8 +7,11 @@ import { guiStyle } from "../utils/gui-style";
 import { type ScreenId } from "../config/ui-config";
 import { audioManager } from "../managers/AudioManager";
 import { MinecraftInventory } from "./MinecraftInventory";
+import { BlogWorldSelect } from "../screens/BlogWorldSelect";
 export function MinecraftTitleScreen() {
-  const [screen, setScreen] = useState<ScreenId>("main");
+  const [screen, setScreen] = useState<ScreenId>(
+    location.hash.startsWith("#blog/") ? "worlds" : "main",
+  );
   const [settings, setSettings] = useState<Settings>({
     volume: 0.5,
     dynamic: true,
@@ -52,6 +55,8 @@ export function MinecraftTitleScreen() {
           <MainMenuScreen navigate={setScreen} />
         ) : screen === "profile" ? (
           <MinecraftInventory back={() => setScreen("main")} />
+        ) : screen === "worlds" ? (
+          <BlogWorldSelect back={() => setScreen("main")} />
         ) : (
           <SecondaryScreen
             screen={screen}

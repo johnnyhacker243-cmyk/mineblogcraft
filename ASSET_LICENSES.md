@@ -27,6 +27,10 @@ React、Vite、Three.js、TypeScript、Playwright 和 Prettier 通过 npm 安装
 
 此文件是本次素材记录，不能代替未来发布时的授权审查。
 
+## 博客世界列表（2026-10-11）
+
+同一用户授权的 1.21.1 客户端新增固定提取 `textures/gui/menu_list_background.png`、`header_separator.png` 和 `footer_separator.png`。草方块封面复用本地原版顶面和侧面纹理。中文图集增加本地博客正文及菜单字形；资源与来源哈希仍保留在忽略的 inventory 目录。博客正文依据用户给定题纲及本项目实际开发记录撰写，可供用户修改；没有额外第三方文章素材。
+
 ## 作者物品栏（2026-10-10）
 
 同一获授权原版 1.21.1 客户端新增提取创造模式面板/标签、原版槽位、土/草/蓝冰/工作台纹理、书/红石/指南针/钻石镐、宽臂 Steve、两个钻石盔甲图集和橡木告示牌实体纹理。边框、槽位、告示牌正面/侧边仅裁切原版像素，没有 AI 重绘。新增资源全部位于忽略的 `public/assets/inventory/`，逐项 SHA-1 记录在该目录 `PROVENANCE.json`。

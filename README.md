@@ -2,7 +2,7 @@
 
 2026-10-10 自定义更新：按用户要求，主 Logo 使用 `gptphotos/我的世界风格石质博客标志.png` 的完整透明图片（运行副本为 `public/assets/logo/blog-logo.png`）。图片自带 `PERSONAL BLOG EDITION`，所以不再叠加原版 Java Edition。黄色标语固定为 `Created by BingWang`，配置入口为 `ui-config.ts` 的 `splash.text`；设为 `null` 可恢复随机选择。其余主菜单布局保留。
 
-这是独立的本地 Web UI 研究项目，与 Mojang、Microsoft 没有官方关联。当前使用用户明确授权读取的本地 **1.21.1** 客户端素材；授权读取不等于取得公开再分发许可。没有部署公网，也没有实现博客或真实游戏功能。后续前端开发路线见 [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md)，阶段性提交约定见 [AGENTS.md](AGENTS.md)。
+这是独立的本地 Web UI 研究项目，与 Mojang、Microsoft 没有官方关联。当前使用用户明确授权读取的本地 **1.21.1** 客户端素材；授权读取不等于取得公开再分发许可。已实现本地静态博客世界列表、搜索、文章阅读和 RSS，没有部署公网或真实游戏功能。博客结构、数据接口和验证记录见 [BLOG_MODULE.md](BLOG_MODULE.md)。后续前端开发路线见 [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md)，阶段性提交约定见 [AGENTS.md](AGENTS.md)。
 
 ## 启动
 

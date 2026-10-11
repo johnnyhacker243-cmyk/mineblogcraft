@@ -38,7 +38,7 @@ for (const [width, height] of [
     await page.locator(".game").getAttribute("data-gui-scale"),
   );
   const box = await page
-    .getByRole("button", { name: "Singleplayer", exact: true })
+    .getByRole("button", { name: "MineBlog", exact: true })
     .boundingBox();
   const gw = Math.ceil(width / scale),
     gh = Math.ceil(height / scale),
@@ -82,11 +82,11 @@ for (const [width, height] of [
   });
 }
 await page.setViewportSize({ width: 1920, height: 1080 });
-await page.getByRole("button", { name: "Singleplayer", exact: true }).hover();
+await page.getByRole("button", { name: "MineBlog", exact: true }).hover();
 await page.screenshot({ path: "tests/screenshots/hover-1920x1080.png" });
 assert.match(
   await page
-    .getByRole("button", { name: "Singleplayer", exact: true })
+    .getByRole("button", { name: "MineBlog", exact: true })
     .evaluate((el) => getComputedStyle(el).borderImageSource),
   /button-highlight/,
 );
@@ -95,7 +95,7 @@ await page.waitForTimeout(1100);
 const after = Number(await page.locator(".panorama").getAttribute("data-yaw"));
 assert.ok(after > before, "panorama rotates");
 const menus = [
-  ["Singleplayer", "worlds"],
+  ["MineBlog", "worlds"],
   ["Multiplayer", "multiplayer"],
   ["Minecraft Realms", "realms"],
   ["Options...", "options"],
@@ -110,10 +110,10 @@ for (const [name, id] of menus) {
   assert.equal(await page.locator(".game").getAttribute("data-screen"), "main");
 }
 await page.mouse.move(0, 0);
-await page.getByRole("button", { name: "Singleplayer", exact: true }).focus();
+await page.getByRole("button", { name: "MineBlog", exact: true }).focus();
 await page.keyboard.press("Enter");
 assert.equal(await page.locator(".game").getAttribute("data-screen"), "worlds");
-await page.getByRole("button", { name: "Back", exact: true }).focus();
+await page.getByRole("button", { name: "返回主菜单", exact: true }).focus();
 await page.keyboard.press("Space");
 assert.equal(await page.locator(".game").getAttribute("data-screen"), "main");
 await page.keyboard.press("Tab");

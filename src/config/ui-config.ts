@@ -40,7 +40,7 @@ export const ui = {
   copyright: "Copyright BingWang YTC. Do not distribute!",
 } as const;
 export const menu: { label: string; target: ScreenId }[] = [
-  { label: "Singleplayer", target: "worlds" },
+  { label: "MineBlog", target: "worlds" },
   { label: "Multiplayer", target: "multiplayer" },
   { label: "Minecraft Realms", target: "realms" },
   { label: "Options...", target: "options" },

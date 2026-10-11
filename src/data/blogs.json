@@ -1,0 +1,12 @@
+[
+  {
+    "id": "mineblogcraft-birth",
+    "title": "Mineblogcraft 的诞生",
+    "image": "/assets/inventory/grass-border.png",
+    "createTime": "2026-10-11",
+    "description": "记录一个Minecraft风格个人技术博客的设计与开发过程",
+    "category": "Development",
+    "tags": ["Minecraft", "Web", "AI", "Software Engineering"],
+    "content": "## 项目起源\nMineblogcraft 是一个属于我的数字世界。这次开发把 Minecraft 游戏界面作为个人技术博客的入口：学习新的知识，就挖下来；有新的想法，就建起来。\n\n## 技术架构\n前端使用 Vite、React、TypeScript 和 Three.js。主菜单使用六面旋转全景，作者页面用三维 Steve 展示玩家档案。按钮、方块及像素字体来自获授权的本地 Minecraft 1.21.1 客户端，原版素材保留本地。\n博客数据存放在静态 JSON 中，由 BlogRepository 提供读取接口，BlogService 负责搜索。页面只依赖服务，未来可以换成 API 数据源。\n\n## 设计参考\n首页参考 Minecraft 主菜单；作者介绍参考创造模式背包；博客入口参考单人游戏的世界选择界面；文章阅读采用暂停菜单式暗色半透明背景。每篇文章都是一个知识世界。\n\n## 当前功能\n已实现游戏式首页、作者介绍、博客世界列表、文章阅读及静态 RSS。博客列表支持标题、简介、标签与分类搜索。Wiki 知识库和 Research 论文模块仍在规划中，目前没有实现，RSS 也尚未对接远程订阅服务。\n\n## 未来规划\n继续建设 Wiki 和 Research，将学习记录、项目实践和资料整理融入方块世界。后续再研究 AI 辅助与知识管理功能，以及数据库和后台接口；本阶段只开发本地前端。\n\n欢迎来到我的技术世界。"
+  }
+]
