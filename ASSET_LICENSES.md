@@ -56,3 +56,5 @@ React、Vite、Three.js、TypeScript、Playwright 和 Prettier 通过 npm 安装
 JiaMing Wang、Kai Yang、MinJing Li (2024)，PLOS ONE 19(10): e0308639。原文 https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308639 ，出版方 XML 明确链接 https://creativecommons.org/licenses/by/4.0/ 。正文、图表及公式依据 CC BY 4.0 导入；保留作者、出处、许可链接与改动说明，未暗示作者或出版方认可本站。
 
 `public/papers/nids-fgpa/` 中的结构化正文、160 个图像、署名说明与来源/哈希记录可以随本地代码检查点提交。改变的是 JATS/HTML 布局到像素双页的排版，未翻译原文；原图字节未修改。原始 XML 忽略。附加数据集、补充材料没有采集。本许可只适用于上述论文，不适用于游戏素材；附魔书图标依旧为用户授权读取的本地原版游戏纹理，被 Git 忽略。
+
+MineResearch 藏书架新增本地原版素材：`block/bookshelf.png`、`block/oak_planks.png`、`block/spruce_planks.png`、`block/enchanting_table_top.png`、`block/enchanting_table_side.png`、`block/enchanting_table_bottom.png`，复用 `entity/enchanting_table_book.png` 与 `item/enchanted_book.png`。书页反馈声来自同版本资产索引中的 `minecraft/sounds/item/book/open_flip1.ogg`。均由用户授权的 1.21.1 本地客户端读取，输出位于被忽略的 `public/assets/inventory/`，不会加入 Git 提交；并非自由再分发素材。附魔台几何与动作是前端参考实现。

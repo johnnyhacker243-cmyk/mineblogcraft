@@ -1,6 +1,14 @@
-import { useCallback, useEffect, useState, type CSSProperties } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  type CSSProperties,
+} from "react";
 import type { ResearchPaper } from "../models/ResearchPaper";
 import { paperRepository } from "../services/PaperRepository";
+import { EnchantmentSearch } from "../components/research/EnchantmentSearch";
+import { paperSearchService } from "../services/PaperSearchService";
 import { PaperList } from "../components/research/PaperList";
 import { PaperBookViewer } from "../components/research/PaperBookViewer";
 import { InventoryText } from "../components/InventoryText";
@@ -9,6 +17,11 @@ import "../styles/research.css";
 export function MineResearchPage({ back }: { back: () => void }) {
   const [papers, setPapers] = useState<ResearchPaper[]>([]);
   const [paper, setPaper] = useState<ResearchPaper | null>(null);
+  const [query, setQuery] = useState("");
+  const matches = useMemo(
+    () => paperSearchService.search(query, papers),
+    [query, papers],
+  );
   const [reading, setReading] = useState(false);
   const onReading = useCallback(() => setReading(true), []);
   const closeBook = () => {
@@ -92,6 +105,17 @@ export function MineResearchPage({ back }: { back: () => void }) {
       )}
       <section
         className={`research-catalog ${reading ? "catalog-hidden" : ""}`}
+        style={
+          {
+            "--book-scale": catalogScale,
+            "--inventory-scale": catalogScale,
+            "--blog-scale": catalogScale,
+            "--gui-scale-x": catalogScale,
+            "--gui-scale-y": catalogScale,
+            "--button-width": `${150 * catalogScale}px`,
+            "--button-height": `${20 * catalogScale}px`,
+          } as CSSProperties
+        }
         inert={!!paper}
         aria-hidden={paper ? true : undefined}
       >
@@ -101,7 +125,17 @@ export function MineResearchPage({ back }: { back: () => void }) {
           </h1>
           <InventoryText text="论文收藏 · 知识之书" />
         </header>
-        <PaperList papers={papers} open={setPaper} />
+        <PaperList
+          papers={papers}
+          results={matches}
+          searching={!!query.trim()}
+          open={setPaper}
+        />
+        <EnchantmentSearch
+          query={query}
+          setQuery={setQuery}
+          count={matches.length}
+        />
         {message && (
           <div role="status">
             <InventoryText text={message} />

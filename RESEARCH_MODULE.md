@@ -89,3 +89,21 @@ npm run test:research-paper
 其他期刊、作者 Markdown 或未来 API 可以产生同样的 `PaperDocument`，设置论文 `format: "document"` 和内容 URL；仓库接口和页面无需修改。普通 Markdown 仍可用旧入口。当前自动导入器只支持 PLOS ONE 的 JATS 与明确 CC BY 4.0，尚不是任意 PDF 自动解析器；扫描 PDF 或特殊附件需要单独的提取适配。补充材料和原始研究数据不包含在此次导入内。
 
 最新验证：`npm run build`、`npm run test:research`、`npm run test:research-paper`。长文测试遍历所有双页，检查文字横向溢出、图片加载、图片哈希、页码焦点、原图关闭及三种窗口比例；结果记录在 `tests/research-paper-results.json`。截图新增 `research-real-paper-1366x768.png`、`research-real-paper-1920x1080.png`、`research-real-paper-2560x1440.png`、`research-real-paper-text.png`、`research-real-paper-figure.png`、`research-real-paper-original-image.png`。
+
+## 论文藏书架与附魔检索台（2026-10-11）
+
+目录保留原页面标题、入口和返回流程。中央改为原版云杉木板背板、橡木边框及层板、书架侧边组成的陈列架。每条记录是一本附魔书，长英文标题默认缩为冒号前短名；完整标题、作者、年份、简介和分类在鼠标悬停或键盘聚焦时显示。新增论文会自动排入两列并允许目录滚动，不复制虚构论文填满架子。
+
+`EnchantmentTable.tsx` 用 Three.js 构建 16×12×16 附魔台和带左右铰链的书页，加载原版上下及侧面纹理、原版附魔台书籍图集。按经过时间实现浮动、翻页和轻微开合，鼠标偏转平滑计算。隐藏页面暂停绘制，卸载释放纹理、材质、几何体、观察器和渲染器；WebGL 或贴图不可用时保留原版台面静态后备。书的运动为网页近似实现，未声称完整复刻游戏模型的 UV 与全部动画参数。
+
+`EnchantmentSearch.tsx` 管理热点悬停、键盘聚焦与输入状态。默认隐藏搜索框；鼠标移入台面或按钮获焦后在上方显现。点击台面直接聚焦输入。输入时实时检索，Enter 提供确认反馈；保留关键词时搜索框继续可见，清空后可再次隐去。结果数通过状态区域公告，结果按相关性陈列，未匹配书本淡化保留。
+
+声音使用已授权本地客户端资源 `minecraft/sounds/item/book/open_flip1.ogg`，SHA-1 `234d6a686516c264a370ea834b87d47ae7334ef7`。由 AudioManager 在主动聚焦、点击或 Enter 时播放，音量为设置音量的 35%，600ms 防重复；静音及错误处理保留。悬停不自动播放，避免未经交互播放或频繁提示。
+
+搜索由独立 `PaperSearchService` 负责，不在页面读取 JSON。标准化 NFKC、大小写与标点后按多词查询，每个词都需要匹配。字段基础权重为标题 100、分类及关键词/可选 tags 65、作者 55、简介 30；完整匹配、包含匹配优先，再尝试滑动窗口编辑距离。长度 3–4 的词允许一次编辑，较长词允许两次编辑；极短词仅做包含匹配，减少噪声。数学建模、人工智能、网络安全、数据挖掘、软件工程和智能体提供字段别名，只有论文真实分类或标签包含相应概念才扩展别名。索引用 WeakMap 缓存，输入限制 100 字符；当前适合本地小型目录，非拼音或语义搜索。
+
+未来由 API 版 PaperRepository 提供相同 ResearchPaper 元数据；搜索服务可以替换为异步后端适配器或 Worker，返回 `{ paper, score }`，继续复用陈列与结果反馈。当前没有添加后端或数据库。
+
+排版突变修复：目录独立保存 `catalogScale`，阅读器保留其放大比例。点击论文不再改变背景目录的字体、按钮及陈列架尺寸，动画结束才隐藏目录。打开和返回的实测边界框必须一致。
+
+验证入口：`npm run test:research-shelf`，测试标题/作者/分类/关键词/简介检索、英文错字、别名、相关性排序、空结果、清空、鼠标与键盘操作、打开/返回布局稳定及 1366×768、1920×1080、2560×1440。截图位于 `tests/screenshots/research-shelf-*.png`；原有书本过渡、翻页、异常和缩放回归使用 `npm run test:research`。

@@ -19,6 +19,12 @@ assert hashlib.sha1(a.jar.read_bytes()).hexdigest() == '30c73b1c5da787909b2f7334
 out = Path(__file__).resolve().parents[1] / 'public/assets/inventory'
 out.mkdir(parents=True, exist_ok=True)
 mapping = {
+    'bookshelf.png': 'block/bookshelf.png',
+    'oak-planks.png': 'block/oak_planks.png',
+    'spruce-planks.png': 'block/spruce_planks.png',
+    'enchanting-top.png': 'block/enchanting_table_top.png',
+    'enchanting-side.png': 'block/enchanting_table_side.png',
+    'enchanting-bottom.png': 'block/enchanting_table_bottom.png',
     'written-book.png': 'item/written_book.png',
     'writable-book.png': 'item/writable_book.png',
     'book-gui.png': 'gui/book.png',
@@ -83,6 +89,11 @@ with zipfile.ZipFile(a.jar) as z:
     grass.save(out/'grass-border.png')
 
 assets = a.assets or a.jar.parents[2] / 'assets'
+sound_hash = '234d6a686516c264a370ea834b87d47ae7334ef7'
+sound = (assets/'objects'/sound_hash[:2]/sound_hash).read_bytes()
+assert hashlib.sha1(sound).hexdigest() == sound_hash
+(out/'book-open.ogg').write_bytes(sound)
+
 unifont_hash = '666999116c467f10622db1527a06ddc0a6efad2a'
 data = (assets/'objects'/unifont_hash[:2]/unifont_hash).read_bytes()
 assert hashlib.sha1(data).hexdigest() == unifont_hash
@@ -102,7 +113,7 @@ for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx',
     characters.update((project/source).read_text(encoding='utf-8'))
 for source in (project/'public/papers').rglob('*.json'):
     characters.update(source.read_text(encoding='utf-8'))
-for source in ['src/utils/document-pagination.ts', 'src/components/research/PageRenderer.tsx']:
+for source in ['src/utils/document-pagination.ts', 'src/components/research/PageRenderer.tsx', 'src/components/research/EnchantmentSearch.tsx']:
     characters.update((project/source).read_text(encoding='utf-8'))
 selected = sorted(code for code in glyphs if chr(code) in characters)
 atlas = Image.new('RGBA', (256,((len(selected)+15)//16)*16))

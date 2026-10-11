@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-11T07:09:47.211Z",
+  "searchTests": true,
+  "ranking": true,
+  "keyboardSearch": true,
+  "stableCatalogOnOpen": true,
+  "sizes": [
+    {
+      "width": 1366,
+      "height": 768,
+      "shelf": {
+        "x": 98,
+        "y": 159.546875,
+        "width": 1170,
+        "height": 354.40625
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "shelf": {
+        "x": 180,
+        "y": 214.40625,
+        "width": 1560,
+        "height": 525.1875
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "shelf": {
+        "x": 305,
+        "y": 270.703125,
+        "width": 1950,
+        "height": 741.09375
+      }
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

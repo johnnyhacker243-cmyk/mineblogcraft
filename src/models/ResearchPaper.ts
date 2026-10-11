@@ -6,6 +6,7 @@ export interface ResearchPaper {
   description: string;
   category: string;
   keywords: string[];
+  tags?: string[];
   cover: string;
   content: string;
   abstract: string;
