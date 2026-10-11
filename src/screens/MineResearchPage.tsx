@@ -65,7 +65,9 @@ export function MineResearchPage({ back }: { back: () => void }) {
   }, [paper, back]);
   const catalogScale = Math.max(
     1,
-    Math.min(5, Math.floor(Math.min(size.width / 410, size.height / 240))),
+    Math.floor(
+      Math.min((size.width * 0.94) / 430, (size.height * 0.94) / 272) * 4,
+    ) / 4,
   );
   const scale = paper
     ? Math.max(

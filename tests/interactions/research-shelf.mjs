@@ -77,6 +77,8 @@ try {
   await p.getByRole("button", { name: "MineResearch", exact: true }).click();
   await p.locator(".paper-item").first().waitFor();
   await p.waitForTimeout(800);
+  assert.equal(await p.locator(".empty-shelf-record").count(), 4);
+  assert.equal(await p.locator(".bookshelf-pillar img").count(), 6);
   const sizes = [];
   for (const [width, height] of [
     [1366, 768],
@@ -86,7 +88,31 @@ try {
     await p.setViewportSize({ width, height });
     await p.waitForTimeout(350);
     const box = await p.locator(".paper-bookshelf").boundingBox();
+    const cells = await p.locator(".shelf-record").evaluateAll((ns) =>
+      ns.map((n) => {
+        const r = n.getBoundingClientRect();
+        return { x: r.x, y: r.y, w: r.width, h: r.height };
+      }),
+    );
+    assert.equal(
+      new Set(cells.map((c) => c.y)).size,
+      3,
+      "Three shelf rows must be visible",
+    );
+    assert.equal(new Set(cells.map((c) => c.x)).size, 2, "Two papers per row");
+    for (const tile of await p.locator(".bookshelf-pillar img").all()) {
+      const r = await tile.boundingBox();
+      assert.ok(
+        Math.abs(r.width - r.height) < 1,
+        "Original bookshelf texture must remain square",
+      );
+    }
+    assert.ok(cells.every((c) => c.y + c.h <= box.y + box.height + 1));
     const table = await p.locator(".enchantment-hotspot").boundingBox();
+    assert.ok(
+      table.x < width * 0.03,
+      "Enchantment table belongs at viewport left edge",
+    );
     assert.ok(
       box.x >= 0 &&
         box.x + box.width <= width &&
@@ -135,6 +161,28 @@ try {
     await search.evaluate((n) => n === document.activeElement),
     true,
   );
+  const six = await browser.newPage({ viewport: { width: 1366, height: 768 } });
+  await six.route("**/src/data/papers.json*", (route) =>
+    route.fulfill({
+      contentType: "text/javascript",
+      body: `export default ${JSON.stringify(Array.from({ length: 6 }, (_, i) => ({ ...papers[i % 2], id: `fixture-${i}`, title: `测试藏书 ${i + 1}` })))};`,
+    }),
+  );
+  await six.goto("http://127.0.0.1:5173/");
+  await six.locator(".gui").evaluate(async (n) => {
+    await Promise.all(n.getAnimations().map((a) => a.finished));
+  });
+  await six.getByRole("button", { name: "MineResearch", exact: true }).click();
+  await six.locator(".paper-item").first().waitFor();
+  assert.equal(await six.locator(".paper-item").count(), 6);
+  assert.equal(await six.locator(".empty-shelf-record").count(), 0);
+  assert.ok(
+    await six
+      .locator(".paper-bookshelf")
+      .evaluate((n) => n.scrollHeight <= n.clientHeight + 1),
+    "Six paper records must fit without vertical scrolling",
+  );
+  await six.close();
   assert.deepEqual(errors, []);
   assert.deepEqual(failed, []);
   await writeFile(
@@ -142,6 +190,9 @@ try {
     JSON.stringify(
       {
         date: new Date().toISOString(),
+        sixPaperCapacity: true,
+        completeBookshelfColumns: true,
+        viewportBottomLeftTable: true,
         searchTests: true,
         ranking: true,
         keyboardSearch: true,

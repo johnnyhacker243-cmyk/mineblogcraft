@@ -560,105 +560,6 @@
   font: inherit;
   padding: 2px 6px;
 }
-/* Catalog owns its scale; opening a book never rescales the scenery beneath it. */
-.research-catalog {
-  position: relative;
-  width: calc(390px * var(--book-scale));
-  max-width: 94%;
-  height: 94%;
-}
-.research-catalog header {
-  padding: calc(9px * var(--book-scale));
-  gap: calc(5px * var(--book-scale));
-}
-.paper-bookshelf {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-content: start;
-  gap: calc(8px * var(--book-scale));
-  padding: calc(14px * var(--book-scale));
-  padding-bottom: calc(12px * var(--book-scale));
-  background: #382415 url("/assets/inventory/spruce-planks.png") repeat;
-  background-size: calc(32px * var(--book-scale));
-  border: calc(9px * var(--book-scale)) solid #563619;
-  border-image: url("/assets/inventory/oak-planks.png") 4 repeat;
-  box-shadow:
-    inset 0 0 0 calc(3px * var(--book-scale)) #21150d,
-    calc(3px * var(--book-scale)) calc(3px * var(--book-scale)) #0008;
-  overflow: auto;
-}
-.shelf-record {
-  position: relative;
-  min-height: calc(94px * var(--book-scale));
-  padding-bottom: calc(7px * var(--book-scale));
-  border-bottom: calc(6px * var(--book-scale)) solid #684526;
-  border-image: url("/assets/inventory/oak-planks.png") 4 repeat;
-  box-shadow: 0 calc(3px * var(--book-scale)) #21150d;
-  background: #0003;
-}
-.paper-item {
-  height: 100%;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding: calc(5px * var(--book-scale));
-  gap: calc(4px * var(--book-scale));
-  text-align: center;
-}
-.paper-item img {
-  width: calc(34px * var(--book-scale));
-  height: calc(34px * var(--book-scale));
-  filter: drop-shadow(0 calc(2px * var(--book-scale)) #0008);
-}
-.paper-item:hover,
-.paper-item:focus-visible {
-  background: #ffffff12;
-  border-color: #d8bf8b;
-}
-.shelf-title {
-  align-items: center;
-  --inventory-scale: calc(0.65 * var(--book-scale));
-}
-.shelf-title .blog-text {
-  gap: calc(1px * var(--book-scale));
-  max-height: calc(24px * var(--book-scale));
-  overflow: hidden;
-}
-.paper-unmatched .paper-item {
-  opacity: 0.25;
-}
-.paper-tooltip {
-  display: none;
-  position: absolute;
-  z-index: 6;
-  left: calc(4px * var(--book-scale));
-  top: calc(3px * var(--book-scale));
-  width: calc(150px * var(--book-scale));
-  padding: calc(5px * var(--book-scale));
-  border: calc(1px * var(--book-scale)) solid #482473;
-  background: #100817f5;
-  pointer-events: none;
-  --inventory-scale: calc(0.7 * var(--book-scale));
-}
-.paper-tooltip .blog-text {
-  display: flex;
-  flex-direction: column;
-  gap: calc(1px * var(--book-scale));
-  margin-bottom: calc(3px * var(--book-scale));
-}
-.shelf-record:hover .paper-tooltip,
-.shelf-record:focus-within .paper-tooltip {
-  display: block;
-}
-.research-catalog footer {
-  width: 100%;
-  min-height: calc(77px * var(--book-scale));
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: calc(4px * var(--book-scale));
-}
 .enchantment-search {
   position: absolute;
   bottom: calc(4px * var(--book-scale));
@@ -758,60 +659,160 @@
     transition: none;
   }
 }
-.paper-bookshelf::before {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  inset: 0;
-  border-left: calc(8px * var(--book-scale)) solid transparent;
-  border-right: calc(8px * var(--book-scale)) solid transparent;
-  border-image: url("/assets/inventory/bookshelf.png") 0 6 stretch;
+
+/* Three full bookshelf blocks on each side; three two-book shelves in the center. */
+.research-catalog {
+  position: static;
+  width: calc(430px * var(--book-scale));
+  max-width: 94%;
+  height: auto;
+  gap: calc(6px * var(--book-scale));
 }
-.paper-bookshelf::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  left: calc(12px * var(--book-scale));
-  right: calc(12px * var(--book-scale));
-  bottom: 25%;
-  height: calc(7px * var(--book-scale));
-  background: url("/assets/inventory/oak-planks.png") repeat;
-  background-size: calc(32px * var(--book-scale));
-  box-shadow: 0 calc(3px * var(--book-scale)) #21150d;
+.research-catalog header {
+  padding: calc(5px * var(--book-scale));
+  gap: calc(5px * var(--book-scale));
 }
-/* Keep source texels crisp and keep shelf boards below, never across titles. */
-.paper-bookshelf {
-  image-rendering: pixelated;
+.paper-shelf-frame {
+  display: grid;
+  grid-template-columns: calc(56px * var(--book-scale)) minmax(0, 1fr) calc(
+      56px * var(--book-scale)
+    );
+  width: 100%;
   padding: calc(8px * var(--book-scale));
+  background: url("/assets/inventory/oak-planks.png");
+  background-size: calc(32px * var(--book-scale));
+  image-rendering: pixelated;
+  box-shadow:
+    calc(3px * var(--book-scale)) calc(3px * var(--book-scale)) #000a,
+    inset calc(2px * var(--book-scale)) calc(2px * var(--book-scale)) #d5ae6d,
+    inset calc(-2px * var(--book-scale)) calc(-2px * var(--book-scale)) #42260f;
+}
+.bookshelf-pillar {
+  display: flex;
+  flex-direction: column;
+}
+.bookshelf-pillar img {
+  display: block;
+  width: calc(56px * var(--book-scale));
+  height: calc(56px * var(--book-scale));
+  image-rendering: pixelated;
+}
+.paper-bookshelf {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: calc(56px * var(--book-scale));
+  align-content: start;
+  width: 100%;
+  height: calc(168px * var(--book-scale));
+  padding: 0;
+  overflow: auto;
+  border: 0;
+  gap: 0;
+  background: #382415 url("/assets/inventory/spruce-planks.png");
+  background-size: calc(32px * var(--book-scale));
+  image-rendering: pixelated;
+  box-shadow: inset 0 calc(2px * var(--book-scale)) #1c1009;
 }
 .shelf-record {
-  min-height: calc(76px * var(--book-scale));
+  position: relative;
+  min-height: 0;
+  border-bottom: calc(4px * var(--book-scale)) solid #684526;
+  border-image: url("/assets/inventory/oak-planks.png") 4 repeat;
+  box-shadow: 0 calc(2px * var(--book-scale)) #21150d;
+  background: #0003;
 }
-.paper-bookshelf::after {
-  display: none;
-}
-.shelf-title {
-  min-height: calc(23px * var(--book-scale));
-  justify-content: flex-start;
-}
-.shelf-record {
-  border-bottom: 0;
-  box-shadow: none;
+.shelf-record:nth-child(2n + 1) {
+  border-right: calc(2px * var(--book-scale)) solid #4c311b;
 }
 .paper-item {
+  height: 100%;
+  padding: calc(3px * var(--book-scale));
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
+  gap: calc(5px * var(--book-scale));
+}
+.paper-item:hover,
+.paper-item:focus-visible {
+  background: #ffffff15;
+  border-color: #d8bf8b;
 }
 .shelf-book-rest {
-  display: flex;
+  display: flex !important;
   flex-direction: row !important;
   justify-content: center;
   align-items: flex-end;
-  width: 100%;
-  height: calc(40px * var(--book-scale));
+  width: calc(33px * var(--book-scale));
+  height: calc(39px * var(--book-scale));
   flex-shrink: 0;
-  border-bottom: calc(6px * var(--book-scale)) solid #684526;
-  border-image: url("/assets/inventory/oak-planks.png") 4 repeat;
-  box-shadow: 0 calc(3px * var(--book-scale)) #21150d;
+}
+.paper-item img {
+  width: calc(31px * var(--book-scale));
+  height: calc(31px * var(--book-scale));
+  object-fit: contain;
+  filter: drop-shadow(0 calc(2px * var(--book-scale)) #0008);
+}
+.shelf-title {
+  --inventory-scale: calc(0.65 * var(--book-scale));
+  justify-content: center;
+}
+.shelf-title .blog-text {
+  gap: calc(1px * var(--book-scale));
+  max-height: calc(26px * var(--book-scale));
+  overflow: hidden;
+}
+.paper-unmatched .paper-item {
+  opacity: 0.25;
+}
+.paper-tooltip {
+  display: none;
+  position: absolute;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  width: calc(150px * var(--book-scale));
+  padding: calc(5px * var(--book-scale));
+  border: calc(1px * var(--book-scale)) solid #482473;
+  background: #100817f5;
+  pointer-events: none;
+  --inventory-scale: calc(0.65 * var(--book-scale));
+}
+.shelf-record:nth-child(n + 5) .paper-tooltip {
+  top: auto;
+  bottom: 0;
+}
+.paper-tooltip .blog-text {
+  display: flex;
+  flex-direction: column;
+  gap: calc(1px * var(--book-scale));
+  margin-bottom: calc(3px * var(--book-scale));
+}
+.shelf-record:hover .paper-tooltip,
+.shelf-record:focus-within .paper-tooltip {
+  display: block;
+}
+.empty-shelf-record {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(5px * var(--book-scale));
+  --inventory-scale: calc(0.65 * var(--book-scale));
+}
+.empty-book-space {
+  width: calc(25px * var(--book-scale));
+  height: calc(30px * var(--book-scale));
+  border: calc(1px * var(--book-scale)) dashed #967343;
+  background: #0002;
+}
+.research-catalog footer {
+  padding: calc(3px * var(--book-scale));
+}
+.enchantment-search {
+  position: fixed;
+  left: calc(4px * var(--book-scale));
+  bottom: calc(4px * var(--book-scale));
+  width: calc(70px * var(--book-scale));
 }
 .enchantment-search-box {
   width: calc(158px * var(--book-scale));
