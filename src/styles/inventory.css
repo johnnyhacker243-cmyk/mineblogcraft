@@ -12,6 +12,8 @@
   image-rendering: pixelated;
   display: grid;
   place-items: center;
+  align-items: safe center;
+  justify-items: safe center;
   text-shadow: none;
 }
 .inventory-screen::before {
@@ -279,5 +281,89 @@
 @media (max-width: 410px) {
   .inventory-screen {
     place-items: start center;
+  }
+}
+/* Flow-based inventory layout keeps windowed and fullscreen proportions aligned. */
+.inventory-frame {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto calc(32px * var(--hud-scale));
+  gap: calc(4px * var(--inventory-scale));
+  padding: calc(4px * var(--inventory-scale));
+}
+.inventory-details {
+  display: grid;
+  grid-template-columns: calc(108px * var(--inventory-scale)) minmax(0, 1fr);
+  gap: calc(7px * var(--inventory-scale));
+  min-height: 0;
+}
+.player-panel {
+  position: static;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+.player-viewport {
+  height: min(
+    calc(100px * var(--inventory-scale)),
+    calc(100% - 13px * var(--inventory-scale))
+  );
+  flex-shrink: 0;
+}
+.profile-panel {
+  position: static;
+  height: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-panel dl > div {
+  min-height: calc(12px * var(--inventory-scale));
+}
+.profile-subtitle {
+  height: calc(10px * var(--inventory-scale));
+}
+.website-introduction {
+  position: static;
+}
+.website-copy {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: calc(2px * var(--inventory-scale));
+  line-height: 0;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.inventory-hud {
+  position: relative;
+}
+.inventory-tabs {
+  --inventory-scale: var(--tab-scale);
+  top: auto;
+  bottom: calc(100% - 42px * var(--inventory-scale));
+}
+/* Header baseline uses the page scale, independently of the smaller tab icons. */
+.inventory-tabs {
+  bottom: auto;
+  top: calc(42px * var(--header-scale) - 32px * var(--tab-scale));
+}
+@media (max-width: 719px) {
+  .inventory-details {
+    grid-template-columns: 108px minmax(0, 1fr);
+  }
+  .profile-panel {
+    padding: 4px;
+  }
+  .profile-panel dt {
+    width: 32px;
+  }
+}
+@media (max-height: 800px) {
+  .profile-panel dl > div {
+    min-height: calc(10px * var(--inventory-scale));
   }
 }

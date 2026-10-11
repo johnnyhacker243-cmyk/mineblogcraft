@@ -29,6 +29,7 @@ mapping = {
     'diamond-2.png': 'models/armor/diamond_layer_2.png', 'pickaxe.png': 'item/diamond_pickaxe.png',
     'diamond.png': 'item/diamond.png', 'sword.png': 'item/diamond_sword.png',
     'nether-star.png': 'item/nether_star.png',
+    'torch.png': 'block/torch.png', 'dragon-egg.png': 'block/dragon_egg.png',
     'golden-apple.png': 'item/golden_apple.png', 'ender-pearl.png': 'item/ender_pearl.png',
     'tnt-top.png': 'block/tnt_top.png', 'tnt-side.png': 'block/tnt_side.png',
     'grass-overlay.png': 'block/grass_block_side_overlay.png',
@@ -42,6 +43,9 @@ for n in range(1, 7):
     mapping[f'tab-{n}.png'] = f'gui/sprites/container/creative_inventory/tab_top_{state}_{n}.png'
 records = []
 with zipfile.ZipFile(a.jar) as z:
+    egg_model = z.read('assets/minecraft/models/block/dragon_egg.json')
+    (out/'dragon-egg-model.json').write_bytes(egg_model)
+    records.append({'file': 'dragon-egg-model.json', 'source': 'models/block/dragon_egg.json', 'sha1': hashlib.sha1(egg_model).hexdigest()})
     for dest, source in mapping.items():
         data = z.read('assets/minecraft/textures/' + source)
         (out / dest).write_bytes(data)

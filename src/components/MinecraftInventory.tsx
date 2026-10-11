@@ -15,14 +15,18 @@ export function MinecraftInventory({ back }: { back: () => void }) {
     window.addEventListener("resize", resize);
     return () => window.removeEventListener("resize", resize);
   }, []);
+  const margin =
+    size.height < 800 || size.width < 1200 ? 24 : profile.layout.borderTile;
+  const sceneWidth = Math.max(360, size.width - 2 * margin);
+  const sceneHeight = Math.max(520, size.height - 2 * margin);
   const scale = Math.max(
-    1,
+    size.width >= 720 ? 2 : 1,
     Math.min(
       profile.layout.maxScale,
       Math.floor(
         Math.min(
-          (size.width - 2 * profile.layout.borderTile) / profile.layout.width,
-          (size.height - 2 * profile.layout.borderTile) / profile.layout.height,
+          sceneWidth / profile.layout.width,
+          sceneHeight / profile.layout.height,
         ),
       ),
     ),
@@ -34,9 +38,14 @@ export function MinecraftInventory({ back }: { back: () => void }) {
       style={
         {
           "--inventory-scale": scale,
-          "--hud-scale": scale + 1,
-          "--scene-width": `${Math.max(390, size.width - 2 * profile.layout.borderTile)}px`,
-          "--scene-height": `${Math.max(238, size.height - 2 * profile.layout.borderTile)}px`,
+          "--header-scale": scale,
+          "--hud-scale": scale,
+          "--tab-scale": Math.max(
+            1,
+            Math.min(scale, Math.floor((sceneWidth - 200 * scale - 16) / 270)),
+          ),
+          "--scene-width": `${sceneWidth}px`,
+          "--scene-height": `${sceneHeight}px`,
         } as CSSProperties
       }
     >
@@ -59,16 +68,18 @@ export function MinecraftInventory({ back }: { back: () => void }) {
           ))}
         </div>
         <section className="inventory-frame">
-          <div className="player-panel">
-            <div className="player-viewport">
-              <PlayerModel />
+          <div className="inventory-details">
+            <div className="player-panel">
+              <div className="player-viewport">
+                <PlayerModel />
+              </div>
+              <div className="player-caption">
+                <InventoryText text="STEVE" />
+                <InventoryText text="DIAMOND ARMOR" color="#55ffff" />
+              </div>
             </div>
-            <div className="player-caption">
-              <InventoryText text="STEVE" />
-              <InventoryText text="DIAMOND ARMOR" color="#55ffff" />
-            </div>
+            <ProfilePanel />
           </div>
-          <ProfilePanel />
           <section className="website-introduction" aria-label="网站介绍">
             <div className="website-copy">
               {profile.introduction.map((line) => (
@@ -81,8 +92,10 @@ export function MinecraftInventory({ back }: { back: () => void }) {
               ))}
             </div>
           </section>
-          <PlayerStatus />
-          <InventorySlots />
+          <div className="inventory-hud">
+            <PlayerStatus />
+            <InventorySlots />
+          </div>
         </section>
         <MinecraftButton
           className="inventory-back"

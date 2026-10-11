@@ -15,13 +15,17 @@ export const profile = {
     "金苹果",
     "末影珍珠",
     "工作台",
-    "下界之星",
+    "火把",
+    "红石粉",
+    "末影龙蛋",
   ],
   introduction: [
-    "这是一个 Minecraft 风格的个人技术博客。",
-    "记录学习、研究、项目开发与技术探索。",
+    "Mineblogcraft 是一个属于我的数字世界。",
+    "这里记录 AI、网络安全、软件工程学习过程中的探索与收获。",
+    "有新的知识，就挖下来；有新的想法，就建起来。",
+    "欢迎来到我的方块世界。",
   ],
   // Author information supplied by the user.
   placeholder: false,
-  layout: { width: 390, height: 238, maxScale: 5, borderTile: 64 },
+  layout: { width: 510, height: 280, maxScale: 4, borderTile: 64 },
 } as const;

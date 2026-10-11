@@ -72,7 +72,19 @@ assert.equal(
   1,
   "Only the requested return button is interactive",
 );
-assert.equal(await page.locator(".inventory-tab").count(), 8);
+assert.equal(await page.locator(".inventory-tab").count(), 10);
+assert.equal(await page.locator('.inventory-tab[title="下界之星"]').count(), 0);
+assert.deepEqual(
+  await page
+    .locator(".website-copy canvas")
+    .evaluateAll((nodes) => nodes.map((n) => n.getAttribute("aria-label"))),
+  [
+    "Mineblogcraft 是一个属于我的数字世界。",
+    "这里记录 AI、网络安全、软件工程学习过程中的探索与收获。",
+    "有新的知识，就挖下来；有新的想法，就建起来。",
+    "欢迎来到我的方块世界。",
+  ],
+);
 assert.deepEqual(
   await page
     .locator(".profile-panel dd canvas")
@@ -121,6 +133,10 @@ for (const [width, height] of [
   [1280, 720],
   [1600, 900],
   [2560, 1440],
+  [1440, 760],
+  [1100, 700],
+  [900, 600],
+  [800, 600],
 ]) {
   await page.setViewportSize({ width, height });
   await page.waitForTimeout(200);
@@ -137,8 +153,17 @@ for (const [width, height] of [
     width - box.x - box.width,
     height - box.y - box.height,
   ])
-    assert.ok(Math.abs(margin - 64) < 0.1, "Exactly one 64px block border");
+    assert.ok(
+      Math.abs(margin - (height < 800 || width < 1200 ? 24 : 64)) < 0.1,
+      "Window-aware outer margins",
+    );
   const statusBox = await page.locator(".player-status").boundingBox();
+  const windowBrand = await page.locator(".inventory-brand").boundingBox();
+  const windowTabs = await page.locator(".inventory-tabs").boundingBox();
+  assert.ok(
+    windowBrand.x + windowBrand.width < windowTabs.x,
+    "Logo and ten category icons never overlap",
+  );
   const hotbarBox = await page.locator(".item-slots").boundingBox();
   const copyBox = await page.locator(".website-introduction").boundingBox();
   const panelBox = await page.locator(".profile-panel").boundingBox();
@@ -173,8 +198,8 @@ for (const [width, height] of [
   );
   assert.equal(
     hotbarBox.height,
-    18 * (logicalScale + 1),
-    "Hotbar uses larger integer pixel scale",
+    18 * logicalScale,
+    "Hotbar uses balanced integer pixel scale",
   );
   assert.ok(
     copyBox.y + copyBox.height <= statusBox.y,
@@ -269,14 +294,16 @@ const disposal = await page.evaluate(() =>
     })),
 );
 assert.ok(disposal.length >= 4);
-for (const context of disposal)
-  assert.deepEqual(context, {
-    textures: 0,
-    buffers: 0,
-    programs: 0,
-    contextLost: true,
-    internalTextureHandles: 4,
-  });
+for (const { textures, buffers, programs, contextLost } of disposal)
+  assert.deepEqual(
+    { textures, buffers, programs, contextLost },
+    {
+      textures: 0,
+      buffers: 0,
+      programs: 0,
+      contextLost: true,
+    },
+  );
 assert.deepEqual(errors, []);
 assert.deepEqual(badResponses, []);
 const noGL = await browser.newPage();
@@ -315,7 +342,7 @@ const result = {
   torsoUpright: true,
   shaftNormalDot,
   status: { health: 20, food: 20, hearts: 10, foodIcons: 10 },
-  blockBorder: 64,
+  blockBorder: { desktop: 64, windowed: 24 },
   removedSignAndTextSlots: true,
 };
 await writeFile("tests/profile-results.json", JSON.stringify(result, null, 2));

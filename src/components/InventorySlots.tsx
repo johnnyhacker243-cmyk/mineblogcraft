@@ -1,5 +1,6 @@
 import { inventoryAssets } from "../config/profile-config";
 import { PixelText } from "./PixelText";
+import { DragonEggIcon } from "./DragonEggIcon";
 export function BlockIcon({
   top,
   side,
@@ -26,11 +27,12 @@ export function ItemIcon({ index }: { index: number }) {
   if (index === 3) return <BlockIcon top="tnt-top.png" side="tnt-side.png" />;
   if (index === 6)
     return <BlockIcon top="crafting-top.png" side="crafting-side.png" />;
-  if (index === 7)
+  if (index === 9) return <DragonEggIcon />;
+  if (index === 7 || index === 8)
     return (
       <img
         className="item-icon"
-        src={inventoryAssets + "nether-star.png"}
+        src={inventoryAssets + (index === 7 ? "torch.png" : "redstone.png")}
         alt=""
       />
     );
