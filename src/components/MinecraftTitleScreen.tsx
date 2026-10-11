@@ -11,6 +11,7 @@ import { BlogWorldSelect } from "../screens/BlogWorldSelect";
 import { MineRSSScreen } from "../screens/MineRSSScreen";
 import { MineWikiPage } from "../screens/MineWikiPage";
 import { MineResearchPage } from "../screens/MineResearchPage";
+import { MineStatusPage } from "../screens/MineStatusPage";
 export function MinecraftTitleScreen() {
   const [screen, setScreen] = useState<ScreenId>(
     location.hash.startsWith("#blog/") ? "worlds" : "main",
@@ -67,6 +68,8 @@ export function MinecraftTitleScreen() {
           <MineRSSScreen back={() => setScreen("main")} />
         ) : screen === "wiki" ? (
           <MineWikiPage back={() => setScreen("main")} />
+        ) : screen === "status" ? (
+          <MineStatusPage back={() => setScreen("main")} />
         ) : screen === "realms" ? (
           <MineResearchPage back={() => setScreen("main")} />
         ) : (

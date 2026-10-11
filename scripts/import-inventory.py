@@ -19,6 +19,10 @@ assert hashlib.sha1(a.jar.read_bytes()).hexdigest() == '30c73b1c5da787909b2f7334
 out = Path(__file__).resolve().parents[1] / 'public/assets/inventory'
 out.mkdir(parents=True, exist_ok=True)
 mapping = {
+    'status-gui.png': 'gui/container/enchanting_table.png',
+    'lapis.png': 'item/lapis_lazuli.png',
+    'enchant-slot.png': 'gui/sprites/container/enchanting_table/enchantment_slot.png',
+    'enchant-slot-hover.png': 'gui/sprites/container/enchanting_table/enchantment_slot_highlighted.png',
     'wiki-window.png': 'gui/advancements/window.png',
     'wiki-stone.png': 'gui/advancements/backgrounds/stone.png',
     'wiki-nether.png': 'gui/advancements/backgrounds/nether.png',
@@ -71,6 +75,8 @@ mapping = {
     'food-empty.png': 'gui/sprites/hud/food_empty.png',
     'food-full.png': 'gui/sprites/hud/food_full.png',
 }
+for n in range(1, 4):
+    mapping[f'enchant-level-{n}.png'] = f'gui/sprites/container/enchanting_table/level_{n}.png'
 for n in range(1, 7):
     state = 'selected' if n == 1 else 'unselected'
     mapping[f'tab-{n}.png'] = f'gui/sprites/container/creative_inventory/tab_top_{state}_{n}.png'
@@ -93,6 +99,12 @@ with zipfile.ZipFile(a.jar) as z:
         for y, sy, h in [(0,0,7), (7,108,2), (9,129,7)]:
             frame.paste(original.crop((sx,sy,sx+w,sy+h)), (x,y))
     frame.save(out/'frame.png')
+    gui = Image.open(io.BytesIO(z.read('assets/minecraft/textures/gui/container/enchanting_table.png'))).convert('RGBA')
+    sf = Image.new('RGBA',(16,16))
+    for x,sx,w in [(0,0,7),(7,25,2),(9,169,7)]:
+        for y,sy,h in [(0,0,7),(7,25,2),(9,159,7)]:
+            sf.paste(gui.crop((sx,sy,sx+w,sy+h)),(x,y))
+    sf.save(out/'status-frame.png')
     window = Image.open(io.BytesIO(z.read('assets/minecraft/textures/gui/advancements/window.png'))).convert('RGBA')
     window.crop((0,0,252,140)).save(out/'wiki-window-crop.png')
     original.crop((8,17,26,35)).save(out/'slot.png')
@@ -129,6 +141,8 @@ for source in ['src/data/rssSources.json', 'src/screens/MineRSSScreen.tsx', 'src
 for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx','src/components/MinecraftInventory.tsx','src/data/blogs.json', 'src/screens/BlogWorldSelect.tsx', 'src/components/blog/WorldSearch.tsx', 'src/components/blog/WorldCard.tsx', 'src/components/blog/BlogReader.tsx']:
     characters.update((project/source).read_text(encoding='utf-8'))
 for source in [project/'src/data/wiki.json', *list((project/'src/components/wiki').glob('*.tsx')), project/'src/screens/MineWikiPage.tsx']:
+    if source.exists(): characters.update(source.read_text(encoding='utf-8'))
+for source in [project/'src/data/status.json', project/'src/screens/MineStatusPage.tsx', *list((project/'src/components/status').glob('*.tsx'))]:
     if source.exists(): characters.update(source.read_text(encoding='utf-8'))
 for source in (project/'public/papers').rglob('*.json'):
     characters.update(source.read_text(encoding='utf-8'))

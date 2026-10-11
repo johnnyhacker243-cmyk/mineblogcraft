@@ -99,7 +99,7 @@ const menus = [
   ["MineRSS", "multiplayer"],
   ["MineResearch", "realms"],
   ["MineWiki", "wiki"],
-  ["Quit Game", "exit"],
+  ["MineStatus", "status"],
   ["Language", "language"],
   ["作者介绍", "profile"],
 ];

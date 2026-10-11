@@ -114,3 +114,5 @@ Vite 运行时执行 `npm run test:research` 可验证三种桌面尺寸及阅�
 当前主 Logo 显示 Mineblogcraft，版本文字为 `Mineblogcraft 1.22.1`，底部文字为 `Copyright BingWang YTC. Do not distribute!`；显示版本与素材来源版本相互独立。将来公开发布前必须重新审查素材、Logo、商标和声音授权。
 
 MineWiki 已实现 Advancements 风格四分支知识树、拖拽缩放、元数据检索、Tooltip 与详情面板。首页原 Options... 入口改为 MineWiki；示例内容与学习状态不代表作者真实学习记录。数据、资源及验证说明见 [WIKI_MODULE.md](WIKI_MODULE.md)。
+
+MineStatus 已接入首页原 Quit Game 入口：附魔书、材料槽和三条可查看详情的状态词条。当前为明确标记的静态示例，尚未连接真实监控。实现、资源、数据接口及测试说明见 [STATUS_MODULE.md](STATUS_MODULE.md)。可运行 `npm run test:status` 验证该模块。

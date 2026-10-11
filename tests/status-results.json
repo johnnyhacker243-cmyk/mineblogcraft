@@ -1,0 +1,45 @@
+{
+  "sizes": [
+    {
+      "width": 1366,
+      "height": 768,
+      "box": {
+        "x": 243,
+        "y": 102.390625,
+        "width": 880,
+        "height": 576.59375
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "box": {
+        "x": 355,
+        "y": 153.046875,
+        "width": 1210,
+        "height": 792.3125
+      }
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "box": {
+        "x": 455,
+        "y": 192.9375,
+        "width": 1650,
+        "height": 1080.625
+      }
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "checks": [
+    "static demo disclosure",
+    "frame stability",
+    "tooltips",
+    "keyboard activation",
+    "Escape/back and re-entry",
+    "WebGL book",
+    "actual book animation and reduced motion"
+  ]
+}

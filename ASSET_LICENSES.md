@@ -60,3 +60,7 @@ JiaMing Wang、Kai Yang、MinJing Li (2024)，PLOS ONE 19(10): e0308639。原文
 MineResearch 藏书架新增本地原版素材：`block/bookshelf.png`、`block/oak_planks.png`、`block/spruce_planks.png`、`block/enchanting_table_top.png`、`block/enchanting_table_side.png`、`block/enchanting_table_bottom.png`，复用 `entity/enchanting_table_book.png` 与 `item/enchanted_book.png`。书页反馈声来自同版本资产索引中的 `minecraft/sounds/item/book/open_flip1.ogg`。均由用户授权的 1.21.1 本地客户端读取，输出位于被忽略的 `public/assets/inventory/`，不会加入 Git 提交；并非自由再分发素材。附魔台几何与动作是前端参考实现。
 
 MineWiki 使用本地 Minecraft Java 1.21.1 原版 `gui/advancements/` 窗口/背景、`gui/sprites/advancements/` 页签与三类节点框；新增纸、时钟、铁剑与中继器图标。窗口裁取和边缘切片只为本地前端阅读适配，导出在被忽略的 `public/assets/inventory/`。字体和音效沿用已授权本地客户端，未再分发至 GitHub。具体清单及视觉限制见 WIKI_MODULE.md。
+
+## MineStatus 本地状态附魔台
+
+使用 1.21.1 原版附魔窗口、词条及等级图标、钻石剑、青金石和附魔书图集；通过 scripts/import-inventory.py 从已授权客户端导入。窗口边框仅裁切原像素，书本由代码几何渲染。派生 PNG、原始纹理与位图字体仍保留本地、排除 Git，不作为可自由再分发素材。无需新增第三方美术资源。

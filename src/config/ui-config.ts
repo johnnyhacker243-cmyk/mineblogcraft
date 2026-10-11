@@ -5,6 +5,7 @@ export type ScreenId =
   | "realms"
   | "wiki"
   | "options"
+  | "status"
   | "exit"
   | "language"
   | "profile"
@@ -45,7 +46,7 @@ export const menu: { label: string; target: ScreenId }[] = [
   { label: "MineRSS", target: "multiplayer" },
   { label: "MineResearch", target: "realms" },
   { label: "MineWiki", target: "wiki" },
-  { label: "Quit Game", target: "exit" },
+  { label: "MineStatus", target: "status" },
 ];
 // Original replacement text, selected once per application session.
 export const splashes = [

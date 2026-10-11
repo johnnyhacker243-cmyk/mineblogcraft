@@ -1,0 +1,244 @@
+.status-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(10px * var(--status-scale));
+  background: #0009;
+  overflow: auto;
+}
+.status-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(6px * var(--status-scale));
+}
+.status-heading h1 {
+  margin: 0;
+  font-size: inherit;
+  --inventory-scale: calc(1.5 * var(--status-scale));
+}
+.status-window {
+  width: calc(440px * var(--status-scale));
+  padding: calc(12px * var(--status-scale));
+  border: calc(7px * var(--status-scale)) solid transparent;
+  border-image: url("/assets/inventory/status-frame.png") 7 fill /
+    calc(7px * var(--status-scale)) stretch;
+  background: #c6c6c6;
+  image-rendering: pixelated;
+  animation: status-arrive 0.8s ease-out both;
+}
+.status-window-label {
+  display: flex;
+  justify-content: space-between;
+  --inventory-scale: calc(0.7 * var(--status-scale));
+}
+.status-enchant-area {
+  display: grid;
+  grid-template-columns: 135fr 255fr;
+  gap: calc(14px * var(--status-scale));
+  align-items: center;
+  height: calc(134px * var(--status-scale));
+}
+.status-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(6px * var(--status-scale));
+  --inventory-scale: calc(0.6 * var(--status-scale));
+}
+.status-book {
+  width: 100%;
+  height: calc(84px * var(--status-scale));
+}
+.status-book .enchantment-model {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.status-book canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.status-book .table-fallback {
+  display: none;
+  width: calc(48px * var(--status-scale));
+  margin: auto;
+}
+.status-book [data-fallback="true"] .table-fallback {
+  display: block;
+}
+.status-book [data-fallback="true"] canvas {
+  display: none;
+}
+.status-inputs {
+  display: flex;
+  gap: calc(8px * var(--status-scale));
+}
+.status-input {
+  position: relative;
+  width: calc(25px * var(--status-scale));
+  height: calc(25px * var(--status-scale));
+  border: 0;
+  padding: calc(3px * var(--status-scale));
+  background: url("/assets/inventory/slot.png") center / 100% 100%;
+  cursor: help;
+}
+.status-input img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.status-input:hover,
+.status-input:focus-visible {
+  outline: calc(1px * var(--status-scale)) solid #fff;
+}
+.status-input.enchanted img {
+  animation: status-glint 5s ease-in-out infinite;
+}
+.status-options {
+  display: flex;
+  flex-direction: column;
+  gap: calc(4px * var(--status-scale));
+}
+.status-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: calc(33px * var(--status-scale));
+  border: 0;
+  padding: calc(4px * var(--status-scale));
+  background: url("/assets/inventory/enchant-slot.png") center / 100% 100%;
+  cursor: pointer;
+  text-align: left;
+  --inventory-scale: calc(0.95 * var(--status-scale));
+}
+.status-item:hover,
+.status-item:focus-visible,
+.status-item[aria-pressed="true"] {
+  background-image: url("/assets/inventory/enchant-slot-hover.png");
+  outline: calc(1px * var(--status-scale)) solid #eee6;
+}
+.status-level {
+  width: calc(30px * var(--status-scale));
+  text-align: center;
+  --inventory-scale: calc(1.25 * var(--status-scale));
+}
+.status-item-copy {
+  display: flex;
+  flex-direction: column;
+  gap: calc(4px * var(--status-scale));
+}
+.status-item-copy > :last-child {
+  --inventory-scale: calc(0.8 * var(--status-scale));
+}
+.status-rune {
+  margin-left: auto;
+  padding-right: calc(5px * var(--status-scale));
+  --inventory-scale: calc(0.8 * var(--status-scale));
+}
+.status-tooltip {
+  position: absolute;
+  bottom: calc(100% + 5px * var(--status-scale));
+  left: 0;
+  z-index: 10;
+  width: max-content;
+  max-width: calc(290px * var(--status-scale));
+  display: none;
+  flex-direction: column;
+  gap: calc(5px * var(--status-scale));
+  padding: calc(7px * var(--status-scale));
+  background: #100917f5;
+  border: calc(1px * var(--status-scale)) solid #45216c;
+  box-shadow: 0 0 0 calc(1px * var(--status-scale)) #100917;
+  --inventory-scale: calc(0.72 * var(--status-scale));
+  pointer-events: none;
+}
+.status-item:hover .status-tooltip,
+.status-item:focus-visible .status-tooltip,
+.status-input:hover .status-tooltip,
+.status-input:focus-visible .status-tooltip {
+  display: flex;
+}
+.status-panel {
+  margin-top: calc(10px * var(--status-scale));
+  height: calc(100px * var(--status-scale));
+  overflow: auto;
+  border-top: calc(1px * var(--status-scale)) solid #999;
+  padding-top: calc(8px * var(--status-scale));
+  --inventory-scale: calc(0.75 * var(--status-scale));
+}
+.status-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: calc(7px * var(--status-scale));
+}
+.status-panel header button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.status-panel header button:focus-visible {
+  outline: calc(1px * var(--status-scale)) solid #444;
+}
+.status-detail-rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(6px * var(--status-scale)) calc(12px * var(--status-scale));
+}
+.status-detail-rows > div {
+  display: flex;
+  flex-direction: column;
+  gap: calc(3px * var(--status-scale));
+  --inventory-scale: calc(0.8 * var(--status-scale));
+}
+.status-guide {
+  display: flex;
+  flex-direction: column;
+  gap: calc(9px * var(--status-scale));
+  padding-top: calc(10px * var(--status-scale));
+}
+@keyframes status-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes status-glint {
+  0%,
+  70%,
+  100% {
+    filter: none;
+  }
+  85% {
+    filter: drop-shadow(0 0 2px #9542cc);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .status-window,
+  .status-input.enchanted img {
+    animation: none;
+  }
+}
+.reduced-motion .status-window,
+.reduced-motion .status-input.enchanted img {
+  animation: none;
+}
+
+.status-level img {
+  width: calc(16px * var(--status-scale));
+  height: calc(16px * var(--status-scale));
+  image-rendering: pixelated;
+}

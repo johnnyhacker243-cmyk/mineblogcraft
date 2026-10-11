@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 // Original texture faces, a 16×12×16 table and hinged 6×10 book covers.
-export function EnchantmentTable() {
+export function EnchantmentTable({ bookOnly = false }: { bookOnly?: boolean }) {
   const host = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const node = host.current!;
@@ -18,6 +18,10 @@ export function EnchantmentTable() {
     const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 200);
     camera.position.set(29, 25, 35);
     camera.lookAt(0, 7, 0);
+    if (bookOnly) {
+      camera.position.set(12, 21, 22);
+      camera.lookAt(0, 11, 0);
+    }
     const textures: THREE.Texture[] = [];
     const materials: THREE.Material[] = [];
     const geometries: THREE.BufferGeometry[] = [];
@@ -54,7 +58,7 @@ export function EnchantmentTable() {
     geometries.push(box);
     const table = new THREE.Mesh(box, [side, side, top, bottom, side, side]);
     table.position.y = 0;
-    scene.add(table);
+    if (!bookOnly) scene.add(table);
     const book = new THREE.Group();
     book.position.y = 11;
     book.rotation.x = -Math.PI / 2;
@@ -125,13 +129,14 @@ export function EnchantmentTable() {
         dt = Math.min(0.1, (now - previous) / 1000);
       previous = now;
       current += (pointer - current) * (1 - Math.exp(-6 * dt));
-      book.rotation.z = current + 0.15;
-      book.position.y = 11 + (reduce.matches ? 0 : Math.sin(t * 1.7) * 0.6);
+      const reduced = reduce.matches || !!node.closest(".reduced-motion");
+      book.rotation.z = reduced ? 0.15 : current + 0.15;
+      book.position.y = 11 + (reduced ? 0 : Math.sin(t * 1.7) * 0.6);
       wings.forEach((wing, i) => {
         wing.rotation.y =
-          (i ? -1 : 1) * (0.3 + (reduce.matches ? 0 : Math.sin(t) * 0.05));
+          (i ? -1 : 1) * (0.3 + (reduced ? 0 : Math.sin(t) * 0.05));
       });
-      leafHinge.rotation.y = reduce.matches
+      leafHinge.rotation.y = reduced
         ? -0.8
         : -Math.PI * (0.5 + 0.48 * Math.sin(t * 1.3));
       renderer.render(scene, camera);
@@ -157,12 +162,16 @@ export function EnchantmentTable() {
       renderer.dispose();
       renderer.domElement.remove();
     };
-  }, []);
+  }, [bookOnly]);
   return (
     <div className="enchantment-model" ref={host} aria-hidden="true">
       <img
         className="table-fallback"
-        src="/assets/inventory/enchanting-top.png"
+        src={
+          bookOnly
+            ? "/assets/inventory/enchanted-book.png"
+            : "/assets/inventory/enchanting-top.png"
+        }
         alt=""
       />
     </div>
