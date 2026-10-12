@@ -1,0 +1,12 @@
+{
+  "envId": "jonhyblog-d2ggh3rc306480701",
+  "region": "ap-shanghai",
+  "app": {
+    "serviceName": "jonhyblog",
+    "framework": "static",
+    "installCommand": "",
+    "buildCommand": "",
+    "outputDir": "./",
+    "deployPath": "/"
+  }
+}
