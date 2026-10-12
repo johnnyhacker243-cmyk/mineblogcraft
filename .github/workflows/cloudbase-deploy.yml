@@ -1,0 +1,79 @@
+name: Deploy Mineblogcraft to CloudBase
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudbase-jonhyblog
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BLOG_BASE_URL: https://jonhyblog-jonhyblog-d2ggh3rc306480701.webapps.tcloudbase.com/
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Check deployment credentials
+        env:
+          TCB_SECRET_ID: ${{ secrets.TCB_SECRET_ID }}
+          TCB_SECRET_KEY: ${{ secrets.TCB_SECRET_KEY }}
+        run: |
+          if [ -z "$TCB_SECRET_ID" ] || [ -z "$TCB_SECRET_KEY" ]; then
+            echo '::error::Configure TCB_SECRET_ID and TCB_SECRET_KEY in repository Actions secrets before automatic deployment.'
+            exit 1
+          fi
+      - run: npm ci
+      - name: Verify asset checks
+        run: node --test tests/cloud-assets.test.mjs
+      - name: Build with verified Minecraft resources
+        run: npm run build:cloud
+      - name: Record deployed commit
+        run: node -e "require('node:fs').writeFileSync('dist/deployment.json', JSON.stringify({commit:process.env.GITHUB_SHA,repository:process.env.GITHUB_REPOSITORY,runId:process.env.GITHUB_RUN_ID})+'\n')"
+      - name: Install official deployment CLI
+        run: npm install --global @cloudbase/cli@3.8.6
+      - name: Deploy only the current main commit
+        id: publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TCB_SECRET_ID: ${{ secrets.TCB_SECRET_ID }}
+          TCB_SECRET_KEY: ${{ secrets.TCB_SECRET_KEY }}
+        run: |
+          current_head=$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)
+          if [ "$current_head" != "$GITHUB_SHA" ]; then
+            echo 'A newer main commit exists; skip this outdated deployment.'
+            exit 0
+          fi
+          tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY"
+          tcb app deploy jonhyblog -e jonhyblog-d2ggh3rc306480701 --config-file "$GITHUB_WORKSPACE/cloudbase.release.json" --cwd "$GITHUB_WORKSPACE/dist" --framework static --output-dir ./ --deploy-path / --force --json
+          echo 'deployed=true' >> "$GITHUB_OUTPUT"
+      - name: Verify the published commit
+        if: steps.publish.outputs.deployed == 'true'
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          node --input-type=module -e '
+            const target = new URL("deployment.json", process.env.BLOG_BASE_URL);
+            for (let attempt = 0; attempt < 12; attempt++) {
+              target.searchParams.set("verify", `${process.env.EXPECTED_SHA}-${attempt}`);
+              try {
+                const response = await fetch(target, {headers:{"Cache-Control":"no-cache"},signal:AbortSignal.timeout(15000)});
+                if (response.ok && (await response.json()).commit === process.env.EXPECTED_SHA) {
+                  console.log("Published commit verified:", process.env.EXPECTED_SHA);
+                  process.exit(0);
+                }
+              } catch { /* CDN propagation may still be in progress. */ }
+              await new Promise(resolve => setTimeout(resolve, 10000));
+            }
+            throw new Error("Could not verify the published commit after deployment.");
+          '
