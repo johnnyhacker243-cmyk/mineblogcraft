@@ -41,7 +41,9 @@ GitHub 的 CloudBase OAuth 授权详情已确认包含私有仓库及仓库 Hook
 
 仓库 Webhook 列表为空，控制台未显示自动触发开关，因此使用 `.github/workflows/cloudbase-deploy.yml` 在推送 `main` 时触发 GitHub Actions。专用编程访问子账号 `mineblogcraft-deploy` 已关联 `MineblogcraftStaticDeploy` 策略，仓库加密 Actions Secrets `TCB_SECRET_ID`、`TCB_SECRET_KEY` 已配置。失效旧密钥已禁用；被撤销的临时密钥已按用户授权删除。密钥值不写入本地文件、源码或文档。
 
-首次运行 `38234706696` 已通过构建、素材验证并上传完整网站，线上 `/deployment.json` 确认提交为 `60a6f282e09f824d5645ca1d6359bd27c615b61c`，浏览器主菜单正常。官方 `app deploy` 的附加 CloudApp 归档/版本记录步骤长时间未返回，因此停止该运行，持续发布改用同一官方工具的 `hosting deploy`，直接上传预构建文件。自动发布不产生新的 CloudApp 版本记录，版本来源以 Git 提交和 Actions 日志为准；再次推送的全流程验证待完成。
+首次运行 `38234706696` 已通过构建、素材验证并上传完整网站，线上 `/deployment.json` 确认提交为 `60a6f282e09f824d5645ca1d6359bd27c615b61c`，浏览器主菜单正常。官方 `app deploy` 的附加 CloudApp 归档/版本记录步骤长时间未返回，因此停止该运行，持续发布改用同一官方工具的 `hosting deploy`，直接上传预构建文件。自动发布不产生新的 CloudApp 版本记录，版本来源以 Git 提交和 Actions 日志为准。
+
+2026-10-12 22:20 实际推送 `main` 的提交 `3dae1f23cca1b1144f29ccfc79e47553e47cb6d3` 自动触发运行 [38262131635](https://github.com/johnnyhacker243-cmyk/mineblogcraft/actions/runs/38262131635)，22:23 全部成功。测试、恢复素材、构建、上传 307 个文件及线上提交核验均通过；公开 `/deployment.json` 返回相同提交与 runId。这是实际 push 触发验证，不是手动构建成功推断。
 
 工作流使用只读 GitHub 权限、固定版本的官方 Actions、Node.js 22、CloudBase CLI 3.8.6。检查密钥后再构建；只有发布阶段读取腾讯云凭据。排队发布时跳过过时提交，上传的是完整 `dist`，入口和版本标识最后上传，不清除远端历史素材，也不会强推 Git。部署后读取 `/deployment.json` 校验 commit 与本次推送相同。该文件仅含公开版本标识，不含凭据。
 
