@@ -55,7 +55,9 @@ jobs:
             exit 0
           fi
           tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY"
-          tcb app deploy jonhyblog -e jonhyblog-d2ggh3rc306480701 --config-file "$GITHUB_WORKSPACE/cloudbase.release.json" --cwd "$GITHUB_WORKSPACE/dist" --framework static --output-dir ./ --deploy-path / --force --json
+          # Publish prebuilt files directly; app deploy additionally creates a
+          # CloudApp archive/record that can stall after the website is updated.
+          tcb hosting deploy "$GITHUB_WORKSPACE/dist" / -e jonhyblog-d2ggh3rc306480701 --entry index.html,deployment.json --json
           echo 'deployed=true' >> "$GITHUB_OUTPUT"
       - name: Verify the published commit
         if: steps.publish.outputs.deployed == 'true'

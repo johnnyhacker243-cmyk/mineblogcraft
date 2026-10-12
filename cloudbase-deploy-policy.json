@@ -1,0 +1,43 @@
+{
+  "version": "2.0",
+  "statement": [
+    {
+      "effect": "allow",
+      "action": ["tcb:CheckTcbService", "tcb:DescribeEnvs", "tcb:DescribeBillingInfo"],
+      "resource": ["*"]
+    },
+    {
+      "effect": "allow",
+      "action": [
+        "tcb:DescribeEnvInfo",
+        "tcb:DescribeStaticStore",
+        "tcb:DescribeCloudAppInfo",
+        "tcb:DescribeCloudAppCosInfo",
+        "tcb:DescribeCloudAppVersion",
+        "tcb:DescribeCloudAppVersionList",
+        "tcb:CreateCloudApp"
+      ],
+      "resource": ["qcs::tcb:ap-shanghai:uin/100046206234:env/jonhyblog-d2ggh3rc306480701"]
+    },
+    {
+      "effect": "allow",
+      "action": [
+        "cos:GetBucket",
+        "cos:GetBucketLocation",
+        "cos:GetObject",
+        "cos:HeadObject",
+        "cos:PutObject",
+        "cos:InitiateMultipartUpload",
+        "cos:UploadPart",
+        "cos:CompleteMultipartUpload",
+        "cos:AbortMultipartUpload",
+        "cos:ListParts",
+        "cos:ListMultipartUploads"
+      ],
+      "resource": [
+        "qcs::cos:ap-shanghai:uid/1402461141:c0cd-static-jonhyblog-d2ggh3rc306480701-1402461141",
+        "qcs::cos:ap-shanghai:uid/1402461141:c0cd-static-jonhyblog-d2ggh3rc306480701-1402461141/*"
+      ]
+    }
+  ]
+}

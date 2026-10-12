@@ -39,11 +39,13 @@ npm exec --yes --package=@cloudbase/cli@3.8.6 -- tcb app deploy jonhyblog -e jon
 
 GitHub 的 CloudBase OAuth 授权详情已确认包含私有仓库及仓库 Hook 权限。CloudBase 个人仓库下拉列表仍为空；手动地址入口实际可以克隆该私有仓库。保留私有仓库，不为部署改成公开仓库。
 
-仓库 Webhook 列表为空，当前控制台也未显示自动触发开关，不能将成功的手动仓库构建视为自动发布已开启。因此准备 `.github/workflows/cloudbase-deploy.yml`，按 CloudBase 官方 CI/CD 方式在推送 `main` 时触发。它目前还需要配置仓库 Actions Secrets `TCB_SECRET_ID`、`TCB_SECRET_KEY`；缺少密钥会明确失败并阻止发布，不影响已有网站。尚未验证 GitHub 自动发布成功。
+仓库 Webhook 列表为空，控制台未显示自动触发开关，因此使用 `.github/workflows/cloudbase-deploy.yml` 在推送 `main` 时触发 GitHub Actions。专用编程访问子账号 `mineblogcraft-deploy` 已关联 `MineblogcraftStaticDeploy` 策略，仓库加密 Actions Secrets `TCB_SECRET_ID`、`TCB_SECRET_KEY` 已配置。失效旧密钥已禁用；被撤销的临时密钥已按用户授权删除。密钥值不写入本地文件、源码或文档。
 
-工作流使用只读 GitHub 权限、固定版本的官方 Actions、Node.js 22、CloudBase CLI 3.8.6。检查密钥后再构建；只有发布阶段读取腾讯云凭据。排队发布时跳过过时提交，上传的是完整 `dist`，不会强推 Git。部署后读取 `/deployment.json` 校验 commit 与本次推送相同。该文件仅含公开版本标识，不含凭据。
+首次运行 `38234706696` 已通过构建、素材验证并上传完整网站，线上 `/deployment.json` 确认提交为 `60a6f282e09f824d5645ca1d6359bd27c615b61c`，浏览器主菜单正常。官方 `app deploy` 的附加 CloudApp 归档/版本记录步骤长时间未返回，因此停止该运行，持续发布改用同一官方工具的 `hosting deploy`，直接上传预构建文件。自动发布不产生新的 CloudApp 版本记录，版本来源以 Git 提交和 Actions 日志为准；再次推送的全流程验证待完成。
 
-部署凭据应由专门的腾讯云发布子账号提供，在仓库 Settings → Secrets and variables → Actions 中加密保存，不能把账户密钥发到聊天、写入源码或提交到 Git。设置持续发布凭据需要用户明确授权，配置后还必须通过实际推送与线上版本核验。
+工作流使用只读 GitHub 权限、固定版本的官方 Actions、Node.js 22、CloudBase CLI 3.8.6。检查密钥后再构建；只有发布阶段读取腾讯云凭据。排队发布时跳过过时提交，上传的是完整 `dist`，入口和版本标识最后上传，不清除远端历史素材，也不会强推 Git。部署后读取 `/deployment.json` 校验 commit 与本次推送相同。该文件仅含公开版本标识，不含凭据。
+
+发布权限记录在 `cloudbase-deploy-policy.json`：服务状态与环境套餐枚举为只读查询，环境操作限制到现有环境，COS 读写限制到该环境静态托管桶；不授予管理员、删除资源或购买权限。持续发布凭据的配置已经获得用户明确授权。未来轮换密钥时只更新上述两个加密 Secrets。
 
 构建设置：Node.js 22，项目目录 `./`，安装命令 `npm ci`，构建命令 `npm run build:cloud`，构建产物 `dist`。环境变量 `BLOG_BASE_URL` 为上面的线上地址。
 
