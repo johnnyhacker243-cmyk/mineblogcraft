@@ -1,0 +1,661 @@
+{
+  "version": 1,
+  "baseUrl": "https://jonhyblog-jonhyblog-d2ggh3rc306480701.webapps.tcloudbase.com/",
+  "files": [
+    {
+      "path": "assets/fonts/accented.png",
+      "size": 7694,
+      "sha256": "b9088c6e0496eba5df8733848a9d034381e5a656da08a6f70b9a77d178a0d0ba"
+    },
+    {
+      "path": "assets/fonts/ascii.png",
+      "size": 810,
+      "sha256": "e8646f1ed1f4bfd597d262cca3d8fac88ceaaa62807bbd5e607b2e3fe41c928a"
+    },
+    {
+      "path": "assets/fonts/default.json",
+      "size": 19118,
+      "sha256": "e17f8a4289db15bf662df3ab623ad4dd9bda9d2b2e3e9e9e743234ff186bd0c4"
+    },
+    {
+      "path": "assets/fonts/nonlatin_european.png",
+      "size": 4879,
+      "sha256": "d9f7367c97aef7146a08d14398e7431d214eea813b8a52f3c27bc87677d33eb5"
+    },
+    {
+      "path": "assets/gui/accessibility.png",
+      "size": 178,
+      "sha256": "283e131a45b0358eabfe533abc2d2509a3f986f0b4309fb5506c9237a19e78b5"
+    },
+    {
+      "path": "assets/gui/button-disabled.png",
+      "size": 1158,
+      "sha256": "4895acd147454771fd6a61ad294dfc12e13ff15d6018da26c9fa0e884fd9c14e"
+    },
+    {
+      "path": "assets/gui/button-highlight.png",
+      "size": 1703,
+      "sha256": "1fcd15ad8971b1e846f848b2211d631f51b9b6533d99ca392a5799af7e9854f9"
+    },
+    {
+      "path": "assets/gui/button.png",
+      "size": 1699,
+      "sha256": "0a2e159360200a39e0c7e9c0db0e6aa034ba4e1f8d99698c004084b5ba6e94cb"
+    },
+    {
+      "path": "assets/gui/language.png",
+      "size": 218,
+      "sha256": "bcbded8f5ce7117135781b597ea2f05cca5c4f06e2deebf004dc822279a34e82"
+    },
+    {
+      "path": "assets/gui/splashes.txt",
+      "size": 9238,
+      "sha256": "d7502466fc29162398526f6aba03fb50b3930a12ba72894586dd9957e0b6dd87"
+    },
+    {
+      "path": "assets/inventory/blue-ice.png",
+      "size": 189,
+      "sha256": "7170dfc70083df07ee61cd65aeaeb7add46c9d11397e401babc2a36d82599b07"
+    },
+    {
+      "path": "assets/inventory/book-cover-atlas.png",
+      "size": 322,
+      "sha256": "efcc111150f0f3c7d0b8e88a8d430dbeeb04618300034ea2180fa0d0257a24f2"
+    },
+    {
+      "path": "assets/inventory/book-gui.png",
+      "size": 5299,
+      "sha256": "1d4b1788be10f3b02eee0387e7be62cd1e04e08888660c89446ab70bf7934aef"
+    },
+    {
+      "path": "assets/inventory/book-open.ogg",
+      "size": 6615,
+      "sha256": "ad2082e9f719c8e61190171236855d118f40ecdd63aa5af10ca1e85ef86b3838"
+    },
+    {
+      "path": "assets/inventory/book.png",
+      "size": 203,
+      "sha256": "e9f710d62e16776df7e5bf05dcaa187d40cc1428f4fd18644e3ff67062f9fff2"
+    },
+    {
+      "path": "assets/inventory/bookshelf.png",
+      "size": 319,
+      "sha256": "a1c9dd1cdd60c60dbd285645af578e4e3f473704489ccab6d329071842f70197"
+    },
+    {
+      "path": "assets/inventory/clock.png",
+      "size": 252,
+      "sha256": "52652043a299f6d27da9229f1ccadd64e94018e6126c0bb2cbdf283bec114d87"
+    },
+    {
+      "path": "assets/inventory/compass.png",
+      "size": 212,
+      "sha256": "0b14eabd82b84a1273057baac58cff50279329e15260b16b711e5a49ffdc56a4"
+    },
+    {
+      "path": "assets/inventory/crafting-side.png",
+      "size": 265,
+      "sha256": "c962364f8165a2702ceb42eed59f1983194e4b7fd0a08de8790617f6c06bbaab"
+    },
+    {
+      "path": "assets/inventory/crafting-top.png",
+      "size": 211,
+      "sha256": "8046b35b6ed5696ec21a0135b8a897f35acd7f2500b6b2e4b5b28ae4d25ac76c"
+    },
+    {
+      "path": "assets/inventory/creative.png",
+      "size": 332,
+      "sha256": "cf45ab0dc4b81f675b119ca565d7268bff4018c89fa2d34e22e603a94ddec026"
+    },
+    {
+      "path": "assets/inventory/diamond-1.png",
+      "size": 448,
+      "sha256": "68b43393d01db814bd2e9311bc2a5d3be5bb5294e9d557c60cc59c0ed9878e8a"
+    },
+    {
+      "path": "assets/inventory/diamond-2.png",
+      "size": 272,
+      "sha256": "a2a435fbf364ed2399de22770fbad2ecd383faebc75df32e20e2826af0ca8c01"
+    },
+    {
+      "path": "assets/inventory/diamond.png",
+      "size": 208,
+      "sha256": "b27b081fde6a794dfb52d37f4ab2a86931ce127323f786a27cea41d2dbe913a2"
+    },
+    {
+      "path": "assets/inventory/dirt.png",
+      "size": 200,
+      "sha256": "1f0f0e619e7dfe683ea45b9254859f14b0ed5f1debdb242ea878828575be5bf0"
+    },
+    {
+      "path": "assets/inventory/dragon-egg-model.json",
+      "size": 4546,
+      "sha256": "470d0dff1a9fc26c21e7b952ac06da62e467a527c5704b9707c6660c0ea701b6"
+    },
+    {
+      "path": "assets/inventory/dragon-egg.png",
+      "size": 156,
+      "sha256": "2f016a67cf5acc9e4f11862dae6c12ac95684476c6eddc99fd5af522661e44ca"
+    },
+    {
+      "path": "assets/inventory/enchant-level-1.png",
+      "size": 212,
+      "sha256": "9e803b636672c7281cebc637a80e4a7dfa3fe4cb9c207018e8bd283ff1f69376"
+    },
+    {
+      "path": "assets/inventory/enchant-level-2.png",
+      "size": 231,
+      "sha256": "7e4d7d4f92dc3a76e9c1cdc7d741ee322fb38678c04dd9f66be415db84052c54"
+    },
+    {
+      "path": "assets/inventory/enchant-level-3.png",
+      "size": 225,
+      "sha256": "793ad69acb1fa9292e9d3eb08683d73820bb0fc2c124471c9e5a390db9809c7a"
+    },
+    {
+      "path": "assets/inventory/enchant-slot-hover.png",
+      "size": 102,
+      "sha256": "beaa7713aabc7f89ab0c0465f4b2cbf5581f811ce7eaad04d1858cb7f368dff8"
+    },
+    {
+      "path": "assets/inventory/enchant-slot.png",
+      "size": 102,
+      "sha256": "7de2dce101f6cf6a26301138bd5f5259d0f2c2fedcb21eacecda185a5df193ec"
+    },
+    {
+      "path": "assets/inventory/enchanted-book.png",
+      "size": 251,
+      "sha256": "f96da147fcf6f373df00ab5181043ea0c76af4ba7025f43f377f678ac466fb43"
+    },
+    {
+      "path": "assets/inventory/enchanting-bottom.png",
+      "size": 189,
+      "sha256": "d9c7dc812d8e8b995e22caff2b10c1fc663b5e127a94c20a7476cfd88af2cd82"
+    },
+    {
+      "path": "assets/inventory/enchanting-side.png",
+      "size": 246,
+      "sha256": "7b94e576e7abeace63f32ff372ecdd63717c5c9931da933dc51e01ccddb65934"
+    },
+    {
+      "path": "assets/inventory/enchanting-top.png",
+      "size": 175,
+      "sha256": "778573d8e711b0b3be8784a581b74e0ff0fef01163dbef3a858f24cb534ce6cb"
+    },
+    {
+      "path": "assets/inventory/ender-pearl.png",
+      "size": 206,
+      "sha256": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a"
+    },
+    {
+      "path": "assets/inventory/font.json",
+      "size": 18214,
+      "sha256": "bd59bd1662b37bda1e4bdec616e891c30577cdc8fb9f0601636a5a87560bf6ca"
+    },
+    {
+      "path": "assets/inventory/food-empty.png",
+      "size": 113,
+      "sha256": "82c8ae2e6e347ae784d8ca7587617ccde2d67f832a6c5a2995fb0052f0a45e60"
+    },
+    {
+      "path": "assets/inventory/food-full.png",
+      "size": 138,
+      "sha256": "cebb09f462a4022d2f839cb52536f495d4284bea63305349a79c1ea9bfb66917"
+    },
+    {
+      "path": "assets/inventory/footer-separator.png",
+      "size": 101,
+      "sha256": "d094e814973e333b673d050c2c0a686d5a0d54462c0bc3e2d582c2443adf5776"
+    },
+    {
+      "path": "assets/inventory/frame.png",
+      "size": 163,
+      "sha256": "ebf51cd296852128deaf2b4ddaf77b48d0451d9c6bc2f50460fb72ddf95ea2ab"
+    },
+    {
+      "path": "assets/inventory/golden-apple.png",
+      "size": 204,
+      "sha256": "de0de35dfe21f5644a9de5b8c46c1154e004c1454e60100ed61e3d3aec8cb972"
+    },
+    {
+      "path": "assets/inventory/grass-border.png",
+      "size": 517,
+      "sha256": "a229b4457b4fba3de0c81b246964e2fe75cdf293fa2dc1f7f90eac24ca7648e6"
+    },
+    {
+      "path": "assets/inventory/grass-overlay.png",
+      "size": 177,
+      "sha256": "43d98318407d9d122b83468cf183d18722e548c2144f9c2ffe2021b5c3e770e0"
+    },
+    {
+      "path": "assets/inventory/grass-side.png",
+      "size": 345,
+      "sha256": "ab572ac7ebd373abdeb961de1f3cba0afcd91e1acb700745ece4f719790bae3d"
+    },
+    {
+      "path": "assets/inventory/grass.png",
+      "size": 298,
+      "sha256": "52f44b64ce884a13dfe35e4b4da2e35898b790dd4d7a5ea536f1b0c0d56d29b4"
+    },
+    {
+      "path": "assets/inventory/header-separator.png",
+      "size": 107,
+      "sha256": "31e331cfa74884bb12d17dd4decdfa4210c130c0d60e9fd924d62badc7d02604"
+    },
+    {
+      "path": "assets/inventory/heart-container.png",
+      "size": 108,
+      "sha256": "5dad1a14187bf035d1cd56a5477f162e8f3baadeccadcc20e11f58db5a26ac0f"
+    },
+    {
+      "path": "assets/inventory/heart-full.png",
+      "size": 114,
+      "sha256": "fbc682e09ae677d82fb9bd638eae2fef0e75d3dcb2f556ec9d693fc1ba1321c9"
+    },
+    {
+      "path": "assets/inventory/inventory.png",
+      "size": 468,
+      "sha256": "31223b2c46c34d101bd80e8313973a7d4a1f60dbb7f62ff74bc70fecd616bb07"
+    },
+    {
+      "path": "assets/inventory/iron-sword.png",
+      "size": 196,
+      "sha256": "ed1fa2f83955583e70a19791455d13989e8bd93b1d7240e775a57141022bed6b"
+    },
+    {
+      "path": "assets/inventory/lapis.png",
+      "size": 188,
+      "sha256": "261b626e66fc29d6a28990ac36c74a04afa2e1d03daff00c5f3b3e5a79463a14"
+    },
+    {
+      "path": "assets/inventory/menu-list.png",
+      "size": 96,
+      "sha256": "f37467f09c7253c31a567def884c4ff08d4467b2b5669d3b02c059653454b518"
+    },
+    {
+      "path": "assets/inventory/mojang-studios-atlas.png",
+      "size": 9581,
+      "sha256": "27d2a588a33e94aff8cea4ea6090509ab3e10640f980e63dfd317c6b0dcd30df"
+    },
+    {
+      "path": "assets/inventory/mojang-studios-logo.png",
+      "size": 16829,
+      "sha256": "f0b19274ac1cdfce2e872b1ed06be1ab17cdbc281f7b1cbc8fa391d3b71c3cc4"
+    },
+    {
+      "path": "assets/inventory/nether-star.png",
+      "size": 186,
+      "sha256": "1378e77a3ff64e219a3fa7d5812340a4b4c96c7b2066b728df1940a4f61b89f1"
+    },
+    {
+      "path": "assets/inventory/oak-planks.png",
+      "size": 202,
+      "sha256": "3a33db67a3ba30537d0890a5cb37c8087ca336be89cbb1393a71c23224e361a8"
+    },
+    {
+      "path": "assets/inventory/page-back-highlight.png",
+      "size": 212,
+      "sha256": "837d74730e86c63d0cea138cda4c3665615c08d3ccccae13976179861f129b01"
+    },
+    {
+      "path": "assets/inventory/page-back.png",
+      "size": 196,
+      "sha256": "b10e336b0386e1b6943f3c6b6fc514b6f960a3389cc5dc7535217fc6ccabb6c6"
+    },
+    {
+      "path": "assets/inventory/page-forward-highlight.png",
+      "size": 214,
+      "sha256": "2f6564c9ae9562d46449d1207c161d57b4cb55dfdab427bd87b58c5bf6c4c86c"
+    },
+    {
+      "path": "assets/inventory/page-forward.png",
+      "size": 196,
+      "sha256": "696a12013a94687f555f1d07feec6fa77ee32f25a77e36002538aea58f355a7b"
+    },
+    {
+      "path": "assets/inventory/paper.png",
+      "size": 176,
+      "sha256": "8ffee002bbc339552eb4d6be5948eb4eb66d016c19e7bbc55bc1cd4a575cc44a"
+    },
+    {
+      "path": "assets/inventory/pickaxe.png",
+      "size": 182,
+      "sha256": "7672c209d0c66c43d297b3d04513c9e789d03f5ea6ff1e564a4dbc1fd78a5c88"
+    },
+    {
+      "path": "assets/inventory/ping-1.png",
+      "size": 115,
+      "sha256": "cf16ebf324d8406a091ab79ef5aac90ebf206885529631b4ca5f8dc33565d2bc"
+    },
+    {
+      "path": "assets/inventory/ping-5.png",
+      "size": 105,
+      "sha256": "2cf7bc87a1f04389f4dfbd376a00b64d28f7ed37f13df5d33c051137425cc1e6"
+    },
+    {
+      "path": "assets/inventory/redstone.png",
+      "size": 179,
+      "sha256": "6d0e6a1fd54142cd3de649e1100c428733512b322a0b0a530f62eae9f86881ec"
+    },
+    {
+      "path": "assets/inventory/repeater.png",
+      "size": 188,
+      "sha256": "8159510efca23ee914da39cf35d1c3288fa7236a5bed23356358341044675dd7"
+    },
+    {
+      "path": "assets/inventory/shield-slot.png",
+      "size": 169,
+      "sha256": "ea0a9a662bbd54cdc0c56014e64012f3c024a2476a23f898da379515bd045d56"
+    },
+    {
+      "path": "assets/inventory/sign-edge.png",
+      "size": 159,
+      "sha256": "4ddc96ff5ae745284def714b5c64cfb7f9854b64ac6c49193477833c3c3c39d3"
+    },
+    {
+      "path": "assets/inventory/sign-face.png",
+      "size": 260,
+      "sha256": "75cdb63ec31faa3c2fab41db17dea9cf0b7d45b1cfdb0ddfa2fedf5354559405"
+    },
+    {
+      "path": "assets/inventory/sign.png",
+      "size": 426,
+      "sha256": "c7499514fe10875fa9d0433282a7b27405cc2358bc64b250745e3891ee5be0b0"
+    },
+    {
+      "path": "assets/inventory/slot.png",
+      "size": 113,
+      "sha256": "ea837f102eb9d3cfbb72f829cc312b329e9caa58dcdb56d90186c7252d1e9cd6"
+    },
+    {
+      "path": "assets/inventory/spruce-planks.png",
+      "size": 202,
+      "sha256": "43ddc665352825876985faaed7e5f7b958f9b8fc3cad56d7bca1c2db7a54949a"
+    },
+    {
+      "path": "assets/inventory/status-frame.png",
+      "size": 177,
+      "sha256": "3790532a271b2e20771abf1edeed58e3075d064baa49d3e8ed82f8821ccffaa8"
+    },
+    {
+      "path": "assets/inventory/status-gui.png",
+      "size": 434,
+      "sha256": "44b4c725852a7655a6a15f74ea73eb7d82e613a05c3b5252adfab9e9cde9b52d"
+    },
+    {
+      "path": "assets/inventory/steve.png",
+      "size": 920,
+      "sha256": "d876e0c88f4b3de71040966ed94a614f315b888592b520b993399fd2738418d0"
+    },
+    {
+      "path": "assets/inventory/sword.png",
+      "size": 194,
+      "sha256": "5634a8cb79a70beb306210de9ec492fc2d4dc8f739372683e9882ef06bf63008"
+    },
+    {
+      "path": "assets/inventory/tab-1.png",
+      "size": 154,
+      "sha256": "ea11e5bdb7367ae5b12c2671ab0e043b4cdeea39b76621626a4176f9e6027b23"
+    },
+    {
+      "path": "assets/inventory/tab-2.png",
+      "size": 138,
+      "sha256": "45878f87713a95e9e383d9ee443ef81c8dcc1acadd76eb6c71693c9458761cfa"
+    },
+    {
+      "path": "assets/inventory/tab-3.png",
+      "size": 138,
+      "sha256": "45878f87713a95e9e383d9ee443ef81c8dcc1acadd76eb6c71693c9458761cfa"
+    },
+    {
+      "path": "assets/inventory/tab-4.png",
+      "size": 138,
+      "sha256": "45878f87713a95e9e383d9ee443ef81c8dcc1acadd76eb6c71693c9458761cfa"
+    },
+    {
+      "path": "assets/inventory/tab-5.png",
+      "size": 138,
+      "sha256": "45878f87713a95e9e383d9ee443ef81c8dcc1acadd76eb6c71693c9458761cfa"
+    },
+    {
+      "path": "assets/inventory/tab-6.png",
+      "size": 138,
+      "sha256": "45878f87713a95e9e383d9ee443ef81c8dcc1acadd76eb6c71693c9458761cfa"
+    },
+    {
+      "path": "assets/inventory/tnt-side.png",
+      "size": 176,
+      "sha256": "950388eb9f86f9882c11e4ef291c4da8416433d9cac8ce2713abfb322f2ca159"
+    },
+    {
+      "path": "assets/inventory/tnt-top.png",
+      "size": 200,
+      "sha256": "59b071086ceddf43d8a95dec7441e450781215b89e7998c906224af859b04c25"
+    },
+    {
+      "path": "assets/inventory/torch.png",
+      "size": 138,
+      "sha256": "329db8f31720564ca9c6eeb3bafb98bb30a4d277e958e55806720cc01dbf296d"
+    },
+    {
+      "path": "assets/inventory/unifont.png",
+      "size": 33718,
+      "sha256": "d06a5ee6dcfff6692d028257a3cdd69a5ef3d6cae5529305932759b43f1d8bfe"
+    },
+    {
+      "path": "assets/inventory/wiki-challenge-obtained.png",
+      "size": 222,
+      "sha256": "77443069e9ecf2faa9a245e0a21a2b68c9b14f72111fa7519b733d06d868bad4"
+    },
+    {
+      "path": "assets/inventory/wiki-challenge-unobtained.png",
+      "size": 212,
+      "sha256": "afebbac452ee8bddb9d47cd4d0dc220d17cf0177e6f5a41273e28dc54e526d05"
+    },
+    {
+      "path": "assets/inventory/wiki-end.png",
+      "size": 200,
+      "sha256": "773f82a8b65dda7f9f44aa1c3da9edaf6769041662eb2d466d305b790eb27888"
+    },
+    {
+      "path": "assets/inventory/wiki-goal-obtained.png",
+      "size": 216,
+      "sha256": "5389c9209dafc7e227ee50111fdb4a20fadb32a1c9bf9f4f99acbb4368adac65"
+    },
+    {
+      "path": "assets/inventory/wiki-goal-unobtained.png",
+      "size": 222,
+      "sha256": "bb90098fa8f8bf75254ee434c4c6a3beee84a0589164c6493fec02547021737e"
+    },
+    {
+      "path": "assets/inventory/wiki-husbandry.png",
+      "size": 186,
+      "sha256": "324fa08c758ea228711d312b6cabec69c5494646173f28b4047372a310573cad"
+    },
+    {
+      "path": "assets/inventory/wiki-nether.png",
+      "size": 211,
+      "sha256": "125388f467a64d0ecdff915462f7dcf6a7e730056d1f026ed4c0687dacfd0d6b"
+    },
+    {
+      "path": "assets/inventory/wiki-stone.png",
+      "size": 171,
+      "sha256": "a21cf913ad64be5129385c9efc9c70972ad2dd486f156300d7234f05ca91b03d"
+    },
+    {
+      "path": "assets/inventory/wiki-tab-selected.png",
+      "size": 130,
+      "sha256": "e58898033d6e0f9b13deac81c3f74c112e4efd1eb8c86f5ea87e011d6c79042e"
+    },
+    {
+      "path": "assets/inventory/wiki-tab.png",
+      "size": 130,
+      "sha256": "3c73e7de0b5ee866aa51bc88fbde8d2912196823d1e38ad6c75d4529d72247ff"
+    },
+    {
+      "path": "assets/inventory/wiki-task-obtained.png",
+      "size": 162,
+      "sha256": "c4ac927bccfdf91185beec71d6dc5c326beed0fd2adc7cd6aa3c12eba44ff6f2"
+    },
+    {
+      "path": "assets/inventory/wiki-task-unobtained.png",
+      "size": 162,
+      "sha256": "56a500f1f36f4ffef959cf33f1a849bf75052be9bab77ea9a6abbd0bd01e4719"
+    },
+    {
+      "path": "assets/inventory/wiki-title.png",
+      "size": 158,
+      "sha256": "b355968043d520df662f0a34423207c11b0d2eccd4f6a62dcd0a6056f8f4d4a2"
+    },
+    {
+      "path": "assets/inventory/wiki-window-crop.png",
+      "size": 1229,
+      "sha256": "92f042b5ab34de7c251b32da3b1087821cee00b289666c3d825bc632f663afcd"
+    },
+    {
+      "path": "assets/inventory/wiki-window.png",
+      "size": 771,
+      "sha256": "3ebcf086c611f6f67255d72c6d7a7359ff662d49c82e33d5527309f32f83531f"
+    },
+    {
+      "path": "assets/inventory/world-anvil.png",
+      "size": 170,
+      "sha256": "2266db251b99f5df98d8f049e3f7dd6cd85e8146b46011f6918995f392721e48"
+    },
+    {
+      "path": "assets/inventory/world-chiseled.png",
+      "size": 206,
+      "sha256": "9de3cdfa63b9956058b6ef27cb82faa1bc11622a6b8145c12b0c7a2783a50b3b"
+    },
+    {
+      "path": "assets/inventory/world-copper.png",
+      "size": 214,
+      "sha256": "e5587b25d698a33eaa84b4f9faca00115cf91ff01e0340004c604913a1b2b22c"
+    },
+    {
+      "path": "assets/inventory/world-glass.png",
+      "size": 147,
+      "sha256": "cb89c706dce86eac3123cef087d359b5f23098b658a468fb91662b4a9922bcd0"
+    },
+    {
+      "path": "assets/inventory/world-lantern.png",
+      "size": 2638,
+      "sha256": "e6c54c1ecf81210c94e95d629e4d61b8424075425bb574c635504d2e0b96f59c"
+    },
+    {
+      "path": "assets/inventory/world-leaves.png",
+      "size": 202,
+      "sha256": "69c9c7048695e014aee6b8a2c4cb080607bd7a2a5291c06218b8134cbfcdc04f"
+    },
+    {
+      "path": "assets/inventory/world-obsidian.png",
+      "size": 189,
+      "sha256": "d9c7dc812d8e8b995e22caff2b10c1fc663b5e127a94c20a7476cfd88af2cd82"
+    },
+    {
+      "path": "assets/inventory/world-portal.png",
+      "size": 9005,
+      "sha256": "845ceb03d82607ec15ab26d32c6e389efb9f7a118baea3944b68363c33f70172"
+    },
+    {
+      "path": "assets/inventory/world-quartz.png",
+      "size": 181,
+      "sha256": "6a1525cca96303a1fa02e019861ae4fe795c9ad93a79123c654db242cce898f8"
+    },
+    {
+      "path": "assets/inventory/world-redstone.png",
+      "size": 174,
+      "sha256": "92c8738669b45a956f4783f3d928ca3d3b99a56546650070b24779428bf50291"
+    },
+    {
+      "path": "assets/inventory/world-stone.png",
+      "size": 199,
+      "sha256": "33da66239c5586ee712ffa3fab45927cd7d4968cf111829d3049f84152d85953"
+    },
+    {
+      "path": "assets/inventory/world-wood.png",
+      "size": 202,
+      "sha256": "2bccdc1ef269b7ae6050d46b70071ead5c3ad4c3a16e3f6baf24fc629752b8bc"
+    },
+    {
+      "path": "assets/inventory/writable-book.png",
+      "size": 247,
+      "sha256": "181b670aafb03287849957ee882863c3924a2aaa826f3f44ab94bea906c54228"
+    },
+    {
+      "path": "assets/inventory/written-book.png",
+      "size": 211,
+      "sha256": "fd6a75bb4c32a9c291cb3a1b72aab5193c0480359723f70115a9c9930c2d0c26"
+    },
+    {
+      "path": "assets/logo/blog-logo.png",
+      "size": 1243651,
+      "sha256": "1cc52cdebe66383f9b4fe8eeb3ddf5b9dc3db340f29b26993f90a89245f9dedc"
+    },
+    {
+      "path": "assets/logo/edition.png",
+      "size": 10797,
+      "sha256": "6d31f07c305a4e7e418fa758c368f1adfd0cc58f205ae9b3685bd4149be27273"
+    },
+    {
+      "path": "assets/logo/minecraft.png",
+      "size": 34429,
+      "sha256": "48cdff280471c0847e9eb695946f1d1d53c5163a609737138f2839efe0d6723b"
+    },
+    {
+      "path": "assets/panorama/fallback.png",
+      "size": 520006,
+      "sha256": "78d81a411b23597cca255a249c04e16af1bf145c6e1f3fcb702a69c2e6fed536"
+    },
+    {
+      "path": "assets/panorama/overlay.png",
+      "size": 86,
+      "sha256": "4cabea349b45c137de6ab4472303fb20fb94b07a119c8926aa54575ffbab91e6"
+    },
+    {
+      "path": "assets/panorama/panorama_0.png",
+      "size": 520006,
+      "sha256": "78d81a411b23597cca255a249c04e16af1bf145c6e1f3fcb702a69c2e6fed536"
+    },
+    {
+      "path": "assets/panorama/panorama_1.png",
+      "size": 414391,
+      "sha256": "f1ca4c776b51fed0919baa7d6d470da0b5051afa4b0c9dd283acbcd03c857f9e"
+    },
+    {
+      "path": "assets/panorama/panorama_2.png",
+      "size": 395359,
+      "sha256": "75c408d4189192860502eeb31b4bc75377de0e2855ee816b7a10324b0b0cd9cc"
+    },
+    {
+      "path": "assets/panorama/panorama_3.png",
+      "size": 426471,
+      "sha256": "1093cffca9757af1a578c3c9781868f6a2347f364a09e7b1b4db3054563db900"
+    },
+    {
+      "path": "assets/panorama/panorama_4.png",
+      "size": 545019,
+      "sha256": "e7bf7592dbaa1deb44e96e15f9dd0164628390c2b5ce07ede135cfab1b3061ab"
+    },
+    {
+      "path": "assets/panorama/panorama_5.png",
+      "size": 211632,
+      "sha256": "5a91390b0ed32f85526bde2faa15c758cc3bd53c48efe4fd5ca4efa3b13b0656"
+    },
+    {
+      "path": "assets/panorama/panorama_overlay.png",
+      "size": 86,
+      "sha256": "4cabea349b45c137de6ab4472303fb20fb94b07a119c8926aa54575ffbab91e6"
+    },
+    {
+      "path": "assets/rss/background.png",
+      "size": 2294707,
+      "sha256": "edc29c0a2d01410eac0fde2772da3e4b6a45ae57ae8cbae86ce0a21fee331b6f"
+    },
+    {
+      "path": "assets/sounds/click.ogg",
+      "size": 9138,
+      "sha256": "c8e78aea3a020d743189fd4d5b0636b791b557b608c62f6474d0f16abcfcc0d8"
+    }
+  ]
+}

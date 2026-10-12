@@ -31,7 +31,19 @@ npm exec --yes --package=@cloudbase/cli@3.8.6 -- tcb app deploy jonhyblog -e jon
 
 `--force` 跳过同名应用更新提示，用于已授权的版本更新，不是 Git 强制推送。安装/云端构建命令为空，因为上传的是已经构建的静态文件。
 
-原版贴图、字体、音效等本地资源由 Vite 从 public 复制进 dist；GitHub 不包含这些被忽略的文件。目前没有配置 GitHub 自动部署，不能仅从远程仓库构建获得完整素材。授权凭据由官方工具保存在本机，不写入本项目、Git 或文档。
+原版贴图、字体、音效等本地资源由 Vite 从 public 复制进 dist；GitHub 不包含这些被忽略的文件。授权凭据由官方工具保存在本机，不写入本项目、Git 或文档。
+
+## GitHub 持续发布配置
+
+用户已授权 CloudBase 访问 GitHub。目标为现有应用 `jonhyblog`，仓库 `johnnyhacker243-cmyk/mineblogcraft` 的 `main` 分支，部署路径 `/`。控制台绑定与真实推送验证仍待完成，不能仅凭本地配置认为自动部署已经开启。
+
+构建设置：Node.js 22，项目目录 `./`，安装命令 `npm ci`，构建命令 `npm run build:cloud`，构建产物 `dist`。环境变量 `BLOG_BASE_URL` 为上面的线上地址。
+
+`cloud-assets.json` 只记录 131 个展示素材的路径、字节大小和 SHA-256，不包含素材文件。`scripts/cloud-assets.mjs` 从现有网站恢复缺失素材并核验完整性，然后才运行原有构建。构建产物会携带同一套素材，因此后续代码更新继续保留这些文件。缺失、损坏或下载失败会阻止部署，不能以缺图版本覆盖网站。该机制依赖现有托管中的素材仍可访问；若整个托管被清空，先从本地完整资源进行一次手动发布。
+
+这条流水线自动更新 GitHub 中的代码和内容；被忽略的本地新素材不会凭空同步。替换或新增素材时，先运行 `node scripts/cloud-assets.mjs --manifest` 更新清单，使用本地完整 `dist` 手动发布素材，再推送清单与引用代码。不要把原版素材加入 Git。
+
+验证：`node --test tests/cloud-assets.test.mjs` 覆盖正常、缺失、损坏和路径越界；独立无素材目录已实际恢复并校验全部 131 个文件；`npm run build:cloud` 已构建成功。
 
 ## 验证与限制
 

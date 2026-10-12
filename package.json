@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "build:cloud": "node scripts/cloud-assets.mjs && npm run build",
     "rss": "node scripts/generate-rss.mjs",
     "predev": "npm run rss",
     "prebuild": "npm run rss",
