@@ -57,8 +57,8 @@ WASD 移动、空格跳跃、鼠标观察、左键删除、右键放置、Esc �
 
 2026-10-13 / 14，本地浏览器实际运行独立页面和主站页面：世界显示、WASD 坐标变化、视角变化、放置石块、删除石块、空格产生视点高度变化、Esc 原生菜单、主站返回、材质缺失提示及恢复后重试、刷新 `/mineworld`。1366×768、1920×1080、2560×1440 下画布分别随容器调整，截图位于 `.local-reference/classicube-*.jpg`。
 
-内置浏览器拒绝原生 Pointer Lock，日志为 Chromium `UnknownError`；不能报告鼠标锁定验证通过。未写自制鼠标控制替代上游。外部桌面浏览器的鼠标锁定仍需实际复测；全屏请求也以浏览器实际许可为准。
+内置浏览器拒绝原生 Pointer Lock，日志为 Chromium `UnknownError`；不能报告内置浏览器的鼠标锁定验证通过。未写自制鼠标控制替代上游。2026-10-14，用户按提示在独立 Chrome / Edge 浏览器访问线上游戏，明确确认“可以锁定并转向”。此项为用户实测反馈，区分于代理的内置浏览器测试；全屏请求仍以浏览器实际许可为准。
 
 `npm run test:world` 覆盖状态协议、启动阶段顺序、用户名参数、缺失材质、错误 MIME、脚本失败和二进制 MIME；`npm run build` 包含 TypeScript、Vite、资源哈希与静态入口生成。不要把单元测试当成游戏操作测试。
 
-发布沿用已获授权的 GitHub main → CloudBase 自动发布配置。线上结果以 Actions 和 `/deployment.json` 为准，不能用本地截图代替线上验证。
+发布沿用已获授权的 GitHub main → CloudBase 自动发布配置。游戏提交 `f69a78400de25d1a964614097211e2f951d35a68` 的运行 [38545017084](https://github.com/johnnyhacker243-cmyk/mineblogcraft/actions/runs/38545017084) 已成功，线上 `/deployment.json` 返回相同提交；直接访问 `/mineworld` 返回 HTML 并实际生成世界，代理复测线上 WASD 移动。最终线上截图和验证记录保存在忽略目录 `.local-reference/classicube-live-verified.jpg`、`classicube-release-verification.json`。
