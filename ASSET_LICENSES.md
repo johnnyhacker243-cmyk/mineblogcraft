@@ -1,5 +1,11 @@
 # 素材来源与使用范围
 
+## ClassiCube Web 接入（2026-10-13 / 14）
+
+MineWorld 使用官方仓库 https://github.com/ClassiCube/ClassiCube 的独立预编译 Web 客户端，来自官方 CDN `https://cdn.classicube.net/client/latest/ClassiCube.js`，游戏核心字节未修改。代码分发按照上游 BSD 三条款及其依赖声明，完整 `license.txt` 复制为 `public/vendor/classicube/LICENSE.txt`，同产物一起保留。研究快照在忽略目录；不冒充自己编写游戏引擎。
+
+Web 默认材质 `public/static/default.zip` 来自 `https://www.classicube.net/static/default.zip`，按官方 `doc/hosting-webclient.md` 明确给出的下载并自托管方法接入；不是用户本地 Mojang JAR 的提取资源。客户端、材质与许可证来源、字节大小和 SHA-256 记录在 `public/vendor/classicube/PROVENANCE.json`。该记录不将代码 BSD 许可扩张到其他游戏素材；原有 Minecraft 本地素材提交范围保持不变。
+
 2026-10-10：当前主 Logo 换成用户明确指定的 `gptphotos/我的世界风格石质博客标志.png`，未经图像处理直接复制为 `public/assets/logo/blog-logo.png`。这是用户提供的自定义素材，本次获得的是在该本地项目中使用的授权；未核实其公共再分发许可。原版 Logo 文件仍保留用于研究对照，当前不显示。
 
 ## Minecraft 原版资源

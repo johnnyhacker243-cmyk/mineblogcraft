@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { PanoramaRenderer } from "./PanoramaRenderer";
 import { MainMenuScreen } from "../screens/MainMenuScreen";
 import { SecondaryScreen, type Settings } from "../screens/SecondaryScreens";
@@ -13,18 +13,35 @@ import { MineWikiPage } from "../screens/MineWikiPage";
 import { MineResearchPage } from "../screens/MineResearchPage";
 import { MineStatusPage } from "../screens/MineStatusPage";
 import { MineWorldPage } from "../screens/MineWorldPage";
-import { worldConfig, type WorldPose } from "../config/world-config";
 export function MinecraftTitleScreen({
   onBackgroundReady,
 }: {
   onBackgroundReady?: () => void;
 }) {
   const [screen, setScreen] = useState<ScreenId>(
-    location.hash.startsWith("#blog/") ? "worlds" : "main",
+    location.pathname.replace(/\/$/, "") === "/mineworld"
+      ? "mineworld"
+      : location.hash.startsWith("#blog/")
+        ? "worlds"
+        : "main",
   );
-  const worldPose = useRef<WorldPose>({ ...worldConfig.spawn });
-  const [fromWorld, setFromWorld] = useState(false);
-  const moduleBack = () => setScreen(fromWorld ? "mineworld" : "main");
+  const navigate = (id: ScreenId) => {
+    if (id === "mineworld") history.pushState(null, "", "/mineworld");
+    else if (location.pathname.replace(/\/$/, "") === "/mineworld")
+      history.pushState(null, "", "/");
+    setScreen(id);
+  };
+  const moduleBack = () => navigate("main");
+  useEffect(() => {
+    const pop = () =>
+      setScreen(
+        location.pathname.replace(/\/$/, "") === "/mineworld"
+          ? "mineworld"
+          : "main",
+      );
+    window.addEventListener("popstate", pop);
+    return () => window.removeEventListener("popstate", pop);
+  }, []);
   const [settings, setSettings] = useState<Settings>({
     volume: 0.5,
     dynamic: true,
@@ -40,11 +57,11 @@ export function MinecraftTitleScreen({
   }, []);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setScreen(fromWorld ? "mineworld" : "main");
+      if (e.key === "Escape" && screen !== "mineworld") setScreen("main");
     };
     window.addEventListener("keydown", key);
     return () => window.removeEventListener("keydown", key);
-  }, [fromWorld]);
+  }, [screen]);
   useEffect(() => {
     audioManager.setVolume(settings.volume);
     audioManager.muted = settings.muted;
@@ -70,27 +87,9 @@ export function MinecraftTitleScreen({
       />
       <div className="gui">
         {screen === "main" ? (
-          <MainMenuScreen
-            navigate={(id) => {
-              setFromWorld(false);
-              setScreen(id);
-            }}
-          />
+          <MainMenuScreen navigate={navigate} />
         ) : screen === "mineworld" ? (
-          <MineWorldPage
-            back={() => {
-              setFromWorld(false);
-              setScreen("main");
-            }}
-            navigate={(id) => {
-              setFromWorld(true);
-              setScreen(id);
-            }}
-            pose={worldPose.current}
-            savePose={(pose) => {
-              worldPose.current = pose;
-            }}
-          />
+          <MineWorldPage back={moduleBack} />
         ) : screen === "profile" ? (
           <MinecraftInventory back={moduleBack} />
         ) : screen === "worlds" ? (

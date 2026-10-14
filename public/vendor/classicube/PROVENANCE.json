@@ -1,0 +1,27 @@
+{
+  "fetchedOn": "2026-10-13",
+  "sourceRepository": "https://github.com/ClassiCube/ClassiCube",
+  "sourceStudiedCommit": "32439b1a4b992560d925552ad76c738a94047582",
+  "binary": "Official precompiled single-file JavaScript client. Build commit not advertised by CDN; pinned by SHA-256. Core bytes unchanged.",
+  "texturePack": "Official alternate Web texture pack; hosted as documented by ClassiCube, not extracted from Minecraft.",
+  "files": [
+    {
+      "path": "vendor/classicube/ClassiCube.js",
+      "source": "https://cdn.classicube.net/client/latest/ClassiCube.js",
+      "size": 3899294,
+      "sha256": "6fc9dfd8a0ca5c36624b1614669667f8f346d101a4335f743be031b5a8a12319"
+    },
+    {
+      "path": "static/default.zip",
+      "source": "https://www.classicube.net/static/default.zip",
+      "size": 84264,
+      "sha256": "55eac12a9727d209b42694d07dfdca8d50349779ab77ffc11a31d2cb66b45635"
+    },
+    {
+      "path": "vendor/classicube/LICENSE.txt",
+      "source": "https://github.com/ClassiCube/ClassiCube/blob/32439b1a4b992560d925552ad76c738a94047582/license.txt",
+      "size": 17224,
+      "sha256": "a3c404fb40407b79841d8c1d93f76ff406004a880a16cea29d74d767438dd48f"
+    }
+  ]
+}

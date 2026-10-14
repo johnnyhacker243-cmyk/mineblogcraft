@@ -36,6 +36,8 @@ jobs:
       - run: npm ci
       - name: Verify asset checks
         run: node --test tests/cloud-assets.test.mjs
+      - name: Verify ClassiCube integration
+        run: npm run test:world
       - name: Build with verified Minecraft resources
         run: npm run build:cloud
       - name: Record deployed commit
@@ -57,7 +59,7 @@ jobs:
           tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY"
           # Publish prebuilt files directly; app deploy additionally creates a
           # CloudApp archive/record that can stall after the website is updated.
-          tcb hosting deploy "$GITHUB_WORKSPACE/dist" / -e jonhyblog-d2ggh3rc306480701 --entry index.html,deployment.json --json
+          tcb hosting deploy "$GITHUB_WORKSPACE/dist" / -e jonhyblog-d2ggh3rc306480701 --entry index.html,mineworld/index.html,deployment.json --json
           echo 'deployed=true' >> "$GITHUB_OUTPUT"
       - name: Verify the published commit
         if: steps.publish.outputs.deployed == 'true'

@@ -53,4 +53,4 @@ GitHub CLI 已登录，远程仓库为 `johnnyhacker243-cmyk/mineblogcraft`（�
 
 按用户最新选择，先完成独立的“作者介绍”版块：主菜单人物图标进入创造模式物品栏风格档案，包含真正三维 Steve、钻石装备、鼠标跟随和占位作者资料；不在本版块添加导航。研究与差异记录见 `PROFILE_FIDELITY.md`。后续版块仍逐个开发、逐个验收及提交。
 
-MineWorld 第一阶段：地球入口接入小型三维博物馆；中央大厅、知识图书馆、论文展馆、项目工作室、状态附魔室、信息传送门已完成建筑与基础探索。通过配置将已有模块连到展台；项目内容尚待用户提供，本阶段不编造项目履历。详见 MINEWORLD_MODULE.md。
+MineWorld 最新路线：按用户新需求以 ClassiCube 官方 Web 客户端替换原三维博物馆。地球入口进入 `/mineworld` 的独立单机 Minecraft Classic 游戏，复用上游引擎、世界生成和键鼠/方块交互；当前不开发建筑、NPC 或模块联动。详见 MINEWORLD_MODULE.md。

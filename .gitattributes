@@ -1,0 +1,4 @@
+# Preserve upstream distribution bytes and their recorded SHA-256 on all systems.
+public/vendor/classicube/ClassiCube.js -text -whitespace linguist-vendored
+public/vendor/classicube/LICENSE.txt -text -whitespace
+public/static/default.zip -text
