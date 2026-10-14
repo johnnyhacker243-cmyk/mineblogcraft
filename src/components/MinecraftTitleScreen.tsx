@@ -23,7 +23,11 @@ export function MinecraftTitleScreen({
       ? "mineworld"
       : location.hash.startsWith("#blog/")
         ? "worlds"
-        : "main",
+        : location.hash.startsWith("#paper/")
+          ? "realms"
+          : location.hash.startsWith("#rss/")
+            ? "multiplayer"
+            : "main",
   );
   const navigate = (id: ScreenId) => {
     if (id === "mineworld") history.pushState(null, "", "/mineworld");
@@ -31,13 +35,31 @@ export function MinecraftTitleScreen({
       history.pushState(null, "", "/");
     setScreen(id);
   };
-  const moduleBack = () => navigate("main");
+  const moduleBack = () => {
+    history.replaceState(null, "", location.pathname + location.search);
+    navigate("main");
+  };
+  useEffect(() => {
+    const follow = () => {
+      if (location.hash.startsWith("#blog/")) setScreen("worlds");
+      if (location.hash.startsWith("#paper/")) setScreen("realms");
+      if (location.hash.startsWith("#rss/")) setScreen("multiplayer");
+    };
+    addEventListener("hashchange", follow);
+    return () => removeEventListener("hashchange", follow);
+  }, []);
   useEffect(() => {
     const pop = () =>
       setScreen(
         location.pathname.replace(/\/$/, "") === "/mineworld"
           ? "mineworld"
-          : "main",
+          : location.hash.startsWith("#blog/")
+            ? "worlds"
+            : location.hash.startsWith("#paper/")
+              ? "realms"
+              : location.hash.startsWith("#rss/")
+                ? "multiplayer"
+                : "main",
       );
     window.addEventListener("popstate", pop);
     return () => window.removeEventListener("popstate", pop);

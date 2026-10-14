@@ -15,6 +15,10 @@ export interface WikiNodeData {
   learningPoints: string[];
   relatedBlogs: { id: string; title: string }[];
   relatedPapers: { id: string; title: string }[];
+  aliases?: string[];
+  domainId?: string;
+  relatedRss?: string[];
+  relatedSources?: { id: string; title: string }[];
 }
 export interface WikiMatch {
   node: WikiNodeData;

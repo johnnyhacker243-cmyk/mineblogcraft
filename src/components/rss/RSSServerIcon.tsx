@@ -10,6 +10,10 @@ export function RSSServerIcon({ icon }: { icon: string }) {
     shield: "shield-slot.png",
     redstone: "redstone.png",
     "enchanted-book": "enchanted-book.png",
+    compass: "compass.png",
+    repeater: "repeater.png",
+    torch: "torch.png",
+    pickaxe: "pickaxe.png",
   };
   return <img src={inventoryAssets + (textures[icon] ?? "book.png")} alt="" />;
 }

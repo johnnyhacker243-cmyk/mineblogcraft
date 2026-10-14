@@ -72,6 +72,16 @@ export function PaperList({
               />
               <BlogText text={paper.description} width={190} color="#aaa" />
               <BlogText text={paper.category} width={190} color="#55ffff" />
+              {paper.origin === "external" && (
+                <InventoryText
+                  text={
+                    paper.readingMode === "fulltext"
+                      ? "外部论文 · 授权全文"
+                      : "外部论文 · 书目与阅读引导"
+                  }
+                  color="#aaa"
+                />
+              )}
               {paper.draft && (
                 <InventoryText text="原创示例 · 非发表论文" color="#aaa" />
               )}

@@ -1,19 +1,26 @@
-import data from "../data/rssSources.json";
 import type { RSSServer, RSSArticle, RSSQuery } from "../models/RSSServer";
 export interface RSSRepository {
   getSources(signal?: AbortSignal): Promise<RSSServer[]>;
   getLatest(signal?: AbortSignal): Promise<RSSArticle[]>;
 }
 export class StaticRSSRepository implements RSSRepository {
-  async getSources(): Promise<RSSServer[]> {
-    return data.map((source) => ({
+  async getSources(signal?: AbortSignal): Promise<RSSServer[]> {
+    const response = await fetch("/data/rss/sources.json", { signal });
+    if (!response.ok) throw Error("Sources unavailable");
+    const data = await response.json();
+    return data.map((source: RSSServer & { iconKey: string }) => ({
       ...source,
-      status: source.status as RSSServer["status"],
+      icon: source.iconKey,
+      category: source.domainId,
+      sourceUrl: source.siteUrl,
+      lastUpdate: (source.lastSuccessAt ?? "").slice(0, 10),
       tags: [...source.tags],
     }));
   }
-  async getLatest(): Promise<RSSArticle[]> {
-    return [];
+  async getLatest(signal?: AbortSignal): Promise<RSSArticle[]> {
+    const response = await fetch("/data/rss/items.json", { signal });
+    if (!response.ok) throw Error("Articles unavailable");
+    return response.json();
   }
 }
 export class RSSService {

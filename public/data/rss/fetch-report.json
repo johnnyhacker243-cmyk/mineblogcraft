@@ -1,0 +1,153 @@
+{
+  "runId": "2026-10-14T14:35:25.889Z",
+  "mode": "network",
+  "sources": [
+    {
+      "id": "huggingface",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 928,
+      "itemCount": 30
+    },
+    {
+      "id": "openai",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 880,
+      "itemCount": 30
+    },
+    {
+      "id": "google-ai",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 935,
+      "itemCount": 20
+    },
+    {
+      "id": "deepmind",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 760,
+      "itemCount": 30
+    },
+    {
+      "id": "google-research",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 968,
+      "itemCount": 30
+    },
+    {
+      "id": "bair",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1340,
+      "itemCount": 10
+    },
+    {
+      "id": "apple-ml",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 963,
+      "itemCount": 10
+    },
+    {
+      "id": "tencent-security",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 2100,
+      "itemCount": 20
+    },
+    {
+      "id": "schneier",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 728,
+      "itemCount": 10
+    },
+    {
+      "id": "krebs",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1176,
+      "itemCount": 10
+    },
+    {
+      "id": "cisa",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1241,
+      "itemCount": 30
+    },
+    {
+      "id": "portswigger",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1144,
+      "itemCount": 30
+    },
+    {
+      "id": "talos",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 620,
+      "itemCount": 15
+    },
+    {
+      "id": "microsoft-security",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1128,
+      "itemCount": 10
+    },
+    {
+      "id": "github",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1086,
+      "itemCount": 10
+    },
+    {
+      "id": "meta-engineering",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 728,
+      "itemCount": 9
+    },
+    {
+      "id": "cloudflare",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 603,
+      "itemCount": 20
+    },
+    {
+      "id": "mdn",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 774,
+      "itemCount": 30
+    },
+    {
+      "id": "microsoft-engineering",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1029,
+      "itemCount": 10
+    },
+    {
+      "id": "jetbrains",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1375,
+      "itemCount": 12
+    },
+    {
+      "id": "martin-fowler",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1672,
+      "itemCount": 30
+    }
+  ]
+}

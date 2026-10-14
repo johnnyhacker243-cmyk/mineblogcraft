@@ -205,10 +205,17 @@ export function PaperBookViewer({
           <a href={paper.sourceUrl} target="_blank" rel="noreferrer">
             Original / DOI
           </a>
-          <span> · </span>
-          <a href={paper.licenseUrl} target="_blank" rel="noreferrer">
-            {paper.license}
-          </a>
+          {paper.licenseUrl && (
+            <>
+              <span> · </span>
+              <a href={paper.licenseUrl} target="_blank" rel="noreferrer">
+                {paper.license}
+              </a>
+            </>
+          )}
+          {paper.readingMode === "note" && (
+            <span> · Reading guide, not full text</span>
+          )}
         </div>
       )}
       {zoomImage && (

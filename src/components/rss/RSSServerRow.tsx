@@ -33,15 +33,23 @@ export function RSSServerRow({
       <div className="rss-server-copy">
         <BlogText text={server.name} width={215} />
         <BlogText text={server.description} width={215} color="#aaa" />
-        <BlogText text={server.tags.join(" · ")} width={215} color="#808080" />
+        <BlogText
+          text={[server.domainId.toUpperCase(), ...server.tags].join(" · ")}
+          width={215}
+          color="#808080"
+        />
       </div>
       <div className="rss-server-status">
         <InventoryText
           text={server.status.toUpperCase()}
-          color={server.status === "online" ? "#55ff55" : "#ff5555"}
+          color={server.status === "online" ? "#55ff55" : "#ffaa00"}
         />
         <InventoryText
-          text={server.lastUpdate.replaceAll("-", "/")}
+          text={
+            server.lastUpdate
+              ? server.lastUpdate.replaceAll("-", "/")
+              : "未验证"
+          }
           color="#aaa"
         />
         <img
@@ -50,7 +58,7 @@ export function RSSServerRow({
             inventoryAssets +
             (server.status === "online" ? "ping-5.png" : "ping-1.png")
           }
-          alt={server.status === "online" ? "示例信号：强" : "示例信号：弱"}
+          alt={server.status === "online" ? "上次抓取成功" : "无最新成功快照"}
         />
       </div>
     </div>

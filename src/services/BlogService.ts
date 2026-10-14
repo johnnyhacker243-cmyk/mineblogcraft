@@ -7,7 +7,21 @@ export function searchBlogWorlds(
 ): BlogWorld[] {
   const terms = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   return worlds.filter((world) => {
-    const text = [world.title, world.description, world.category, ...world.tags]
+    const domainAlias =
+      (
+        {
+          ai: "人工智能 AI",
+          security: "网络安全 Security",
+          software: "软件工程 Software",
+        } as Record<string, string>
+      )[world.domainId ?? ""] ?? "";
+    const text = [
+      world.title,
+      world.description,
+      world.category,
+      domainAlias,
+      ...world.tags,
+    ]
       .join(" ")
       .toLocaleLowerCase();
     return terms.every((term) => text.includes(term));

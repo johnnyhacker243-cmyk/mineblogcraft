@@ -7,6 +7,449 @@
     "description": "记录一个Minecraft风格个人技术博客的设计与开发过程",
     "category": "Development",
     "tags": ["Minecraft", "Web", "AI", "Software Engineering"],
-    "content": "## 项目起源\nMineblogcraft 是一个属于我的数字世界。这次开发把 Minecraft 游戏界面作为个人技术博客的入口：学习新的知识，就挖下来；有新的想法，就建起来。\n\n## 技术架构\n前端使用 Vite、React、TypeScript 和 Three.js。主菜单使用六面旋转全景，作者页面用三维 Steve 展示玩家档案。按钮、方块及像素字体来自获授权的本地 Minecraft 1.21.1 客户端，原版素材保留本地。\n博客数据存放在静态 JSON 中，由 BlogRepository 提供读取接口，BlogService 负责搜索。页面只依赖服务，未来可以换成 API 数据源。\n\n## 设计参考\n首页参考 Minecraft 主菜单；作者介绍参考创造模式背包；博客入口参考单人游戏的世界选择界面；文章阅读采用暂停菜单式暗色半透明背景。每篇文章都是一个知识世界。\n\n## 当前功能\n已实现游戏式首页、作者介绍、博客世界列表、文章阅读及静态 RSS。博客列表支持标题、简介、标签与分类搜索。Wiki 知识库和 Research 论文模块仍在规划中，目前没有实现，RSS 也尚未对接远程订阅服务。\n\n## 未来规划\n继续建设 Wiki 和 Research，将学习记录、项目实践和资料整理融入方块世界。后续再研究 AI 辅助与知识管理功能，以及数据库和后台接口；本阶段只开发本地前端。\n\n欢迎来到我的技术世界。"
+    "content": "## 项目起源\nMineblogcraft 是一个属于我的数字世界。这次开发把 Minecraft 游戏界面作为个人技术博客的入口：学习新的知识，就挖下来；有新的想法，就建起来。\n\n## 技术架构\n前端使用 Vite、React、TypeScript 和 Three.js。主菜单使用六面旋转全景，作者页面用三维 Steve 展示玩家档案。按钮、方块及像素字体来自获授权的本地 Minecraft 1.21.1 客户端，原版素材保留本地。\n博客数据存放在静态 JSON 中，由 BlogRepository 提供读取接口，BlogService 负责搜索。页面只依赖服务，未来可以换成 API 数据源。\n\n## 设计参考\n首页参考 Minecraft 主菜单；作者介绍参考创造模式背包；博客入口参考单人游戏的世界选择界面；文章阅读采用暂停菜单式暗色半透明背景。每篇文章都是一个知识世界。\n\n## 当前功能\n已实现游戏式首页、作者介绍、博客世界列表、文章阅读及静态 RSS。博客列表支持标题、简介、标签与分类搜索。Wiki 知识树、Research 书籍系统与外部 RSS 阅读器现已实现；新内容持续整理中。\n\n## 未来规划\n继续完善 Wiki 与 Research 内容，将学习记录、项目实践和资料整理融入方块世界。后续再研究 AI 辅助与知识管理功能，以及数据库和后台接口；本阶段只开发本地前端。\n\n欢迎来到我的技术世界。",
+    "status": "published",
+    "provenance": "legacy-site-content"
+  },
+  {
+    "id": "ai-from-llm-to-agent",
+    "title": "从大模型到 Agent：把回答变成可验证的行动",
+    "createTime": "2026-10-14",
+    "description": "语言模型按上下文预测输出，Agent 则把模型置于一个可以观察、选择行动并接收反馈的循环中。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["llm", "agent"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/ai-from-llm-to-agent.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://arxiv.org/abs/2210.03629"
+      }
+    ]
+  },
+  {
+    "id": "ai-transformer",
+    "title": "理解 Transformer：先看数据怎样流动",
+    "createTime": "2026-10-14",
+    "description": "自注意力根据查询和键计算权重，再把值按权重组合。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["ai-basics", "deep-learning", "llm"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/ai-transformer.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ]
+  },
+  {
+    "id": "ai-rag-evidence",
+    "title": "RAG 的关键不是向量库，而是证据链",
+    "createTime": "2026-10-14",
+    "description": "RAG 把检索结果作为生成的依据。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["rag", "vector-database"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/ai-rag-evidence.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://arxiv.org/abs/2005.11401"
+      }
+    ]
+  },
+  {
+    "id": "ai-tool-contract",
+    "title": "Tool Calling：先定义契约，再让模型选择工具",
+    "createTime": "2026-10-14",
+    "description": "工具调用是结构化请求，不是把模型输出直接交给终端。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["agent", "tool-calling", "api"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/ai-tool-contract.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://arxiv.org/abs/2302.04761"
+      }
+    ]
+  },
+  {
+    "id": "ai-lora",
+    "title": "LoRA 与 QLoRA：理解微调改变了什么",
+    "createTime": "2026-10-14",
+    "description": "LoRA 用低秩参数更新来适配预训练模型，而不是训练全部权重。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["machine-learning", "llm"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/ai-lora.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://arxiv.org/abs/2106.09685"
+      }
+    ]
+  },
+  {
+    "id": "ai-evaluation",
+    "title": "模型评估：把流畅、正确与可靠分开",
+    "createTime": "2026-10-14",
+    "description": "生成质量至少有任务正确性、证据忠实度、格式遵循、拒答边界和运行成本几个维度。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["machine-learning", "ai-evaluation"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/ai-evaluation.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://arxiv.org/abs/2203.02155"
+      }
+    ]
+  },
+  {
+    "id": "ai-input-boundary",
+    "title": "提示注入与信任边界：外部文本不能指挥系统",
+    "createTime": "2026-10-14",
+    "description": "提示注入利用数据与指令边界不清的问题。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["ai-security", "agent"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/ai-input-boundary.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://arxiv.org/abs/2307.15043"
+      }
+    ]
+  },
+  {
+    "id": "network-security-foundation",
+    "title": "从 TCP/IP 开始理解网络安全",
+    "createTime": "2026-10-14",
+    "description": "网络安全分析需要先知道通信发生在哪一层。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["network", "tcp-ip"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/network-security-foundation.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://www.rfc-editor.org/rfc/rfc9293"
+      }
+    ]
+  },
+  {
+    "id": "security-http",
+    "title": "HTTP 的安全边界：请求、身份与状态",
+    "createTime": "2026-10-14",
+    "description": "HTTP 方法、状态码、头部与消息体表达一次交互。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["http", "api"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/security-http.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://www.rfc-editor.org/rfc/rfc9110"
+      }
+    ]
+  },
+  {
+    "id": "security-asset-discovery",
+    "title": "资产发现：从地址清单到可核验的服务记录",
+    "createTime": "2026-10-14",
+    "description": "资产发现的价值是建立范围清楚、证据可追踪的清单。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["asset-discovery", "nmap", "fofa"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/security-asset-discovery.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://nmap.org/book/man.html"
+      }
+    ]
+  },
+  {
+    "id": "security-vulnerability",
+    "title": "漏洞管理：从扫描告警到风险判断",
+    "createTime": "2026-10-14",
+    "description": "漏洞管理不是收集尽可能多的告警，而是确认受影响组件、实际暴露面、利用条件与修复责任。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["vulnerability-scanning", "http"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/security-vulnerability.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      }
+    ]
+  },
+  {
+    "id": "security-ids",
+    "title": "入侵检测：先验证数据，再讨论模型",
+    "createTime": "2026-10-14",
+    "description": "网络入侵检测需要把流量或事件转化为可分析的特征。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["intrusion-detection", "machine-learning"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/security-ids.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://arxiv.org/abs/1802.09089"
+      }
+    ]
+  },
+  {
+    "id": "security-response",
+    "title": "事件响应：让时间线比猜测先出现",
+    "createTime": "2026-10-14",
+    "description": "事件响应从准备、检测与分析进入处置和恢复。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["incident-response", "http"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/security-response.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+      }
+    ]
+  },
+  {
+    "id": "security-supply-chain",
+    "title": "供应链安全：依赖不是下载后就可信",
+    "createTime": "2026-10-14",
+    "description": "软件供应链把源码、依赖、构建环境和最终产物连接起来。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["supply-chain", "ai-security", "deployment"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/security-supply-chain.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://slsa.dev/spec/"
+      }
+    ]
+  },
+  {
+    "id": "software-react-state",
+    "title": "React 状态：用一份事实驱动多个界面",
+    "createTime": "2026-10-14",
+    "description": "状态应保存不能从其他数据计算出的事实。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["frontend", "testing"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/software-react-state.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://react.dev/learn/choosing-the-state-structure"
+      }
+    ]
+  },
+  {
+    "id": "software-api-contract",
+    "title": "API 契约：静态 JSON 也需要边界",
+    "createTime": "2026-10-14",
+    "description": "接口契约描述输入、输出、错误与兼容性。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["api", "backend", "database"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/software-api-contract.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://spec.openapis.org/oas/latest.html"
+      }
+    ]
+  },
+  {
+    "id": "software-repository",
+    "title": "Repository：让内容存储与游戏界面分离",
+    "createTime": "2026-10-14",
+    "description": "Repository 封装数据获取边界，页面使用稳定的方法读取领域对象。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["architecture", "database"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/software-repository.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://martinfowler.com/eaaCatalog/repository.html"
+      }
+    ]
+  },
+  {
+    "id": "software-testing",
+    "title": "测试分层：验证行为，而不是重复实现",
+    "createTime": "2026-10-14",
+    "description": "纯数据校验适合验证 ID、日期与引用；单元测试适合解析和评分；浏览器测试适合点击、返回、尺寸和资源读取。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["testing", "frontend"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/software-testing.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://nodejs.org/api/test.html"
+      }
+    ]
+  },
+  {
+    "id": "software-architecture",
+    "title": "静态知识站的架构：少依赖，清边界",
+    "createTime": "2026-10-14",
+    "description": "静态站点可以用构建阶段完成内容检查和外部聚合，在浏览器中只读取同域文件。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["architecture", "deployment"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/software-architecture.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro"
+      }
+    ]
+  },
+  {
+    "id": "software-rss-pipeline",
+    "title": "RSS 数据管道：从外部 XML 到可读的知识世界",
+    "createTime": "2026-10-14",
+    "description": "RSS 发布与 RSS 聚合是两个方向。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["rss-pipeline", "api", "ai-security"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/software-rss-pipeline.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://www.rssboard.org/rss-specification"
+      }
+    ]
+  },
+  {
+    "id": "software-static-delivery",
+    "title": "静态交付：让构建结果与发布动作分开",
+    "createTime": "2026-10-14",
+    "description": "开发预览、生产构建和发布是不同阶段。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["deployment", "testing", "supply-chain"],
+    "image": "/assets/inventory/grass-border.png",
+    "content": "",
+    "file": "/content/blogs/software-static-delivery.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "原始资料与规范",
+        "url": "https://vite.dev/guide/static-deploy.html"
+      }
+    ]
   }
 ]

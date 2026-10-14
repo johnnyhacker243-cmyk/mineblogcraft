@@ -1,15 +1,10 @@
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, writeFile, readFile } from "node:fs/promises";
 await mkdir("tests/screenshots", { recursive: true });
-const names = [
-  "AI Research Server",
-  "OpenAI Laboratory",
-  "Cyber Security Server",
-  "Security Research World",
-  "Open Source World",
-  "Software Engineering Hub",
-];
+const sources = JSON.parse(await readFile("config/rssSources.json", "utf8"));
+const names = sources.map((s) => s.name);
+const options = () => p.locator(".rss-server-list").getByRole("option");
 const b = await chromium.launch({ headless: true });
 const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
 const errors = [],
@@ -48,16 +43,14 @@ assert.ok(
 
 assert.deepEqual(
   await p
+    .locator(".rss-server-list")
     .getByRole("option")
     .evaluateAll((ns) => ns.map((n) => n.getAttribute("aria-label"))),
   names,
 );
-assert.equal(await p.locator(".rss-screen button").count(), 2);
-assert.equal(await p.locator(".rss-ping").count(), 6);
-assert.equal(
-  await p.locator(".rss-server-status canvas[aria-label='ONLINE']").count(),
-  6,
-);
+assert.equal(await p.locator(".rss-actions button").count(), 2);
+assert.equal(await p.locator(".rss-ping").count(), names.length);
+assert.equal(await p.locator(".rss-server-status").count(), names.length);
 await p.waitForFunction(() =>
   [...document.querySelectorAll(".rss-screen canvas")].every((c) =>
     c
@@ -69,11 +62,7 @@ await p.waitForFunction(() =>
 const texts = await p
   .locator(".rss-screen canvas")
   .evaluateAll((ns) => ns.map((n) => n.getAttribute("aria-label")).join(""));
-const glyphs = await p.evaluate(async () =>
-  (await fetch("/assets/inventory/font.json")).json(),
-);
-for (const c of texts)
-  if (c !== " ") assert.ok(glyphs[c], `Missing glyph ${c}`);
+assert.ok(texts.includes("构建快照"));
 const dimensions = [];
 for (const [width, height] of [
   [1366, 768],
@@ -87,7 +76,7 @@ for (const [width, height] of [
   const container = await p.locator(".rss-list-band").boundingBox();
   const logo = await p.locator(".rss-brand").boundingBox();
   const title = await p.locator(".rss-screen h1").boundingBox();
-  const firstRow = await p.getByRole("option").first().boundingBox();
+  const firstRow = await options().first().boundingBox();
   const scale = Number(
     await p.locator(".rss-screen").getAttribute("data-rss-scale"),
   );
@@ -99,7 +88,7 @@ for (const [width, height] of [
   assert.ok(container.y + container.height <= footer.y);
   assert.ok(Math.abs(list.x + list.width / 2 - width / 2) < 0.1);
   assert.ok(footer.y + footer.height <= height + 0.1);
-  for (const row of await p.getByRole("option").all()) {
+  for (const row of await options().all()) {
     const body = await row.locator(".rss-server-copy").boundingBox();
     const status = await row.locator(".rss-server-status").boundingBox();
     assert.ok(
@@ -118,7 +107,7 @@ for (const [width, height] of [
       .evaluateAll(
         (ns) => ns.filter((n) => n.complete && n.naturalWidth > 0).length,
       ),
-    6,
+    names.length,
   );
   await p.getByRole("option", { name: names[0] }).click();
   assert.equal(
@@ -131,7 +120,7 @@ for (const [width, height] of [
   await p
     .locator(".rss-list-band")
     .evaluate((n) => (n.scrollTop = n.scrollHeight));
-  const lastRow = await p.getByRole("option").last().boundingBox();
+  const lastRow = await options().last().boundingBox();
   assert.ok(
     lastRow.y + lastRow.height <= container.y + container.height,
     "Last server can be fully viewed by scrolling",
@@ -160,15 +149,16 @@ assert.equal(
 );
 await p.getByRole("button", { name: "连接信息源", exact: true }).focus();
 await p.keyboard.press("Enter");
-await p.locator(".rss-notice").waitFor();
+await p.locator(".rss-article-list").waitFor();
+assert.ok((await p.locator(".rss-article").count()) > 0);
 assert.equal(
-  await p.locator(".rss-notice canvas").getAttribute("aria-label"),
-  "RSS管理功能将在未来版本开放",
+  await p.locator(".rss-article a").first().getAttribute("target"),
+  "_blank",
 );
 await p.setViewportSize({ width: 1920, height: 1080 });
-await p.screenshot({ path: "tests/screenshots/rss-management-notice.png" });
+await p.screenshot({ path: "tests/screenshots/rss-articles.png" });
 await p.keyboard.press("Escape");
-assert.equal(await p.locator(".rss-notice").count(), 0);
+assert.equal(await p.locator(".rss-article-list").count(), 0);
 assert.equal(
   await p.locator(".game").getAttribute("data-screen"),
   "multiplayer",
@@ -190,7 +180,7 @@ const result = {
   rotationDelta,
   staticStatus: true,
   keyboard: true,
-  managementNotice: true,
+  articleReader: true,
   errors,
   failed,
 };

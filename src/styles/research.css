@@ -705,7 +705,8 @@
   width: 100%;
   height: calc(168px * var(--book-scale));
   padding: 0;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   border: 0;
   gap: 0;
   background: #382415 url("/assets/inventory/spruce-planks.png");
@@ -772,11 +773,16 @@
   left: 0;
   top: 0;
   width: calc(150px * var(--book-scale));
+  max-width: 100%;
   padding: calc(5px * var(--book-scale));
   border: calc(1px * var(--book-scale)) solid #482473;
   background: #100817f5;
   pointer-events: none;
   --inventory-scale: calc(0.65 * var(--book-scale));
+}
+.shelf-record:nth-child(even) .paper-tooltip {
+  left: auto;
+  right: 0;
 }
 .shelf-record:nth-child(n + 5) .paper-tooltip {
   top: auto;

@@ -7,6 +7,79 @@
   align-items: center;
   background: transparent;
 }
+.rss-controls,
+.rss-links {
+  display: flex;
+  gap: calc(5px * var(--rss-scale));
+  align-items: center;
+}
+.rss-controls input,
+.rss-controls select {
+  font-family: Monocraft, monospace;
+  font-size: calc(7px * var(--rss-scale));
+  color: #fff;
+  background: #000;
+  border: calc(1px * var(--rss-scale)) solid #888;
+  padding: calc(3px * var(--rss-scale));
+  max-width: 42vw;
+}
+.rss-links {
+  font-size: calc(6px * var(--rss-scale));
+  font-family: Monocraft, monospace;
+}
+.rss-links a,
+.rss-links button,
+.rss-source-note a {
+  color: #aaa;
+  background: none;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+.rss-links a:hover,
+.rss-links button:hover {
+  color: #ffff55;
+}
+.rss-source-note,
+.rss-article {
+  padding: calc(8px * var(--rss-scale));
+  display: flex;
+  flex-direction: column;
+  gap: calc(5px * var(--rss-scale));
+  border-bottom: calc(1px * var(--rss-scale)) solid #555;
+}
+.rss-source-note {
+  font:
+    calc(7px * var(--rss-scale)) Monocraft,
+    monospace;
+}
+.rss-article a {
+  text-decoration: none;
+}
+.rss-article a:hover {
+  outline: calc(1px * var(--rss-scale)) solid #aaa;
+}
+.rss-article.is-read {
+  opacity: 0.8;
+}
+.rss-load-more {
+  color: #aaa;
+  background: none;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.rss-screen > header {
+  gap: calc(4px * var(--rss-scale));
+}
+@media (max-width: 900px) {
+  .rss-brand {
+    width: calc(100px * var(--rss-scale));
+  }
+}
 .rss-screen::before {
   content: "";
   position: absolute;

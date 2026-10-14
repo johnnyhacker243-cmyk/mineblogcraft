@@ -79,6 +79,14 @@ export function paperBookPages(
       `作者：${paper.author}`,
       `年份：${paper.year}`,
       `类型：${paper.category}`,
+      ...(paper.origin === "external"
+        ? [
+            "外部文献 · 原作者署名",
+            paper.readingMode === "fulltext"
+              ? "阅读模式：授权全文"
+              : "阅读模式：书目与阅读引导",
+          ]
+        : []),
       "",
       "关键词：",
       ...paper.keywords,
@@ -88,7 +96,9 @@ export function paperBookPages(
   );
   const abstract = paginateBook(
     [
-      "摘要",
+      paper.readingMode === "note" || paper.readingMode === "metadata"
+        ? "主题说明"
+        : "摘要",
       "",
       paper.abstract,
       "",

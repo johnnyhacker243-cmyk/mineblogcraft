@@ -17,6 +17,11 @@ export interface ResearchPaper {
   license?: string;
   licenseUrl?: string;
   language?: string;
+  domainId?: string;
+  authors?: string[];
+  origin?: "external" | "example" | "original";
+  readingMode?: "metadata" | "note" | "fulltext";
+  verificationStatus?: string;
 }
 export type BookBlock =
   | { kind: "text"; text: string; heading?: boolean }

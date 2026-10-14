@@ -88,10 +88,10 @@ try {
   }
   await p.setViewportSize({ width: 1920, height: 1080 });
   for (const [cat, count] of [
-    ["Security", 8],
-    ["Software", 6],
+    ["Security", nodes.filter((n) => n.category === "Security").length],
+    ["Software", nodes.filter((n) => n.category === "Software").length],
     ["Modeling", 6],
-    ["AI", 7],
+    ["AI", nodes.filter((n) => n.category === "AI").length],
   ]) {
     await p.getByRole("tab", { name: cat, exact: true }).click();
     assert.equal(await p.locator(".wiki-node").count(), count);

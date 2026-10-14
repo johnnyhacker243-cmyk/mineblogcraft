@@ -38,6 +38,7 @@ export function InventoryText({
   );
   useEffect(() => {
     let active = true;
+    setFailed(false);
     loadFont()
       .then(({ image, glyphs }) => {
         if (!active || !canvas.current) return;
@@ -50,6 +51,14 @@ export function InventoryText({
         for (const c of text) {
           const g = glyphs[c];
           if (g) l.drawImage(image, g[0], g[1], g[2], 16, x, 0, g[2], 16);
+          // Feeds and new content can contain characters absent from the local
+          // atlas. Keep every character readable instead of silently dropping it.
+          else if (c.trim()) {
+            l.fillStyle = "#fff";
+            l.font = "16px monospace";
+            l.textBaseline = "top";
+            l.fillText(c, x, 0, c.charCodeAt(0) < 128 ? 8 : 16);
+          }
           x += c.charCodeAt(0) < 128 ? 8 : 16;
         }
         l.globalCompositeOperation = "source-in";

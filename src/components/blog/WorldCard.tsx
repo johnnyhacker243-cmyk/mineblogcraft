@@ -48,7 +48,11 @@ export function WorldCard({
           color="#808080"
         />
         <BlogText
-          text="创造模式 · 版本: Mineblogcraft 1.0"
+          text={
+            world.status === "draft"
+              ? "创造模式 · 技术编辑草稿 · 待审阅"
+              : "创造模式 · 版本: Mineblogcraft 1.0"
+          }
           width={265}
           color="#808080"
         />

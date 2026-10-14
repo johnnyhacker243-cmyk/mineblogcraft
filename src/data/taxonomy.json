@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "domains": [
+    {
+      "id": "ai",
+      "name": "AI",
+      "description": "模型、检索与智能体"
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "description": "协议、威胁与防御"
+    },
+    {
+      "id": "software",
+      "name": "Software",
+      "description": "架构、测试与交付"
+    }
+  ]
+}

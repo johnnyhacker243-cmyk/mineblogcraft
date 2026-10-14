@@ -28,7 +28,9 @@ export function WikiDetailPanel({
         <InventoryText text="相关 Blog" color="#55ffff" />
         {node.relatedBlogs.length ? (
           node.relatedBlogs.map((r) => (
-            <BlogText key={r.id} text={r.title} width={170} />
+            <a key={r.id} href={`#blog/${encodeURIComponent(r.id)}`}>
+              <BlogText text={r.title} width={170} color="#55ffff" />
+            </a>
           ))
         ) : (
           <InventoryText text="暂无关联" color="#aaa" />
@@ -36,13 +38,25 @@ export function WikiDetailPanel({
         <InventoryText text="相关 Paper" color="#55ffff" />
         {node.relatedPapers.length ? (
           node.relatedPapers.map((r) => (
-            <BlogText key={r.id} text={r.title} width={170} />
+            <a key={r.id} href={`#paper/${encodeURIComponent(r.id)}`}>
+              <BlogText text={r.title} width={170} color="#55ffff" />
+            </a>
           ))
         ) : (
           <InventoryText text="暂无关联" color="#aaa" />
         )}
+        {!!node.relatedSources?.length && (
+          <>
+            <InventoryText text="相关 RSS" color="#55ffff" />
+            {node.relatedSources.map((r) => (
+              <a key={r.id} href={`#rss/${encodeURIComponent(r.id)}`}>
+                <BlogText text={r.title} width={170} color="#55ffff" />
+              </a>
+            ))}
+          </>
+        )}
         <BlogText text={node.tags.join(" · ")} width={170} color="#aaa" />
-        <InventoryText text="示例目录 · 非个人学习记录" color="#aaa" />
+        <InventoryText text="知识目录 · 关联草稿与外部资料" color="#aaa" />
       </div>
       <MinecraftButton autoFocus aria-label="关闭知识详情" onClick={close}>
         <InventoryText text="关闭" />

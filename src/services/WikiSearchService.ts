@@ -47,7 +47,7 @@ export class LocalWikiSearchService implements WikiSearch {
       index = nodes.map((node) => ({
         node,
         fields: [
-          [norm(node.title), 100],
+          [norm([node.title, ...(node.aliases ?? [])].join(" ")), 100],
           [norm([...node.tags, node.category].join(" ")), 65],
           [norm(node.description), 30],
           [

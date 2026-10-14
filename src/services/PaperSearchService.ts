@@ -15,9 +15,11 @@ const normalize = (value: string) =>
 const aliases: Record<string, string[]> = {
   "mathematical modeling": ["数学建模", "建模"],
   "cyber security": ["网络安全", "安全"],
+  security: ["网络安全", "安全"],
   ai: ["人工智能"],
   "data mining": ["数据挖掘"],
   "software engineering": ["软件工程"],
+  software: ["软件工程"],
   agent: ["智能体"],
 };
 function distance(a: string, b: string) {

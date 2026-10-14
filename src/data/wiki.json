@@ -14,14 +14,26 @@
     "parentIds": [],
     "status": "untracked",
     "frame": "goal",
-    "details": "人工智能基础：理解任务、数据、模型与评价之间的关系。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "人工智能是围绕感知、预测、决策与行动构建系统的研究领域。具体任务应先定义输入、可观察目标与评价方法，再选择规则系统、统计学习或生成模型；不能用“智能”这一名称替代可验证的能力描述。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "区分分类、回归、生成与决策任务",
+      "明确数据来源、目标和评估集",
+      "把系统能力与个人学习完成度分开记录"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "ai-transformer",
+        "title": "理解 Transformer：先看数据怎样流动"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
+    ]
   },
   {
     "id": "machine-learning",
@@ -40,18 +52,58 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "机器学习：从样本学习规律，关注特征、泛化与模型评价。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "机器学习利用样本调整模型参数，让模型在某个任务上得到可评价的表现。训练误差与泛化能力不同；数据划分、特征处理和基线选择会直接影响结论。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "将训练、验证、测试数据分开",
+      "检查同源重复样本和标签泄漏",
+      "比较准确率以外的误差与成本"
     ],
-    "relatedBlogs": [],
+    "relatedBlogs": [
+      {
+        "id": "ai-lora",
+        "title": "LoRA 与 QLoRA：理解微调改变了什么"
+      },
+      {
+        "id": "ai-evaluation",
+        "title": "模型评估：把流畅、正确与可靠分开"
+      },
+      {
+        "id": "security-ids",
+        "title": "入侵检测：先验证数据，再讨论模型"
+      }
+    ],
     "relatedPapers": [
       {
         "id": "nids-fgpa",
         "title": "NIDS-FGPA"
+      },
+      {
+        "id": "arxiv-1810.04805",
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+      },
+      {
+        "id": "arxiv-2106.09685",
+        "title": "LoRA: Low-Rank Adaptation of Large Language Models"
+      },
+      {
+        "id": "arxiv-2305.14314",
+        "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
+      },
+      {
+        "id": "arxiv-1607.00133",
+        "title": "Deep Learning with Differential Privacy"
+      },
+      {
+        "id": "arxiv-1802.09089",
+        "title": "Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection"
       }
+    ],
+    "aliases": [],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
     ]
   },
   {
@@ -71,14 +123,31 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "深度学习：通过多层神经网络学习数据表示。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "深度学习通过多层可训练表示组合复杂映射。模型结构提供归纳偏置，优化过程由目标函数与数据驱动；更深或参数更多不自动代表更适合任务。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "说明输入表示、损失函数和优化过程",
+      "比较训练表现与独立测试表现",
+      "记录模型规模、资源开销和失败样例"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "ai-transformer",
+        "title": "理解 Transformer：先看数据怎样流动"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-1706.03762",
+        "title": "Attention Is All You Need"
+      }
+    ],
+    "aliases": [],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
+    ]
   },
   {
     "id": "llm",
@@ -97,14 +166,67 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "大语言模型：理解语言建模、上下文与生成任务。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "大语言模型在大量文本上学习语言表示或生成规律。面向生成的模型根据上下文逐步输出 token；流畅表达不等于事实可靠，也不证明模型拥有某项工具权限。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "区分预训练、指令适配与推理",
+      "观察上下文长度、版本与提示的影响",
+      "需要事实时连接检索与引用校验"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "ai-from-llm-to-agent",
+        "title": "从大模型到 Agent：把回答变成可验证的行动"
+      },
+      {
+        "id": "ai-transformer",
+        "title": "理解 Transformer：先看数据怎样流动"
+      },
+      {
+        "id": "ai-lora",
+        "title": "LoRA 与 QLoRA：理解微调改变了什么"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-1706.03762",
+        "title": "Attention Is All You Need"
+      },
+      {
+        "id": "arxiv-1810.04805",
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+      },
+      {
+        "id": "arxiv-2005.14165",
+        "title": "Language Models are Few-Shot Learners"
+      },
+      {
+        "id": "arxiv-2106.09685",
+        "title": "LoRA: Low-Rank Adaptation of Large Language Models"
+      },
+      {
+        "id": "arxiv-2201.11903",
+        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+      },
+      {
+        "id": "arxiv-2203.02155",
+        "title": "Training language models to follow instructions with human feedback"
+      },
+      {
+        "id": "arxiv-2305.14314",
+        "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
+      }
+    ],
+    "aliases": [
+      "大模型",
+      "语言模型",
+      "Large Language Model"
+    ],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
+    ]
   },
   {
     "id": "rag",
@@ -115,7 +237,7 @@
       "检索",
       "知识库"
     ],
-    "icon": "/assets/inventory/paper.png",
+    "icon": "/assets/inventory/ender-pearl.png",
     "x": 480,
     "y": 25,
     "parentIds": [
@@ -123,14 +245,38 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "检索增强生成：把检索到的资料纳入生成过程。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "检索增强生成先检索外部证据，再把证据用于回答。文档切分、召回、排序、版本元数据和引用共同决定结果；向量库只是实现选项之一。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "为段落保留稳定 ID、来源与更新时间",
+      "分别评价召回质量和回答忠实度",
+      "对无证据或证据冲突的问题允许拒答"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "ai-rag-evidence",
+        "title": "RAG 的关键不是向量库，而是证据链"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-2005.11401",
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+      },
+      {
+        "id": "arxiv-2312.10997",
+        "title": "Retrieval-Augmented Generation for Large Language Models: A Survey"
+      }
+    ],
+    "aliases": [
+      "检索增强生成",
+      "retrieval augmented generation"
+    ],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
+    ]
   },
   {
     "id": "agent",
@@ -141,7 +287,7 @@
       "智能体",
       "Agent"
     ],
-    "icon": "/assets/inventory/ender-pearl.png",
+    "icon": "/assets/inventory/repeater.png",
     "x": 480,
     "y": 145,
     "parentIds": [
@@ -149,14 +295,54 @@
     ],
     "status": "untracked",
     "frame": "challenge",
-    "details": "智能体：围绕目标组织模型、工具调用与反馈。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "智能体将模型与观察、工具调用和反馈循环连接起来。程序负责检查工具权限、参数和执行结果；停止条件与失败恢复决定系统能否稳定完成任务。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "给工具定义清晰输入和输出契约",
+      "设置步数、耗时与重试上限",
+      "外部文本不能获得发布或删除权限"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "ai-from-llm-to-agent",
+        "title": "从大模型到 Agent：把回答变成可验证的行动"
+      },
+      {
+        "id": "ai-tool-contract",
+        "title": "Tool Calling：先定义契约，再让模型选择工具"
+      },
+      {
+        "id": "ai-input-boundary",
+        "title": "提示注入与信任边界：外部文本不能指挥系统"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-2210.03629",
+        "title": "ReAct: Synergizing Reasoning and Acting in Language Models"
+      },
+      {
+        "id": "arxiv-2302.04761",
+        "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+      },
+      {
+        "id": "arxiv-2307.15043",
+        "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models"
+      },
+      {
+        "id": "arxiv-2405.15793",
+        "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+      }
+    ],
+    "aliases": [
+      "智能体",
+      "代理"
+    ],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
+    ]
   },
   {
     "id": "ai-security",
@@ -175,18 +361,78 @@
     ],
     "status": "untracked",
     "frame": "challenge",
-    "details": "AI 安全：研究模型输入、数据和工具使用中的安全边界。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "AI 安全需要同时检查输入边界、模型行为、数据隐私与工具权限。提示注入、对抗样本、成员推断和模型后门属于不同威胁模型，不能把一种测试的结果推广为所有场景安全。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "记录攻击者的访问能力与可影响资源",
+      "用最小权限限制工具和数据暴露",
+      "将测试观察与推断结论明确分开"
     ],
-    "relatedBlogs": [],
+    "relatedBlogs": [
+      {
+        "id": "ai-input-boundary",
+        "title": "提示注入与信任边界：外部文本不能指挥系统"
+      },
+      {
+        "id": "security-supply-chain",
+        "title": "供应链安全：依赖不是下载后就可信"
+      },
+      {
+        "id": "software-rss-pipeline",
+        "title": "RSS 数据管道：从外部 XML 到可读的知识世界"
+      }
+    ],
     "relatedPapers": [
       {
         "id": "nids-fgpa",
         "title": "NIDS-FGPA"
+      },
+      {
+        "id": "sybil",
+        "title": "The Sybil Attack"
+      },
+      {
+        "id": "arxiv-1412.6572",
+        "title": "Explaining and Harnessing Adversarial Examples"
+      },
+      {
+        "id": "arxiv-1602.02697",
+        "title": "Practical Black-Box Attacks against Machine Learning"
+      },
+      {
+        "id": "arxiv-1607.00133",
+        "title": "Deep Learning with Differential Privacy"
+      },
+      {
+        "id": "arxiv-1610.05820",
+        "title": "Membership Inference Attacks against Machine Learning Models"
+      },
+      {
+        "id": "arxiv-1702.05983",
+        "title": "Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN"
+      },
+      {
+        "id": "arxiv-1708.06733",
+        "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain"
+      },
+      {
+        "id": "arxiv-2209.07858",
+        "title": "Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned"
+      },
+      {
+        "id": "arxiv-2307.15043",
+        "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models"
       }
+    ],
+    "aliases": [
+      "AI 安全",
+      "提示注入",
+      "模型隐私"
+    ],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
     ]
   },
   {
@@ -204,14 +450,34 @@
     "parentIds": [],
     "status": "untracked",
     "frame": "goal",
-    "details": "计算机网络：理解分层、寻址与数据传输。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "计算机网络通过分层协议交换数据。地址、路由、连接和应用请求对应不同层次；排查时应先定位故障层，再解释安全影响。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "区分 IP、端口与应用服务",
+      "画出名称解析到应用响应的时间线",
+      "对网络测试明确授权范围与证据来源"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "network-security-foundation",
+        "title": "从 TCP/IP 开始理解网络安全"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "sybil",
+        "title": "The Sybil Attack"
+      }
+    ],
+    "aliases": [
+      "计算机网络",
+      "网络安全"
+    ],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
   },
   {
     "id": "tcp-ip",
@@ -230,14 +496,29 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "TCP/IP：梳理网络协议分层及通信过程。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "IP 提供寻址与转发，TCP 在其上管理连接、字节流与可靠传输。TCP 不定义应用消息边界，也不替代 TLS 或应用层认证。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "解释序列号、确认与重传的作用",
+      "区分连接失败和应用响应错误",
+      "识别代理、防火墙和负载均衡的影响"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "network-security-foundation",
+        "title": "从 TCP/IP 开始理解网络安全"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [
+      "TCP/IP",
+      "传输协议"
+    ],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
   },
   {
     "id": "http",
@@ -248,7 +529,7 @@
       "网络安全",
       "Web"
     ],
-    "icon": "/assets/inventory/book.png",
+    "icon": "/assets/inventory/paper.png",
     "x": 260,
     "y": 30,
     "parentIds": [
@@ -256,14 +537,34 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "HTTP：理解请求、响应、方法与状态码。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "HTTP 定义请求与响应的语义，包括方法、状态码、头部和内容。认证、授权、缓存与跨源读取是不同问题；HTTPS 保护传输但不自动修复应用权限错误。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "检查方法与状态码是否表达真实结果",
+      "区分身份认证、资源授权和 CORS",
+      "为私人数据设置适当缓存边界"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "security-http",
+        "title": "HTTP 的安全边界：请求、身份与状态"
+      },
+      {
+        "id": "security-vulnerability",
+        "title": "漏洞管理：从扫描告警到风险判断"
+      },
+      {
+        "id": "security-response",
+        "title": "事件响应：让时间线比猜测先出现"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
   },
   {
     "id": "asset-discovery",
@@ -283,14 +584,26 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "资产发现：在授权范围内整理主机、服务与资产清单。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "资产发现建立域名、地址、服务、归属与负责人之间的可核验清单。公开索引与实时探测具有不同时间属性，历史结果不能自动视为当前暴露状态。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "记录发现时间、来源和归属证据",
+      "区分已确认、待验证和已退役资产",
+      "仅在自有或明确获授权范围内探测"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "security-asset-discovery",
+        "title": "资产发现：从地址清单到可核验的服务记录"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
   },
   {
     "id": "nmap",
@@ -311,14 +624,26 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "网络资产发现与端口扫描工具；实践必须限定在授权目标。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "Nmap 用于网络发现和服务探测。探测输出是分析证据，不是自动成立的漏洞结论；服务识别受网络路径、探测方式与目标响应影响。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "理解主机发现、端口状态与服务识别的差别",
+      "核对目标是否位于授权范围",
+      "结合配置和版本证据再判断风险"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "security-asset-discovery",
+        "title": "资产发现：从地址清单到可核验的服务记录"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
   },
   {
     "id": "fofa",
@@ -329,7 +654,7 @@
       "网络安全",
       "资产检索"
     ],
-    "icon": "/assets/inventory/ender-pearl.png",
+    "icon": "/assets/inventory/compass.png",
     "x": 370,
     "y": 65,
     "parentIds": [
@@ -337,14 +662,26 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "网络空间资产检索：学习查询、结果核验与资产归属。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "FOFA 是网络空间资产搜索工具。搜索命中通常来自平台收集的索引，适合发现线索与建立资产候选，仍需核对归属、时效和实际服务状态。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "区分被动搜索结果与主动验证",
+      "核对域名、证书和组织归属",
+      "发现地址不代表获得测试权限"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "security-asset-discovery",
+        "title": "资产发现：从地址清单到可核验的服务记录"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
   },
   {
     "id": "vulnerability-scanning",
@@ -365,14 +702,26 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "漏洞扫描：理解检测结果、误报核验与修复优先级。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "漏洞扫描把组件、配置或响应与规则进行匹配。告警需要进一步确认适用条件、影响和修复路径；版本命中、严重分数与实际风险不能相互替代。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "把告警映射到实际组件和资产",
+      "结合暴露面与利用证据确定优先级",
+      "修复后验证版本、配置与业务回归"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "security-vulnerability",
+        "title": "漏洞管理：从扫描告警到风险判断"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
   },
   {
     "id": "incident-response",
@@ -391,14 +740,26 @@
     ],
     "status": "untracked",
     "frame": "challenge",
-    "details": "事件响应：梳理发现、分析、处置与复盘的流程。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "事件响应围绕准备、检测、分析、处置和恢复组织工作。时间线、原始证据与操作记录应先于归因猜测；恢复服务后仍需检查入口、凭据和持续影响。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "保存统一时间与可定位的证据",
+      "区分已观察事实和待验证假设",
+      "记录处置动作、恢复检查与改进项"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "security-response",
+        "title": "事件响应：让时间线比猜测先出现"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
   },
   {
     "id": "frontend",
@@ -416,19 +777,43 @@
     "parentIds": [],
     "status": "untracked",
     "frame": "goal",
-    "details": "前端：组织界面、状态与用户交互。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "前端把数据和交互状态转化为用户界面。可访问性、输入反馈、错误提示和不同窗口尺寸都是功能的一部分；视觉一致性不能代替数据与状态正确。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "减少重复状态并使用稳定 ID",
+      "取消过期请求，防止旧结果覆盖新输入",
+      "验证键盘、空状态与窗口模式"
     ],
     "relatedBlogs": [
       {
         "id": "mineblogcraft-birth",
         "title": "Mineblogcraft 的诞生"
+      },
+      {
+        "id": "software-react-state",
+        "title": "React 状态：用一份事实驱动多个界面"
+      },
+      {
+        "id": "software-testing",
+        "title": "测试分层：验证行为，而不是重复实现"
       }
     ],
-    "relatedPapers": []
+    "relatedPapers": [
+      {
+        "id": "arxiv-2002.08155",
+        "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages"
+      },
+      {
+        "id": "arxiv-2109.00859",
+        "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation"
+      }
+    ],
+    "aliases": [],
+    "domainId": "software",
+    "relatedRss": [
+      "github",
+      "meta-engineering",
+      "cloudflare"
+    ]
   },
   {
     "id": "backend",
@@ -447,14 +832,47 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "后端：理解业务服务、边界与接口协作。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "后端负责处理请求、身份、业务约束和数据访问。接口应明确错误与权限边界；静态站点当前不需要后端，但 Repository 可以为未来接入保留稳定契约。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "区分协议错误、业务拒绝和系统失败",
+      "在服务端校验权限与输入",
+      "按实际需求引入服务，避免提前增加复杂度"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "software-api-contract",
+        "title": "API 契约：静态 JSON 也需要边界"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-2002.08155",
+        "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages"
+      },
+      {
+        "id": "arxiv-2009.08366",
+        "title": "GraphCodeBERT: Pre-training Code Representations with Data Flow"
+      },
+      {
+        "id": "arxiv-2107.03374",
+        "title": "Evaluating Large Language Models Trained on Code"
+      },
+      {
+        "id": "arxiv-2109.00859",
+        "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation"
+      },
+      {
+        "id": "arxiv-2305.06161",
+        "title": "StarCoder: may the source be with you!"
+      }
+    ],
+    "aliases": [],
+    "domainId": "software",
+    "relatedRss": [
+      "github",
+      "meta-engineering",
+      "cloudflare"
+    ]
   },
   {
     "id": "database",
@@ -473,14 +891,39 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "数据库：理解数据模型、查询与一致性。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "数据库提供数据组织、查询和一致性机制。存储结构应先明确实体、唯一键、关系与更新时间语义，再考虑索引和查询性能。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "使用稳定 ID，避免标题充当主键",
+      "明确事务、约束与更新规则",
+      "迁移前验证旧数据与引用完整性"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "software-api-contract",
+        "title": "API 契约：静态 JSON 也需要边界"
+      },
+      {
+        "id": "software-repository",
+        "title": "Repository：让内容存储与游戏界面分离"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "lfs",
+        "title": "The Design and Implementation of a Log-Structured File System"
+      },
+      {
+        "id": "raft",
+        "title": "In Search of an Understandable Consensus Algorithm"
+      }
+    ],
+    "aliases": [],
+    "domainId": "software",
+    "relatedRss": [
+      "github",
+      "meta-engineering",
+      "cloudflare"
+    ]
   },
   {
     "id": "api",
@@ -491,7 +934,7 @@
       "软件工程",
       "接口"
     ],
-    "icon": "/assets/inventory/paper.png",
+    "icon": "/assets/inventory/repeater.png",
     "x": 260,
     "y": 175,
     "parentIds": [
@@ -499,14 +942,46 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "API 设计：描述接口契约、错误语义与版本演进。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "API 是系统间约定的边界。字段类型、日期含义、空值、错误和兼容策略需要一致；静态 JSON 同样可以遵守接口契约。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "区分发布时间、抓取时间与更新时间",
+      "明确必填字段、枚举和空值含义",
+      "用 Repository 隔离传输格式与页面组件"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "ai-tool-contract",
+        "title": "Tool Calling：先定义契约，再让模型选择工具"
+      },
+      {
+        "id": "security-http",
+        "title": "HTTP 的安全边界：请求、身份与状态"
+      },
+      {
+        "id": "software-api-contract",
+        "title": "API 契约：静态 JSON 也需要边界"
+      },
+      {
+        "id": "software-rss-pipeline",
+        "title": "RSS 数据管道：从外部 XML 到可读的知识世界"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "logical-clocks",
+        "title": "Time, Clocks, and the Ordering of Events in a Distributed System"
+      }
+    ],
+    "aliases": [
+      "API Design",
+      "接口设计"
+    ],
+    "domainId": "software",
+    "relatedRss": [
+      "github",
+      "meta-engineering",
+      "cloudflare"
+    ]
   },
   {
     "id": "architecture",
@@ -526,14 +1001,58 @@
     ],
     "status": "untracked",
     "frame": "challenge",
-    "details": "系统架构：理解模块边界、依赖与技术取舍。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "软件架构组织系统的职责、依赖与变化边界。当前知识站把元数据、正文、搜索和展示分离，目标是更容易验证和替换数据来源，而不是增加抽象层数量。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "围绕实际变化划分模块责任",
+      "让数据读取与 UI 渲染保持独立",
+      "记录选择、限制与后续迁移条件"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "software-repository",
+        "title": "Repository：让内容存储与游戏界面分离"
+      },
+      {
+        "id": "software-architecture",
+        "title": "静态知识站的架构：少依赖，清边界"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "logical-clocks",
+        "title": "Time, Clocks, and the Ordering of Events in a Distributed System"
+      },
+      {
+        "id": "lfs",
+        "title": "The Design and Implementation of a Log-Structured File System"
+      },
+      {
+        "id": "mapreduce",
+        "title": "MapReduce: Simplified Data Processing on Large Clusters"
+      },
+      {
+        "id": "raft",
+        "title": "In Search of an Understandable Consensus Algorithm"
+      },
+      {
+        "id": "arxiv-2009.08366",
+        "title": "GraphCodeBERT: Pre-training Code Representations with Data Flow"
+      },
+      {
+        "id": "arxiv-2310.06770",
+        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+      }
+    ],
+    "aliases": [
+      "软件架构",
+      "系统架构"
+    ],
+    "domainId": "software",
+    "relatedRss": [
+      "github",
+      "meta-engineering",
+      "cloudflare"
+    ]
   },
   {
     "id": "testing",
@@ -544,7 +1063,7 @@
       "软件工程",
       "测试"
     ],
-    "icon": "/assets/inventory/redstone.png",
+    "icon": "/assets/inventory/compass.png",
     "x": 480,
     "y": 110,
     "parentIds": [
@@ -552,14 +1071,50 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "测试：从需求与风险出发验证系统行为。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "测试用可重复的输入检查可观察行为。数据校验、解析单元测试和浏览器交互各有职责；构建成功、截图正确与内容可信是不同层面的证据。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "覆盖正常、空、失败与边界输入",
+      "网络检查与固定样本测试分离",
+      "修改后检查相关行为与回归风险"
     ],
-    "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedBlogs": [
+      {
+        "id": "software-react-state",
+        "title": "React 状态：用一份事实驱动多个界面"
+      },
+      {
+        "id": "software-testing",
+        "title": "测试分层：验证行为，而不是重复实现"
+      },
+      {
+        "id": "software-static-delivery",
+        "title": "静态交付：让构建结果与发布动作分开"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-2107.03374",
+        "title": "Evaluating Large Language Models Trained on Code"
+      },
+      {
+        "id": "arxiv-2310.06770",
+        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+      },
+      {
+        "id": "arxiv-2405.15793",
+        "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+      }
+    ],
+    "aliases": [
+      "软件测试",
+      "回归测试"
+    ],
+    "domainId": "software",
+    "relatedRss": [
+      "github",
+      "meta-engineering",
+      "cloudflare"
+    ]
   },
   {
     "id": "modeling",
@@ -570,20 +1125,23 @@
       "数学建模",
       "数据建模"
     ],
-    "icon": "/assets/inventory/book.png",
+    "icon": "/assets/inventory/paper.png",
     "x": 40,
     "y": 110,
     "parentIds": [],
     "status": "untracked",
     "frame": "goal",
-    "details": "数学建模：把现实问题转化为可分析的变量、关系和约束。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "数学建模先明确问题、变量、假设与可获得的数据，再选择方程或算法。模型是对现实的有条件近似，必须记录适用范围与验证方式。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "说明变量、单位、假设和边界条件",
+      "比较基线与模型输出，进行敏感性分析",
+      "区分理论推导、拟合与真实预测验证"
     ],
     "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "modeling",
+    "relatedRss": []
   },
   {
     "id": "diffusion",
@@ -602,11 +1160,11 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "扩散方程：认识变化率、空间扩散与边界条件。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "扩散方程描述某些量随空间与时间的传播过程。初始条件、边界条件、维度和参数单位共同决定解的含义；解析解的使用必须满足对应假设。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "说明研究量、扩散系数与单位",
+      "核对初始和边界条件是否匹配",
+      "把解析结果与数值或观测证据比较"
     ],
     "relatedBlogs": [],
     "relatedPapers": [
@@ -614,7 +1172,10 @@
         "id": "001",
         "title": "基于扩散方程的时间比值法研究（原创示例）"
       }
-    ]
+    ],
+    "aliases": [],
+    "domainId": "modeling",
+    "relatedRss": []
   },
   {
     "id": "time-ratio",
@@ -633,11 +1194,11 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "时间比值法：结合模型假设比较特定状态对应的时间尺度。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "时间比值方法比较特定条件下不同时间尺度的关系。本站关联的扩散方程文档是教学示例，不是正式发表成果；具体推导必须回到假设与方程，不能把示例方法当成通用定理。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "写明比值对应的物理量与观测条件",
+      "检查参数抵消是否依赖特定假设",
+      "对示例与正式研究文献保持明确区分"
     ],
     "relatedBlogs": [],
     "relatedPapers": [
@@ -645,7 +1206,10 @@
         "id": "001",
         "title": "基于扩散方程的时间比值法研究（原创示例）"
       }
-    ]
+    ],
+    "aliases": [],
+    "domainId": "modeling",
+    "relatedRss": []
   },
   {
     "id": "data-mining",
@@ -657,7 +1221,7 @@
       "数据挖掘",
       "建模"
     ],
-    "icon": "/assets/inventory/compass.png",
+    "icon": "/assets/inventory/pickaxe.png",
     "x": 150,
     "y": 175,
     "parentIds": [
@@ -665,14 +1229,22 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "数据挖掘：从数据准备到模式发现和结果评价。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "数据挖掘从结构化或非结构化数据中寻找模式。清洗、缺失处理、采样和评价标准先于算法选择，统计关联也不自动构成因果关系。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "核对数据粒度、重复和缺失值",
+      "区分探索发现与独立验证",
+      "为模式保留来源与可解释的评价指标"
     ],
     "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedPapers": [
+      {
+        "id": "mapreduce",
+        "title": "MapReduce: Simplified Data Processing on Large Clusters"
+      }
+    ],
+    "aliases": [],
+    "domainId": "modeling",
+    "relatedRss": []
   },
   {
     "id": "fp-growth",
@@ -683,7 +1255,7 @@
       "数据分析",
       "关联规则"
     ],
-    "icon": "/assets/inventory/repeater.png",
+    "icon": "/assets/inventory/book.png",
     "x": 260,
     "y": 175,
     "parentIds": [
@@ -691,14 +1263,17 @@
     ],
     "status": "untracked",
     "frame": "task",
-    "details": "频繁模式挖掘：理解频繁项集与支持度。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "FP-Growth 通过紧凑的频繁模式树挖掘频繁项集。支持度阈值、事务定义和数据预处理会改变结果；频繁项集与关联规则不是同一个输出。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "先定义一条事务代表什么",
+      "区分支持度、置信度与提升度",
+      "警惕高频共现被误解为因果或欺诈证据"
     ],
     "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "modeling",
+    "relatedRss": []
   },
   {
     "id": "topsis",
@@ -718,13 +1293,368 @@
     ],
     "status": "untracked",
     "frame": "challenge",
-    "details": "多指标决策：理解指标方向、权重与理想解距离。 本节点是知识目录示例，学习笔记待作者补充。",
+    "details": "TOPSIS 根据方案与正、负理想解的相对距离组织多指标排序。指标方向、归一化和权重会影响排序，结果应结合敏感性检查解释。",
     "learningPoints": [
-      "理解核心概念与适用范围",
-      "梳理与前置知识的联系",
-      "通过例子验证理解并记录局限"
+      "统一正向与逆向指标的处理",
+      "说明权重来源与归一化方法",
+      "检查权重改变是否造成排序显著变化"
     ],
     "relatedBlogs": [],
-    "relatedPapers": []
+    "relatedPapers": [],
+    "aliases": [],
+    "domainId": "modeling",
+    "relatedRss": []
+  },
+  {
+    "id": "vector-database",
+    "title": "Vector Database",
+    "category": "AI",
+    "description": "检索向量与元数据过滤",
+    "tags": [
+      "Vector Database",
+      "检索向量与元数据过滤"
+    ],
+    "icon": "/assets/inventory/ender-pearl.png",
+    "x": 690,
+    "y": 150,
+    "parentIds": [
+      "rag"
+    ],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "向量检索系统存储嵌入与元数据，并按距离或相似度召回候选。嵌入模型版本、距离定义和过滤条件需要一致，检索命中不能单独证明内容正确。",
+    "learningPoints": [
+      "保存文本段落、来源与嵌入版本",
+      "检查召回与过滤后的实际证据",
+      "在重建索引和内容更新之间保持一致性"
+    ],
+    "relatedBlogs": [
+      {
+        "id": "ai-rag-evidence",
+        "title": "RAG 的关键不是向量库，而是证据链"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-2005.11401",
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+      },
+      {
+        "id": "arxiv-2312.10997",
+        "title": "Retrieval-Augmented Generation for Large Language Models: A Survey"
+      }
+    ],
+    "aliases": [
+      "向量数据库"
+    ],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
+    ]
+  },
+  {
+    "id": "tool-calling",
+    "title": "Tool Calling",
+    "category": "AI",
+    "description": "受约束的结构化工具接口",
+    "tags": [
+      "Tool Calling",
+      "受约束的结构化工具接口"
+    ],
+    "icon": "/assets/inventory/repeater.png",
+    "x": 790,
+    "y": 240,
+    "parentIds": [
+      "agent"
+    ],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "工具调用把模型提出的行动转成结构化请求。工具层负责验证名称、参数、授权范围与返回结果；不能把自由文本直接当作可执行命令。",
+    "learningPoints": [
+      "拒绝未知工具与不合法参数",
+      "为读取、修改和发布划分不同权限",
+      "明确超时、零结果与执行失败的返回格式"
+    ],
+    "relatedBlogs": [
+      {
+        "id": "ai-tool-contract",
+        "title": "Tool Calling：先定义契约，再让模型选择工具"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-2210.03629",
+        "title": "ReAct: Synergizing Reasoning and Acting in Language Models"
+      },
+      {
+        "id": "arxiv-2302.04761",
+        "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+      },
+      {
+        "id": "arxiv-2405.15793",
+        "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+      }
+    ],
+    "aliases": [
+      "工具调用"
+    ],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
+    ]
+  },
+  {
+    "id": "ai-evaluation",
+    "title": "AI Evaluation",
+    "category": "AI",
+    "description": "任务正确性、证据与运行边界的评价",
+    "tags": [
+      "AI Evaluation",
+      "任务正确性、证据与运行边界的评价"
+    ],
+    "icon": "/assets/inventory/compass.png",
+    "x": 890,
+    "y": 60,
+    "parentIds": [
+      "machine-learning"
+    ],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "AI 评价需要分别观察任务正确性、证据忠实度、格式遵循、拒答边界和运行成本。测试集、评分规则与版本必须固定，单次流畅回答不能代替评估。",
+    "learningPoints": [
+      "准备有答案、无答案与冲突证据样本",
+      "保存失败类型并比较改动前后的分布",
+      "对模型评审结果进行人工抽样核对"
+    ],
+    "relatedBlogs": [
+      {
+        "id": "ai-evaluation",
+        "title": "模型评估：把流畅、正确与可靠分开"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-2005.14165",
+        "title": "Language Models are Few-Shot Learners"
+      },
+      {
+        "id": "arxiv-2201.11903",
+        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+      },
+      {
+        "id": "arxiv-2203.02155",
+        "title": "Training language models to follow instructions with human feedback"
+      },
+      {
+        "id": "arxiv-2209.07858",
+        "title": "Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned"
+      }
+    ],
+    "aliases": [],
+    "domainId": "ai",
+    "relatedRss": [
+      "huggingface",
+      "openai",
+      "google-ai"
+    ]
+  },
+  {
+    "id": "intrusion-detection",
+    "title": "Intrusion Detection",
+    "category": "Security",
+    "description": "基于网络流量与事件识别异常",
+    "tags": [
+      "Intrusion Detection",
+      "基于网络流量与事件识别异常"
+    ],
+    "icon": "/assets/inventory/shield-slot.png",
+    "x": 690,
+    "y": 240,
+    "parentIds": [
+      "vulnerability-scanning"
+    ],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "入侵检测根据网络流量或事件特征识别异常。数据划分与部署分布会影响指标，准确率需要与误报、漏报和时延共同解释。",
+    "learningPoints": [
+      "核对数据集、标签与特征来源",
+      "避免同源流量泄漏到测试集",
+      "记录分布变化和部署条件的限制"
+    ],
+    "relatedBlogs": [
+      {
+        "id": "security-ids",
+        "title": "入侵检测：先验证数据，再讨论模型"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-1802.09089",
+        "title": "Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection"
+      }
+    ],
+    "aliases": [
+      "入侵检测",
+      "NIDS"
+    ],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
+  },
+  {
+    "id": "supply-chain",
+    "title": "Supply Chain Security",
+    "category": "Security",
+    "description": "源码、依赖、构建与发布的信任链",
+    "tags": [
+      "Supply Chain Security",
+      "源码、依赖、构建与发布的信任链"
+    ],
+    "icon": "/assets/inventory/iron-sword.png",
+    "x": 790,
+    "y": 60,
+    "parentIds": [
+      "incident-response"
+    ],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "供应链安全追踪源码、依赖、构建环境和产物之间的信任关系。锁文件、校验和与签名分别提供不同证据，不能用单一措施代替来源和权限检查。",
+    "learningPoints": [
+      "记录依赖与资源的版本、来源和许可",
+      "限制构建与发布账户权限",
+      "验证产物并保留可恢复的发布记录"
+    ],
+    "relatedBlogs": [
+      {
+        "id": "security-supply-chain",
+        "title": "供应链安全：依赖不是下载后就可信"
+      },
+      {
+        "id": "software-static-delivery",
+        "title": "静态交付：让构建结果与发布动作分开"
+      }
+    ],
+    "relatedPapers": [
+      {
+        "id": "arxiv-1702.05983",
+        "title": "Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN"
+      },
+      {
+        "id": "arxiv-1708.06733",
+        "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain"
+      },
+      {
+        "id": "arxiv-2305.06161",
+        "title": "StarCoder: may the source be with you!"
+      }
+    ],
+    "aliases": [
+      "供应链安全"
+    ],
+    "domainId": "security",
+    "relatedRss": [
+      "tencent-security",
+      "schneier",
+      "krebs"
+    ]
+  },
+  {
+    "id": "rss-pipeline",
+    "title": "RSS Pipeline",
+    "category": "Software",
+    "description": "外部 Feed 的解析、校验与静态快照",
+    "tags": [
+      "RSS Pipeline",
+      "外部 Feed 的解析、校验与静态快照"
+    ],
+    "icon": "/assets/inventory/repeater.png",
+    "x": 580,
+    "y": 60,
+    "parentIds": [
+      "api"
+    ],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "RSS 管道把外部 RSS/Atom 规范化为本站静态快照。抓取与阅读分离，来源和日期可追踪；外部正文是数据，不能修改项目指令或执行权限。",
+    "learningPoints": [
+      "区分 Feed 地址、原站和原文链接",
+      "限制下载范围、体积、超时并验证 XML",
+      "失败保留旧缓存，缺失日期保留空值"
+    ],
+    "relatedBlogs": [
+      {
+        "id": "software-rss-pipeline",
+        "title": "RSS 数据管道：从外部 XML 到可读的知识世界"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [
+      "RSS",
+      "Atom",
+      "订阅",
+      "XML"
+    ],
+    "domainId": "software",
+    "relatedRss": [
+      "github",
+      "meta-engineering",
+      "cloudflare"
+    ]
+  },
+  {
+    "id": "deployment",
+    "title": "Deployment",
+    "category": "Software",
+    "description": "可复现构建与经过验证的交付",
+    "tags": [
+      "Deployment",
+      "可复现构建与经过验证的交付"
+    ],
+    "icon": "/assets/inventory/crafting-top.png",
+    "x": 680,
+    "y": 150,
+    "parentIds": [
+      "testing"
+    ],
+    "status": "untracked",
+    "frame": "goal",
+    "details": "交付包括构建、验证与发布三个阶段。静态产物可以先在本地检查，发布则改变线上状态；当分支绑定自动部署时，推送也具有发布效果。",
+    "learningPoints": [
+      "复现构建并核对静态资源与路径",
+      "检查部署权限、凭据和回滚路径",
+      "只有明确授权后才触发线上发布"
+    ],
+    "relatedBlogs": [
+      {
+        "id": "security-supply-chain",
+        "title": "供应链安全：依赖不是下载后就可信"
+      },
+      {
+        "id": "software-architecture",
+        "title": "静态知识站的架构：少依赖，清边界"
+      },
+      {
+        "id": "software-static-delivery",
+        "title": "静态交付：让构建结果与发布动作分开"
+      }
+    ],
+    "relatedPapers": [],
+    "aliases": [
+      "部署",
+      "静态交付"
+    ],
+    "domainId": "software",
+    "relatedRss": [
+      "github",
+      "meta-engineering",
+      "cloudflare"
+    ]
   }
 ]

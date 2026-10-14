@@ -27,6 +27,7 @@ export function MineResearchPage({ back }: { back: () => void }) {
   const closeBook = () => {
     setPaper(null);
     setReading(false);
+    history.replaceState(null, "", location.pathname + location.search);
   };
   const [message, setMessage] = useState("加载论文目录...");
   const [size, setSize] = useState({ width: innerWidth, height: innerHeight });
@@ -42,6 +43,17 @@ export function MineResearchPage({ back }: { back: () => void }) {
       .then((result) => {
         if (!controller.signal.aborted) {
           setPapers(result);
+          if (location.hash.startsWith("#paper/")) {
+            try {
+              setPaper(
+                result.find(
+                  (p) => p.id === decodeURIComponent(location.hash.slice(7)),
+                ) ?? null,
+              );
+            } catch {
+              setPaper(null);
+            }
+          }
           setMessage(result.length ? "" : "暂无论文");
         }
       })

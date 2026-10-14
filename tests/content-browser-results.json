@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-15",
+  "method": "CUA browser interaction against local Vite preview",
+  "viewports": [[1366, 768], [1920, 1080], [2560, 1440]],
+  "blogWorldCount": 22,
+  "newEditorialDrafts": 21,
+  "externalPapers": 33,
+  "retainedExamplePapers": 1,
+  "retainedFulltextPages": 154,
+  "wikiNodes": 34,
+  "wikiLinksChecked": ["Blog", "Research", "RSS"],
+  "rssSourcesPerDomain": 7,
+  "rssSnapshotItems": 406,
+  "rssSnapshotDate": "2026-10-14",
+  "tencentKeyword": "漏洞",
+  "tencentKeywordResults": 8,
+  "rssBatchSizesChecked": [40, 80],
+  "emptySearchChecked": true,
+  "hiddenSelectionConnectDisabled": true,
+  "readFeedbackChecked": true,
+  "brokenItemImages": 0,
+  "consoleErrors": [],
+  "automatedNodeTestsPassed": 9,
+  "historicalPlaywrightSuitesRerun": false,
+  "screenshots": [
+    "tests/screenshots/content-paper-1366x768.jpg",
+    "tests/screenshots/content-fulltext-2560x1440.jpg",
+    "tests/screenshots/content-rss-1366x768.jpg",
+    "tests/screenshots/content-rss-1920x1080.jpg",
+    "tests/screenshots/content-rss-2560x1440.jpg"
+  ]
+}

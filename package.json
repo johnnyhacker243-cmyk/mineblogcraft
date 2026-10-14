@@ -7,7 +7,7 @@
     "build:cloud": "node scripts/cloud-assets.mjs && npm run build",
     "rss": "node scripts/generate-rss.mjs",
     "predev": "npm run rss",
-    "prebuild": "npm run rss && node scripts/verify-classicube.mjs",
+    "prebuild": "npm run content:validate && npm run rss && npm run rss:validate && node scripts/verify-classicube.mjs",
     "test:blog": "node tests/interactions/blog.mjs",
     "test:rss": "node tests/interactions/rss.mjs",
     "test:research": "node tests/interactions/research.mjs",
@@ -22,9 +22,16 @@
     "test:wiki": "node tests/interactions/wiki.mjs",
     "test:status": "node tests/interactions/status.mjs",
     "test:startup": "node tests/interactions/startup.mjs",
-    "test:world": "node tests/interactions/world.mjs"
+    "test:world": "node tests/interactions/world.mjs",
+    "rss:fetch": "node scripts/fetch-rss.mjs",
+    "rss:validate": "node scripts/validate-rss.mjs",
+    "content:validate": "node scripts/validate-content.mjs",
+    "test:content": "node --test tests/rss-pipeline.test.mjs tests/content-search.test.mjs",
+    "build:with-feeds": "npm run rss:fetch && npm run build",
+    "rss:import": "node scripts/import-opml.mjs"
   },
   "dependencies": {
+    "fast-xml-parser": "^5.11.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "three": "^0.180.0"
