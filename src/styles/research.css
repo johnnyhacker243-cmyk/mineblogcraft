@@ -791,6 +791,7 @@
   transform: scaleX(-1);
 }
 .pdf-page-surface {
+  mix-blend-mode: multiply;
   position: absolute;
   inset: calc(9px * var(--book-scale));
   padding: 0;
@@ -808,7 +809,7 @@
   width: auto;
   height: auto;
   image-rendering: auto;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
 }
 .pdf-page-message {
   position: absolute;

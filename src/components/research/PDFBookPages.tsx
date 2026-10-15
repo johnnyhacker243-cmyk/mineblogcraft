@@ -85,7 +85,10 @@ function PDFCanvasPage({
           surface.width = Math.ceil(viewport.width);
           surface.height = Math.ceil(viewport.height);
           setReady(false);
-          task = page.render({ canvas: surface, viewport });
+          task = page.render({
+            canvas: surface,
+            viewport,
+          });
           await task.promise;
           if (!disposed) {
             setReady(true);
@@ -178,8 +181,11 @@ export function PDFBookPages({
           onCount(pdf.numPages);
         }
       })
-      .catch(() => {
-        if (!disposed) setError(true);
+      .catch((failure) => {
+        if (!disposed) {
+          setError(true);
+          console.error("[MineResearch] PDF load failed", paper.id, failure);
+        }
       });
     return () => {
       disposed = true;

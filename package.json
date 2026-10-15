@@ -26,7 +26,7 @@
     "rss:fetch": "node scripts/fetch-rss.mjs",
     "rss:validate": "node scripts/validate-rss.mjs",
     "content:validate": "node scripts/validate-content.mjs",
-    "test:content": "node --test tests/rss-pipeline.test.mjs tests/content-search.test.mjs tests/paper-fulltext.test.mjs tests/paper-loading.test.mjs tests/local-paper-files.test.mjs",
+    "test:content": "node --test tests/rss-pipeline.test.mjs tests/content-search.test.mjs tests/paper-fulltext.test.mjs tests/paper-loading.test.mjs tests/local-paper-files.test.mjs tests/pdf-browser-compat.test.mjs",
     "build:with-feeds": "npm run rss:fetch && npm run build",
     "rss:import": "node scripts/import-opml.mjs",
     "papers:verify": "node scripts/verify-paper-fulltexts.mjs && node scripts/apply-paper-fulltexts.mjs",

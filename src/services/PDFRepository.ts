@@ -79,8 +79,8 @@ export async function loadOriginalPDF(
   url: string,
   sha256?: string,
 ): Promise<PDFLoadHandle> {
-  const pdfjs = await import("pdfjs-dist");
-  pdfjs.GlobalWorkerOptions.workerSrc = "/pdfjs/pdf.worker.min.mjs";
+  const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
+  pdfjs.GlobalWorkerOptions.workerSrc = `/pdfjs/pdf.worker.min.mjs?v=${pdfjs.version}-legacy`;
   // Only page graphics are rendered; PDF actions, scripts, XFA and form logic
   // are never requested or executed by this reader.
   const sources = [trustedPDFUrl(url)];

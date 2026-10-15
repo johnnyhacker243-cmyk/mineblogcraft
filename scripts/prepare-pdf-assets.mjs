@@ -9,7 +9,7 @@ for (const folder of ["standard_fonts", "cmaps", "wasm"])
     { recursive: true },
   );
 await cp(
-  new URL("node_modules/pdfjs-dist/build/pdf.worker.min.mjs", root),
+  new URL("node_modules/pdfjs-dist/legacy/build/pdf.worker.min.mjs", root),
   new URL("pdf.worker.min.mjs", target),
 );
 await cp(
