@@ -1,0 +1,301 @@
+[
+  {
+    "id": "arxiv-1706.03762",
+    "title": "Attention Is All You Need",
+    "url": "https://arxiv.org/pdf/1706.03762v7",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/1706.03762v7"
+  },
+  {
+    "id": "arxiv-1810.04805",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "url": "https://arxiv.org/pdf/1810.04805v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/1810.04805v2"
+  },
+  {
+    "id": "arxiv-2005.11401",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "url": "https://arxiv.org/pdf/2005.11401v4",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2005.11401v4"
+  },
+  {
+    "id": "arxiv-2005.14165",
+    "title": "Language Models are Few-Shot Learners",
+    "url": "https://arxiv.org/pdf/2005.14165v4",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2005.14165v4"
+  },
+  {
+    "id": "arxiv-2106.09685",
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "url": "https://arxiv.org/pdf/2106.09685v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2106.09685v2"
+  },
+  {
+    "id": "arxiv-2201.11903",
+    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+    "url": "https://arxiv.org/pdf/2201.11903v6",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2201.11903v6"
+  },
+  {
+    "id": "arxiv-2203.02155",
+    "title": "Training language models to follow instructions with human feedback",
+    "url": "https://arxiv.org/pdf/2203.02155v1",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2203.02155v1"
+  },
+  {
+    "id": "arxiv-2210.03629",
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "url": "https://arxiv.org/pdf/2210.03629v3",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2210.03629v3"
+  },
+  {
+    "id": "arxiv-2302.04761",
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "url": "https://arxiv.org/pdf/2302.04761v1",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2302.04761v1"
+  },
+  {
+    "id": "arxiv-2305.14314",
+    "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+    "url": "https://arxiv.org/pdf/2305.14314v1",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2305.14314v1"
+  },
+  {
+    "id": "arxiv-2312.10997",
+    "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+    "url": "https://arxiv.org/pdf/2312.10997v5",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2312.10997v5"
+  },
+  {
+    "id": "sybil",
+    "title": "The Sybil Attack",
+    "url": "https://raw.githubusercontent.com/glamrock/anonbib/72408d0597539e5dc7ddc67b9d87a473f2e1f921/cache/sybil.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://www.microsoft.com/en-us/research/publication/the-sybil-attack/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://www.microsoft.com/en-us/research/publication/the-sybil-attack/",
+    "canonicalPDFUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2002/01/IPTPS2002.pdf",
+    "canonicalSHA256": "18c2cecfde383f2d9b089036521ee29fd04ebb35c670f811d4b4c0d0d0a04527",
+    "deliveryNote": "Public anonymity research bibliography archive; byte-identical original PDF"
+  },
+  {
+    "id": "arxiv-1412.6572",
+    "title": "Explaining and Harnessing Adversarial Examples",
+    "url": "https://arxiv.org/pdf/1412.6572v3",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/1412.6572v3"
+  },
+  {
+    "id": "arxiv-1602.02697",
+    "title": "Practical Black-Box Attacks against Machine Learning",
+    "url": "https://arxiv.org/pdf/1602.02697v4",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/1602.02697v4"
+  },
+  {
+    "id": "arxiv-1607.00133",
+    "title": "Deep Learning with Differential Privacy",
+    "url": "https://arxiv.org/pdf/1607.00133v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/1607.00133v2"
+  },
+  {
+    "id": "arxiv-1610.05820",
+    "title": "Membership Inference Attacks against Machine Learning Models",
+    "url": "https://arxiv.org/pdf/1610.05820v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/1610.05820v2"
+  },
+  {
+    "id": "arxiv-1702.05983",
+    "title": "Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN",
+    "url": "https://arxiv.org/pdf/1702.05983v1",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/1702.05983v1"
+  },
+  {
+    "id": "arxiv-1708.06733",
+    "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain",
+    "url": "https://arxiv.org/pdf/1708.06733v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/1708.06733v2"
+  },
+  {
+    "id": "arxiv-1802.09089",
+    "title": "Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection",
+    "url": "https://arxiv.org/pdf/1802.09089v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/1802.09089v2"
+  },
+  {
+    "id": "arxiv-2209.07858",
+    "title": "Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned",
+    "url": "https://arxiv.org/pdf/2209.07858v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2209.07858v2"
+  },
+  {
+    "id": "arxiv-2307.15043",
+    "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+    "url": "https://arxiv.org/pdf/2307.15043v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2307.15043v2"
+  },
+  {
+    "id": "logical-clocks",
+    "title": "Time, Clocks, and the Ordering of Events in a Distributed System",
+    "url": "https://raw.githubusercontent.com/greyhillman/lamport-clock-paper/10f4829a7bcbc7bc93cb5d2a1ac2f4748e25d30d/time-clocks.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+    "canonicalPDFUrl": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+    "deliveryNote": "Public academic archive; original author and canonical publication link preserved",
+    "canonicalSHA256": "c55e7cab4230aa3d7126748a149b2db6f0d7a67296d5eccfdd50a210299a96b2"
+  },
+  {
+    "id": "lfs",
+    "title": "The Design and Implementation of a Log-Structured File System",
+    "url": "https://raw.githubusercontent.com/skyrain/LogStructuredFileSystem/c10800cacf827d58065a855c529d689c27d8b36b/LFS.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://web.stanford.edu/~ouster/cgi-bin/papers/lfs.pdf",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://web.stanford.edu/~ouster/cgi-bin/papers/lfs.pdf",
+    "canonicalPDFUrl": "https://web.stanford.edu/~ouster/cgi-bin/papers/lfs.pdf",
+    "canonicalSHA256": "aa8c31982c0eed0634314d5810b423a973fc1e99aa58b1ed81e2da5b8651e21e"
+  },
+  {
+    "id": "mapreduce",
+    "title": "MapReduce: Simplified Data Processing on Large Clusters",
+    "url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/9b92363eac4d4fbea0f5fdc7766ef68d22037ca8/distributed_systems/mapreduce-simplified-data-processing-on-large-clusters.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters",
+    "canonicalPDFUrl": "https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf",
+    "deliveryNote": "Public academic archive; original author and canonical publication link preserved",
+    "canonicalSHA256": "ae84cc48ff0005c5a79e095039e54e91dce5c116f65746e1593e819d21830ce9"
+  },
+  {
+    "id": "raft",
+    "title": "In Search of an Understandable Consensus Algorithm",
+    "url": "https://raft.github.io/raft.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro"
+  },
+  {
+    "id": "arxiv-2002.08155",
+    "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages",
+    "url": "https://arxiv.org/pdf/2002.08155v4",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2002.08155v4"
+  },
+  {
+    "id": "arxiv-2009.08366",
+    "title": "GraphCodeBERT: Pre-training Code Representations with Data Flow",
+    "url": "https://arxiv.org/pdf/2009.08366v4",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2009.08366v4"
+  },
+  {
+    "id": "arxiv-2107.03374",
+    "title": "Evaluating Large Language Models Trained on Code",
+    "url": "https://arxiv.org/pdf/2107.03374v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2107.03374v2"
+  },
+  {
+    "id": "arxiv-2109.00859",
+    "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation",
+    "url": "https://arxiv.org/pdf/2109.00859v1",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2109.00859v1"
+  },
+  {
+    "id": "arxiv-2305.06161",
+    "title": "StarCoder: may the source be with you!",
+    "url": "https://arxiv.org/pdf/2305.06161v2",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2305.06161v2"
+  },
+  {
+    "id": "arxiv-2310.06770",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "url": "https://arxiv.org/pdf/2310.06770v3",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2310.06770v3"
+  },
+  {
+    "id": "arxiv-2405.15793",
+    "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+    "url": "https://arxiv.org/pdf/2405.15793v3",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "source-hosted-only",
+    "sourceUrl": "https://arxiv.org/abs/2405.15793v3"
+  }
+]

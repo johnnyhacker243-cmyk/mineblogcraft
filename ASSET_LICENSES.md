@@ -78,3 +78,9 @@ MineWiki 使用本地 Minecraft Java 1.21.1 原版 `gui/advancements/` 窗口/�
 ## MineWorld 本地素材
 
 MineWorld 从已授权1.21.1客户端读取石砖/雕纹石砖、深色橡木、铜块、海晶灯、玻璃、黑曜石、动态下界传送门、铁砧、红石块、石英和树叶纹理，复用书架/工作台/附魔台/附魔书与位图字体。纹理保留本地且被Git忽略；建筑、简化展示物几何与位图标牌由项目代码组合生成。没有下载第三方地图或写实模型。原版素材权利归原权利人，读取许可不意味着公开再分发许可。
+
+## 完整原论文与 PDF.js
+
+新增论文使用原站或公开学术存档直读，不将 32 份原 PDF 加入 Git、public 或 dist。27 篇 arXiv 与 Raft 作者站点保留原许可/出处；四篇经典论文的公开存档逐字节等同原作者文件，元数据同时保留规范来源与哈希。可访问不等于允许本站重新托管。
+
+PDF.js 使用 Mozilla 官方 npm 包 pdfjs-dist 6.4.299（Apache-2.0）。scripts/prepare-pdf-assets.mjs 从安装包复制 worker、CMaps、标准字体、WASM 编解码器及各自 LICENSE；生成目录 public/pdfjs 被 Git 忽略，但本地构建包含所需文件和许可声明。正文仅渲染，不执行 PDF 脚本或动作。未替换原版书本或附魔书贴图。详见 PAPER_FULLTEXT.md。

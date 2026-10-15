@@ -6,7 +6,11 @@
     "year": "2024",
     "description": "联邦学习、同态加密与工业物联网入侵检测 · 英文原文",
     "category": "AI / Cyber Security",
-    "keywords": ["Federated Learning", "Intrusion Detection", "IIoT"],
+    "keywords": [
+      "Federated Learning",
+      "Intrusion Detection",
+      "IIoT"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
     "content": "/papers/nids-fgpa/document.json",
     "abstract": "With the rapid development of Industrial Internet of Things (IIoT), network security issues have become increasingly severe, making intrusion detection one of the key technologies for ensuring IIoT security. However, existing intrusion detection systems face challenges such as incomplete data features, missing labels, parameter leakage, and high communication overhead. To address these challenges, this paper proposes a federated learning-based intrusion detection algorithm (NIDS-FGPA) that utilizes gradient similarity model aggregation. This algorithm leverages a federated learning architecture and combines it with Paillier homomorphic encryption technology to ensure the security of the training process. Additionally, the paper introduces the Gradient Similarity Model Aggregation (GSA) algorithm, which dynamically selects and weights updates from different models to reduce communication overhead. Finally, the paper designs a deep learning model based on two-dimensional convolutional neural networks and bidirectional gated recurrent units (2DCNN-BIGRU) to handle incomplete data features and missing labels in network traffic data. Experimental validation on the Edge-IIoTset and CIC IoT 2023 datasets achieves accuracies of 94.5% and 99.2%, respectively. The results demonstrate that the NIDS-FGPA model possesses the ability to identify and capture complex network attacks, significantly enhancing the overall security of the network.",
@@ -18,10 +22,16 @@
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
     "language": "English",
     "domainId": "security",
-    "crossDomainIds": ["ai"],
+    "crossDomainIds": [
+      "ai"
+    ],
     "origin": "external",
     "readingMode": "fulltext",
-    "authors": ["JiaMing Wang", "Kai Yang", "MinJing Li"]
+    "authors": [
+      "JiaMing Wang",
+      "Kai Yang",
+      "MinJing Li"
+    ]
   },
   {
     "id": "arxiv-1706.03762",
@@ -43,20 +53,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["llm", "deep-learning"],
-    "tags": ["llm", "deep-learning"],
+    "keywords": [
+      "llm",
+      "deep-learning"
+    ],
+    "tags": [
+      "llm",
+      "deep-learning"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-1706.03762.md",
+    "content": "",
     "abstract": "用注意力结构处理序列建模。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/1706.03762v7",
     "doi": "10.48550/arXiv.1706.03762",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-1706.03762.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/1706.03762v7",
+      "delivery": "canvas",
+      "pageCount": 15,
+      "verifiedAt": "2026-10-15T08:24:50.836Z",
+      "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-1810.04805",
@@ -74,20 +101,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["llm", "machine-learning"],
-    "tags": ["llm", "machine-learning"],
+    "keywords": [
+      "llm",
+      "machine-learning"
+    ],
+    "tags": [
+      "llm",
+      "machine-learning"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-1810.04805.md",
+    "content": "",
     "abstract": "研究双向预训练表示与下游任务适配。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/1810.04805v2",
     "doi": "10.48550/arXiv.1810.04805",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-1810.04805.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/1810.04805v2",
+      "delivery": "canvas",
+      "pageCount": 16,
+      "verifiedAt": "2026-10-15T08:24:50.871Z",
+      "sha256": "5692a5514787a8c6727b4ff3b726a3385798bc68e12138d1d4af83947e2acf6e"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2005.11401",
@@ -113,20 +157,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["rag", "vector-database"],
-    "tags": ["rag", "vector-database"],
+    "keywords": [
+      "rag",
+      "vector-database"
+    ],
+    "tags": [
+      "rag",
+      "vector-database"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2005.11401.md",
+    "content": "",
     "abstract": "把参数模型与外部检索结合用于知识密集任务。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2005.11401v4",
     "doi": "10.48550/arXiv.2005.11401",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2005.11401.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2005.11401v4",
+      "delivery": "canvas",
+      "pageCount": 19,
+      "verifiedAt": "2026-10-15T08:24:50.896Z",
+      "sha256": "23e3249e9a1e75418d82efecab0ea8c4d033b89c93742f63208d47ce01f21233"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2005.14165",
@@ -171,20 +232,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["llm", "ai-evaluation"],
-    "tags": ["llm", "ai-evaluation"],
+    "keywords": [
+      "llm",
+      "ai-evaluation"
+    ],
+    "tags": [
+      "llm",
+      "ai-evaluation"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2005.14165.md",
+    "content": "",
     "abstract": "考察语言模型的少样本任务能力。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2005.14165v4",
     "doi": "10.48550/arXiv.2005.14165",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2005.14165.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2005.14165v4",
+      "delivery": "canvas",
+      "pageCount": 75,
+      "verifiedAt": "2026-10-15T08:24:50.922Z",
+      "sha256": "97fd272f1fdfc18677462d0292f5fbf26ca86b4d1b485c2dba03269b643a0e83"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2106.09685",
@@ -206,20 +284,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["llm", "machine-learning"],
-    "tags": ["llm", "machine-learning"],
+    "keywords": [
+      "llm",
+      "machine-learning"
+    ],
+    "tags": [
+      "llm",
+      "machine-learning"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2106.09685.md",
+    "content": "",
     "abstract": "研究低秩参数更新的模型适配方式。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2106.09685v2",
     "doi": "10.48550/arXiv.2106.09685",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2106.09685.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2106.09685v2",
+      "delivery": "canvas",
+      "pageCount": 26,
+      "verifiedAt": "2026-10-15T08:24:51.101Z",
+      "sha256": "e9a0d3128767db616085dc0f4e6e455e672e89af823e8ed1282793682787395a"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2201.11903",
@@ -242,20 +337,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["llm", "ai-evaluation"],
-    "tags": ["llm", "ai-evaluation"],
+    "keywords": [
+      "llm",
+      "ai-evaluation"
+    ],
+    "tags": [
+      "llm",
+      "ai-evaluation"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2201.11903.md",
+    "content": "",
     "abstract": "考察包含推理步骤的提示对任务表现的影响。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2201.11903v6",
     "doi": "10.48550/arXiv.2201.11903",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2201.11903.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2201.11903v6",
+      "delivery": "canvas",
+      "pageCount": 43,
+      "verifiedAt": "2026-10-15T08:24:51.128Z",
+      "sha256": "7d9f878c23b460e4566aa4ec9201b1abfb3b8faefb2b1356e411cb90fef72a12"
+    },
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
     "id": "arxiv-2203.02155",
@@ -289,20 +401,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["llm", "ai-evaluation"],
-    "tags": ["llm", "ai-evaluation"],
+    "keywords": [
+      "llm",
+      "ai-evaluation"
+    ],
+    "tags": [
+      "llm",
+      "ai-evaluation"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2203.02155.md",
+    "content": "",
     "abstract": "研究利用人类反馈使模型更符合指令。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2203.02155v1",
     "doi": "10.48550/arXiv.2203.02155",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2203.02155.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2203.02155v1",
+      "delivery": "canvas",
+      "pageCount": 68,
+      "verifiedAt": "2026-10-15T08:24:51.150Z",
+      "sha256": "c1984bb50a5b90fddb895fdc3a0f72e5bc977148c9f63ef6040cbe7a3e1f0d98"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2210.03629",
@@ -323,20 +452,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["agent", "tool-calling"],
-    "tags": ["agent", "tool-calling"],
+    "keywords": [
+      "agent",
+      "tool-calling"
+    ],
+    "tags": [
+      "agent",
+      "tool-calling"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2210.03629.md",
+    "content": "",
     "abstract": "通过交错推理与行动探索语言模型智能体。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2210.03629v3",
     "doi": "10.48550/arXiv.2210.03629",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2210.03629.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2210.03629v3",
+      "delivery": "canvas",
+      "pageCount": 33,
+      "verifiedAt": "2026-10-15T08:24:51.167Z",
+      "sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69"
+    },
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
     "id": "arxiv-2302.04761",
@@ -358,20 +504,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["agent", "tool-calling"],
-    "tags": ["agent", "tool-calling"],
+    "keywords": [
+      "agent",
+      "tool-calling"
+    ],
+    "tags": [
+      "agent",
+      "tool-calling"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2302.04761.md",
+    "content": "",
     "abstract": "研究模型学习何时调用工具及如何使用返回结果。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2302.04761v1",
     "doi": "10.48550/arXiv.2302.04761",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2302.04761.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2302.04761v1",
+      "delivery": "canvas",
+      "pageCount": 17,
+      "verifiedAt": "2026-10-15T08:24:51.199Z",
+      "sha256": "6d7483d94653008e40c2058a1c22441c92e3713dae278b6361e8efc447c99522"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2305.14314",
@@ -389,20 +552,37 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["llm", "machine-learning"],
-    "tags": ["llm", "machine-learning"],
+    "keywords": [
+      "llm",
+      "machine-learning"
+    ],
+    "tags": [
+      "llm",
+      "machine-learning"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2305.14314.md",
+    "content": "",
     "abstract": "研究量化基础模型上的高效微调。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2305.14314v1",
     "doi": "10.48550/arXiv.2305.14314",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2305.14314.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2305.14314v1",
+      "delivery": "canvas",
+      "pageCount": 26,
+      "verifiedAt": "2026-10-15T08:24:51.226Z",
+      "sha256": "33a4e757c19d6ea8d3cca8958fce8fe405e290272e135c99ee66065c775d5bd1"
+    },
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
     "id": "arxiv-2312.10997",
@@ -426,70 +606,125 @@
     "category": "AI",
     "domainId": "ai",
     "crossDomainIds": [],
-    "keywords": ["rag", "vector-database"],
-    "tags": ["rag", "vector-database"],
+    "keywords": [
+      "rag",
+      "vector-database"
+    ],
+    "tags": [
+      "rag",
+      "vector-database"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2312.10997.md",
+    "content": "",
     "abstract": "整理检索增强生成的方法、流程与评价问题。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2312.10997v5",
     "doi": "10.48550/arXiv.2312.10997",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2312.10997.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2312.10997v5",
+      "delivery": "canvas",
+      "pageCount": 21,
+      "verifiedAt": "2026-10-15T08:24:51.250Z",
+      "sha256": "396a0fadeb4cd40f5c8ccc36b73a0815f6cb4d7f6bfa53b6c48c1f9aba7c7e02"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "sybil",
     "title": "The Sybil Attack",
     "author": "John R. Douceur",
-    "authors": ["John R. Douceur"],
+    "authors": [
+      "John R. Douceur"
+    ],
     "year": "2002",
     "description": "研究多重身份对点对点系统信任机制的影响。",
     "category": "Security",
     "domainId": "security",
     "crossDomainIds": [],
-    "keywords": ["network", "ai-security"],
-    "tags": ["network", "ai-security"],
+    "keywords": [
+      "network",
+      "ai-security"
+    ],
+    "tags": [
+      "network",
+      "ai-security"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/sybil.md",
+    "content": "",
     "abstract": "研究多重身份对点对点系统信任机制的影响。（本站主题说明。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://www.microsoft.com/en-us/research/publication/the-sybil-attack/",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/sybil.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://raw.githubusercontent.com/glamrock/anonbib/72408d0597539e5dc7ddc67b9d87a473f2e1f921/cache/sybil.pdf",
+      "delivery": "canvas",
+      "pageCount": 6,
+      "verifiedAt": "2026-10-15T08:24:51.281Z",
+      "sha256": "18c2cecfde383f2d9b089036521ee29fd04ebb35c670f811d4b4c0d0d0a04527"
+    }
   },
   {
     "id": "arxiv-1412.6572",
     "title": "Explaining and Harnessing Adversarial Examples",
     "author": "Ian J. Goodfellow, Jonathon Shlens, Christian Szegedy",
-    "authors": ["Ian J. Goodfellow", "Jonathon Shlens", "Christian Szegedy"],
+    "authors": [
+      "Ian J. Goodfellow",
+      "Jonathon Shlens",
+      "Christian Szegedy"
+    ],
     "year": "2014",
     "publishedAt": "2014-12-20T01:17:12Z",
     "description": "研究对抗样本现象与模型脆弱性。",
     "category": "Security",
     "domainId": "security",
-    "crossDomainIds": ["ai"],
-    "keywords": ["ai-security"],
-    "tags": ["ai-security"],
+    "crossDomainIds": [
+      "ai"
+    ],
+    "keywords": [
+      "ai-security"
+    ],
+    "tags": [
+      "ai-security"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-1412.6572.md",
+    "content": "",
     "abstract": "研究对抗样本现象与模型脆弱性。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/1412.6572v3",
     "doi": "10.48550/arXiv.1412.6572",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-1412.6572.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/1412.6572v3",
+      "delivery": "canvas",
+      "pageCount": 11,
+      "verifiedAt": "2026-10-15T08:24:51.307Z",
+      "sha256": "7f6c0a50475149e11e3b7efc9c0a00383652b7cae62f80facd8ae2684ef251e7"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-1602.02697",
@@ -508,21 +743,38 @@
     "description": "研究黑盒条件下的模型攻击与迁移现象。",
     "category": "Security",
     "domainId": "security",
-    "crossDomainIds": ["ai"],
-    "keywords": ["ai-security"],
-    "tags": ["ai-security"],
+    "crossDomainIds": [
+      "ai"
+    ],
+    "keywords": [
+      "ai-security"
+    ],
+    "tags": [
+      "ai-security"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-1602.02697.md",
+    "content": "",
     "abstract": "研究黑盒条件下的模型攻击与迁移现象。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/1602.02697v4",
     "doi": "10.48550/arXiv.1602.02697",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-1602.02697.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/1602.02697v4",
+      "delivery": "canvas",
+      "pageCount": 14,
+      "verifiedAt": "2026-10-15T08:24:51.373Z",
+      "sha256": "419a0e682c93778368e86fb202496dbf62b31e2f4b1461889a6920b963ecd0bc"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-1607.00133",
@@ -542,21 +794,40 @@
     "description": "研究差分隐私约束下的深度学习训练。",
     "category": "Security",
     "domainId": "security",
-    "crossDomainIds": ["ai"],
-    "keywords": ["ai-security", "machine-learning"],
-    "tags": ["ai-security", "machine-learning"],
+    "crossDomainIds": [
+      "ai"
+    ],
+    "keywords": [
+      "ai-security",
+      "machine-learning"
+    ],
+    "tags": [
+      "ai-security",
+      "machine-learning"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-1607.00133.md",
+    "content": "",
     "abstract": "研究差分隐私约束下的深度学习训练。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/1607.00133v2",
     "doi": "10.48550/arXiv.1607.00133",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-1607.00133.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/1607.00133v2",
+      "delivery": "canvas",
+      "pageCount": 14,
+      "verifiedAt": "2026-10-15T08:24:51.414Z",
+      "sha256": "c88a9b68a2cdf2eff61e1e9e1f8c493c72a13a673293a3b3bbce9ffe326b48f0"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-1610.05820",
@@ -573,73 +844,135 @@
     "description": "研究从模型输出推断训练成员身份的隐私风险。",
     "category": "Security",
     "domainId": "security",
-    "crossDomainIds": ["ai"],
-    "keywords": ["ai-security"],
-    "tags": ["ai-security"],
+    "crossDomainIds": [
+      "ai"
+    ],
+    "keywords": [
+      "ai-security"
+    ],
+    "tags": [
+      "ai-security"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-1610.05820.md",
+    "content": "",
     "abstract": "研究从模型输出推断训练成员身份的隐私风险。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/1610.05820v2",
     "doi": "10.48550/arXiv.1610.05820",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-1610.05820.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/1610.05820v2",
+      "delivery": "canvas",
+      "pageCount": 16,
+      "verifiedAt": "2026-10-15T08:24:51.443Z",
+      "sha256": "1891b19eb63ab3caad78d23d610b78a6698927959421e316996c0d1d48fddaaf"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-1702.05983",
     "title": "Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN",
     "author": "Weiwei Hu, Ying Tan",
-    "authors": ["Weiwei Hu", "Ying Tan"],
+    "authors": [
+      "Weiwei Hu",
+      "Ying Tan"
+    ],
     "year": "2017",
     "publishedAt": "2017-02-20T14:32:17Z",
     "description": "研究生成对抗恶意软件样本的黑盒方法。",
     "category": "Security",
     "domainId": "security",
-    "crossDomainIds": ["ai"],
-    "keywords": ["ai-security", "supply-chain"],
-    "tags": ["ai-security", "supply-chain"],
+    "crossDomainIds": [
+      "ai"
+    ],
+    "keywords": [
+      "ai-security",
+      "supply-chain"
+    ],
+    "tags": [
+      "ai-security",
+      "supply-chain"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-1702.05983.md",
+    "content": "",
     "abstract": "研究生成对抗恶意软件样本的黑盒方法。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/1702.05983v1",
     "doi": "10.48550/arXiv.1702.05983",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-1702.05983.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/1702.05983v1",
+      "delivery": "canvas",
+      "pageCount": 7,
+      "verifiedAt": "2026-10-15T08:24:51.465Z",
+      "sha256": "58667bee36bb597579bbde8e75faee7f8f77fba14516af55ebbaecdda21c569e"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-1708.06733",
     "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain",
     "author": "Tianyu Gu, Brendan Dolan-Gavitt, Siddharth Garg",
-    "authors": ["Tianyu Gu", "Brendan Dolan-Gavitt", "Siddharth Garg"],
+    "authors": [
+      "Tianyu Gu",
+      "Brendan Dolan-Gavitt",
+      "Siddharth Garg"
+    ],
     "year": "2017",
     "publishedAt": "2017-08-22T17:31:54Z",
     "description": "研究机器学习模型供应链中的后门风险。",
     "category": "Security",
     "domainId": "security",
-    "crossDomainIds": ["ai"],
-    "keywords": ["supply-chain", "ai-security"],
-    "tags": ["supply-chain", "ai-security"],
+    "crossDomainIds": [
+      "ai"
+    ],
+    "keywords": [
+      "supply-chain",
+      "ai-security"
+    ],
+    "tags": [
+      "supply-chain",
+      "ai-security"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-1708.06733.md",
+    "content": "",
     "abstract": "研究机器学习模型供应链中的后门风险。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/1708.06733v2",
     "doi": "10.48550/arXiv.1708.06733",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-1708.06733.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/1708.06733v2",
+      "delivery": "canvas",
+      "pageCount": 13,
+      "verifiedAt": "2026-10-15T08:24:51.493Z",
+      "sha256": "96f572d948ff62baaae5fbb9fcf6bdf28dfb6a67b7a4ea013a3d17ece927795e"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-1802.09089",
@@ -657,20 +990,37 @@
     "category": "Security",
     "domainId": "security",
     "crossDomainIds": [],
-    "keywords": ["intrusion-detection", "machine-learning"],
-    "tags": ["intrusion-detection", "machine-learning"],
+    "keywords": [
+      "intrusion-detection",
+      "machine-learning"
+    ],
+    "tags": [
+      "intrusion-detection",
+      "machine-learning"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-1802.09089.md",
+    "content": "",
     "abstract": "探索自编码器集成用于在线网络入侵检测。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/1802.09089v2",
     "doi": "10.48550/arXiv.1802.09089",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-1802.09089.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/1802.09089v2",
+      "delivery": "canvas",
+      "pageCount": 15,
+      "verifiedAt": "2026-10-15T08:24:51.528Z",
+      "sha256": "c1ce05f4bb158b6a8fdde52a1d73c4e561181f10cd2f2648c19f5723bcddc824"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2209.07858",
@@ -719,21 +1069,40 @@
     "description": "研究语言模型红队测试的组织与观察。",
     "category": "Security",
     "domainId": "security",
-    "crossDomainIds": ["ai"],
-    "keywords": ["ai-security", "ai-evaluation"],
-    "tags": ["ai-security", "ai-evaluation"],
+    "crossDomainIds": [
+      "ai"
+    ],
+    "keywords": [
+      "ai-security",
+      "ai-evaluation"
+    ],
+    "tags": [
+      "ai-security",
+      "ai-evaluation"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2209.07858.md",
+    "content": "",
     "abstract": "研究语言模型红队测试的组织与观察。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2209.07858v2",
     "doi": "10.48550/arXiv.2209.07858",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2209.07858.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2209.07858v2",
+      "delivery": "canvas",
+      "pageCount": 30,
+      "verifiedAt": "2026-10-15T08:24:51.546Z",
+      "sha256": "4396213de970d6fcdf9f6659056ad0d8cde5ee88cc522713ae9918105496b794"
+    },
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
     "id": "arxiv-2307.15043",
@@ -752,117 +1121,207 @@
     "description": "研究对齐语言模型的对抗输入与可迁移现象。",
     "category": "Security",
     "domainId": "security",
-    "crossDomainIds": ["ai"],
-    "keywords": ["ai-security", "agent"],
-    "tags": ["ai-security", "agent"],
+    "crossDomainIds": [
+      "ai"
+    ],
+    "keywords": [
+      "ai-security",
+      "agent"
+    ],
+    "tags": [
+      "ai-security",
+      "agent"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2307.15043.md",
+    "content": "",
     "abstract": "研究对齐语言模型的对抗输入与可迁移现象。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2307.15043v2",
     "doi": "10.48550/arXiv.2307.15043",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2307.15043.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2307.15043v2",
+      "delivery": "canvas",
+      "pageCount": 31,
+      "verifiedAt": "2026-10-15T08:24:51.569Z",
+      "sha256": "ab8745c2e3c6dfd939d5a590760bbae4682d92db010947cbb306688ad086bfd1"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "logical-clocks",
     "title": "Time, Clocks, and the Ordering of Events in a Distributed System",
     "author": "Leslie Lamport",
-    "authors": ["Leslie Lamport"],
+    "authors": [
+      "Leslie Lamport"
+    ],
     "year": "1978",
     "description": "讨论分布式事件的先后关系与逻辑时钟。",
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["architecture", "api"],
-    "tags": ["architecture", "api"],
+    "keywords": [
+      "architecture",
+      "api"
+    ],
+    "tags": [
+      "architecture",
+      "api"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/logical-clocks.md",
+    "content": "",
     "abstract": "讨论分布式事件的先后关系与逻辑时钟。（本站主题说明。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/logical-clocks.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://raw.githubusercontent.com/greyhillman/lamport-clock-paper/10f4829a7bcbc7bc93cb5d2a1ac2f4748e25d30d/time-clocks.pdf",
+      "delivery": "canvas",
+      "pageCount": 8,
+      "verifiedAt": "2026-10-15T08:24:51.595Z",
+      "sha256": "c55e7cab4230aa3d7126748a149b2db6f0d7a67296d5eccfdd50a210299a96b2"
+    }
   },
   {
     "id": "lfs",
     "title": "The Design and Implementation of a Log-Structured File System",
     "author": "Mendel Rosenblum, John K. Ousterhout",
-    "authors": ["Mendel Rosenblum", "John K. Ousterhout"],
+    "authors": [
+      "Mendel Rosenblum",
+      "John K. Ousterhout"
+    ],
     "year": "1992",
     "description": "讨论日志结构存储、写入与空间清理的设计。",
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["database", "architecture"],
-    "tags": ["database", "architecture"],
+    "keywords": [
+      "database",
+      "architecture"
+    ],
+    "tags": [
+      "database",
+      "architecture"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/lfs.md",
+    "content": "",
     "abstract": "讨论日志结构存储、写入与空间清理的设计。（本站主题说明。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://web.stanford.edu/~ouster/cgi-bin/papers/lfs.pdf",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/lfs.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://raw.githubusercontent.com/skyrain/LogStructuredFileSystem/c10800cacf827d58065a855c529d689c27d8b36b/LFS.pdf",
+      "delivery": "canvas",
+      "pageCount": 27,
+      "verifiedAt": "2026-10-15T08:24:51.619Z",
+      "sha256": "aa8c31982c0eed0634314d5810b423a973fc1e99aa58b1ed81e2da5b8651e21e"
+    }
   },
   {
     "id": "mapreduce",
     "title": "MapReduce: Simplified Data Processing on Large Clusters",
     "author": "Jeffrey Dean, Sanjay Ghemawat",
-    "authors": ["Jeffrey Dean", "Sanjay Ghemawat"],
+    "authors": [
+      "Jeffrey Dean",
+      "Sanjay Ghemawat"
+    ],
     "year": "2004",
     "description": "用 map 与 reduce 抽象组织大规模数据处理。",
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["architecture", "data-mining"],
-    "tags": ["architecture", "data-mining"],
+    "keywords": [
+      "architecture",
+      "data-mining"
+    ],
+    "tags": [
+      "architecture",
+      "data-mining"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/mapreduce.md",
+    "content": "",
     "abstract": "用 map 与 reduce 抽象组织大规模数据处理。（本站主题说明。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/mapreduce.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/9b92363eac4d4fbea0f5fdc7766ef68d22037ca8/distributed_systems/mapreduce-simplified-data-processing-on-large-clusters.pdf",
+      "delivery": "canvas",
+      "pageCount": 13,
+      "verifiedAt": "2026-10-15T08:24:51.642Z",
+      "sha256": "ae84cc48ff0005c5a79e095039e54e91dce5c116f65746e1593e819d21830ce9"
+    }
   },
   {
     "id": "raft",
     "title": "In Search of an Understandable Consensus Algorithm",
     "author": "Diego Ongaro, John Ousterhout",
-    "authors": ["Diego Ongaro", "John Ousterhout"],
+    "authors": [
+      "Diego Ongaro",
+      "John Ousterhout"
+    ],
     "year": "2014",
     "description": "围绕可理解性组织复制日志的一致性算法。",
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["architecture", "database"],
-    "tags": ["architecture", "database"],
+    "keywords": [
+      "architecture",
+      "database"
+    ],
+    "tags": [
+      "architecture",
+      "database"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/raft.md",
+    "content": "",
     "abstract": "围绕可理解性组织复制日志的一致性算法。（本站主题说明。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/raft.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://raft.github.io/raft.pdf",
+      "delivery": "canvas",
+      "pageCount": 18,
+      "verifiedAt": "2026-10-15T08:24:51.664Z",
+      "sha256": "5a5c679b6a7c88007faeff8c3eef19a77e9e5caa8bd7390922584fe8ecf0ce1f"
+    }
   },
   {
     "id": "arxiv-2002.08155",
@@ -887,20 +1346,37 @@
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["frontend", "backend"],
-    "tags": ["frontend", "backend"],
+    "keywords": [
+      "frontend",
+      "backend"
+    ],
+    "tags": [
+      "frontend",
+      "backend"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2002.08155.md",
+    "content": "",
     "abstract": "研究自然语言与代码的预训练表示。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2002.08155v4",
     "doi": "10.48550/arXiv.2002.08155",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2002.08155.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2002.08155v4",
+      "delivery": "canvas",
+      "pageCount": 12,
+      "verifiedAt": "2026-10-15T08:24:51.684Z",
+      "sha256": "e37b37a4c38dc0ad3ba46f8269458c7ba5a726f1fa67deaa027b07e9eb3618fa"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2009.08366",
@@ -932,20 +1408,37 @@
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["architecture", "backend"],
-    "tags": ["architecture", "backend"],
+    "keywords": [
+      "architecture",
+      "backend"
+    ],
+    "tags": [
+      "architecture",
+      "backend"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2009.08366.md",
+    "content": "",
     "abstract": "将数据流信息引入代码表示预训练。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2009.08366v4",
     "doi": "10.48550/arXiv.2009.08366",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2009.08366.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2009.08366v4",
+      "delivery": "canvas",
+      "pageCount": 18,
+      "verifiedAt": "2026-10-15T08:24:51.721Z",
+      "sha256": "2089cf580fd13526c7cfdd423c56c496434c0805d7096433e69efb5c0d5bd16a"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2107.03374",
@@ -1017,46 +1510,85 @@
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["testing", "backend"],
-    "tags": ["testing", "backend"],
+    "keywords": [
+      "testing",
+      "backend"
+    ],
+    "tags": [
+      "testing",
+      "backend"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2107.03374.md",
+    "content": "",
     "abstract": "评价在代码上训练的语言模型。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2107.03374v2",
     "doi": "10.48550/arXiv.2107.03374",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2107.03374.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2107.03374v2",
+      "delivery": "canvas",
+      "pageCount": 35,
+      "verifiedAt": "2026-10-15T08:24:51.741Z",
+      "sha256": "ebae72ea0e8a5eb2ecbccdb985aec6cc1254a7c4d29e6d4de7866db1e66c4855"
+    },
+    "license": "arXiv source license",
+    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/"
   },
   {
     "id": "arxiv-2109.00859",
     "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation",
     "author": "Yue Wang, Weishi Wang, Shafiq Joty, Steven C. H. Hoi",
-    "authors": ["Yue Wang", "Weishi Wang", "Shafiq Joty", "Steven C. H. Hoi"],
+    "authors": [
+      "Yue Wang",
+      "Weishi Wang",
+      "Shafiq Joty",
+      "Steven C. H. Hoi"
+    ],
     "year": "2021",
     "publishedAt": "2021-09-02T12:21:06Z",
     "description": "研究标识符感知的代码理解与生成预训练。",
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["frontend", "backend"],
-    "tags": ["frontend", "backend"],
+    "keywords": [
+      "frontend",
+      "backend"
+    ],
+    "tags": [
+      "frontend",
+      "backend"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2109.00859.md",
+    "content": "",
     "abstract": "研究标识符感知的代码理解与生成预训练。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2109.00859v1",
     "doi": "10.48550/arXiv.2109.00859",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2109.00859.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2109.00859v1",
+      "delivery": "canvas",
+      "pageCount": 13,
+      "verifiedAt": "2026-10-15T08:24:51.756Z",
+      "sha256": "095c9374519e87366f0819d1b067771e847f9932df79a6bedaca5646f67ca014"
+    },
+    "license": "CC BY-NC-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
   },
   {
     "id": "arxiv-2305.06161",
@@ -1137,20 +1669,37 @@
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["backend", "supply-chain"],
-    "tags": ["backend", "supply-chain"],
+    "keywords": [
+      "backend",
+      "supply-chain"
+    ],
+    "tags": [
+      "backend",
+      "supply-chain"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2305.06161.md",
+    "content": "",
     "abstract": "研究开放代码语言模型及其数据与评价。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2305.06161v2",
     "doi": "10.48550/arXiv.2305.06161",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2305.06161.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2305.06161v2",
+      "delivery": "canvas",
+      "pageCount": 55,
+      "verifiedAt": "2026-10-15T08:24:51.782Z",
+      "sha256": "549e079ffd6104417f8443570954b232d2ed58886cf45c60482e631cb36e1351"
+    },
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   {
     "id": "arxiv-2310.06770",
@@ -1171,20 +1720,37 @@
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["testing", "architecture"],
-    "tags": ["testing", "architecture"],
+    "keywords": [
+      "testing",
+      "architecture"
+    ],
+    "tags": [
+      "testing",
+      "architecture"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2310.06770.md",
+    "content": "",
     "abstract": "提出以真实 GitHub 问题为基础的软件修复基准。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2310.06770v3",
     "doi": "10.48550/arXiv.2310.06770",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2310.06770.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2310.06770v3",
+      "delivery": "canvas",
+      "pageCount": 52,
+      "verifiedAt": "2026-10-15T08:24:51.826Z",
+      "sha256": "f7e8e1df64129742b8199a21a042734519a823a1dafd6f48f8f3ddcfb48ee296"
+    },
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
     "id": "arxiv-2405.15793",
@@ -1205,20 +1771,39 @@
     "category": "Software",
     "domainId": "software",
     "crossDomainIds": [],
-    "keywords": ["agent", "tool-calling", "testing"],
-    "tags": ["agent", "tool-calling", "testing"],
+    "keywords": [
+      "agent",
+      "tool-calling",
+      "testing"
+    ],
+    "tags": [
+      "agent",
+      "tool-calling",
+      "testing"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
-    "content": "/content/research/arxiv-2405.15793.md",
+    "content": "",
     "abstract": "研究智能体与计算机接口对软件工程任务的影响。（本站主题说明，并非原文摘要。）",
     "draft": false,
     "origin": "external",
-    "readingMode": "note",
+    "readingMode": "fulltext",
     "sourceUrl": "https://arxiv.org/abs/2405.15793v3",
     "doi": "10.48550/arXiv.2405.15793",
     "language": "English",
     "verificationStatus": "verified",
     "verifiedAt": "2026-10-14",
-    "noteProvenance": "ai-assisted-reading-guide"
+    "noteProvenance": "ai-assisted-reading-guide",
+    "noteContent": "/content/research/arxiv-2405.15793.md",
+    "format": "pdf",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2405.15793v3",
+      "delivery": "canvas",
+      "pageCount": 118,
+      "verifiedAt": "2026-10-15T08:24:51.868Z",
+      "sha256": "d171e0693060b910ceb2cddd0fd4bc7cae302005d42d0d8059bfdbe056c3adba"
+    },
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
     "id": "001",
@@ -1227,7 +1812,11 @@
     "year": "2024",
     "description": "基于扩散方程解析解，研究时间比值法在模型估算中的应用。",
     "category": "Mathematical Modeling",
-    "keywords": ["扩散方程", "时间比值法", "理论估算"],
+    "keywords": [
+      "扩散方程",
+      "时间比值法",
+      "理论估算"
+    ],
     "cover": "/assets/inventory/enchanted-book.png",
     "content": "/papers/paper001.md",
     "abstract": "本文围绕扩散方程解析解中的时间比值法展开研究，结合理论推导与数学建模，对相关参数进行估算。",

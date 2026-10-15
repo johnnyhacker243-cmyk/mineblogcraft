@@ -784,6 +784,59 @@
   left: auto;
   right: 0;
 }
+.book-pdf-page {
+  position: relative;
+}
+.book-page-wing:first-child .book-pdf-page > * {
+  transform: scaleX(-1);
+}
+.pdf-page-surface {
+  position: absolute;
+  inset: calc(9px * var(--book-scale));
+  padding: 0;
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-in;
+}
+.pdf-page-surface canvas {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  image-rendering: auto;
+  mix-blend-mode: multiply;
+}
+.pdf-page-message {
+  position: absolute;
+  inset: calc(12px * var(--book-scale));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(6px * var(--book-scale));
+}
+.pdf-page-message button {
+  font-family: Monocraft, monospace;
+  cursor: pointer;
+}
+.paper-image-zoom.pdf-fullpage-zoom {
+  overflow: auto;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px 15px 20px;
+}
+.paper-image-zoom.pdf-fullpage-zoom img {
+  width: min(1200px, 92vw);
+  height: auto;
+  max-height: none;
+  max-width: none;
+  flex-shrink: 0;
+  image-rendering: auto;
+}
 .shelf-record:nth-child(n + 5) .paper-tooltip {
   top: auto;
   bottom: 0;

@@ -5,6 +5,7 @@ import { parsePaperDocument } from "../../utils/paper-document";
 import { documentBookPages } from "../../utils/document-pagination";
 import { paperBookPages } from "../../utils/book-pagination";
 import { PageRenderer } from "./PageRenderer";
+import { PDFBookPages } from "./PDFBookPages";
 import { BookAnimation } from "./BookAnimation";
 import { InventoryText } from "../InventoryText";
 import { MinecraftButton } from "../MinecraftButton";
@@ -23,6 +24,8 @@ export function PaperBookViewer({
   onReading: () => void;
 }) {
   const [pages, setPages] = useState<BookPage[]>([]);
+  const [pdfPageCount, setPDFPageCount] = useState(paper.pdf?.pageCount ?? 0);
+  const totalPages = paper.format === "pdf" ? pdfPageCount : pages.length;
   const [spread, setSpread] = useState(0);
   const [jump, setJump] = useState("");
   const [phase, setPhase] = useState<BookPhase>("idle");
@@ -71,6 +74,7 @@ export function PaperBookViewer({
   } | null>(null);
   const [error, setError] = useState(false);
   useEffect(() => {
+    if (paper.format === "pdf") return;
     const controller = new AbortController();
     paperRepository
       .getContent(paper, controller.signal)
@@ -93,7 +97,7 @@ export function PaperBookViewer({
     setSpread((previous) =>
       Math.max(
         0,
-        Math.min(Math.ceil(pages.length / 2) - 1, previous + direction),
+        Math.min(Math.ceil(totalPages / 2) - 1, previous + direction),
       ),
     );
     audioManager.click();
@@ -112,7 +116,7 @@ export function PaperBookViewer({
     };
     window.addEventListener("keydown", key);
     return () => window.removeEventListener("keydown", key);
-  }, [opened, pages.length]);
+  }, [opened, totalPages]);
   return (
     <div
       className="paper-book-viewer"
@@ -129,22 +133,33 @@ export function PaperBookViewer({
       aria-label={paper.title}
     >
       <div className="book-stage">
-        <div className="book-spread" aria-busy={!opened || !pages.length}>
+        <div className="book-spread" aria-busy={!opened || !totalPages}>
           <div className={`book-leaves ${opened ? "leaves-open" : ""}`}>
-            <div className="book-page-wing">
-              <PageRenderer
-                page={pages[spread * 2] ?? []}
-                number={spread * 2 + 1}
+            {paper.format === "pdf" && paper.pdf ? (
+              <PDFBookPages
+                paper={paper}
+                spread={spread}
+                onCount={setPDFPageCount}
                 onZoom={setZoomImage}
               />
-            </div>
-            <div className="book-page-wing">
-              <PageRenderer
-                page={pages[spread * 2 + 1] ?? []}
-                number={spread * 2 + 2}
-                onZoom={setZoomImage}
-              />
-            </div>
+            ) : (
+              <>
+                <div className="book-page-wing">
+                  <PageRenderer
+                    page={pages[spread * 2] ?? []}
+                    number={spread * 2 + 1}
+                    onZoom={setZoomImage}
+                  />
+                </div>
+                <div className="book-page-wing">
+                  <PageRenderer
+                    page={pages[spread * 2 + 1] ?? []}
+                    number={spread * 2 + 2}
+                    onZoom={setZoomImage}
+                  />
+                </div>
+              </>
+            )}
           </div>
           <BookAnimation />
         </div>
@@ -158,15 +173,15 @@ export function PaperBookViewer({
         />
         <InventoryText
           text={
-            pages.length
-              ? `第 ${spread * 2 + 1}-${spread * 2 + 2} 页 / 共 ${pages.length} 页`
+            totalPages
+              ? `第 ${spread * 2 + 1}${spread * 2 + 1 < totalPages ? `-${Math.min(spread * 2 + 2, totalPages)}` : ""} 页 / 共 ${totalPages} 页`
               : "正在读取书籍..."
           }
         />
         <button
           className="book-arrow forward"
           aria-label="下一页"
-          disabled={!opened || spread >= pages.length / 2 - 1}
+          disabled={!opened || spread >= Math.ceil(totalPages / 2) - 1}
           onClick={() => turn(1)}
         />
       </div>
@@ -181,7 +196,7 @@ export function PaperBookViewer({
           onSubmit={(e) => {
             e.preventDefault();
             const page = Number(jump);
-            if (Number.isInteger(page) && page >= 1 && page <= pages.length) {
+            if (Number.isInteger(page) && page >= 1 && page <= totalPages) {
               setSpread(Math.floor((page - 1) / 2));
               setJump("");
               audioManager.click();
@@ -192,7 +207,7 @@ export function PaperBookViewer({
             aria-label="跳转页码"
             type="number"
             min="1"
-            max={pages.length}
+            max={totalPages}
             placeholder="Page"
             value={jump}
             onChange={(e) => setJump(e.target.value)}
@@ -216,11 +231,19 @@ export function PaperBookViewer({
           {paper.readingMode === "note" && (
             <span> · Reading guide, not full text</span>
           )}
+          {paper.pdf && (
+            <>
+              <span> · </span>
+              <a href={paper.pdf.url} target="_blank" rel="noopener noreferrer">
+                完整 PDF · 源站直读
+              </a>
+            </>
+          )}
         </div>
       )}
       {zoomImage && (
         <div
-          className="paper-image-zoom"
+          className={`paper-image-zoom ${paper.format === "pdf" ? "pdf-fullpage-zoom" : ""}`}
           role="dialog"
           aria-modal="true"
           aria-label="原图查看"

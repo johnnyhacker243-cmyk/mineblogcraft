@@ -23,7 +23,7 @@
 
 新博客 `status: draft`、`provenance: ai-assisted-editorial-draft`：可供本地审阅，不进入公开 feed.xml。日期为草稿创建日期，不冒充个人已发表日期。原博客仅更新已过时的模块实现状态。
 
-Research 采用 `origin: external | example | original` 与 `readingMode: metadata | note | fulltext`。32 篇新条目是书目、主题说明与阅读问题，不是原文摘要或全文；年采用 arXiv 首次提交年或核实的出版年。原 NIDS-FGPA 保留 CC BY 4.0 授权全文与图表。没有把外部作者改成 YTC，没有伪造实验结果。
+Research 采用 `origin: external | example | original` 与 `readingMode: metadata | note | fulltext`。最初 32 篇新条目是书目、主题说明与阅读问题；2026-10-15 已补上完整原 PDF 书内阅读（见 PAPER_FULLTEXT.md），原阅读引导归档为 noteContent；年采用 arXiv 首次提交年或核实的出版年。原 NIDS-FGPA 保留 CC BY 4.0 授权全文与图表。没有把外部作者改成 YTC，没有伪造实验结果。
 
 软件工程包括 Raft、MapReduce、逻辑时钟、日志结构文件系统，避免目录全部偏向 AI 代码模型。Security 兼顾网络检测、隐私、模型供应链与红队；仍建议以后由作者补充网络协议、Web 防御的真实实践与阅读记录。
 
@@ -32,7 +32,7 @@ Research 采用 `origin: external | example | original` 与 `readingMode: metada
 ```text
 src/data/taxonomy.json
 src/data/blogs.json → BlogRepository → 按需读取 public/content/blogs/*.md → 世界列表 / 阅读器
-src/data/papers.json → PaperRepository → note Markdown / document JSON → 原书籍阅读器
+src/data/papers.json → PaperRepository → PDFRepository / document JSON → 原书籍阅读器
 src/data/wiki.json → WikiRepository → WikiSearchService → 进度树 / 关联内容
 config/rssSources.json + rssAllowlist.json
   → fetch-rss.mjs → rss-core.mjs → public/data/rss/{sources,items}.json

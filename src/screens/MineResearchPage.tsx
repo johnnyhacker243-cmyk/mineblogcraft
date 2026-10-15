@@ -18,6 +18,20 @@ export function MineResearchPage({ back }: { back: () => void }) {
   const [papers, setPapers] = useState<ResearchPaper[]>([]);
   const [paper, setPaper] = useState<ResearchPaper | null>(null);
   const [query, setQuery] = useState("");
+  useEffect(() => {
+    const follow = () => {
+      if (!location.hash.startsWith("#paper/")) return;
+      try {
+        const id = decodeURIComponent(location.hash.slice(7));
+        setPaper(papers.find((p) => p.id === id) ?? null);
+        setReading(false);
+      } catch {
+        setPaper(null);
+      }
+    };
+    addEventListener("hashchange", follow);
+    return () => removeEventListener("hashchange", follow);
+  }, [papers]);
   const matches = useMemo(
     () => paperSearchService.search(query, papers),
     [query, papers],

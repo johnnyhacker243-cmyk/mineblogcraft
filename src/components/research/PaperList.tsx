@@ -76,7 +76,7 @@ export function PaperList({
                 <InventoryText
                   text={
                     paper.readingMode === "fulltext"
-                      ? "外部论文 · 授权全文"
+                      ? "外部论文 · 完整原文"
                       : "外部论文 · 书目与阅读引导"
                   }
                   color="#aaa"

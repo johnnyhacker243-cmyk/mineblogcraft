@@ -11,7 +11,14 @@ export interface ResearchPaper {
   content: string;
   abstract: string;
   draft: boolean;
-  format?: "document";
+  format?: "document" | "pdf";
+  pdf?: {
+    url: string;
+    delivery: "canvas";
+    pageCount: number;
+    verifiedAt: string;
+    sha256: string;
+  };
   sourceUrl?: string;
   doi?: string;
   license?: string;

@@ -6,8 +6,8 @@
   "scripts": {
     "build:cloud": "node scripts/cloud-assets.mjs && npm run build",
     "rss": "node scripts/generate-rss.mjs",
-    "predev": "npm run rss",
-    "prebuild": "npm run content:validate && npm run rss && npm run rss:validate && node scripts/verify-classicube.mjs",
+    "predev": "node scripts/prepare-pdf-assets.mjs && npm run rss",
+    "prebuild": "node scripts/prepare-pdf-assets.mjs && npm run content:validate && npm run rss && npm run rss:validate && node scripts/verify-classicube.mjs",
     "test:blog": "node tests/interactions/blog.mjs",
     "test:rss": "node tests/interactions/rss.mjs",
     "test:research": "node tests/interactions/research.mjs",
@@ -26,12 +26,14 @@
     "rss:fetch": "node scripts/fetch-rss.mjs",
     "rss:validate": "node scripts/validate-rss.mjs",
     "content:validate": "node scripts/validate-content.mjs",
-    "test:content": "node --test tests/rss-pipeline.test.mjs tests/content-search.test.mjs",
+    "test:content": "node --test tests/rss-pipeline.test.mjs tests/content-search.test.mjs tests/paper-fulltext.test.mjs",
     "build:with-feeds": "npm run rss:fetch && npm run build",
-    "rss:import": "node scripts/import-opml.mjs"
+    "rss:import": "node scripts/import-opml.mjs",
+    "papers:verify": "node scripts/verify-paper-fulltexts.mjs && node scripts/apply-paper-fulltexts.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.11.2",
+    "pdfjs-dist": "^6.4.299",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "three": "^0.180.0"

@@ -9,10 +9,12 @@ export class StaticPaperRepository implements PaperRepository {
     return data.map((paper) => ({
       ...paper,
       keywords: [...paper.keywords],
-      format: paper.format === "document" ? ("document" as const) : undefined,
+      format: paper.format,
     })) as ResearchPaper[];
   }
   async getContent(paper: ResearchPaper, signal?: AbortSignal) {
+    if (paper.format === "pdf")
+      throw Error("Original PDF pages are loaded through PDFRepository");
     if (paper.readingMode === "metadata" || !paper.content)
       return "# 阅读说明\n本站仅提供书目信息。没有可展示全文，请通过下方 Original / DOI 链接阅读原始文献。";
     const response = await fetch(paper.content, { signal });

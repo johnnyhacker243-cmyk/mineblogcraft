@@ -57,7 +57,25 @@ for (const b of blogs) {
     assert.ok(md.length > 400, "Insufficient body " + b.id);
   }
 }
+const fulltexts = await read("public/papers/fulltext-catalog.json");
+unique(fulltexts, "Fulltext");
+assert.equal(fulltexts.length, 32);
 for (const p of papers) {
+  if (p.format === "pdf") {
+    const original = fulltexts.find((record) => record.id === p.id);
+    assert.ok(original, "PDF audit missing: " + p.id);
+    assert.equal(p.readingMode, "fulltext");
+    assert.equal(
+      p.content,
+      "",
+      "PDF cannot silently fall back to reading guide",
+    );
+    assert.equal(p.pdf?.url, original.url);
+    assert.equal(p.pdf?.pageCount, original.pageCount);
+    assert.ok(Number.isInteger(original.pageCount) && original.pageCount > 1);
+    assert.match(original.sha256, /^[a-f0-9]{64}$/);
+    assert.equal(p.pdf.sha256, original.sha256);
+  }
   assert.ok(["metadata", "note", "fulltext"].includes(p.readingMode));
   if (p.origin === "external") {
     assert.ok(p.author && p.authors?.length);
