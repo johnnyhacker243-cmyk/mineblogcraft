@@ -1,28 +1,46 @@
 import { createElement } from "react";
 import { BlogText } from "./BlogText";
+import { parseBlogMarkdown } from "../../services/BlogMarkdown";
 
 // A deliberately small, text-only Markdown adapter. HTML is never interpreted.
-export function MarkdownText({ text }: { text: string }) {
-  const body = text.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
-  let code = false;
-  return body.split(/\r?\n/).map((line, index) => {
-    if (line.startsWith("```")) {
-      code = !code;
-      return null;
-    }
-    if (!line.trim()) return null;
-    const heading = line.match(/^(#{1,6})\s+(.*)$/);
-    if (heading && !code)
+export function MarkdownText({
+  text,
+  hideTitle,
+}: {
+  text: string;
+  hideTitle?: string;
+}) {
+  return parseBlogMarkdown(text).map((block, index) => {
+    if (block.kind === "heading") {
+      if (index === 0 && block.level === 1 && block.text === hideTitle)
+        return null;
       return createElement(
-        `h${heading[1].length}`,
+        `h${Math.max(2, block.level)}`,
         { key: index },
-        <BlogText text={heading[2]} width={310} color="#ffff55" />,
+        <BlogText text={block.text} width={310} color="#ffff55" />,
       );
-    const value = code
-      ? line
-      : line.replace(/^[-*]\s/, "• ").replace(/^>\s?/, "引用：");
+    }
+    if (block.kind === "code")
+      return (
+        <div
+          key={index}
+          className="markdown-code"
+          role="group"
+          aria-label={`${block.language || "文本"} 代码示例`}
+        >
+          {block.lines.map((line, i) => (
+            <BlogText key={i} text={line || " "} width={300} color="#aaffff" />
+          ))}
+        </div>
+      );
+    const value =
+      block.kind === "item"
+        ? `• ${block.text}`
+        : block.kind === "quote"
+          ? `引用：${block.text}`
+          : block.text;
     return (
-      <p key={index} className={code ? "markdown-code" : undefined}>
+      <p key={index}>
         <BlogText text={value} width={310} />
       </p>
     );

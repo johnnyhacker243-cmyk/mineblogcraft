@@ -12,434 +12,14 @@
     "provenance": "legacy-site-content"
   },
   {
-    "id": "ai-from-llm-to-agent",
-    "title": "从大模型到 Agent：把回答变成可验证的行动",
-    "createTime": "2026-10-14",
-    "description": "语言模型按上下文预测输出，Agent 则把模型置于一个可以观察、选择行动并接收反馈的循环中。",
-    "domainId": "ai",
-    "category": "AI",
-    "tags": ["llm", "agent"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/ai-from-llm-to-agent.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://arxiv.org/abs/2210.03629"
-      }
-    ]
-  },
-  {
-    "id": "ai-transformer",
-    "title": "理解 Transformer：先看数据怎样流动",
-    "createTime": "2026-10-14",
-    "description": "自注意力根据查询和键计算权重，再把值按权重组合。",
-    "domainId": "ai",
-    "category": "AI",
-    "tags": ["ai-basics", "deep-learning", "llm"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/ai-transformer.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://arxiv.org/abs/1706.03762"
-      }
-    ]
-  },
-  {
-    "id": "ai-rag-evidence",
-    "title": "RAG 的关键不是向量库，而是证据链",
-    "createTime": "2026-10-14",
-    "description": "RAG 把检索结果作为生成的依据。",
-    "domainId": "ai",
-    "category": "AI",
-    "tags": ["rag", "vector-database"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/ai-rag-evidence.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://arxiv.org/abs/2005.11401"
-      }
-    ]
-  },
-  {
-    "id": "ai-tool-contract",
-    "title": "Tool Calling：先定义契约，再让模型选择工具",
-    "createTime": "2026-10-14",
-    "description": "工具调用是结构化请求，不是把模型输出直接交给终端。",
-    "domainId": "ai",
-    "category": "AI",
-    "tags": ["agent", "tool-calling", "api"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/ai-tool-contract.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://arxiv.org/abs/2302.04761"
-      }
-    ]
-  },
-  {
-    "id": "ai-lora",
-    "title": "LoRA 与 QLoRA：理解微调改变了什么",
-    "createTime": "2026-10-14",
-    "description": "LoRA 用低秩参数更新来适配预训练模型，而不是训练全部权重。",
-    "domainId": "ai",
-    "category": "AI",
-    "tags": ["machine-learning", "llm"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/ai-lora.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://arxiv.org/abs/2106.09685"
-      }
-    ]
-  },
-  {
-    "id": "ai-evaluation",
-    "title": "模型评估：把流畅、正确与可靠分开",
-    "createTime": "2026-10-14",
-    "description": "生成质量至少有任务正确性、证据忠实度、格式遵循、拒答边界和运行成本几个维度。",
-    "domainId": "ai",
-    "category": "AI",
-    "tags": ["machine-learning", "ai-evaluation"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/ai-evaluation.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://arxiv.org/abs/2203.02155"
-      }
-    ]
-  },
-  {
-    "id": "ai-input-boundary",
-    "title": "提示注入与信任边界：外部文本不能指挥系统",
-    "createTime": "2026-10-14",
-    "description": "提示注入利用数据与指令边界不清的问题。",
-    "domainId": "ai",
-    "category": "AI",
-    "tags": ["ai-security", "agent"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/ai-input-boundary.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://arxiv.org/abs/2307.15043"
-      }
-    ]
-  },
-  {
-    "id": "network-security-foundation",
-    "title": "从 TCP/IP 开始理解网络安全",
-    "createTime": "2026-10-14",
-    "description": "网络安全分析需要先知道通信发生在哪一层。",
-    "domainId": "security",
-    "category": "Security",
-    "tags": ["network", "tcp-ip"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/network-security-foundation.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://www.rfc-editor.org/rfc/rfc9293"
-      }
-    ]
-  },
-  {
-    "id": "security-http",
-    "title": "HTTP 的安全边界：请求、身份与状态",
-    "createTime": "2026-10-14",
-    "description": "HTTP 方法、状态码、头部与消息体表达一次交互。",
-    "domainId": "security",
-    "category": "Security",
-    "tags": ["http", "api"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/security-http.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://www.rfc-editor.org/rfc/rfc9110"
-      }
-    ]
-  },
-  {
-    "id": "security-asset-discovery",
-    "title": "资产发现：从地址清单到可核验的服务记录",
-    "createTime": "2026-10-14",
-    "description": "资产发现的价值是建立范围清楚、证据可追踪的清单。",
-    "domainId": "security",
-    "category": "Security",
-    "tags": ["asset-discovery", "nmap", "fofa"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/security-asset-discovery.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://nmap.org/book/man.html"
-      }
-    ]
-  },
-  {
-    "id": "security-vulnerability",
-    "title": "漏洞管理：从扫描告警到风险判断",
-    "createTime": "2026-10-14",
-    "description": "漏洞管理不是收集尽可能多的告警，而是确认受影响组件、实际暴露面、利用条件与修复责任。",
-    "domainId": "security",
-    "category": "Security",
-    "tags": ["vulnerability-scanning", "http"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/security-vulnerability.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
-      }
-    ]
-  },
-  {
-    "id": "security-ids",
-    "title": "入侵检测：先验证数据，再讨论模型",
-    "createTime": "2026-10-14",
-    "description": "网络入侵检测需要把流量或事件转化为可分析的特征。",
-    "domainId": "security",
-    "category": "Security",
-    "tags": ["intrusion-detection", "machine-learning"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/security-ids.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://arxiv.org/abs/1802.09089"
-      }
-    ]
-  },
-  {
-    "id": "security-response",
-    "title": "事件响应：让时间线比猜测先出现",
-    "createTime": "2026-10-14",
-    "description": "事件响应从准备、检测与分析进入处置和恢复。",
-    "domainId": "security",
-    "category": "Security",
-    "tags": ["incident-response", "http"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/security-response.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
-      }
-    ]
-  },
-  {
-    "id": "security-supply-chain",
-    "title": "供应链安全：依赖不是下载后就可信",
-    "createTime": "2026-10-14",
-    "description": "软件供应链把源码、依赖、构建环境和最终产物连接起来。",
-    "domainId": "security",
-    "category": "Security",
-    "tags": ["supply-chain", "ai-security", "deployment"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/security-supply-chain.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://slsa.dev/spec/"
-      }
-    ]
-  },
-  {
-    "id": "software-react-state",
-    "title": "React 状态：用一份事实驱动多个界面",
-    "createTime": "2026-10-14",
-    "description": "状态应保存不能从其他数据计算出的事实。",
-    "domainId": "software",
-    "category": "Software",
-    "tags": ["frontend", "testing"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/software-react-state.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://react.dev/learn/choosing-the-state-structure"
-      }
-    ]
-  },
-  {
-    "id": "software-api-contract",
-    "title": "API 契约：静态 JSON 也需要边界",
-    "createTime": "2026-10-14",
-    "description": "接口契约描述输入、输出、错误与兼容性。",
-    "domainId": "software",
-    "category": "Software",
-    "tags": ["api", "backend", "database"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/software-api-contract.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://spec.openapis.org/oas/latest.html"
-      }
-    ]
-  },
-  {
-    "id": "software-repository",
-    "title": "Repository：让内容存储与游戏界面分离",
-    "createTime": "2026-10-14",
-    "description": "Repository 封装数据获取边界，页面使用稳定的方法读取领域对象。",
-    "domainId": "software",
-    "category": "Software",
-    "tags": ["architecture", "database"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/software-repository.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://martinfowler.com/eaaCatalog/repository.html"
-      }
-    ]
-  },
-  {
-    "id": "software-testing",
-    "title": "测试分层：验证行为，而不是重复实现",
-    "createTime": "2026-10-14",
-    "description": "纯数据校验适合验证 ID、日期与引用；单元测试适合解析和评分；浏览器测试适合点击、返回、尺寸和资源读取。",
-    "domainId": "software",
-    "category": "Software",
-    "tags": ["testing", "frontend"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/software-testing.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://nodejs.org/api/test.html"
-      }
-    ]
-  },
-  {
-    "id": "software-architecture",
-    "title": "静态知识站的架构：少依赖，清边界",
-    "createTime": "2026-10-14",
-    "description": "静态站点可以用构建阶段完成内容检查和外部聚合，在浏览器中只读取同域文件。",
-    "domainId": "software",
-    "category": "Software",
-    "tags": ["architecture", "deployment"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/software-architecture.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro"
-      }
-    ]
-  },
-  {
-    "id": "software-rss-pipeline",
-    "title": "RSS 数据管道：从外部 XML 到可读的知识世界",
-    "createTime": "2026-10-14",
-    "description": "RSS 发布与 RSS 聚合是两个方向。",
-    "domainId": "software",
-    "category": "Software",
-    "tags": ["rss-pipeline", "api", "ai-security"],
-    "image": "/assets/inventory/grass-border.png",
-    "content": "",
-    "file": "/content/blogs/software-rss-pipeline.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
-    "sources": [
-      {
-        "title": "原始资料与规范",
-        "url": "https://www.rssboard.org/rss-specification"
-      }
-    ]
-  },
-  {
     "id": "software-static-delivery",
-    "title": "静态交付：让构建结果与发布动作分开",
-    "createTime": "2026-10-14",
-    "description": "开发预览、生产构建和发布是不同阶段。",
+    "title": "静态发布也需要来源证明：让通过测试的文件成为最终产物",
+    "createTime": "2026-10-10",
+    "description": "用产物身份贯通构建、测试与静态交付，避免验证对象和发布对象错位。",
     "domainId": "software",
     "category": "Software",
-    "tags": ["deployment", "testing", "supply-chain"],
-    "image": "/assets/inventory/grass-border.png",
+    "tags": ["Deployment", "Artifact", "Attestation", "静态托管", "CI"],
+    "image": "/assets/inventory/blog-icons/chest_minecart.png",
     "content": "",
     "file": "/content/blogs/software-static-delivery.md",
     "author": "编辑草稿（AI 辅助）",
@@ -447,9 +27,630 @@
     "provenance": "ai-assisted-editorial-draft",
     "sources": [
       {
-        "title": "原始资料与规范",
-        "url": "https://vite.dev/guide/static-deploy.html"
+        "title": "GitHub Docs · Use artifact attestations",
+        "url": "https://docs.github.com/en/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations",
+        "checkedAt": "2026-10-15"
       }
-    ]
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 21,
+    "iconKey": "chest_minecart",
+    "iconLabel": "运输矿车",
+    "iconReason": "把同一份已验证产物运送到发布端"
+  },
+  {
+    "id": "security-supply-chain",
+    "title": "SBOM 不是安全证书：从组件清单走向可行动的风险判断",
+    "createTime": "2026-10-09",
+    "description": "从 CycloneDX 清单走向组件身份、实际暴露面与可复查的处置证据。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["SBOM", "CycloneDX", "Supply Chain", "依赖", "漏洞"],
+    "image": "/assets/inventory/blog-icons/bundle.png",
+    "content": "",
+    "file": "/content/blogs/security-supply-chain.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "CycloneDX · Specification Overview",
+        "url": "https://cyclonedx.org/specification/overview/",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 20,
+    "iconKey": "bundle",
+    "iconLabel": "收纳袋",
+    "iconReason": "把依赖、版本和关系整理成可检查清单"
+  },
+  {
+    "id": "ai-input-boundary",
+    "title": "Agent 提示注入防护：别让读到的文字变成执行权限",
+    "createTime": "2026-10-08",
+    "description": "结合 Agent containment 实践，防止外部资料在摘要后获得行动权限。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["Agent", "Prompt Injection", "AI Security", "沙箱"],
+    "image": "/assets/inventory/blog-icons/written_book.png",
+    "content": "",
+    "file": "/content/blogs/ai-input-boundary.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "How we contain Claude across products · Anthropic",
+        "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+        "publishedAt": "2026-05-25",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 19,
+    "iconKey": "written_book",
+    "iconLabel": "成书",
+    "iconReason": "外部文档承载资料而不是行动指令"
+  },
+  {
+    "id": "software-rss-pipeline",
+    "title": "Vitest 5 的 Trace View：把偶发失败变成可解释的时间线",
+    "createTime": "2026-10-07",
+    "description": "借 Vitest 5 浏览器追踪能力，研究异步条件、定位器与偶发失败归因。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["Vitest", "5", "Browser", "Testing", "RSS"],
+    "image": "/assets/inventory/blog-icons/spectral_arrow.png",
+    "content": "",
+    "file": "/content/blogs/software-rss-pipeline.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Vitest 5 · 官方发布说明",
+        "url": "https://vitest.dev/blog/vitest-5",
+        "publishedAt": "2026-09-03",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 18,
+    "iconKey": "spectral_arrow",
+    "iconLabel": "光灵箭",
+    "iconReason": "标出失败位置与可追踪的交互目标"
+  },
+  {
+    "id": "security-response",
+    "title": "React 安全更新怎样读：RSC 漏洞、Trusted Types 与实际暴露面",
+    "createTime": "2026-10-06",
+    "description": "区分 RSC 漏洞响应与 Trusted Types 防护，依据真实运行链判断影响。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["React", "RSC", "Trusted Types", "CSP", "应急响应"],
+    "image": "/assets/inventory/blog-icons/iron_chestplate.png",
+    "content": "",
+    "file": "/content/blogs/security-response.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "React · Critical Security Vulnerability in React Server Components",
+        "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components",
+        "publishedAt": "2025-12-03",
+        "checkedAt": "2026-10-15"
+      },
+      {
+        "title": "React 19.3 · Trusted Types 兼容说明",
+        "url": "https://react.dev/blog/2026/09/09/react-19-3",
+        "publishedAt": "2026-09-09",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 17,
+    "iconKey": "iron_chestplate",
+    "iconLabel": "铁胸甲",
+    "iconReason": "分层防护与明确的浏览器安全边界"
+  },
+  {
+    "id": "ai-evaluation",
+    "title": "Agent 评估不能只判回答：怎样检查它真正完成了任务",
+    "createTime": "2026-10-05",
+    "description": "为 Agent 设计结构、行为与内容评价，检查终态而不只相信完成声明。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["Agent", "Evals", "评估", "机器学习", "Testing"],
+    "image": "/assets/inventory/blog-icons/comparator.png",
+    "content": "",
+    "file": "/content/blogs/ai-evaluation.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Demystifying evals for AI agents · Anthropic",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "publishedAt": "2026-01-09",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 16,
+    "iconKey": "comparator",
+    "iconLabel": "红石比较器",
+    "iconReason": "比较可观察结果与验收目标"
+  },
+  {
+    "id": "software-architecture",
+    "title": "OpenTelemetry 的进程上下文：为什么一次构建会散成多条 Trace",
+    "createTime": "2026-10-04",
+    "description": "研究 OpenTelemetry 进程上下文传播提案，把一次构建还原成因果链。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["OpenTelemetry", "Tracing", "Architecture", "进程", "可观测性"],
+    "image": "/assets/inventory/blog-icons/spyglass.png",
+    "content": "",
+    "file": "/content/blogs/software-architecture.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Help us stabilize environment variable context propagation · OpenTelemetry",
+        "url": "https://opentelemetry.io/blog/2026/environment-variable-context-propagation/",
+        "publishedAt": "2026-09-11",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 15,
+    "iconKey": "spyglass",
+    "iconLabel": "望远镜",
+    "iconReason": "跨进程追踪与观察完整执行链"
+  },
+  {
+    "id": "security-ids",
+    "title": "GitHub Actions 安全扫描：没有告警，能否说明工作流安全",
+    "createTime": "2026-10-03",
+    "description": "从 2026 扫描器研究出发，分析 CI 检测范围、误报漏报与权限隔离。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["GitHub Actions", "SAST", "CI", "权限", "检测"],
+    "image": "/assets/inventory/blog-icons/amethyst_shard.png",
+    "content": "",
+    "file": "/content/blogs/security-ids.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Unpacking Security Scanners for GitHub Actions Workflows · 2026 研究预印本",
+        "url": "https://arxiv.org/abs/2601.14455",
+        "publishedAt": "2026-01-20",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 14,
+    "iconKey": "amethyst_shard",
+    "iconLabel": "紫水晶碎片",
+    "iconReason": "从细微信号中发现工作流风险"
+  },
+  {
+    "id": "ai-lora",
+    "title": "从 LR-LoRA 到 LoRA-TSD：微调比较为什么必须控制变量",
+    "createTime": "2026-10-02",
+    "description": "结合 2026 年可学习秩与切空间优化研究，讨论 LoRA 容量、预算与比较方法。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": [
+      "LoRA",
+      "LR-LoRA",
+      "LoRA-TSD",
+      "Fine-tuning",
+      "机器学习",
+      "实验设计"
+    ],
+    "image": "/assets/inventory/blog-icons/lapis_lazuli.png",
+    "content": "",
+    "file": "/content/blogs/ai-lora.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Parameter-Efficient Fine-Tuning with Learnable Rank · 2026 预印本",
+        "url": "https://arxiv.org/abs/2606.04325",
+        "publishedAt": "2026-06-03",
+        "checkedAt": "2026-10-15"
+      },
+      {
+        "title": "LoRA-TSD: Tangent-Space Spectral Descent · 2026 预印本",
+        "url": "https://arxiv.org/abs/2609.02734",
+        "publishedAt": "2026-09-02",
+        "checkedAt": "2026-10-15"
+      },
+      {
+        "title": "LoRA Without Regret · Thinking Machines Lab",
+        "url": "https://thinkingmachines.ai/blog/lora/",
+        "publishedAt": "2025-09-29",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 13,
+    "iconKey": "lapis_lazuli",
+    "iconLabel": "青金石",
+    "iconReason": "以有限资源进行针对性能力调整"
+  },
+  {
+    "id": "software-testing",
+    "title": "Node.js 26 的 Temporal：先分清日期、瞬间与时区",
+    "createTime": "2026-10-01",
+    "description": "借 Node.js 26 Temporal 区分栏目日期、绝对瞬间与带时区的日历运算。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["Node.js", "26", "Temporal", "Testing", "日期"],
+    "image": "/assets/inventory/blog-icons/clock_00.png",
+    "content": "",
+    "file": "/content/blogs/software-testing.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Node.js v26.0.0 · 官方发布说明",
+        "url": "https://nodejs.org/en/blog/release/v26.0.0/",
+        "publishedAt": "2026-05-05",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 12,
+    "iconKey": "clock_00",
+    "iconLabel": "时钟",
+    "iconReason": "时间语义与日期边界"
+  },
+  {
+    "id": "security-vulnerability",
+    "title": "npm Trusted Publishing：短期身份为什么仍然需要发布边界",
+    "createTime": "2026-09-30",
+    "description": "研究 npm OIDC 可信发布，将短期身份与仓库、工作流及产物边界绑定。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["npm", "OIDC", "Supply Chain", "漏洞管理", "CI"],
+    "image": "/assets/inventory/blog-icons/lead.png",
+    "content": "",
+    "file": "/content/blogs/security-vulnerability.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "npm Docs · Trusted publishing for npm packages",
+        "url": "https://docs.npmjs.com/trusted-publishers/",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 11,
+    "iconKey": "lead",
+    "iconLabel": "拴绳",
+    "iconReason": "把发布权限绑定到指定仓库和工作流"
+  },
+  {
+    "id": "ai-tool-contract",
+    "title": "读 MCP 2026 工具规范：Schema 能管参数，不能替你授权",
+    "createTime": "2026-09-29",
+    "description": "阅读 MCP 2026 工具规范，梳理 Schema、显式句柄、授权与幂等语义。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["MCP", "Tool Calling", "JSON Schema", "Agent"],
+    "image": "/assets/inventory/blog-icons/redstone.png",
+    "content": "",
+    "file": "/content/blogs/ai-tool-contract.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "MCP 2026-07-28 · Tools 规范",
+        "url": "https://modelcontextprotocol.io/specification/2026-07-28/server/tools",
+        "publishedAt": "2026-07-28",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 10,
+    "iconKey": "redstone",
+    "iconLabel": "红石粉",
+    "iconReason": "工具之间的结构化信号与协议连接"
+  },
+  {
+    "id": "software-repository",
+    "title": "TypeScript 7 的原生编译器：类型更快，数据边界仍要自己守",
+    "createTime": "2026-09-28",
+    "description": "借 TypeScript 7 更新澄清编译类型与运行时校验，保持数据入口稳定。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["TypeScript", "7.0", "Repository", "运行时校验", "Database"],
+    "image": "/assets/inventory/blog-icons/name_tag.png",
+    "content": "",
+    "file": "/content/blogs/software-repository.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Announcing TypeScript 7.0 · Microsoft 官方博客",
+        "url": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/",
+        "publishedAt": "2026-07-08",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 9,
+    "iconKey": "name_tag",
+    "iconLabel": "命名牌",
+    "iconReason": "用明确类型和身份标注数据对象"
+  },
+  {
+    "id": "security-asset-discovery",
+    "title": "给 RSS 和 Agent 抓取器设边界：HTTPS 为什么挡不住 SSRF",
+    "createTime": "2026-09-27",
+    "description": "分析构建阶段 RSS 抓取的 SSRF 边界、重定向校验与资源预算。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["SSRF", "RSS", "URL", "资产发现", "网络安全"],
+    "image": "/assets/inventory/blog-icons/fishing_rod.png",
+    "content": "",
+    "file": "/content/blogs/security-asset-discovery.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "OWASP · Server-Side Request Forgery Prevention Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 8,
+    "iconKey": "fishing_rod",
+    "iconLabel": "钓鱼竿",
+    "iconReason": "从外部获取资料必须限制可触达的范围"
+  },
+  {
+    "id": "ai-rag-evidence",
+    "title": "Qwen3-VL 与多模态 RAG：检索命中之后，证据还差哪一步",
+    "createTime": "2026-09-26",
+    "description": "以 2026 Qwen3-VL 检索报告为例，组织文字、图表、页内区域和可追溯证据。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": [
+      "RAG",
+      "Qwen3-VL",
+      "Embedding",
+      "Reranker",
+      "多模态",
+      "向量数据库"
+    ],
+    "image": "/assets/inventory/blog-icons/compass_16.png",
+    "content": "",
+    "file": "/content/blogs/ai-rag-evidence.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Qwen3-VL-Embedding 与 Qwen3-VL-Reranker · 2026 技术报告",
+        "url": "https://arxiv.org/abs/2601.04720",
+        "publishedAt": "2026-01-08",
+        "checkedAt": "2026-10-15"
+      },
+      {
+        "title": "QwenLM · Qwen3-VL-Embedding 官方实现与使用说明",
+        "url": "https://github.com/QwenLM/Qwen3-VL-Embedding",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 7,
+    "iconKey": "compass_16",
+    "iconLabel": "指南针",
+    "iconReason": "将问题定位到可追溯的知识来源"
+  },
+  {
+    "id": "software-api-contract",
+    "title": "Vite 8 的统一构建链：升级前先写清楚输出契约",
+    "createTime": "2026-09-25",
+    "description": "围绕 Vite 8 的构建变化，建立静态资源、深链与延迟加载的迁移契约。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["Vite", "Rolldown", "Build", "API", "静态资源"],
+    "image": "/assets/inventory/blog-icons/blaze_powder.png",
+    "content": "",
+    "file": "/content/blogs/software-api-contract.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Announcing Vite 8 · 官方发布说明",
+        "url": "https://vite.dev/blog/announcing-vite8.html",
+        "publishedAt": "2026-03-12",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 6,
+    "iconKey": "blaze_powder",
+    "iconLabel": "烈焰粉",
+    "iconReason": "构建动力与工具链转换"
+  },
+  {
+    "id": "security-http",
+    "title": "Passkey 的安全边界：没有密码，为什么仍要设计找回流程",
+    "createTime": "2026-09-24",
+    "description": "从 WebAuthn 草案研究 Passkey，连同账户恢复与会话撤销一起建模。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["WebAuthn", "Passkey", "HTTP", "认证", "账户恢复"],
+    "image": "/assets/inventory/blog-icons/totem_of_undying.png",
+    "content": "",
+    "file": "/content/blogs/security-http.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "WebAuthn Level 3 · 2026-05-15 候选推荐草案",
+        "url": "https://www.w3.org/TR/2026/CRD-webauthn-3-20260515/",
+        "publishedAt": "2026-05-15",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 5,
+    "iconKey": "totem_of_undying",
+    "iconLabel": "不死图腾",
+    "iconReason": "账户恢复与最后一道保护"
+  },
+  {
+    "id": "ai-transformer",
+    "title": "长上下文不是长期记忆：Agent 怎样保存任务状态",
+    "createTime": "2026-09-23",
+    "description": "区分对话历史、工作状态与外部事实，设计可更新、可作废的任务记忆。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["Agent", "Context", "长上下文", "Memory", "LLM"],
+    "image": "/assets/inventory/blog-icons/writable_book.png",
+    "content": "",
+    "file": "/content/blogs/ai-transformer.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Managed Agents · Anthropic 工程实践",
+        "url": "https://www.anthropic.com/engineering/managed-agents",
+        "publishedAt": "2026-04-08",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 4,
+    "iconKey": "writable_book",
+    "iconLabel": "书与笔",
+    "iconReason": "可更新、可追溯的任务记录"
+  },
+  {
+    "id": "software-react-state",
+    "title": "React 19.3 的视图过渡：动画不能替状态管理做决定",
+    "createTime": "2026-09-22",
+    "description": "研究 React 19.3 视图过渡，先处理文章身份、请求竞争与减少动态效果。",
+    "domainId": "software",
+    "category": "Software",
+    "tags": ["React", "19.3", "ViewTransition", "状态管理", "Frontend"],
+    "image": "/assets/inventory/blog-icons/ender_pearl.png",
+    "content": "",
+    "file": "/content/blogs/software-react-state.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "React 19.3 · 官方发布说明",
+        "url": "https://react.dev/blog/2026/09/09/react-19-3",
+        "publishedAt": "2026-09-09",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 3,
+    "iconKey": "ender_pearl",
+    "iconLabel": "末影珍珠",
+    "iconReason": "页面位置切换与连续的导航体验"
+  },
+  {
+    "id": "network-security-foundation",
+    "title": "MCP 授权边界：工具连通以后，谁有权做什么",
+    "createTime": "2026-09-21",
+    "description": "沿 MCP 调用链拆解身份、范围与对象授权，避免令牌转发越过资源边界。",
+    "domainId": "security",
+    "category": "Security",
+    "tags": ["MCP", "OAuth", "授权", "网络安全"],
+    "image": "/assets/inventory/blog-icons/iron_sword.png",
+    "content": "",
+    "file": "/content/blogs/network-security-foundation.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "MCP 2026-07-28 · Security Best Practices",
+        "url": "https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices",
+        "publishedAt": "2026-07-28",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 2,
+    "iconKey": "iron_sword",
+    "iconLabel": "铁剑",
+    "iconReason": "具有行动能力的工具需要明确权限边界"
+  },
+  {
+    "id": "ai-from-llm-to-agent",
+    "title": "Agent 的长任务难题：怎样把“继续做”变成可靠交付",
+    "createTime": "2026-09-20",
+    "description": "从长任务 harness 研究出发，设计可恢复的任务账本、产物验收与失败预算。",
+    "domainId": "ai",
+    "category": "AI",
+    "tags": ["agent", "harness", "长任务", "AI"],
+    "image": "/assets/inventory/blog-icons/repeater.png",
+    "content": "",
+    "file": "/content/blogs/ai-from-llm-to-agent.md",
+    "author": "编辑草稿（AI 辅助）",
+    "status": "draft",
+    "provenance": "ai-assisted-editorial-draft",
+    "sources": [
+      {
+        "title": "Harness design for long-running application development",
+        "url": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+        "publishedAt": "2026-03-24",
+        "checkedAt": "2026-10-15"
+      }
+    ],
+    "updatedAt": "2026-10-15",
+    "dateMeaning": "editorial-series",
+    "seriesIndex": 1,
+    "iconKey": "repeater",
+    "iconLabel": "红石中继器",
+    "iconReason": "阶段衔接、受控执行与任务节奏"
   }
 ]

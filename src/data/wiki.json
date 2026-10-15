@@ -22,8 +22,12 @@
     ],
     "relatedBlogs": [
       {
-        "id": "ai-transformer",
-        "title": "理解 Transformer：先看数据怎样流动"
+        "id": "ai-from-llm-to-agent",
+        "title": "Agent 的长任务难题：怎样把“继续做”变成可靠交付"
+      },
+      {
+        "id": "ai-evaluation",
+        "title": "Agent 评估不能只判回答：怎样检查它真正完成了任务"
       }
     ],
     "relatedPapers": [],
@@ -61,15 +65,11 @@
     "relatedBlogs": [
       {
         "id": "ai-lora",
-        "title": "LoRA 与 QLoRA：理解微调改变了什么"
+        "title": "从 LR-LoRA 到 LoRA-TSD：微调比较为什么必须控制变量"
       },
       {
         "id": "ai-evaluation",
-        "title": "模型评估：把流畅、正确与可靠分开"
-      },
-      {
-        "id": "security-ids",
-        "title": "入侵检测：先验证数据，再讨论模型"
+        "title": "Agent 评估不能只判回答：怎样检查它真正完成了任务"
       }
     ],
     "relatedPapers": [
@@ -131,8 +131,8 @@
     ],
     "relatedBlogs": [
       {
-        "id": "ai-transformer",
-        "title": "理解 Transformer：先看数据怎样流动"
+        "id": "ai-lora",
+        "title": "从 LR-LoRA 到 LoRA-TSD：微调比较为什么必须控制变量"
       }
     ],
     "relatedPapers": [
@@ -174,16 +174,12 @@
     ],
     "relatedBlogs": [
       {
-        "id": "ai-from-llm-to-agent",
-        "title": "从大模型到 Agent：把回答变成可验证的行动"
-      },
-      {
         "id": "ai-transformer",
-        "title": "理解 Transformer：先看数据怎样流动"
+        "title": "长上下文不是长期记忆：Agent 怎样保存任务状态"
       },
       {
-        "id": "ai-lora",
-        "title": "LoRA 与 QLoRA：理解微调改变了什么"
+        "id": "ai-evaluation",
+        "title": "Agent 评估不能只判回答：怎样检查它真正完成了任务"
       }
     ],
     "relatedPapers": [
@@ -254,7 +250,7 @@
     "relatedBlogs": [
       {
         "id": "ai-rag-evidence",
-        "title": "RAG 的关键不是向量库，而是证据链"
+        "title": "Qwen3-VL 与多模态 RAG：检索命中之后，证据还差哪一步"
       }
     ],
     "relatedPapers": [
@@ -304,15 +300,15 @@
     "relatedBlogs": [
       {
         "id": "ai-from-llm-to-agent",
-        "title": "从大模型到 Agent：把回答变成可验证的行动"
+        "title": "Agent 的长任务难题：怎样把“继续做”变成可靠交付"
+      },
+      {
+        "id": "ai-transformer",
+        "title": "长上下文不是长期记忆：Agent 怎样保存任务状态"
       },
       {
         "id": "ai-tool-contract",
-        "title": "Tool Calling：先定义契约，再让模型选择工具"
-      },
-      {
-        "id": "ai-input-boundary",
-        "title": "提示注入与信任边界：外部文本不能指挥系统"
+        "title": "读 MCP 2026 工具规范：Schema 能管参数，不能替你授权"
       }
     ],
     "relatedPapers": [
@@ -370,15 +366,7 @@
     "relatedBlogs": [
       {
         "id": "ai-input-boundary",
-        "title": "提示注入与信任边界：外部文本不能指挥系统"
-      },
-      {
-        "id": "security-supply-chain",
-        "title": "供应链安全：依赖不是下载后就可信"
-      },
-      {
-        "id": "software-rss-pipeline",
-        "title": "RSS 数据管道：从外部 XML 到可读的知识世界"
+        "title": "Agent 提示注入防护：别让读到的文字变成执行权限"
       }
     ],
     "relatedPapers": [
@@ -459,7 +447,7 @@
     "relatedBlogs": [
       {
         "id": "network-security-foundation",
-        "title": "从 TCP/IP 开始理解网络安全"
+        "title": "MCP 授权边界：工具连通以后，谁有权做什么"
       }
     ],
     "relatedPapers": [
@@ -502,12 +490,7 @@
       "区分连接失败和应用响应错误",
       "识别代理、防火墙和负载均衡的影响"
     ],
-    "relatedBlogs": [
-      {
-        "id": "network-security-foundation",
-        "title": "从 TCP/IP 开始理解网络安全"
-      }
-    ],
+    "relatedBlogs": [],
     "relatedPapers": [],
     "aliases": [
       "TCP/IP",
@@ -546,15 +529,11 @@
     "relatedBlogs": [
       {
         "id": "security-http",
-        "title": "HTTP 的安全边界：请求、身份与状态"
+        "title": "Passkey 的安全边界：没有密码，为什么仍要设计找回流程"
       },
       {
-        "id": "security-vulnerability",
-        "title": "漏洞管理：从扫描告警到风险判断"
-      },
-      {
-        "id": "security-response",
-        "title": "事件响应：让时间线比猜测先出现"
+        "id": "security-asset-discovery",
+        "title": "给 RSS 和 Agent 抓取器设边界：HTTPS 为什么挡不住 SSRF"
       }
     ],
     "relatedPapers": [],
@@ -590,12 +569,7 @@
       "区分已确认、待验证和已退役资产",
       "仅在自有或明确获授权范围内探测"
     ],
-    "relatedBlogs": [
-      {
-        "id": "security-asset-discovery",
-        "title": "资产发现：从地址清单到可核验的服务记录"
-      }
-    ],
+    "relatedBlogs": [],
     "relatedPapers": [],
     "aliases": [],
     "domainId": "security",
@@ -630,12 +604,7 @@
       "核对目标是否位于授权范围",
       "结合配置和版本证据再判断风险"
     ],
-    "relatedBlogs": [
-      {
-        "id": "security-asset-discovery",
-        "title": "资产发现：从地址清单到可核验的服务记录"
-      }
-    ],
+    "relatedBlogs": [],
     "relatedPapers": [],
     "aliases": [],
     "domainId": "security",
@@ -668,12 +637,7 @@
       "核对域名、证书和组织归属",
       "发现地址不代表获得测试权限"
     ],
-    "relatedBlogs": [
-      {
-        "id": "security-asset-discovery",
-        "title": "资产发现：从地址清单到可核验的服务记录"
-      }
-    ],
+    "relatedBlogs": [],
     "relatedPapers": [],
     "aliases": [],
     "domainId": "security",
@@ -708,12 +672,7 @@
       "结合暴露面与利用证据确定优先级",
       "修复后验证版本、配置与业务回归"
     ],
-    "relatedBlogs": [
-      {
-        "id": "security-vulnerability",
-        "title": "漏洞管理：从扫描告警到风险判断"
-      }
-    ],
+    "relatedBlogs": [],
     "relatedPapers": [],
     "aliases": [],
     "domainId": "security",
@@ -749,7 +708,7 @@
     "relatedBlogs": [
       {
         "id": "security-response",
-        "title": "事件响应：让时间线比猜测先出现"
+        "title": "React 安全更新怎样读：RSC 漏洞、Trusted Types 与实际暴露面"
       }
     ],
     "relatedPapers": [],
@@ -785,16 +744,12 @@
     ],
     "relatedBlogs": [
       {
-        "id": "mineblogcraft-birth",
-        "title": "Mineblogcraft 的诞生"
-      },
-      {
         "id": "software-react-state",
-        "title": "React 状态：用一份事实驱动多个界面"
+        "title": "React 19.3 的视图过渡：动画不能替状态管理做决定"
       },
       {
-        "id": "software-testing",
-        "title": "测试分层：验证行为，而不是重复实现"
+        "id": "software-api-contract",
+        "title": "Vite 8 的统一构建链：升级前先写清楚输出契约"
       }
     ],
     "relatedPapers": [
@@ -840,8 +795,8 @@
     ],
     "relatedBlogs": [
       {
-        "id": "software-api-contract",
-        "title": "API 契约：静态 JSON 也需要边界"
+        "id": "software-testing",
+        "title": "Node.js 26 的 Temporal：先分清日期、瞬间与时区"
       }
     ],
     "relatedPapers": [
@@ -897,16 +852,7 @@
       "明确事务、约束与更新规则",
       "迁移前验证旧数据与引用完整性"
     ],
-    "relatedBlogs": [
-      {
-        "id": "software-api-contract",
-        "title": "API 契约：静态 JSON 也需要边界"
-      },
-      {
-        "id": "software-repository",
-        "title": "Repository：让内容存储与游戏界面分离"
-      }
-    ],
+    "relatedBlogs": [],
     "relatedPapers": [
       {
         "id": "lfs",
@@ -950,20 +896,12 @@
     ],
     "relatedBlogs": [
       {
+        "id": "software-repository",
+        "title": "TypeScript 7 的原生编译器：类型更快，数据边界仍要自己守"
+      },
+      {
         "id": "ai-tool-contract",
-        "title": "Tool Calling：先定义契约，再让模型选择工具"
-      },
-      {
-        "id": "security-http",
-        "title": "HTTP 的安全边界：请求、身份与状态"
-      },
-      {
-        "id": "software-api-contract",
-        "title": "API 契约：静态 JSON 也需要边界"
-      },
-      {
-        "id": "software-rss-pipeline",
-        "title": "RSS 数据管道：从外部 XML 到可读的知识世界"
+        "title": "读 MCP 2026 工具规范：Schema 能管参数，不能替你授权"
       }
     ],
     "relatedPapers": [
@@ -1009,12 +947,12 @@
     ],
     "relatedBlogs": [
       {
-        "id": "software-repository",
-        "title": "Repository：让内容存储与游戏界面分离"
+        "id": "software-architecture",
+        "title": "OpenTelemetry 的进程上下文：为什么一次构建会散成多条 Trace"
       },
       {
-        "id": "software-architecture",
-        "title": "静态知识站的架构：少依赖，清边界"
+        "id": "software-repository",
+        "title": "TypeScript 7 的原生编译器：类型更快，数据边界仍要自己守"
       }
     ],
     "relatedPapers": [
@@ -1079,16 +1017,16 @@
     ],
     "relatedBlogs": [
       {
-        "id": "software-react-state",
-        "title": "React 状态：用一份事实驱动多个界面"
+        "id": "software-rss-pipeline",
+        "title": "Vitest 5 的 Trace View：把偶发失败变成可解释的时间线"
       },
       {
         "id": "software-testing",
-        "title": "测试分层：验证行为，而不是重复实现"
+        "title": "Node.js 26 的 Temporal：先分清日期、瞬间与时区"
       },
       {
-        "id": "software-static-delivery",
-        "title": "静态交付：让构建结果与发布动作分开"
+        "id": "ai-evaluation",
+        "title": "Agent 评估不能只判回答：怎样检查它真正完成了任务"
       }
     ],
     "relatedPapers": [
@@ -1331,7 +1269,7 @@
     "relatedBlogs": [
       {
         "id": "ai-rag-evidence",
-        "title": "RAG 的关键不是向量库，而是证据链"
+        "title": "Qwen3-VL 与多模态 RAG：检索命中之后，证据还差哪一步"
       }
     ],
     "relatedPapers": [
@@ -1380,7 +1318,11 @@
     "relatedBlogs": [
       {
         "id": "ai-tool-contract",
-        "title": "Tool Calling：先定义契约，再让模型选择工具"
+        "title": "读 MCP 2026 工具规范：Schema 能管参数，不能替你授权"
+      },
+      {
+        "id": "network-security-foundation",
+        "title": "MCP 授权边界：工具连通以后，谁有权做什么"
       }
     ],
     "relatedPapers": [
@@ -1433,7 +1375,7 @@
     "relatedBlogs": [
       {
         "id": "ai-evaluation",
-        "title": "模型评估：把流畅、正确与可靠分开"
+        "title": "Agent 评估不能只判回答：怎样检查它真正完成了任务"
       }
     ],
     "relatedPapers": [
@@ -1485,12 +1427,7 @@
       "避免同源流量泄漏到测试集",
       "记录分布变化和部署条件的限制"
     ],
-    "relatedBlogs": [
-      {
-        "id": "security-ids",
-        "title": "入侵检测：先验证数据，再讨论模型"
-      }
-    ],
+    "relatedBlogs": [],
     "relatedPapers": [
       {
         "id": "arxiv-1802.09089",
@@ -1534,11 +1471,15 @@
     "relatedBlogs": [
       {
         "id": "security-supply-chain",
-        "title": "供应链安全：依赖不是下载后就可信"
+        "title": "SBOM 不是安全证书：从组件清单走向可行动的风险判断"
       },
       {
-        "id": "software-static-delivery",
-        "title": "静态交付：让构建结果与发布动作分开"
+        "id": "security-vulnerability",
+        "title": "npm Trusted Publishing：短期身份为什么仍然需要发布边界"
+      },
+      {
+        "id": "security-ids",
+        "title": "GitHub Actions 安全扫描：没有告警，能否说明工作流安全"
       }
     ],
     "relatedPapers": [
@@ -1590,8 +1531,12 @@
     ],
     "relatedBlogs": [
       {
+        "id": "security-asset-discovery",
+        "title": "给 RSS 和 Agent 抓取器设边界：HTTPS 为什么挡不住 SSRF"
+      },
+      {
         "id": "software-rss-pipeline",
-        "title": "RSS 数据管道：从外部 XML 到可读的知识世界"
+        "title": "Vitest 5 的 Trace View：把偶发失败变成可解释的时间线"
       }
     ],
     "relatedPapers": [],
@@ -1633,16 +1578,16 @@
     ],
     "relatedBlogs": [
       {
-        "id": "security-supply-chain",
-        "title": "供应链安全：依赖不是下载后就可信"
-      },
-      {
-        "id": "software-architecture",
-        "title": "静态知识站的架构：少依赖，清边界"
-      },
-      {
         "id": "software-static-delivery",
-        "title": "静态交付：让构建结果与发布动作分开"
+        "title": "静态发布也需要来源证明：让通过测试的文件成为最终产物"
+      },
+      {
+        "id": "software-api-contract",
+        "title": "Vite 8 的统一构建链：升级前先写清楚输出契约"
+      },
+      {
+        "id": "security-vulnerability",
+        "title": "npm Trusted Publishing：短期身份为什么仍然需要发布边界"
       }
     ],
     "relatedPapers": [],

@@ -33,15 +33,18 @@ export function BlogReader({
     <section className="blog-reader" aria-label="博客文章">
       <header>
         <div className="reader-cover">
-          <WorldCover image={world.image} />
+          <WorldCover image={world.image} label={world.iconLabel} />
         </div>
         <h1>
           <BlogText text={world.title} />
         </h1>
         <BlogText
-          text={`${world.createTime} · ${world.category}`}
+          text={`${world.dateMeaning === "editorial-series" ? "栏目日期 " : ""}${world.createTime} · ${world.category}`}
           color="#aaa"
         />
+        {world.updatedAt && (
+          <BlogText text={`修订 ${world.updatedAt}`} color="#aaa" />
+        )}
         {world.status === "draft" && (
           <BlogText
             text="编辑草稿 · AI 辅助整理 · 待作者审阅"
@@ -53,7 +56,7 @@ export function BlogReader({
         {error ? (
           <BlogText text="正文读取失败，请返回后重试" color="#ff5555" />
         ) : (
-          <MarkdownText text={body} />
+          <MarkdownText text={body} hideTitle={world.title} />
         )}
         {!!world.sources?.length && (
           <section aria-label="参考来源">
@@ -65,6 +68,13 @@ export function BlogReader({
                 <a href={source.url} target="_blank" rel="noopener noreferrer">
                   <BlogText text={source.title} width={310} color="#55ffff" />
                 </a>
+                {source.checkedAt && (
+                  <BlogText
+                    text={`${source.publishedAt ? `资料日期 ${source.publishedAt}` : "持续更新文档"} · 查阅 ${source.checkedAt}`}
+                    width={310}
+                    color="#aaa"
+                  />
+                )}
               </p>
             ))}
           </section>

@@ -120,13 +120,13 @@
 .world-cover img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   image-rendering: pixelated;
 }
 .reader-cover img {
   width: calc(28px * var(--blog-scale));
   height: calc(28px * var(--blog-scale));
-  object-fit: cover;
+  object-fit: contain;
   image-rendering: pixelated;
 }
 .world-summary {
@@ -174,8 +174,21 @@
   outline: 0;
   scrollbar-color: #888 #222;
 }
-.blog-reader article h2 {
+.blog-reader article :is(h2, h3, h4, h5, h6) {
+  margin-top: calc(16px * var(--blog-scale));
   margin-bottom: calc(8px * var(--blog-scale));
+}
+.blog-reader article > :first-child {
+  margin-top: 0;
+}
+.blog-reader .markdown-code {
+  padding: calc(5px * var(--blog-scale));
+  margin-bottom: calc(12px * var(--blog-scale));
+  background: #111b;
+  border-left: calc(1px * var(--blog-scale)) solid #777;
+  display: flex;
+  flex-direction: column;
+  gap: calc(3px * var(--blog-scale));
 }
 .blog-reader article p {
   margin-bottom: calc(12px * var(--blog-scale));

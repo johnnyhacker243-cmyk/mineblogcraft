@@ -38,19 +38,19 @@ export function WorldCard({
       }}
     >
       <div className="world-cover">
-        <WorldCover image={world.image} />
+        <WorldCover image={world.image} label={world.iconLabel} />
       </div>
       <div className="world-summary">
         <BlogText text={world.title} width={265} />
         <BlogText
-          text={`${world.title} (${world.createTime.replaceAll("-", "/")})`}
+          text={`${world.createTime.replaceAll("-", "/")} · ${world.category}${world.seriesIndex ? ` · ${String(world.seriesIndex).padStart(2, "0")}/21` : ""}`}
           width={265}
           color="#808080"
         />
         <BlogText
           text={
             world.status === "draft"
-              ? "创造模式 · 技术编辑草稿 · 待审阅"
+              ? "创造模式 · 学习笔记草稿 · 待审阅"
               : "创造模式 · 版本: Mineblogcraft 1.0"
           }
           width={265}

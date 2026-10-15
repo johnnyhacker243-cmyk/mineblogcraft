@@ -1,0 +1,107 @@
+{
+  "repeater": {
+    "label": "红石中继器",
+    "reason": "阶段衔接、受控执行与任务节奏",
+    "source": "assets/minecraft/textures/item/repeater.png"
+  },
+  "iron_sword": {
+    "label": "铁剑",
+    "reason": "具有行动能力的工具需要明确权限边界",
+    "source": "assets/minecraft/textures/item/iron_sword.png"
+  },
+  "ender_pearl": {
+    "label": "末影珍珠",
+    "reason": "页面位置切换与连续的导航体验",
+    "source": "assets/minecraft/textures/item/ender_pearl.png"
+  },
+  "writable_book": {
+    "label": "书与笔",
+    "reason": "可更新、可追溯的任务记录",
+    "source": "assets/minecraft/textures/item/writable_book.png"
+  },
+  "totem_of_undying": {
+    "label": "不死图腾",
+    "reason": "账户恢复与最后一道保护",
+    "source": "assets/minecraft/textures/item/totem_of_undying.png"
+  },
+  "blaze_powder": {
+    "label": "烈焰粉",
+    "reason": "构建动力与工具链转换",
+    "source": "assets/minecraft/textures/item/blaze_powder.png"
+  },
+  "compass_16": {
+    "label": "指南针",
+    "reason": "将问题定位到可追溯的知识来源",
+    "source": "assets/minecraft/textures/item/compass_16.png"
+  },
+  "fishing_rod": {
+    "label": "钓鱼竿",
+    "reason": "从外部获取资料必须限制可触达的范围",
+    "source": "assets/minecraft/textures/item/fishing_rod.png"
+  },
+  "name_tag": {
+    "label": "命名牌",
+    "reason": "用明确类型和身份标注数据对象",
+    "source": "assets/minecraft/textures/item/name_tag.png"
+  },
+  "redstone": {
+    "label": "红石粉",
+    "reason": "工具之间的结构化信号与协议连接",
+    "source": "assets/minecraft/textures/item/redstone.png"
+  },
+  "lead": {
+    "label": "拴绳",
+    "reason": "把发布权限绑定到指定仓库和工作流",
+    "source": "assets/minecraft/textures/item/lead.png"
+  },
+  "clock_00": {
+    "label": "时钟",
+    "reason": "时间语义与日期边界",
+    "source": "assets/minecraft/textures/item/clock_00.png"
+  },
+  "lapis_lazuli": {
+    "label": "青金石",
+    "reason": "以有限资源进行针对性能力调整",
+    "source": "assets/minecraft/textures/item/lapis_lazuli.png"
+  },
+  "amethyst_shard": {
+    "label": "紫水晶碎片",
+    "reason": "从细微信号中发现工作流风险",
+    "source": "assets/minecraft/textures/item/amethyst_shard.png"
+  },
+  "spyglass": {
+    "label": "望远镜",
+    "reason": "跨进程追踪与观察完整执行链",
+    "source": "assets/minecraft/textures/item/spyglass.png"
+  },
+  "comparator": {
+    "label": "红石比较器",
+    "reason": "比较可观察结果与验收目标",
+    "source": "assets/minecraft/textures/item/comparator.png"
+  },
+  "iron_chestplate": {
+    "label": "铁胸甲",
+    "reason": "分层防护与明确的浏览器安全边界",
+    "source": "assets/minecraft/textures/item/iron_chestplate.png"
+  },
+  "spectral_arrow": {
+    "label": "光灵箭",
+    "reason": "标出失败位置与可追踪的交互目标",
+    "source": "assets/minecraft/textures/item/spectral_arrow.png"
+  },
+  "written_book": {
+    "label": "成书",
+    "reason": "外部文档承载资料而不是行动指令",
+    "source": "assets/minecraft/textures/item/written_book.png"
+  },
+  "bundle": {
+    "label": "收纳袋",
+    "reason": "把依赖、版本和关系整理成可检查清单",
+    "source": "assets/minecraft/textures/item/bundle.png"
+  },
+  "chest_minecart": {
+    "label": "运输矿车",
+    "reason": "把同一份已验证产物运送到发布端",
+    "source": "assets/minecraft/textures/item/chest_minecart.png"
+  }
+}
