@@ -34,21 +34,68 @@ export function trustedPDFUrl(input: string, origin = location.origin): string {
 export interface PDFLoadHandle {
   document: Promise<PDFDocumentProxy>;
   destroy: () => Promise<void>;
+  readonly source?: string;
 }
-export async function loadOriginalPDF(url: string): Promise<PDFLoadHandle> {
+type PDFTask = {
+  promise: Promise<PDFDocumentProxy>;
+  destroy: () => Promise<void>;
+};
+export function openPDFSources(
+  urls: string[],
+  open: (url: string) => PDFTask,
+): PDFLoadHandle {
+  let active: PDFTask | undefined;
+  let currentSource: string | undefined;
+  let cancelled = false;
+  const document = (async () => {
+    let failure: unknown = Error("No PDF source");
+    for (const url of urls) {
+      if (cancelled) throw Error("PDF loading cancelled");
+      try {
+        currentSource = url;
+        active = open(url);
+        return await active.promise;
+      } catch (error) {
+        failure = error;
+        const failed = active;
+        active = undefined;
+        await failed?.destroy().catch(() => {});
+      }
+    }
+    throw failure;
+  })();
+  return {
+    document,
+    get source() {
+      return currentSource;
+    },
+    destroy: async () => {
+      cancelled = true;
+      await active?.destroy();
+    },
+  };
+}
+export async function loadOriginalPDF(
+  url: string,
+  sha256?: string,
+): Promise<PDFLoadHandle> {
   const pdfjs = await import("pdfjs-dist");
   pdfjs.GlobalWorkerOptions.workerSrc = "/pdfjs/pdf.worker.min.mjs";
   // Only page graphics are rendered; PDF actions, scripts, XFA and form logic
   // are never requested or executed by this reader.
-  const task = pdfjs.getDocument({
-    url: trustedPDFUrl(url),
-    enableXfa: false,
-    standardFontDataUrl: "/pdfjs/standard_fonts/",
-    cMapUrl: "/pdfjs/cmaps/",
-    cMapPacked: true,
-    wasmUrl: "/pdfjs/wasm/",
-    disableAutoFetch: true,
-    disableStream: true,
-  });
-  return { document: task.promise, destroy: () => task.destroy() };
+  const sources = [trustedPDFUrl(url)];
+  if (import.meta.env.DEV && sha256 && /^[a-f0-9]{64}$/.test(sha256))
+    sources.unshift(`/papers/local-fulltext/${sha256}.pdf`);
+  return openPDFSources(sources, (source) =>
+    pdfjs.getDocument({
+      url: source,
+      enableXfa: false,
+      standardFontDataUrl: "/pdfjs/standard_fonts/",
+      cMapUrl: "/pdfjs/cmaps/",
+      cMapPacked: true,
+      wasmUrl: "/pdfjs/wasm/",
+      disableAutoFetch: true,
+      disableStream: true,
+    }),
+  );
 }

@@ -156,13 +156,15 @@ export function PDFBookPages({
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null),
     [error, setError] = useState(false),
     [attempt, setAttempt] = useState(0);
+  const [loadedFrom, setLoadedFrom] = useState<string>();
   const info = paper.pdf!;
   useEffect(() => {
     let disposed = false,
       handle: PDFLoadHandle | undefined;
     setDoc(null);
     setError(false);
-    loadOriginalPDF(info.url)
+    setLoadedFrom(undefined);
+    loadOriginalPDF(info.url, info.sha256)
       .then(async (result) => {
         handle = result;
         if (disposed) {
@@ -172,6 +174,7 @@ export function PDFBookPages({
         const pdf = await handle.document;
         if (!disposed) {
           setDoc(pdf);
+          setLoadedFrom(result.source);
           onCount(pdf.numPages);
         }
       })
@@ -187,18 +190,22 @@ export function PDFBookPages({
   return (
     <>
       {[spread * 2 + 1, spread * 2 + 2].map((number) => (
-        <div className="book-page-wing" key={number}>
+        <div
+          className="book-page-wing"
+          data-pdf-source={loadedFrom}
+          key={number}
+        >
           {number > count ? (
             <section className="book-page" aria-label="书末留白" />
           ) : doc ? (
             <PDFCanvasPage doc={doc} number={number} onZoom={onZoom} />
           ) : (
-            <section className="book-page">
+            <section className="book-page book-pdf-page">
               <div className="pdf-page-message">
                 <InventoryText
                   text={
                     error
-                      ? "原文加载失败，请检查网络后重试"
+                      ? "完整原文暂时无法读取，请重试"
                       : "正在读取完整原文..."
                   }
                   color="#292019"

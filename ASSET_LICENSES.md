@@ -84,3 +84,5 @@ MineWorld 从已授权1.21.1客户端读取石砖/雕纹石砖、深色橡木、
 新增论文使用原站或公开学术存档直读，不将 32 份原 PDF 加入 Git、public 或 dist。27 篇 arXiv 与 Raft 作者站点保留原许可/出处；四篇经典论文的公开存档逐字节等同原作者文件，元数据同时保留规范来源与哈希。可访问不等于允许本站重新托管。
 
 PDF.js 使用 Mozilla 官方 npm 包 pdfjs-dist 6.4.299（Apache-2.0）。scripts/prepare-pdf-assets.mjs 从安装包复制 worker、CMaps、标准字体、WASM 编解码器及各自 LICENSE；生成目录 public/pdfjs 被 Git 忽略，但本地构建包含所需文件和许可声明。正文仅渲染，不执行 PDF 脚本或动作。未替换原版书本或附魔书贴图。详见 PAPER_FULLTEXT.md。
+
+论文网络故障修复新增私有本地缓存 `.local-reference/paper-pdfs/`，只供现阶段本地阅读使用。缓存被 Git 忽略且不在 public，Vite 插件仅开发模式启用，不将这些原文加入生产静态构建，也不改变原许可或重新分发范围。
