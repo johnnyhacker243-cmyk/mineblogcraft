@@ -19,6 +19,8 @@ assert hashlib.sha1(a.jar.read_bytes()).hexdigest() == '30c73b1c5da787909b2f7334
 out = Path(__file__).resolve().parents[1] / 'public/assets/inventory'
 out.mkdir(parents=True, exist_ok=True)
 mapping = {
+    'world-join.png': 'gui/sprites/world_list/join.png',
+    'world-join-highlighted.png': 'gui/sprites/world_list/join_highlighted.png',
     'world-stone.png': 'block/stone_bricks.png',
     'world-chiseled.png': 'block/chiseled_stone_bricks.png',
     'world-wood.png': 'block/dark_oak_planks.png',

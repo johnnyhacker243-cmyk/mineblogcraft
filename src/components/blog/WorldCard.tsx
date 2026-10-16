@@ -39,6 +39,22 @@ export function WorldCard({
     >
       <div className="world-cover">
         <WorldCover image={world.image} label={world.iconLabel} />
+        <button
+          type="button"
+          className="world-enter"
+          aria-label={`进入世界：${world.title}`}
+          onClick={(event) => {
+            event.stopPropagation();
+            open();
+          }}
+          onDoubleClick={(event) => event.stopPropagation()}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ")
+              event.stopPropagation();
+          }}
+        >
+          <span className="world-enter-glyph" aria-hidden="true" />
+        </button>
       </div>
       <div className="world-summary">
         <BlogText text={world.title} width={265} />

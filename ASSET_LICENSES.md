@@ -100,3 +100,8 @@ PDF.js 使用 Mozilla 官方 npm 包 pdfjs-dist 6.4.299（Apache-2.0）。script
 ## MineWorld 暂停菜单适配
 
 保留官方 ClassiCube.js 及其原始 SHA-256，不覆盖上游文件。`scripts/prepare-mineworld-client.mjs` 为用户要求的无暂停菜单体验生成独立派生脚本，只禁用暂停菜单入口与相应 Escape 吞键标志；派生脚本被 Git 忽略，在本地/云端构建中可重复生成，继续附带现有 ClassiCube LICENSE.txt。原版游戏素材许可不因该代码适配而改变。
+
+
+## MineBlog 世界进入图标
+
+悬停进入图标直接使用本地获授权 Minecraft Java 1.21.1 客户端的 `gui/sprites/world_list/join.png` 与 `join_highlighted.png`，逐字节提取，未重绘。`scripts/import-inventory.py` 记录两项映射；输出 `public/assets/inventory/world-join*.png` 继续被 Git 忽略，仅在已有部署资源清单记录大小与哈希。
