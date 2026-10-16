@@ -34,9 +34,9 @@
     "aliases": [],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -101,9 +101,9 @@
     "aliases": [],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -144,9 +144,9 @@
     "aliases": [],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -219,9 +219,9 @@
     ],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -269,9 +269,9 @@
     ],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -335,9 +335,9 @@
     ],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -418,9 +418,9 @@
     ],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -462,9 +462,9 @@
     ],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -498,9 +498,9 @@
     ],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -540,9 +540,9 @@
     "aliases": [],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -574,9 +574,9 @@
     "aliases": [],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -609,9 +609,9 @@
     "aliases": [],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -642,9 +642,9 @@
     "aliases": [],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -677,9 +677,9 @@
     "aliases": [],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -715,9 +715,9 @@
     "aliases": [],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -765,8 +765,8 @@
     "aliases": [],
     "domainId": "software",
     "relatedRss": [
-      "github",
-      "meta-engineering",
+      "meituan",
+      "pingcap",
       "cloudflare"
     ]
   },
@@ -824,8 +824,8 @@
     "aliases": [],
     "domainId": "software",
     "relatedRss": [
-      "github",
-      "meta-engineering",
+      "meituan",
+      "pingcap",
       "cloudflare"
     ]
   },
@@ -866,8 +866,8 @@
     "aliases": [],
     "domainId": "software",
     "relatedRss": [
-      "github",
-      "meta-engineering",
+      "meituan",
+      "pingcap",
       "cloudflare"
     ]
   },
@@ -916,8 +916,8 @@
     ],
     "domainId": "software",
     "relatedRss": [
-      "github",
-      "meta-engineering",
+      "meituan",
+      "pingcap",
       "cloudflare"
     ]
   },
@@ -987,8 +987,8 @@
     ],
     "domainId": "software",
     "relatedRss": [
-      "github",
-      "meta-engineering",
+      "meituan",
+      "pingcap",
       "cloudflare"
     ]
   },
@@ -1049,8 +1049,8 @@
     ],
     "domainId": "software",
     "relatedRss": [
-      "github",
-      "meta-engineering",
+      "meituan",
+      "pingcap",
       "cloudflare"
     ]
   },
@@ -1287,9 +1287,9 @@
     ],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -1344,9 +1344,9 @@
     ],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -1399,9 +1399,9 @@
     "aliases": [],
     "domainId": "ai",
     "relatedRss": [
-      "huggingface",
-      "openai",
-      "google-ai"
+      "nvidia-cn",
+      "ms-foundry",
+      "qbitai"
     ]
   },
   {
@@ -1440,9 +1440,9 @@
     ],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -1501,9 +1501,9 @@
     ],
     "domainId": "security",
     "relatedRss": [
-      "tencent-security",
-      "schneier",
-      "krebs"
+      "nsfocus",
+      "securelist",
+      "anquanke"
     ]
   },
   {
@@ -1548,8 +1548,8 @@
     ],
     "domainId": "software",
     "relatedRss": [
-      "github",
-      "meta-engineering",
+      "meituan",
+      "pingcap",
       "cloudflare"
     ]
   },
@@ -1597,8 +1597,8 @@
     ],
     "domainId": "software",
     "relatedRss": [
-      "github",
-      "meta-engineering",
+      "meituan",
+      "pingcap",
       "cloudflare"
     ]
   }

@@ -15,6 +15,15 @@ export interface RSSServer {
   lastSuccessAt: string | null;
   verificationStatus: string;
   error?: string | null;
+  latestPublishedAt?: string | null;
+  articleAccess?: {
+    checkedAt: string;
+    scope: "current-network-sample";
+    regionalStatus: "not-region-tested";
+    status: "reachable" | "partial" | "failed" | "unknown";
+    sampled: number;
+    passed: number;
+  };
 }
 export interface RSSArticle {
   id: string;

@@ -1,0 +1,596 @@
+{
+  "checkedAt": "2026-10-16T11:58:25.400Z",
+  "scope": "current-network-sample",
+  "regionalStatus": "not-region-tested",
+  "note": "RSS and article checks are not measurements from mainland carrier networks. Availability can vary by region, ISP and time.",
+  "sources": [
+    {
+      "id": "qbitai",
+      "name": "量子位",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T10:07:08.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://www.qbitai.com/2026/10/503645.html",
+          "status": "reachable",
+          "title": "京东11.11：首日下单用户数同比双位数增长、超百项服务首次全景亮相 – 量子位",
+          "elapsedMs": 2892
+        },
+        {
+          "url": "https://www.qbitai.com/2026/10/503640.html",
+          "status": "reachable",
+          "title": "库克：苹果智能接入阿里千问大模型，10月底在中国发布测试版本 – 量子位",
+          "elapsedMs": 311
+        }
+      ]
+    },
+    {
+      "id": "arxiv-ai",
+      "name": "arXiv · Artificial Intelligence",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-16T04:00:00.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://arxiv.org/abs/2610.20845",
+          "status": "reachable",
+          "title": "[2610.20845] Evolving Together, Failing Apart: The Skill-Policy Co-evolution Trap in Self-Improving Agents",
+          "elapsedMs": 1113
+        },
+        {
+          "url": "https://arxiv.org/abs/2610.20780",
+          "status": "reachable",
+          "title": "[2610.20780] ARIA: Runtime Inspection and Amendment for Multi-Agent Systems",
+          "elapsedMs": 185
+        }
+      ]
+    },
+    {
+      "id": "nvidia-cn",
+      "name": "NVIDIA 技术博客 · 中文",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-08T13:57:55.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://developer.nvidia.cn/blog/5-steps-to-create-simready-assets-for-robotics-with-frontier-ai-models/",
+          "status": "reachable",
+          "title": "使用前沿 AI 模型为机器人创建 SimReady 资产的 5 个步骤 - NVIDIA 技术博客",
+          "elapsedMs": 2212
+        },
+        {
+          "url": "https://developer.nvidia.cn/blog/building-reliable-data-analytics-agents-lessons-from-the-kdd-cup/",
+          "status": "reachable",
+          "title": "构建可靠的数据分析智能体：从 KDD 杯中汲取的经验教训 - NVIDIA 技术博客",
+          "elapsedMs": 1458
+        }
+      ]
+    },
+    {
+      "id": "microsoft-research",
+      "name": "Microsoft Research",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T16:00:00.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
+          "status": "reachable",
+          "title": "Proof-based general-purpose computing with Magnetar - Microsoft Research",
+          "elapsedMs": 1772
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
+          "status": "reachable",
+          "title": "Simulating student learning for better AI tutoring - Microsoft Research",
+          "elapsedMs": 1221
+        }
+      ]
+    },
+    {
+      "id": "aws-ml",
+      "name": "AWS Machine Learning",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T17:43:35.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://aws.amazon.com/blogs/machine-learning/metas-muse-spark-open-now-available-in-amazon-sagemaker-jumpstart/",
+          "status": "reachable",
+          "title": "Meta’s Muse Spark Open now available in Amazon SageMaker JumpStart | Artificial Intelligence",
+          "elapsedMs": 1130
+        },
+        {
+          "url": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/",
+          "status": "reachable",
+          "title": "Trust in Depth: Giving agents more autonomy without losing control | Artificial Intelligence",
+          "elapsedMs": 366
+        }
+      ]
+    },
+    {
+      "id": "amazon-science",
+      "name": "Amazon Science",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-12T17:36:18.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://www.amazon.science/blog/can-we-change-an-ai-models-architecture-without-retraining-it-from-scratch",
+          "status": "reachable",
+          "title": "Can we change an AI model’s architecture without retraining it from scratch? - Amazon Science",
+          "elapsedMs": 614
+        },
+        {
+          "url": "https://www.amazon.science/blog/graph-centric-agentic-intelligence",
+          "status": "reachable",
+          "title": "Graph-centric agentic intelligence - Amazon Science",
+          "elapsedMs": 222
+        }
+      ]
+    },
+    {
+      "id": "ms-foundry",
+      "name": "Microsoft Foundry Blog",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-16T02:04:50.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-september-2026/",
+          "status": "reachable",
+          "title": "What's new in Microsoft Foundry | September 2026 | Microsoft Foundry Blog",
+          "elapsedMs": 837
+        },
+        {
+          "url": "https://devblogs.microsoft.com/foundry/content-understanding-confidence-grounding-hitl/",
+          "status": "reachable",
+          "title": "From extraction to action: Using grounding and confidence to build reliable document workflows | Microsoft Foundry Blog",
+          "elapsedMs": 285
+        }
+      ]
+    },
+    {
+      "id": "unit42",
+      "name": "Unit 42 · Palo Alto Networks",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T22:00:09.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://unit42.paloaltonetworks.com/ai-campaign-targets-linux-infrastructure/",
+          "status": "reachable",
+          "title": "AI-Powered Espionage Campaign Targets Government Linux Infrastructure",
+          "elapsedMs": 2606
+        },
+        {
+          "url": "https://unit42.paloaltonetworks.com/fortimanager-cve-2024-47575-peerstitch-malware/",
+          "status": "reachable",
+          "title": "Unit 42 Uncovers PEERSTITCH, a Stealthy FortiGate Implant",
+          "elapsedMs": 1876
+        }
+      ]
+    },
+    {
+      "id": "portswigger",
+      "name": "PortSwigger Research",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T10:09:41.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://portswigger.net/blog/burp-at-whats-new-since-black-hat",
+          "status": "reachable",
+          "title": "Burp AT: What's new since Black Hat | Blog - PortSwigger",
+          "elapsedMs": 1171
+        },
+        {
+          "url": "https://portswigger.net/blog/can-ai-invent-new-attack-techniques-new-research-from-james-kettle-and-portswigger-research",
+          "status": "reachable",
+          "title": "Can AI invent new attack techniques? New research from James Kettle and PortSwigger Research | Blog",
+          "elapsedMs": 506
+        }
+      ]
+    },
+    {
+      "id": "nsfocus",
+      "name": "绿盟科技技术博客",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-16T10:13:50.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://blog.nsfocus.net/ai%e5%8f%8c%e8%bd%ae%e9%a9%b1%e5%8a%a8%e5%ae%89%e5%85%a8%e6%96%b9%e6%a1%88%e7%99%bb%e9%99%86%e4%ba%9a%e5%a4%aa%ef%bc%9a%e7%bb%bf%e7%9b%9f%e7%a7%91%e6%8a%80%e4%ba%ae%e7%9b%b8govware-2026/",
+          "status": "reachable",
+          "title": "AI双轮驱动安全方案登陆亚太：绿盟科技亮相GovWare 2026 – 绿盟科技技术博客",
+          "elapsedMs": 2428
+        },
+        {
+          "url": "https://blog.nsfocus.net/%e7%bb%bf%e7%9b%9f%e7%a7%91%e6%8a%80%ef%bc%88%e5%90%ab%e4%ba%bf%e8%b5%9b%e9%80%9a%ef%bc%89%e5%85%a5%e9%80%89%e6%95%b0%e8%af%b4%e5%ae%89%e5%85%a8%e3%80%8a2026%e5%b9%b4%e4%b8%ad%e5%9b%bd%e7%bd%91/",
+          "status": "reachable",
+          "title": "绿盟科技（含亿赛通）入选数说安全《2026年中国网络安全市场全景图》92个细分领域，AI安全能力表现亮眼 – 绿盟科技技术博客",
+          "elapsedMs": 658
+        }
+      ]
+    },
+    {
+      "id": "anquanke",
+      "name": "安全客",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-12T10:45:42.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://www.anquanke.com/post/id/316231",
+          "status": "reachable",
+          "title": "7分钟加密3.6PB，运维7小时没找到勒索信：日本国家级云平台被黑全过程-安全KER - 安全资讯平台",
+          "elapsedMs": 3597
+        },
+        {
+          "url": "https://www.anquanke.com/post/id/316225",
+          "status": "reachable",
+          "title": "AI第一次\"报假案\"：Claude向费城警方提交虚假凶杀线索，两个月后才被发现-安全KER - 安全资讯平台",
+          "elapsedMs": 1519
+        }
+      ]
+    },
+    {
+      "id": "talos",
+      "name": "Cisco Talos Intelligence",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T18:00:00.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/",
+          "status": "reachable",
+          "title": "The Q3 Vulnerability Pulse: Discovery ≠ Exploitation",
+          "elapsedMs": 455
+        },
+        {
+          "url": "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/",
+          "status": "reachable",
+          "title": "Break the silence: Kazakhstan-nexus UAT-6275 targets CIS government organizations",
+          "elapsedMs": 166
+        }
+      ]
+    },
+    {
+      "id": "microsoft-security",
+      "name": "Microsoft Security Blog",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-14T13:00:00.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/",
+          "status": "reachable",
+          "title": "The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime | Microsoft Security Blog",
+          "elapsedMs": 280
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/08/post-quantum-authentication-why-organizations-should-start-testing-certificate-ecosystems-now/",
+          "status": "reachable",
+          "title": "Post-quantum authentication: Why organizations should start testing certificate ecosystems now | Microsoft Security Blog",
+          "elapsedMs": 1472
+        }
+      ]
+    },
+    {
+      "id": "securelist",
+      "name": "Securelist · Kaspersky",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-09-24T10:00:21.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://securelist.com/macsync-new-version/121383/",
+          "status": "reachable",
+          "title": "A new version of the MacSync macOS stealer targets crypto enthusiasts and developers | Securelist",
+          "elapsedMs": 1953
+        },
+        {
+          "url": "https://securelist.com/tr/payload-ransomware-via-group-policy/121335/",
+          "status": "reachable",
+          "title": "PAYLOAD ransomware attacks through Active Directory GPO | Securelist",
+          "elapsedMs": 3193
+        }
+      ]
+    },
+    {
+      "id": "meituan",
+      "name": "美团技术团队",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": null,
+      "freshness": "unknown",
+      "missingDates": 10,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://tech.meituan.com/2026/08/07/Agent-Evaluation.html",
+          "status": "reachable",
+          "title": "Agent评测漫谈 —— 由浅入深讲解Agent评测 | 美团 · 技术团队",
+          "elapsedMs": 2396
+        },
+        {
+          "url": "https://tech.meituan.com/2026/08/13/KDD-2026-meituan-papers.html",
+          "status": "reachable",
+          "title": "KDD'26美团学术论文精选及KDD Cup'26 DataAgents赛道冠军思路解读 | 美团 · 技术团队",
+          "elapsedMs": 318
+        }
+      ]
+    },
+    {
+      "id": "infoq",
+      "name": "InfoQ 中文",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-16T11:53:14.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 6,
+      "samples": [
+        {
+          "url": "https://www.infoq.cn/article/1XtKjZ1OCyrYTCmb4Zkb?utm_source=rss&utm_medium=article",
+          "status": "reachable",
+          "title": "聚焦 AI 场景落地与 FDE 创新，2026 人工智能产业大会专项活动在济南举行 - InfoQ",
+          "elapsedMs": 3088
+        },
+        {
+          "url": "https://www.infoq.cn/article/xQLd004RGWrzFhwqBOyC?utm_source=rss&utm_medium=article",
+          "status": "reachable",
+          "title": "生产级大模型平台工程实战手册 - InfoQ",
+          "elapsedMs": 1199
+        }
+      ]
+    },
+    {
+      "id": "pingcap",
+      "name": "PingCAP Engineering",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T15:00:00.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://www.pingcap.com/blog/tidb-cloud-scaile-2026-product-announcements/",
+          "status": "reachable",
+          "title": "What’s New in TiDB Cloud: Premium, BYOC, Postgres & More",
+          "elapsedMs": 1108
+        },
+        {
+          "url": "https://www.pingcap.com/blog/persistent-ai-memory/",
+          "status": "reachable",
+          "title": "Persistent AI Agent Memory Explained: How Agents Remember Across Sessions",
+          "elapsedMs": 210
+        }
+      ]
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare Engineering",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T17:11:12.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://blog.cloudflare.com/programmable-gateway-dlp/",
+          "status": "reachable",
+          "title": "A fully programmable secure web gateway | Cloudflare Blog",
+          "elapsedMs": 570
+        },
+        {
+          "url": "https://blog.cloudflare.com/deploy-with-void/",
+          "status": "reachable",
+          "title": "Deploy with Void | Cloudflare Blog",
+          "elapsedMs": 200
+        }
+      ]
+    },
+    {
+      "id": "go-blog",
+      "name": "Go 官方博客",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-14T00:00:00.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://go.dev/blog/http-connection-reuse",
+          "status": "reachable",
+          "title": "Better HTTP/1 connection reuse - The Go Programming Language",
+          "elapsedMs": 541
+        },
+        {
+          "url": "https://go.dev/blog/archsimd",
+          "status": "reachable",
+          "title": "Arch-specific SIMD in Go - The Go Programming Language",
+          "elapsedMs": 257
+        }
+      ]
+    },
+    {
+      "id": "spring",
+      "name": "Spring Engineering",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T00:00:00.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://spring.io/blog/2026/10/15/a-bootiful-podcast-andrew-lombardi",
+          "status": "reachable",
+          "title": "A Bootiful Podcast: Can Java be more performant than Rust? Andrew Lombardi has the numbers",
+          "elapsedMs": 925
+        },
+        {
+          "url": "https://spring.io/blog/2026/10/13/this-week-in-spring-october-13th-2026",
+          "status": "reachable",
+          "title": "This Week in Spring - October 13th, 2026",
+          "elapsedMs": 401
+        }
+      ]
+    },
+    {
+      "id": "rust",
+      "name": "Rust Blog",
+      "checkedAt": "2026-10-16T11:58:25.400Z",
+      "scope": "current-network-sample",
+      "regionalStatus": "not-region-tested",
+      "status": "reachable",
+      "sampled": 2,
+      "passed": 2,
+      "latestPublishedAt": "2026-10-15T00:00:00.000Z",
+      "freshness": "recent",
+      "missingDates": 0,
+      "futureDates": 0,
+      "samples": [
+        {
+          "url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/",
+          "status": "reachable",
+          "title": "Announcing Rust 1.99.1 | Rust Blog",
+          "elapsedMs": 417
+        },
+        {
+          "url": "https://blog.rust-lang.org/2026/10/02/demoting-i686-windows-targets-to-std-only/",
+          "status": "reachable",
+          "title": "Demoting i686 Windows targets to std-only | Rust Blog",
+          "elapsedMs": 373
+        }
+      ]
+    }
+  ]
+}

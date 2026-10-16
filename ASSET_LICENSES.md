@@ -90,3 +90,8 @@ PDF.js 使用 Mozilla 官方 npm 包 pdfjs-dist 6.4.299（Apache-2.0）。script
 ## MineBlog 日更主题物品
 
 2026-10-15 重编 21 篇学习笔记，按 `config/blogIcons.json` 从同一获授权 Minecraft Java 1.21.1 客户端提取 21 种未修改的物品 PNG。使用中继器、铁剑、末影珍珠、书与笔、不死图腾、烈焰粉、指南针、钓鱼竿、命名牌、红石、拴绳、时钟、青金石、紫水晶碎片、望远镜、比较器、铁胸甲、光灵箭、成书、收纳袋与运输矿车。提取脚本验证客户端 SHA-1；图片、逐项来源哈希与扩展字形图集均留在忽略的 `public/assets/inventory/`，不提交或额外发布。没有生成或重绘游戏图标。正文为带原始资料出处的 AI 辅助编辑草稿，外部研究保留原作者归属，不冒充个人实验。详见 `docs/MINEBLOG_EDITORIAL_2026.md`。
+
+
+## MineRSS 原版主题物品（2026-10-16）
+
+`config/rssIcons.json` 记录 21 个原版物品、贴图路径及选择理由。`scripts/import-rss-icons.py` 校验本地 1.21.1 客户端 SHA-1 后逐字节提取 PNG；输出及来源哈希位于忽略的 `public/assets/inventory/rss-icons/`，不提交 Git。原版资源权利仍属原权利人，不因本地读取或部署而改变许可。部署继续沿用已有运行资源清单，GitHub 仅保存哈希元数据及代码，未上传原始客户端。详见 `docs/MINERSS_CURATION_2026.md`。

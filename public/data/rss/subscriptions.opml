@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<opml version="2.0"><head><title>Mineblogcraft subscriptions</title></head><body><outline text="Hugging Face Blog" title="Hugging Face Blog" type="rss" xmlUrl="https://huggingface.co/blog/feed.xml" htmlUrl="https://huggingface.co/blog"/>
-<outline text="OpenAI News" title="OpenAI News" type="rss" xmlUrl="https://openai.com/news/rss.xml" htmlUrl="https://openai.com/news"/>
-<outline text="Google AI" title="Google AI" type="rss" xmlUrl="https://blog.google/technology/ai/rss/" htmlUrl="https://blog.google/technology/ai/"/>
-<outline text="Google DeepMind" title="Google DeepMind" type="rss" xmlUrl="https://deepmind.google/blog/rss.xml" htmlUrl="https://deepmind.google/blog/"/>
-<outline text="Google Research" title="Google Research" type="rss" xmlUrl="https://research.google/blog/rss/" htmlUrl="https://research.google/blog/"/>
-<outline text="Berkeley AI Research" title="Berkeley AI Research" type="rss" xmlUrl="https://bair.berkeley.edu/blog/feed.xml" htmlUrl="https://bair.berkeley.edu/blog/"/>
-<outline text="Apple Machine Learning Research" title="Apple Machine Learning Research" type="rss" xmlUrl="https://machinelearning.apple.com/rss.xml" htmlUrl="https://machinelearning.apple.com/"/>
-<outline text="腾讯安全应急响应中心" title="腾讯安全应急响应中心" type="rss" xmlUrl="https://security.tencent.com/index.php/feed/blog/0" htmlUrl="https://security.tencent.com/"/>
-<outline text="Schneier on Security" title="Schneier on Security" type="rss" xmlUrl="https://www.schneier.com/feed/atom/" htmlUrl="https://www.schneier.com/"/>
-<outline text="Krebs on Security" title="Krebs on Security" type="rss" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com/"/>
-<outline text="CISA Cybersecurity Advisories" title="CISA Cybersecurity Advisories" type="rss" xmlUrl="https://www.cisa.gov/cybersecurity-advisories/all.xml" htmlUrl="https://www.cisa.gov/"/>
-<outline text="PortSwigger Research" title="PortSwigger Research" type="rss" xmlUrl="https://portswigger.net/blog/rss" htmlUrl="https://portswigger.net/blog/"/>
+<opml version="2.0"><head><title>Mineblogcraft subscriptions</title></head><body><outline text="量子位" title="量子位" type="rss" xmlUrl="https://www.qbitai.com/feed" htmlUrl="https://www.qbitai.com/"/>
+<outline text="arXiv · Artificial Intelligence" title="arXiv · Artificial Intelligence" type="rss" xmlUrl="https://rss.arxiv.org/rss/cs.AI" htmlUrl="https://arxiv.org/list/cs.AI/recent"/>
+<outline text="NVIDIA 技术博客 · 中文" title="NVIDIA 技术博客 · 中文" type="rss" xmlUrl="https://developer.nvidia.cn/blog/feed/" htmlUrl="https://developer.nvidia.cn/blog/"/>
+<outline text="Microsoft Research" title="Microsoft Research" type="rss" xmlUrl="https://www.microsoft.com/en-us/research/feed/" htmlUrl="https://www.microsoft.com/en-us/research/"/>
+<outline text="AWS Machine Learning" title="AWS Machine Learning" type="rss" xmlUrl="https://aws.amazon.com/blogs/machine-learning/feed/" htmlUrl="https://aws.amazon.com/blogs/machine-learning/"/>
+<outline text="Amazon Science" title="Amazon Science" type="rss" xmlUrl="https://www.amazon.science/index.rss" htmlUrl="https://www.amazon.science/"/>
+<outline text="Microsoft Foundry Blog" title="Microsoft Foundry Blog" type="rss" xmlUrl="https://devblogs.microsoft.com/foundry/feed/" htmlUrl="https://devblogs.microsoft.com/foundry/"/>
+<outline text="Unit 42 · Palo Alto Networks" title="Unit 42 · Palo Alto Networks" type="rss" xmlUrl="https://unit42.paloaltonetworks.com/feed/" htmlUrl="https://unit42.paloaltonetworks.com/"/>
+<outline text="PortSwigger Research" title="PortSwigger Research" type="rss" xmlUrl="https://portswigger.net/blog/rss" htmlUrl="https://portswigger.net/research"/>
+<outline text="绿盟科技技术博客" title="绿盟科技技术博客" type="rss" xmlUrl="https://blog.nsfocus.net/feed/" htmlUrl="https://blog.nsfocus.net/"/>
+<outline text="安全客" title="安全客" type="rss" xmlUrl="https://api.anquanke.com/data/v1/rss" htmlUrl="https://www.anquanke.com/"/>
 <outline text="Cisco Talos Intelligence" title="Cisco Talos Intelligence" type="rss" xmlUrl="https://blog.talosintelligence.com/rss/" htmlUrl="https://blog.talosintelligence.com/"/>
 <outline text="Microsoft Security Blog" title="Microsoft Security Blog" type="rss" xmlUrl="https://www.microsoft.com/en-us/security/blog/feed/" htmlUrl="https://www.microsoft.com/en-us/security/blog/"/>
-<outline text="GitHub Engineering" title="GitHub Engineering" type="rss" xmlUrl="https://github.blog/engineering/feed/" htmlUrl="https://github.blog/engineering/"/>
-<outline text="Engineering at Meta" title="Engineering at Meta" type="rss" xmlUrl="https://engineering.fb.com/feed/" htmlUrl="https://engineering.fb.com/"/>
-<outline text="Cloudflare Blog" title="Cloudflare Blog" type="rss" xmlUrl="https://blog.cloudflare.com/rss/" htmlUrl="https://blog.cloudflare.com/"/>
-<outline text="MDN Web Docs Blog" title="MDN Web Docs Blog" type="rss" xmlUrl="https://developer.mozilla.org/en-US/blog/rss.xml" htmlUrl="https://developer.mozilla.org/en-US/blog/"/>
-<outline text="Engineering at Microsoft" title="Engineering at Microsoft" type="rss" xmlUrl="https://devblogs.microsoft.com/engineering-at-microsoft/feed/" htmlUrl="https://devblogs.microsoft.com/engineering-at-microsoft/"/>
-<outline text="JetBrains Blog" title="JetBrains Blog" type="rss" xmlUrl="https://blog.jetbrains.com/feed/" htmlUrl="https://blog.jetbrains.com/"/>
-<outline text="Martin Fowler" title="Martin Fowler" type="rss" xmlUrl="https://martinfowler.com/feed.atom" htmlUrl="https://martinfowler.com/"/></body></opml>
+<outline text="Securelist · Kaspersky" title="Securelist · Kaspersky" type="rss" xmlUrl="https://securelist.com/feed/" htmlUrl="https://securelist.com/"/>
+<outline text="美团技术团队" title="美团技术团队" type="rss" xmlUrl="https://tech.meituan.com/rss.xml" htmlUrl="https://tech.meituan.com/"/>
+<outline text="InfoQ 中文" title="InfoQ 中文" type="rss" xmlUrl="https://www.infoq.cn/feed" htmlUrl="https://www.infoq.cn/"/>
+<outline text="PingCAP Engineering" title="PingCAP Engineering" type="rss" xmlUrl="https://www.pingcap.com/blog/feed/" htmlUrl="https://www.pingcap.com/blog/"/>
+<outline text="Cloudflare Engineering" title="Cloudflare Engineering" type="rss" xmlUrl="https://blog.cloudflare.com/rss/" htmlUrl="https://blog.cloudflare.com/"/>
+<outline text="Go 官方博客" title="Go 官方博客" type="rss" xmlUrl="https://go.dev/blog/feed.atom" htmlUrl="https://go.dev/blog/"/>
+<outline text="Spring Engineering" title="Spring Engineering" type="rss" xmlUrl="https://spring.io/blog.atom" htmlUrl="https://spring.io/blog/"/>
+<outline text="Rust Blog" title="Rust Blog" type="rss" xmlUrl="https://blog.rust-lang.org/feed.xml" htmlUrl="https://blog.rust-lang.org/"/></body></opml>

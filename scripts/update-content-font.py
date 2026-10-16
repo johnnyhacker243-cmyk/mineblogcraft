@@ -33,4 +33,6 @@ for i,code in enumerate(selected):
     metadata[chr(code)]=[x,y,w]
 atlas.save(out/'unifont.png')
 (out/'font.json').write_text(json.dumps(metadata,ensure_ascii=False),encoding='utf-8')
+revision=hashlib.sha256((out/'font.json').read_bytes()+(out/'unifont.png').read_bytes()).hexdigest()[:16]
+(root/'src/config/inventory-font-version.json').write_text(json.dumps({'revision':revision})+'\n',encoding='utf-8')
 print(f'Extended local original font atlas: {len(metadata)} glyphs; assets remain ignored by Git')

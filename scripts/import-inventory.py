@@ -154,7 +154,7 @@ project = Path(__file__).resolve().parents[1]
 characters = set(chr(n) for n in range(32,256))
 for source in ['src/data/papers.json','public/papers/paper001.md','src/screens/MineResearchPage.tsx','src/components/research/PaperList.tsx','src/components/research/PaperBookViewer.tsx','src/utils/book-pagination.ts']:
     characters.update((project/source).read_text(encoding='utf-8'))
-for source in ['src/data/rssSources.json', 'src/screens/MineRSSScreen.tsx', 'src/components/rss/RSSServerRow.tsx']:
+for source in ['config/rssSources.json', 'src/screens/MineRSSScreen.tsx', 'src/components/rss/RSSServerRow.tsx']:
     characters.update((project/source).read_text(encoding='utf-8'))
 for source in ['src/config/profile-config.ts','src/components/ProfilePanel.tsx','src/components/MinecraftInventory.tsx','src/data/blogs.json', 'src/screens/BlogWorldSelect.tsx', 'src/components/blog/WorldSearch.tsx', 'src/components/blog/WorldCard.tsx', 'src/components/blog/BlogReader.tsx']:
     characters.update((project/source).read_text(encoding='utf-8'))

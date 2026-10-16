@@ -1,338 +1,603 @@
 [
   {
-    "id": "huggingface",
-    "name": "Hugging Face Blog",
+    "id": "qbitai",
+    "name": "量子位",
     "domainId": "ai",
     "crossDomainIds": [],
-    "description": "开源模型、数据集与机器学习工程",
-    "tags": ["LLM", "Model", "OpenSource"],
-    "feedUrl": "https://huggingface.co/blog/feed.xml",
-    "siteUrl": "https://huggingface.co/blog",
-    "language": "en",
-    "iconKey": "enchanted-book",
-    "enabled": true,
-    "verificationStatus": "unverified",
-    "lastCheckedAt": null,
-    "publicInOpml": true
-  },
-  {
-    "id": "openai",
-    "name": "OpenAI News",
-    "domainId": "ai",
-    "crossDomainIds": [],
-    "description": "模型研究、产品能力与安全更新",
-    "tags": ["AI", "Agent", "Safety"],
-    "feedUrl": "https://openai.com/news/rss.xml",
-    "siteUrl": "https://openai.com/news",
-    "language": "en",
-    "iconKey": "ender-pearl",
-    "enabled": true,
-    "verificationStatus": "unverified",
-    "lastCheckedAt": null,
-    "publicInOpml": true
-  },
-  {
-    "id": "google-ai",
-    "name": "Google AI",
-    "domainId": "ai",
-    "crossDomainIds": [],
-    "description": "人工智能应用与研究动态",
-    "tags": ["AI", "Product", "Research"],
-    "feedUrl": "https://blog.google/technology/ai/rss/",
-    "siteUrl": "https://blog.google/technology/ai/",
-    "language": "en",
-    "iconKey": "grass",
-    "enabled": true,
-    "verificationStatus": "unverified",
-    "lastCheckedAt": null,
-    "publicInOpml": true
-  },
-  {
-    "id": "deepmind",
-    "name": "Google DeepMind",
-    "domainId": "ai",
-    "crossDomainIds": [],
-    "description": "模型、科学发现与智能体研究",
-    "tags": ["AI", "Research", "Agent"],
-    "feedUrl": "https://deepmind.google/blog/rss.xml",
-    "siteUrl": "https://deepmind.google/blog/",
-    "language": "en",
-    "iconKey": "enchanted-book",
-    "enabled": true,
-    "verificationStatus": "unverified",
-    "lastCheckedAt": null,
-    "publicInOpml": true
-  },
-  {
-    "id": "google-research",
-    "name": "Google Research",
-    "domainId": "ai",
-    "crossDomainIds": [],
-    "description": "算法、系统与机器学习研究",
-    "tags": ["ML", "Research", "Systems"],
-    "feedUrl": "https://research.google/blog/rss/",
-    "siteUrl": "https://research.google/blog/",
-    "language": "en",
-    "iconKey": "book",
-    "enabled": true,
-    "verificationStatus": "unverified",
-    "lastCheckedAt": null,
-    "publicInOpml": true
-  },
-  {
-    "id": "bair",
-    "name": "Berkeley AI Research",
-    "domainId": "ai",
-    "crossDomainIds": [],
-    "description": "伯克利 AI 研究团队的技术文章",
-    "tags": ["ML", "Robotics", "Research"],
-    "feedUrl": "https://bair.berkeley.edu/blog/feed.xml",
-    "siteUrl": "https://bair.berkeley.edu/blog/",
-    "language": "en",
-    "iconKey": "grass",
-    "enabled": true,
-    "verificationStatus": "unverified",
-    "lastCheckedAt": null,
-    "publicInOpml": true
-  },
-  {
-    "id": "apple-ml",
-    "name": "Apple Machine Learning Research",
-    "domainId": "ai",
-    "crossDomainIds": [],
-    "description": "机器学习研究与端侧模型",
-    "tags": ["ML", "Privacy", "Research"],
-    "feedUrl": "https://machinelearning.apple.com/rss.xml",
-    "siteUrl": "https://machinelearning.apple.com/",
-    "language": "en",
-    "iconKey": "ender-pearl",
-    "enabled": true,
-    "verificationStatus": "unverified",
-    "lastCheckedAt": null,
-    "publicInOpml": true
-  },
-  {
-    "id": "tencent-security",
-    "name": "腾讯安全应急响应中心",
-    "domainId": "security",
-    "crossDomainIds": [],
-    "description": "安全研究与漏洞响应；课程指定源",
-    "tags": ["Security", "Vulnerability", "中文"],
-    "feedUrl": "https://security.tencent.com/index.php/feed/blog/0",
-    "siteUrl": "https://security.tencent.com/",
+    "description": "AI 研究与模型应用动态，兼顾多模态、智能体和产业实践",
+    "tags": [
+      "AI",
+      "LLM",
+      "Agent"
+    ],
+    "feedUrl": "https://www.qbitai.com/feed",
+    "siteUrl": "https://www.qbitai.com/",
     "language": "zh-CN",
-    "iconKey": "shield",
+    "iconKey": "compass_16",
+    "iconLabel": "指南针",
+    "iconReason": "追踪 AI 新研究与模型应用的方向",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    },
+    "excludeTitleKeywords": [
+      "活动报名",
+      "十大亮点",
+      "开一家店",
+      "抢票",
+      "课程优惠"
+    ]
   },
   {
-    "id": "schneier",
-    "name": "Schneier on Security",
-    "domainId": "security",
+    "id": "arxiv-ai",
+    "name": "arXiv · Artificial Intelligence",
+    "domainId": "ai",
     "crossDomainIds": [],
-    "description": "密码学、安全政策与风险思考",
-    "tags": ["Security", "Privacy", "Crypto"],
-    "feedUrl": "https://www.schneier.com/feed/atom/",
-    "siteUrl": "https://www.schneier.com/",
+    "description": "每日 AI 研究预印本与原始摘要；预印本不等于已同行评审",
+    "tags": [
+      "Research",
+      "Agent",
+      "预印本"
+    ],
+    "feedUrl": "https://rss.arxiv.org/rss/cs.AI",
+    "siteUrl": "https://arxiv.org/list/cs.AI/recent",
     "language": "en",
-    "iconKey": "shield",
+    "iconKey": "enchanted_book",
+    "iconLabel": "附魔书",
+    "iconReason": "用知识之书承载不断更新的原始研究",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
-    "id": "krebs",
-    "name": "Krebs on Security",
-    "domainId": "security",
-    "crossDomainIds": [],
-    "description": "安全事件调查与网络犯罪报道",
-    "tags": ["Security", "Incident", "Threat"],
-    "feedUrl": "https://krebsonsecurity.com/feed/",
-    "siteUrl": "https://krebsonsecurity.com/",
-    "language": "en",
+    "id": "nvidia-cn",
+    "name": "NVIDIA 技术博客 · 中文",
+    "domainId": "ai",
+    "crossDomainIds": [
+      "software"
+    ],
+    "description": "官方中文 GPU 计算、推理优化、机器人和 AI 工程实践",
+    "tags": [
+      "GPU",
+      "推理",
+      "Robotics"
+    ],
+    "feedUrl": "https://developer.nvidia.cn/blog/feed/",
+    "siteUrl": "https://developer.nvidia.cn/blog/",
+    "language": "zh-CN",
     "iconKey": "redstone",
+    "iconLabel": "红石粉",
+    "iconReason": "GPU 计算与推理加速的底层动力",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
-    "id": "cisa",
-    "name": "CISA Cybersecurity Advisories",
-    "domainId": "security",
-    "crossDomainIds": [],
-    "description": "漏洞通告、缓解措施与联合安全建议",
-    "tags": ["CVE", "Defense", "Advisory"],
-    "feedUrl": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-    "siteUrl": "https://www.cisa.gov/",
+    "id": "microsoft-research",
+    "name": "Microsoft Research",
+    "domainId": "ai",
+    "crossDomainIds": [
+      "software"
+    ],
+    "description": "微软研究院的智能体、机器学习与科学研究原始资料",
+    "tags": [
+      "Research",
+      "Agent",
+      "ML"
+    ],
+    "feedUrl": "https://www.microsoft.com/en-us/research/feed/",
+    "siteUrl": "https://www.microsoft.com/en-us/research/",
     "language": "en",
-    "iconKey": "shield",
+    "iconKey": "ender_eye",
+    "iconLabel": "末影之眼",
+    "iconReason": "探索智能与科学研究的新方向",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
+  },
+  {
+    "id": "aws-ml",
+    "name": "AWS Machine Learning",
+    "domainId": "ai",
+    "crossDomainIds": [
+      "software"
+    ],
+    "description": "模型训练、生成式 AI、MLOps 和生产部署的官方技术实践",
+    "tags": [
+      "MLOps",
+      "GenAI",
+      "工程"
+    ],
+    "feedUrl": "https://aws.amazon.com/blogs/machine-learning/feed/",
+    "siteUrl": "https://aws.amazon.com/blogs/machine-learning/",
+    "language": "en",
+    "iconKey": "command_block_minecart",
+    "iconLabel": "命令方块矿车",
+    "iconReason": "承载自动化训练、部署与模型服务流水线",
+    "enabled": true,
+    "verificationStatus": "unverified",
+    "lastCheckedAt": null,
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
+  },
+  {
+    "id": "amazon-science",
+    "name": "Amazon Science",
+    "domainId": "ai",
+    "crossDomainIds": [],
+    "description": "亚马逊研究团队的机器学习、自动推理与机器人研究",
+    "tags": [
+      "Research",
+      "推理",
+      "Robotics"
+    ],
+    "feedUrl": "https://www.amazon.science/index.rss",
+    "siteUrl": "https://www.amazon.science/",
+    "language": "en",
+    "iconKey": "experience_bottle",
+    "iconLabel": "附魔之瓶",
+    "iconReason": "积累来自研究实验与科学方法的知识",
+    "enabled": true,
+    "verificationStatus": "unverified",
+    "lastCheckedAt": null,
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
+  },
+  {
+    "id": "ms-foundry",
+    "name": "Microsoft Foundry Blog",
+    "domainId": "ai",
+    "crossDomainIds": [
+      "software"
+    ],
+    "description": "模型服务、智能体工具链与 AI 应用工程的官方更新",
+    "tags": [
+      "Agent",
+      "Tools",
+      "AI工程"
+    ],
+    "feedUrl": "https://devblogs.microsoft.com/foundry/feed/",
+    "siteUrl": "https://devblogs.microsoft.com/foundry/",
+    "language": "en",
+    "iconKey": "repeater",
+    "iconLabel": "红石中继器",
+    "iconReason": "把模型、工具和智能体步骤连接成可控流程",
+    "enabled": true,
+    "verificationStatus": "unverified",
+    "lastCheckedAt": null,
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
+  },
+  {
+    "id": "unit42",
+    "name": "Unit 42 · Palo Alto Networks",
+    "domainId": "security",
+    "crossDomainIds": [
+      "ai"
+    ],
+    "description": "威胁狩猎、恶意软件与 AI 攻击活动的原始研究",
+    "tags": [
+      "Threat",
+      "Malware",
+      "AI安全"
+    ],
+    "feedUrl": "https://unit42.paloaltonetworks.com/feed/",
+    "siteUrl": "https://unit42.paloaltonetworks.com/",
+    "language": "en",
+    "iconKey": "spyglass",
+    "iconLabel": "望远镜",
+    "iconReason": "深入观察攻击活动与恶意软件的机制",
+    "enabled": true,
+    "verificationStatus": "unverified",
+    "lastCheckedAt": null,
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
     "id": "portswigger",
     "name": "PortSwigger Research",
     "domainId": "security",
     "crossDomainIds": [],
-    "description": "Web 安全研究、漏洞分析与防御方法",
-    "tags": ["Research", "Vulnerability", "Defense"],
+    "description": "Web 漏洞机制、浏览器边界与 AI 安全测试的研究资料",
+    "tags": [
+      "Web安全",
+      "Research",
+      "AI安全"
+    ],
     "feedUrl": "https://portswigger.net/blog/rss",
-    "siteUrl": "https://portswigger.net/blog/",
+    "siteUrl": "https://portswigger.net/research",
     "language": "en",
-    "iconKey": "compass",
+    "iconKey": "iron_sword",
+    "iconLabel": "铁剑",
+    "iconReason": "通过深入的漏洞研究理解攻击与防护边界",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
+  },
+  {
+    "id": "nsfocus",
+    "name": "绿盟科技技术博客",
+    "domainId": "security",
+    "crossDomainIds": [],
+    "description": "威胁研究、漏洞通告、网络防护与安全工程",
+    "tags": [
+      "Threat",
+      "漏洞",
+      "防护"
+    ],
+    "feedUrl": "https://blog.nsfocus.net/feed/",
+    "siteUrl": "https://blog.nsfocus.net/",
+    "language": "zh-CN",
+    "iconKey": "iron_chestplate",
+    "iconLabel": "铁胸甲",
+    "iconReason": "用分层防御保护系统与网络",
+    "enabled": true,
+    "verificationStatus": "unverified",
+    "lastCheckedAt": null,
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
+  },
+  {
+    "id": "anquanke",
+    "name": "安全客",
+    "domainId": "security",
+    "crossDomainIds": [
+      "ai"
+    ],
+    "description": "漏洞情报、AI 安全事件和攻防技术资讯",
+    "tags": [
+      "CVE",
+      "AI安全",
+      "情报"
+    ],
+    "feedUrl": "https://api.anquanke.com/data/v1/rss",
+    "siteUrl": "https://www.anquanke.com/",
+    "language": "zh-CN",
+    "iconKey": "recovery_compass_16",
+    "iconLabel": "追溯指针",
+    "iconReason": "从安全事件线索追溯风险与处置方向",
+    "enabled": true,
+    "verificationStatus": "unverified",
+    "lastCheckedAt": null,
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
     "id": "talos",
     "name": "Cisco Talos Intelligence",
     "domainId": "security",
     "crossDomainIds": [],
-    "description": "威胁情报与安全响应研究",
-    "tags": ["Threat", "Incident", "Research"],
+    "description": "恶意软件、威胁活动、漏洞研究与防御情报",
+    "tags": [
+      "Threat",
+      "Malware",
+      "Detection"
+    ],
     "feedUrl": "https://blog.talosintelligence.com/rss/",
     "siteUrl": "https://blog.talosintelligence.com/",
     "language": "en",
-    "iconKey": "shield",
+    "iconKey": "spectral_arrow",
+    "iconLabel": "光灵箭",
+    "iconReason": "标记并追踪威胁活动与攻击线索",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
     "id": "microsoft-security",
     "name": "Microsoft Security Blog",
     "domainId": "security",
-    "crossDomainIds": [],
-    "description": "安全产品、威胁分析与防御实践",
-    "tags": ["Security", "Identity", "Defense"],
+    "crossDomainIds": [
+      "ai"
+    ],
+    "description": "身份防护、威胁研究、AI 安全与事件响应",
+    "tags": [
+      "Identity",
+      "Threat",
+      "AI安全"
+    ],
     "feedUrl": "https://www.microsoft.com/en-us/security/blog/feed/",
     "siteUrl": "https://www.microsoft.com/en-us/security/blog/",
     "language": "en",
-    "iconKey": "redstone",
+    "iconKey": "totem_of_undying",
+    "iconLabel": "不死图腾",
+    "iconReason": "身份保护、事件响应与系统恢复",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
-    "id": "github",
-    "name": "GitHub Engineering",
-    "domainId": "software",
+    "id": "securelist",
+    "name": "Securelist · Kaspersky",
+    "domainId": "security",
     "crossDomainIds": [],
-    "description": "GitHub 官方工程实践、性能与架构文章",
-    "tags": ["GitHub", "Dev", "OpenSource"],
-    "feedUrl": "https://github.blog/engineering/feed/",
-    "siteUrl": "https://github.blog/engineering/",
+    "description": "卡巴斯基团队的恶意软件分析与威胁研究",
+    "tags": [
+      "Malware",
+      "Research",
+      "Threat"
+    ],
+    "feedUrl": "https://securelist.com/feed/",
+    "siteUrl": "https://securelist.com/",
     "language": "en",
-    "iconKey": "crafting-table",
+    "iconKey": "spider_eye",
+    "iconLabel": "蜘蛛眼",
+    "iconReason": "识别恶意样本与隐藏的威胁机制",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
-    "id": "meta-engineering",
-    "name": "Engineering at Meta",
+    "id": "meituan",
+    "name": "美团技术团队",
     "domainId": "software",
-    "crossDomainIds": [],
-    "description": "大型系统、基础设施与软件架构",
-    "tags": ["Architecture", "Systems", "Engineering"],
-    "feedUrl": "https://engineering.fb.com/feed/",
-    "siteUrl": "https://engineering.fb.com/",
-    "language": "en",
-    "iconKey": "crafting-table",
+    "crossDomainIds": [
+      "ai"
+    ],
+    "description": "高并发、基础设施、推荐系统与 AI 生产工程实践",
+    "tags": [
+      "架构",
+      "系统",
+      "AI工程"
+    ],
+    "feedUrl": "https://tech.meituan.com/rss.xml",
+    "siteUrl": "https://tech.meituan.com/",
+    "language": "zh-CN",
+    "iconKey": "iron_pickaxe",
+    "iconLabel": "铁镐",
+    "iconReason": "面向真实业务打磨系统与工程基础",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
+  },
+  {
+    "id": "infoq",
+    "name": "InfoQ 中文",
+    "domainId": "software",
+    "crossDomainIds": [
+      "ai"
+    ],
+    "description": "软件架构、开发工具、云原生和 AI 工程的中文报道",
+    "tags": [
+      "架构",
+      "云原生",
+      "AI工程"
+    ],
+    "feedUrl": "https://www.infoq.cn/feed",
+    "siteUrl": "https://www.infoq.cn/",
+    "language": "zh-CN",
+    "iconKey": "writable_book",
+    "iconLabel": "书与笔",
+    "iconReason": "记录架构经验、工程实践与技术演进",
+    "enabled": true,
+    "verificationStatus": "unverified",
+    "lastCheckedAt": null,
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
+  },
+  {
+    "id": "pingcap",
+    "name": "PingCAP Engineering",
+    "domainId": "software",
+    "crossDomainIds": [
+      "ai"
+    ],
+    "description": "分布式数据库、SQL、数据平台与系统工程实践",
+    "tags": [
+      "数据库",
+      "SQL",
+      "Distributed"
+    ],
+    "feedUrl": "https://www.pingcap.com/blog/feed/",
+    "siteUrl": "https://www.pingcap.com/blog/",
+    "language": "en",
+    "iconKey": "chest_minecart",
+    "iconLabel": "运输矿车",
+    "iconReason": "数据存储、分布式流转与可靠交付",
+    "enabled": true,
+    "verificationStatus": "unverified",
+    "lastCheckedAt": null,
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
     "id": "cloudflare",
-    "name": "Cloudflare Blog",
+    "name": "Cloudflare Engineering",
     "domainId": "software",
-    "crossDomainIds": ["security"],
-    "description": "网络基础设施、性能与可靠性工程",
-    "tags": ["Network", "Architecture", "Security"],
+    "crossDomainIds": [
+      "security"
+    ],
+    "description": "边缘计算、网络协议、数据系统与性能工程",
+    "tags": [
+      "Edge",
+      "Network",
+      "性能"
+    ],
     "feedUrl": "https://blog.cloudflare.com/rss/",
     "siteUrl": "https://blog.cloudflare.com/",
     "language": "en",
-    "iconKey": "redstone",
+    "iconKey": "elytra",
+    "iconLabel": "鞘翅",
+    "iconReason": "连接全球边缘网络并让请求高效抵达",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
-    "id": "mdn",
-    "name": "MDN Web Docs Blog",
+    "id": "go-blog",
+    "name": "Go 官方博客",
     "domainId": "software",
-    "crossDomainIds": [],
-    "description": "Web 标准、浏览器与前端实践",
-    "tags": ["Frontend", "Web", "Standards"],
-    "feedUrl": "https://developer.mozilla.org/en-US/blog/rss.xml",
-    "siteUrl": "https://developer.mozilla.org/en-US/blog/",
+    "crossDomainIds": [
+      "ai"
+    ],
+    "description": "Go 官方的语言演进、网络性能、并发与工程工具实践",
+    "tags": [
+      "Go",
+      "Backend",
+      "Performance",
+      "Engineering"
+    ],
+    "feedUrl": "https://go.dev/blog/feed.atom",
+    "siteUrl": "https://go.dev/blog/",
     "language": "en",
-    "iconKey": "book",
+    "iconKey": "diamond_pickaxe",
+    "iconLabel": "钻石镐",
+    "iconReason": "钻石镐象征深入运行时与性能工具，持续打磨工程基础。",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
-    "id": "microsoft-engineering",
-    "name": "Engineering at Microsoft",
+    "id": "spring",
+    "name": "Spring Engineering",
     "domainId": "software",
     "crossDomainIds": [],
-    "description": "软件工程方法与开发实践",
-    "tags": ["Testing", "Architecture", "Engineering"],
-    "feedUrl": "https://devblogs.microsoft.com/engineering-at-microsoft/feed/",
-    "siteUrl": "https://devblogs.microsoft.com/engineering-at-microsoft/",
+    "description": "Spring、Java 后端、依赖管理与应用工程的官方更新",
+    "tags": [
+      "Java",
+      "Backend",
+      "Spring"
+    ],
+    "feedUrl": "https://spring.io/blog.atom",
+    "siteUrl": "https://spring.io/blog/",
     "language": "en",
-    "iconKey": "crafting-table",
+    "iconKey": "brewing_stand",
+    "iconLabel": "酿造台",
+    "iconReason": "通过容器组织组件、配置与应用生命周期",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   },
   {
-    "id": "jetbrains",
-    "name": "JetBrains Blog",
+    "id": "rust",
+    "name": "Rust Blog",
     "domainId": "software",
-    "crossDomainIds": [],
-    "description": "语言、IDE 与开发工具更新",
-    "tags": ["Code", "Tools", "Engineering"],
-    "feedUrl": "https://blog.jetbrains.com/feed/",
-    "siteUrl": "https://blog.jetbrains.com/",
+    "crossDomainIds": [
+      "security"
+    ],
+    "description": "Rust 语言、工具链、内存安全和系统开发的官方动态",
+    "tags": [
+      "Rust",
+      "Systems",
+      "内存安全"
+    ],
+    "feedUrl": "https://blog.rust-lang.org/feed.xml",
+    "siteUrl": "https://blog.rust-lang.org/",
     "language": "en",
-    "iconKey": "book",
+    "iconKey": "iron_ingot",
+    "iconLabel": "铁锭",
+    "iconReason": "构建可靠系统软件的坚实基础材料",
     "enabled": true,
     "verificationStatus": "unverified",
     "lastCheckedAt": null,
-    "publicInOpml": true
-  },
-  {
-    "id": "martin-fowler",
-    "name": "Martin Fowler",
-    "domainId": "software",
-    "crossDomainIds": [],
-    "description": "架构、重构与软件交付方法",
-    "tags": ["Architecture", "Testing", "Refactoring"],
-    "feedUrl": "https://martinfowler.com/feed.atom",
-    "siteUrl": "https://martinfowler.com/",
-    "language": "en",
-    "iconKey": "enchanted-book",
-    "enabled": true,
-    "verificationStatus": "unverified",
-    "lastCheckedAt": null,
-    "publicInOpml": true
+    "publicInOpml": true,
+    "accessibility": {
+      "selection": "mainland-oriented",
+      "regionalStatus": "not-region-tested",
+      "basis": "来源方直接提供 RSS；Feed 与原文分别抽查，不冒充大陆多运营商实测"
+    }
   }
 ]

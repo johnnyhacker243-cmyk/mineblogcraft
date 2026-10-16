@@ -1,153 +1,153 @@
 {
-  "runId": "2026-10-14T14:35:25.889Z",
+  "runId": "2026-10-16T11:58:12.680Z",
   "mode": "network",
   "sources": [
     {
-      "id": "huggingface",
+      "id": "qbitai",
       "status": "online",
       "error": null,
-      "elapsedMs": 928,
+      "elapsedMs": 4057,
+      "itemCount": 10
+    },
+    {
+      "id": "arxiv-ai",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 2635,
       "itemCount": 30
     },
     {
-      "id": "openai",
+      "id": "nvidia-cn",
       "status": "online",
       "error": null,
-      "elapsedMs": 880,
-      "itemCount": 30
+      "elapsedMs": 3039,
+      "itemCount": 15
     },
     {
-      "id": "google-ai",
+      "id": "microsoft-research",
       "status": "online",
       "error": null,
-      "elapsedMs": 935,
+      "elapsedMs": 3307,
+      "itemCount": 10
+    },
+    {
+      "id": "aws-ml",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1643,
       "itemCount": 20
     },
     {
-      "id": "deepmind",
+      "id": "amazon-science",
       "status": "online",
       "error": null,
-      "elapsedMs": 760,
-      "itemCount": 30
+      "elapsedMs": 1198,
+      "itemCount": 25
     },
     {
-      "id": "google-research",
+      "id": "ms-foundry",
       "status": "online",
       "error": null,
-      "elapsedMs": 968,
-      "itemCount": 30
-    },
-    {
-      "id": "bair",
-      "status": "online",
-      "error": null,
-      "elapsedMs": 1340,
+      "elapsedMs": 1400,
       "itemCount": 10
     },
     {
-      "id": "apple-ml",
+      "id": "unit42",
       "status": "online",
       "error": null,
-      "elapsedMs": 963,
-      "itemCount": 10
-    },
-    {
-      "id": "tencent-security",
-      "status": "online",
-      "error": null,
-      "elapsedMs": 2100,
-      "itemCount": 20
-    },
-    {
-      "id": "schneier",
-      "status": "online",
-      "error": null,
-      "elapsedMs": 728,
-      "itemCount": 10
-    },
-    {
-      "id": "krebs",
-      "status": "online",
-      "error": null,
-      "elapsedMs": 1176,
-      "itemCount": 10
-    },
-    {
-      "id": "cisa",
-      "status": "online",
-      "error": null,
-      "elapsedMs": 1241,
-      "itemCount": 30
+      "elapsedMs": 1297,
+      "itemCount": 15
     },
     {
       "id": "portswigger",
       "status": "online",
       "error": null,
-      "elapsedMs": 1144,
+      "elapsedMs": 1569,
       "itemCount": 30
+    },
+    {
+      "id": "nsfocus",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 2091,
+      "itemCount": 10
+    },
+    {
+      "id": "anquanke",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 2284,
+      "itemCount": 20
     },
     {
       "id": "talos",
       "status": "online",
       "error": null,
-      "elapsedMs": 620,
+      "elapsedMs": 601,
       "itemCount": 15
     },
     {
       "id": "microsoft-security",
       "status": "online",
       "error": null,
-      "elapsedMs": 1128,
+      "elapsedMs": 178,
       "itemCount": 10
     },
     {
-      "id": "github",
+      "id": "securelist",
       "status": "online",
       "error": null,
-      "elapsedMs": 1086,
+      "elapsedMs": 2724,
       "itemCount": 10
     },
     {
-      "id": "meta-engineering",
+      "id": "meituan",
       "status": "online",
       "error": null,
-      "elapsedMs": 728,
-      "itemCount": 9
+      "elapsedMs": 6689,
+      "itemCount": 10
+    },
+    {
+      "id": "infoq",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1796,
+      "itemCount": 20
+    },
+    {
+      "id": "pingcap",
+      "status": "online",
+      "error": null,
+      "elapsedMs": 1343,
+      "itemCount": 10
     },
     {
       "id": "cloudflare",
       "status": "online",
       "error": null,
-      "elapsedMs": 603,
+      "elapsedMs": 1015,
       "itemCount": 20
     },
     {
-      "id": "mdn",
+      "id": "go-blog",
       "status": "online",
       "error": null,
-      "elapsedMs": 774,
-      "itemCount": 30
-    },
-    {
-      "id": "microsoft-engineering",
-      "status": "online",
-      "error": null,
-      "elapsedMs": 1029,
+      "elapsedMs": 1142,
       "itemCount": 10
     },
     {
-      "id": "jetbrains",
+      "id": "spring",
       "status": "online",
       "error": null,
-      "elapsedMs": 1375,
-      "itemCount": 12
+      "elapsedMs": 990,
+      "itemCount": 4
     },
     {
-      "id": "martin-fowler",
+      "id": "rust",
       "status": "online",
       "error": null,
-      "elapsedMs": 1672,
-      "itemCount": 30
+      "elapsedMs": 455,
+      "itemCount": 10
     }
   ]
 }

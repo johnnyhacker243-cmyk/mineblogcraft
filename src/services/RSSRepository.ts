@@ -13,7 +13,7 @@ export class StaticRSSRepository implements RSSRepository {
       icon: source.iconKey,
       category: source.domainId,
       sourceUrl: source.siteUrl,
-      lastUpdate: (source.lastSuccessAt ?? "").slice(0, 10),
+      lastUpdate: (source.latestPublishedAt ?? "").slice(0, 10),
       tags: [...source.tags],
     }));
   }

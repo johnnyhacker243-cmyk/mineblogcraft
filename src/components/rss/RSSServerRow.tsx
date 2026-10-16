@@ -39,7 +39,10 @@ export function RSSServerRow({
           color="#808080"
         />
       </div>
-      <div className="rss-server-status">
+      <div
+        className="rss-server-status"
+        title={`文章更新：${server.lastUpdate || "来源未提供日期"}；最近抓取：${server.lastSuccessAt ?? "尚未成功"}`}
+      >
         <InventoryText
           text={server.status.toUpperCase()}
           color={server.status === "online" ? "#55ff55" : "#ffaa00"}
@@ -48,7 +51,7 @@ export function RSSServerRow({
           text={
             server.lastUpdate
               ? server.lastUpdate.replaceAll("-", "/")
-              : "未验证"
+              : "日期未提供"
           }
           color="#aaa"
         />

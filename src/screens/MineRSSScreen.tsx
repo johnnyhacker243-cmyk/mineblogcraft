@@ -229,6 +229,13 @@ export function MineRSSScreen({ back }: { back: () => void }) {
                     color="#ffaa00"
                   />
                 )}
+                {activeSource.articleAccess && (
+                  <BlogText
+                    text={`原文抽查 ${activeSource.articleAccess.passed}/${activeSource.articleAccess.sampled} 可达 · ${activeSource.articleAccess.checkedAt.slice(0, 10)} · 地区网络可能不同`}
+                    width={420}
+                    color="#aaa"
+                  />
+                )}
                 <div>
                   <a
                     href={activeSource.feedUrl}

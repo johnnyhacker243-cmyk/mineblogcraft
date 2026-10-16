@@ -1,0 +1,107 @@
+{
+  "compass_16": {
+    "label": "指南针",
+    "reason": "追踪 AI 新研究与模型应用的方向",
+    "source": "assets/minecraft/textures/item/compass_16.png"
+  },
+  "enchanted_book": {
+    "label": "附魔书",
+    "reason": "用知识之书承载不断更新的原始研究",
+    "source": "assets/minecraft/textures/item/enchanted_book.png"
+  },
+  "redstone": {
+    "label": "红石粉",
+    "reason": "GPU 计算与推理加速的底层动力",
+    "source": "assets/minecraft/textures/item/redstone.png"
+  },
+  "ender_eye": {
+    "label": "末影之眼",
+    "reason": "探索智能与科学研究的新方向",
+    "source": "assets/minecraft/textures/item/ender_eye.png"
+  },
+  "command_block_minecart": {
+    "label": "命令方块矿车",
+    "reason": "承载自动化训练、部署与模型服务流水线",
+    "source": "assets/minecraft/textures/item/command_block_minecart.png"
+  },
+  "experience_bottle": {
+    "label": "附魔之瓶",
+    "reason": "积累来自研究实验与科学方法的知识",
+    "source": "assets/minecraft/textures/item/experience_bottle.png"
+  },
+  "repeater": {
+    "label": "红石中继器",
+    "reason": "把模型、工具和智能体步骤连接成可控流程",
+    "source": "assets/minecraft/textures/item/repeater.png"
+  },
+  "spyglass": {
+    "label": "望远镜",
+    "reason": "深入观察攻击活动与恶意软件的机制",
+    "source": "assets/minecraft/textures/item/spyglass.png"
+  },
+  "iron_sword": {
+    "label": "铁剑",
+    "reason": "通过深入的漏洞研究理解攻击与防护边界",
+    "source": "assets/minecraft/textures/item/iron_sword.png"
+  },
+  "iron_chestplate": {
+    "label": "铁胸甲",
+    "reason": "用分层防御保护系统与网络",
+    "source": "assets/minecraft/textures/item/iron_chestplate.png"
+  },
+  "recovery_compass_16": {
+    "label": "追溯指针",
+    "reason": "从安全事件线索追溯风险与处置方向",
+    "source": "assets/minecraft/textures/item/recovery_compass_16.png"
+  },
+  "spectral_arrow": {
+    "label": "光灵箭",
+    "reason": "标记并追踪威胁活动与攻击线索",
+    "source": "assets/minecraft/textures/item/spectral_arrow.png"
+  },
+  "totem_of_undying": {
+    "label": "不死图腾",
+    "reason": "身份保护、事件响应与系统恢复",
+    "source": "assets/minecraft/textures/item/totem_of_undying.png"
+  },
+  "spider_eye": {
+    "label": "蜘蛛眼",
+    "reason": "识别恶意样本与隐藏的威胁机制",
+    "source": "assets/minecraft/textures/item/spider_eye.png"
+  },
+  "iron_pickaxe": {
+    "label": "铁镐",
+    "reason": "面向真实业务打磨系统与工程基础",
+    "source": "assets/minecraft/textures/item/iron_pickaxe.png"
+  },
+  "writable_book": {
+    "label": "书与笔",
+    "reason": "记录架构经验、工程实践与技术演进",
+    "source": "assets/minecraft/textures/item/writable_book.png"
+  },
+  "chest_minecart": {
+    "label": "运输矿车",
+    "reason": "数据存储、分布式流转与可靠交付",
+    "source": "assets/minecraft/textures/item/chest_minecart.png"
+  },
+  "elytra": {
+    "label": "鞘翅",
+    "reason": "连接全球边缘网络并让请求高效抵达",
+    "source": "assets/minecraft/textures/item/elytra.png"
+  },
+  "diamond_pickaxe": {
+    "label": "钻石镐",
+    "reason": "钻石镐象征深入运行时与性能工具，持续打磨工程基础。",
+    "source": "assets/minecraft/textures/item/diamond_pickaxe.png"
+  },
+  "brewing_stand": {
+    "label": "酿造台",
+    "reason": "通过容器组织组件、配置与应用生命周期",
+    "source": "assets/minecraft/textures/item/brewing_stand.png"
+  },
+  "iron_ingot": {
+    "label": "铁锭",
+    "reason": "构建可靠系统软件的坚实基础材料",
+    "source": "assets/minecraft/textures/item/iron_ingot.png"
+  }
+}

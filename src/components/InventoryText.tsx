@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { inventoryAssets } from "../config/profile-config";
+import { revision } from "../config/inventory-font-version.json";
 type Font = {
   image: HTMLImageElement;
   glyphs: Record<string, [number, number, number]>;
@@ -7,7 +8,7 @@ type Font = {
 let font: Promise<Font> | undefined;
 function loadFont() {
   return (font ??= Promise.all([
-    fetch(inventoryAssets + "font.json").then((r) => {
+    fetch(inventoryAssets + `font.json?v=${revision}`).then((r) => {
       if (!r.ok) throw Error("Missing inventory font");
       return r.json();
     }),
@@ -15,7 +16,7 @@ function loadFont() {
       const img = new Image();
       img.onload = () => resolve(img);
       img.onerror = reject;
-      img.src = inventoryAssets + "unifont.png";
+      img.src = inventoryAssets + `unifont.png?v=${revision}`;
     }),
   ]).then(([glyphs, image]) => ({ glyphs, image })));
 }

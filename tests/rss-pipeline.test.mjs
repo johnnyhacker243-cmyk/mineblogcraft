@@ -99,3 +99,27 @@ test("Inert code samples in CDATA do not count as active XML declarations", () =
     '<rss version="2.0"><channel><item><title>XML examples</title><link>https://example.org/xml</link><description><![CDATA[<!DOCTYPE html><p>Example</p>]]></description></item></channel></rss>';
   assert.equal(parseFeed(xml, source).items[0].description, "Example");
 });
+
+test("RSS GUID permalinks support native feeds without inventing URLs from opaque IDs", () => {
+  const item = (guid) =>
+    `<rss version="2.0"><channel><item><title>安全研究</title>${guid}</item></channel></rss>`;
+  assert.equal(
+    parseFeed(item("<guid>https://example.org/research</guid>"), source)
+      .items[0].link,
+    "https://example.org/research",
+  );
+  assert.equal(
+    parseFeed(
+      item('<guid isPermaLink="true">https://example.org/research</guid>'),
+      source,
+    ).items.length,
+    1,
+  );
+  for (const guid of [
+    "<guid>opaque-id</guid>",
+    '<guid isPermaLink="false">https://example.org/id</guid>',
+    "<guid>javascript:alert(1)</guid>",
+    "<guid>https://u:p@example.org/private</guid>",
+  ])
+    assert.equal(parseFeed(item(guid), source).items.length, 0);
+});

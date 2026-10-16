@@ -5,10 +5,15 @@ import { validateSources, safeLink, parseFeed } from "./rss-core.mjs";
 const root = new URL("../", import.meta.url);
 const read = async (p) => JSON.parse(await readFile(new URL(p, root), "utf8"));
 const sources = await read("config/rssSources.json");
+const icons = await read("config/rssIcons.json");
 validateSources(sources);
 assert.equal(sources.length, 21);
 for (const d of ["ai", "security", "software"])
   assert.equal(sources.filter((s) => s.domainId === d).length, 7);
+for (const source of sources) {
+  assert.ok(icons[source.iconKey], `Missing original item icon: ${source.id}`);
+  assert.equal(icons[source.iconKey].label, source.iconLabel);
+}
 const snapshots = await read("public/data/rss/sources.json"),
   items = await read("public/data/rss/items.json");
 const ids = new Set(),
@@ -41,7 +46,7 @@ assert.equal(XMLValidator.validate(opml), true);
 assert.ok(new XMLParser().parse(opml).opml.body);
 const rows = snapshots.map(
   (s) =>
-    `| ${s.name} | ${s.domainId} | ${s.status} | ${items.filter((i) => i.sourceId === s.id).length} | ${s.error ?? "—"} |`,
+    `| ${s.name} | ${s.domainId} | ${s.status} | ${items.filter((i) => i.sourceId === s.id).length} | ${s.articleAccess ? `${s.articleAccess.passed}/${s.articleAccess.sampled}` : "未抽查"} | ${s.latestPublishedAt?.slice(0, 10) ?? "未提供日期"} | ${s.error ?? "—"} |`,
 );
 await writeFile(
   new URL("VALIDATION_REPORT.md", root),
@@ -50,7 +55,7 @@ await writeFile(
     .sort()
     .at(
       -1,
-    )}\n\n21 个来源（每方向 7 个），${items.length} 条摘要；配置、唯一 ID、引用、URL、日期、RSS 发布 XML、OPML 全部通过。\n\nONLINE 是上次抓取成功，非实时监控；抓取失败保留旧缓存。未验证源不虚构文章或更新日期。\n\n| 来源 | 分类 | 快照状态 | 条目 | 失败原因 |\n|---|---|---|---:|---|\n${rows.join("\n")}\n\nBlog 21 篇技术编辑草稿另加 1 篇原有文章；Research 33 篇外部文献另加 1 篇原有示例；Wiki 34 个概念节点。新博客未经作者审阅，不进入 feed.xml。\n`,
+    )}\n\n21 个来源（每方向 7 个），${items.length} 条摘要；配置、唯一 ID、引用、URL、日期、RSS 发布 XML、OPML 与原版物品映射全部通过。\n\nONLINE 是上次抓取成功，非实时监控；抓取失败保留旧缓存。原文为当前网络每源最多两篇抽查，不冒充中国大陆各运营商实测，也不保证地区或时段可达性。未知日期不以抓取日期代替。详细结果见 public/data/rss/access-report.json。\n\n| 来源 | 分类 | 快照状态 | 条目 | 原文抽查通过 | 最近文章 | 失败原因 |\n|---|---|---|---:|---|---|---|\n${rows.join("\n")}\n\nBlog 21 篇技术编辑草稿另加 1 篇原有文章；Research 33 篇外部文献另加 1 篇原有示例；Wiki 34 个概念节点。新博客未经作者审阅，不进入 feed.xml。\n`,
 );
 console.log(
   `Validated ${sources.length} sources / ${items.length} entries, feed.xml and OPML`,

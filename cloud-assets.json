@@ -53,6 +53,111 @@
       "sha256": "d7502466fc29162398526f6aba03fb50b3930a12ba72894586dd9957e0b6dd87"
     },
     {
+      "path": "assets/inventory/blog-icons/amethyst_shard.png",
+      "size": 184,
+      "sha256": "24fa75f6b75202d890019ec7a901d525918cfacd3e8c0e6cb0580c7b7933b363"
+    },
+    {
+      "path": "assets/inventory/blog-icons/blaze_powder.png",
+      "size": 278,
+      "sha256": "be1d8c93bbff955c94c194bb944b200d884d30fcc7e221fff739881d6ed5eca2"
+    },
+    {
+      "path": "assets/inventory/blog-icons/bundle.png",
+      "size": 232,
+      "sha256": "357b6eb5f03aceb375157a3bc371b99f92c3bc743e87c538ddccaebc28460315"
+    },
+    {
+      "path": "assets/inventory/blog-icons/chest_minecart.png",
+      "size": 265,
+      "sha256": "2ed9c4cf90de90086a7aa5376f74087c050ab2713c500c73f721b60a5c7da7ab"
+    },
+    {
+      "path": "assets/inventory/blog-icons/clock_00.png",
+      "size": 252,
+      "sha256": "52652043a299f6d27da9229f1ccadd64e94018e6126c0bb2cbdf283bec114d87"
+    },
+    {
+      "path": "assets/inventory/blog-icons/comparator.png",
+      "size": 189,
+      "sha256": "5451596b2a880a8e37777c2bd9f7080049c4c15b8fed9dca2e9e1acb87522e76"
+    },
+    {
+      "path": "assets/inventory/blog-icons/compass_16.png",
+      "size": 212,
+      "sha256": "0b14eabd82b84a1273057baac58cff50279329e15260b16b711e5a49ffdc56a4"
+    },
+    {
+      "path": "assets/inventory/blog-icons/ender_pearl.png",
+      "size": 206,
+      "sha256": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a"
+    },
+    {
+      "path": "assets/inventory/blog-icons/fishing_rod.png",
+      "size": 184,
+      "sha256": "eaf66dce8f2dfccdc95c8b2c8df7d715bb4a337dfa250a227a9eb58b73b0602c"
+    },
+    {
+      "path": "assets/inventory/blog-icons/iron_chestplate.png",
+      "size": 197,
+      "sha256": "028d1a738128c5622471a9d1b94f00b49a696e7c4fac3dfccd07272e50021f71"
+    },
+    {
+      "path": "assets/inventory/blog-icons/iron_sword.png",
+      "size": 196,
+      "sha256": "ed1fa2f83955583e70a19791455d13989e8bd93b1d7240e775a57141022bed6b"
+    },
+    {
+      "path": "assets/inventory/blog-icons/lapis_lazuli.png",
+      "size": 188,
+      "sha256": "261b626e66fc29d6a28990ac36c74a04afa2e1d03daff00c5f3b3e5a79463a14"
+    },
+    {
+      "path": "assets/inventory/blog-icons/lead.png",
+      "size": 187,
+      "sha256": "8970ef231b71a4aec68b56d77d4bab27d69fdeb59e4a5faa6c837c3ccc9f87a5"
+    },
+    {
+      "path": "assets/inventory/blog-icons/name_tag.png",
+      "size": 209,
+      "sha256": "320018673e5a4ed4246aa0599439a97c91df74dcb966d904e83b3589f496b0d9"
+    },
+    {
+      "path": "assets/inventory/blog-icons/redstone.png",
+      "size": 179,
+      "sha256": "6d0e6a1fd54142cd3de649e1100c428733512b322a0b0a530f62eae9f86881ec"
+    },
+    {
+      "path": "assets/inventory/blog-icons/repeater.png",
+      "size": 188,
+      "sha256": "8159510efca23ee914da39cf35d1c3288fa7236a5bed23356358341044675dd7"
+    },
+    {
+      "path": "assets/inventory/blog-icons/spectral_arrow.png",
+      "size": 140,
+      "sha256": "53810b7511fea4f4e317bb0a3f146863edefc8fa1f1812afd3801c0863eac21f"
+    },
+    {
+      "path": "assets/inventory/blog-icons/spyglass.png",
+      "size": 211,
+      "sha256": "b09e9b9046db1935cd9c35a2e4e3b7763485ec3effbc5077ebeaec1c28513b43"
+    },
+    {
+      "path": "assets/inventory/blog-icons/totem_of_undying.png",
+      "size": 214,
+      "sha256": "2ee3ccdd17f0b9acb13bac37b3b9d4db6eac72aa350a2b1ab9cc587e2f02514a"
+    },
+    {
+      "path": "assets/inventory/blog-icons/writable_book.png",
+      "size": 247,
+      "sha256": "181b670aafb03287849957ee882863c3924a2aaa826f3f44ab94bea906c54228"
+    },
+    {
+      "path": "assets/inventory/blog-icons/written_book.png",
+      "size": 211,
+      "sha256": "fd6a75bb4c32a9c291cb3a1b72aab5193c0480359723f70115a9c9930c2d0c26"
+    },
+    {
       "path": "assets/inventory/blue-ice.png",
       "size": 189,
       "sha256": "7170dfc70083df07ee61cd65aeaeb7add46c9d11397e401babc2a36d82599b07"
@@ -189,8 +294,8 @@
     },
     {
       "path": "assets/inventory/font.json",
-      "size": 18214,
-      "sha256": "bd59bd1662b37bda1e4bdec616e891c30577cdc8fb9f0601636a5a87560bf6ca"
+      "size": 36219,
+      "sha256": "46a3ed308bedc2ff46b80c7ef4d136f2c1e4e585c0233e489b7f9b5e3f8357b5"
     },
     {
       "path": "assets/inventory/food-empty.png",
@@ -343,6 +448,111 @@
       "sha256": "8159510efca23ee914da39cf35d1c3288fa7236a5bed23356358341044675dd7"
     },
     {
+      "path": "assets/inventory/rss-icons/brewing_stand.png",
+      "size": 194,
+      "sha256": "2b7c980c7fc34e8acf6702e2a7eaf1a8f7605a30c9a38a67992df0fe243e3950"
+    },
+    {
+      "path": "assets/inventory/rss-icons/chest_minecart.png",
+      "size": 265,
+      "sha256": "2ed9c4cf90de90086a7aa5376f74087c050ab2713c500c73f721b60a5c7da7ab"
+    },
+    {
+      "path": "assets/inventory/rss-icons/command_block_minecart.png",
+      "size": 265,
+      "sha256": "733066e0b0ad92950bb9a89b417f2618e18f8a245383ccf50b14ddd06b3f0b7b"
+    },
+    {
+      "path": "assets/inventory/rss-icons/compass_16.png",
+      "size": 212,
+      "sha256": "0b14eabd82b84a1273057baac58cff50279329e15260b16b711e5a49ffdc56a4"
+    },
+    {
+      "path": "assets/inventory/rss-icons/diamond_pickaxe.png",
+      "size": 182,
+      "sha256": "7672c209d0c66c43d297b3d04513c9e789d03f5ea6ff1e564a4dbc1fd78a5c88"
+    },
+    {
+      "path": "assets/inventory/rss-icons/elytra.png",
+      "size": 208,
+      "sha256": "53e5a899bf9e52733b15ef7a7719a045666fb975db77f0e435c411603eb15ded"
+    },
+    {
+      "path": "assets/inventory/rss-icons/enchanted_book.png",
+      "size": 251,
+      "sha256": "f96da147fcf6f373df00ab5181043ea0c76af4ba7025f43f377f678ac466fb43"
+    },
+    {
+      "path": "assets/inventory/rss-icons/ender_eye.png",
+      "size": 214,
+      "sha256": "cb9003416a29bdd869a494467a01dba3403b221b88fe3e0a0dc41906d5d49afa"
+    },
+    {
+      "path": "assets/inventory/rss-icons/experience_bottle.png",
+      "size": 240,
+      "sha256": "bf824bc91dc620010fed8c7ae9da9f91d4ce7910317b1a056029fd2dad4b3a8c"
+    },
+    {
+      "path": "assets/inventory/rss-icons/iron_chestplate.png",
+      "size": 197,
+      "sha256": "028d1a738128c5622471a9d1b94f00b49a696e7c4fac3dfccd07272e50021f71"
+    },
+    {
+      "path": "assets/inventory/rss-icons/iron_ingot.png",
+      "size": 189,
+      "sha256": "4625aa2c32c74bd6796c7ba8e7ee6300db8d2f24fb38c9d9324a63b262a44391"
+    },
+    {
+      "path": "assets/inventory/rss-icons/iron_pickaxe.png",
+      "size": 182,
+      "sha256": "b211a9b920d8f22ce5451780855155644d14ca7b85ab16d31f9c0b572cdda7ee"
+    },
+    {
+      "path": "assets/inventory/rss-icons/iron_sword.png",
+      "size": 196,
+      "sha256": "ed1fa2f83955583e70a19791455d13989e8bd93b1d7240e775a57141022bed6b"
+    },
+    {
+      "path": "assets/inventory/rss-icons/recovery_compass_16.png",
+      "size": 254,
+      "sha256": "bbd324b55c2eed05e8f1aa5a33907990e58743b3ba205e01bd1f3e117d2944a6"
+    },
+    {
+      "path": "assets/inventory/rss-icons/redstone.png",
+      "size": 179,
+      "sha256": "6d0e6a1fd54142cd3de649e1100c428733512b322a0b0a530f62eae9f86881ec"
+    },
+    {
+      "path": "assets/inventory/rss-icons/repeater.png",
+      "size": 188,
+      "sha256": "8159510efca23ee914da39cf35d1c3288fa7236a5bed23356358341044675dd7"
+    },
+    {
+      "path": "assets/inventory/rss-icons/spectral_arrow.png",
+      "size": 140,
+      "sha256": "53810b7511fea4f4e317bb0a3f146863edefc8fa1f1812afd3801c0863eac21f"
+    },
+    {
+      "path": "assets/inventory/rss-icons/spider_eye.png",
+      "size": 159,
+      "sha256": "d499849330581ec013e2b83e5c89e628f71ec2987d1363611a7810e4ec459a06"
+    },
+    {
+      "path": "assets/inventory/rss-icons/spyglass.png",
+      "size": 211,
+      "sha256": "b09e9b9046db1935cd9c35a2e4e3b7763485ec3effbc5077ebeaec1c28513b43"
+    },
+    {
+      "path": "assets/inventory/rss-icons/totem_of_undying.png",
+      "size": 214,
+      "sha256": "2ee3ccdd17f0b9acb13bac37b3b9d4db6eac72aa350a2b1ab9cc587e2f02514a"
+    },
+    {
+      "path": "assets/inventory/rss-icons/writable_book.png",
+      "size": 247,
+      "sha256": "181b670aafb03287849957ee882863c3924a2aaa826f3f44ab94bea906c54228"
+    },
+    {
       "path": "assets/inventory/shield-slot.png",
       "size": 169,
       "sha256": "ea0a9a662bbd54cdc0c56014e64012f3c024a2476a23f898da379515bd045d56"
@@ -439,8 +649,8 @@
     },
     {
       "path": "assets/inventory/unifont.png",
-      "size": 33718,
-      "sha256": "d06a5ee6dcfff6692d028257a3cdd69a5ef3d6cae5529305932759b43f1d8bfe"
+      "size": 70611,
+      "sha256": "52efb3381cce2120be4b71021fbdb14ee143e3741d68556fc63677648a4063dd"
     },
     {
       "path": "assets/inventory/wiki-challenge-obtained.png",

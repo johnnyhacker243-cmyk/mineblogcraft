@@ -73,7 +73,11 @@ export function parseFeed(xml, source, fetchedAt = new Date().toISOString()) {
         ? array(entry.link).find(
             (l) => !l["@_rel"] || l["@_rel"] === "alternate",
           )?.["@_href"]
-        : value(entry.link);
+        : value(entry.link) ||
+          (String(entry.guid?.["@_isPermaLink"] ?? "true").toLowerCase() !==
+            "false" && /^https?:\/\//i.test(value(entry.guid))
+            ? value(entry.guid)
+            : "");
       const url = safeLink(link, source.siteUrl);
       const title = plainText(entry.title, 240);
       if (!title || !url) return [];
