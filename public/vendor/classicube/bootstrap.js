@@ -1,4 +1,4 @@
-/* Mineblogcraft host bridge. The upstream game script is unchanged. */
+/* Mineblogcraft host bridge. Uses the reproducible no-pause adapter; upstream source is retained unchanged. */
 (function () {
   const canvas = document.getElementById("canvas");
   const log = document.getElementById("logmsg");
@@ -83,7 +83,10 @@
       )
         throw new Error("Texture pack unavailable");
       const script = document.createElement("script");
-      script.src = new URL("ClassiCube.js", location.href).href;
+      script.src = new URL(
+        "ClassiCube.mineworld-nopause-v1.js",
+        location.href,
+      ).href;
       script.onerror = () =>
         send("error", "ClassiCube script unavailable. Reload to retry.");
       document.body.appendChild(script);

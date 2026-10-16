@@ -18,3 +18,4 @@ public/assets/inventory/
 
 public/papers/**/source.xml
 public/pdfjs/
+public/vendor/classicube/ClassiCube.mineworld-*.js

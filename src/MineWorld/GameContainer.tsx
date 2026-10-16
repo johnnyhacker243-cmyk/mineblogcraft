@@ -12,7 +12,7 @@ export function GameContainer({
       key={attempt}
       ref={frame}
       className="classicube-frame"
-      src={`${gameConfig.clientUrl}?username=${encodeURIComponent(gameConfig.username)}`}
+      src={`${gameConfig.clientUrl}?v=${gameConfig.clientRevision}&username=${encodeURIComponent(gameConfig.username)}`}
       title="ClassiCube · Minecraft Classic 单机世界"
       allow="fullscreen; autoplay"
       sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-downloads"

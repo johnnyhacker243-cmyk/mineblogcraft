@@ -23,5 +23,11 @@
       "size": 17224,
       "sha256": "a3c404fb40407b79841d8c1d93f76ff406004a880a16cea29d74d767438dd48f"
     }
-  ]
+  ],
+  "mineworldAdapter": {
+    "generator": "scripts/prepare-mineworld-client.mjs",
+    "output": "ClassiCube.mineworld-nopause-v1.js",
+    "scope": "Disable pause menu entry and its pending Escape-suppression flag only; native input, inventory, world and upstream file are preserved.",
+    "upgradePolicy": "Exact upstream SHA-256 and unique patch targets required; upgrades must be reviewed."
+  }
 }

@@ -95,3 +95,8 @@ PDF.js 使用 Mozilla 官方 npm 包 pdfjs-dist 6.4.299（Apache-2.0）。script
 ## MineRSS 原版主题物品（2026-10-16）
 
 `config/rssIcons.json` 记录 21 个原版物品、贴图路径及选择理由。`scripts/import-rss-icons.py` 校验本地 1.21.1 客户端 SHA-1 后逐字节提取 PNG；输出及来源哈希位于忽略的 `public/assets/inventory/rss-icons/`，不提交 Git。原版资源权利仍属原权利人，不因本地读取或部署而改变许可。部署继续沿用已有运行资源清单，GitHub 仅保存哈希元数据及代码，未上传原始客户端。详见 `docs/MINERSS_CURATION_2026.md`。
+
+
+## MineWorld 暂停菜单适配
+
+保留官方 ClassiCube.js 及其原始 SHA-256，不覆盖上游文件。`scripts/prepare-mineworld-client.mjs` 为用户要求的无暂停菜单体验生成独立派生脚本，只禁用暂停菜单入口与相应 Escape 吞键标志；派生脚本被 Git 忽略，在本地/云端构建中可重复生成，继续附带现有 ClassiCube LICENSE.txt。原版游戏素材许可不因该代码适配而改变。

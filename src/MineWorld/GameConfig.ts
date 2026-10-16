@@ -1,5 +1,6 @@
 export const gameConfig = {
   clientUrl: "/vendor/classicube/index.html",
+  clientRevision: "no-pause-v1",
   username: "MineWorldPlayer",
   loadTimeoutMs: 90000,
   minimumLoadingMs: 650,

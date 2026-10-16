@@ -16,7 +16,7 @@
 
 ## Web 启动流程
 
-React 入口 → 独立 iframe 启动页 → 校验默认材质可访问 → 设置 `Module.canvas` 和 `[username]` → 动态加载未修改的官方 `ClassiCube.js` → 下载 `/static/default.zip` → 恢复 IndexedDB 设置 → 上游 `main_phase2` → 原生世界生成、渲染与控制。
+React 入口 → 独立 iframe 启动页 → 校验默认材质可访问 → 设置 `Module.canvas` 和 `[username]` → 动态加载由固定原版生成的无暂停菜单派生客户端 → 下载 `/static/default.zip` → 恢复 IndexedDB 设置 → 上游 `main_phase2` → 原生世界生成、渲染与控制。
 
 主站监听同源且来源为当前 iframe 的状态消息。加载期间显示 Generating World / Loading Minecraft / Preparing Game；资源缺失、脚本失败、上下文丢失和超时显示可重试提示。不伪造百分比。重试卸载旧 iframe；返回菜单时卸载整个游戏浏览上下文，停止其循环、输入和音频。
 
@@ -37,7 +37,7 @@ React 入口 → 独立 iframe 启动页 → 校验默认材质可访问 → 设
 
 ## 操作和范围
 
-WASD 移动、空格跳跃、鼠标观察、左键删除、右键放置、Esc 原生菜单。生成新世界、加载/保存地图与换材质使用 ClassiCube 自带菜单。顶部保留全屏和返回；浏览器可以拒绝全屏请求，此时显示说明。
+WASD 移动、空格跳跃、鼠标观察、左键删除、右键放置、Esc 释放鼠标。MineWorld 隐藏原生暂停菜单，游戏设置/生成/加载/保存菜单不再从 Esc 进入。顶部保留全屏和返回；浏览器可以拒绝全屏请求，此时显示说明。
 
 这是 Minecraft Classic 兼容客户端，不是现代 Java Edition，也不需要 Minecraft 账号或单机服务器。主站不新增数据库、后端、地图、建筑、NPC 或模块联动。单机基础资源本地自托管；上游可按需请求皮肤/音效等可选外部资源。
 
@@ -62,3 +62,14 @@ WASD 移动、空格跳跃、鼠标观察、左键删除、右键放置、Esc �
 `npm run test:world` 覆盖状态协议、启动阶段顺序、用户名参数、缺失材质、错误 MIME、脚本失败和二进制 MIME；`npm run build` 包含 TypeScript、Vite、资源哈希与静态入口生成。不要把单元测试当成游戏操作测试。
 
 发布沿用已获授权的 GitHub main → CloudBase 自动发布配置。游戏提交 `f69a78400de25d1a964614097211e2f951d35a68` 的运行 [38545017084](https://github.com/johnnyhacker243-cmyk/mineblogcraft/actions/runs/38545017084) 已成功，线上 `/deployment.json` 返回相同提交；直接访问 `/mineworld` 返回 HTML 并实际生成世界，代理复测线上 WASD 移动。最终线上截图和验证记录保存在忽略目录 `.local-reference/classicube-live-verified.jpg`、`classicube-release-verification.json`。
+
+
+## 暂停菜单移除（2026-10-16）
+
+问题有两个来源：原生 InputHandler 在 Escape/Pause 按下时打开菜单；Game 在失焦时自动打开菜单。仅在 DOM 层拦截 Esc 会破坏物品栏所需的完整 keydown/keyup 配对，因此未采用该方式。
+
+`scripts/prepare-mineworld-client.mjs` 校验官方文件的固定 SHA-256，唯一匹配两个暂停相关位置，输出忽略的 `ClassiCube.mineworld-nopause-v1.js`。只将 `_Gui_ShowPauseMenu` 变为无操作，并移除暂停分支的 suppressEscape 标志设置，避免以后关闭物品栏时误吞第一次 Esc。官方 ClassiCube.js 保持逐字节不变，版本与目标结构不匹配立即停止构建。派生文件遵循原许可证；升级时必须复查适配，不套用内存偏移或修改存档。
+
+bootstrap 改为加载派生文件；predev、prebuild、test:world 自动生成它。没有拦截浏览器按键、修改用户 options.txt、清空 IndexedDB 或改动世界/控制/碰撞/物品栏逻辑。Esc 仍正常关闭聊天和物品栏，浏览器仍控制鼠标锁定与全屏；顶部提示更新为“Esc 释放鼠标”。
+
+回归测试使用实际固定版本客户端，检查暂停函数无效果、输入暂停分支不设置 suppressEscape、其余原生输入与物品栏函数字节保持一致、未知客户端停止适配，以及加载器使用正确派生产物。浏览器另行复测连续 Esc、失焦、物品栏打开/关闭。内置浏览器仍拒绝原生鼠标锁定，不将该环境的锁定能力冒充为通过。

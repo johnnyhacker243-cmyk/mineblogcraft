@@ -23,7 +23,7 @@ export function MineWorldPage({ back }: { back: () => void }) {
           MineWorld <small>· ClassiCube</small>
         </span>
         <span className="mineworld-controls">
-          WASD 移动 · 鼠标观察 · 空格跳跃 · 左键删除 · 右键放置 · Esc 菜单
+          WASD 移动 · 鼠标观察 · 空格跳跃 · 左键删除 · 右键放置 · Esc 释放鼠标
         </span>
         <MinecraftButton
           aria-label="游戏全屏"

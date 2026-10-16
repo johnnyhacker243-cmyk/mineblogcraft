@@ -3,6 +3,10 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import vm from "node:vm";
 import ts from "typescript";
+import {
+  prepareMineWorldClient,
+  clientName,
+} from "../../scripts/prepare-mineworld-client.mjs";
 const config = ts.transpileModule(
   await readFile("src/MineWorld/GameConfig.ts", "utf8"),
   { compilerOptions: { module: ts.ModuleKind.ESNext } },
@@ -95,4 +99,55 @@ test("binary server MIME and engine script failures are handled", async () => {
   assert.equal(b.scripts.length, 1);
   b.scripts[0].onerror();
   assert.equal(b.body.dataset.state, "error");
+});
+
+test("The actual pinned client cannot open either pause menu; inventory key handling is unchanged", async () => {
+  const original = await readFile("public/vendor/classicube/ClassiCube.js");
+  const source = original.toString("utf8"),
+    adapted = prepareMineWorldClient(original);
+  const fn = (text, name) =>
+    text.slice(
+      text.indexOf(`function ${name}(`),
+      text.indexOf("\nfunction ", text.indexOf(`function ${name}(`) + 1),
+    );
+  const menu = fn(adapted, "_Gui_ShowPauseMenu");
+  let shown = 0;
+  vm.runInNewContext(menu + "; _Gui_ShowPauseMenu(); _Gui_ShowPauseMenu();", {
+    _PauseScreen_Show: () => shown++,
+    _ClassicPauseScreen_Show: () => shown++,
+  });
+  assert.equal(shown, 0);
+  assert.ok(!fn(adapted, "_OnInputDown").includes("_Gui_ShowPauseMenu"));
+  assert.ok(!fn(adapted, "_OnInputDown").includes("HEAP8[1869857] = 1"));
+  for (const name of [
+    "_OnInputUp",
+    "_Input_SetPressed",
+    "_Input_SetReleased",
+    "_OnKeyDown_2921",
+    "_InventoryScreen_Show",
+    "_Gui_Remove",
+  ])
+    if (source.includes(`function ${name}(`))
+      assert.equal(fn(adapted, name), fn(source, name), name);
+  assert.ok(
+    !bridge.includes('"keydown"'),
+    "Do not intercept Escape: inventory needs its native keydown/up pair",
+  );
+});
+
+test("The pause adapter fails closed on an upgraded or altered vendor client", () => {
+  assert.throws(
+    () => prepareMineWorldClient(Buffer.from("unrecognised client")),
+    /Unsupported ClassiCube/,
+  );
+});
+
+test("The loader starts the adapted client and its reproducible build exists", async () => {
+  const b = await boot();
+  assert.ok(b.scripts[0].src.endsWith("/" + clientName));
+  const bytes = await readFile("public/vendor/classicube/ClassiCube.js");
+  assert.equal(
+    await readFile("public/vendor/classicube/" + clientName, "utf8"),
+    prepareMineWorldClient(bytes),
+  );
 });
