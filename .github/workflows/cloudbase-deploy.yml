@@ -35,7 +35,7 @@ jobs:
           fi
       - run: npm ci
       - name: Verify asset checks
-        run: node --test tests/cloud-assets.test.mjs
+        run: node --test tests/cloud-assets.test.mjs tests/cloudbase-publish.test.mjs
       - name: Verify ClassiCube integration
         run: npm run test:world
       - name: Build with verified Minecraft resources
@@ -59,7 +59,11 @@ jobs:
           tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY"
           # Publish prebuilt files directly; app deploy additionally creates a
           # CloudApp archive/record that can stall after the website is updated.
-          tcb hosting deploy "$GITHUB_WORKSPACE/dist" / -e jonhyblog-d2ggh3rc306480701 --entry index.html,mineworld/index.html,deployment.json --json
+          # Avoid uploading identical large game/font assets over the runner's
+          # cross-region connection on every publish. Missing manifests safely
+          # fall back to a full upload. Never prune existing hosted files.
+          node scripts/prepare-cloudbase-publish.mjs --source dist --output "$RUNNER_TEMP/cloudbase-publish" --base "$BLOG_BASE_URL"
+          tcb hosting deploy "$RUNNER_TEMP/cloudbase-publish" / -e jonhyblog-d2ggh3rc306480701 --entry index.html,mineworld/index.html,deployment.json,deployment-files.json --concurrency 10 --json
           echo 'deployed=true' >> "$GITHUB_OUTPUT"
       - name: Verify the published commit
         if: steps.publish.outputs.deployed == 'true'
