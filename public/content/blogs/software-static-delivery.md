@@ -2,7 +2,10 @@
 id: software-static-delivery
 date: 2026-10-10
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: software
 ---
 # 静态发布也需要来源证明：让通过测试的文件成为最终产物

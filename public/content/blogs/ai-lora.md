@@ -2,7 +2,10 @@
 id: ai-lora
 date: 2026-10-02
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: ai
 ---
 # 从 LR-LoRA 到 LoRA-TSD：微调比较为什么必须控制变量

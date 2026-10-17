@@ -10,6 +10,9 @@ export interface BlogWorld {
   file?: string;
   domainId?: string;
   status?: "draft" | "published";
+  reviewStatus?: "reviewed";
+  reviewedAt?: string;
+  publishedAt?: string;
   author?: string;
   provenance?: string;
   updatedAt?: string;

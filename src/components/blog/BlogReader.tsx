@@ -51,6 +51,12 @@ export function BlogReader({
             color="#ffff55"
           />
         )}
+        {world.reviewStatus === "reviewed" && (
+          <BlogText
+            text={`已审阅 · 发布 ${world.publishedAt ?? world.createTime}${world.provenance?.startsWith("ai-assisted") ? " · AI 辅助整理" : ""}`}
+            color="#aaffaa"
+          />
+        )}
       </header>
       <article tabIndex={0} aria-label={world.title}>
         {error ? (

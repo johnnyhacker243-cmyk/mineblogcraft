@@ -2,7 +2,10 @@
 id: ai-evaluation
 date: 2026-10-05
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: ai
 ---
 # Agent 评估不能只判回答：怎样检查它真正完成了任务

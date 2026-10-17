@@ -2,7 +2,10 @@
 id: ai-input-boundary
 date: 2026-10-08
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: ai
 ---
 # Agent 提示注入防护：别让读到的文字变成执行权限

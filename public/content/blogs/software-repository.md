@@ -2,7 +2,10 @@
 id: software-repository
 date: 2026-09-28
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: software
 ---
 # TypeScript 7 的原生编译器：类型更快，数据边界仍要自己守

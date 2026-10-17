@@ -2,7 +2,10 @@
 id: security-ids
 date: 2026-10-03
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: security
 ---
 # GitHub Actions 安全扫描：没有告警，能否说明工作流安全

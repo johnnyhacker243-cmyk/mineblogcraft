@@ -2,7 +2,10 @@
 id: security-asset-discovery
 date: 2026-09-27
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: security
 ---
 # 给 RSS 和 Agent 抓取器设边界：HTTPS 为什么挡不住 SSRF

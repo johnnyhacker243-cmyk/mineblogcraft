@@ -2,7 +2,10 @@
 id: software-react-state
 date: 2026-09-22
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: software
 ---
 # React 19.3 的视图过渡：动画不能替状态管理做决定

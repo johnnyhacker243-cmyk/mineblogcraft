@@ -9,7 +9,9 @@
     "tags": ["Minecraft", "Web", "AI", "Software Engineering"],
     "content": "## 项目起源\nMineblogcraft 是一个属于我的数字世界。这次开发把 Minecraft 游戏界面作为个人技术博客的入口：学习新的知识，就挖下来；有新的想法，就建起来。\n\n## 技术架构\n前端使用 Vite、React、TypeScript 和 Three.js。主菜单使用六面旋转全景，作者页面用三维 Steve 展示玩家档案。按钮、方块及像素字体来自获授权的本地 Minecraft 1.21.1 客户端，原版素材保留本地。\n博客数据存放在静态 JSON 中，由 BlogRepository 提供读取接口，BlogService 负责搜索。页面只依赖服务，未来可以换成 API 数据源。\n\n## 设计参考\n首页参考 Minecraft 主菜单；作者介绍参考创造模式背包；博客入口参考单人游戏的世界选择界面；文章阅读采用暂停菜单式暗色半透明背景。每篇文章都是一个知识世界。\n\n## 当前功能\n已实现游戏式首页、作者介绍、博客世界列表、文章阅读及静态 RSS。博客列表支持标题、简介、标签与分类搜索。Wiki 知识树、Research 书籍系统与外部 RSS 阅读器现已实现；新内容持续整理中。\n\n## 未来规划\n继续完善 Wiki 与 Research 内容，将学习记录、项目实践和资料整理融入方块世界。后续再研究 AI 辅助与知识管理功能，以及数据库和后台接口；本阶段只开发本地前端。\n\n欢迎来到我的技术世界。",
     "status": "published",
-    "provenance": "legacy-site-content"
+    "provenance": "legacy-site-content",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17"
   },
   {
     "id": "software-static-delivery",
@@ -22,9 +24,9 @@
     "image": "/assets/inventory/blog-icons/chest_minecart.png",
     "content": "",
     "file": "/content/blogs/software-static-delivery.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "GitHub Docs · Use artifact attestations",
@@ -37,7 +39,10 @@
     "seriesIndex": 21,
     "iconKey": "chest_minecart",
     "iconLabel": "运输矿车",
-    "iconReason": "把同一份已验证产物运送到发布端"
+    "iconReason": "把同一份已验证产物运送到发布端",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "security-supply-chain",
@@ -50,9 +55,9 @@
     "image": "/assets/inventory/blog-icons/bundle.png",
     "content": "",
     "file": "/content/blogs/security-supply-chain.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "CycloneDX · Specification Overview",
@@ -65,7 +70,10 @@
     "seriesIndex": 20,
     "iconKey": "bundle",
     "iconLabel": "收纳袋",
-    "iconReason": "把依赖、版本和关系整理成可检查清单"
+    "iconReason": "把依赖、版本和关系整理成可检查清单",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "ai-input-boundary",
@@ -78,9 +86,9 @@
     "image": "/assets/inventory/blog-icons/written_book.png",
     "content": "",
     "file": "/content/blogs/ai-input-boundary.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "How we contain Claude across products · Anthropic",
@@ -94,7 +102,10 @@
     "seriesIndex": 19,
     "iconKey": "written_book",
     "iconLabel": "成书",
-    "iconReason": "外部文档承载资料而不是行动指令"
+    "iconReason": "外部文档承载资料而不是行动指令",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "software-rss-pipeline",
@@ -107,9 +118,9 @@
     "image": "/assets/inventory/blog-icons/spectral_arrow.png",
     "content": "",
     "file": "/content/blogs/software-rss-pipeline.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Vitest 5 · 官方发布说明",
@@ -123,7 +134,10 @@
     "seriesIndex": 18,
     "iconKey": "spectral_arrow",
     "iconLabel": "光灵箭",
-    "iconReason": "标出失败位置与可追踪的交互目标"
+    "iconReason": "标出失败位置与可追踪的交互目标",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "security-response",
@@ -136,9 +150,9 @@
     "image": "/assets/inventory/blog-icons/iron_chestplate.png",
     "content": "",
     "file": "/content/blogs/security-response.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "React · Critical Security Vulnerability in React Server Components",
@@ -158,7 +172,10 @@
     "seriesIndex": 17,
     "iconKey": "iron_chestplate",
     "iconLabel": "铁胸甲",
-    "iconReason": "分层防护与明确的浏览器安全边界"
+    "iconReason": "分层防护与明确的浏览器安全边界",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "ai-evaluation",
@@ -171,9 +188,9 @@
     "image": "/assets/inventory/blog-icons/comparator.png",
     "content": "",
     "file": "/content/blogs/ai-evaluation.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Demystifying evals for AI agents · Anthropic",
@@ -187,7 +204,10 @@
     "seriesIndex": 16,
     "iconKey": "comparator",
     "iconLabel": "红石比较器",
-    "iconReason": "比较可观察结果与验收目标"
+    "iconReason": "比较可观察结果与验收目标",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "software-architecture",
@@ -200,9 +220,9 @@
     "image": "/assets/inventory/blog-icons/spyglass.png",
     "content": "",
     "file": "/content/blogs/software-architecture.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Help us stabilize environment variable context propagation · OpenTelemetry",
@@ -216,7 +236,10 @@
     "seriesIndex": 15,
     "iconKey": "spyglass",
     "iconLabel": "望远镜",
-    "iconReason": "跨进程追踪与观察完整执行链"
+    "iconReason": "跨进程追踪与观察完整执行链",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "security-ids",
@@ -229,9 +252,9 @@
     "image": "/assets/inventory/blog-icons/amethyst_shard.png",
     "content": "",
     "file": "/content/blogs/security-ids.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Unpacking Security Scanners for GitHub Actions Workflows · 2026 研究预印本",
@@ -245,7 +268,10 @@
     "seriesIndex": 14,
     "iconKey": "amethyst_shard",
     "iconLabel": "紫水晶碎片",
-    "iconReason": "从细微信号中发现工作流风险"
+    "iconReason": "从细微信号中发现工作流风险",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "ai-lora",
@@ -265,9 +291,9 @@
     "image": "/assets/inventory/blog-icons/lapis_lazuli.png",
     "content": "",
     "file": "/content/blogs/ai-lora.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Parameter-Efficient Fine-Tuning with Learnable Rank · 2026 预印本",
@@ -293,7 +319,10 @@
     "seriesIndex": 13,
     "iconKey": "lapis_lazuli",
     "iconLabel": "青金石",
-    "iconReason": "以有限资源进行针对性能力调整"
+    "iconReason": "以有限资源进行针对性能力调整",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "software-testing",
@@ -306,9 +335,9 @@
     "image": "/assets/inventory/blog-icons/clock_00.png",
     "content": "",
     "file": "/content/blogs/software-testing.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Node.js v26.0.0 · 官方发布说明",
@@ -322,7 +351,10 @@
     "seriesIndex": 12,
     "iconKey": "clock_00",
     "iconLabel": "时钟",
-    "iconReason": "时间语义与日期边界"
+    "iconReason": "时间语义与日期边界",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "security-vulnerability",
@@ -335,9 +367,9 @@
     "image": "/assets/inventory/blog-icons/lead.png",
     "content": "",
     "file": "/content/blogs/security-vulnerability.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "npm Docs · Trusted publishing for npm packages",
@@ -350,7 +382,10 @@
     "seriesIndex": 11,
     "iconKey": "lead",
     "iconLabel": "拴绳",
-    "iconReason": "把发布权限绑定到指定仓库和工作流"
+    "iconReason": "把发布权限绑定到指定仓库和工作流",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "ai-tool-contract",
@@ -363,9 +398,9 @@
     "image": "/assets/inventory/blog-icons/redstone.png",
     "content": "",
     "file": "/content/blogs/ai-tool-contract.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "MCP 2026-07-28 · Tools 规范",
@@ -379,7 +414,10 @@
     "seriesIndex": 10,
     "iconKey": "redstone",
     "iconLabel": "红石粉",
-    "iconReason": "工具之间的结构化信号与协议连接"
+    "iconReason": "工具之间的结构化信号与协议连接",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "software-repository",
@@ -392,9 +430,9 @@
     "image": "/assets/inventory/blog-icons/name_tag.png",
     "content": "",
     "file": "/content/blogs/software-repository.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Announcing TypeScript 7.0 · Microsoft 官方博客",
@@ -408,7 +446,10 @@
     "seriesIndex": 9,
     "iconKey": "name_tag",
     "iconLabel": "命名牌",
-    "iconReason": "用明确类型和身份标注数据对象"
+    "iconReason": "用明确类型和身份标注数据对象",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "security-asset-discovery",
@@ -421,9 +462,9 @@
     "image": "/assets/inventory/blog-icons/fishing_rod.png",
     "content": "",
     "file": "/content/blogs/security-asset-discovery.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "OWASP · Server-Side Request Forgery Prevention Cheat Sheet",
@@ -436,7 +477,10 @@
     "seriesIndex": 8,
     "iconKey": "fishing_rod",
     "iconLabel": "钓鱼竿",
-    "iconReason": "从外部获取资料必须限制可触达的范围"
+    "iconReason": "从外部获取资料必须限制可触达的范围",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "ai-rag-evidence",
@@ -456,9 +500,9 @@
     "image": "/assets/inventory/blog-icons/compass_16.png",
     "content": "",
     "file": "/content/blogs/ai-rag-evidence.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Qwen3-VL-Embedding 与 Qwen3-VL-Reranker · 2026 技术报告",
@@ -477,7 +521,10 @@
     "seriesIndex": 7,
     "iconKey": "compass_16",
     "iconLabel": "指南针",
-    "iconReason": "将问题定位到可追溯的知识来源"
+    "iconReason": "将问题定位到可追溯的知识来源",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "software-api-contract",
@@ -490,9 +537,9 @@
     "image": "/assets/inventory/blog-icons/blaze_powder.png",
     "content": "",
     "file": "/content/blogs/software-api-contract.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Announcing Vite 8 · 官方发布说明",
@@ -506,7 +553,10 @@
     "seriesIndex": 6,
     "iconKey": "blaze_powder",
     "iconLabel": "烈焰粉",
-    "iconReason": "构建动力与工具链转换"
+    "iconReason": "构建动力与工具链转换",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "security-http",
@@ -519,9 +569,9 @@
     "image": "/assets/inventory/blog-icons/totem_of_undying.png",
     "content": "",
     "file": "/content/blogs/security-http.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "WebAuthn Level 3 · 2026-05-15 候选推荐草案",
@@ -535,7 +585,10 @@
     "seriesIndex": 5,
     "iconKey": "totem_of_undying",
     "iconLabel": "不死图腾",
-    "iconReason": "账户恢复与最后一道保护"
+    "iconReason": "账户恢复与最后一道保护",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "ai-transformer",
@@ -548,9 +601,9 @@
     "image": "/assets/inventory/blog-icons/writable_book.png",
     "content": "",
     "file": "/content/blogs/ai-transformer.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Managed Agents · Anthropic 工程实践",
@@ -564,7 +617,10 @@
     "seriesIndex": 4,
     "iconKey": "writable_book",
     "iconLabel": "书与笔",
-    "iconReason": "可更新、可追溯的任务记录"
+    "iconReason": "可更新、可追溯的任务记录",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "software-react-state",
@@ -577,9 +633,9 @@
     "image": "/assets/inventory/blog-icons/ender_pearl.png",
     "content": "",
     "file": "/content/blogs/software-react-state.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "React 19.3 · 官方发布说明",
@@ -593,7 +649,10 @@
     "seriesIndex": 3,
     "iconKey": "ender_pearl",
     "iconLabel": "末影珍珠",
-    "iconReason": "页面位置切换与连续的导航体验"
+    "iconReason": "页面位置切换与连续的导航体验",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "network-security-foundation",
@@ -606,9 +665,9 @@
     "image": "/assets/inventory/blog-icons/iron_sword.png",
     "content": "",
     "file": "/content/blogs/network-security-foundation.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "MCP 2026-07-28 · Security Best Practices",
@@ -622,7 +681,10 @@
     "seriesIndex": 2,
     "iconKey": "iron_sword",
     "iconLabel": "铁剑",
-    "iconReason": "具有行动能力的工具需要明确权限边界"
+    "iconReason": "具有行动能力的工具需要明确权限边界",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   },
   {
     "id": "ai-from-llm-to-agent",
@@ -635,9 +697,9 @@
     "image": "/assets/inventory/blog-icons/repeater.png",
     "content": "",
     "file": "/content/blogs/ai-from-llm-to-agent.md",
-    "author": "编辑草稿（AI 辅助）",
-    "status": "draft",
-    "provenance": "ai-assisted-editorial-draft",
+    "author": "编辑文章（AI 辅助，已审阅）",
+    "status": "published",
+    "provenance": "ai-assisted-editorial-reviewed",
     "sources": [
       {
         "title": "Harness design for long-running application development",
@@ -651,6 +713,9 @@
     "seriesIndex": 1,
     "iconKey": "repeater",
     "iconLabel": "红石中继器",
-    "iconReason": "阶段衔接、受控执行与任务节奏"
+    "iconReason": "阶段衔接、受控执行与任务节奏",
+    "reviewStatus": "reviewed",
+    "reviewedAt": "2026-10-17",
+    "publishedAt": "2026-10-17"
   }
 ]

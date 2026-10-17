@@ -2,7 +2,10 @@
 id: security-response
 date: 2026-10-06
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: security
 ---
 # React 安全更新怎样读：RSC 漏洞、Trusted Types 与实际暴露面

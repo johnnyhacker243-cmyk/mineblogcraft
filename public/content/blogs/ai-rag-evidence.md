@@ -2,7 +2,10 @@
 id: ai-rag-evidence
 date: 2026-09-26
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: ai
 ---
 # Qwen3-VL 与多模态 RAG：检索命中之后，证据还差哪一步

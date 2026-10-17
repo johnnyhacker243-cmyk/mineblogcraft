@@ -67,7 +67,9 @@ export function WorldCard({
           text={
             world.status === "draft"
               ? "创造模式 · 学习笔记草稿 · 待审阅"
-              : "创造模式 · 版本: Mineblogcraft 1.0"
+              : world.reviewStatus === "reviewed"
+                ? "创造模式 · 已审阅 · 已发布"
+                : "创造模式 · 版本: Mineblogcraft 1.0"
           }
           width={265}
           color="#808080"

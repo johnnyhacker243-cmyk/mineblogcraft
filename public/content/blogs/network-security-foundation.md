@@ -2,7 +2,10 @@
 id: network-security-foundation
 date: 2026-09-21
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: security
 ---
 # MCP 授权边界：工具连通以后，谁有权做什么

@@ -2,7 +2,10 @@
 id: software-testing
 date: 2026-10-01
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: software
 ---
 # Node.js 26 的 Temporal：先分清日期、瞬间与时区

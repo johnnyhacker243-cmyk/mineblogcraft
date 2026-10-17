@@ -34,10 +34,13 @@ test("Editorial series has one entry per day, rotates domains, and preserves act
     assert.equal(blog.updatedAt, "2026-10-15");
     assert.equal(
       blog.status,
-      "draft",
-      "Editorial dates must not silently publish AI-assisted drafts",
+      "published",
+      "User-approved articles are published without changing editorial dates",
     );
-    assert.equal(blog.provenance, "ai-assisted-editorial-draft");
+    assert.equal(blog.provenance, "ai-assisted-editorial-reviewed");
+    assert.equal(blog.reviewStatus, "reviewed");
+    assert.equal(blog.reviewedAt, "2026-10-17");
+    assert.equal(blog.publishedAt, "2026-10-17");
   });
 });
 

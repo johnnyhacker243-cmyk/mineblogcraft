@@ -55,7 +55,7 @@ await writeFile(
     .sort()
     .at(
       -1,
-    )}\n\n21 个来源（每方向 7 个），${items.length} 条摘要；配置、唯一 ID、引用、URL、日期、RSS 发布 XML、OPML 与原版物品映射全部通过。\n\nONLINE 是上次抓取成功，非实时监控；抓取失败保留旧缓存。原文为当前网络每源最多两篇抽查，不冒充中国大陆各运营商实测，也不保证地区或时段可达性。未知日期不以抓取日期代替。详细结果见 public/data/rss/access-report.json。\n\n| 来源 | 分类 | 快照状态 | 条目 | 原文抽查通过 | 最近文章 | 失败原因 |\n|---|---|---|---:|---|---|---|\n${rows.join("\n")}\n\nBlog 21 篇技术编辑草稿另加 1 篇原有文章；Research 33 篇 2024 年以来外部文献（三方向各 11 篇，均有全文）；Wiki 34 个概念节点。新博客未经作者审阅，不进入 feed.xml。\n`,
+    )}\n\n21 个来源（每方向 7 个），${items.length} 条摘要；配置、唯一 ID、引用、URL、日期、RSS 发布 XML、OPML 与原版物品映射全部通过。\n\nONLINE 是上次抓取成功，非实时监控；抓取失败保留旧缓存。原文为当前网络每源最多两篇抽查，不冒充中国大陆各运营商实测，也不保证地区或时段可达性。未知日期不以抓取日期代替。详细结果见 public/data/rss/access-report.json。\n\n| 来源 | 分类 | 快照状态 | 条目 | 原文抽查通过 | 最近文章 | 失败原因 |\n|---|---|---|---:|---|---|---|\n${rows.join("\n")}\n\nBlog 共 22 篇已审阅并发布文章（21 篇 AI 辅助技术编辑文章及 1 篇原有文章）；Research 33 篇 2024 年以来外部文献（三方向各 11 篇，均有全文）；Wiki 34 个概念节点。全部已发布文章已进入 feed.xml。\n`,
 );
 console.log(
   `Validated ${sources.length} sources / ${items.length} entries, feed.xml and OPML`,

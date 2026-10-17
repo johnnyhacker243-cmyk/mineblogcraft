@@ -2,7 +2,10 @@
 id: software-rss-pipeline
 date: 2026-10-07
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: software
 ---
 # Vitest 5 的 Trace View：把偶发失败变成可解释的时间线

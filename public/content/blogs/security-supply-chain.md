@@ -2,7 +2,10 @@
 id: security-supply-chain
 date: 2026-10-09
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: security
 ---
 # SBOM 不是安全证书：从组件清单走向可行动的风险判断

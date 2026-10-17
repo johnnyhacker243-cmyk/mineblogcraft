@@ -2,7 +2,10 @@
 id: software-architecture
 date: 2026-10-04
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: software
 ---
 # OpenTelemetry 的进程上下文：为什么一次构建会散成多条 Trace

@@ -2,7 +2,10 @@
 id: ai-from-llm-to-agent
 date: 2026-09-20
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: ai
 ---
 # Agent 的长任务难题：怎样把“继续做”变成可靠交付

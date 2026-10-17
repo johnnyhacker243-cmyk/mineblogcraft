@@ -1,0 +1,139 @@
+@namespace atom url("http://www.w3.org/2005/Atom");
+
+/* Presentation only: RSS readers still receive the original RSS 2.0 XML. */
+@font-face {
+  font-family: FeedPixel;
+  src: url("/assets/fonts/Monocraft.ttf") format("truetype");
+  font-display: swap;
+}
+rss {
+  display: block;
+  min-height: 100vh;
+  margin: 0;
+  padding: 88px 24px 48px;
+  box-sizing: border-box;
+  color: #eee;
+  background-color: #38291d;
+  background-image:
+    linear-gradient(#0008, #0008), url("/assets/inventory/grass-border.png"),
+    url("/assets/inventory/dirt.png");
+  background-size:
+    auto,
+    64px 64px,
+    64px 64px;
+  background-repeat: repeat, repeat-x, repeat;
+  image-rendering: pixelated;
+  font:
+    16px/1.8 FeedPixel,
+    monospace;
+}
+channel {
+  display: block;
+  max-width: 960px;
+  margin: auto;
+  padding: clamp(18px, 4vw, 40px);
+  border: 3px solid;
+  border-color: #aaa #333 #333 #aaa;
+  background: #141414ed;
+  box-shadow: 0 0 0 2px #000;
+  overflow-wrap: anywhere;
+}
+channel > title {
+  display: block;
+  color: #ffff55;
+  font-size: clamp(24px, 4vw, 36px);
+  text-shadow: 3px 3px #3f3f15;
+}
+channel > description {
+  display: block;
+  color: #ddd;
+  margin: 4px 0 20px;
+}
+channel > link {
+  display: block;
+  font-size: 13px;
+  color: #aaa;
+}
+channel > link::before {
+  content: "博客首页：";
+}
+channel > atom|link {
+  display: block;
+  margin: 8px 0;
+  color: #aaffaa;
+  font-size: 14px;
+  user-select: all;
+}
+channel > atom|link::before {
+  content: "订阅地址：" attr(href);
+}
+channel > language {
+  display: none;
+}
+channel::before {
+  content: "RSS · 博客订阅";
+  display: block;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+channel > item {
+  display: block;
+  border-top: 2px solid #555;
+  padding-top: 24px;
+  margin-top: 24px;
+}
+channel > item:first-of-type::before {
+  content: "将上方订阅地址添加到 RSS 阅读器，即可获取文章更新。下方是已发布文章的摘要；复制原文链接可打开完整文章。";
+  display: block;
+  color: #aaa;
+  font-size: 14px;
+  border-bottom: 2px solid #555;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+}
+item > title {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+}
+item > pubDate {
+  display: block;
+  color: #aaa;
+  font-size: 13px;
+  margin: 8px 0;
+}
+item > description {
+  display: block;
+  margin: 12px 0;
+}
+item > link {
+  display: block;
+  color: #aaccff;
+  font-size: 13px;
+  user-select: all;
+}
+item > link::before {
+  content: "原文：";
+}
+item > category {
+  display: block;
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 8px;
+}
+item > category::before {
+  content: "分类：";
+}
+item > guid {
+  display: none;
+}
+@media (max-width: 480px) {
+  rss {
+    padding: 80px 12px 24px;
+    font-size: 14px;
+  }
+  item > title {
+    font-size: 18px;
+  }
+}

@@ -2,7 +2,10 @@
 id: software-api-contract
 date: 2026-09-25
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: software
 ---
 # Vite 8 的统一构建链：升级前先写清楚输出契约

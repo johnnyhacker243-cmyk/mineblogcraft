@@ -2,7 +2,10 @@
 id: ai-transformer
 date: 2026-09-23
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: ai
 ---
 # 长上下文不是长期记忆：Agent 怎样保存任务状态

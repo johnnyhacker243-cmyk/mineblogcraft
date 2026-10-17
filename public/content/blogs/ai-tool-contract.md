@@ -2,7 +2,10 @@
 id: ai-tool-contract
 date: 2026-09-29
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: ai
 ---
 # 读 MCP 2026 工具规范：Schema 能管参数，不能替你授权

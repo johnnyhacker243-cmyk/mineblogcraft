@@ -2,7 +2,10 @@
 id: security-http
 date: 2026-09-24
 updatedAt: 2026-10-15
-status: draft
+status: published
+reviewStatus: reviewed
+reviewedAt: 2026-10-17
+publishedAt: 2026-10-17
 domainId: security
 ---
 # Passkey 的安全边界：没有密码，为什么仍要设计找回流程

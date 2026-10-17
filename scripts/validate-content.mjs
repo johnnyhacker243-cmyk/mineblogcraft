@@ -36,7 +36,7 @@ const distribution = (rows) =>
   );
 assert.deepEqual(
   distribution(
-    blogs.filter((b) => b.provenance === "ai-assisted-editorial-draft"),
+    blogs.filter((b) => b.provenance?.startsWith("ai-assisted-editorial-")),
   ),
   { ai: 7, security: 7, software: 7 },
 );
