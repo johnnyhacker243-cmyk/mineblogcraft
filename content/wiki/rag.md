@@ -1,0 +1,102 @@
+---
+kind: "node"
+id: "rag"
+title: "RAG 与多模态证据"
+description: "以 2026 Qwen3-VL 检索报告为例，组织文字、图表、页内区域和可追溯证据。"
+category: "AI"
+tags: ["检索","知识库","RAG","Qwen3-VL","Embedding","Reranker","多模态","向量数据库"]
+icon: "/assets/inventory/wiki-icons/spyglass.png"
+parentIds: ["llm"]
+status: "untracked"
+frame: "task"
+details: "以 2026 Qwen3-VL 检索报告为例，组织文字、图表、页内区域和可追溯证据。"
+learningPoints: ["站内文章导读","召回与重排负责不同任务","分块之前先保存来源身份","图表证据还需要页码与区域"]
+relatedBlogs: [{"id":"ai-rag-evidence","title":"Qwen3-VL 与多模态 RAG：检索命中之后，证据还差哪一步"}]
+relatedPapers: []
+aliases: ["检索增强生成","retrieval augmented generation","RAG","Qwen3-VL","Embedding","Reranker","多模态","向量数据库"]
+domainId: "ai"
+relatedRss: []
+sources: [{"id":"blog-ai-rag-evidence","kind":"blog","title":"Qwen3-VL 与多模态 RAG：检索命中之后，证据还差哪一步","url":"#blog/ai-rag-evidence","locator":"站内已审阅文章；保留 AI 辅助来源标记","excerpt":"以 2026 Qwen3-VL 检索报告为例，组织文字、图表、页内区域和可追溯证据。"},{"id":"ai-rag-evidence-reference-0","kind":"external","title":"Qwen3-VL-Embedding 与 Qwen3-VL-Reranker · 2026 技术报告","url":"https://arxiv.org/abs/2601.04720","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"},{"id":"ai-rag-evidence-reference-1","kind":"external","title":"QwenLM · Qwen3-VL-Embedding 官方实现与使用说明","url":"https://github.com/QwenLM/Qwen3-VL-Embedding","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"}]
+relatedNodeIds: ["llm","vector-database","graph-rag","graph-rag","rag-privacy","private-ann","knowledge-workspace"]
+updated: "2026-10-17"
+provenance: "agent-source-synthesis"
+iconKey: "spyglass"
+iconReason: "望远镜对应检索可追溯的证据"
+iconLabel: "望远镜"
+---
+# RAG 与多模态证据
+
+## 概念与适用边界
+
+检索增强生成先检索外部证据，再把证据用于回答。文档切分、召回、排序、版本元数据和引用共同决定结果；向量库只是实现选项之一。
+
+## 站内文章导读
+
+检索系统返回一段与问题相似的文字，并不代表它支持最后的回答。比如用户问“这篇论文允许转载全文吗”，最相似的段落可能在介绍论文主题，真正有关许可的信息却在出版页。RAG 的困难经常不在“有没有找到文本”，而在“找到的文本能证明什么”。
+
+这篇以 2026 年 1 月的 Qwen3-VL-Embedding 与 Qwen3-VL-Reranker 技术报告为研究对象，讨论含文字、图表的论文资料怎样组织检索。模型能力依据报告和官方仓库，下面的知识网站方案是设计分析，没有执行本地模型实验。指南针代表定位证据，而不是替证据作结论。
+
+出处：blog-ai-rag-evidence
+
+## 召回与重排负责不同任务
+
+官方报告与仓库将文字、图片、文档图像和视频纳入检索范围。嵌入负责将候选映射为向量，重排进一步比较问题与候选。两阶段配合是设计选项，不能只因加入 reranker 就保证答案正确。
+
+召回阶段可以放宽候选范围；重排阶段则控制进入生成上下文的材料。保留关键词检索也很有意义：论文编号、API 名称与版本字符串，未必适合只依赖语义相似度定位。
+
+出处：blog-ai-rag-evidence
+
+## 分块之前先保存来源身份
+
+若把所有 Markdown 直接切成等长片段，标题、日期和出处可能被切散。一个片段至少应能回到原始文章，并知道所属标题路径。更新时还要判断旧片段是否需要作废。
+
+```json
+{
+  "documentId": "rag-note",
+  "section": ["检索", "证据定位"],
+  "revision": "content-hash",
+  "sourceUrl": "https://example.org/paper"
+}
+```
+
+这是示意结构。内容哈希用于识别修订，不证明来源可信；sourceUrl 也不自动意味着可以转载。检索身份、可信度与许可是三项不同信息。
+
+出处：blog-ai-rag-evidence
+
+## 图表证据还需要页码与区域
+
+论文截图可以保留公式和版式，却未必自动告诉系统坐标轴与图例的含义。对问题“哪个方法在小样本区间更稳定”，只召回整篇论文太粗，只提取图题又可能遗漏曲线。可以把页面图像、图题文本和页内区域关联到同一个证据对象。
+
+一个适合阅读器的结果应能定位到 documentId、pageNumber 和区域坐标，并保留原始图题。坐标还要注明对应裁切前的页面尺寸，否则缩放后高亮会错位。文字分块与页面图像可以共同召回，但不能把同一图的多份表示误算成多条独立证据。
+
+出处：blog-ai-rag-evidence
+
+## 为答案建立最小证据集
+
+回答“模型有哪些限制”，应引用明确描述限制的段落，而不是只引用包含模型名称的首页。可以要求每个重要判断关联一段证据，无法支持的部分标成推测或暂不回答。
+
+对于跨版本问题，发布日期和版本过滤应在检索阶段参与。把旧版教程放进上下文，再要求模型“注意最新版本”，往往不如先排除不适用材料。对于互相矛盾的来源，最好保留冲突而不是生成一个平滑但无出处的折中答案。
+
+出处：blog-ai-rag-evidence
+
+## 评价不要只看最终回答
+
+建立一小组有明确来源的测试问题，分别检查正确文档是否进入候选、证据是否在重排后保留、生成是否忠实引用。否则答案失败时很难区分是资料缺失、召回遗漏还是生成歪曲。
+
+可将 Recall@k 理解为“标注的有关证据有多少进入前 k 项”。它需要预先标注，并且不等于答案正确率。对于图表问题，还要检查命中的是否是正确页与正确区域；只找到同一篇论文，并不算完成精确定位。
+
+还应加入“资料里没有答案”的问题。系统若总能给出完整解释，反而可能在填补未知。拒答是否准确与检索命中一样重要。这里描述评价方法，不提供未经运行的召回率或命中率。
+
+出处：blog-ai-rag-evidence
+
+## 小型网站的务实起点
+
+先用结构化标签、别名和关键词搜索保证基础可用，再为语义检索建立稳定文档 ID、章节路径和修订记录。数据组织清楚后，换用不同嵌入模型成本更低；模型选得再新，也无法挽救丢失出处的内容仓库。
+
+出处：blog-ai-rag-evidence
+
+## 相关知识
+
+[[llm]] · [[vector-database]] · [[graph-rag]] · [[graph-rag]] · [[rag-privacy]] · [[private-ann]] · [[knowledge-workspace]]
+
+[[index]]

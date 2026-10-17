@@ -1,0 +1,1486 @@
+{
+  "updated": "2026-10-17",
+  "blogs": [
+    {
+      "id": "mineblogcraft-birth",
+      "nodeId": "frontend"
+    },
+    {
+      "id": "software-static-delivery",
+      "nodeId": "deployment"
+    },
+    {
+      "id": "security-supply-chain",
+      "nodeId": "supply-chain"
+    },
+    {
+      "id": "ai-input-boundary",
+      "nodeId": "prompt-injection"
+    },
+    {
+      "id": "software-rss-pipeline",
+      "nodeId": "browser-tracing"
+    },
+    {
+      "id": "security-response",
+      "nodeId": "incident-response"
+    },
+    {
+      "id": "ai-evaluation",
+      "nodeId": "ai-evaluation"
+    },
+    {
+      "id": "software-architecture",
+      "nodeId": "architecture"
+    },
+    {
+      "id": "security-ids",
+      "nodeId": "ci-security"
+    },
+    {
+      "id": "ai-lora",
+      "nodeId": "lora"
+    },
+    {
+      "id": "software-testing",
+      "nodeId": "testing"
+    },
+    {
+      "id": "security-vulnerability",
+      "nodeId": "trusted-publishing"
+    },
+    {
+      "id": "ai-tool-contract",
+      "nodeId": "tool-calling"
+    },
+    {
+      "id": "software-repository",
+      "nodeId": "runtime-validation"
+    },
+    {
+      "id": "security-asset-discovery",
+      "nodeId": "ssrf"
+    },
+    {
+      "id": "ai-rag-evidence",
+      "nodeId": "rag"
+    },
+    {
+      "id": "software-api-contract",
+      "nodeId": "build-contract"
+    },
+    {
+      "id": "security-http",
+      "nodeId": "passkey"
+    },
+    {
+      "id": "ai-transformer",
+      "nodeId": "agent-memory"
+    },
+    {
+      "id": "software-react-state",
+      "nodeId": "react-state"
+    },
+    {
+      "id": "network-security-foundation",
+      "nodeId": "mcp-authorization"
+    },
+    {
+      "id": "ai-from-llm-to-agent",
+      "nodeId": "agent"
+    }
+  ],
+  "papers": [
+    {
+      "id": "arxiv-2610.22353",
+      "nodeId": "moe-routing"
+    },
+    {
+      "id": "arxiv-2610.22350",
+      "nodeId": "fde-delivery"
+    },
+    {
+      "id": "arxiv-2610.22327",
+      "nodeId": "timeseries-views"
+    },
+    {
+      "id": "arxiv-2610.22301",
+      "nodeId": "mcp-capabilities"
+    },
+    {
+      "id": "arxiv-2610.22293",
+      "nodeId": "continual-learning"
+    },
+    {
+      "id": "arxiv-2610.22290",
+      "nodeId": "rl-diversity"
+    },
+    {
+      "id": "arxiv-2610.22273",
+      "nodeId": "knowledge-workspace"
+    },
+    {
+      "id": "arxiv-2610.22245",
+      "nodeId": "model-routing"
+    },
+    {
+      "id": "arxiv-2610.22234",
+      "nodeId": "gui-code-agent"
+    },
+    {
+      "id": "arxiv-2610.22217",
+      "nodeId": "expert-distillation"
+    },
+    {
+      "id": "arxiv-2610.22039",
+      "nodeId": "dependency-tasks"
+    },
+    {
+      "id": "arxiv-2610.21914",
+      "nodeId": "review-cost"
+    },
+    {
+      "id": "arxiv-2610.21713",
+      "nodeId": "embedding-leakage"
+    },
+    {
+      "id": "arxiv-2610.21547",
+      "nodeId": "federated-poisoning"
+    },
+    {
+      "id": "arxiv-2610.21458",
+      "nodeId": "agent-provenance"
+    },
+    {
+      "id": "arxiv-2610.21373",
+      "nodeId": "rust-sast"
+    },
+    {
+      "id": "arxiv-2610.21372",
+      "nodeId": "dependency-transform"
+    },
+    {
+      "id": "arxiv-2610.21359",
+      "nodeId": "bug-task-synthesis"
+    },
+    {
+      "id": "arxiv-2610.21309",
+      "nodeId": "metamorphic-sast"
+    },
+    {
+      "id": "arxiv-2610.21248",
+      "nodeId": "code-calibration"
+    },
+    {
+      "id": "arxiv-2610.21245",
+      "nodeId": "rag-privacy"
+    },
+    {
+      "id": "arxiv-2610.21174",
+      "nodeId": "private-ann"
+    },
+    {
+      "id": "arxiv-2610.21144",
+      "nodeId": "review-evidence"
+    },
+    {
+      "id": "arxiv-2610.21063",
+      "nodeId": "effect-authorization"
+    },
+    {
+      "id": "arxiv-2610.20344",
+      "nodeId": "harness-engineering"
+    },
+    {
+      "id": "arxiv-2509.16941",
+      "nodeId": "swe-benchmark"
+    },
+    {
+      "id": "arxiv-2501.00656",
+      "nodeId": "open-training"
+    },
+    {
+      "id": "arxiv-2408.01605",
+      "nodeId": "cyber-evaluation"
+    },
+    {
+      "id": "arxiv-2407.01489",
+      "nodeId": "agentless-repair"
+    },
+    {
+      "id": "arxiv-2405.21060",
+      "nodeId": "ssm-duality"
+    },
+    {
+      "id": "arxiv-2405.15793",
+      "nodeId": "agent-computer-interface"
+    },
+    {
+      "id": "arxiv-2404.16130",
+      "nodeId": "graph-rag"
+    },
+    {
+      "id": "nids-fgpa",
+      "nodeId": "federated-nids"
+    }
+  ],
+  "rss": [
+    {
+      "id": "36bb5e2d96770585f0d44b4c",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "685d73c612600d0946084c00",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "efd190609fe6391c1adad5b6",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "4e136dbed23c32d31091ef47",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "d3f9ae1c2ba10d86307f647c",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "ca45c96d5dc75cd24bfd3a16",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "e8e6c613c6d890b38dde6989",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "42e2a299be50065c552077eb",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "7a3bb1c2affabc3f7acbdc47",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9951742f66039255ab3fdcdc",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "74f9a04fe859ff8bdd22cda9",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "2c99406676145984131ad545",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f8e247bae74a8074af9d7c53",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0459b64a308ecb6d243ac73f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0a9ce3cb2c0b0be540276923",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0c33f37b77487421446917e4",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0dd1fd721ba81dd8e2357c4f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "14d40cf0ebe2f9f91c28eeb5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "1b2325aaf2d8afe2c048f7fb",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "27f8e84750c7a2c6d0e4204c",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "2c031f37f8f94d68cb7e3678",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "361caf201e0f9696687abb39",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "405d96e4053686052978f0a2",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "50e4efa800797556e9f9976f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "5472a0d2cbe2cfd89f5f5a35",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "5548ce7d449eb1602d86bc2d",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "5b057aed1959591416b22af4",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "6fb4a2630b8d9d7099428943",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "7b0d7b61bcd913c5726ee075",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8810674a38d2c5db44bbf422",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "a01874e047f03d95604a4ec9",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "a7f30a7195e7677a8d7e955e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "a810a43cd7b5e9b91e603492",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b4021f8804b7aa40ba0f26ed",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b85bccb91c96488fc0b82e31",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "ca87b45eb522b9b0edb9cd79",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "d5578ee11f5c3405bd3ae261",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "da41d690d40d6516d8882f16",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "dd41f81f45fee6d9c2dfe8c8",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "df7264d659a5e02466f25b8f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e2c115b7ca503f2f17bf3264",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e386bf2cb285adc5bbf60bec",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f4765328b7a3050e022ca33f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9fe5971632f8c94a7575a773",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e0ebf799740314e48ad1eda4",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0480bea3c25c38d51f6d5a28",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f0b749017ea35fa974529ba9",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "99625486d7fee6b18e714c27",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "33f5365cda2c49ace672c770",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3490cc91887ab3d39a515b66",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "fc3a9480c0061663779f7809",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "042e2bafe239bb648205037d",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3d796c7a287bb9bb889e2c71",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "5a79951362a66bf9e7cf6c39",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "7e5328bf4ddc579cf924dd1c",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "e7cccde32993f65d4b4423c7",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "ab6f26a7747a1fc5df03b970",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "a1a9257fd1c6a58620f2d93f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "dcb762c40cb3ac21508c826d",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8fb66dc90ac6c6dd42bf2cc6",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "33dd453a5d6cf4fc8605973e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "6784f06d1192916a644e0e2e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "82fccf1fd5037dffa23ac256",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "20da8d0ff7ffdc5c513e2380",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "4e3c41e2a24f7063f106abde",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "80d1e0b133bfd62a7e251ab7",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "47a61dbbf31c4ec10b82213a",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "5bddf205a75f675a437c1bd0",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "2142de67deed9684a830c9c2",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3cdcced95740405099c9fea9",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "692642a77d22a7cc7f4ae15b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9a8a1656c44b017849e18867",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "fb1d6dbe235b0668f83fc222",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "a9f2bdbfd181deb5d979b9d3",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "dcbe6ac1153b6a26e7b19c28",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "3dac611cdbe03f0f6cb25980",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "d7f603185faf6d0da259ac90",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "64cab5501e97846f5c0fb149",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "a7dc18dd83179426cb5f3e24",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b74aacb2a10c7a098bd48596",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "94f94712481f09f517efabab",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "a7a0873813cd5f3087d10bbd",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "d879bce1a80c4c00c2a53b8b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f0528fd647438210eb85037f",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "424099bbebecdc17db872858",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9f544e2afe3b6f9b98c4e7b0",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "2474b846a3d5b302e42f0d0d",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "22b36686d5a9058efc8b0331",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "22e0d382bdca77c0db8d6f32",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "a5e24a240d3a2a2672d58738",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "5fc33caa472c3f11f7751920",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8e86d8b7b5c1affbcc33d458",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "21d16665d2d2c604d5bbafc4",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "440394cd561eebaa56f4c758",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "139da279fc899088539fda9d",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3e9d0df7de358b18169dc680",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "335d70e1f80a30ac3f41fc6c",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e29d8929e476c6f8da2b5bd4",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8a3926ff7eb0ec8994dbb9f1",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0f6af9216a8cfce8926ee785",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "17141e79cd46abd69331e18a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "bc480acc9f51e3a4bf5acd26",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "c19f9401f1105db685154a93",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "0037cc5e2abae8982626b772",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "9811fbd9d8fd56a190b8fb84",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "8f8f7a8acf382857b3dae5e7",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "4dc12c80a0ee4547407ad27d",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "a1395fb3ee8fdc270d43f15c",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e29c7d9e8f38b96915e9f950",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "4acadd04f4b874841d89393a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "d2edddab908586e5ff6b7e3a",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "0b726b4314a812f5d54ec7fa",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8fe67eb263858ac8821306e4",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "056cecccf50904be57515950",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "3edbdf641e6b274ebb60c211",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "defd66412492a85279b645d6",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "450e03ac8094fa7124860e98",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "1b192f8debc99896aa1da15b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f94a1e14f24f8dc6c638b282",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "99049eb0b0de3ccf0c515525",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "93032a99d1f6d9cc424a2807",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "8780b7d0f617408fa92039f1",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "9336bc7875d1aa24c69a5741",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "d52a60711a2294fb4d9e7010",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "1af7b450e55ac82fc4123cf1",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e5480b6f246e0d7d8dfa70bd",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "992a771e4de1b8c5756964ec",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "c2fdbd5fe49ef8f4e70150dd",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "a88a403fc91ad8c47c2df317",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "ef86c45bede1729f7ca852e8",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "782c899396e871f8b441f4b7",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f631c0f04ce91112a75f2e8f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "cc016820f0bc884ef3e2bf2e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "39abe25e0cfde2187d351057",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "5c8ae680dd77abfd3e37f545",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "63db06e4b038302f8630c676",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f3bbc745a4164ca259e08420",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "720264c5c81c72eaca3928d8",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "5b4654177f515375ec177cc3",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b3a0d30fddfdba85a93c6d54",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "cbc0303c00548687ef28f656",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9f71d6d6edf2ad26eb9de693",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "4ad0cdddd92523cc83cb678a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "2aed96c8b04faa2bdbefcdcd",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "03a3ef31ed05321a09729e56",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "25aeaf96d6fad3571a1f34d6",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "dfc2998d94c0b2900e8b44b5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "ab99105a5bb104b30cfba176",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "955cf7f10ae0017d60ca0e3c",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e3cabbfa4a1b424721810c68",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "047719512d691a470379b033",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0c946255813193e9fe4f4937",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3d656b91d08654c66d46b74f",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "ddbfb96acc86168c56507443",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "44ed99727fc390a3cb4a4267",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "3347fd7ff5a57cc2957df6c8",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "45bbfbd5b55ea49c35fbc1c4",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "85c197a0f293151051fa7413",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9c094cf2cb671c204c527061",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b4a14f219dea56c9c23f04de",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "63f3b923fe546d99d05c2ee5",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "953290a630f6ad632973b568",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "b19d966e00645518874ad19c",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "faa799e9f273467a0e5d5d8a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b968020aa10c60b6504fab65",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8f9ab84000f70f88cfd9d370",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "51eb3164f5f47075e0001567",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9e52a9e43e1aff72310ecadf",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3598700e3a0eb9ba442ca313",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "0910ed7a9686c01f0433762b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "722ace42b8769a0b72f66cb4",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "7f67aa6ba80d3391dd44841f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f0d9ff57cf8ad301164407ac",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "c55e2d61a6954ce27e3e6ceb",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "973e73a992a9bddedc65ec29",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "21189b0d54f1b2c81809cce0",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e51dafe291a232aa1da015f5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "14b11e090f16451f6d6663c4",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "e42a3031b5ace689cdcc0c5f",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "ae36e46a4c2ab4688e4ecf83",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0b7d2cd2049d5bf657a9f2b6",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "222dd05e1568088c9be3de69",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "fdf18cf0d5859945663a933e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "1a03669b599ddfdc513c8d42",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "ad1a0e134d45f43dc489c6d5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "4eba9ab13abfea1658a711d0",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "88a4b837662dca88da3e2ac9",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9cc235b60f13d836ea8bc89f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8d27938d0501c3674fa15692",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "142527d2d2fd3be9f0b11f93",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b5aa674e8b58162ca8018c0a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "1c5e6d2371c51e3d698e320a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "7ba675474f1da4d51bd6637a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "7481a8e3d43e4506f094e781",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "2aab7d21d64a560048de812b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "412dd7accdfb0c4287020a59",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "0997043dba9b9a0a9f37685e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "deec156032134693858ef8fa",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "cbe153997f398e595f92f78f",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "d106534b851b8380692679c9",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "977a0bb489c1fad569402b14",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "6cdd1fd1911e67c446e0a1af",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "19db8a85f68f4a742d7d8e09",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "efdd43d4353be9dff66736ca",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f8f3d0e728e2db36d72543c2",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "23c9b52308759b4634a4a1ea",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0d069c88408d063b68d4d414",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "803d4714a332ca81f87d9fef",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "402de2045bd5c8c6719e5e7a",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "41cdcfdb12c84dd3a4c14f9f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "701a80b2cb3d01a0c7e27037",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "351ac2814b293355205ff2ee",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "fba019d7d2d20f7ff64ed914",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "e0bf9b14b9ea2e5505f8125c",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "a77dffda25919207855ffd97",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "1f69b3c29b2b5e0b8ebd05da",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "b01ff6dcec9291711f64f9d3",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "776bc263cacf1ce14330e69c",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "82966dd55a5fb7a7f7c3e739",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "52d16306684cad732c1bdc01",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "44a919798a3039495da722f5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3f69d4ac899659c3e1ad03b8",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9fdc9442f24f80db59b0cfbb",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3fff170f9edffc777315ea69",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "74edd56be56fb87ec76519c3",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8ba30acc520416a43a2b21b5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "654051a91edbee3d95246a0e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "162ad222fadd2a67cd62ba10",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b619baadea155f634718a146",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0f9c0e546cb48ecdd44d90f4",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9b778957656662e4101e3983",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "490379944553ba3944f9ea45",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3deded1f8203b1934838e8d9",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "7c9497e14b2f5dcdd99effec",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "2537d98ef8a7fd89a3482f30",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "790f943690344e0748c5ab9a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "d1fc6f7e16c0852b31df2914",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "65028111ae3d6690b9f5e2e6",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "54808b7e05794c6e9d612189",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "29693cafaaeaff11b7a7a05b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "de2cd225d201925d5b955c9c",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "668bf3de105d3707d6ac6c5f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9dddbf404e43905de8b1771b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "825046bb5121e0747eb151e7",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "db26d1224466a41ca093d6f5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "3658c9520bf1c8feaf6cf46e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "54caea957a9ad622bd99dae5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "43a8f567cb33d95c4b016736",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "a67825275ae525ae4048f4f5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f84cbc17e89635ceb2a560ed",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "99456769104008063f3cae5c",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "47bb796e7db556196188db55",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "da43e06ffd40a6545af7f58b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8995783d29c7d1e1b892b749",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f7236faf5db7917d8f5fffe5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "af13d57fd13cd29e5c9a0ae6",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "abad253345f1edd29c8b9606",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "711b6cb9251179807b7372c3",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "e28cce29d2cbd368cee6727e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "38a683df082019aec6f9af53",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "8cbb82a98b70e4bef66f9cc2",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "74837245fc0a8ea6005cc36a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "08e2ca058ff0c8ba10cef0f5",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "aff8e8a67ef0a18725ae1f08",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "4e0d65fba757ed97af297e42",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "268dbe4228ae73f1284c8e8b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "f1bdd9594b7b6c3b441cde37",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "ce88e1c224e1141135e63e05",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "58a893012f2e005717d5e5fe",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8b5420f1688065a3f454d7b4",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "aa33a1c03913f4a374b18621",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "64d7b07011577ec470bc50a2",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "e7c2928a0a89405d5a5bfeec",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0e4b5ca697e2ff908928b79c",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "26de03af7891b5bea1ca514d",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "609e5b6863bca52b5d92c532",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "a7b106bf92c471d15c51dcd6",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "2d618599318a03ec85526aac",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e3861c46c77539d311b8a985",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "39b695b75706b1a66ee20361",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "2837f81c2a6431bb43277a99",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "1d6630a77f97e763a77a1a39",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e76df47c27c6c243fbca75da",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "3eae3ebe994eb32f1f03d578",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "fb803320bdbcab1931be9d6a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9233200c8581cd534108fe24",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "0de0186039a6b4a82ad6c38f",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "1f89bdc772e0521466e023e9",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "639ef65574e34030d4f1d551",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "616b44252e57f05e8a76ae3e",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "39f9f2a6273c9f6cfa5137ca",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b05d81f345521f7bb94c7a60",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "16d10539a948e2a3fbd50a97",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "03197002e2f6473f3b6489cf",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "b390e29cafc983ac20d8fe58",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "d52ea8f21cf35e5d8eb0554e",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "291c6daaabc4178f3c079483",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "16ac199f35589184bc038202",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "5a4828e3776f75f990b987d2",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "286e402651eb006bf7d8819a",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "7d4e8016fed9d26ccb1c357c",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "990aa815403c22231053427c",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "d15d22ca98fa4b3ffa0a2b1a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8cf67ee1e3c10689d9f63b33",
+      "disposition": "feed-only-no-direct-topic-evidence"
+    },
+    {
+      "id": "0181efb36ea40e8b8219b653",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "38ba20652b4a9418d98f6408",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "4e93f70ee51c93918ddbcebb",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "638c81b2e02ad005ef9b5b6a",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "8016c41e959b1acbbcd56a7c",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "971b62915f4f35ceb38cf1fd",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "9f6eb369cfb23f5f8dc8f1ea",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "cdf10636d7618838545d334b",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "e05b71ba92fb082d80a8c3de",
+      "disposition": "indexed-summary"
+    },
+    {
+      "id": "faee20a9511e72882fe4a4c0",
+      "disposition": "indexed-summary"
+    }
+  ],
+  "nodes": 89
+}

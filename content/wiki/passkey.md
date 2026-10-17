@@ -1,0 +1,80 @@
+---
+kind: "node"
+id: "passkey"
+title: "Passkey 与账户恢复"
+description: "从 WebAuthn 草案研究 Passkey，连同账户恢复与会话撤销一起建模。"
+category: "Security"
+tags: ["WebAuthn","Passkey","HTTP","认证","账户恢复"]
+parentIds: ["http"]
+status: "untracked"
+frame: "task"
+details: "从 WebAuthn 草案研究 Passkey，连同账户恢复与会话撤销一起建模。"
+learningPoints: ["站内文章导读","公钥认证在验证什么","抗钓鱼不等于账户永不失守","同步与设备绑定不能混为一谈"]
+relatedBlogs: [{"id":"security-http","title":"Passkey 的安全边界：没有密码，为什么仍要设计找回流程"}]
+relatedPapers: []
+relatedRss: []
+sources: [{"id":"blog-security-http","kind":"blog","title":"Passkey 的安全边界：没有密码，为什么仍要设计找回流程","url":"#blog/security-http","locator":"站内已审阅文章；保留 AI 辅助来源标记","excerpt":"从 WebAuthn 草案研究 Passkey，连同账户恢复与会话撤销一起建模。"},{"id":"security-http-reference-0","kind":"external","title":"WebAuthn Level 3 · 2026-05-15 候选推荐草案","url":"https://www.w3.org/TR/2026/CRD-webauthn-3-20260515/","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"}]
+relatedNodeIds: ["http","rss-identity"]
+updated: "2026-10-17"
+provenance: "agent-source-synthesis"
+aliases: ["WebAuthn","Passkey","HTTP","认证","账户恢复"]
+iconKey: "lead"
+iconLabel: "拴绳"
+iconReason: "拴绳对应密钥、会话和恢复通道的边界"
+icon: "/assets/inventory/wiki-icons/lead.png"
+---
+# Passkey 与账户恢复
+
+## 站内文章导读
+
+Passkey 常被概括为“指纹代替密码”。这个说法容易忽略真正的认证关系：网站验证的是挑战响应和凭据绑定，不是收到了一张指纹图片。体验简单了，账户生命周期设计并没有消失。
+
+本文阅读 WebAuthn Level 3 的 2026 年 5 月 15 日候选推荐草案快照，不将这个快照等同于最终推荐标准。不死图腾寓意账户恢复，而恢复路径本身也需要保护。
+
+出处：blog-security-http
+
+## 公钥认证在验证什么
+
+WebAuthn 建立依赖方与凭据之间的公钥认证。注册时保存必要的公钥凭据信息，认证时验证针对新挑战的响应。生物识别可以作为本地用户验证方式之一，不意味着网站得到生物特征数据。
+
+浏览器弹出验证框还不够。服务端要确认挑战属于当前流程，并检查预期来源、依赖方身份及要求的用户验证条件。把前端 JSON 存入数据库，并不能叫作完成认证。
+
+出处：blog-security-http
+
+## 抗钓鱼不等于账户永不失守
+
+站点身份绑定可以减少传统密码在仿冒页面被直接复用的风险，但会话被盗、设备解锁失守或薄弱的找回流程仍然可能导致接管。换一个登录按钮，却保留凭弱问题答案就能重置账户的旁路，整体强度仍由最弱路径决定。
+
+先画出注册、增加凭据、删除凭据、设备丢失、全部凭据不可用、发现异常登录这几条路径。每一步需要什么证据、会触发什么通知，应提前明确，而不是登录失败后临时补一个万能找回入口。
+
+出处：blog-security-http
+
+## 同步与设备绑定不能混为一谈
+
+用户可能使用跨设备同步凭据，也可能使用独立安全密钥。产品应说明恢复依赖哪个平台账户，什么时候需要备用设备，不能笼统保证“换手机绝不会丢”。具体能力取决于认证器和平台，无法只从标准名称推断。
+
+个人知识网站目前没有私有内容和编辑后台时，也没有必要为了展示新技术立刻增加账户。先回答哪些资源需要保护，再决定引入哪种认证，比先上一个登录框更稳妥。
+
+出处：blog-security-http
+
+## 登录之后仍然有会话风险
+
+认证完成通常会建立网站会话。Cookie 作用域、有效期、退出与撤销仍重要。高风险操作可以重新验证，但不宜每次阅读都弹认证，否则用户会对真正异常的确认请求失去耐心。
+
+验证矩阵可包含重复挑战、错误来源、注册中断、删除最后一个凭据、备用凭据恢复和会话撤销。使用自建应用与自己的设备，不把对陌生站点的试探当作学习步骤。
+
+出处：blog-security-http
+
+## 把恢复也当作主流程
+
+好的恢复体验需要同时考虑用户和攻击者：用户能否预先登记备用凭据，异常恢复会不会通知旧设备，成功恢复后旧会话是否失效。通知有帮助，但若攻击者已经控制全部联系渠道，它不是充分证明。
+
+Passkey 改善的是认证中的关键环节。学习它时同时追问“丢设备怎么办”“已有会话怎么办”“恢复后旧访问权怎么办”，才能避免被顺滑演示掩盖完整账户设计的复杂度。
+
+出处：blog-security-http
+
+## 相关知识
+
+[[http]] · [[rss-identity]]
+
+[[index]]

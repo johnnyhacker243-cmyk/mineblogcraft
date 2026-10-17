@@ -1,0 +1,86 @@
+---
+kind: "node"
+id: "react-state"
+title: "React 状态与视图过渡"
+description: "研究 React 19.3 视图过渡，先处理文章身份、请求竞争与减少动态效果。"
+category: "Software"
+tags: ["React","19.3","ViewTransition","状态管理","Frontend"]
+parentIds: ["frontend"]
+status: "untracked"
+frame: "task"
+details: "研究 React 19.3 视图过渡，先处理文章身份、请求竞争与减少动态效果。"
+learningPoints: ["站内文章导读","哪次更新应该过渡","连续的是对象身份","异步竞争比动效参数更紧急"]
+relatedBlogs: [{"id":"software-react-state","title":"React 19.3 的视图过渡：动画不能替状态管理做决定"}]
+relatedPapers: []
+relatedRss: []
+sources: [{"id":"blog-software-react-state","kind":"blog","title":"React 19.3 的视图过渡：动画不能替状态管理做决定","url":"#blog/software-react-state","locator":"站内已审阅文章；保留 AI 辅助来源标记","excerpt":"研究 React 19.3 视图过渡，先处理文章身份、请求竞争与减少动态效果。"},{"id":"software-react-state-reference-0","kind":"external","title":"React 19.3 · 官方发布说明","url":"https://react.dev/blog/2026/09/09/react-19-3","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"}]
+relatedNodeIds: ["frontend"]
+updated: "2026-10-17"
+provenance: "agent-source-synthesis"
+aliases: ["React","19.3","ViewTransition","状态管理","Frontend"]
+iconKey: "slime_ball"
+iconLabel: "黏液球"
+iconReason: "黏液球对应状态与画面的协调，动画不能代替状态"
+icon: "/assets/inventory/wiki-icons/slime_ball.png"
+---
+# React 状态与视图过渡
+
+## 站内文章导读
+
+从世界列表进入博客，如果只是突然替换内容，会缺少游戏菜单的连贯感；把整页做成复杂动画，又容易拖慢阅读。React 19.3 在 2026 年 9 月发布，为研究这类过渡提供了新入口。但“框架能做动画”和“页面值得加动画”是两件事。
+
+本文关注 ViewTransition 的状态边界与渐进增强，本站依赖不会因此自动升级。末影珍珠象征位置切换，好的过渡应帮助用户理解自己到了哪里，而不是制造一段无法操作的等待。
+
+出处：blog-software-react-state
+
+## 哪次更新应该过渡
+
+官方将 ViewTransition 列为该版本的稳定能力，并说明它与过渡更新协作。不能假定紧急更新也会自动获得同样动画。输入框打字、拖拽位置等高频反馈，与“进入一篇文章”具有不同的时效要求。
+
+状态模型可以只保存 selectedId 和页面模式。标题、正文地址、返回目标由它们推导，不再保存一份“动画后的标题”。否则慢请求会让新标题搭配旧正文，动画反而让错配更醒目。
+
+出处：blog-software-react-state
+
+## 连续的是对象身份
+
+列表物品与正文顶部物品应来自同一篇文章的数据，不应分别通过标题猜测。稳定 ID 更容易建立前后连续的对象。图标加载失败要有确定回退，不能把正文一起卡住。
+
+```text
+选择 A → 保存 A 的 ID
+→ 读取 A → 展示 A 的标题、物品和正文
+→ 返回仍定位到 A
+```
+
+这个流程即使关闭所有动画，也应正确。动画属于表现层；内容是否加载、返回能否继续浏览，是功能层的责任。
+
+出处：blog-software-react-state
+
+## 异步竞争比动效参数更紧急
+
+用户快速点击 A、B 时，A 的请求可能最后返回。没有取消或身份检查，就会出现 B 的标题与 A 的正文。可以绑定取消信号，并在提交结果前检查它是否仍属于当前文章。动画完成回调不应成为数据正确性的唯一保障。
+
+返回也必须有清楚语义。过渡未结束时再次返回，可以取消导航或可靠合并状态，但不能把用户留在一张已经淡出的空页面上。
+
+出处：blog-software-react-state
+
+## 减少动态效果与像素清晰度
+
+应尊重 prefers-reduced-motion。减少动态效果时可以直接切换，保留必要的加载反馈。不支持浏览器视图过渡时，同样应能完整阅读，而不是依赖兼容层维护第二套页面状态。
+
+像素文字尤其不适合长时间缩放。整数尺寸下清晰的字形，在非整数缩放中可能闪烁。对 Minecraft 界面，短暂的位置或明暗变化，通常比夸张缩放更容易保持原版质感。
+
+出处：blog-software-react-state
+
+## 测试未完成的过程
+
+模拟慢请求、连续切换、读取失败、快速返回和减少动态效果。检查标题正文是否同源、键盘焦点能否到达阅读区、后退是否有效。本文是测试设计，不把新版本能力描述成本站已启用功能。
+
+框架更新的价值，是让本来正确的状态变化更容易理解。状态模型不可靠时，漂亮过渡只会让错误更难定位。
+
+出处：blog-software-react-state
+
+## 相关知识
+
+[[frontend]]
+
+[[index]]

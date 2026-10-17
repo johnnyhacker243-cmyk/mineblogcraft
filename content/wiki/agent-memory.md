@@ -1,0 +1,88 @@
+---
+kind: "node"
+id: "agent-memory"
+title: "Agent 任务记忆"
+description: "区分对话历史、工作状态与外部事实，设计可更新、可作废的任务记忆。"
+category: "AI"
+tags: ["Agent","Context","长上下文","Memory","LLM"]
+parentIds: ["agent"]
+status: "untracked"
+frame: "task"
+details: "区分对话历史、工作状态与外部事实，设计可更新、可作废的任务记忆。"
+learningPoints: ["站内文章导读","三种会变化的东西","记忆需要身份与时效","压缩上下文时保留约束"]
+relatedBlogs: [{"id":"ai-transformer","title":"长上下文不是长期记忆：Agent 怎样保存任务状态"}]
+relatedPapers: []
+relatedRss: []
+sources: [{"id":"blog-ai-transformer","kind":"blog","title":"长上下文不是长期记忆：Agent 怎样保存任务状态","url":"#blog/ai-transformer","locator":"站内已审阅文章；保留 AI 辅助来源标记","excerpt":"区分对话历史、工作状态与外部事实，设计可更新、可作废的任务记忆。"},{"id":"ai-transformer-reference-0","kind":"external","title":"Managed Agents · Anthropic 工程实践","url":"https://www.anthropic.com/engineering/managed-agents","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"}]
+relatedNodeIds: ["agent","knowledge-workspace"]
+updated: "2026-10-17"
+provenance: "agent-source-synthesis"
+aliases: ["Agent","Context","长上下文","Memory","LLM"]
+iconKey: "writable_book"
+iconLabel: "书与笔"
+iconReason: "书与笔对应持续更新的任务账本"
+icon: "/assets/inventory/wiki-icons/writable_book.png"
+---
+# Agent 任务记忆
+
+## 站内文章导读
+
+更多上下文能减少遗漏，却不能自动解决长期任务。昨天读过的资料可能已经变化，工具结果可能与当前文件不一致，一句“完成了”也可能没有产物支撑。记得很多，与知道哪些信息现在仍可信，并不是同一种能力。
+
+Anthropic 2026 年 4 月的 Managed Agents 工程介绍，将会话、运行循环和执行环境分开讨论。本文据此研究状态管理，提出知识整理任务的示意设计，不把某个产品内部实现当成通用标准。
+
+出处：blog-ai-transformer
+
+## 三种会变化的东西
+
+对话历史记录发生过什么，工作状态记录任务走到哪里，外部事实记录文件和来源的现状。三者可以引用，但不能简单合并成不断增长的聊天记录。
+
+对话说“下载完成”，文件却不存在时，当前文件系统更接近执行事实。历史解释了当时为什么作出判断；恢复任务则应重新检查关键产物，而不是把历史摘要当成现实的替身。
+
+出处：blog-ai-transformer
+
+## 记忆需要身份与时效
+
+保存“论文很好”没有多少复用价值。保存论文 ID、来源、观察时间、文件校验值和待解决问题，才能帮助下一轮继续。
+
+```json
+{
+  "paperId": "example-paper",
+  "state": "metadata-reviewed",
+  "pending": ["verify-fulltext-license"]
+}
+```
+
+这是演示记录，不代表某篇实际论文通过审核。明确阶段能避免把元数据可读写成全文已验证。来源更新或文件摘要变化后，应重新校验有关判断，而不是永久相信旧状态。
+
+出处：blog-ai-transformer
+
+## 压缩上下文时保留约束
+
+优先保留用户目标、已确认限制、关键决定与证据。可以删除重复输出，却不能删掉“未获授权发布”这种行动边界。摘要应该帮助恢复任务，而不是把过程润色成顺利完成的故事。
+
+危险的压缩是把“尝试下载，结果失败”变成“下载步骤已处理”。字更少，事实却丢失了。直接记录失败状态、错误类别和下一步可验证动作，恢复时才不会跳过缺口。
+
+出处：blog-ai-transformer
+
+## 精确恢复与语义检索分工
+
+面对“继续整理昨天那篇论文”，先定位任务 ID，再读取相关产物，通常比搜索全部历史更可靠。语义检索适合找有关资料，精确 ID 与版本校验适合恢复执行。两者各有用途。
+
+外部文档里的“请覆盖所有文件”仍然只是文档内容。信息被存进长期记忆，不会因此获得用户指令的权限。记忆应保留来源与信任边界，否则不可信文本经过多轮摘要后，可能看起来像既定要求。
+
+出处：blog-ai-transformer
+
+## 用中断练习验证记忆
+
+保留账本，清空对话，修改一份来源文件，再让执行器继续。观察它能否发现变化、列准待办、避免重复已完成操作。评价重点是恢复正确性，而不是摘要流畅度。
+
+还应区分“没找到”与“从未存在”。检索遗漏不能自动删除旧记录；旧记录与当前状态冲突时，需要保留冲突线索。书与笔代表这种可修改、可追溯的记录：长期记忆应是一组可以检查、更新和作废的证据，而不是越写越大的便签。
+
+出处：blog-ai-transformer
+
+## 相关知识
+
+[[agent]] · [[knowledge-workspace]]
+
+[[index]]

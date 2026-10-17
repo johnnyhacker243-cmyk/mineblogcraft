@@ -9,6 +9,8 @@ export interface KnowledgeSnippet {
   relatedBlogIds: string[];
   relatedPaperIds: string[];
   score: number;
+  file: string;
+  sources: { title: string; url: string; locator: string }[];
 }
 // Stable, evidence-only boundary for a future RAG adapter. No model or Prompt
 // execution: this method retrieves existing content and preserves its IDs.
@@ -25,10 +27,18 @@ export async function retrieveKnowledge(
     .map(({ node, score }) => ({
       id: node.id,
       title: node.title,
-      text: node.details,
+      text: node.sections
+        .map((section) => `${section.title}\n${section.text}`)
+        .join("\n\n"),
       sourceType: "wiki",
       relatedBlogIds: node.relatedBlogs.map((r) => r.id),
       relatedPaperIds: node.relatedPapers.map((r) => r.id),
       score,
+      file: node.file,
+      sources: node.sources.map(({ title, url, locator }) => ({
+        title,
+        url,
+        locator,
+      })),
     }));
 }

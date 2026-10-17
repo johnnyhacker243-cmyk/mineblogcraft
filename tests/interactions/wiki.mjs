@@ -21,7 +21,7 @@ for (const [q, id] of [
   ["agent", "agent"],
   ["扩散方程", "diffusion"],
   ["mathematical", "modeling"],
-  ["NIDS-FGPA", "ai-security"],
+  ["NIDS-FGPA", "federated-nids"],
   ["Agnet", "agent"],
 ])
   assert.equal(search.search(q, nodes)[0]?.node.id, id, q);
@@ -90,7 +90,7 @@ try {
   for (const [cat, count] of [
     ["Security", nodes.filter((n) => n.category === "Security").length],
     ["Software", nodes.filter((n) => n.category === "Software").length],
-    ["Modeling", 6],
+    ["Modeling", nodes.filter((n) => n.category === "Modeling").length],
     ["AI", nodes.filter((n) => n.category === "AI").length],
   ]) {
     await p.getByRole("tab", { name: cat, exact: true }).click();

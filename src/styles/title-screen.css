@@ -126,3 +126,32 @@
     left: calc(50% + 70px * var(--gui-scale-x));
   }
 }
+.menu-music-toggle {
+  position: absolute;
+  z-index: 10;
+  top: max(16px, env(safe-area-inset-top));
+  right: max(16px, env(safe-area-inset-right));
+  width: clamp(36px, 3vw, 52px);
+  height: clamp(36px, 3vw, 52px);
+  padding: 8px;
+  border: 2px solid;
+  border-color: #aaa #333 #333 #aaa;
+  border-radius: 0;
+  background: #262626b8;
+  color: #ccc;
+  cursor: pointer;
+}
+.menu-music-toggle:hover,
+.menu-music-toggle:focus-visible {
+  color: #ffff55;
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+.menu-music-toggle[data-playing="true"] {
+  color: #fff;
+}
+.menu-music-toggle svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

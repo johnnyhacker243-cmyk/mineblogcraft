@@ -36,6 +36,8 @@ export function WikiTree({
     panX: number;
     panY: number;
   } | null>(null);
+  const mapWidth = Math.max(700, ...nodes.map((n) => n.x + 130));
+  const mapHeight = Math.max(330, ...nodes.map((n) => n.y + 110));
   useEffect(() => {
     setView({ x: 16, y: 0, zoom: 0.85 });
     setTip(null);
@@ -167,14 +169,14 @@ export function WikiTree({
           setView((v) => ({
             ...v,
             x: Math.max(
-              -650,
+              -mapWidth * view.zoom,
               Math.min(
                 450,
                 drag.current!.panX + (e.clientX - drag.current!.x) / scale,
               ),
             ),
             y: Math.max(
-              -350,
+              -mapHeight * view.zoom,
               Math.min(
                 250,
                 drag.current!.panY + (e.clientY - drag.current!.y) / scale,
@@ -193,12 +195,14 @@ export function WikiTree({
         className="wiki-map"
         data-view={`${view.x},${view.y},${view.zoom}`}
         style={{
+          width: mapWidth,
+          height: mapHeight,
           transform: `translate(${view.x * scale}px,${view.y * scale}px) scale(${view.zoom * scale})`,
         }}
       >
         <svg
-          width="700"
-          height="330"
+          width={mapWidth}
+          height={mapHeight}
           className="wiki-connections"
           aria-hidden="true"
         >

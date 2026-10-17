@@ -109,3 +109,10 @@ PDF.js 使用 Mozilla 官方 npm 包 pdfjs-dist 6.4.299（Apache-2.0）。script
 ## 2024 年以来的近期开放研究目录（2026-10-16）
 
 本批 32 篇 arXiv PDF 已逐项核实版本页标注 CC BY 4.0 或 CC BY-SA 4.0，区别于此前仅允许源站展示的文献。提供 byte-identical 完整静态副本，不修改正文、不移除署名及声明；同时发布原作者、标题、原始地址、许可链接、文件 SHA-256 和无修改说明（public/papers/fulltext/ATTRIBUTION.json）。BY-SA 文件继续受相同许可约束，不将论文设为本站独占版权。PDF 被 Git 忽略，构建时仅恢复已审核哈希的开放副本。保留 NIDS-FGPA 的原 CC BY 4.0 署名。原版 Minecraft 书架、书页和附魔书资源不变，许可边界不扩展。
+
+
+## Wiki 物品与原版菜单音乐（2026-10-17）
+
+用户要求延续原版物品图标并加入原版菜单音乐。scripts/import-wiki-media.py 校验既有本地 1.21.1 客户端 SHA-1，按知识节点选取 44 种未改写物品贴图；clock_00 和 compass_00 是原版动画纹理的静态帧。图标与来源哈希保存在忽略的 public/assets/inventory/wiki-icons/。
+
+四首菜单音乐 Beginning 2、Floating Trees、Moog City 2、Mutation 来自用户既有客户端资源对象，逐文件核对固定 SHA-1 后原样复制；不抓取第三方音源，不改写音频。public/assets/sounds/menu-*.ogg 按现有 .gitignore 排除，云端仅通过已有资源清单恢复核验。音乐权利归原权利人，用户要求本地使用及既有测试网站运行不构成开放再分发许可；原客户端和音频不提交 Git。界面中的喇叭是代码绘制的像素形状。

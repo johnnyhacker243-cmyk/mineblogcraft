@@ -1,4 +1,3 @@
-import data from "../data/wiki.json";
 import blogs from "../data/blogs.json";
 import papers from "../data/papers.json";
 import sources from "../../config/rssSources.json";
@@ -9,6 +8,8 @@ export interface WikiRepository {
 export class StaticWikiRepository implements WikiRepository {
   async getAllNodes(signal?: AbortSignal) {
     if (signal?.aborted) throw new DOMException("Aborted", "AbortError");
+    const { default: data } = await import("../data/wiki.json");
+    signal?.throwIfAborted();
     const nodes = structuredClone(data) as WikiNodeData[];
     const blogTitles = new Map(blogs.map((b) => [b.id, b.title]));
     const paperTitles = new Map(papers.map((p) => [p.id, p.title]));

@@ -294,8 +294,8 @@
     },
     {
       "path": "assets/inventory/font.json",
-      "size": 36571,
-      "sha256": "5ca4b313e19d65c99d28949012ec23a634de9237e28558f1d12541c397f45abb"
+      "size": 37042,
+      "sha256": "e48fc8021ce27e46ad76c96ec9f6f057dfeeb216c4cb6a67deb5128679e8e9f5"
     },
     {
       "path": "assets/inventory/food-empty.png",
@@ -649,8 +649,8 @@
     },
     {
       "path": "assets/inventory/unifont.png",
-      "size": 71325,
-      "sha256": "a53a8f740c2cff0ea8d3a14ad63ea885e938391313ba46c4d0d2865d7666b504"
+      "size": 72253,
+      "sha256": "a39cba11d18fcb8332548bbd8933a60b5ec89cb6a378a04e6e48185dc3b9623e"
     },
     {
       "path": "assets/inventory/wiki-challenge-obtained.png",
@@ -681,6 +681,226 @@
       "path": "assets/inventory/wiki-husbandry.png",
       "size": 186,
       "sha256": "324fa08c758ea228711d312b6cabec69c5494646173f28b4047372a310573cad"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/amethyst_shard.png",
+      "size": 184,
+      "sha256": "24fa75f6b75202d890019ec7a901d525918cfacd3e8c0e6cb0580c7b7933b363"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/book.png",
+      "size": 203,
+      "sha256": "e9f710d62e16776df7e5bf05dcaa187d40cc1428f4fd18644e3ff67062f9fff2"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/bundle.png",
+      "size": 232,
+      "sha256": "357b6eb5f03aceb375157a3bc371b99f92c3bc743e87c538ddccaebc28460315"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/chain.png",
+      "size": 118,
+      "sha256": "a2cfaf24d4442a9f3401b6df9ee3d30e33f39dd455786eaed3963d617f7869d9"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/chest_minecart.png",
+      "size": 265,
+      "sha256": "2ed9c4cf90de90086a7aa5376f74087c050ab2713c500c73f721b60a5c7da7ab"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/clock_00.png",
+      "size": 252,
+      "sha256": "52652043a299f6d27da9229f1ccadd64e94018e6126c0bb2cbdf283bec114d87"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/comparator.png",
+      "size": 189,
+      "sha256": "5451596b2a880a8e37777c2bd9f7080049c4c15b8fed9dca2e9e1acb87522e76"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/compass_00.png",
+      "size": 219,
+      "sha256": "4f39dc942808fb5fe37d3307eb22320523ead9bd38c808b54d516f20e20c9ae2"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/diamond_pickaxe.png",
+      "size": 182,
+      "sha256": "7672c209d0c66c43d297b3d04513c9e789d03f5ea6ff1e564a4dbc1fd78a5c88"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/emerald.png",
+      "size": 182,
+      "sha256": "7aa1f12ee48666b2c3ae56fd9884ee95bf315795bfd1fd6e4ac3d3811ae3aacb"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/enchanted_book.png",
+      "size": 251,
+      "sha256": "f96da147fcf6f373df00ab5181043ea0c76af4ba7025f43f377f678ac466fb43"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/ender_eye.png",
+      "size": 214,
+      "sha256": "cb9003416a29bdd869a494467a01dba3403b221b88fe3e0a0dc41906d5d49afa"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/ender_pearl.png",
+      "size": 206,
+      "sha256": "ff40529856c82317ce24cec4ba384971f56aec0f8ce3756e059d2eb17f3b310a"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/experience_bottle.png",
+      "size": 240,
+      "sha256": "bf824bc91dc620010fed8c7ae9da9f91d4ce7910317b1a056029fd2dad4b3a8c"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/firework_star.png",
+      "size": 198,
+      "sha256": "1cf03410f1a94f9426b402c1f2518c23c5c8f9d0d5f3d33f108406734507eef9"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/flint_and_steel.png",
+      "size": 213,
+      "sha256": "5731c0064733dbd0e30c7033927a218341ca043b1a2240f8714428b0b554203c"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/glass_bottle.png",
+      "size": 165,
+      "sha256": "6a09a39bb6c41bc92bd5eca1f51caf5b582a85f68206b164476c8e14a4669416"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/gold_nugget.png",
+      "size": 136,
+      "sha256": "73c9c64b35e15a47366802fa899b115fce6380d1f19bda38dd7ef196182029ca"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/golden_apple.png",
+      "size": 204,
+      "sha256": "de0de35dfe21f5644a9de5b8c46c1154e004c1454e60100ed61e3d3aec8cb972"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/hopper_minecart.png",
+      "size": 246,
+      "sha256": "15efe0439b50514898da93a2c87dcbf35b2d83db2a08ad51d9617ec4a6844602"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/iron_axe.png",
+      "size": 178,
+      "sha256": "8dea40bac06c6f14bb0ad9e8b47de63250f6d6a46ae9439b85ddd1377f1edb49"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/iron_chestplate.png",
+      "size": 197,
+      "sha256": "028d1a738128c5622471a9d1b94f00b49a696e7c4fac3dfccd07272e50021f71"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/iron_door.png",
+      "size": 153,
+      "sha256": "f8d15cc3eba6a45a56e9b16d36035ba8b84679a95d6994d5b14711b28aad8b03"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/iron_helmet.png",
+      "size": 157,
+      "sha256": "db530074cf0a2b1e6d6958f66536625764f47e00e3c1cc9f558586c24a5cf9dc"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/iron_ingot.png",
+      "size": 189,
+      "sha256": "4625aa2c32c74bd6796c7ba8e7ee6300db8d2f24fb38c9d9324a63b262a44391"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/iron_pickaxe.png",
+      "size": 182,
+      "sha256": "b211a9b920d8f22ce5451780855155644d14ca7b85ab16d31f9c0b572cdda7ee"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/lead.png",
+      "size": 187,
+      "sha256": "8970ef231b71a4aec68b56d77d4bab27d69fdeb59e4a5faa6c837c3ccc9f87a5"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/map.png",
+      "size": 177,
+      "sha256": "22e0f1856b995aa6a3f71525bba330ec31e739506d5565f52c05a0c60f93db42"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/name_tag.png",
+      "size": 209,
+      "sha256": "320018673e5a4ed4246aa0599439a97c91df74dcb966d904e83b3589f496b0d9"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/netherite_ingot.png",
+      "size": 214,
+      "sha256": "21418e66ca43961e91fb8cfba645a4364ca340426bca82f073d140f202dfe28b"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/painting.png",
+      "size": 203,
+      "sha256": "9aa0c371a826afabb622b9fc24993862582bdcaf111e806e3a94e0ea0eb0325a"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/paper.png",
+      "size": 176,
+      "sha256": "8ffee002bbc339552eb4d6be5948eb4eb66d016c19e7bbc55bc1cd4a575cc44a"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/redstone.png",
+      "size": 179,
+      "sha256": "6d0e6a1fd54142cd3de649e1100c428733512b322a0b0a530f62eae9f86881ec"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/repeater.png",
+      "size": 188,
+      "sha256": "8159510efca23ee914da39cf35d1c3288fa7236a5bed23356358341044675dd7"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/shears.png",
+      "size": 189,
+      "sha256": "63be8d8865a04be4109aaae4fbb5d5b94c573e0f9f52ba79b444660eefce33d8"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/slime_ball.png",
+      "size": 197,
+      "sha256": "b6dc3e58310ed184499862f67ed6462cd469c9e3d4655b01758474bd77a478b1"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/spectral_arrow.png",
+      "size": 140,
+      "sha256": "53810b7511fea4f4e317bb0a3f146863edefc8fa1f1812afd3801c0863eac21f"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/spider_eye.png",
+      "size": 159,
+      "sha256": "d499849330581ec013e2b83e5c89e628f71ec2987d1363611a7810e4ec459a06"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/spyglass.png",
+      "size": 211,
+      "sha256": "b09e9b9046db1935cd9c35a2e4e3b7763485ec3effbc5077ebeaec1c28513b43"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/string.png",
+      "size": 166,
+      "sha256": "ded6537ee0356cfd3a0024fccd1a7ee478b58279a0bace73b689cc62369d26da"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/totem_of_undying.png",
+      "size": 214,
+      "sha256": "2ee3ccdd17f0b9acb13bac37b3b9d4db6eac72aa350a2b1ab9cc587e2f02514a"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/water_bucket.png",
+      "size": 219,
+      "sha256": "0efb2f243397e7d82a9a9e97b6e8fc39fc6c7972bf86b9b6ed97e7101b79c0a1"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/wheat_seeds.png",
+      "size": 142,
+      "sha256": "3239486bef9ea883e438c068cb97c24f1a38924b54b3c2e6209f792fc222c8d3"
+    },
+    {
+      "path": "assets/inventory/wiki-icons/writable_book.png",
+      "size": 247,
+      "sha256": "181b670aafb03287849957ee882863c3924a2aaa826f3f44ab94bea906c54228"
     },
     {
       "path": "assets/inventory/wiki-nether.png",
@@ -876,6 +1096,26 @@
       "path": "assets/sounds/click.ogg",
       "size": 9138,
       "sha256": "c8e78aea3a020d743189fd4d5b0636b791b557b608c62f6474d0f16abcfcc0d8"
+    },
+    {
+      "path": "assets/sounds/menu-beginning_2.ogg",
+      "size": 1724614,
+      "sha256": "f810dda6b014b5d6f6f0c5c2dddf5840865f47a3c9c5eba9554bf491aa6656f4"
+    },
+    {
+      "path": "assets/sounds/menu-floating_trees.ogg",
+      "size": 2017245,
+      "sha256": "42612fae1c287797f71951ca95c9b1e4967ded4fff01da81c2aaf589285aab1c"
+    },
+    {
+      "path": "assets/sounds/menu-moog_city_2.ogg",
+      "size": 1809290,
+      "sha256": "a5b5cf4d7a536d29d74a7a916c7905b81d105ffe0033f7378e98feb4b98c9279"
+    },
+    {
+      "path": "assets/sounds/menu-mutation.ogg",
+      "size": 1744657,
+      "sha256": "676d33a3c33805e8b1bc7453468b29c31cd9ebf5a7843e912ebf8416d22a6820"
     }
   ]
 }

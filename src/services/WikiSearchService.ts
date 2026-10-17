@@ -22,7 +22,12 @@ function edits(a: string, b: string) {
 }
 function match(q: string, text: string) {
   if (text === q) return 1;
-  if (text.includes(q)) return 0.9;
+  if (
+    text.includes(q) &&
+    (!/^[a-z0-9 ]+$/.test(q) || text.startsWith(q) || text.includes(" " + q))
+  )
+    return 0.9;
+  if (text.length > 2000) return 0;
   if (q.length < 3) return 0;
   const limit = q.length < 5 ? 1 : 2;
   for (const word of text.split(/\s+/)) {
@@ -47,9 +52,23 @@ export class LocalWikiSearchService implements WikiSearch {
       index = nodes.map((node) => ({
         node,
         fields: [
+          [norm(node.id), 140],
+          ...[node.title, ...(node.aliases ?? [])].map(
+            (value) => [norm(value), 100] as [string, number],
+          ),
           [norm([node.title, ...(node.aliases ?? [])].join(" ")), 100],
           [norm([...node.tags, node.category].join(" ")), 65],
           [norm(node.description), 30],
+          [
+            norm(
+              [
+                node.details,
+                ...(node.sections ?? []).map((s) => s.text),
+                ...(node.sources ?? []).map((s) => s.title + " " + s.excerpt),
+              ].join(" "),
+            ),
+            10,
+          ],
           [
             norm(
               [...node.relatedBlogs, ...node.relatedPapers]

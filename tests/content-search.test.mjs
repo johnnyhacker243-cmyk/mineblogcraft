@@ -37,6 +37,7 @@ test("Knowledge names, Chinese aliases, partial terms and typos rank concepts", 
     ["工具调用", "tool-calling"],
     ["nmap", "nmap"],
     ["agnte", "agent"],
+    ["Agnet", "agent"],
   ])
     assert.equal(wikiSearch.search(query, wiki)[0]?.node.id, id, query);
   assert.equal(wikiSearch.search("zzzzzzzzzzzz", wiki).length, 0);

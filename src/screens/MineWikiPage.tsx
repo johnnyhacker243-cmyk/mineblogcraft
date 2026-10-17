@@ -104,7 +104,7 @@ export function MineWikiPage({ back }: { back: () => void }) {
         <h1>
           <InventoryText text="MineWiki" />
         </h1>
-        <InventoryText text="知识进度 · 技术成长树" />
+        <InventoryText text="知识百科 · 来源证据 · 双向链接" />
         <div className="wiki-search">
           <label htmlFor="wiki-search">
             <InventoryText text="搜索知识" />
@@ -127,6 +127,30 @@ export function MineWikiPage({ back }: { back: () => void }) {
             />
           </span>
         </div>
+        <select
+          className="wiki-directory"
+          aria-label="知识目录"
+          value=""
+          onChange={(event) => {
+            const n = nodes.find((n) => n.id === event.target.value);
+            if (n) {
+              setCategory(n.category);
+              setFocus(n.id);
+              setDetail(n);
+            }
+          }}
+        >
+          <option value="">
+            {query
+              ? `浏览 ${results.length} 个搜索结果…`
+              : `浏览 ${category} 全部知识…`}
+          </option>
+          {(query ? results.map((r) => r.node) : visible).map((n) => (
+            <option key={n.id} value={n.id}>
+              {n.title}
+            </option>
+          ))}
+        </select>
       </header>
       <div className="wiki-window">
         <WikiTabs category={category} select={select} />
@@ -151,7 +175,20 @@ export function MineWikiPage({ back }: { back: () => void }) {
             setDetail(n);
           }}
         />
-        {detail && <WikiDetailPanel node={detail} close={closeDetail} />}
+        {detail && (
+          <WikiDetailPanel
+            node={detail}
+            close={closeDetail}
+            navigate={(id) => {
+              const n = nodes.find((n) => n.id === id);
+              if (n) {
+                setCategory(n.category);
+                setFocus(n.id);
+                setDetail(n);
+              }
+            }}
+          />
+        )}
       </div>
       {error && (
         <div role="alert">

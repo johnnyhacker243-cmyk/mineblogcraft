@@ -1,0 +1,97 @@
+---
+kind: "node"
+id: "lora"
+title: "LoRA 与受控微调比较"
+description: "结合 2026 年可学习秩与切空间优化研究，讨论 LoRA 容量、预算与比较方法。"
+category: "AI"
+tags: ["LoRA","LR-LoRA","LoRA-TSD","Fine-tuning","机器学习","实验设计"]
+parentIds: ["deep-learning"]
+status: "untracked"
+frame: "task"
+details: "结合 2026 年可学习秩与切空间优化研究，讨论 LoRA 容量、预算与比较方法。"
+learningPoints: ["站内文章导读","低秩约束到底约束什么","两条新路线：改变容量，还是改变更新方式","比较方法之前先对齐预算"]
+relatedBlogs: [{"id":"ai-lora","title":"从 LR-LoRA 到 LoRA-TSD：微调比较为什么必须控制变量"}]
+relatedPapers: []
+relatedRss: []
+sources: [{"id":"blog-ai-lora","kind":"blog","title":"从 LR-LoRA 到 LoRA-TSD：微调比较为什么必须控制变量","url":"#blog/ai-lora","locator":"站内已审阅文章；保留 AI 辅助来源标记","excerpt":"结合 2026 年可学习秩与切空间优化研究，讨论 LoRA 容量、预算与比较方法。"},{"id":"ai-lora-reference-0","kind":"external","title":"Parameter-Efficient Fine-Tuning with Learnable Rank · 2026 预印本","url":"https://arxiv.org/abs/2606.04325","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"},{"id":"ai-lora-reference-1","kind":"external","title":"LoRA-TSD: Tangent-Space Spectral Descent · 2026 预印本","url":"https://arxiv.org/abs/2609.02734","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"},{"id":"ai-lora-reference-2","kind":"external","title":"LoRA Without Regret · Thinking Machines Lab","url":"https://thinkingmachines.ai/blog/lora/","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"}]
+relatedNodeIds: ["deep-learning"]
+updated: "2026-10-17"
+provenance: "agent-source-synthesis"
+aliases: ["LoRA","LR-LoRA","LoRA-TSD","Fine-tuning","机器学习","实验设计"]
+iconKey: "netherite_ingot"
+iconLabel: "下界合金锭"
+iconReason: "下界合金锭对应有限参数下的模型调整"
+icon: "/assets/inventory/wiki-icons/netherite_ingot.png"
+---
+# LoRA 与受控微调比较
+
+## 站内文章导读
+
+LoRA 常被理解成“低成本替代全参数微调”。这个表述省去了一个关键前提：在哪种任务、数据规模和优化设置下替代？若两种方法使用不同学习率、训练预算或可训练层，结论可能主要反映实验设置，而不是方法本身。
+
+本文结合 2026 年 6 月的 LR-LoRA 与 9 月的 LoRA-TSD 预印本，回看 2025 年 LoRA Without Regret 的实验问题。新论文的机制介绍以摘要及公开材料为依据，不将预印本主张视为已复现结论。青金石象征有限资源下的定向调整，而不是保证成功的附魔材料。
+
+出处：blog-ai-lora
+
+## 低秩约束到底约束什么
+
+LoRA 用较低秩的可训练更新表达原权重的变化。它减少需要训练的参数，但同时限制了更新空间。秩不是一个越小越先进的指标，也不能仅凭参数量推断模型最终能学到多少内容。
+
+2025 年的 LoRA Without Regret 讨论了秩、训练设置与任务之间的关系。值得带走的是：结果需要与条件一起阅读，不能把特定设置下接近全参数微调的表现，推广成所有任务上永远等价。
+
+出处：blog-ai-lora
+
+## 两条新路线：改变容量，还是改变更新方式
+
+LR-LoRA 的摘要提出在训练中学习各层的秩，而不是给所有层统一设定固定值。LoRA-TSD 则研究低秩更新的几何结构，用固定秩矩阵流形的切空间组织优化步骤。两者不能被合并成一句“又一个更好的 LoRA”：前者改变容量分配，后者侧重更新方向与优化方式。
+
+最简表达是 ΔW = sBA。若 B 的形状为 d×r，A 为 r×k，那么更新矩阵的秩不超过 r。给定同一 r，不同优化器仍可能走出不同轨迹；允许不同层选择不同 r，也改变了可训练参数分布。因此比较时必须同时记录参数预算与优化设置。
+
+只阅读摘要还不足以判断收益能否迁移到自己的任务。需要继续核对实现、基线调参、计算预算和统计波动。本文不摘录“领先所有对手”作为普遍结论，也不生成未经运行的成绩表。
+
+出处：blog-ai-lora
+
+## 比较方法之前先对齐预算
+
+设想要让模型学习技术文档中的固定输出格式。可以比较全参数微调与多个 LoRA 秩，但应固定训练集、测试集、基础模型与评价规则，再明确训练步数或计算预算如何对齐。
+
+学习率也不宜简单共用一个默认值。不同参数化方式可能有不同合适范围。只调优其中一种方法，然后宣布另一种落后，会把调参投入误写成算法能力差异。
+
+出处：blog-ai-lora
+
+## 数据规模会改变问题
+
+少量风格样本和大量新知识样本，不一定需要相同容量。如果测试只检验格式一致性，就不能据此声称模型已经可靠掌握整套专业知识。评价目标应与训练目标一一对应。
+
+```text
+固定：基础模型、样本划分、评价题
+变化：秩、可训练模块、学习率
+记录：质量、训练成本、推理约束
+禁止：训练题泄漏到最终测试
+```
+
+这是一份实验设计，不是跑分记录。没有实际训练日志，就不应补上看似精确的提升百分比或显存数字。
+
+出处：blog-ai-lora
+
+## 微调与 RAG 可以分工
+
+对于会不断更新的论文和博客，先检索再引用，通常更容易保持来源可追溯。微调可以研究输出格式、任务策略或稳定行为，但不应成为把所有新资料永久写进权重的默认答案。
+
+两种路线也可以结合，但评价要拆开：格式是否稳定、事实是否有证据、资料更新后能否及时反映。如果只看答案流畅度，无法分辨模型是在引用资料还是凭旧记忆补全。
+
+出处：blog-ai-lora
+
+## 最容易被忽略的是基线
+
+训练前先测不微调的基础模型，再测只改提示与检索的简单方案。如果简单方案已满足需求，复杂训练未必有足够收益。若训练确实更好，也要检查改进是否集中在少数模板化题型。
+
+这篇研究带来的启发是实验纪律，而不是某个固定 rank 推荐值。把条件、成本和误差一起记录，才能知道一次微调究竟改善了什么，又牺牲了什么。
+
+出处：blog-ai-lora
+
+## 相关知识
+
+[[deep-learning]]
+
+[[index]]

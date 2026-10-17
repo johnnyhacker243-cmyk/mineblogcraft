@@ -1,0 +1,91 @@
+---
+kind: "node"
+id: "ai-evaluation"
+title: "Agent 终态评估"
+category: "AI"
+description: "为 Agent 设计结构、行为与内容评价，检查终态而不只相信完成声明。"
+tags: ["AI Evaluation","任务正确性、证据与运行边界的评价","Agent","Evals","评估","机器学习","Testing"]
+icon: "/assets/inventory/wiki-icons/experience_bottle.png"
+parentIds: ["machine-learning"]
+status: "untracked"
+frame: "goal"
+details: "为 Agent 设计结构、行为与内容评价，检查终态而不只相信完成声明。"
+learningPoints: ["站内文章导读","一次任务不等于一次回答","给不同目标选择不同裁判","重复试验才能看到不稳定性"]
+relatedBlogs: [{"id":"ai-evaluation","title":"Agent 评估不能只判回答：怎样检查它真正完成了任务"}]
+relatedPapers: []
+aliases: ["Agent","Evals","评估","机器学习","Testing"]
+domainId: "ai"
+relatedRss: []
+sources: [{"id":"blog-ai-evaluation","kind":"blog","title":"Agent 评估不能只判回答：怎样检查它真正完成了任务","url":"#blog/ai-evaluation","locator":"站内已审阅文章；保留 AI 辅助来源标记","excerpt":"为 Agent 设计结构、行为与内容评价，检查终态而不只相信完成声明。"},{"id":"ai-evaluation-reference-0","kind":"external","title":"Demystifying evals for AI agents · Anthropic","url":"https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"}]
+relatedNodeIds: ["machine-learning","rss-eval","swe-benchmark","fde-delivery","cyber-evaluation"]
+updated: "2026-10-17"
+provenance: "agent-source-synthesis"
+iconKey: "experience_bottle"
+iconReason: "经验瓶对应可观察而非自报的能力评价"
+iconLabel: "附魔之瓶"
+---
+# Agent 终态评估
+
+## 概念与适用边界
+
+AI 评价需要分别观察任务正确性、证据忠实度、格式遵循、拒答边界和运行成本。测试集、评分规则与版本必须固定，单次流畅回答不能代替评估。
+
+## 站内文章导读
+
+一个 Agent 说“论文已下载”，最终目录却只有一份 HTML 错误页。若评估只读最后一句回答，这个任务可能得到高分；若检查产物，结论完全不同。Agent 能行动以后，评价对象也必须从文字扩展到执行结果。
+
+本文参考 Anthropic 2026 年 1 月的 Agent 评估文章，提出知识整理任务的评价设计，没有实际跑出一组成功率。红石比较器代表把目标与可观察状态进行比较，而不是凭语气判断完成。
+
+出处：blog-ai-evaluation
+
+## 一次任务不等于一次回答
+
+官方区分任务、重复试验、评分器、轨迹和结果等概念。对于会调用工具的系统，最后回答与环境终态可能不一致。阅读对话有助于理解过程，检查文件、页面或远端状态才接近交付事实。
+
+例如“生成 RSS”至少可以拆成 XML 合法、条目来源正确、草稿未发布、链接可解析。模型说自己做过这些检查，不是对应检查真的通过。
+
+出处：blog-ai-evaluation
+
+## 给不同目标选择不同裁判
+
+确定性规则适合日期连续、ID 唯一和文件存在。文字是否清晰、论证是否充分，需要编辑或经过校准的评价者。不能为了方便，把全部质量问题压成一个字符串长度阈值。
+
+```text
+结构检查：字段、引用、格式
+行为检查：搜索、导航、读取失败
+内容审阅：事实、证据、表达与定位
+```
+
+三层结论应分别保留。结构通过而内容待审阅，属于有价值但尚未完成的结果，不应被平均成一个模糊的“总体优秀”。
+
+出处：blog-ai-evaluation
+
+## 重复试验才能看到不稳定性
+
+同一任务多次运行，可能因为工具时延、随机生成或环境残留产生不同结果。只展示最好的一次会高估可靠性。可以固定初始文件，重复少量运行，并保留每次失败原因，而不是只记最终总分。
+
+环境重置尤其重要。上次运行留下的文件，可能让下一次看起来成功；缓存也可能掩盖网络失败。评估设计要说明哪些条件固定，哪些条件有意变化。
+
+出处：blog-ai-evaluation
+
+## 失败样本比顺滑演示更有信息
+
+对于文章整理 Agent，可以加入缺失来源、同名不同版本、无法转载全文、抓取到登录页、引用 ID 不存在这些案例。它是否如实报告缺口，往往比能否写出一段流畅正文更能体现可靠性。
+
+评分也应奖励适当停止。没有证据时不编造全文，应当比填出完整但错误内容更好。如果评价只奖励“全部字段都有字”，系统会被引向伪造。
+
+出处：blog-ai-evaluation
+
+## 从回归集开始，不追求大榜单
+
+先保存十来个有代表性的任务及预期产物，修复一次错误就补一项回归用例。公开训练材料与保留测试应适当分开，避免反复调提示把答案记住。
+
+对知识网站来说，最实际的评估问题是：这次改动有没有让已有任务变差，新的失败是否可定位，产物有没有证据支撑。等这些基础稳固后，再比较模型、成本和长任务表现，数字才有解释空间。
+
+出处：blog-ai-evaluation
+
+## 相关知识
+
+[[machine-learning]] · [[rss-eval]] · [[swe-benchmark]] · [[fde-delivery]] · [[cyber-evaluation]]
+
+[[index]]

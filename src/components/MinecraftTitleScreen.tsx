@@ -13,6 +13,7 @@ import { MineWikiPage } from "../screens/MineWikiPage";
 import { MineResearchPage } from "../screens/MineResearchPage";
 import { MineStatusPage } from "../screens/MineStatusPage";
 import { MineWorldPage } from "../screens/MineWorldPage";
+import { MenuMusic } from "./MenuMusic";
 export function MinecraftTitleScreen({
   onBackgroundReady,
 }: {
@@ -108,6 +109,11 @@ export function MinecraftTitleScreen({
         }
       />
       <div className="gui">
+        <MenuMusic
+          visible={screen === "main"}
+          volume={settings.volume}
+          muted={settings.muted}
+        />
         {screen === "main" ? (
           <MainMenuScreen navigate={navigate} />
         ) : screen === "mineworld" ? (

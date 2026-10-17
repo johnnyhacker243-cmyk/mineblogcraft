@@ -1,0 +1,88 @@
+---
+kind: "node"
+id: "runtime-validation"
+title: "类型与运行时校验"
+description: "借 TypeScript 7 更新澄清编译类型与运行时校验，保持数据入口稳定。"
+category: "Software"
+tags: ["TypeScript","7.0","Repository","运行时校验","Database"]
+parentIds: ["api"]
+status: "untracked"
+frame: "task"
+details: "借 TypeScript 7 更新澄清编译类型与运行时校验，保持数据入口稳定。"
+learningPoints: ["站内文章导读","工具更新有明确适用范围","接口声明不会检查 JSON","Repository 应该提供稳定语义"]
+relatedBlogs: [{"id":"software-repository","title":"TypeScript 7 的原生编译器：类型更快，数据边界仍要自己守"}]
+relatedPapers: []
+relatedRss: []
+sources: [{"id":"blog-software-repository","kind":"blog","title":"TypeScript 7 的原生编译器：类型更快，数据边界仍要自己守","url":"#blog/software-repository","locator":"站内已审阅文章；保留 AI 辅助来源标记","excerpt":"借 TypeScript 7 更新澄清编译类型与运行时校验，保持数据入口稳定。"},{"id":"software-repository-reference-0","kind":"external","title":"Announcing TypeScript 7.0 · Microsoft 官方博客","url":"https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"}]
+relatedNodeIds: ["api","rss-runtime"]
+updated: "2026-10-17"
+provenance: "agent-source-synthesis"
+aliases: ["TypeScript","7.0","Repository","运行时校验","Database"]
+iconKey: "iron_ingot"
+iconLabel: "铁锭"
+iconReason: "铁锭对应数据入口须满足的实际约束"
+icon: "/assets/inventory/wiki-icons/iron_ingot.png"
+---
+# 类型与运行时校验
+
+## 站内文章导读
+
+TypeScript 7 在 2026 年 7 月发布，原生编译器让编译性能成为讨论热点。但对于内容驱动网站，更值得顺带澄清的是另一件事：类型检查变快，并不会让网络响应自动可信，也不会保证 JSON 里的文章 ID 一定存在。
+
+本文讨论编译器升级与数据边界的分工，本站现有 TypeScript 依赖保持原状。命名牌象征给对象准确标注身份；标签有帮助，但挂上名字并不证明里面的内容符合约定。
+
+出处：blog-software-repository
+
+## 工具更新有明确适用范围
+
+官方发布说明介绍了 Go 实现的原生编译器，同时指出初始版本的程序化 API 等兼容边界。普通命令行项目和依赖编译器内部接口的工具，迁移成本可能不同。不能只用一个速度数字决定全部项目同时升级。
+
+先列出哪些环节调用 tsc，哪些插件直接使用 TypeScript API，再检查测试覆盖。一个只执行命令行检查的前端，和一个编写 AST 转换工具的项目，不应使用同一张迁移清单。
+
+出处：blog-software-repository
+
+## 接口声明不会检查 JSON
+
+```ts
+interface Blog {
+  id: string;
+  title: string;
+  date: string;
+}
+```
+
+这段接口描述编译期预期。若服务器返回 date: null，类型声明不会在浏览器里自动变成拦截器。用类型断言强行告诉编译器“这是 Blog”，甚至会隐藏需要处理的边界。
+
+静态 JSON 也应在构建阶段验证字段、日期、重复 ID 和跨模块引用。后续换成 API 时，把同样的规则放在数据入口，而不是让每个页面各写一份猜测逻辑。
+
+出处：blog-software-repository
+
+## Repository 应该提供稳定语义
+
+页面需要的是“读取可展示文章”和“按 ID 读取正文”，不应该关心数据来自本地文件还是 HTTP。Repository 可以承担读取和适配，搜索服务再处理关键词；不要把全部业务堆进一个看似通用的 getData。
+
+但抽象也有成本。只有一个本地 JSON 时，不必提前设计十层继承。保留小接口、返回明确错误、避免共享可变对象，已经足够支持后续替换来源。
+
+出处：blog-software-repository
+
+## 数据身份比数组位置可靠
+
+文章和 Wiki 关联应使用稳定 ID，不使用数组下标或可能修改的标题。排序、搜索与改标题后，下标都会变化；相同标题也可能属于不同文章。迁移编译器不会发现这种语义错误，只有引用校验和行为测试能覆盖。
+
+返回数据副本同样重要。如果搜索排序直接修改 Repository 缓存数组，另一个页面可能突然改变顺序。测试应连续调用不同查询，确认结果不会互相污染。
+
+出处：blog-software-repository
+
+## 把性能收益与正确性证据分开
+
+升级实验可记录冷编译、增量检查和编辑器响应，固定机器与缓存前提并保留多次样本。另用数据校验和浏览器测试证明行为保持不变。构建更快是性能结论，不是功能正确性的证据。
+
+对内容项目来说，一个小而稳定的数据入口往往比复杂抽象更有长期价值。编译器负责尽早发现可表达的类型问题；数据是否真实、引用是否成立、失败如何展示，仍然需要我们写进系统契约。
+
+出处：blog-software-repository
+
+## 相关知识
+
+[[api]] · [[rss-runtime]]
+
+[[index]]

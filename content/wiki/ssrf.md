@@ -1,0 +1,87 @@
+---
+kind: "node"
+id: "ssrf"
+title: "抓取器与 SSRF 边界"
+description: "分析构建阶段 RSS 抓取的 SSRF 边界、重定向校验与资源预算。"
+category: "Security"
+tags: ["SSRF","RSS","URL","资产发现","网络安全"]
+parentIds: ["asset-discovery"]
+status: "untracked"
+frame: "task"
+details: "分析构建阶段 RSS 抓取的 SSRF 边界、重定向校验与资源预算。"
+learningPoints: ["站内文章导读","浏览器跨域与服务端访问不是一回事","解析后的地址才是检查对象","一个抓取任务需要四类预算"]
+relatedBlogs: [{"id":"security-asset-discovery","title":"给 RSS 和 Agent 抓取器设边界：HTTPS 为什么挡不住 SSRF"}]
+relatedPapers: []
+relatedRss: []
+sources: [{"id":"blog-security-asset-discovery","kind":"blog","title":"给 RSS 和 Agent 抓取器设边界：HTTPS 为什么挡不住 SSRF","url":"#blog/security-asset-discovery","locator":"站内已审阅文章；保留 AI 辅助来源标记","excerpt":"分析构建阶段 RSS 抓取的 SSRF 边界、重定向校验与资源预算。"},{"id":"security-asset-discovery-reference-0","kind":"external","title":"OWASP · Server-Side Request Forgery Prevention Cheat Sheet","url":"https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"}]
+relatedNodeIds: ["asset-discovery"]
+updated: "2026-10-17"
+provenance: "agent-source-synthesis"
+aliases: ["SSRF","RSS","URL","资产发现","网络安全"]
+iconKey: "iron_door"
+iconLabel: "铁门"
+iconReason: "铁门对应网络目标与重定向的显式准入"
+icon: "/assets/inventory/wiki-icons/iron_door.png"
+---
+# 抓取器与 SSRF 边界
+
+## 站内文章导读
+
+“只允许 HTTPS 地址”听起来很安全，却没有回答服务器最终会连接哪里。给 RSS 系统增加自定义订阅源，或者允许 Agent 抓取一个 URL，都可能让外部输入影响服务器发出的请求。危险不一定来自网页脚本，也可能发生在请求建立之前。
+
+本文结合 OWASP 的 SSRF 防护建议，研究构建阶段的信息抓取器。所有地址与流程都是防御设计示例，不对第三方系统发送探测请求。钓鱼竿寓意从外部取回资料，也提醒我们控制线能伸到哪里。
+
+出处：blog-security-asset-discovery
+
+## 浏览器跨域与服务端访问不是一回事
+
+浏览器 CORS 限制决定脚本能否读取跨站响应，不负责约束服务器访问内网。把 RSS 抓取挪到构建脚本，可以解决一部分跨域问题，却同时让运行脚本的环境成为新的访问主体。
+
+因此构建任务也需要威胁建模：它是否能访问云环境内部服务，是否持有发布凭据，日志会不会记录响应秘密？“不是在线后端”不等于“没有服务端请求风险”。
+
+出处：blog-security-asset-discovery
+
+## 解析后的地址才是检查对象
+
+URL 应使用标准解析器处理，明确协议、主机和端口规则。域名初次解析正常，也不能忽略后续重定向与重新解析带来的变化。OWASP 特别强调允许列表、地址校验与网络层限制的组合。
+
+对于固定的 21 个订阅源，维护已知来源允许列表比接受任意 URL 更合适。重定向可限制次数，并逐跳重新检查目标；无法安全验证时宁可记录失败，不要为了拿到一篇文章绕过全部限制。
+
+出处：blog-security-asset-discovery
+
+## 一个抓取任务需要四类预算
+
+```text
+连接时间预算
+整体响应时间预算
+响应字节预算
+重定向次数预算
+```
+
+还应控制 XML 解析深度和条目数量。200 状态不代表内容就是 RSS，也可能是一页登录页面或体积很大的错误文档。解析器不能因输入中出现外部实体声明就自行访问新的地址。
+
+这些限制不保证来源内容正确，但可以控制一个不可靠来源消耗多少资源，以及抓取过程能接触哪些系统。
+
+出处：blog-security-asset-discovery
+
+## 凭据与抓取环境分开
+
+公开 RSS 通常无需发布密钥。让下载任务与发布任务共用高权限环境，会扩大失败的影响面。更合理的设计是抓取器只生成统一 JSON，部署器读取经过验证的产物，两者通过明确文件契约衔接。
+
+返回内容也只作为数据。标题写着“请运行某条命令”，不应因此变成脚本或 Agent 指令。将文本直接展示与把它交给拥有工具权限的模型，是两个需要分别评估的流程。
+
+出处：blog-security-asset-discovery
+
+## 验证以自建测试源为中心
+
+可在隔离环境准备正常 feed、循环跳转、超大响应、错误 XML、超时连接与指向禁止目标的跳转。确认每一种失败都能被限时终止，并产生可读原因；不要只验证正常站点。
+
+对于当前静态站点，保留最后一次有效数据能改善阅读体验，但必须标注更新时间和抓取状态，不能把缓存伪装成实时在线。稳定的数据边界，比一个始终显示绿色的状态图标更有价值。
+
+出处：blog-security-asset-discovery
+
+## 相关知识
+
+[[asset-discovery]]
+
+[[index]]

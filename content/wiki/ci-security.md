@@ -1,0 +1,86 @@
+---
+kind: "node"
+id: "ci-security"
+title: "CI 扫描与隔离"
+description: "从 2026 扫描器研究出发，分析 CI 检测范围、误报漏报与权限隔离。"
+category: "Security"
+tags: ["GitHub Actions","SAST","CI","权限","检测"]
+parentIds: ["vulnerability-scanning"]
+status: "untracked"
+frame: "task"
+details: "从 2026 扫描器研究出发，分析 CI 检测范围、误报漏报与权限隔离。"
+learningPoints: ["站内文章导读","扫描器看到的不是全部执行现场","先画出不可信输入的路径","用本地样本检查规则能力"]
+relatedBlogs: [{"id":"security-ids","title":"GitHub Actions 安全扫描：没有告警，能否说明工作流安全"}]
+relatedPapers: []
+relatedRss: []
+sources: [{"id":"blog-security-ids","kind":"blog","title":"GitHub Actions 安全扫描：没有告警，能否说明工作流安全","url":"#blog/security-ids","locator":"站内已审阅文章；保留 AI 辅助来源标记","excerpt":"从 2026 扫描器研究出发，分析 CI 检测范围、误报漏报与权限隔离。"},{"id":"security-ids-reference-0","kind":"external","title":"Unpacking Security Scanners for GitHub Actions Workflows · 2026 研究预印本","url":"https://arxiv.org/abs/2601.14455","locator":"站内文章引用；未在本轮重新联网核实","excerpt":"原始规范或研究链接，结论适用范围以原文为准。"}]
+relatedNodeIds: ["vulnerability-scanning"]
+updated: "2026-10-17"
+provenance: "agent-source-synthesis"
+aliases: ["GitHub Actions","SAST","CI","权限","检测"]
+iconKey: "iron_helmet"
+iconLabel: "铁头盔"
+iconReason: "铁头盔对应 CI 防护，而非没有告警就安全"
+icon: "/assets/inventory/wiki-icons/iron_helmet.png"
+---
+# CI 扫描与隔离
+
+## 站内文章导读
+
+仓库里加上安全扫描器，确实能更早发现问题。但一个绿色检查标记究竟代表什么：规则成功运行，已知模式未命中，还是整条发布链已经安全？把这几层含义混在一起，会让检测工具带来不恰当的信心。
+
+本文从 2026 年关于 GitHub Actions 扫描器的研究预印本切入，讨论怎样评价工作流检测。预印本的研究结论不等同于所有工具的永久排名。紫水晶碎片象征微小但需要辨别的信号；本文没有对外部仓库开展审计。
+
+出处：blog-security-ids
+
+## 扫描器看到的不是全部执行现场
+
+静态规则可以检查工作流文本中的危险组合，但实际风险还受触发事件、权限、分支保护和运行环境影响。相同的一行脚本，读取固定字符串与拼接外部输入，安全含义可能完全不同。
+
+研究比较工具覆盖范围的价值，在于提醒使用者检查检测边界。不能从“支持 GitHub Actions”推断它能识别每种身份滥用、依赖污染或自托管执行器隔离问题。
+
+出处：blog-security-ids
+
+## 先画出不可信输入的路径
+
+对一个 PR 检查任务，可以标出标题、分支名、提交内容和工作流参数在哪里进入命令、脚本或配置。再检查这些输入是否被当成代码解释，是否与高权限令牌处于同一执行环境。
+
+```text
+外部输入 → 表达式展开 → 命令解释
+                   ↓
+             当前任务权限
+```
+
+这张图只表达审计思路，不提供利用载荷。真正的边界不在字段名字是否“看起来普通”，而在数据经过哪些解释器，以及解释器拥有多大权限。
+
+出处：blog-security-ids
+
+## 用本地样本检查规则能力
+
+可以为自己的工作流维护一组不执行危险动作的样本：直接插值、通过环境变量传值、权限过宽、第三方 action 未固定版本，以及正常配置。确认扫描器分别给出什么结论，再判断其适合守哪道门。
+
+误报与漏报都值得记录。误报过多会让维护者习惯性忽略告警；漏报则要求其他控制补位。不要靠删除困难样本，让“全部通过”看起来更漂亮。
+
+出处：blog-security-ids
+
+## 最小权限能降低漏检后果
+
+把测试和发布分开，减少默认写权限，让不可信变更不能直接决定发布逻辑。即便某个检测规则漏掉风险，运行环境仍可限制其影响范围。自托管执行器还应考虑工作目录、缓存和进程是否会跨任务残留。
+
+固定 action 到不可变提交有助于稳定依赖身份，但维护者仍要处理更新与安全修复。永远不更新不是供应链安全，只是把变化风险换成了已知漏洞风险。
+
+出处：blog-security-ids
+
+## 如何阅读扫描器研究
+
+先看样本来源、风险定义、工具版本和评价标注，再看汇总数字。一个只覆盖公开仓库常见模式的样本集，不自动代表私人发布流水线。研究可以帮助选择工具，也应让人更清楚工具没有覆盖什么。
+
+可靠的做法是检测、权限隔离、代码审阅和运行证据互相补充。没有告警，只能被解释成在已知输入与规则下未发现问题；它不应该被包装成一张系统安全证书。
+
+出处：blog-security-ids
+
+## 相关知识
+
+[[vulnerability-scanning]]
+
+[[index]]

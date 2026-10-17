@@ -30,4 +30,4 @@ ONLINE 是上次抓取成功，非实时监控；抓取失败保留旧缓存。�
 | Spring Engineering | software | online | 4 | 2/2 | 2026-10-15 | — |
 | Rust Blog | software | online | 10 | 2/2 | 2026-10-15 | — |
 
-Blog 共 22 篇已审阅并发布文章（21 篇 AI 辅助技术编辑文章及 1 篇原有文章）；Research 33 篇 2024 年以来外部文献（三方向各 11 篇，均有全文）；Wiki 34 个概念节点。全部已发布文章已进入 feed.xml。
+Blog 共 22 篇已审阅并发布文章（21 篇 AI 辅助技术编辑文章及 1 篇原有文章）；Research 33 篇 2024 年以来外部文献（三方向各 11 篇，均有全文）；Wiki 89 个概念节点。全部已发布文章已进入 feed.xml。

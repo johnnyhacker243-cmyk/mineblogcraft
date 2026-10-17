@@ -19,6 +19,25 @@ export interface WikiNodeData {
   domainId?: string;
   relatedRss?: string[];
   relatedSources?: { id: string; title: string }[];
+  updated: string;
+  provenance: string;
+  file: string;
+  body: string;
+  iconKey: string;
+  iconLabel: string;
+  iconReason: string;
+  sections: { title: string; text: string }[];
+  sources: {
+    id: string;
+    kind: string;
+    title: string;
+    url: string;
+    locator: string;
+    excerpt: string;
+    sourceId?: string;
+  }[];
+  relatedNodes: { id: string; title: string }[];
+  backlinks: { id: string; title: string }[];
 }
 export interface WikiMatch {
   node: WikiNodeData;
