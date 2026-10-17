@@ -42,6 +42,24 @@ jobs:
         run: npm run build:cloud
       - name: Verify content and release boundaries
         run: npm run test:content && node scripts/release-audit.mjs
+      - name: Install browser for Wiki regression
+        run: npx playwright install --with-deps chromium
+      - name: Verify Wiki drag stability before publishing
+        env:
+          TEST_BASE_URL: http://127.0.0.1:5173
+          STABILITY_MS: '0'
+        run: |
+          npx vite preview --host 127.0.0.1 --port 5173 > "$RUNNER_TEMP/wiki-preview.log" 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid" 2>/dev/null || true' EXIT
+          node --input-type=module -e '
+            for (let i = 0; i < 30; i++) {
+              try { if ((await fetch(process.env.TEST_BASE_URL)).ok) process.exit(0); } catch {}
+              await new Promise(resolve => setTimeout(resolve, 1000));
+            }
+            throw new Error("Preview server did not start");
+          '
+          node tests/interactions/wiki-stability.mjs
       - name: Record deployed commit
         run: node -e "require('node:fs').writeFileSync('dist/deployment.json', JSON.stringify({commit:process.env.GITHUB_SHA,repository:process.env.GITHUB_REPOSITORY,runId:process.env.GITHUB_RUN_ID})+'\n')"
       - name: Install official deployment CLI

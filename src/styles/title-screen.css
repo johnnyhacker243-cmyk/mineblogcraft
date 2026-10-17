@@ -206,3 +206,39 @@
 .site-navigation button:hover {
   background: #858594;
 }
+.page-recovery {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #171717ee;
+  color: #fff;
+  font:
+    16px Monocraft,
+    monospace;
+  text-align: center;
+}
+.page-recovery h1 {
+  font-size: 22px;
+}
+.page-recovery button {
+  display: block;
+  width: min(280px, 80vw);
+  margin: 12px auto;
+  padding: 12px;
+  font: inherit;
+  color: #fff;
+  background: #666;
+  border: 2px solid #171717;
+  box-shadow:
+    inset 2px 2px #aaa,
+    inset -2px -2px #444;
+}
+.page-recovery button:hover {
+  background: #858594;
+}
+.page-recovery button:focus-visible {
+  outline: 2px solid white;
+}

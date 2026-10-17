@@ -1,0 +1,24 @@
+{
+  "durationMs": 682,
+  "burstCases": 60,
+  "readingRounds": 0,
+  "samples": [
+    {
+      "heapBytes": 12366772,
+      "nodes": 458,
+      "canvases": 39
+    },
+    {
+      "heapBytes": 13976216,
+      "nodes": 464,
+      "canvases": 39
+    },
+    {
+      "heapBytes": 14070404,
+      "nodes": 467,
+      "canvases": 39
+    }
+  ],
+  "errors": [],
+  "crossPageUsable": true
+}

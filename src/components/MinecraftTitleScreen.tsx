@@ -15,6 +15,7 @@ import { MineStatusPage } from "../screens/MineStatusPage";
 import { MineWorldPage } from "../screens/MineWorldPage";
 import { MenuMusic } from "./MenuMusic";
 import { SiteNavigation } from "./SiteNavigation";
+import { PageErrorBoundary } from "./PageErrorBoundary";
 export function MinecraftTitleScreen({
   onBackgroundReady,
 }: {
@@ -122,30 +123,32 @@ export function MinecraftTitleScreen({
           volume={settings.volume}
           muted={settings.muted}
         />
-        {screen === "main" ? (
-          <MainMenuScreen navigate={navigate} />
-        ) : screen === "mineworld" ? (
-          <MineWorldPage back={moduleBack} />
-        ) : screen === "profile" ? (
-          <MinecraftInventory back={moduleBack} />
-        ) : screen === "worlds" ? (
-          <BlogWorldSelect back={moduleBack} />
-        ) : screen === "multiplayer" ? (
-          <MineRSSScreen back={moduleBack} />
-        ) : screen === "wiki" ? (
-          <MineWikiPage back={moduleBack} />
-        ) : screen === "status" ? (
-          <MineStatusPage back={moduleBack} />
-        ) : screen === "realms" ? (
-          <MineResearchPage back={moduleBack} />
-        ) : (
-          <SecondaryScreen
-            screen={screen}
-            settings={settings}
-            update={(s) => setSettings((prev) => ({ ...prev, ...s }))}
-            back={moduleBack}
-          />
-        )}
+        <PageErrorBoundary key={screen} onBack={moduleBack}>
+          {screen === "main" ? (
+            <MainMenuScreen navigate={navigate} />
+          ) : screen === "mineworld" ? (
+            <MineWorldPage back={moduleBack} />
+          ) : screen === "profile" ? (
+            <MinecraftInventory back={moduleBack} />
+          ) : screen === "worlds" ? (
+            <BlogWorldSelect back={moduleBack} />
+          ) : screen === "multiplayer" ? (
+            <MineRSSScreen back={moduleBack} />
+          ) : screen === "wiki" ? (
+            <MineWikiPage back={moduleBack} />
+          ) : screen === "status" ? (
+            <MineStatusPage back={moduleBack} />
+          ) : screen === "realms" ? (
+            <MineResearchPage back={moduleBack} />
+          ) : (
+            <SecondaryScreen
+              screen={screen}
+              settings={settings}
+              update={(s) => setSettings((prev) => ({ ...prev, ...s }))}
+              back={moduleBack}
+            />
+          )}
+        </PageErrorBoundary>
       </div>
     </div>
   );

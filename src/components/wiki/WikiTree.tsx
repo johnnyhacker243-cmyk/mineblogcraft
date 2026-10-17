@@ -165,22 +165,20 @@ export function WikiTree({
         setTip(null);
       }}
       onPointerMove={(e) => {
-        if (drag.current)
+        // React can evaluate queued state updates after pointerup/cancel has
+        // cleared the ref. Capture the event's drag record before enqueueing.
+        const activeDrag = drag.current;
+        const { clientX, clientY } = e;
+        if (activeDrag)
           setView((v) => ({
             ...v,
             x: Math.max(
-              -mapWidth * view.zoom,
-              Math.min(
-                450,
-                drag.current!.panX + (e.clientX - drag.current!.x) / scale,
-              ),
+              -mapWidth * v.zoom,
+              Math.min(450, activeDrag.panX + (clientX - activeDrag.x) / scale),
             ),
             y: Math.max(
-              -mapHeight * view.zoom,
-              Math.min(
-                250,
-                drag.current!.panY + (e.clientY - drag.current!.y) / scale,
-              ),
+              -mapHeight * v.zoom,
+              Math.min(250, activeDrag.panY + (clientY - activeDrag.y) / scale),
             ),
           }));
       }}
@@ -188,6 +186,9 @@ export function WikiTree({
         drag.current = null;
       }}
       onPointerCancel={() => {
+        drag.current = null;
+      }}
+      onLostPointerCapture={() => {
         drag.current = null;
       }}
     >
