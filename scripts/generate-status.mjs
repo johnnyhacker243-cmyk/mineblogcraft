@@ -21,9 +21,23 @@ const [blogs, papers, wiki, feeds, entries] = await Promise.all(
   ].map(read),
 );
 const config = await readFile("src/config/ui-config.ts", "utf8");
-const commit =
-  process.env.GITHUB_SHA ||
-  execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }).trim();
+let commit = process.env.GITHUB_SHA || process.env.CI_COMMIT_SHA;
+if (!commit) {
+  try {
+    commit = execFileSync("git", ["rev-parse", "HEAD"], {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+  } catch {
+    // ZIP delivery has no .git directory; keep its recorded source revision.
+    try {
+      const snapshot = (await readFile(".source-commit", "utf8")).trim();
+      commit = /^[a-f0-9]{40}$/.test(snapshot) ? snapshot : "unversioned";
+    } catch {
+      commit = "unversioned";
+    }
+  }
+}
 const builtAt = new Date().toISOString();
 const sections = [
   "Home",
@@ -39,7 +53,10 @@ const data = {
   mode: "build-report",
   builtAt,
   commit,
-  runId: process.env.GITHUB_RUN_ID || `local-${builtAt}`,
+  runId:
+    process.env.GITHUB_RUN_ID ||
+    process.env.CI_PIPELINE_ID ||
+    `local-${builtAt}`,
   version: config.match(/version: "([^"]+)"/)[1],
   sections,
   counts: {

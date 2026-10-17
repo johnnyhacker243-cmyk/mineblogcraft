@@ -1,0 +1,18 @@
+# Verification only: the existing GitHub workflow remains the deployment owner.
+image: node:22-bookworm
+
+stages:
+  - verify
+
+verify-source:
+  stage: verify
+  timeout: 20m
+  variables:
+    BLOG_BASE_URL: https://jonhyblog-jonhyblog-d2ggh3rc306480701.webapps.tcloudbase.com/
+  script:
+    - npm ci --no-audit --no-fund
+    - npm run build:cloud
+    - npm run test:content
+    - npm run test:world
+    - node --test tests/cloud-assets.test.mjs tests/cloudbase-publish.test.mjs
+    - node scripts/release-audit.mjs

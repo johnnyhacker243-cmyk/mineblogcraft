@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
 const read = async (p) => JSON.parse(await readFile(p, "utf8"));
 const [blogs, papers, wiki, items] = await Promise.all(
@@ -60,13 +60,40 @@ for (const n of wiki) {
   for (const s of n.sources) link(s.url, n.id);
 }
 for (const i of items) if (i.url) link(i.url, i.id);
-const tracked = execFileSync(
-  "git",
-  ["ls-files", "--cached", "--others", "--exclude-standard", "-z"],
-  { encoding: "utf8" },
-)
-  .split("\0")
-  .filter(Boolean);
+let tracked;
+try {
+  tracked = execFileSync(
+    "git",
+    ["ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+    { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] },
+  )
+    .split("\0")
+    .filter(Boolean);
+} catch {
+  // A source ZIP has no Git index. Check its actual files without entering
+  // dependencies, build output or local media/research caches.
+  const ignored = new Set([
+    ".git",
+    "node_modules",
+    "dist",
+    ".local-reference",
+    "deliverables",
+    "gptphotos",
+    "test-results",
+    "screenshots",
+  ]);
+  const walk = async (folder = ".") => {
+    const paths = [];
+    for (const item of await readdir(folder, { withFileTypes: true })) {
+      const name = folder === "." ? item.name : `${folder}/${item.name}`;
+      if (item.isDirectory() && !ignored.has(item.name))
+        paths.push(...(await walk(name)));
+      else if (item.isFile()) paths.push(name);
+    }
+    return paths;
+  };
+  tracked = await walk();
+}
 const hits = [];
 for (const file of tracked) {
   assert.ok(

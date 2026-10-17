@@ -16,10 +16,13 @@
 
 ```powershell
 npm ci
+npm run build:cloud
 npm run dev
 ```
 
 打开 <http://127.0.0.1:5173/>。服务器只监听本机。需要 Node.js 20.19+ 或 22.12+；此次实际环境为 Node 24.11.0、npm 11.6.1。
+
+全新克隆或源码 ZIP 必须先运行 `npm run build:cloud`，按 SHA-256 清单还原未纳入 Git 的运行素材。极狐 GitLab 自行上传、素材范围和源码打包说明见 [docs/GITLAB_SOURCE_DELIVERY.md](docs/GITLAB_SOURCE_DELIVERY.md)。`.gitlab-ci.yml` 仅做构建与测试，不重复部署线上网站。
 
 ```powershell
 npm run build
@@ -31,6 +34,8 @@ npm run test:panorama
 测试需要开发服务器保持运行。`tests/inspect-seams.py` 使用 Python、Pillow、NumPy生成接缝指标及全景检查拼图。运行输出记录在 `tests/results.json`、`tests/panorama-results.json`、`tests/seam-results.json`。
 
 ## 技术栈和结构
+
+按功能查找代码和内容文件，见 [源码导航](docs/SOURCE_INDEX.md)。
 
 实际安装：React / React DOM 19.3.0、TypeScript 5.9.3、Three.js 0.180.0、Vite 7.3.7、Playwright 1.64.0；锁定依赖见 `package-lock.json`。普通 CSS，没有后端或状态管理框架。
 
