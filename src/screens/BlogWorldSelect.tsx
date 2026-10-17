@@ -4,6 +4,7 @@ import type { BlogWorld } from "../models/BlogWorld";
 import { WorldSearch } from "../components/blog/WorldSearch";
 import { WorldList } from "../components/blog/WorldList";
 import { BlogReader } from "../components/blog/BlogReader";
+import { BlogSubscription } from "../components/blog/BlogSubscription";
 import { MinecraftButton } from "../components/MinecraftButton";
 import { InventoryText } from "../components/InventoryText";
 import "../styles/blog.css";
@@ -13,6 +14,7 @@ export function BlogWorldSelect({ back }: { back: () => void }) {
   const [worlds, setWorlds] = useState<BlogWorld[]>([]);
   const [selected, setSelected] = useState<string | null>(null);
   const [article, setArticle] = useState<BlogWorld | null>(null);
+  const [subscribing, setSubscribing] = useState(false);
   const [state, setState] = useState("加载世界...");
   const [size, setSize] = useState({ width: innerWidth, height: innerHeight });
   useEffect(() => {
@@ -65,13 +67,14 @@ export function BlogWorldSelect({ back }: { back: () => void }) {
     const escape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         e.stopImmediatePropagation();
-        if (article) returnToList();
+        if (subscribing) setSubscribing(false);
+        else if (article) returnToList();
         else back();
       }
     };
     window.addEventListener("keydown", escape, true);
     return () => window.removeEventListener("keydown", escape, true);
-  }, [article, back]);
+  }, [article, back, subscribing]);
   const enter = (world: BlogWorld) => {
     setArticle(world);
     history.replaceState(null, "", `#blog/${encodeURIComponent(world.id)}`);
@@ -129,12 +132,21 @@ export function BlogWorldSelect({ back }: { back: () => void }) {
             >
               <InventoryText text="进入选中的 Blog" />
             </MinecraftButton>
-            <MinecraftButton aria-label="返回主菜单" onClick={back}>
-              <InventoryText text="返回" />
-            </MinecraftButton>
+            <div className="blog-footer-row">
+              <MinecraftButton
+                aria-label="订阅博客"
+                onClick={() => setSubscribing(true)}
+              >
+                <InventoryText text="订阅博客" />
+              </MinecraftButton>
+              <MinecraftButton aria-label="返回主菜单" onClick={back}>
+                <InventoryText text="返回" />
+              </MinecraftButton>
+            </div>
           </footer>
         </section>
       )}
+      {subscribing && <BlogSubscription close={() => setSubscribing(false)} />}
     </main>
   );
 }

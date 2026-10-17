@@ -236,3 +236,98 @@
     overflow: hidden;
   }
 }
+
+.blog-footer-row {
+  display: flex;
+  gap: calc(4px * var(--blog-scale));
+}
+.blog-footer-row .mc-button {
+  --button-width: calc(98px * var(--blog-scale));
+}
+.blog-subscription {
+  --subscription-scale: min(3, var(--blog-scale));
+  --inventory-scale: var(--subscription-scale);
+  --gui-scale-x: var(--subscription-scale);
+  --gui-scale-y: var(--subscription-scale);
+  box-sizing: border-box;
+  width: min(calc(330px * var(--subscription-scale)), calc(100vw - 24px));
+  max-height: calc(100dvh - 24px);
+  overflow: auto;
+  padding: calc(14px * var(--subscription-scale));
+  border: calc(2px * var(--subscription-scale)) solid;
+  border-color: #aaa #333 #333 #aaa;
+  border-radius: 0;
+  background: #202020 url("/assets/inventory/menu-list.png") repeat;
+  background-size: calc(32px * var(--subscription-scale));
+  box-shadow: 0 0 0 calc(1px * var(--subscription-scale)) #000;
+  color: #fff;
+  image-rendering: pixelated;
+  --button-width: calc(110px * var(--subscription-scale));
+}
+.blog-subscription::backdrop {
+  background: #000b;
+}
+.blog-subscription h2 {
+  text-align: center;
+  margin-bottom: calc(10px * var(--subscription-scale));
+}
+.subscription-intro {
+  text-align: center;
+  margin-bottom: calc(16px * var(--subscription-scale));
+}
+.blog-subscription label {
+  display: block;
+  margin-bottom: calc(5px * var(--subscription-scale));
+}
+.blog-subscription input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: calc(6px * var(--subscription-scale));
+  border: calc(1px * var(--subscription-scale)) solid #888;
+  border-radius: 0;
+  background: #000b;
+  color: #fff;
+  font: calc(7px * var(--subscription-scale))/1.6 monospace;
+}
+.blog-subscription input:focus {
+  outline: calc(1px * var(--subscription-scale)) solid white;
+}
+.subscription-actions {
+  display: flex;
+  align-items: center;
+  gap: calc(12px * var(--subscription-scale));
+  margin-top: calc(6px * var(--subscription-scale));
+}
+.subscription-feed-link,
+.subscription-feedback {
+  font: calc(7px * var(--subscription-scale))/1.7 monospace;
+}
+.subscription-feed-link {
+  color: #ffff55;
+  text-underline-offset: 3px;
+}
+.subscription-feed-link:focus-visible {
+  outline: 2px solid white;
+}
+.subscription-help {
+  display: grid;
+  gap: calc(7px * var(--subscription-scale));
+  margin: calc(16px * var(--subscription-scale)) 0
+    calc(10px * var(--subscription-scale));
+}
+.subscription-feedback {
+  min-height: 3.4em;
+  color: #aaa;
+  margin-bottom: calc(8px * var(--subscription-scale));
+}
+.blog-subscription > .mc-button {
+  display: block;
+  margin-inline: auto;
+}
+@media (max-width: 379px) {
+  .subscription-intro,
+  .subscription-help {
+    overflow-x: auto;
+  }
+}

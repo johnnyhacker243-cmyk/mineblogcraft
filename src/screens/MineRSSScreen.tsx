@@ -204,9 +204,6 @@ export function MineRSSScreen({ back }: { back: () => void }) {
             信息源
           </button>
           <button onClick={() => openSource("all")}>最新文章</button>
-          <a href="/feed.xml" target="_blank" rel="noopener noreferrer">
-            订阅本站
-          </a>
           <a href="/data/rss/subscriptions.opml" download>
             导出 OPML
           </a>
