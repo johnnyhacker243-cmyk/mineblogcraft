@@ -63,25 +63,99 @@
   box-shadow: inset 0 0 0 100vmax #0009;
   --inventory-scale: 2;
 }
-.mineworld-loading h1 {
-  margin: 0 0 20px;
-  --inventory-scale: 3;
-}
 .mineworld-loading p {
   margin: 0;
   max-width: 90%;
   text-align: center;
 }
-.mineworld-loading-caption {
-  margin-top: 24px !important;
-  color: #aaa;
-  font-size: 12px;
-  text-shadow: 2px 2px #000;
+.mineworld-terrain-progress {
+  width: min(400px, 82vw);
+  height: 4px;
+  background: #080808;
+  overflow: hidden;
+  margin-top: -4px;
+  margin-bottom: 12px;
 }
-.mineworld-loading-dots {
-  letter-spacing: 8px;
-  color: #aaa;
-  animation: mineworld-pulse 1.2s steps(3, end) infinite;
+.mineworld-terrain-progress > span {
+  display: block;
+  height: 100%;
+  background: #55ff00;
+  transform-origin: left;
+  animation: mineworld-terrain-progress 8s steps(32, end) infinite;
+}
+.mineworld-terrain-map {
+  width: 140px;
+  height: 140px;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #080b04;
+}
+.mineworld-terrain-region {
+  height: 100%;
+  background: #999;
+  display: grid;
+  place-items: center;
+}
+.mineworld-terrain-generated {
+  width: 44px;
+  height: 44px;
+  background: #80ad47;
+  display: grid;
+  place-items: center;
+  animation: mineworld-terrain-growth 3.2s steps(4, end) infinite;
+}
+.mineworld-terrain-center {
+  width: 22px;
+  height: 22px;
+  box-sizing: border-box;
+  border: 4px solid #343b70;
+  outline: 4px solid #c5ceac;
+  background: #f4f4ee;
+  box-shadow: inset 4px -4px #8b91ae;
+  animation: mineworld-terrain-chunks 1.6s steps(1, end) infinite;
+}
+@keyframes mineworld-terrain-progress {
+  0% {
+    transform: scaleX(0.08);
+  }
+  35% {
+    transform: scaleX(0.32);
+  }
+  75% {
+    transform: scaleX(0.68);
+  }
+  100% {
+    transform: scaleX(0.94);
+  }
+}
+@keyframes mineworld-terrain-growth {
+  0%,
+  100% {
+    clip-path: polygon(
+      0 15%,
+      75% 15%,
+      75% 0,
+      100% 0,
+      100% 85%,
+      85% 85%,
+      85% 100%,
+      0 100%
+    );
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes mineworld-terrain-chunks {
+  25% {
+    box-shadow: inset -4px -4px #8b91ae;
+  }
+  50% {
+    box-shadow: inset -4px 4px #8b91ae;
+  }
+  75% {
+    box-shadow: inset 4px 4px #8b91ae;
+  }
 }
 .mineworld-notice {
   position: absolute;
@@ -90,11 +164,6 @@
   background: #111e;
   padding: 8px;
   font-size: 12px;
-}
-@keyframes mineworld-pulse {
-  50% {
-    color: #fff;
-  }
 }
 @media (max-width: 800px) {
   .mineworld-controls {
@@ -115,7 +184,9 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .mineworld-loading-dots {
+  .mineworld-terrain-progress > span,
+  .mineworld-terrain-generated,
+  .mineworld-terrain-center {
     animation: none;
   }
 }

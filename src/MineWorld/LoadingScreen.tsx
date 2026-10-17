@@ -11,31 +11,38 @@ export function LoadingScreen({
 }) {
   return (
     <div className="mineworld-loading" role={error ? "alert" : "status"}>
-      <h1>
-        <InventoryText text="MineWorld" />
-      </h1>
       <p>
-        <InventoryText
-          text={error ? "World loading failed" : "Generating World..."}
-          color="#ffff55"
-        />
-      </p>
-      <p>
-        <InventoryText text={detail} />
+        <InventoryText text={error ? "世界加载失败" : "加载地形中…"} />
       </p>
       {!error && (
-        <span className="mineworld-loading-dots" aria-hidden="true">
-          ▪ ▪ ▪
-        </span>
+        <>
+          <div
+            className="mineworld-terrain-progress"
+            role="progressbar"
+            aria-label="加载地形中"
+            aria-valuetext={detail}
+          >
+            <span />
+          </div>
+          <div className="mineworld-terrain-map" aria-hidden="true">
+            <div className="mineworld-terrain-region">
+              <div className="mineworld-terrain-generated">
+                <div className="mineworld-terrain-center" />
+              </div>
+            </div>
+          </div>
+        </>
       )}
       {error && (
-        <MinecraftButton aria-label="重新加载游戏" onClick={retry}>
-          <InventoryText text="重新加载" />
-        </MinecraftButton>
+        <>
+          <p>
+            <InventoryText text={detail} />
+          </p>
+          <MinecraftButton aria-label="重新加载游戏" onClick={retry}>
+            <InventoryText text="重新加载" />
+          </MinecraftButton>
+        </>
       )}
-      <p className="mineworld-loading-caption">
-        ClassiCube · Minecraft Classic
-      </p>
     </div>
   );
 }
