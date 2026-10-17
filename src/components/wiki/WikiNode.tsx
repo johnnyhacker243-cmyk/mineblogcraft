@@ -51,7 +51,7 @@ export function WikiTooltip({
       <BlogText text={node.title} width={190} color="#ffff55" />
       <BlogText text={node.description} width={190} />
       <InventoryText
-        text={`${node.category} · ${node.status === "completed" ? "已完成" : node.status === "planned" ? "待学习" : "状态未记录"}`}
+        text={`${node.category} · ${node.status === "completed" ? "已完成" : node.status === "planned" ? "待学习" : "知识条目"}`}
         color="#aaa"
       />
       <InventoryText

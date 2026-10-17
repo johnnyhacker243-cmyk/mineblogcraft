@@ -23,7 +23,7 @@ try {
   assert.equal(await page.locator(".status-item").count(), 3);
   assert.equal(
     await page
-      .getByRole("img", { name: "静态示例 · 未接监控", exact: true })
+      .getByRole("img", { name: "构建记录 · 内容统计", exact: true })
       .count(),
     1,
   );
@@ -44,7 +44,7 @@ try {
     );
     const before = await page.locator(".status-window").boundingBox();
     await page
-      .getByRole("button", { name: "Website Online", exact: true })
+      .getByRole("button", { name: "Build Report", exact: true })
       .click();
     const after = await page.locator(".status-window").boundingBox();
     await page.waitForTimeout(100);
@@ -73,7 +73,9 @@ try {
 
     assert.deepEqual(after, before, "Details do not resize or move frame");
     assert.equal(
-      await page.getByRole("img", { name: "未接入", exact: true }).count(),
+      await page
+        .getByRole("img", { name: "Static website", exact: true })
+        .count(),
       1,
     );
     await page.keyboard.press("Escape");
@@ -97,18 +99,18 @@ try {
   );
   await page.screenshot({ path: "tests/screenshots/status-tooltip.png" });
   await page
-    .getByRole("button", { name: "Modules Ready", exact: true })
+    .getByRole("button", { name: "Content Index", exact: true })
     .focus();
   await page.keyboard.press("Enter");
-  assert.equal(await page.locator(".status-detail-rows > div").count(), 4);
+  assert.equal(await page.locator(".status-detail-rows > div").count(), 5);
   await page.mouse.move(0, 0);
   await page.screenshot({ path: "tests/screenshots/status-detail.png" });
   await page.keyboard.press("Escape");
-  await page.getByRole("button", { name: "Last Update", exact: true }).focus();
+  await page.getByRole("button", { name: "Build Time", exact: true }).focus();
   await page.keyboard.press("Space");
   assert.equal(
     await page
-      .getByRole("img", { name: "Mineblogcraft v1.0", exact: true })
+      .getByRole("img", { name: "Mineblogcraft 1.22.1", exact: true })
       .count(),
     1,
   );
@@ -148,7 +150,7 @@ try {
         errors,
         failures,
         checks: [
-          "static demo disclosure",
+          "real build report and content counts",
           "detail text has no shadow layer",
           "frame stability",
           "tooltips",

@@ -106,7 +106,9 @@ const menus = [
 for (const [name, id] of menus) {
   await page.getByRole("button", { name, exact: true }).click();
   assert.equal(await page.locator(".game").getAttribute("data-screen"), id);
-  await page.keyboard.press("Escape");
+  if (id === "mineworld")
+    await page.getByRole("button", { name: "返回主菜单", exact: true }).click();
+  else await page.keyboard.press("Escape");
   assert.equal(await page.locator(".game").getAttribute("data-screen"), "main");
 }
 await page.mouse.move(0, 0);

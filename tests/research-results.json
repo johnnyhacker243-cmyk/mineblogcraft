@@ -1,15 +1,13 @@
 {
-  "date": "2026-10-11T07:17:06.049Z",
-  "pages": 8,
-  "images": 3,
+  "date": "2026-10-17T03:26:14.090Z",
+  "catalog": 33,
   "dimensions": [
     {
       "width": 1366,
       "height": 768,
-      "scale": "3",
-      "spread": {
+      "book": {
         "x": 113,
-        "y": 52.5,
+        "y": 40.5,
         "width": 1140,
         "height": 540
       }
@@ -17,10 +15,9 @@
     {
       "width": 1920,
       "height": 1080,
-      "scale": "4.25",
-      "spread": {
+      "book": {
         "x": 152.5,
-        "y": 70.375,
+        "y": 53.375,
         "width": 1615,
         "height": 765
       }
@@ -28,25 +25,16 @@
     {
       "width": 2560,
       "height": 1440,
-      "scale": "5.75",
-      "spread": {
-        "x": 187.5,
-        "y": 84.625,
-        "width": 2185,
-        "height": 1035
+      "book": {
+        "x": 472.5,
+        "y": 233.375,
+        "width": 1615,
+        "height": 765
       }
     }
   ],
-  "openingAnimation": true,
-  "closedHold": true,
-  "interruptedReset": true,
-  "resizeDuringTransition": true,
-  "catalogPreserved": true,
-  "handoffDimensionsStable": true,
-  "keyboard": true,
-  "pageBoundaries": true,
-  "reducedMotion": true,
-  "contentFailureFallback": true,
-  "errors": [],
-  "failed": []
+  "fulltext": true,
+  "lastPage": true,
+  "zoom": true,
+  "catalogPreserved": true
 }

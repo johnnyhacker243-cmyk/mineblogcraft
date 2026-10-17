@@ -34,9 +34,14 @@ export function BlogWorldSelect({ back }: { back: () => void }) {
           result.some((w) => w.id === prev) ? prev : null,
         );
         setState(result.length ? "" : "没有找到世界");
-        const id = decodeURIComponent(location.hash.replace(/^#blog\//, ""));
-        if (location.hash.startsWith("#blog/"))
-          setArticle(result.find((w) => w.id === id) ?? null);
+        if (location.hash.startsWith("#blog/")) {
+          try {
+            const id = decodeURIComponent(location.hash.slice(6));
+            setArticle(result.find((w) => w.id === id) ?? null);
+          } catch {
+            setArticle(null);
+          }
+        }
       })
       .catch(() => {
         if (!controller.signal.aborted) setState("世界加载失败，请返回后重试");

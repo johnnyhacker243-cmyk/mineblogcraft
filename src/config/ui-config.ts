@@ -52,7 +52,7 @@ export const menu: { label: string; target: ScreenId }[] = [
 // Original replacement text, selected once per application session.
 export const splashes = [
   "Built block by block!",
-  "A local UI experiment!",
+  "A world of knowledge!",
   "Six sides, one world!",
   "Keep on crafting!",
 ];

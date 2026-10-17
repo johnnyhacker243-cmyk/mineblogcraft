@@ -18,19 +18,28 @@ export function StatusPanel({
   const rows =
     section === "website"
       ? [
-          ["Status", data.website.status.toUpperCase()],
-          ["Domain", data.website.name],
-          ["Response", `${data.website.response} (示例)`],
-          ["Frontend", data.environment.frontend],
-          ["Backend", data.environment.backend],
+          ["Pages", String(data.counts.pages)],
+          ["Checks", `${data.checks.length} PASSED`],
+          ["Delivery", "Static website"],
+          ...data.checks.map((c) => [c.name, "PASSED"]),
         ]
       : section === "modules"
-        ? data.modules.map((m) => [m.name, m.status.toUpperCase()])
+        ? [
+            ...data.modules.map((m) => [m.name, String(m.count)]),
+            ["RSS sources", String(data.counts.feeds)],
+          ]
         : section === "update"
           ? [
-              ["Version", data.website.version],
-              ["Last Update", data.website.lastUpdate],
-              ["Monitoring", data.environment.monitoring],
+              ["Version", data.version],
+              [
+                "Built (UTC+8)",
+                new Date(data.builtAt).toLocaleString("zh-CN", {
+                  timeZone: "Asia/Shanghai",
+                  hour12: false,
+                }),
+              ],
+              ["Commit", data.commit.slice(0, 7)],
+              ["Run", data.runId],
             ]
           : [];
   return (
@@ -40,11 +49,11 @@ export function StatusPanel({
           shadow={false}
           text={
             section === "website"
-              ? "Website Status"
+              ? "Build Checks"
               : section === "modules"
-                ? "Module Status"
+                ? "Content Index"
                 : section === "update"
-                  ? "World Version"
+                  ? "Build Record"
                   : "系统附魔台"
           }
           color="#404040"
@@ -77,7 +86,7 @@ export function StatusPanel({
           />
           <InventoryText
             shadow={false}
-            text="当前为静态示例，尚未连接真实监控。"
+            text="显示本次构建检查结果与内容数量。"
             color="#666"
           />
         </div>

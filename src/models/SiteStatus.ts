@@ -1,12 +1,17 @@
 export interface SiteStatus {
-  mode: "static-demo" | "live";
-  website: {
-    name: string;
-    status: "online" | "offline";
-    response: string;
-    version: string;
-    lastUpdate: string;
+  mode: "build-report";
+  builtAt: string;
+  commit: string;
+  runId: string;
+  version: string;
+  counts: {
+    pages: number;
+    blogs: number;
+    papers: number;
+    wiki: number;
+    feeds: number;
+    entries: number;
   };
-  modules: { name: string; status: "online" | "offline" }[];
-  environment: { frontend: string; backend: string; monitoring: string };
+  modules: { name: string; count: number }[];
+  checks: { name: string; result: "passed" }[];
 }

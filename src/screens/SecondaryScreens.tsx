@@ -71,17 +71,17 @@ export function SecondaryScreen({
         ) : screen === "language" ? (
           <>
             <MinecraftButton disabled>English (US)</MinecraftButton>
-            <p>English is the available prototype language.</p>
+            <p>界面使用中文与英文技术名称。</p>
           </>
         ) : (
           <>
             <p>
               {screen === "worlds"
-                ? "No worlds in this local UI prototype."
+                ? "请从 MineWorld 进入单机世界。"
                 : screen === "multiplayer"
-                  ? "No servers in this local UI prototype."
+                  ? "请从 MineRSS 浏览订阅内容。"
                   : screen === "realms"
-                    ? "Realms is unavailable in this independent prototype."
+                    ? "请从 MineResearch 阅读论文。"
                     : "You can return to the title screen."}
             </p>
             {screen === "worlds" && (

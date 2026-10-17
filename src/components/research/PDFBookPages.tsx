@@ -123,6 +123,7 @@ function PDFCanvasPage({
       >
         <canvas
           ref={canvas}
+          role="img"
           aria-label={`完整 PDF 原文第 ${number} 页`}
           data-pdf-rendered={ready}
         />

@@ -1,3 +1,9 @@
+# 当前实现（2026-10-17）
+
+状态来源为 scripts/generate-status.mjs 生成的 /data/site-status.json，构建成功后写入 dist/data/site-status.json。包含 8 个内容入口、22 篇已发布博客、33 篇论文、89 个 Wiki 节点、21 个 RSS 源和 314 条摘要。数据从当前内容文件计算；检查命令失败时不生成成功报告。构建时间使用 ISO 时间点，界面明确显示 UTC+8；提交号和 CI run_id 对应当前产物。页面称为“构建记录”，不声称持续监控在线服务。
+
+下文为早期实现记录，保留历史背景，已由当前实现替代。
+
 # MineStatus：系统附魔台
 
 首页 Quit Game 已替换为 MineStatus，保留原按钮位置、纹理及点击音效。

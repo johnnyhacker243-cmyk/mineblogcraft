@@ -2,11 +2,15 @@
 
 2026-10-10 自定义更新：按用户要求，主 Logo 使用 `gptphotos/我的世界风格石质博客标志.png` 的完整透明图片（运行副本为 `public/assets/logo/blog-logo.png`）。图片自带 `PERSONAL BLOG EDITION`，所以不再叠加原版 Java Edition。黄色标语固定为 `Created by BingWang`，配置入口为 `ui-config.ts` 的 `splash.text`；设为 `null` 可恢复随机选择。其余主菜单布局保留。
 
-这是独立的本地 Web UI 研究项目，与 Mojang、Microsoft 没有官方关联。当前使用用户明确授权读取的本地 **1.21.1** 客户端素材；授权读取不等于取得公开再分发许可。已实现本地静态博客世界列表、搜索、文章阅读和 RSS，没有部署公网或真实游戏功能。博客结构、数据接口和验证记录见 [BLOG_MODULE.md](BLOG_MODULE.md)。后续前端开发路线见 [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md)，阶段性提交约定见 [AGENTS.md](AGENTS.md)。
+这是以 Minecraft Java 风格呈现的个人技术网站，与 Mojang、Microsoft 没有官方关联。当前使用用户授权读取的本地 1.21.1 客户端素材；素材权利与提交范围见 ASSET_LICENSES.md。
+
+当前发布内容：22 篇已审阅博客、21 个 RSS 源与 314 条摘要、33 篇 2024 年以来的真实论文（32 份原始 PDF 与 1 份出版方结构化全文）、89 个带来源和双向链接的 Wiki 节点。MineWorld 使用本地托管的 ClassiCube 单机客户端。首页提供原版菜单音乐开关。
+
+代码在 GitHub 管理，main 提交经既有 Actions 工作流构建并发布到腾讯云 CloudBase；线上版本通过 deployment.json 核对。MineStatus 读取本次构建生成的时间、提交号、内容数量和检查记录，不将构建结果称为持续在线监控。
+
+课程逐项核对、验收范围和差异见 [docs/FINAL_ACCEPTANCE.md](docs/FINAL_ACCEPTANCE.md)。历史设计文档保留当时背景；当前能力以代码、构建数据及该验收记录为准。Wiki 证据问答与论文收集的可复用操作说明位于 .opencode/skills/。网站运行使用静态资源，不向浏览器提供模型密钥。
 
 ## 启动
-
-MineRSS 已作为第二个主菜单入口实现，展示六个静态信息服务器；状态、日期和信号均为示例。资源清单、组件结构及未来 API 接入见 [RSS_MODULE.md](RSS_MODULE.md)，运行 `npm run test:rss` 可执行相关浏览器验证。
 
 在本目录用 PowerShell 执行：
 
@@ -115,7 +119,7 @@ Vite 运行时执行 `npm run test:research` 可验证三种桌面尺寸及阅�
 
 MineWiki 已实现 Advancements 风格四分支知识树、拖拽缩放、元数据检索、Tooltip 与详情面板。首页原 Options... 入口改为 MineWiki；示例内容与学习状态不代表作者真实学习记录。数据、资源及验证说明见 [WIKI_MODULE.md](WIKI_MODULE.md)。
 
-MineStatus 已接入首页原 Quit Game 入口：附魔书、材料槽和三条可查看详情的状态词条。当前为明确标记的静态示例，尚未连接真实监控。实现、资源、数据接口及测试说明见 [STATUS_MODULE.md](STATUS_MODULE.md)。可运行 `npm run test:status` 验证该模块。
+MineStatus 已接入首页原 Quit Game 入口：附魔书、材料槽和三条可查看详情的状态词条。当前展示本次构建的内容数量、校验结果、提交号及带时区的构建时间。实现、资源、数据接口及测试说明见 [STATUS_MODULE.md](STATUS_MODULE.md)。可运行 `npm run test:status` 验证该模块。
 
 首次打开或刷新显示原版 Mojang 红色加载覆盖层，首页资源完成后淡出；站内切换不重复播放。实现与参数见 [STARTUP_LOADING.md](STARTUP_LOADING.md)，验证命令：`npm run test:startup`。
 

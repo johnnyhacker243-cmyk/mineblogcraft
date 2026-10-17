@@ -25,6 +25,7 @@ try {
   await page
     .getByRole("img", { name: "完整 PDF 原文第 2 页", exact: true })
     .waitFor();
+  await page.locator('canvas[data-pdf-rendered="true"]').nth(1).waitFor();
   await page
     .getByRole("spinbutton", { name: "跳转页码" })
     .fill(String(paper.pdf.pageCount));
@@ -55,6 +56,17 @@ try {
     [2560, 1440],
   ]) {
     await page.setViewportSize({ width, height });
+    await page.waitForFunction(() => {
+      const rect = document
+        .querySelector(".book-spread")
+        ?.getBoundingClientRect();
+      return (
+        rect &&
+        rect.width <= innerWidth &&
+        rect.height <= innerHeight &&
+        Math.abs(rect.x + rect.width / 2 - innerWidth / 2) < 2
+      );
+    });
     const rect = await page.locator(".book-spread").boundingBox();
     assert.ok(rect.width <= width && rect.height <= height);
     assert.ok(Math.abs(rect.x + rect.width / 2 - width / 2) < 2);

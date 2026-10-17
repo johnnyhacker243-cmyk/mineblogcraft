@@ -5,7 +5,7 @@ export const profile = {
   interests: "AI · 网络安全 · 软件工程",
   websiteName: "Mineblogcraft",
   purpose: "Minecraft 风格个人技术博客",
-  biography: "这个人很神秘，什么都没有写。",
+  biography: "记录学习中的探索与收获。",
   motto: "只有风暴才能击倒大树",
   tabs: [
     "草方块",

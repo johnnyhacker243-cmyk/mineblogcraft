@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-11T08:18:11.609Z",
+  "date": "2026-10-17T03:20:53.412Z",
   "dimensions": [
     {
       "width": 1366,
@@ -7,15 +7,15 @@
       "scale": "2",
       "list": {
         "x": 207,
-        "y": 160,
+        "y": 218,
         "width": 952,
-        "height": 756
+        "height": 2620
       },
       "container": {
         "x": 203,
-        "y": 156,
+        "y": 214,
         "width": 960,
-        "height": 540
+        "height": 482
       },
       "logo": {
         "x": 24,
@@ -25,7 +25,7 @@
       },
       "title": {
         "x": 625,
-        "y": 30,
+        "y": 24,
         "width": 116,
         "height": 36
       },
@@ -43,15 +43,15 @@
       "scale": "3",
       "list": {
         "x": 246,
-        "y": 240,
+        "y": 327,
         "width": 1428,
-        "height": 1134
+        "height": 3930
       },
       "container": {
         "x": 240,
-        "y": 234,
+        "y": 321,
         "width": 1440,
-        "height": 738
+        "height": 651
       },
       "logo": {
         "x": 36,
@@ -61,7 +61,7 @@
       },
       "title": {
         "x": 873,
-        "y": 45,
+        "y": 36,
         "width": 174,
         "height": 54
       },
@@ -79,15 +79,15 @@
       "scale": "4",
       "list": {
         "x": 328,
-        "y": 320,
+        "y": 434,
         "width": 1904,
-        "height": 1512
+        "height": 5240
       },
       "container": {
         "x": 320,
-        "y": 312,
+        "y": 426,
         "width": 1920,
-        "height": 984
+        "height": 870
       },
       "logo": {
         "x": 48,
@@ -97,7 +97,7 @@
       },
       "title": {
         "x": 1164,
-        "y": 60,
+        "y": 48,
         "width": 232,
         "height": 72
       },
@@ -111,18 +111,33 @@
     }
   ],
   "sources": [
-    "AI Research Server",
-    "OpenAI Laboratory",
-    "Cyber Security Server",
-    "Security Research World",
-    "Open Source World",
-    "Software Engineering Hub"
+    "量子位",
+    "arXiv · Artificial Intelligence",
+    "NVIDIA 技术博客 · 中文",
+    "Microsoft Research",
+    "AWS Machine Learning",
+    "Amazon Science",
+    "Microsoft Foundry Blog",
+    "Unit 42 · Palo Alto Networks",
+    "PortSwigger Research",
+    "绿盟科技技术博客",
+    "安全客",
+    "Cisco Talos Intelligence",
+    "Microsoft Security Blog",
+    "Securelist · Kaspersky",
+    "美团技术团队",
+    "InfoQ 中文",
+    "PingCAP Engineering",
+    "Cloudflare Engineering",
+    "Go 官方博客",
+    "Spring Engineering",
+    "Rust Blog"
   ],
   "background": "shared rotating panorama",
-  "rotationDelta": 0.04362974064135425,
+  "rotationDelta": 0.043633231299858216,
   "staticStatus": true,
   "keyboard": true,
-  "managementNotice": true,
+  "articleReader": true,
   "errors": [],
   "failed": []
 }

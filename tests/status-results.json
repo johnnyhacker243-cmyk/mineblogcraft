@@ -34,7 +34,7 @@
   "errors": [],
   "failures": [],
   "checks": [
-    "static demo disclosure",
+    "real build report and content counts",
     "detail text has no shadow layer",
     "frame stability",
     "tooltips",

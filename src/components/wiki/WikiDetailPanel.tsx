@@ -30,7 +30,7 @@ export function WikiDetailPanel({
         <div className="wiki-provenance">
           更新 {node.updated} ·{" "}
           {node.provenance === "legacy-concept-note"
-            ? "既有概念说明 · 待补充直接证据"
+            ? "概念导读 · 关联主题索引"
             : "Agent 基于站内资料整理 · 非作者原话"}
         </div>
         <p className="wiki-icon-reason">
@@ -145,7 +145,7 @@ export function WikiDetailPanel({
         )}
         <BlogText text={node.tags.join(" · ")} width={240} color="#aaa" />
         <BlogText
-          text={`文件：${node.file} · 学习进度未记录`}
+          text={`文件：${node.file}`}
           width={240}
           color="#aaa"
         />

@@ -101,7 +101,7 @@ export function BlogSubscription({ close }: { close: () => void }) {
         </div>
         <div>
           <InventoryText
-            text="仅包含已发布博客，草稿不会进入订阅。"
+            text="订阅后可在阅读器中获取已发布文章的更新。"
             color="#aaa"
           />
         </div>

@@ -1,12 +1,18 @@
-import data from "../data/status.json";
 import type { SiteStatus } from "../models/SiteStatus";
-export interface StatusRepository {
-  getStatus(signal?: AbortSignal): Promise<SiteStatus>;
-}
-export class StaticStatusRepository implements StatusRepository {
+export const statusRepository = {
   async getStatus(signal?: AbortSignal): Promise<SiteStatus> {
-    signal?.throwIfAborted();
-    return structuredClone(data) as SiteStatus;
-  }
-}
-export const statusRepository: StatusRepository = new StaticStatusRepository();
+    const response = await fetch("/data/site-status.json", {
+      signal,
+      cache: "no-cache",
+    });
+    if (!response.ok) throw Error("Build report unavailable");
+    const data = await response.json();
+    if (
+      data.mode !== "build-report" ||
+      !data.counts ||
+      !Array.isArray(data.checks)
+    )
+      throw Error("Invalid build report");
+    return data;
+  },
+};

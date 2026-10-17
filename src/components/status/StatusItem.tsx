@@ -34,7 +34,7 @@ export function StatusItem({
       <span className="status-rune">
         <InventoryText shadow={false} text="III" color="#8bfa44" />
       </span>
-      <StatusTooltip title={title} description="点击查看状态详情 · 静态示例" />
+      <StatusTooltip title={title} description="点击查看构建与内容信息" />
     </button>
   );
 }

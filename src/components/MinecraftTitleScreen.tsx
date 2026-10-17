@@ -14,6 +14,7 @@ import { MineResearchPage } from "../screens/MineResearchPage";
 import { MineStatusPage } from "../screens/MineStatusPage";
 import { MineWorldPage } from "../screens/MineWorldPage";
 import { MenuMusic } from "./MenuMusic";
+import { SiteNavigation } from "./SiteNavigation";
 export function MinecraftTitleScreen({
   onBackgroundReady,
 }: {
@@ -109,6 +110,13 @@ export function MinecraftTitleScreen({
         }
       />
       <div className="gui">
+        <SiteNavigation
+          screen={screen}
+          navigate={(id) => {
+            history.replaceState(null, "", location.pathname + location.search);
+            navigate(id);
+          }}
+        />
         <MenuMusic
           visible={screen === "main"}
           volume={settings.volume}

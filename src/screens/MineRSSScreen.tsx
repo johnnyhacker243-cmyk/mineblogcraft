@@ -14,7 +14,12 @@ const domainNames: Record<string, string> = {
 };
 const safeUrl = (s: string) => {
   try {
-    return ["http:", "https:"].includes(new URL(s).protocol);
+    const url = new URL(s);
+    return (
+      ["http:", "https:"].includes(url.protocol) &&
+      !url.username &&
+      !url.password
+    );
   } catch {
     return false;
   }

@@ -36,10 +36,10 @@ export function MineStatusPage({ back }: { back: () => void }) {
   const close = () => {
     const title =
       section === "website"
-        ? "Website Online"
+        ? "Build Report"
         : section === "modules"
-          ? "Modules Ready"
-          : "Last Update";
+          ? "Content Index"
+          : "Build Time";
     setSection(null);
     requestAnimationFrame(() =>
       document
@@ -63,13 +63,21 @@ export function MineStatusPage({ back }: { back: () => void }) {
     Math.floor(Math.min((size.w * 0.92) / 460, (size.h * 0.92) / 340) * 4) / 4,
   );
   const entries: [StatusSection, string, string][] = [
-    ["website", "Website Online", data?.website.status.toUpperCase() ?? "..."],
+    ["website", "Build Report", data ? "CHECKED" : "..."],
     [
       "modules",
-      "Modules Ready",
-      `${data?.modules.length ?? 0} modules · static demo`,
+      "Content Index",
+      `${data?.counts.pages ?? 0} pages · ${data?.counts.blogs ?? 0} blogs`,
     ],
-    ["update", "Last Update", data?.website.lastUpdate ?? "..."],
+    [
+      "update",
+      "Build Time",
+      data
+        ? new Date(data.builtAt).toLocaleDateString("zh-CN", {
+            timeZone: "Asia/Shanghai",
+          })
+        : "...",
+    ],
   ];
   return (
     <main
@@ -100,7 +108,7 @@ export function MineStatusPage({ back }: { back: () => void }) {
           <InventoryText shadow={false} text="系统附魔" color="#404040" />
           <InventoryText
             shadow={false}
-            text="静态示例 · 未接监控"
+            text="构建记录 · 内容统计"
             color="#666"
           />
         </div>
