@@ -16,8 +16,13 @@ try {
   });
   // Enter normally through CloudBase's test-domain notice if it is shown.
   await page.goto(base + "/");
-  if (await page.getByText("页面访问提示", { exact: true }).count())
+  if (await page.getByText("页面访问提示", { exact: true }).count()) {
     await page.getByText("确定访问", { exact: true }).click();
+    // CloudBase can serve its test-domain notice with a non-2xx status.
+    // Exclude only that initial notice; keep checking every asset response.
+    const notice = failed.indexOf(base + "/");
+    if (notice !== -1) failed.splice(notice, 1);
+  }
   await page.getByRole("button", { name: "MineBlog", exact: true }).click();
   assert.equal(await page.getByRole("option").count(), blogs.length);
   await page.getByRole("option", { name: "Mineblogcraft 的诞生" }).click();
