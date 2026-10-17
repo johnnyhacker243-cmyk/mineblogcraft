@@ -1,5 +1,11 @@
 # 素材来源与使用范围
 
+## README 展示资源（2026-10-17）
+
+按项目所有者明确要求，`docs/media/` 收录 README 使用的自定义 Logo 原图与网站实际界面截图，作为项目介绍随源码提交。`mineblogcraft-logo.png` 从用户提供的 `gptphotos/我的世界风格石质博客标志.png` 逐字节复制，SHA-256 为 `1cc52cdebe66383f9b4fe8eeb3ddf5b9dc3db340f29b26993f90a89245f9dedc`，没有重绘、裁切或修改。页面截图为实际浏览器渲染结果，具体采集范围见 `docs/media/README.md`。
+
+这一范围仅覆盖本次 README 项目展示；未将忽略目录中的原版游戏纹理、音频、原始客户端或个人研究文件纳入 Git，也不将其中第三方商标、图像、字体、音乐或论文的权利转授为开源素材。历史记录中“截图仅本地保存”的默认规则，针对本次用户明确指定的 README 展示图作上述限定补充；普通测试截图仍保留本地。
+
 ## ClassiCube Web 接入（2026-10-13 / 14）
 
 MineWorld 使用官方仓库 https://github.com/ClassiCube/ClassiCube 的独立预编译 Web 客户端，来自官方 CDN `https://cdn.classicube.net/client/latest/ClassiCube.js`，游戏核心字节未修改。代码分发按照上游 BSD 三条款及其依赖声明，完整 `license.txt` 复制为 `public/vendor/classicube/LICENSE.txt`，同产物一起保留。研究快照在忽略目录；不冒充自己编写游戏引擎。
