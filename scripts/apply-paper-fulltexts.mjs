@@ -24,7 +24,7 @@ for (const record of catalog) {
   paper.format = "pdf";
   paper.readingMode = "fulltext";
   paper.pdf = {
-    url: record.url,
+    url: record.hostedUrl ?? record.url,
     delivery: record.delivery,
     pageCount: record.pageCount,
     verifiedAt: record.verifiedAt,

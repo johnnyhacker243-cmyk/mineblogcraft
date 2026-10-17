@@ -294,8 +294,8 @@
     },
     {
       "path": "assets/inventory/font.json",
-      "size": 36219,
-      "sha256": "46a3ed308bedc2ff46b80c7ef4d136f2c1e4e585c0233e489b7f9b5e3f8357b5"
+      "size": 36571,
+      "sha256": "5ca4b313e19d65c99d28949012ec23a634de9237e28558f1d12541c397f45abb"
     },
     {
       "path": "assets/inventory/food-empty.png",
@@ -649,8 +649,8 @@
     },
     {
       "path": "assets/inventory/unifont.png",
-      "size": 70611,
-      "sha256": "52efb3381cce2120be4b71021fbdb14ee143e3741d68556fc63677648a4063dd"
+      "size": 71325,
+      "sha256": "a53a8f740c2cff0ea8d3a14ad63ea885e938391313ba46c4d0d2865d7666b504"
     },
     {
       "path": "assets/inventory/wiki-challenge-obtained.png",

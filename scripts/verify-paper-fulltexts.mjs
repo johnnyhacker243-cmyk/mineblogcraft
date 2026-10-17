@@ -117,5 +117,5 @@ await rename(staged, catalogPath);
 console.log(
   "Verified " +
     records.length +
-    " complete original PDFs; source copies are private temporary audit files, not site assets.",
+    " complete original PDFs; licensed publication copies are prepared separately with attribution.",
 );

@@ -105,3 +105,7 @@ PDF.js 使用 Mozilla 官方 npm 包 pdfjs-dist 6.4.299（Apache-2.0）。script
 ## MineBlog 世界进入图标
 
 悬停进入图标直接使用本地获授权 Minecraft Java 1.21.1 客户端的 `gui/sprites/world_list/join.png` 与 `join_highlighted.png`，逐字节提取，未重绘。`scripts/import-inventory.py` 记录两项映射；输出 `public/assets/inventory/world-join*.png` 继续被 Git 忽略，仅在已有部署资源清单记录大小与哈希。
+
+## 2024 年以来的近期开放研究目录（2026-10-16）
+
+本批 32 篇 arXiv PDF 已逐项核实版本页标注 CC BY 4.0 或 CC BY-SA 4.0，区别于此前仅允许源站展示的文献。提供 byte-identical 完整静态副本，不修改正文、不移除署名及声明；同时发布原作者、标题、原始地址、许可链接、文件 SHA-256 和无修改说明（public/papers/fulltext/ATTRIBUTION.json）。BY-SA 文件继续受相同许可约束，不将论文设为本站独占版权。PDF 被 Git 忽略，构建时仅恢复已审核哈希的开放副本。保留 NIDS-FGPA 的原 CC BY 4.0 署名。原版 Minecraft 书架、书页和附魔书资源不变，许可边界不扩展。

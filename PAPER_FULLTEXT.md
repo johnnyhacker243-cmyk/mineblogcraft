@@ -61,3 +61,7 @@
 左页镜像形成单独合成层，原先 canvas 内部 multiply 无法与纸张底图正确混合。现将混合放到左右共用的 pdf-page-surface 层，canvas 保持 normal，镜像只负责文字方向；两页均显露原纸张色调与纹理。放大阅读继续保留清晰的原 PDF 背景。
 
 本轮 18 项自动检查通过；在真实浏览器中逐篇打开 32 个 PDF，按每篇文件 SHA-256 对应的本地源路径确认前两页完成渲染，32/32 通过，console error 为 0。此范围是每篇开篇两页，不冒充 885 页逐页人工审校，也没有宣称已经在用户独立 Edge 中手动验收。检查记录在忽略提交的 .local-reference/pdf-browser-validation.json；最终截图 tests/screenshots/research-paper-fusion-compat.png。
+
+## 近期论文更新（2026-10-16）
+
+当前可见目录已改为 2024 年以来 AI、网络安全、软件工程各 11 篇，共 33 篇。旧章节的源站直读和私有缓存限制描述的是此前目录，不适用于本批已核实 CC BY / CC BY-SA 4.0 的 32 篇 PDF。新论文的未改动原 PDF 可随静态站点同域提供，完整署名与许可位于 public/papers/fulltext/ATTRIBUTION.json；文件仍不提交 Git。其余一篇为保留的 NIDS-FGPA 2024 完整结构化原文。具体选题、数据更新与许可恢复流程见 docs/MINERESEARCH_SELECTION_2026.md。

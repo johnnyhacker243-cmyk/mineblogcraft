@@ -18,4 +18,5 @@ public/assets/inventory/
 
 public/papers/**/source.xml
 public/pdfjs/
+public/papers/fulltext/*.pdf
 public/vendor/classicube/ClassiCube.mineworld-*.js

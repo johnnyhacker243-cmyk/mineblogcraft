@@ -6,8 +6,8 @@
   "scripts": {
     "build:cloud": "node scripts/cloud-assets.mjs && npm run build",
     "rss": "node scripts/generate-rss.mjs",
-    "predev": "node scripts/prepare-mineworld-client.mjs && node scripts/prepare-pdf-assets.mjs && node scripts/prepare-local-papers.mjs && npm run rss",
-    "prebuild": "node scripts/prepare-mineworld-client.mjs && node scripts/prepare-pdf-assets.mjs && npm run content:validate && npm run rss && npm run rss:validate && node scripts/verify-classicube.mjs",
+    "predev": "node scripts/prepare-hosted-papers.mjs && node scripts/prepare-mineworld-client.mjs && node scripts/prepare-pdf-assets.mjs && node scripts/prepare-local-papers.mjs && npm run rss",
+    "prebuild": "node scripts/prepare-hosted-papers.mjs && node scripts/prepare-mineworld-client.mjs && node scripts/prepare-pdf-assets.mjs && npm run content:validate && npm run rss && npm run rss:validate && node scripts/verify-classicube.mjs",
     "test:blog": "node tests/interactions/blog.mjs",
     "test:blog-content": "node --test tests/blog-editorial.test.mjs",
     "test:rss": "node tests/interactions/rss.mjs",

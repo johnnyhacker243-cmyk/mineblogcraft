@@ -1,0 +1,1135 @@
+[
+  {
+    "id": "arxiv-2610.22353",
+    "arxivVersion": "2610.22353v1",
+    "domainId": "ai",
+    "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts",
+    "authors": [
+      "Bingcong Li",
+      "Hao Ma",
+      "Michael Muehlebach",
+      "Niao He",
+      "Yi Ma"
+    ],
+    "publishedAt": "2026-10-15T17:58:02Z",
+    "updatedAt": "2026-10-15T17:58:02Z",
+    "abstract": "Mixture-of-experts (MoE) models have become an important approach for scaling model parameters. Modern MoE architectures increasingly combine two design choices: fine-grained expert segmentation and shared experts. The former increases expressiveness by enabling more expert combinations at a fixed activation ratio, and the latter introduces experts that are active for every token. We identify an exploration dilemma between these designs: shared experts can make routing less exploratory by reducing the variability of token representations. This conflicts with the greater need for exploration induced by fine-grained expert segmentation due to the combinatorially enlarged routing space. Consequently, the additional expressiveness offered by fine-grained segmentation may not be fully realized in practice. MirrorMoE is proposed to reconcile this exploration dilemma by shrinking the exploration space through token-adaptive suppression of unnecessary experts. MirrorMoE consistently improves performance across model scales.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22353v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22353v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "description": "探索细粒度专家与共享专家之间的路由矛盾，以 MirrorMoE 研究按 token 抑制冗余专家的机制。",
+    "tags": [
+      "MoE",
+      "路由",
+      "专家模型"
+    ],
+    "wikiNodeIds": [
+      "llm",
+      "deep-learning"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22290",
+    "arxivVersion": "2610.22290v1",
+    "domainId": "ai",
+    "title": "EliteReplay: Preserving Diverse Solutions in RL Post-Training via Quality-Diversity Search",
+    "authors": [
+      "Hanane Nour Moussa",
+      "Doeun Lee",
+      "Sachin Kumar"
+    ],
+    "publishedAt": "2026-10-15T17:43:31Z",
+    "updatedAt": "2026-10-15T17:43:31Z",
+    "abstract": "Reinforcement learning has become a common post-training technique to improve the accuracy of LLMs on verifiable tasks. However, such training can narrow the set of solutions the model can produce. Several approaches have attempted to address this behavior-sharpening effect, but they often optimize metrics that do not reflect the diversity of correct solutions. Ideally, we want a model that can produce multiple good solutions, not only a single reliable one. We propose EliteReplay, a post-training recipe that pairs GRPO with an \"elite\" archive built by quality-diversity search. Before training, we use the frozen base model to collect solutions that span distinct approaches; during training, GRPO is combined with a replay loss on this archive. The result is a post-trained model that improves accuracy while preserving more of the base model's solution diversity. On multiple text-to-SQL tasks, EliteReplay achieves a higher pass@128 than all baselines, producing up to 77% more distinct correct strategies than the strongest baselines. It preserves most of the base model's correct strategies, outperforming existing methods in strategy retention. This diversity translates into practical benefits on ambiguous questions, where EliteReplay covers both interpretations nearly twice as often as the strongest baseline on AmbiQT.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22290v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22290v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "用质量多样性搜索建立解题策略档案，在强化学习后训练中同时关注正确率与正确解法的多样性。",
+    "tags": [
+      "强化学习",
+      "GRPO",
+      "后训练"
+    ],
+    "wikiNodeIds": [
+      "llm",
+      "ai-evaluation"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22293",
+    "arxivVersion": "2610.22293v1",
+    "domainId": "ai",
+    "title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning",
+    "authors": [
+      "Arnav Chavan",
+      "Kusha Sareen",
+      "Rishabh Tiwari",
+      "Abhranil Chandra",
+      "Johan Obando-Ceron",
+      "Kurt Keutzer",
+      "Scott Niekum",
+      "Inderjit S Dhillon",
+      "Devvrit Khatri"
+    ],
+    "publishedAt": "2026-10-15T17:44:43Z",
+    "updatedAt": "2026-10-15T17:44:43Z",
+    "abstract": "Large language models (LLMs) acquire new skills through fine-tuning, but it can destroy capabilities they already have: catastrophic forgetting remains a central obstacle to continual learning in LLMs. Recent works connect forgetting to how far, and along which directions, fine-tuning moves the weights. On-policy methods such as reinforcement learning and on-policy distillation avoid updating the principal singular directions of weight matrices and thus forget less. In contrast, SFT concentrates updates along these directions and is susceptible to catastrophic forgetting. In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions. SST is optimizer-agnostic and composes well with fine-tuning recipes including SFT and self-distillation. SST combines tight subspace protection, dense gradient estimation, and a simple refresh mechanism, enabling stronger learning than prior orthogonal fine-tuning methods. With these mechanisms, protecting as much as 99\\% of the weight subspace substantially improves retention while preserving strong target-task performance. This behavior strengthens with model and data size and nearly eliminates forgetting in the large-model regime. SST also keeps the model close to its base distribution, inducing $2$--$4\\times$ less KL drift than the baseline recipes. Overall, SST advances the learning--forgetting Pareto frontier, making it a practical default for fine-tuning pre-trained language models.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22293v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22293v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "研究微调中的灾难性遗忘，通过限制权重更新的奇异子空间保护已有能力。",
+    "tags": [
+      "持续学习",
+      "微调",
+      "遗忘"
+    ],
+    "wikiNodeIds": [
+      "machine-learning",
+      "llm"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22273",
+    "arxivVersion": "2610.22273v1",
+    "domainId": "ai",
+    "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
+    "authors": [
+      "Anikait Singh",
+      "Teresa Zhang",
+      "Yoonho Lee",
+      "Roshen Sanjay Nair",
+      "Aviral Kumar",
+      "Chelsea Finn"
+    ],
+    "publishedAt": "2026-10-15T17:35:17Z",
+    "updatedAt": "2026-10-15T17:35:17Z",
+    "abstract": "Reasoning over long document contexts remains a challenge for large language models (LLMs). Standard retrieval methods are inherently reactive, bottlenecking agents with complex, cross-document reasoning at inference time, while precomputed structures like knowledge graphs often fall short because they rely on rigid heuristics. Instead, can we allow agents to perform anticipatory directed curation: learning to proactively reorganize unstructured corpora prior to inference to efficiently serve diverse future queries. We build on a key asymmetry in modern agentic harnesses (e.g., Claude Code): while LLM agents are adept at navigating existing filesystems to solve an immediate task, they are rarely trained to construct reusable workspaces for future use. To instantiate this capability, we introduce Librarian Agents, a framework in which a builder agent transforms raw documents into a hierarchical filesystem of synthetic files and reference links, which forms a workspace tailored for a downstream answering agent. We formulate workspace construction as a Markov decision process and optimize the builder policy via reinforcement learning to directly maximize downstream answering accuracy. Empirically, Librarian Agents outperforms the strongest retrieval and precomputation baselines by 33 percentage points on BrowseComp-Plus, amortizes upfront construction costs across repeated queries, and generalizes zero-shot to unseen domains on BRIGHT with a 31-point average accuracy improvement.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22273v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22273v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "让智能体预先整理长文档为可复用的层级工作空间，以后续问答表现训练知识组织策略。",
+    "tags": [
+      "Agent",
+      "长上下文",
+      "知识组织",
+      "RAG"
+    ],
+    "wikiNodeIds": [
+      "agent",
+      "rag"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22234",
+    "arxivVersion": "2610.22234v1",
+    "domainId": "ai",
+    "title": "OS-Helix: Unifying GUI Interaction and Code Execution in Native Computer-Using Agents",
+    "authors": [
+      "Bowen Yang",
+      "Kaiming Jin",
+      "Zichen Ding",
+      "Zhenyu Wu",
+      "Zehao Li",
+      "Zhoumianze Liu",
+      "Kanzhi Cheng",
+      "Fangzhi Xu",
+      "Yanan Sun",
+      "Qiushi Sun",
+      "Yu Qiao"
+    ],
+    "publishedAt": "2026-10-15T17:14:02Z",
+    "updatedAt": "2026-10-15T17:14:02Z",
+    "abstract": "Real desktop automation is neither purely visual nor purely programmatic. Agents must understand user-facing interfaces while efficiently manipulating files, scripts, and system state. However, native GUI/code coordination cannot be obtained by prompt-level tool composition. In our preliminary experiments, naively adding a code tool degrades a GUI agent, revealing that GUI/code routing must be internalized through training on high-quality hybrid data. We present OS-Helix, an end-to-end trained multimodal computer-using agent that unifies GUI actions and code execution in one action space. To construct the required supervision, we introduce application-artifact composition, pairing desktop applications with authentic file artifacts to instantiate executable Ubuntu states, and a decoupled instruction/evaluator generation pipeline that produces environment-grounded tasks whose final states can be verified regardless of the solution modality. We cold-start the policy with SFT on filtered hybrid data and further improve it through online RL in live desktop environments. For RL, we propose Step-balanced GSPO, which aggregates importance weight by action step rather than raw assistant tokens to prevent long code actions from dominating heterogeneous-action optimization. On OSWorld-Verified, OS-Helix-27B and OS-Helix-35B-A3B achieve relative improvements of 35.0% and 33.7% over their matched Qwen3.5 hybrid baselines, while OS-Helix-27B-RL further improves by 42.9% to reach 66.44% success. Ablations provide evidence consistent with contributions from learned GUI/code coordination, scalable verifiable supervision, and action step balanced optimization, while demonstrating cross-platform transfer on WindowsAgentArena. Our project homepage is at https://os-copilot.github.io/OS-Helix/.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22234v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22234v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "在统一动作空间中训练图形界面操作与代码执行，研究桌面智能体的混合任务和步骤级优化。",
+    "tags": [
+      "GUI",
+      "Agent",
+      "桌面自动化"
+    ],
+    "wikiNodeIds": [
+      "agent",
+      "tool-calling"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2405.21060",
+    "arxivVersion": "2405.21060v1",
+    "domainId": "ai",
+    "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+    "authors": [
+      "Tri Dao",
+      "Albert Gu"
+    ],
+    "publishedAt": "2024-05-31T17:50:01Z",
+    "updatedAt": "2024-05-31T17:50:01Z",
+    "abstract": "While Transformers have been the main architecture behind deep learning's success in language modeling, state-space models (SSMs) such as Mamba have recently been shown to match or outperform Transformers at small to medium scale. We show that these families of models are actually quite closely related, and develop a rich framework of theoretical connections between SSMs and variants of attention, connected through various decompositions of a well-studied class of structured semiseparable matrices. Our state space duality (SSD) framework allows us to design a new architecture (Mamba-2) whose core layer is an a refinement of Mamba's selective SSM that is 2-8X faster, while continuing to be competitive with Transformers on language modeling.",
+    "sourceUrl": "https://arxiv.org/abs/2405.21060v1",
+    "pdfUrl": "https://arxiv.org/pdf/2405.21060v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "Mamba-2 原论文：借助结构化状态空间对偶性，解释注意力与状态空间模型的联系及高效算法。",
+    "tags": [
+      "Mamba-2",
+      "SSM",
+      "模型架构"
+    ],
+    "wikiNodeIds": [
+      "deep-learning",
+      "llm"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2404.16130",
+    "arxivVersion": "2404.16130v2",
+    "domainId": "ai",
+    "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+    "authors": [
+      "Darren Edge",
+      "Ha Trinh",
+      "Newman Cheng",
+      "Joshua Bradley",
+      "Alex Chao",
+      "Apurva Mody",
+      "Steven Truitt",
+      "Dasha Metropolitansky",
+      "Robert Osazuwa Ness",
+      "Jonathan Larson"
+    ],
+    "publishedAt": "2024-04-24T18:38:11Z",
+    "updatedAt": "2025-02-19T10:49:41Z",
+    "abstract": "The use of retrieval-augmented generation (RAG) to retrieve relevant information from an external knowledge source enables large language models (LLMs) to answer questions over private and/or previously unseen document collections. However, RAG fails on global questions directed at an entire text corpus, such as \"What are the main themes in the dataset?\", since this is inherently a query-focused summarization (QFS) task, rather than an explicit retrieval task. Prior QFS methods, meanwhile, do not scale to the quantities of text indexed by typical RAG systems. To combine the strengths of these contrasting methods, we propose GraphRAG, a graph-based approach to question answering over private text corpora that scales with both the generality of user questions and the quantity of source text. Our approach uses an LLM to build a graph index in two stages: first, to derive an entity knowledge graph from the source documents, then to pregenerate community summaries for all groups of closely related entities. Given a question, each community summary is used to generate a partial response, before all partial responses are again summarized in a final response to the user. For a class of global sensemaking questions over datasets in the 1 million token range, we show that GraphRAG leads to substantial improvements over a conventional RAG baseline for both the comprehensiveness and diversity of generated answers.",
+    "sourceUrl": "https://arxiv.org/abs/2404.16130v2",
+    "pdfUrl": "https://arxiv.org/pdf/2404.16130v2",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "GraphRAG 原论文：以实体图谱和社区摘要回答面向整个语料库的全局问题，补充局部片段检索。",
+    "tags": [
+      "GraphRAG",
+      "RAG",
+      "知识图谱"
+    ],
+    "wikiNodeIds": [
+      "rag",
+      "vector-database"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2501.00656",
+    "arxivVersion": "2501.00656v3",
+    "domainId": "ai",
+    "title": "2 OLMo 2 Furious",
+    "authors": [
+      "Team OLMo",
+      "Pete Walsh",
+      "Luca Soldaini",
+      "Dirk Groeneveld",
+      "Kyle Lo",
+      "Shane Arora",
+      "Akshita Bhagia",
+      "Yuling Gu",
+      "Shengyi Huang",
+      "Matt Jordan",
+      "Nathan Lambert",
+      "Dustin Schwenk",
+      "Oyvind Tafjord",
+      "Taira Anderson",
+      "David Atkinson",
+      "Faeze Brahman",
+      "Christopher Clark",
+      "Pradeep Dasigi",
+      "Nouha Dziri",
+      "Allyson Ettinger",
+      "Michal Guerquin",
+      "David Heineman",
+      "Hamish Ivison",
+      "Pang Wei Koh",
+      "Jiacheng Liu",
+      "Saumya Malik",
+      "William Merrill",
+      "Lester James V. Miranda",
+      "Jacob Morrison",
+      "Tyler Murray",
+      "Crystal Nam",
+      "Jake Poznanski",
+      "Valentina Pyatkin",
+      "Aman Rangapur",
+      "Michael Schmitz",
+      "Sam Skjonsberg",
+      "David Wadden",
+      "Christopher Wilhelm",
+      "Michael Wilson",
+      "Luke Zettlemoyer",
+      "Ali Farhadi",
+      "Noah A. Smith",
+      "Hannaneh Hajishirzi"
+    ],
+    "publishedAt": "2024-12-31T21:55:10Z",
+    "updatedAt": "2025-10-08T07:50:45Z",
+    "abstract": "We present OLMo 2, the next generation of our fully open language models. OLMo 2 includes a family of dense autoregressive language models at 7B, 13B and 32B scales with fully released artifacts -- model weights, full training data, training code and recipes, training logs and thousands of intermediate checkpoints. In this work, we describe our modified model architecture and training recipe, focusing on techniques for achieving better training stability and improved per-token efficiency. Our updated pretraining data mixture introduces a new, specialized data mix called Dolmino Mix 1124, which significantly improves model capabilities across many downstream task benchmarks when introduced via late-stage curriculum training (i.e. specialized data during the annealing phase of pretraining). Finally, we incorporate best practices from Tülu 3 to develop OLMo 2-Instruct, focusing on permissive data and extending our final-stage reinforcement learning with verifiable rewards (RLVR). Our OLMo 2 base models sit at the Pareto frontier of performance to training compute, often matching or outperforming open-weight only models like Llama 3.1, Qwen 2.5, and Gemma 2 while using fewer FLOPs and with fully transparent training data, code, and recipe. Our fully open OLMo 2-Instruct models are competitive with open-weight only models of comparable size and even some proprietary models like GPT-3.5 Turbo and GPT 4o Mini.",
+    "sourceUrl": "https://arxiv.org/abs/2501.00656v3",
+    "pdfUrl": "https://arxiv.org/pdf/2501.00656v3",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "OLMo 2 技术报告，公开模型、数据、训练配方与中间检查点，讨论训练稳定性及后训练方法。",
+    "tags": [
+      "OLMo",
+      "开放模型",
+      "预训练"
+    ],
+    "wikiNodeIds": [
+      "llm",
+      "machine-learning"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22327",
+    "arxivVersion": "2610.22327v1",
+    "domainId": "ai",
+    "title": "Twice Upon a Time: Complementary Representations for Time-Series Reasoning",
+    "authors": [
+      "Hedi Zisling",
+      "Liran Nochumsohn",
+      "Ilan Naiman",
+      "Mihir Parmar",
+      "Omri Azencot"
+    ],
+    "publishedAt": "2026-10-15T17:52:18Z",
+    "updatedAt": "2026-10-15T17:52:18Z",
+    "abstract": "Time Series Language Models (TSLMs) enable language-based understanding and reasoning over temporal data, yet a fundamental question remains: what information should their time-series representations preserve, and what variation should they factor out? Existing TSLMs typically expose the language model to a single representation, imposing a fixed inductive bias across downstream tasks. We instead introduce complementary representations as a design principle for time-series reasoning. Our model combines two visual views: line plots preserve absolute measurements and the observed coordinate frame, while normalized delay embeddings factor out positive amplitude rescaling and offsets while exposing temporal structure. Dedicated visual encoders integrate both views into a shared language model through visual tokens and multi-level feature fusion. Evaluation-time interventions verify that the two views exhibit distinct invariance profiles, while single-view ablations show that their combination is particularly beneficial beyond basic perception, with the large gains in prediction and reasoning. Built on Qwen3-VL-8B, our dual-view model improves overall TSRBench accuracy from 44.5% with line plots alone to 53.2%, substantially exceeding the strongest evaluated dedicated TSLM baseline at 36.7%. It further achieves 89.9% accuracy on TSExam and 86.8% numerical accuracy on multivariate ChatTS alignment. Together, these results demonstrate that complementary representations provide an effective design principle for general-purpose TSLMs, enabling models to exploit temporal structure without sacrificing access to the original measurement frame.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22327v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22327v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "结合折线图与归一化延迟嵌入两种互补表示，研究时间序列语言模型保留数值与时序结构的方式。",
+    "tags": [
+      "时间序列",
+      "多模态",
+      "推理"
+    ],
+    "wikiNodeIds": [
+      "machine-learning",
+      "data-mining"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22245",
+    "arxivVersion": "2610.22245v1",
+    "domainId": "ai",
+    "title": "Disagreement-Guided Weak-to-Strong Routing",
+    "authors": [
+      "Sima Noorani",
+      "Shayan Kiyani",
+      "George Pappas",
+      "Hamed Hassani"
+    ],
+    "publishedAt": "2026-10-15T17:19:57Z",
+    "updatedAt": "2026-10-15T17:19:57Z",
+    "abstract": "Small language models are increasingly deployed on edge devices and robotic systems to meet cost and latency constraints, yet their limited capabilities can make reliable deployment challenging. Stronger models can provide assistance when needed, but deciding when to route a weak-model response to a stronger model often relies on signals of response correctness. In open-ended and agentic tasks, however, obtaining such signals can require costly ground-truth supervision that is difficult to obtain at scale. We revisit the foundations of weak-to-strong routing and ask whether routing decisions can instead be guided by signals that do not require ground-truth supervision. We first characterize the optimal weak-to-strong routing policy, while allowing for multiple weak-model responses generated through local inference. Building on this characterization, we derive a principled approximation to the optimal routing based on model-to-model comparison. In particular, we introduce a notion of model disagreement that can be measured directly from model-generated responses, without ground-truth supervision. Importantly, the approximation becomes increasingly accurate as the strong model becomes a better proxy for the ground-truth distribution. Across agentic and single-turn tasks, our approach effectively navigates the trade-off between routing cost and response accuracy without ground-truth supervision. Moreover, even when ground-truth correctness signals are available for training, disagreement-based routing can outperform methods trained directly to predict correctness",
+    "sourceUrl": "https://arxiv.org/abs/2610.22245v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22245v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "以弱模型和强模型回答之间的分歧指导请求路由，分析无需真实标签时的成本与准确性权衡。",
+    "tags": [
+      "模型路由",
+      "推理成本",
+      "弱到强"
+    ],
+    "wikiNodeIds": [
+      "llm",
+      "ai-evaluation"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22217",
+    "arxivVersion": "2610.22217v1",
+    "domainId": "ai",
+    "title": "Skill-Decoupled On-Policy Expert Distillation for Unified Vision-Language Models",
+    "authors": [
+      "Yuqi Xiong",
+      "Chunyi Peng",
+      "Zhipeng Xu",
+      "Qing Yang",
+      "Zhenghao Liu",
+      "Zulong Chen",
+      "Yu Gu",
+      "Ge Yu"
+    ],
+    "publishedAt": "2026-10-15T17:01:41Z",
+    "updatedAt": "2026-10-15T17:01:41Z",
+    "abstract": "Reinforcement learning (RL) can elicit specialized visual capabilities in vision-language models (VLMs), yet jointly optimizing heterogeneous objectives often introduces cross-capability gradient conflicts. Training experts independently mitigates this interference, but direct reward optimization may entangle specialized knowledge with reward-hacking biases. This paper proposes Skill-Decoupled On-Policy Expert Distillation (SCOPED), which trains capability-specific experts and extracts explicit skills through reward-guided reflection. During on-policy distillation, these skills guide expert supervision while remaining unavailable to the unified student, encouraging it to internalize procedural knowledge without explicit skills at inference time. Across eight multimodal benchmarks, SCOPED consistently outperforms the backbone and mixed-capability RL, demonstrating the effectiveness of skill-decoupled on-policy expert distillation for integrating independently acquired capabilities. Further analyses reveal interference during joint capability optimization and suggest that skill augmentation promotes more consistent expert trajectories, greater attention to task-relevant visual evidence, and better preservation of specialized expertise in the unified student. All code and data are available at https://github.com/NEUIR/SCOPED.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22217v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22217v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "先训练各项视觉能力专家，再用技能引导的在策略蒸馏整合能力，研究多任务干扰与奖励偏差。",
+    "tags": [
+      "VLM",
+      "蒸馏",
+      "多模态"
+    ],
+    "wikiNodeIds": [
+      "deep-learning",
+      "llm"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22301",
+    "arxivVersion": "2610.22301v1",
+    "domainId": "security",
+    "title": "My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale",
+    "authors": [
+      "Zeqian Huang",
+      "Mingyue Tang",
+      "Aonan Guan",
+      "Qiming Sun",
+      "Pengzhou He"
+    ],
+    "publishedAt": "2026-10-15T17:48:10Z",
+    "updatedAt": "2026-10-15T17:48:10Z",
+    "abstract": "The Model Context Protocol (MCP) standardizes how AI agents invoke external tools. MCP servers expose tools through a declared contract consisting of a name, description, and argument schema. In typical local deployments, client-side approval of a tool call grants the underlying server process broad host filesystem permissions rather than restricting it to the declared operation. We study the resulting vulnerability class, filesystem capability laundering, where attacker-steered arguments cause a tool to access sensitive host files outside its declared contract and deployment scope. We analyze this capability gap across three layers: server-category screening (L1), per-tool contract analysis (L2), and bypassable path-validation checks (L3). We design MCP-FSD to catalog MCP servers, infer least-privilege boundaries per tool, plant credential fixtures outside those boundaries, and evaluate exploitability and sandbox containment via paired dynamic execution. Across 21,097 MCP servers from nine registries, 787 of 4,806 triaged servers (16.4%) exhibit filesystem capabilities despite non-filesystem functional classifications. Dynamic three-case validation confirms 150 vulnerable instances under tested sandbox policies. Coordinated disclosure yielded 13 security advisories, including two CVEs in Anthropic's Git MCP Server.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22301v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22301v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "分析 MCP 工具声明与宿主文件权限之间的落差，通过分层筛查和动态验证研究文件系统能力滥用。",
+    "tags": [
+      "MCP",
+      "最小权限",
+      "工具安全"
+    ],
+    "wikiNodeIds": [
+      "tool-calling",
+      "ai-security",
+      "vulnerability-scanning"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21547",
+    "arxivVersion": "2610.21547v1",
+    "domainId": "security",
+    "title": "Federated Art Chase: Privacy Leakage and Data Poisoning in Federated Fine-Tuning",
+    "authors": [
+      "Vasileios Perifanis",
+      "Nikolaos Pavlidis"
+    ],
+    "publishedAt": "2026-10-15T09:11:39Z",
+    "updatedAt": "2026-10-15T09:11:39Z",
+    "abstract": "Federated learning (FL) is increasingly used to adapt a pretrained, centrally fine-tuned model to data that remain on user devices, beyond training a model from scratch. In this report, prepared for the 4th Federated Machine Learning International Summer School, we study the privacy and integrity of this approach with a reproducible pipeline. An ImageNet-pretrained MobileNetV4-Conv-Small model is fine-tuned centrally on ten Quick, Draw! classes (97.50% test accuracy) and then adapted with head-only FedAvg over ten non-IID clients, which raises client training accuracy from 90.34% to 91.49% while preserving global accuracy. We evaluate four adversarial scenarios. First, from a single one-step client update, an honest-but-curious server recovers the complete private label set, but its reconstructions follow class prototypes rather than the private drawings (mean SSIM 0.130). Second, from a one-round FedAvg aggregate, label-count recovery falls from 87.5% with one client to 75.0% with five and ten clients, below the 80.0% of an uninformed uniform guess. Third, under FedAvg, a backdoor injected by 30%, 50%, and 100% of the clients reaches an attack success rate (ASR) of 21.9%, 31.3%, and 54.7% at a cost of at most 0.8 percentage points of clean accuracy, whereas label flipping is effective only when most of the source-class data are relabeled. Fourth, FLTrust with a root set retained from centralized fine-tuning lowers the backdoor ASR to 1.8% and 4.0% at 30% and 50% malicious clients and the label-flipping ASR from 12.6% to 0.8% without measurable clean-accuracy loss, but provides no protection when every client is malicious. The report closes with a live session in which participants draw, fine-tune, and poison the model through Indigma's FedMaestro orchestrator. Code and executed notebooks, runnable on Google Colab, are at https://github.com/Indigma-Innovations/fl-summer-school.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21547v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21547v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "围绕联邦微调构建可复现实验流程，分别分析标签泄露、数据投毒、后门与防御的边界。",
+    "tags": [
+      "联邦学习",
+      "隐私",
+      "数据投毒"
+    ],
+    "wikiNodeIds": [
+      "machine-learning",
+      "ai-security"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21373",
+    "arxivVersion": "2610.21373v1",
+    "domainId": "security",
+    "title": "Evaluating and Improving Static Application Security Testing Tools for Rust",
+    "authors": [
+      "Huaien Zhang",
+      "Zhengjie Zhao",
+      "Yu Pei",
+      "Tian Dong",
+      "Minxue Pan",
+      "Shin Hwei Tan",
+      "Hao Chen"
+    ],
+    "publishedAt": "2026-10-15T06:54:04Z",
+    "updatedAt": "2026-10-15T06:54:04Z",
+    "abstract": "Rust has become a popular systems programming language in recent years because of its strong guarantees on memory and concurrency safety. Many types of system software have been re-implemented in Rust. However, Rust programs can still suffer from common memory and concurrency vulnerabilities due to unsafe code and misunderstandings of its complex mechanisms. To mitigate such vulnerabilities, developers often rely on static application security testing (SAST) tools. However, the effectiveness of existing Rust SAST tools on real-world vulnerabilities remains underexplored. In this paper, we first conduct an empirical evaluation of mainstream Rust SAST tools using security vulnerabilities identified in real-world Rust applications. We systematically assess their effectiveness, uncover common weaknesses, and analyze the root causes behind them. Motivated by the study, we propose TRUST, a large language model (LLM)-assisted automated testing framework. TRUST automatically analyzes the official Rust reference to derive and implement semantics-preserving transformations. It leverages these transformations to generate mutant programs for evaluating Rust SAST tools and uncovering potential faults within them. Overall, TRUST has revealed 46 faults across six popular SAST tools, 17 of which have been confirmed. In addition, our study yields ten empirical findings and four practical lessons that provide actionable guidance for developing more effective, robust, and maintainable Rust SAST tools.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21373v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21373v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "评估真实 Rust 漏洞上的静态检测工具，并利用保持语义的程序变换测试检测器自身的可靠性。",
+    "tags": [
+      "Rust",
+      "SAST",
+      "静态分析"
+    ],
+    "wikiNodeIds": [
+      "vulnerability-scanning",
+      "testing"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21309",
+    "arxivVersion": "2610.21309v1",
+    "domainId": "security",
+    "title": "Combining LLM and Dynamic Analysis for Universal Testing of Static Application Security Testing Tools",
+    "authors": [
+      "Huaien Zhang",
+      "Yu Pei",
+      "Hao Chen",
+      "Shin Hwei Tan"
+    ],
+    "publishedAt": "2026-10-15T05:57:29Z",
+    "updatedAt": "2026-10-15T05:57:29Z",
+    "abstract": "Static application security testing (SAST) tools help detect potential software vulnerabilities, but they themselves contain faults undermining reliability and usability. Automated testing can address these issues, yet current techniques suffer from limited program transformation diversity and lack mechanisms to verify generated variants, leading to reduced fault detection and high manual effort. We present LLM4SAST, the first universal framework detecting faults in SAST tools using large language models and dynamic feedback. Our key insight is leveraging LLMs to understand and transform code in diverse programming languages. We design novel metamorphic relations with transformations to guide variant generation, using an LLM to produce multi-language variants that satisfy these relations. To reduce erroneous variants and identify unique faults, we propose two heuristics: dynamic-feedback-driven selection and program-differencing-based clustering. For each metamorphic relation, a report-centric test oracle detects variants that fail tests and identifies underlying faults by differentially analyzing SAST reports of the seed program and its variants. LLM4SAST identified 66 unique faults across six SAST tools, with 32 confirmed or fixed after being reported to developers, demonstrating effectiveness. The proposed heuristics eliminate 47.8% of false positives, and LLM4SAST detects 3.4 times more faults while requiring only 39.8% of the variants compared to existing approaches.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21309v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21309v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "将大语言模型生成的程序变体与动态反馈结合，用蜕变关系和差分报告检验静态安全分析工具。",
+    "tags": [
+      "SAST",
+      "动态分析",
+      "蜕变测试"
+    ],
+    "wikiNodeIds": [
+      "vulnerability-scanning",
+      "testing"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21174",
+    "arxivVersion": "2610.21174v1",
+    "domainId": "security",
+    "title": "Amora: Communication-Efficient Private Approximate Nearest Neighbors Search",
+    "authors": [
+      "Qiuhao Wang",
+      "Zuowei Chen",
+      "Xu Yang",
+      "Saiyu Qi",
+      "Yong Qi"
+    ],
+    "publishedAt": "2026-10-15T03:30:36Z",
+    "updatedAt": "2026-10-15T03:30:36Z",
+    "abstract": "Approximate nearest neighbors search (ANNS) over cloud-hosted vector databases raises a critical privacy concern: the query vector, which often encodes sensitive user intent, is exposed to the server. Private ANNS (PANNS) allows a client to retrieve nearest neighbors without revealing its query. The state-of-the-art single-server scheme, Pacmann (ICLR'25), achieves high accuracy via graph-based search with private information retrieval (PIR), but incurs substantial communication overhead because each PIR query retrieves only a single vertex. We present Amora, a communication-efficient PANNS system that applies SimplePIR to a partitioned graph index so that one PIR query is amortized over many vertices. To retrieve as much of the distance and neighbor information the search needs under a limited communication budget, Amora adopts a dual-PIR split layout with two heterogeneous PIR matrices that stay balanced in dimension: VecPIR retrieves inner products for an entire partition of vertices as their distance at once, while NbrPIR retrieves necessary neighbor lists at subgroup granularity for graph traversal. This layout shifts the cost model of PIR query from per-vertex to per-partition, which significantly reduces the communication overhead. To further improve efficiency by reducing the number of scans and query rounds in the PIR database, Amora introduces batch PIR to pack multiple queries into one matrix multiplication, centroid-based pruning to filter unpromising partitions, and TopCand exploration that seeds jump-style graph navigation with the closest vertices from each retrieved partition. We evaluate Amora on five datasets spanning 96 to 1024 dimensions and up to 10 million vectors. Compared to Pacmann, Amora reduces online communication by 93--99% while achieving higher search accuracy.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21174v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21174v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "Amora 通过分区图索引与私有信息检索，研究向量数据库近邻查询的隐私保护和通信开销。",
+    "tags": [
+      "PIR",
+      "向量数据库",
+      "隐私检索"
+    ],
+    "wikiNodeIds": [
+      "vector-database",
+      "database",
+      "ai-security"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2408.01605",
+    "arxivVersion": "2408.01605v2",
+    "domainId": "security",
+    "title": "CYBERSECEVAL 3: Advancing the Evaluation of Cybersecurity Risks and Capabilities in Large Language Models",
+    "authors": [
+      "Shengye Wan",
+      "Cyrus Nikolaidis",
+      "Daniel Song",
+      "David Molnar",
+      "James Crnkovich",
+      "Jayson Grace",
+      "Manish Bhatt",
+      "Sahana Chennabasappa",
+      "Spencer Whitman",
+      "Stephanie Ding",
+      "Vlad Ionescu",
+      "Yue Li",
+      "Joshua Saxe"
+    ],
+    "publishedAt": "2024-08-02T23:47:27Z",
+    "updatedAt": "2024-09-06T18:17:07Z",
+    "abstract": "We are releasing a new suite of security benchmarks for LLMs, CYBERSECEVAL 3, to continue the conversation on empirically measuring LLM cybersecurity risks and capabilities. CYBERSECEVAL 3 assesses 8 different risks across two broad categories: risk to third parties, and risk to application developers and end users. Compared to previous work, we add new areas focused on offensive security capabilities: automated social engineering, scaling manual offensive cyber operations, and autonomous offensive cyber operations. In this paper we discuss applying these benchmarks to the Llama 3 models and a suite of contemporaneous state-of-the-art LLMs, enabling us to contextualize risks both with and without mitigations in place.",
+    "sourceUrl": "https://arxiv.org/abs/2408.01605v2",
+    "pdfUrl": "https://arxiv.org/pdf/2408.01605v2",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "CYBERSECEVAL 3 安全评估报告，按不同风险对象衡量语言模型的网络安全能力、滥用风险与缓解措施。",
+    "tags": [
+      "安全评估",
+      "LLM",
+      "CyberSecEval"
+    ],
+    "wikiNodeIds": [
+      "ai-security",
+      "ai-evaluation"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21713",
+    "arxivVersion": "2610.21713v1",
+    "domainId": "security",
+    "title": "Encoded but Exposed: Language Embeddings can Reveal More Than They Should in Recommender Systems",
+    "authors": [
+      "Linda Beková",
+      "Rodrigo Alves"
+    ],
+    "publishedAt": "2026-10-15T11:32:41Z",
+    "updatedAt": "2026-10-15T11:32:41Z",
+    "abstract": "Language embeddings are increasingly used in recommenders to represent item content, but their privacy risks remain poorly understood. We study whether item embeddings can reveal item identities when an adversary has access to auxiliary item text from external sources. We show that a simple cosine-similarity attack can recover item identities with high mean reciprocal rank across language models and candidate-set settings on two real-world datasets. Leakage is strongest when the adversary's partial information overlaps with the victim representation, but it also persists through semantic alignment between independently sourced descriptions. We further show that item leakage can propagate to user re-identification from sparse ratings. Finally, we evaluate obfuscated descriptions as a mitigation and find a clear leakage-utility tradeoff.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21713v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21713v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "研究推荐系统的语言嵌入如何泄露物品身份，并分析辅助文本、用户重识别和效用之间的关系。",
+    "tags": [
+      "嵌入隐私",
+      "推荐系统",
+      "重识别"
+    ],
+    "wikiNodeIds": [
+      "ai-security",
+      "vector-database"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21063",
+    "arxivVersion": "2610.21063v1",
+    "domainId": "security",
+    "title": "Approve What, Exactly? Effect Binding and Trusted Rendering for Agent Step-Up Authorization",
+    "authors": [
+      "Sai Varun Kodathala",
+      "Prashanth Pollishetty",
+      "Jaylen Cargill"
+    ],
+    "publishedAt": "2026-10-15T01:11:23Z",
+    "updatedAt": "2026-10-15T01:11:23Z",
+    "abstract": "AI agents now pause for approval before they send money, delete files or email outsiders, and that approval is usually treated as a second factor. We argue it is one only when compromising the agent cannot produce it and when it names exactly what it approves, and we test both conditions. We define twelve attacks on the approval path, including decoy recipients, amount cancellation, card padding, label spoofing, enrollment squatting and threshold splitting, and run them against the Agent Payments Protocol (AP2), the Microsoft action-bound approval design and Model Context Protocol (MCP) elicitation. An audit of ten agent runtimes finds no third-party verifiable approval record, no flood limits where measurable, and post-approval argument changes in four of eight runtimes with measurable binding. As a reference defense we build ASU (Agent Step-Up), a gateway that renders the approval card from a canonical effect descriptor, has a passkey on the phone of the user sign its digest, and executes only the stored call. Tamarin proves its binding, single-use and key-level non-repudiation properties under three stated hypotheses (53 lemmas). Across 27,108 scripted trials and 609 AgentDojo attack pairs, ASU stops substitution, replay and grant stretching, and the trusted card cuts forged-narration attack success from 0.54 to 0.03. With 15 current language models as automated approvers, the trusted card raises the attack catch rate from 0.30 to 0.98, at the cost of refusing 16 percent of harmless near misses, mostly due to a placeholder artifact in our stimuli. A second device adds nothing measurable over a trusted on-host confirmation in these experiments, flooding still succeeds 0.45 to 0.60 of the time against a modeled approver, and approval cannot stop effects that policy already allows. Code, data and proofs: https://github.com/Sports-Vision-Inc/agent-step-up",
+    "sourceUrl": "https://arxiv.org/abs/2610.21063v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21063v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "检查智能体审批是否绑定真实执行效果，以规范化效果描述和可信展示研究替换、重放等授权风险。",
+    "tags": [
+      "Agent",
+      "授权",
+      "MCP",
+      "可信展示"
+    ],
+    "wikiNodeIds": [
+      "ai-security",
+      "tool-calling",
+      "api"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21458",
+    "arxivVersion": "2610.21458v1",
+    "domainId": "security",
+    "title": "What Survives Self-Evolution: Provenance Marks in Copied Agent Harnesses",
+    "authors": [
+      "Jieyu Li",
+      "Jingya Li",
+      "Sheng Li",
+      "Xinpeng Zhang",
+      "Zhenxing Qian"
+    ],
+    "publishedAt": "2026-10-15T08:03:10Z",
+    "updatedAt": "2026-10-15T08:03:10Z",
+    "abstract": "Agent harnesses, the prompt and tool code around a base model, leak. Claude Code's 512,000 lines were mirrored within hours of a packaging error. A plagiarist can pass a leaked harness through a published self-evolver and ship the result as its own. We define this as a covert rewriting attack. No one targets a provenance mark, yet a large language model (LLM) proposer rewrites the file that carries it and a score keeps the better rewrites. We give the first measurement of marks under this attack, with three evolvers, five proposers and two environments. Published marks fail. KGW in the prompt survives GEPA's rewrites in 0 of 12 copies, AgentMark as released in 5 of 12. The proposer's habits decide survival, by two orders of magnitude across models, and selection protects a mark only when each decision sees enough games. We then build a mark for this attack. Its key is the order of near-tied entries of a table of where objects are found, built from public games, so deleting the table costs success, rewrites that keep its rows keep the order, and a customer reads the key from the agent's actions alone. On held-out games it is detected in 62 of 76 copies whose lineage rewrote its file. A scheme-aware plagiarist reshuffles the ties at no measurable cost, and a plagiarist who asks the proposer for more general code removes the key in 75-100% of rewrites.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21458v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21458v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "研究智能体框架被复制并自动改写后，来源标记能否保留，以及水印检测面对主动规避的局限。",
+    "tags": [
+      "来源追踪",
+      "Agent",
+      "水印"
+    ],
+    "wikiNodeIds": [
+      "ai-security",
+      "supply-chain"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21245",
+    "arxivVersion": "2610.21245v1",
+    "domainId": "security",
+    "title": "From One Query to Many: A Critical Survey of Privacy Accounting in RAG",
+    "authors": [
+      "Zhiyuan Zhang"
+    ],
+    "publishedAt": "2026-10-15T04:41:03Z",
+    "updatedAt": "2026-10-15T04:41:03Z",
+    "abstract": "Retrieval-augmented generation (RAG) enables large language models to leverage external knowledge but introduces privacy risks when the retrieved corpus contains sensitive information. Differential privacy (DP) offers formal protection, yet interpreting and comparing privacy guarantees across existing DP-RAG methods remains challenging. In particular, a privacy budget reported for a single response does not directly characterize privacy loss over repeated queries, and even identical values of $\\varepsilon$ may represent different guarantees depending on the protected data unit, accounting horizon, and observable outputs. This survey critically examines how privacy accounting evolves from single-query generation to multi-query RAG systems. We categorize existing approaches into query-time privatization, multi-query accounting, and one-time corpus privatization. We analyze their underlying assumptions and privacy--utility trade-offs. Rather than ranking methods by $\\varepsilon$ alone, we propose a framework that interprets a DP-RAG guarantee along three dimensions: privacy granularity, accounting scope, and release boundaries. We conclude that an $\\eps$ is a claim only together with the three slots: the protected unit, the accounting scope, and the release boundary.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21245v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21245v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "梳理 RAG 从单次回答走向多次查询时的隐私核算，区分保护单位、核算范围与输出边界。",
+    "tags": [
+      "RAG",
+      "差分隐私",
+      "隐私核算"
+    ],
+    "wikiNodeIds": [
+      "rag",
+      "ai-security"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22039",
+    "arxivVersion": "2610.22039v1",
+    "domainId": "software",
+    "title": "WEAVE: Weaving Real-World Code Evolution into Dependency-Structured Tasks for Benchmarking and Training Code Agents",
+    "authors": [
+      "Weihao Li",
+      "Zihang Xu",
+      "Zhongqiu Wang",
+      "Songwei Yu",
+      "Wenqiang Zhu",
+      "Yuechen Luo",
+      "Jingxuan Xu",
+      "Yanan Wu",
+      "Haoyang Huang",
+      "Ken Deng"
+    ],
+    "publishedAt": "2026-10-15T15:12:56Z",
+    "updatedAt": "2026-10-15T15:12:56Z",
+    "abstract": "Real-world software engineering rarely consists of isolated changes. Features, migrations, and systematic fixes often unfold across multiple pull requests (PRs), requiring coordinated modifications across a repository. Yet most executable repository-level benchmarks retain a single issue or PR as the task unit, while existing multi-PR settings rely on coarse aggregation and structure-agnostic evaluation. This mismatch obscures dependencies among changes and limits progress measurement and learning signals for long-horizon code agents. We introduce WEAVE, a framework that transforms verified PR histories into executable, dependency-structured tasks. WEAVE leverages repository-calibrated typed change loci to organize related PRs into bounded DAGs and instantiate each as a unified executable task. We further introduce Graph Credit, a deterministic, test-grounded metric that measures dependency-consistent partial progress and supports dense, verifiable rewards for reinforcement learning. Experiments on task construction, agent evaluation, supervised fine-tuning, and reinforcement learning show that WEAVE yields coherent executable tasks, enables more faithful progress measurement than flat scoring, and provides effective supervision and verifiable rewards for training code agents.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22039v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22039v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "把真实代码演化中的多次合并请求组织成可执行依赖图，以测试依据衡量代码智能体的部分进展。",
+    "tags": [
+      "代码演化",
+      "Agent",
+      "依赖图",
+      "基准"
+    ],
+    "wikiNodeIds": [
+      "architecture",
+      "testing",
+      "agent"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21914",
+    "arxivVersion": "2610.21914v1",
+    "domainId": "software",
+    "title": "CodeHealth Predicts the Token Cost of Agentic Code Review: A Pre-Registered Study of 465 Agent-Authored Pull Requests",
+    "authors": [
+      "Lo Gullstrand Heander",
+      "Markus Borg",
+      "Emma Söderberg",
+      "Christofer Rydenfält"
+    ],
+    "publishedAt": "2026-10-15T14:00:33Z",
+    "updatedAt": "2026-10-15T14:00:33Z",
+    "abstract": "Context: Organizations increasingly delegate code review to multi-agent large language model (LLM) pipelines billed per token. Low code quality raises human maintenance effort, but its effect on agent review cost has not been measured.\n  Objective: We test whether baseline CodeHealth predicts the token cost of agentic review and fix beyond pull request (PR) footprint.\n  Method: In a pre-registered observational study, we sampled 465 agent-authored PRs from 246 repositories in AIDev, jointly stratified by CodeHealth and footprint under repository caps. A frozen five-agent review-and-fix pipeline processed every PR with three different LLMs. Per LLM, we fitted a mixed model of log tokens on CodeHealth and log PR footprint, with a repository random intercept.\n  Results: For all three LLMs the CodeHealth coefficient was negative, with 95% CI excluding zero; each CodeHealth point was associated with 3.5% to 6.1% lower token cost. CodeHealth was unrelated to PR footprint, so PR size does not explain the association. Two of three registered smells predicted fix cost; batch fixing left median CodeHealth unchanged. Exploratory analyses located the association in the review stage, where agents iterated more on unhealthy code without writing more comments. Adjusting for the size of the scored files absorbed the association, which we interpret as mediation by file size.\n  Conclusions: A quality metric calibrated against human maintainability also predicts the inference cost of multi-agent review and fix. The effect is modest per point and not carried by PR size, so the refactoring case extends to agent-reviewed code when it changes structure and file size, not only the score.\n  Data Availability: https://doi.org/10.5281/zenodo.22127920",
+    "sourceUrl": "https://arxiv.org/abs/2610.21914v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21914v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "预注册观察研究：考察代码可维护性与智能体审查成本的关联，区分文件规模、变更规模和相关性解释。",
+    "tags": [
+      "代码质量",
+      "代码审查",
+      "成本"
+    ],
+    "wikiNodeIds": [
+      "testing",
+      "architecture"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21372",
+    "arxivVersion": "2610.21372v1",
+    "domainId": "software",
+    "title": "Agentic Dependency Transformations: Lessons from an Exploratory Case Study of Flask",
+    "authors": [
+      "Kaya Kitada",
+      "Yoshiki Higo",
+      "Raula Gaikovina Kula"
+    ],
+    "publishedAt": "2026-10-15T06:52:52Z",
+    "updatedAt": "2026-10-15T06:52:52Z",
+    "abstract": "Modern software relies heavily on third-party libraries, requiring maintainers to balance the benefits of reuse against dependency-related maintenance and risk. We define dependency transformation as an emerging approach in which an AI coding agent alters how a repository handles external dependencies. Local reimplementation is one transformation strategy that recreates required functionality as local code; dependency transformation is broader and may include other strategies. In this emerging-results paper, we report an exploratory case study of Flask to explore dependency transformation strategies. We design experiments that show how available context shapes an agent's dependency discovery and iterative transformation of dependencies. The case yields five preliminary lessons. These lessons and the five-part research agenda position dependency transformation as an emerging research direction and motivate explicit transformation contracts, provenance constraints, preservation requirements, and independent validation criteria.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21372v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21372v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "以 Flask 为探索性案例，研究智能体改变外部依赖处理方式时的上下文、来源约束和独立验证。",
+    "tags": [
+      "依赖治理",
+      "Flask",
+      "软件维护"
+    ],
+    "wikiNodeIds": [
+      "backend",
+      "supply-chain",
+      "testing"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21144",
+    "arxivVersion": "2610.21144v1",
+    "domainId": "software",
+    "title": "Plausible Is Not Enough: Trust and Evidence in AI-Authored Pull Request Review",
+    "authors": [
+      "Md Shamimur Rahman",
+      "Khairul Alam",
+      "Banani Roy",
+      "Chanchal K. Roy"
+    ],
+    "publishedAt": "2026-10-15T03:00:27Z",
+    "updatedAt": "2026-10-15T03:00:27Z",
+    "abstract": "Code review is where AI-authored pull requests (AIPRs) must earn reviewer trust before integration, yet it is unclear whether reviewers apply the same criteria used for human-authored pull requests (HPRs). We surveyed 239 practitioners from 31 countries using matched HPR and AIPR questions to compare trust, evidence requirements, and verification practices within respondents. Most respondents (64.9%) reported lower initial trust in AIPRs. They relied less on author track record and subsystem familiarity, emphasizing instead human prompter expertise and bounded change size. For approval, respondents more often considered their own reasoning through critical cases sufficient for AIPRs than HPRs (55.2% versus 28.5%), while relying less on test coverage. Overall, 61.1% reported higher evidence requirements for AIPRs, and the share who would block approval under residual uncertainty increased from 19.4% for HPRs to 43.9% for AIPRs. Respondents prioritized test inspection, project context, and local execution, and more often selected partial reimplementation to verify non-trivial logic. Unclear ownership was also more likely to pause AIPR review (29.3% versus 14.6%). Open-ended responses pointed to the difficulty of validating plausible code without reliable context and human accountability. These findings frame AIPR review as an evidence-ownership problem, not merely a correctness check. Reviewers need to connect generated changes to validated behavior and responsible maintainers. Review tools and agentic workflows should expose provenance, distinguish generated claims from human-validated evidence, and make uncertainty visible before approval.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21144v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21144v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "通过从业者调查比较人工与 AI 合并请求的信任和证据要求，讨论验证责任与不确定性。",
+    "tags": [
+      "代码审查",
+      "人机协作",
+      "证据"
+    ],
+    "wikiNodeIds": [
+      "testing",
+      "architecture"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.20344",
+    "arxivVersion": "2610.20344v1",
+    "domainId": "software",
+    "title": "Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents",
+    "authors": [
+      "Yuyao Ge",
+      "Shenghua Liu",
+      "Peizhong Gao",
+      "Chendi Ge",
+      "Chenxu Liu",
+      "Yiwei Wang",
+      "Lingrui Mei",
+      "Baolong Bi",
+      "Jiayu Yao",
+      "Jiafeng Guo",
+      "Xueqi Cheng"
+    ],
+    "publishedAt": "2026-10-14T15:24:39Z",
+    "updatedAt": "2026-10-14T15:24:39Z",
+    "abstract": "Agents driven by large language models are increasingly deployed on long-horizon tasks, where they use tools and modify real workspaces. How well they perform depends as much on the harness around the model as on the model itself. Existing benchmarks measure downstream task success under a fixed harness, leaving harness engineering itself unexplored. We propose Doc2Harness, a two-stage benchmark that evaluates long-horizon harness engineering directly. In Stage 1, a build model operating inside a fixed builder harness receives an interface-only contract skeleton and a development document that consolidates behavior across twelve frontier harnesses, and then constructs a complete candidate harness in an isolated container. In Stage 2, the frozen candidate harness runs in containers separate from the construction environment, one per test case, and is driven end to end by a scripted mock model. We score each test case using four observable channels, namely the requests sent to the model, the files on disk, the process exit code, and the command output; positive controls rule out vacuous passes. Across nineteen frontier models, each evaluated with three independent builds on 328 test cases, GPT-6 Astra achieves the highest pass rate at 53.05%, while the weakest model reaches 27.44%, a gap of roughly twenty-six percentage points. Even the strongest model fails nearly half of the test cases, and failures cluster around how cross-cutting functionality is split across modules. To our knowledge, Doc2Harness provides the first deterministic benchmark for measuring long-horizon harness engineering.",
+    "sourceUrl": "https://arxiv.org/abs/2610.20344v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.20344v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "Doc2Harness 用隔离构建与确定性测试评估代码智能体运行框架的长程工程能力，而非仅看下游任务成功率。",
+    "tags": [
+      "Harness",
+      "评测",
+      "系统工程"
+    ],
+    "wikiNodeIds": [
+      "architecture",
+      "testing",
+      "agent"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2405.15793",
+    "arxivVersion": "2405.15793v3",
+    "domainId": "software",
+    "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+    "authors": [
+      "John Yang",
+      "Carlos E. Jimenez",
+      "Alexander Wettig",
+      "Kilian Lieret",
+      "Shunyu Yao",
+      "Karthik Narasimhan",
+      "Ofir Press"
+    ],
+    "publishedAt": "2024-05-06T17:41:33Z",
+    "updatedAt": "2024-11-11T20:01:15Z",
+    "abstract": "Language model (LM) agents are increasingly being used to automate complicated tasks in digital environments. Just as humans benefit from powerful software applications, such as integrated development environments, for complex tasks like software engineering, we posit that LM agents represent a new category of end users with their own needs and abilities, and would benefit from specially-built interfaces to the software they use. We investigate how interface design affects the performance of language model agents. As a result of this exploration, we introduce SWE-agent: a system that facilitates LM agents to autonomously use computers to solve software engineering tasks. SWE-agent's custom agent-computer interface (ACI) significantly enhances an agent's ability to create and edit code files, navigate entire repositories, and execute tests and other programs. We evaluate SWE-agent on SWE-bench and HumanEvalFix, achieving state-of-the-art performance on both with a pass@1 rate of 12.5% and 87.7%, respectively, far exceeding the previous state-of-the-art achieved with non-interactive LMs. Finally, we provide insight on how the design of the ACI can impact agents' behavior and performance.",
+    "sourceUrl": "https://arxiv.org/abs/2405.15793v3",
+    "pdfUrl": "https://arxiv.org/pdf/2405.15793v3",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "SWE-agent 原论文：为语言模型设计仓库浏览、编辑和测试接口，分析工具交互方式对自动修复的影响。",
+    "tags": [
+      "SWE-agent",
+      "ACI",
+      "程序修复"
+    ],
+    "wikiNodeIds": [
+      "agent",
+      "tool-calling",
+      "testing"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2407.01489",
+    "arxivVersion": "2407.01489v2",
+    "domainId": "software",
+    "title": "Agentless: Demystifying LLM-based Software Engineering Agents",
+    "authors": [
+      "Chunqiu Steven Xia",
+      "Yinlin Deng",
+      "Soren Dunn",
+      "Lingming Zhang"
+    ],
+    "publishedAt": "2024-07-01T17:24:45Z",
+    "updatedAt": "2024-10-29T17:29:27Z",
+    "abstract": "Recent advancements in large language models (LLMs) have significantly advanced the automation of software development tasks, including code synthesis, program repair, and test generation. More recently, researchers and industry practitioners have developed various autonomous LLM agents to perform end-to-end software development tasks. These agents are equipped with the ability to use tools, run commands, observe feedback from the environment, and plan for future actions. However, the complexity of these agent-based approaches, together with the limited abilities of current LLMs, raises the following question: Do we really have to employ complex autonomous software agents? To attempt to answer this question, we build Agentless -- an agentless approach to automatically solve software development problems. Compared to the verbose and complex setup of agent-based approaches, Agentless employs a simplistic three-phase process of localization, repair, and patch validation, without letting the LLM decide future actions or operate with complex tools. Our results on the popular SWE-bench Lite benchmark show that surprisingly the simplistic Agentless is able to achieve both the highest performance (32.00%, 96 correct fixes) and low cost ($0.70) compared with all existing open-source software agents! Furthermore, we manually classified the problems in SWE-bench Lite and found problems with exact ground truth patch or insufficient/misleading issue descriptions. As such, we construct SWE-bench Lite-S by excluding such problematic issues to perform more rigorous evaluation and comparison. Our work highlights the current overlooked potential of a simple, interpretable technique in autonomous software development. We hope Agentless will help reset the baseline, starting point, and horizon for autonomous software agents, and inspire future work along this crucial direction.",
+    "sourceUrl": "https://arxiv.org/abs/2407.01489v2",
+    "pdfUrl": "https://arxiv.org/pdf/2407.01489v2",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "Agentless 将定位、修复和补丁验证拆成固定流程，作为复杂软件工程智能体的简洁对照方案。",
+    "tags": [
+      "Agentless",
+      "程序修复",
+      "补丁验证"
+    ],
+    "wikiNodeIds": [
+      "testing",
+      "backend"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2509.16941",
+    "arxivVersion": "2509.16941v2",
+    "domainId": "software",
+    "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?",
+    "authors": [
+      "Xiang Deng",
+      "Jeff Da",
+      "Edwin Pan",
+      "Yannis Yiming He",
+      "Charles Ide",
+      "Kanak Garg",
+      "Niklas Lauffer",
+      "Andrew Park",
+      "Nitin Pasari",
+      "Chetan Rane",
+      "Karmini Sampath",
+      "Maya Krishnan",
+      "Srivatsa Kundurthy",
+      "Sean Hendryx",
+      "Zifan Wang",
+      "Vijay Bharadwaj",
+      "Jeff Holm",
+      "Raja Aluri",
+      "Chen Bo Calvin Zhang",
+      "Noah Jacobson",
+      "Bing Liu",
+      "Brad Kenstler"
+    ],
+    "publishedAt": "2025-09-21T06:28:17Z",
+    "updatedAt": "2025-11-14T22:00:03Z",
+    "abstract": "We introduce SWE-Bench Pro, a substantially more challenging benchmark that builds upon the best practices of SWE-BENCH [25], but is explicitly designed to capture realistic, complex, enterprise-level problems beyond the scope of SWE-BENCH. SWE-BENCH PRO contains 1,865 problems sourced from a diverse set of 41 actively maintained repositories spanning business applications, B2B services, and developer tools. The benchmark is partitioned into a public set with open access to problems sourced from 11 repositories, a held-out set of 12 repositories and a commercial set of 18 proprietary repositories where we have formal partnership agreements with early-stage startups. Problems in the held-out and the commercial set are not publicly accessible, but we release results on the commercial set. Our benchmark features long-horizon tasks that may require hours to days for a professional software engineer to complete, often involving patches across multiple files and substantial code modifications. All tasks are human-verified and augmented with sufficient context to ensure resolvability. To better understand these limitations, we cluster the failure modes observed in the collected agent trajectories for a clearer characterization of the error patterns exhibited by current models. Overall, SWE-BENCH PRO provides a contamination-resistant testbed that more faithfully captures the complexity and diversity of real-world software development, advancing the pursuit of truly autonomous software engineering agents at a professional level.",
+    "sourceUrl": "https://arxiv.org/abs/2509.16941v2",
+    "pdfUrl": "https://arxiv.org/pdf/2509.16941v2",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "SWE-Bench Pro 面向多文件、长程软件工程问题，讨论真实任务构造、评估划分及模型失败模式。",
+    "tags": [
+      "SWE-Bench",
+      "长程任务",
+      "评测"
+    ],
+    "wikiNodeIds": [
+      "testing",
+      "architecture",
+      "ai-evaluation"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.22350",
+    "arxivVersion": "2610.22350v1",
+    "domainId": "software",
+    "title": "FDE-Gym: The Last Mile of AI Delivery",
+    "authors": [
+      "Dongxu Yang",
+      "Hongda Yan",
+      "Renxin Wang",
+      "Baoli Zhang",
+      "Haojia Zuo",
+      "Ying Zhao",
+      "Youmin Chen",
+      "Xiaojian Liao",
+      "Congming Gao",
+      "Tianyang Jiang",
+      "Yixiao Chen",
+      "Qing Wang",
+      "Zhiguo Yu",
+      "Xiaqing Li",
+      "Yuhao Zhang",
+      "Jiawen Sun",
+      "Renzhe Xu",
+      "De Mi",
+      "Tiancheng Wu",
+      "Xianya Fu",
+      "Xuanlu Zhao",
+      "Bo Feng",
+      "Meixuan Ren",
+      "Guanming Lin",
+      "Ziheng Zhou",
+      "Xinhua Wang"
+    ],
+    "publishedAt": "2026-10-15T17:57:23Z",
+    "updatedAt": "2026-10-15T17:57:23Z",
+    "abstract": "Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specifications, or task tickets. Real-world customer delivery is different: forward-deployed engineers (FDEs) must clarify ambiguous requirements, work in live systems, and uncover unstated constraints. We introduce FDE-Gym, a benchmark of 95 end-to-end delivery tasks from 20 customer scenarios across 18 sectors, each adapted by industry experts from real-world delivery projects. In simulated customer environments with scripted stakeholders and modifiable customer systems, agents interact with stakeholders and operate on production-like systems to deliver working solutions. FDE-Gym scores a delivery by how much it improves the customer's own success metric, normalized between 0 (unchanged system) and 1 (reference solution), with penalties for stakeholder interactions (messages, trial runs, and waiting time). An online platform lets humans practice FDE skills under the same grading criteria. We evaluate 13 model configurations from seven providers. In the realistic setting, where unstated constraints must be discovered, the best configuration achieves a mean FDE-Gym score of 0.56 and resolves only 14 of the 95 tasks (a score of at least 0.8 with no incident). Discovering unstated constraints is the primary bottleneck: performance drops sharply when models must uncover them without explicit guidance. Yet information discovery alone does not account for the gap: even on the 23 tasks where the best configuration obtains every key fact from stakeholders, it reaches a normalized business uplift of 0.8 or above on only 10. These results reveal a substantial gap between solving well-specified tasks and delivering effective AI systems for real customers.",
+    "sourceUrl": "https://arxiv.org/abs/2610.22350v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.22350v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "以需求不完整的客户交付场景评估智能体，关注约束发现、利益相关方沟通和可运行系统的交付效果。",
+    "tags": [
+      "需求工程",
+      "交付",
+      "部署"
+    ],
+    "wikiNodeIds": [
+      "deployment",
+      "architecture",
+      "agent"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21359",
+    "arxivVersion": "2610.21359v1",
+    "domainId": "software",
+    "title": "SWE-at-Scale: Scalable Issue Synthesis from Historical Bug Fixes",
+    "authors": [
+      "Silin Chen",
+      "Zihan Zhang",
+      "Xiaodong Gu",
+      "Jiale Huang",
+      "Yuling Shi",
+      "Han Li",
+      "Zhao Shan",
+      "Chengcheng Wan",
+      "Zhensu Sun",
+      "Haibing Guan"
+    ],
+    "publishedAt": "2026-10-15T06:39:27Z",
+    "updatedAt": "2026-10-15T06:39:27Z",
+    "abstract": "As coding agents become increasingly capable, robust evaluation requires a broader and more diverse supply of verifiable software engineering (SWE) tasks. However, real-world tasks are constrained by the natural frequency of issue reporting and the substantial cost of manual curation. Furthermore, existing synthetic approaches rely primarily on the pretrained knowledge of large models coupled with heuristic prompting, often failing to capture the authentic, complex mechanics of software failures. To exponentially scale SWE task production, we introduce SWE-at-Scale, a framework that automatically synthesizes realistic issues by reverse-engineering real-world software fixes. Our key insight is that historical fixes encapsulate deep mechanistic knowledge of bug formation: inverting a fix transforms repair supervision into bug-induction supervision grounded in actual development scenarios. SWE-at-Scale transfers these learned bug patterns to novel code contexts, repeatedly sampling diverse bug typologies to construct executable SWE tasks. Extensive experiments show that SWE-at-Scale generates more diverse and realistic SWE tasks than current synthesis baselines while posing greater challenges to state-of-the-art coding agents. Notably, SWE-at-Scale can generate distinct bug types from a single code context, with bug diversity scaling robustly even up to 200 generations per file. Overall, SWE-at-Scale turns finite real-world fixes into reusable supervision for scalable synthesis of realistic, diverse, and challenging SWE tasks.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21359v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21359v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "从历史缺陷修复中学习错误形成机制，将真实修复记录转化为可执行、可验证的软件工程评估任务。",
+    "tags": [
+      "缺陷修复",
+      "测试生成",
+      "基准"
+    ],
+    "wikiNodeIds": [
+      "testing",
+      "backend"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  },
+  {
+    "id": "arxiv-2610.21248",
+    "arxivVersion": "2610.21248v1",
+    "domainId": "software",
+    "title": "Beyond Confidence: Rethinking Uncertainty Calibration in Deep Code Models",
+    "authors": [
+      "Ravishka Rathnasuriya",
+      "Wei Yang"
+    ],
+    "publishedAt": "2026-10-15T04:43:41Z",
+    "updatedAt": "2026-10-15T04:43:41Z",
+    "abstract": "Deep learning models have shown significant promise in code-related tasks. While confidence calibration techniques have been proposed to improve model reliability, their effectiveness in real-world tasks with strict accuracy requirements remains uncertain. In this paper, we investigate two key questions: first, whether existing measurement metrics, including confidence scores and uncertainty metrics, are effective for guiding selective prediction; and second, whether existing calibration techniques can improve these metrics to better identify cases where model predictions are likely to succeed or fail.\n  We conduct a systematic study on defect prediction and vulnerability detection using seven code models, evaluating thirteen uncertainty signals and three widely used post-hoc calibration methods. Our analysis reveals three major findings: (1) even strong uncertainty signals can remain poorly calibrated and provide limited separation at the high-confidence end, constraining selective prediction in practice; (2) standard post-hoc calibrators often improve calibration scores but do not consistently translate into better selective prediction behavior; and (3) commonly used calibration metrics can disagree with selective prediction performance, underscoring the need to evaluate both jointly. Moreover, our findings motivate a decision-oriented view of reliability in deep code models, where calibrated scores must be evaluated together with selective-prediction quality and retained-region risk before they can support accept--defer deployment.",
+    "sourceUrl": "https://arxiv.org/abs/2610.21248v1",
+    "pdfUrl": "https://arxiv.org/pdf/2610.21248v1",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "系统比较代码模型的不确定性信号、校准方法与选择性预测，强调高置信分数不等于可靠接受决策。",
+    "tags": [
+      "代码模型",
+      "校准",
+      "缺陷检测"
+    ],
+    "wikiNodeIds": [
+      "testing",
+      "vulnerability-scanning",
+      "ai-evaluation"
+    ],
+    "publicationStatus": "preprint",
+    "metadataCheckedAt": "2026-10-16",
+    "metadataSource": "arXiv Atom API and versioned abstract page"
+  }
+]

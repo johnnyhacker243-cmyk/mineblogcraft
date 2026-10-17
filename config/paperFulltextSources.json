@@ -1,301 +1,642 @@
 [
   {
-    "id": "arxiv-1706.03762",
-    "title": "Attention Is All You Need",
-    "url": "https://arxiv.org/pdf/1706.03762v7",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/1706.03762v7"
-  },
-  {
-    "id": "arxiv-1810.04805",
-    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
-    "url": "https://arxiv.org/pdf/1810.04805v2",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/1810.04805v2"
-  },
-  {
-    "id": "arxiv-2005.11401",
-    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
-    "url": "https://arxiv.org/pdf/2005.11401v4",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2005.11401v4"
-  },
-  {
-    "id": "arxiv-2005.14165",
-    "title": "Language Models are Few-Shot Learners",
-    "url": "https://arxiv.org/pdf/2005.14165v4",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2005.14165v4"
-  },
-  {
-    "id": "arxiv-2106.09685",
-    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
-    "url": "https://arxiv.org/pdf/2106.09685v2",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2106.09685v2"
-  },
-  {
-    "id": "arxiv-2201.11903",
-    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
-    "url": "https://arxiv.org/pdf/2201.11903v6",
-    "delivery": "canvas",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2201.11903v6"
-  },
-  {
-    "id": "arxiv-2203.02155",
-    "title": "Training language models to follow instructions with human feedback",
-    "url": "https://arxiv.org/pdf/2203.02155v1",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2203.02155v1"
-  },
-  {
-    "id": "arxiv-2210.03629",
-    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
-    "url": "https://arxiv.org/pdf/2210.03629v3",
-    "delivery": "canvas",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2210.03629v3"
-  },
-  {
-    "id": "arxiv-2302.04761",
-    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
-    "url": "https://arxiv.org/pdf/2302.04761v1",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2302.04761v1"
-  },
-  {
-    "id": "arxiv-2305.14314",
-    "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
-    "url": "https://arxiv.org/pdf/2305.14314v1",
-    "delivery": "canvas",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2305.14314v1"
-  },
-  {
-    "id": "arxiv-2312.10997",
-    "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
-    "url": "https://arxiv.org/pdf/2312.10997v5",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2312.10997v5"
-  },
-  {
-    "id": "sybil",
-    "title": "The Sybil Attack",
-    "url": "https://raw.githubusercontent.com/glamrock/anonbib/72408d0597539e5dc7ddc67b9d87a473f2e1f921/cache/sybil.pdf",
-    "delivery": "canvas",
-    "licenseUrl": "https://www.microsoft.com/en-us/research/publication/the-sybil-attack/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://www.microsoft.com/en-us/research/publication/the-sybil-attack/",
-    "canonicalPDFUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2002/01/IPTPS2002.pdf",
-    "canonicalSHA256": "18c2cecfde383f2d9b089036521ee29fd04ebb35c670f811d4b4c0d0d0a04527",
-    "deliveryNote": "Public anonymity research bibliography archive; byte-identical original PDF"
-  },
-  {
-    "id": "arxiv-1412.6572",
-    "title": "Explaining and Harnessing Adversarial Examples",
-    "url": "https://arxiv.org/pdf/1412.6572v3",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/1412.6572v3"
-  },
-  {
-    "id": "arxiv-1602.02697",
-    "title": "Practical Black-Box Attacks against Machine Learning",
-    "url": "https://arxiv.org/pdf/1602.02697v4",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/1602.02697v4"
-  },
-  {
-    "id": "arxiv-1607.00133",
-    "title": "Deep Learning with Differential Privacy",
-    "url": "https://arxiv.org/pdf/1607.00133v2",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/1607.00133v2"
-  },
-  {
-    "id": "arxiv-1610.05820",
-    "title": "Membership Inference Attacks against Machine Learning Models",
-    "url": "https://arxiv.org/pdf/1610.05820v2",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/1610.05820v2"
-  },
-  {
-    "id": "arxiv-1702.05983",
-    "title": "Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN",
-    "url": "https://arxiv.org/pdf/1702.05983v1",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/1702.05983v1"
-  },
-  {
-    "id": "arxiv-1708.06733",
-    "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain",
-    "url": "https://arxiv.org/pdf/1708.06733v2",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/1708.06733v2"
-  },
-  {
-    "id": "arxiv-1802.09089",
-    "title": "Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection",
-    "url": "https://arxiv.org/pdf/1802.09089v2",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/1802.09089v2"
-  },
-  {
-    "id": "arxiv-2209.07858",
-    "title": "Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned",
-    "url": "https://arxiv.org/pdf/2209.07858v2",
-    "delivery": "canvas",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2209.07858v2"
-  },
-  {
-    "id": "arxiv-2307.15043",
-    "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models",
-    "url": "https://arxiv.org/pdf/2307.15043v2",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2307.15043v2"
-  },
-  {
-    "id": "logical-clocks",
-    "title": "Time, Clocks, and the Ordering of Events in a Distributed System",
-    "url": "https://raw.githubusercontent.com/greyhillman/lamport-clock-paper/10f4829a7bcbc7bc93cb5d2a1ac2f4748e25d30d/time-clocks.pdf",
-    "delivery": "canvas",
-    "licenseUrl": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
-    "canonicalPDFUrl": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
-    "deliveryNote": "Public academic archive; original author and canonical publication link preserved",
-    "canonicalSHA256": "c55e7cab4230aa3d7126748a149b2db6f0d7a67296d5eccfdd50a210299a96b2"
-  },
-  {
-    "id": "lfs",
-    "title": "The Design and Implementation of a Log-Structured File System",
-    "url": "https://raw.githubusercontent.com/skyrain/LogStructuredFileSystem/c10800cacf827d58065a855c529d689c27d8b36b/LFS.pdf",
-    "delivery": "canvas",
-    "licenseUrl": "https://web.stanford.edu/~ouster/cgi-bin/papers/lfs.pdf",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://web.stanford.edu/~ouster/cgi-bin/papers/lfs.pdf",
-    "canonicalPDFUrl": "https://web.stanford.edu/~ouster/cgi-bin/papers/lfs.pdf",
-    "canonicalSHA256": "aa8c31982c0eed0634314d5810b423a973fc1e99aa58b1ed81e2da5b8651e21e"
-  },
-  {
-    "id": "mapreduce",
-    "title": "MapReduce: Simplified Data Processing on Large Clusters",
-    "url": "https://raw.githubusercontent.com/papers-we-love/papers-we-love/9b92363eac4d4fbea0f5fdc7766ef68d22037ca8/distributed_systems/mapreduce-simplified-data-processing-on-large-clusters.pdf",
-    "delivery": "canvas",
-    "licenseUrl": "https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters",
-    "canonicalPDFUrl": "https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf",
-    "deliveryNote": "Public academic archive; original author and canonical publication link preserved",
-    "canonicalSHA256": "ae84cc48ff0005c5a79e095039e54e91dce5c116f65746e1593e819d21830ce9"
-  },
-  {
-    "id": "raft",
-    "title": "In Search of an Understandable Consensus Algorithm",
-    "url": "https://raft.github.io/raft.pdf",
-    "delivery": "canvas",
-    "licenseUrl": "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro"
-  },
-  {
-    "id": "arxiv-2002.08155",
-    "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages",
-    "url": "https://arxiv.org/pdf/2002.08155v4",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2002.08155v4"
-  },
-  {
-    "id": "arxiv-2009.08366",
-    "title": "GraphCodeBERT: Pre-training Code Representations with Data Flow",
-    "url": "https://arxiv.org/pdf/2009.08366v4",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2009.08366v4"
-  },
-  {
-    "id": "arxiv-2107.03374",
-    "title": "Evaluating Large Language Models Trained on Code",
-    "url": "https://arxiv.org/pdf/2107.03374v2",
-    "delivery": "canvas",
-    "licenseUrl": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2107.03374v2"
-  },
-  {
-    "id": "arxiv-2109.00859",
-    "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation",
-    "url": "https://arxiv.org/pdf/2109.00859v1",
-    "delivery": "canvas",
-    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2109.00859v1"
-  },
-  {
-    "id": "arxiv-2305.06161",
-    "title": "StarCoder: may the source be with you!",
-    "url": "https://arxiv.org/pdf/2305.06161v2",
+    "id": "arxiv-2610.22353",
+    "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts",
+    "url": "https://arxiv.org/pdf/2610.22353v1",
+    "hostedUrl": "/papers/fulltext/2610.22353v1.pdf",
     "delivery": "canvas",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2305.06161v2"
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22353v1",
+    "authors": [
+      "Bingcong Li",
+      "Hao Ma",
+      "Michael Muehlebach",
+      "Niao He",
+      "Yi Ma"
+    ]
   },
   {
-    "id": "arxiv-2310.06770",
-    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
-    "url": "https://arxiv.org/pdf/2310.06770v3",
+    "id": "arxiv-2610.22290",
+    "title": "EliteReplay: Preserving Diverse Solutions in RL Post-Training via Quality-Diversity Search",
+    "url": "https://arxiv.org/pdf/2610.22290v1",
+    "hostedUrl": "/papers/fulltext/2610.22290v1.pdf",
     "delivery": "canvas",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2310.06770v3"
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22290v1",
+    "authors": [
+      "Hanane Nour Moussa",
+      "Doeun Lee",
+      "Sachin Kumar"
+    ]
+  },
+  {
+    "id": "arxiv-2610.22293",
+    "title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning",
+    "url": "https://arxiv.org/pdf/2610.22293v1",
+    "hostedUrl": "/papers/fulltext/2610.22293v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22293v1",
+    "authors": [
+      "Arnav Chavan",
+      "Kusha Sareen",
+      "Rishabh Tiwari",
+      "Abhranil Chandra",
+      "Johan Obando-Ceron",
+      "Kurt Keutzer",
+      "Scott Niekum",
+      "Inderjit S Dhillon",
+      "Devvrit Khatri"
+    ]
+  },
+  {
+    "id": "arxiv-2610.22273",
+    "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries",
+    "url": "https://arxiv.org/pdf/2610.22273v1",
+    "hostedUrl": "/papers/fulltext/2610.22273v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22273v1",
+    "authors": [
+      "Anikait Singh",
+      "Teresa Zhang",
+      "Yoonho Lee",
+      "Roshen Sanjay Nair",
+      "Aviral Kumar",
+      "Chelsea Finn"
+    ]
+  },
+  {
+    "id": "arxiv-2610.22234",
+    "title": "OS-Helix: Unifying GUI Interaction and Code Execution in Native Computer-Using Agents",
+    "url": "https://arxiv.org/pdf/2610.22234v1",
+    "hostedUrl": "/papers/fulltext/2610.22234v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22234v1",
+    "authors": [
+      "Bowen Yang",
+      "Kaiming Jin",
+      "Zichen Ding",
+      "Zhenyu Wu",
+      "Zehao Li",
+      "Zhoumianze Liu",
+      "Kanzhi Cheng",
+      "Fangzhi Xu",
+      "Yanan Sun",
+      "Qiushi Sun",
+      "Yu Qiao"
+    ]
+  },
+  {
+    "id": "arxiv-2405.21060",
+    "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+    "url": "https://arxiv.org/pdf/2405.21060v1",
+    "hostedUrl": "/papers/fulltext/2405.21060v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2405.21060v1",
+    "authors": [
+      "Tri Dao",
+      "Albert Gu"
+    ]
+  },
+  {
+    "id": "arxiv-2404.16130",
+    "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+    "url": "https://arxiv.org/pdf/2404.16130v2",
+    "hostedUrl": "/papers/fulltext/2404.16130v2.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2404.16130v2",
+    "authors": [
+      "Darren Edge",
+      "Ha Trinh",
+      "Newman Cheng",
+      "Joshua Bradley",
+      "Alex Chao",
+      "Apurva Mody",
+      "Steven Truitt",
+      "Dasha Metropolitansky",
+      "Robert Osazuwa Ness",
+      "Jonathan Larson"
+    ]
+  },
+  {
+    "id": "arxiv-2501.00656",
+    "title": "2 OLMo 2 Furious",
+    "url": "https://arxiv.org/pdf/2501.00656v3",
+    "hostedUrl": "/papers/fulltext/2501.00656v3.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2501.00656v3",
+    "authors": [
+      "Team OLMo",
+      "Pete Walsh",
+      "Luca Soldaini",
+      "Dirk Groeneveld",
+      "Kyle Lo",
+      "Shane Arora",
+      "Akshita Bhagia",
+      "Yuling Gu",
+      "Shengyi Huang",
+      "Matt Jordan",
+      "Nathan Lambert",
+      "Dustin Schwenk",
+      "Oyvind Tafjord",
+      "Taira Anderson",
+      "David Atkinson",
+      "Faeze Brahman",
+      "Christopher Clark",
+      "Pradeep Dasigi",
+      "Nouha Dziri",
+      "Allyson Ettinger",
+      "Michal Guerquin",
+      "David Heineman",
+      "Hamish Ivison",
+      "Pang Wei Koh",
+      "Jiacheng Liu",
+      "Saumya Malik",
+      "William Merrill",
+      "Lester James V. Miranda",
+      "Jacob Morrison",
+      "Tyler Murray",
+      "Crystal Nam",
+      "Jake Poznanski",
+      "Valentina Pyatkin",
+      "Aman Rangapur",
+      "Michael Schmitz",
+      "Sam Skjonsberg",
+      "David Wadden",
+      "Christopher Wilhelm",
+      "Michael Wilson",
+      "Luke Zettlemoyer",
+      "Ali Farhadi",
+      "Noah A. Smith",
+      "Hannaneh Hajishirzi"
+    ]
+  },
+  {
+    "id": "arxiv-2610.22327",
+    "title": "Twice Upon a Time: Complementary Representations for Time-Series Reasoning",
+    "url": "https://arxiv.org/pdf/2610.22327v1",
+    "hostedUrl": "/papers/fulltext/2610.22327v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22327v1",
+    "authors": [
+      "Hedi Zisling",
+      "Liran Nochumsohn",
+      "Ilan Naiman",
+      "Mihir Parmar",
+      "Omri Azencot"
+    ]
+  },
+  {
+    "id": "arxiv-2610.22245",
+    "title": "Disagreement-Guided Weak-to-Strong Routing",
+    "url": "https://arxiv.org/pdf/2610.22245v1",
+    "hostedUrl": "/papers/fulltext/2610.22245v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22245v1",
+    "authors": [
+      "Sima Noorani",
+      "Shayan Kiyani",
+      "George Pappas",
+      "Hamed Hassani"
+    ]
+  },
+  {
+    "id": "arxiv-2610.22217",
+    "title": "Skill-Decoupled On-Policy Expert Distillation for Unified Vision-Language Models",
+    "url": "https://arxiv.org/pdf/2610.22217v1",
+    "hostedUrl": "/papers/fulltext/2610.22217v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22217v1",
+    "authors": [
+      "Yuqi Xiong",
+      "Chunyi Peng",
+      "Zhipeng Xu",
+      "Qing Yang",
+      "Zhenghao Liu",
+      "Zulong Chen",
+      "Yu Gu",
+      "Ge Yu"
+    ]
+  },
+  {
+    "id": "arxiv-2610.22301",
+    "title": "My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale",
+    "url": "https://arxiv.org/pdf/2610.22301v1",
+    "hostedUrl": "/papers/fulltext/2610.22301v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22301v1",
+    "authors": [
+      "Zeqian Huang",
+      "Mingyue Tang",
+      "Aonan Guan",
+      "Qiming Sun",
+      "Pengzhou He"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21547",
+    "title": "Federated Art Chase: Privacy Leakage and Data Poisoning in Federated Fine-Tuning",
+    "url": "https://arxiv.org/pdf/2610.21547v1",
+    "hostedUrl": "/papers/fulltext/2610.21547v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21547v1",
+    "authors": [
+      "Vasileios Perifanis",
+      "Nikolaos Pavlidis"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21373",
+    "title": "Evaluating and Improving Static Application Security Testing Tools for Rust",
+    "url": "https://arxiv.org/pdf/2610.21373v1",
+    "hostedUrl": "/papers/fulltext/2610.21373v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21373v1",
+    "authors": [
+      "Huaien Zhang",
+      "Zhengjie Zhao",
+      "Yu Pei",
+      "Tian Dong",
+      "Minxue Pan",
+      "Shin Hwei Tan",
+      "Hao Chen"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21309",
+    "title": "Combining LLM and Dynamic Analysis for Universal Testing of Static Application Security Testing Tools",
+    "url": "https://arxiv.org/pdf/2610.21309v1",
+    "hostedUrl": "/papers/fulltext/2610.21309v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21309v1",
+    "authors": [
+      "Huaien Zhang",
+      "Yu Pei",
+      "Hao Chen",
+      "Shin Hwei Tan"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21174",
+    "title": "Amora: Communication-Efficient Private Approximate Nearest Neighbors Search",
+    "url": "https://arxiv.org/pdf/2610.21174v1",
+    "hostedUrl": "/papers/fulltext/2610.21174v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21174v1",
+    "authors": [
+      "Qiuhao Wang",
+      "Zuowei Chen",
+      "Xu Yang",
+      "Saiyu Qi",
+      "Yong Qi"
+    ]
+  },
+  {
+    "id": "arxiv-2408.01605",
+    "title": "CYBERSECEVAL 3: Advancing the Evaluation of Cybersecurity Risks and Capabilities in Large Language Models",
+    "url": "https://arxiv.org/pdf/2408.01605v2",
+    "hostedUrl": "/papers/fulltext/2408.01605v2.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2408.01605v2",
+    "authors": [
+      "Shengye Wan",
+      "Cyrus Nikolaidis",
+      "Daniel Song",
+      "David Molnar",
+      "James Crnkovich",
+      "Jayson Grace",
+      "Manish Bhatt",
+      "Sahana Chennabasappa",
+      "Spencer Whitman",
+      "Stephanie Ding",
+      "Vlad Ionescu",
+      "Yue Li",
+      "Joshua Saxe"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21713",
+    "title": "Encoded but Exposed: Language Embeddings can Reveal More Than They Should in Recommender Systems",
+    "url": "https://arxiv.org/pdf/2610.21713v1",
+    "hostedUrl": "/papers/fulltext/2610.21713v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21713v1",
+    "authors": [
+      "Linda Beková",
+      "Rodrigo Alves"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21063",
+    "title": "Approve What, Exactly? Effect Binding and Trusted Rendering for Agent Step-Up Authorization",
+    "url": "https://arxiv.org/pdf/2610.21063v1",
+    "hostedUrl": "/papers/fulltext/2610.21063v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21063v1",
+    "authors": [
+      "Sai Varun Kodathala",
+      "Prashanth Pollishetty",
+      "Jaylen Cargill"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21458",
+    "title": "What Survives Self-Evolution: Provenance Marks in Copied Agent Harnesses",
+    "url": "https://arxiv.org/pdf/2610.21458v1",
+    "hostedUrl": "/papers/fulltext/2610.21458v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21458v1",
+    "authors": [
+      "Jieyu Li",
+      "Jingya Li",
+      "Sheng Li",
+      "Xinpeng Zhang",
+      "Zhenxing Qian"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21245",
+    "title": "From One Query to Many: A Critical Survey of Privacy Accounting in RAG",
+    "url": "https://arxiv.org/pdf/2610.21245v1",
+    "hostedUrl": "/papers/fulltext/2610.21245v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21245v1",
+    "authors": [
+      "Zhiyuan Zhang"
+    ]
+  },
+  {
+    "id": "arxiv-2610.22039",
+    "title": "WEAVE: Weaving Real-World Code Evolution into Dependency-Structured Tasks for Benchmarking and Training Code Agents",
+    "url": "https://arxiv.org/pdf/2610.22039v1",
+    "hostedUrl": "/papers/fulltext/2610.22039v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22039v1",
+    "authors": [
+      "Weihao Li",
+      "Zihang Xu",
+      "Zhongqiu Wang",
+      "Songwei Yu",
+      "Wenqiang Zhu",
+      "Yuechen Luo",
+      "Jingxuan Xu",
+      "Yanan Wu",
+      "Haoyang Huang",
+      "Ken Deng"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21914",
+    "title": "CodeHealth Predicts the Token Cost of Agentic Code Review: A Pre-Registered Study of 465 Agent-Authored Pull Requests",
+    "url": "https://arxiv.org/pdf/2610.21914v1",
+    "hostedUrl": "/papers/fulltext/2610.21914v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21914v1",
+    "authors": [
+      "Lo Gullstrand Heander",
+      "Markus Borg",
+      "Emma Söderberg",
+      "Christofer Rydenfält"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21372",
+    "title": "Agentic Dependency Transformations: Lessons from an Exploratory Case Study of Flask",
+    "url": "https://arxiv.org/pdf/2610.21372v1",
+    "hostedUrl": "/papers/fulltext/2610.21372v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21372v1",
+    "authors": [
+      "Kaya Kitada",
+      "Yoshiki Higo",
+      "Raula Gaikovina Kula"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21144",
+    "title": "Plausible Is Not Enough: Trust and Evidence in AI-Authored Pull Request Review",
+    "url": "https://arxiv.org/pdf/2610.21144v1",
+    "hostedUrl": "/papers/fulltext/2610.21144v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21144v1",
+    "authors": [
+      "Md Shamimur Rahman",
+      "Khairul Alam",
+      "Banani Roy",
+      "Chanchal K. Roy"
+    ]
+  },
+  {
+    "id": "arxiv-2610.20344",
+    "title": "Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents",
+    "url": "https://arxiv.org/pdf/2610.20344v1",
+    "hostedUrl": "/papers/fulltext/2610.20344v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.20344v1",
+    "authors": [
+      "Yuyao Ge",
+      "Shenghua Liu",
+      "Peizhong Gao",
+      "Chendi Ge",
+      "Chenxu Liu",
+      "Yiwei Wang",
+      "Lingrui Mei",
+      "Baolong Bi",
+      "Jiayu Yao",
+      "Jiafeng Guo",
+      "Xueqi Cheng"
+    ]
   },
   {
     "id": "arxiv-2405.15793",
     "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
     "url": "https://arxiv.org/pdf/2405.15793v3",
+    "hostedUrl": "/papers/fulltext/2405.15793v3.pdf",
     "delivery": "canvas",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "rights": "source-hosted-only",
-    "sourceUrl": "https://arxiv.org/abs/2405.15793v3"
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2405.15793v3",
+    "authors": [
+      "John Yang",
+      "Carlos E. Jimenez",
+      "Alexander Wettig",
+      "Kilian Lieret",
+      "Shunyu Yao",
+      "Karthik Narasimhan",
+      "Ofir Press"
+    ]
+  },
+  {
+    "id": "arxiv-2407.01489",
+    "title": "Agentless: Demystifying LLM-based Software Engineering Agents",
+    "url": "https://arxiv.org/pdf/2407.01489v2",
+    "hostedUrl": "/papers/fulltext/2407.01489v2.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2407.01489v2",
+    "authors": [
+      "Chunqiu Steven Xia",
+      "Yinlin Deng",
+      "Soren Dunn",
+      "Lingming Zhang"
+    ]
+  },
+  {
+    "id": "arxiv-2509.16941",
+    "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?",
+    "url": "https://arxiv.org/pdf/2509.16941v2",
+    "hostedUrl": "/papers/fulltext/2509.16941v2.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2509.16941v2",
+    "authors": [
+      "Xiang Deng",
+      "Jeff Da",
+      "Edwin Pan",
+      "Yannis Yiming He",
+      "Charles Ide",
+      "Kanak Garg",
+      "Niklas Lauffer",
+      "Andrew Park",
+      "Nitin Pasari",
+      "Chetan Rane",
+      "Karmini Sampath",
+      "Maya Krishnan",
+      "Srivatsa Kundurthy",
+      "Sean Hendryx",
+      "Zifan Wang",
+      "Vijay Bharadwaj",
+      "Jeff Holm",
+      "Raja Aluri",
+      "Chen Bo Calvin Zhang",
+      "Noah Jacobson",
+      "Bing Liu",
+      "Brad Kenstler"
+    ]
+  },
+  {
+    "id": "arxiv-2610.22350",
+    "title": "FDE-Gym: The Last Mile of AI Delivery",
+    "url": "https://arxiv.org/pdf/2610.22350v1",
+    "hostedUrl": "/papers/fulltext/2610.22350v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.22350v1",
+    "authors": [
+      "Dongxu Yang",
+      "Hongda Yan",
+      "Renxin Wang",
+      "Baoli Zhang",
+      "Haojia Zuo",
+      "Ying Zhao",
+      "Youmin Chen",
+      "Xiaojian Liao",
+      "Congming Gao",
+      "Tianyang Jiang",
+      "Yixiao Chen",
+      "Qing Wang",
+      "Zhiguo Yu",
+      "Xiaqing Li",
+      "Yuhao Zhang",
+      "Jiawen Sun",
+      "Renzhe Xu",
+      "De Mi",
+      "Tiancheng Wu",
+      "Xianya Fu",
+      "Xuanlu Zhao",
+      "Bo Feng",
+      "Meixuan Ren",
+      "Guanming Lin",
+      "Ziheng Zhou",
+      "Xinhua Wang"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21359",
+    "title": "SWE-at-Scale: Scalable Issue Synthesis from Historical Bug Fixes",
+    "url": "https://arxiv.org/pdf/2610.21359v1",
+    "hostedUrl": "/papers/fulltext/2610.21359v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21359v1",
+    "authors": [
+      "Silin Chen",
+      "Zihan Zhang",
+      "Xiaodong Gu",
+      "Jiale Huang",
+      "Yuling Shi",
+      "Han Li",
+      "Zhao Shan",
+      "Chengcheng Wan",
+      "Zhensu Sun",
+      "Haibing Guan"
+    ]
+  },
+  {
+    "id": "arxiv-2610.21248",
+    "title": "Beyond Confidence: Rethinking Uncertainty Calibration in Deep Code Models",
+    "url": "https://arxiv.org/pdf/2610.21248v1",
+    "hostedUrl": "/papers/fulltext/2610.21248v1.pdf",
+    "delivery": "canvas",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "cc-licensed-unmodified",
+    "sourceUrl": "https://arxiv.org/abs/2610.21248v1",
+    "authors": [
+      "Ravishka Rathnasuriya",
+      "Wei Yang"
+    ]
   }
 ]

@@ -74,28 +74,24 @@
     ],
     "relatedPapers": [
       {
+        "id": "arxiv-2610.22327",
+        "title": "Twice Upon a Time: Complementary Representations for Time-Series Reasoning"
+      },
+      {
+        "id": "arxiv-2610.22293",
+        "title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning"
+      },
+      {
+        "id": "arxiv-2610.21547",
+        "title": "Federated Art Chase: Privacy Leakage and Data Poisoning in Federated Fine-Tuning"
+      },
+      {
+        "id": "arxiv-2501.00656",
+        "title": "2 OLMo 2 Furious"
+      },
+      {
         "id": "nids-fgpa",
-        "title": "NIDS-FGPA"
-      },
-      {
-        "id": "arxiv-1810.04805",
-        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
-      },
-      {
-        "id": "arxiv-2106.09685",
-        "title": "LoRA: Low-Rank Adaptation of Large Language Models"
-      },
-      {
-        "id": "arxiv-2305.14314",
-        "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
-      },
-      {
-        "id": "arxiv-1607.00133",
-        "title": "Deep Learning with Differential Privacy"
-      },
-      {
-        "id": "arxiv-1802.09089",
-        "title": "Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection"
+        "title": "NIDS-FGPA: A federated learning network intrusion detection algorithm based on secure aggregation of gradient similarity models"
       }
     ],
     "aliases": [],
@@ -137,8 +133,16 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-1706.03762",
-        "title": "Attention Is All You Need"
+        "id": "arxiv-2610.22353",
+        "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts"
+      },
+      {
+        "id": "arxiv-2610.22217",
+        "title": "Skill-Decoupled On-Policy Expert Distillation for Unified Vision-Language Models"
+      },
+      {
+        "id": "arxiv-2405.21060",
+        "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality"
       }
     ],
     "aliases": [],
@@ -184,32 +188,24 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-1706.03762",
-        "title": "Attention Is All You Need"
+        "id": "arxiv-2610.22353",
+        "title": "Rethinking Routing Exploration in Modern Mixture-of-Experts"
       },
       {
-        "id": "arxiv-1810.04805",
-        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+        "id": "arxiv-2610.22293",
+        "title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning"
       },
       {
-        "id": "arxiv-2005.14165",
-        "title": "Language Models are Few-Shot Learners"
+        "id": "arxiv-2610.22290",
+        "title": "EliteReplay: Preserving Diverse Solutions in RL Post-Training via Quality-Diversity Search"
       },
       {
-        "id": "arxiv-2106.09685",
-        "title": "LoRA: Low-Rank Adaptation of Large Language Models"
+        "id": "arxiv-2610.22245",
+        "title": "Disagreement-Guided Weak-to-Strong Routing"
       },
       {
-        "id": "arxiv-2201.11903",
-        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
-      },
-      {
-        "id": "arxiv-2203.02155",
-        "title": "Training language models to follow instructions with human feedback"
-      },
-      {
-        "id": "arxiv-2305.14314",
-        "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
+        "id": "arxiv-2610.22217",
+        "title": "Skill-Decoupled On-Policy Expert Distillation for Unified Vision-Language Models"
       }
     ],
     "aliases": [
@@ -255,12 +251,16 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-2005.11401",
-        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+        "id": "arxiv-2610.22273",
+        "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries"
       },
       {
-        "id": "arxiv-2312.10997",
-        "title": "Retrieval-Augmented Generation for Large Language Models: A Survey"
+        "id": "arxiv-2610.21245",
+        "title": "From One Query to Many: A Critical Survey of Privacy Accounting in RAG"
+      },
+      {
+        "id": "arxiv-2404.16130",
+        "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization"
       }
     ],
     "aliases": [
@@ -313,20 +313,24 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-2210.03629",
-        "title": "ReAct: Synergizing Reasoning and Acting in Language Models"
+        "id": "arxiv-2610.22350",
+        "title": "FDE-Gym: The Last Mile of AI Delivery"
       },
       {
-        "id": "arxiv-2302.04761",
-        "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+        "id": "arxiv-2610.22273",
+        "title": "Librarian Agents: Training LLMs to Curate Long-Context Workspaces that Anticipate Future Queries"
       },
       {
-        "id": "arxiv-2307.15043",
-        "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models"
+        "id": "arxiv-2610.22234",
+        "title": "OS-Helix: Unifying GUI Interaction and Code Execution in Native Computer-Using Agents"
       },
       {
-        "id": "arxiv-2405.15793",
-        "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+        "id": "arxiv-2610.22039",
+        "title": "WEAVE: Weaving Real-World Code Evolution into Dependency-Structured Tasks for Benchmarking and Training Code Agents"
+      },
+      {
+        "id": "arxiv-2610.20344",
+        "title": "Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents"
       }
     ],
     "aliases": [
@@ -371,44 +375,24 @@
     ],
     "relatedPapers": [
       {
-        "id": "nids-fgpa",
-        "title": "NIDS-FGPA"
+        "id": "arxiv-2610.22301",
+        "title": "My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale"
       },
       {
-        "id": "sybil",
-        "title": "The Sybil Attack"
+        "id": "arxiv-2610.21713",
+        "title": "Encoded but Exposed: Language Embeddings can Reveal More Than They Should in Recommender Systems"
       },
       {
-        "id": "arxiv-1412.6572",
-        "title": "Explaining and Harnessing Adversarial Examples"
+        "id": "arxiv-2610.21547",
+        "title": "Federated Art Chase: Privacy Leakage and Data Poisoning in Federated Fine-Tuning"
       },
       {
-        "id": "arxiv-1602.02697",
-        "title": "Practical Black-Box Attacks against Machine Learning"
+        "id": "arxiv-2610.21458",
+        "title": "What Survives Self-Evolution: Provenance Marks in Copied Agent Harnesses"
       },
       {
-        "id": "arxiv-1607.00133",
-        "title": "Deep Learning with Differential Privacy"
-      },
-      {
-        "id": "arxiv-1610.05820",
-        "title": "Membership Inference Attacks against Machine Learning Models"
-      },
-      {
-        "id": "arxiv-1702.05983",
-        "title": "Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN"
-      },
-      {
-        "id": "arxiv-1708.06733",
-        "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain"
-      },
-      {
-        "id": "arxiv-2209.07858",
-        "title": "Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned"
-      },
-      {
-        "id": "arxiv-2307.15043",
-        "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models"
+        "id": "arxiv-2610.21245",
+        "title": "From One Query to Many: A Critical Survey of Privacy Accounting in RAG"
       }
     ],
     "aliases": [
@@ -450,12 +434,7 @@
         "title": "MCP 授权边界：工具连通以后，谁有权做什么"
       }
     ],
-    "relatedPapers": [
-      {
-        "id": "sybil",
-        "title": "The Sybil Attack"
-      }
-    ],
+    "relatedPapers": [],
     "aliases": [
       "计算机网络",
       "网络安全"
@@ -673,7 +652,24 @@
       "修复后验证版本、配置与业务回归"
     ],
     "relatedBlogs": [],
-    "relatedPapers": [],
+    "relatedPapers": [
+      {
+        "id": "arxiv-2610.22301",
+        "title": "My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale"
+      },
+      {
+        "id": "arxiv-2610.21373",
+        "title": "Evaluating and Improving Static Application Security Testing Tools for Rust"
+      },
+      {
+        "id": "arxiv-2610.21309",
+        "title": "Combining LLM and Dynamic Analysis for Universal Testing of Static Application Security Testing Tools"
+      },
+      {
+        "id": "arxiv-2610.21248",
+        "title": "Beyond Confidence: Rethinking Uncertainty Calibration in Deep Code Models"
+      }
+    ],
     "aliases": [],
     "domainId": "security",
     "relatedRss": [
@@ -752,16 +748,7 @@
         "title": "Vite 8 的统一构建链：升级前先写清楚输出契约"
       }
     ],
-    "relatedPapers": [
-      {
-        "id": "arxiv-2002.08155",
-        "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages"
-      },
-      {
-        "id": "arxiv-2109.00859",
-        "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation"
-      }
-    ],
+    "relatedPapers": [],
     "aliases": [],
     "domainId": "software",
     "relatedRss": [
@@ -801,24 +788,16 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-2002.08155",
-        "title": "CodeBERT: A Pre-Trained Model for Programming and Natural Languages"
+        "id": "arxiv-2610.21372",
+        "title": "Agentic Dependency Transformations: Lessons from an Exploratory Case Study of Flask"
       },
       {
-        "id": "arxiv-2009.08366",
-        "title": "GraphCodeBERT: Pre-training Code Representations with Data Flow"
+        "id": "arxiv-2610.21359",
+        "title": "SWE-at-Scale: Scalable Issue Synthesis from Historical Bug Fixes"
       },
       {
-        "id": "arxiv-2107.03374",
-        "title": "Evaluating Large Language Models Trained on Code"
-      },
-      {
-        "id": "arxiv-2109.00859",
-        "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation"
-      },
-      {
-        "id": "arxiv-2305.06161",
-        "title": "StarCoder: may the source be with you!"
+        "id": "arxiv-2407.01489",
+        "title": "Agentless: Demystifying LLM-based Software Engineering Agents"
       }
     ],
     "aliases": [],
@@ -855,12 +834,8 @@
     "relatedBlogs": [],
     "relatedPapers": [
       {
-        "id": "lfs",
-        "title": "The Design and Implementation of a Log-Structured File System"
-      },
-      {
-        "id": "raft",
-        "title": "In Search of an Understandable Consensus Algorithm"
+        "id": "arxiv-2610.21174",
+        "title": "Amora: Communication-Efficient Private Approximate Nearest Neighbors Search"
       }
     ],
     "aliases": [],
@@ -906,8 +881,8 @@
     ],
     "relatedPapers": [
       {
-        "id": "logical-clocks",
-        "title": "Time, Clocks, and the Ordering of Events in a Distributed System"
+        "id": "arxiv-2610.21063",
+        "title": "Approve What, Exactly? Effect Binding and Trusted Rendering for Agent Step-Up Authorization"
       }
     ],
     "aliases": [
@@ -957,28 +932,24 @@
     ],
     "relatedPapers": [
       {
-        "id": "logical-clocks",
-        "title": "Time, Clocks, and the Ordering of Events in a Distributed System"
+        "id": "arxiv-2610.22350",
+        "title": "FDE-Gym: The Last Mile of AI Delivery"
       },
       {
-        "id": "lfs",
-        "title": "The Design and Implementation of a Log-Structured File System"
+        "id": "arxiv-2610.22039",
+        "title": "WEAVE: Weaving Real-World Code Evolution into Dependency-Structured Tasks for Benchmarking and Training Code Agents"
       },
       {
-        "id": "mapreduce",
-        "title": "MapReduce: Simplified Data Processing on Large Clusters"
+        "id": "arxiv-2610.21914",
+        "title": "CodeHealth Predicts the Token Cost of Agentic Code Review: A Pre-Registered Study of 465 Agent-Authored Pull Requests"
       },
       {
-        "id": "raft",
-        "title": "In Search of an Understandable Consensus Algorithm"
+        "id": "arxiv-2610.21144",
+        "title": "Plausible Is Not Enough: Trust and Evidence in AI-Authored Pull Request Review"
       },
       {
-        "id": "arxiv-2009.08366",
-        "title": "GraphCodeBERT: Pre-training Code Representations with Data Flow"
-      },
-      {
-        "id": "arxiv-2310.06770",
-        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+        "id": "arxiv-2610.20344",
+        "title": "Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents"
       }
     ],
     "aliases": [
@@ -1031,16 +1002,24 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-2107.03374",
-        "title": "Evaluating Large Language Models Trained on Code"
+        "id": "arxiv-2610.22039",
+        "title": "WEAVE: Weaving Real-World Code Evolution into Dependency-Structured Tasks for Benchmarking and Training Code Agents"
       },
       {
-        "id": "arxiv-2310.06770",
-        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+        "id": "arxiv-2610.21914",
+        "title": "CodeHealth Predicts the Token Cost of Agentic Code Review: A Pre-Registered Study of 465 Agent-Authored Pull Requests"
       },
       {
-        "id": "arxiv-2405.15793",
-        "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+        "id": "arxiv-2610.21373",
+        "title": "Evaluating and Improving Static Application Security Testing Tools for Rust"
+      },
+      {
+        "id": "arxiv-2610.21372",
+        "title": "Agentic Dependency Transformations: Lessons from an Exploratory Case Study of Flask"
+      },
+      {
+        "id": "arxiv-2610.21359",
+        "title": "SWE-at-Scale: Scalable Issue Synthesis from Historical Bug Fixes"
       }
     ],
     "aliases": [
@@ -1105,12 +1084,7 @@
       "把解析结果与数值或观测证据比较"
     ],
     "relatedBlogs": [],
-    "relatedPapers": [
-      {
-        "id": "001",
-        "title": "基于扩散方程的时间比值法研究（原创示例）"
-      }
-    ],
+    "relatedPapers": [],
     "aliases": [],
     "domainId": "modeling",
     "relatedRss": []
@@ -1139,12 +1113,7 @@
       "对示例与正式研究文献保持明确区分"
     ],
     "relatedBlogs": [],
-    "relatedPapers": [
-      {
-        "id": "001",
-        "title": "基于扩散方程的时间比值法研究（原创示例）"
-      }
-    ],
+    "relatedPapers": [],
     "aliases": [],
     "domainId": "modeling",
     "relatedRss": []
@@ -1176,8 +1145,8 @@
     "relatedBlogs": [],
     "relatedPapers": [
       {
-        "id": "mapreduce",
-        "title": "MapReduce: Simplified Data Processing on Large Clusters"
+        "id": "arxiv-2610.22327",
+        "title": "Twice Upon a Time: Complementary Representations for Time-Series Reasoning"
       }
     ],
     "aliases": [],
@@ -1274,12 +1243,16 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-2005.11401",
-        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+        "id": "arxiv-2610.21713",
+        "title": "Encoded but Exposed: Language Embeddings can Reveal More Than They Should in Recommender Systems"
       },
       {
-        "id": "arxiv-2312.10997",
-        "title": "Retrieval-Augmented Generation for Large Language Models: A Survey"
+        "id": "arxiv-2610.21174",
+        "title": "Amora: Communication-Efficient Private Approximate Nearest Neighbors Search"
+      },
+      {
+        "id": "arxiv-2404.16130",
+        "title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization"
       }
     ],
     "aliases": [
@@ -1327,12 +1300,16 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-2210.03629",
-        "title": "ReAct: Synergizing Reasoning and Acting in Language Models"
+        "id": "arxiv-2610.22301",
+        "title": "My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale"
       },
       {
-        "id": "arxiv-2302.04761",
-        "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+        "id": "arxiv-2610.22234",
+        "title": "OS-Helix: Unifying GUI Interaction and Code Execution in Native Computer-Using Agents"
+      },
+      {
+        "id": "arxiv-2610.21063",
+        "title": "Approve What, Exactly? Effect Binding and Trusted Rendering for Agent Step-Up Authorization"
       },
       {
         "id": "arxiv-2405.15793",
@@ -1380,20 +1357,24 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-2005.14165",
-        "title": "Language Models are Few-Shot Learners"
+        "id": "arxiv-2610.22290",
+        "title": "EliteReplay: Preserving Diverse Solutions in RL Post-Training via Quality-Diversity Search"
       },
       {
-        "id": "arxiv-2201.11903",
-        "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+        "id": "arxiv-2610.22245",
+        "title": "Disagreement-Guided Weak-to-Strong Routing"
       },
       {
-        "id": "arxiv-2203.02155",
-        "title": "Training language models to follow instructions with human feedback"
+        "id": "arxiv-2610.21248",
+        "title": "Beyond Confidence: Rethinking Uncertainty Calibration in Deep Code Models"
       },
       {
-        "id": "arxiv-2209.07858",
-        "title": "Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned"
+        "id": "arxiv-2509.16941",
+        "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?"
+      },
+      {
+        "id": "arxiv-2408.01605",
+        "title": "CYBERSECEVAL 3: Advancing the Evaluation of Cybersecurity Risks and Capabilities in Large Language Models"
       }
     ],
     "aliases": [],
@@ -1430,8 +1411,8 @@
     "relatedBlogs": [],
     "relatedPapers": [
       {
-        "id": "arxiv-1802.09089",
-        "title": "Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection"
+        "id": "nids-fgpa",
+        "title": "NIDS-FGPA: A federated learning network intrusion detection algorithm based on secure aggregation of gradient similarity models"
       }
     ],
     "aliases": [
@@ -1484,16 +1465,12 @@
     ],
     "relatedPapers": [
       {
-        "id": "arxiv-1702.05983",
-        "title": "Generating Adversarial Malware Examples for Black-Box Attacks Based on GAN"
+        "id": "arxiv-2610.21458",
+        "title": "What Survives Self-Evolution: Provenance Marks in Copied Agent Harnesses"
       },
       {
-        "id": "arxiv-1708.06733",
-        "title": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain"
-      },
-      {
-        "id": "arxiv-2305.06161",
-        "title": "StarCoder: may the source be with you!"
+        "id": "arxiv-2610.21372",
+        "title": "Agentic Dependency Transformations: Lessons from an Exploratory Case Study of Flask"
       }
     ],
     "aliases": [
@@ -1590,7 +1567,12 @@
         "title": "npm Trusted Publishing：短期身份为什么仍然需要发布边界"
       }
     ],
-    "relatedPapers": [],
+    "relatedPapers": [
+      {
+        "id": "arxiv-2610.22350",
+        "title": "FDE-Gym: The Last Mile of AI Delivery"
+      }
+    ],
     "aliases": [
       "部署",
       "静态交付"

@@ -43,12 +43,16 @@ test("Knowledge names, Chinese aliases, partial terms and typos rank concepts", 
 });
 test("External-paper authors remain searchable and domain aliases include relevant papers", () => {
   assert.equal(
-    paperSearch.search("Ashish Vaswani", papers)[0]?.paper.id,
-    "arxiv-1706.03762",
+    paperSearch.search("Albert Gu", papers)[0]?.paper.id,
+    "arxiv-2405.21060",
   );
-  assert.equal(paperSearch.search("YTC", papers)[0]?.paper.id, "001");
   assert.ok(
-    paperSearch.search("软件工程", papers).some((r) => r.paper.id === "raft"),
+    papers.every((p) => p.origin === "external" && !p.authors.includes("YTC")),
+  );
+  assert.ok(
+    paperSearch
+      .search("软件工程", papers)
+      .some((r) => r.paper.id === "arxiv-2405.15793"),
   );
   assert.ok(
     paperSearch

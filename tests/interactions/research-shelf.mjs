@@ -17,14 +17,14 @@ const { LocalPaperSearchService } = await import(
 const service = new LocalPaperSearchService();
 const papers = JSON.parse(await readFile("src/data/papers.json", "utf8"));
 for (const [q, id] of [
-  ["扩散", "001"],
-  ["YTC", "001"],
-  ["建模", "001"],
-  ["数学建模", "001"],
+  ["MirrorMoE", "arxiv-2610.22353"],
+  ["Albert Gu", "arxiv-2405.21060"],
+  ["GraphRAG", "arxiv-2404.16130"],
+  ["SWE-agent", "arxiv-2405.15793"],
   ["网络安全", "nids-fgpa"],
   ["人工智能", "nids-fgpa"],
   ["fedrated", "nids-fgpa"],
-  ["理论估算", "001"],
+  ["隐私核算", "arxiv-2610.21245"],
 ])
   if (["网络安全", "人工智能"].includes(q))
     assert.ok(
@@ -139,11 +139,11 @@ try {
   assert.equal(await search.isVisible(), false);
   await p.locator(".enchantment-hotspot").hover();
   await search.waitFor({ state: "visible" });
-  await search.fill("YTC");
+  await search.fill("Albert Gu");
   await search.press("Enter");
   assert.equal(
     await p.locator(".paper-unmatched").count(),
-    papers.length - service.search("YTC", papers).length,
+    papers.length - service.search("Albert Gu", papers).length,
   );
   assert.match(await p.locator("[role=status]").last().innerText(), /.*/);
   await p.screenshot({ path: "tests/screenshots/research-shelf-search.png" });

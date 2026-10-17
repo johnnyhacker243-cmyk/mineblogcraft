@@ -235,7 +235,7 @@ export function PaperBookViewer({
             <>
               <span> · </span>
               <a href={paper.pdf.url} target="_blank" rel="noopener noreferrer">
-                完整 PDF · 源站直读
+                完整 PDF
               </a>
             </>
           )}

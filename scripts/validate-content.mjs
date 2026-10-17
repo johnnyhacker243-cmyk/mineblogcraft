@@ -70,7 +70,7 @@ for (const p of papers) {
       "",
       "PDF cannot silently fall back to reading guide",
     );
-    assert.equal(p.pdf?.url, original.url);
+    assert.equal(p.pdf?.url, original.hostedUrl ?? original.url);
     assert.equal(p.pdf?.pageCount, original.pageCount);
     assert.ok(Number.isInteger(original.pageCount) && original.pageCount > 1);
     assert.match(original.sha256, /^[a-f0-9]{64}$/);
@@ -78,6 +78,10 @@ for (const p of papers) {
   }
   assert.ok(["metadata", "note", "fulltext"].includes(p.readingMode));
   if (p.origin === "external") {
+    assert.ok(
+      Number(p.year) >= 2024 && Number(p.year) <= new Date().getUTCFullYear(),
+      "Outdated paper " + p.id,
+    );
     assert.ok(p.author && p.authors?.length);
     assert.ok(new URL(p.sourceUrl).protocol === "https:");
     assert.ok(
@@ -121,7 +125,10 @@ console.log(
         legacy: 1,
         published: blogs.filter((b) => b.status === "published").length,
       },
-      research: { external: 33, legacyExample: 1 },
+      research: {
+        external: papers.filter((p) => p.origin === "external").length,
+        legacyExample: papers.filter((p) => p.origin === "example").length,
+      },
       wiki: {
         nodes: wiki.length,
         blogLinks: wiki.reduce((a, n) => a + n.relatedBlogs.length, 0),

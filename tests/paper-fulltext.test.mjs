@@ -60,9 +60,35 @@ test("Original PDF sources reject active URLs, credentials and arbitrary mirrors
   }
 });
 
-test("Verified public archive copies exactly match the canonical original PDF", () => {
-  for (const entry of catalog.filter((entry) => entry.canonicalPDFUrl)) {
-    assert.equal(entry.sha256, entry.canonicalSHA256, entry.id);
-    assert.match(new URL(entry.url).pathname.split("/")[3], /^[a-f0-9]{40}$/);
+test("Recent catalog is balanced, version-pinned and legally self-hosted", async () => {
+  assert.equal(papers.length, 33);
+  for (const domain of ["ai", "security", "software"])
+    assert.equal(papers.filter((p) => p.domainId === domain).length, 11);
+  for (const paper of papers) assert.ok(Number(paper.year) >= 2024, paper.id);
+  assert.equal(catalog.length, 32);
+  for (const entry of catalog) {
+    assert.match(entry.url, /^https:\/\/arxiv.org\/pdf\/\d{4}\.\d{4,5}v\d+$/);
+    assert.match(
+      entry.licenseUrl,
+      /^https:\/\/creativecommons.org\/licenses\/(by|by-sa)\/4\.0\/$/,
+    );
+    assert.equal(entry.rights, "cc-licensed-unmodified");
+    assert.equal(
+      papers.find((p) => p.id === entry.id).pdf.url,
+      entry.hostedUrl,
+    );
+    assert.equal(
+      trustedPDFUrl(entry.hostedUrl, "http://127.0.0.1:5173"),
+      "http://127.0.0.1:5173" + entry.hostedUrl,
+    );
+  }
+  const selection = await read("../config/researchSelection.json");
+  for (const paper of selection) {
+    assert.ok(
+      Date.parse(paper.publishedAt) >= Date.parse("2024-01-01") &&
+        Date.parse(paper.publishedAt) <= Date.parse("2026-10-16T23:59:59Z"),
+    );
+    assert.equal(paper.publicationStatus, "preprint");
+    assert.ok(paper.description.length > 25 && paper.authors.length);
   }
 });

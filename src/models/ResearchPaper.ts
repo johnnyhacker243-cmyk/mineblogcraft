@@ -29,6 +29,11 @@ export interface ResearchPaper {
   origin?: "external" | "example" | "original";
   readingMode?: "metadata" | "note" | "fulltext";
   verificationStatus?: string;
+  publishedAt?: string;
+  updatedAt?: string;
+  publicationStatus?: "preprint" | "published";
+  arxivVersion?: string;
+  metadataCheckedAt?: string;
 }
 export type BookBlock =
   | { kind: "text"; text: string; heading?: boolean }

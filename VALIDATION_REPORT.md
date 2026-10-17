@@ -30,4 +30,4 @@ ONLINE 是上次抓取成功，非实时监控；抓取失败保留旧缓存。�
 | Spring Engineering | software | online | 4 | 2/2 | 2026-10-15 | — |
 | Rust Blog | software | online | 10 | 2/2 | 2026-10-15 | — |
 
-Blog 21 篇技术编辑草稿另加 1 篇原有文章；Research 33 篇外部文献另加 1 篇原有示例；Wiki 34 个概念节点。新博客未经作者审阅，不进入 feed.xml。
+Blog 21 篇技术编辑草稿另加 1 篇原有文章；Research 33 篇 2024 年以来外部文献（三方向各 11 篇，均有全文）；Wiki 34 个概念节点。新博客未经作者审阅，不进入 feed.xml。
